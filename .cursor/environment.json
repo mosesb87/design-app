@@ -1,0 +1,17 @@
+{
+  "name": "design-app (Gradient Studio)",
+  "install": "npm ci || npm install",
+  "terminals": [
+    {
+      "name": "dev-server",
+      "command": "npm run dev",
+      "description": "Vite dev server for Gradient Studio, served on http://localhost:5173"
+    }
+  ],
+  "ports": [
+    {
+      "name": "Vite dev server",
+      "port": 5173
+    }
+  ]
+}
