@@ -1,0 +1,16 @@
+# The Annotated Record: a speculative website concept for Sapience AI
+
+> A motion-first website concept for Sapience AI (https://sapienceai.co/), the collective intelligence platform for professional communities. This is a design proposal. It is not affiliated with or endorsed by Sapience AI and is not a source of official information about the company.
+
+Every quotation on these pages is Sapience AI's own published wording, and each one has a source. Scenarios marked "Illustrative" are fictional and only demonstrate the concept. Industry figures are attributed to their publishers (iMIS / Advanced Solutions International, ASAE).
+
+## Pages
+
+- [The record](/): the concept site. It has nine chapters: the problem (scattered knowledge), the approach (a layer above existing AMS, CRM, LMS and content systems), an illustrative cited answer, the audit trail, Sage and the agents, institutional memory, security controls, reserved design-partner reports and Labs, and the booking call to action.
+- [Notes, sources & colophon](/notes): every source used, what the concept keeps and changes from the current site, and how it is built.
+
+## Official sources
+
+- [Sapience AI](https://sapienceai.co/)
+- [Platform](https://sapienceai.co/platform)
+- [Contact](https://sapienceai.co/contact)

@@ -2,9 +2,12 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 import { CustomEase } from 'gsap/CustomEase';
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 import Lenis from 'lenis';
 
-gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
+gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase, DrawSVGPlugin, MotionPathPlugin);
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 /*
  * Motion tokens. Every animation in the site draws from these so the
@@ -36,12 +39,9 @@ export function getLenis() {
   return lenis;
 }
 
-/** Smooth scrolling only where it improves the experience: motion allowed, not touch-first. */
+/** Smooth scrolling only where it improves the experience: motion allowed, fine pointer. */
 export function initScroll() {
-  if (prefersReducedMotion()) {
-    document.documentElement.classList.add('reduced-motion');
-    return null;
-  }
+  if (lenis) return lenis;
   lenis = new Lenis({
     duration: 1.15,
     easing: (t) => 1 - Math.pow(1 - t, 3.2),
@@ -50,10 +50,31 @@ export function initScroll() {
     anchors: false,
   });
   lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => lenis?.raf(time * 1000));
+  gsap.ticker.add(tick);
   gsap.ticker.lagSmoothing(0);
-  (window as unknown as { __lenis: Lenis }).__lenis = lenis;
+  (window as unknown as { __lenis: Lenis | null }).__lenis = lenis;
   return lenis;
+}
+
+function tick(time: number) {
+  lenis?.raf(time * 1000);
+}
+
+export function destroyScroll() {
+  if (!lenis) return;
+  gsap.ticker.remove(tick);
+  lenis.destroy();
+  lenis = null;
+  (window as unknown as { __lenis: Lenis | null }).__lenis = null;
+}
+
+/** Scroll to an absolute position, smooth when motion is on. */
+export function scrollToY(y: number, done?: () => void) {
+  if (lenis) lenis.scrollTo(y, { duration: 1.4, onComplete: () => done?.() });
+  else {
+    window.scrollTo({ top: y, behavior: 'auto' });
+    done?.();
+  }
 }
 
 /** In-page anchor navigation that respects smooth scroll, reduced motion and focus. */

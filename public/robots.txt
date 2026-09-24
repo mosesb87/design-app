@@ -1,0 +1,6 @@
+# The Annotated Record: a speculative design concept for Sapience AI.
+# This deployment is intentionally kept out of search so it can never be
+# mistaken for the official site (https://sapienceai.co/).
+# The production crawler policy is proposed in docs/05-launch-notes.md.
+User-agent: *
+Disallow: /

@@ -4,3 +4,4 @@ qa-shots
 .firebase
 *.log
 .DS_Store
+scripts/dev

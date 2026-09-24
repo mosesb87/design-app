@@ -1,0 +1,39 @@
+/* Provenance view: every passage labelled with where its words came from.
+   A tool for brand, comms and legal review, not decoration. */
+html.provenance [data-copy] {
+  position: relative;
+  outline: 1px dashed var(--print-3);
+  outline-offset: 5px;
+  box-shadow: none;
+}
+html.provenance [data-copy]::before {
+  position: absolute;
+  left: -1px;
+  bottom: calc(100% + 6px);
+  z-index: 20;
+  padding: 3px 6px 2px;
+  font: 500 10px/1.2 var(--font-mono);
+  font-style: normal;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--paper);
+  background: var(--print-2);
+  pointer-events: none;
+}
+html.provenance [data-copy='verbatim'] { outline: 1.5px solid var(--ink); }
+html.provenance [data-copy='verbatim']::before { content: 'Sapience AI · verbatim · ' attr(data-src); background: var(--ink); }
+html.provenance [data-copy='adapted'] { outline: 1.5px dashed var(--ink); }
+html.provenance [data-copy='adapted']::before { content: 'Adapted from ' attr(data-src); background: var(--ink); }
+html.provenance [data-copy='concept']::before { content: 'Concept copy'; }
+html.provenance [data-copy='illustrative'] { outline: 1.5px dotted var(--ink-soft); }
+html.provenance [data-copy='illustrative']::before { content: 'Illustrative'; background: var(--ink-soft); }
+html.provenance [data-copy='industry'] { outline: 1.5px solid var(--print); }
+html.provenance [data-copy='industry']::before { content: 'Industry source · ' attr(data-src); background: var(--print); }
+html.provenance [data-copy='tbc'] { outline: 3px double var(--ink); }
+html.provenance [data-copy='tbc']::before { content: 'To be confirmed by Sapience AI'; background: var(--ink-deep); }
+html.provenance .chapter--binding [data-copy]::before { background: var(--ink-rev); color: var(--binding); }
+html.provenance .chapter--binding [data-copy] { outline-color: var(--ink-rev); }
+/* Inline labels would collide inside running text; show only the outline there. */
+html.provenance .title-h [data-copy]::before { bottom: auto; top: calc(100% + 4px); }
+html.provenance .clause[data-copy]::before, html.provenance .verb__text[data-copy]::before { display: none; }

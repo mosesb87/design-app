@@ -1,0 +1,235 @@
+/* ─────────────── Running head ─────────────── */
+.running-head {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 40;
+  height: var(--head-h);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: var(--gutter);
+  padding-inline: var(--margin-x);
+  background: var(--paper);
+  font-family: var(--font-ui);
+}
+.running-head::after {
+  content: '';
+  position: absolute;
+  left: var(--margin-x); right: var(--margin-x); bottom: 0;
+  height: 1px;
+  background: var(--rule);
+  transform-origin: 0 50%;
+  transform: scaleX(var(--rule-scale, 1));
+}
+.wordmark {
+  justify-self: start;
+  font: 650 0.8125rem/1 var(--font-ui);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--print);
+  text-decoration: none;
+  padding-block: 10px;
+}
+.running-title {
+  font: 500 0.6875rem/1 var(--font-ui);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--print-3);
+  overflow: hidden;
+  height: 1.2em;
+  white-space: nowrap;
+  max-width: 44vw;
+  text-overflow: ellipsis;
+}
+.running-title span { display: inline-block; }
+.head-actions {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.4vw, 22px);
+}
+.head-btn {
+  font: 500 0.8125rem/1 var(--font-ui);
+  color: var(--print-2);
+  padding: 12px 2px;
+  min-height: 44px;
+  background: linear-gradient(var(--ink), var(--ink)) 0 calc(100% - 10px) / 0% 1px no-repeat;
+  transition: background-size var(--t-micro) var(--ease-lift), color var(--t-micro) var(--ease-lift);
+}
+.head-btn:hover { color: var(--print); background-size: 100% 1px; }
+.head-btn--motion [data-motion-state] { color: var(--ink); font-weight: 600; }
+.head-cta {
+  font: 600 0.8125rem/1 var(--font-ui);
+  color: var(--ink);
+  text-decoration: none;
+  padding: 12px 2px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(var(--ink), var(--ink)) 0 calc(100% - 10px) / 100% 1px no-repeat;
+  transition: background-size var(--t-micro) var(--ease-lift);
+}
+.head-cta:hover { background-size: 100% 2px; }
+
+@media (max-width: 899.98px) {
+  :root { --head-h: 52px; --foot-h: 30px; }
+  .running-head { grid-template-columns: auto 1fr; }
+  .running-title, .head-btn--motion, .head-cta { display: none; }
+}
+
+/* ─────────────── Running foot: the persistent concept notice ─────────────── */
+.running-foot {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 40;
+  height: var(--foot-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gutter);
+  padding-inline: var(--margin-x);
+  background: var(--paper);
+  font: 500 0.75rem/1 var(--font-ui);
+  color: var(--print-2);
+}
+.running-foot::before {
+  content: '';
+  position: absolute;
+  left: var(--margin-x); right: var(--margin-x); top: 0;
+  height: 1px;
+  background: var(--rule);
+  transform-origin: 100% 50%;
+  transform: scaleX(var(--rule-scale, 1));
+}
+.running-foot__notice { display: flex; align-items: center; gap: 0.6em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.running-foot__dot { width: 6px; height: 6px; flex: none; border: 1.5px solid var(--ink); transform: rotate(45deg); }
+.running-foot a { color: var(--ink); text-underline-offset: 0.2em; }
+.running-foot__folio { font: 400 0.8125rem/1 var(--font-display); font-style: italic; font-variant-numeric: tabular-nums; color: var(--print-3); }
+@media (max-width: 599.98px) {
+  .running-foot { font-size: 0.6875rem; }
+  .running-foot__folio { display: none; }
+}
+
+/* ─────────────── Contents slip ─────────────── */
+.contents {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: calc(var(--head-h) + 8px) var(--margin-x) 0;
+  background: rgba(28, 28, 30, 0.14);
+}
+.contents[hidden] { display: none; }
+.contents__slip {
+  width: min(560px, 100%);
+  max-height: calc(100svh - var(--head-h) - var(--foot-h) - 24px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--paper-hi);
+  box-shadow: 0 1px 1px rgba(28, 28, 30, 0.06), 0 18px 40px -18px rgba(28, 28, 30, 0.35);
+  border-top: 2px solid var(--ink);
+  padding: 22px 26px 26px;
+}
+.contents__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.contents__close { font: 500 0.8125rem/1 var(--font-ui); color: var(--print-2); min-height: 44px; padding-inline: 4px; }
+.toc a {
+  display: grid;
+  grid-template-columns: 2.6em auto 1fr auto;
+  align-items: baseline;
+  gap: 0.5em;
+  padding: 0.62em 0;
+  text-decoration: none;
+  color: var(--print);
+  border-top: 1px solid var(--rule);
+}
+.toc__num { font: 500 var(--fs-mono)/1 var(--font-mono); color: var(--ink); }
+.toc__title { font: 400 1.125rem/1.2 var(--font-display); }
+.toc__lead {
+  height: 1px;
+  align-self: end;
+  margin-bottom: 0.3em;
+  background-image: radial-gradient(circle, var(--rule-strong) 0.7px, transparent 0.8px);
+  background-size: 6px 2px;
+  background-repeat: repeat-x;
+  transform-origin: 0 50%;
+}
+.toc__folio { font: 400 0.8125rem/1.2 var(--font-ui); color: var(--print-3); text-align: right; }
+.toc a:hover .toc__title, .toc a[aria-current='true'] .toc__title { color: var(--ink); }
+.toc a[aria-current='true'] .toc__num::before { content: '‸ '; }
+.contents__controls { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--rule); display: grid; gap: 10px; }
+.switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--rule);
+  font: 500 0.875rem/1 var(--font-ui);
+  color: var(--print);
+  transition: border-color var(--t-micro) var(--ease-lift);
+}
+.switch:hover { border-color: var(--ink); }
+.switch__state { font: 500 var(--fs-mono)/1 var(--font-mono); text-transform: uppercase; color: var(--ink); }
+.contents__note { font: 400 0.8125rem/1.5 var(--font-ui); color: var(--print-3); }
+.contents__notes-link { font: 400 1rem/1.2 var(--font-display); color: var(--ink); justify-self: start; padding-block: 8px; }
+
+/* ─────────────── Fore-edge thumb index ─────────────── */
+.fore-edge {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 30;
+  transform: translateY(-50%);
+  display: none;
+}
+@media (min-width: 1100px) { .fore-edge { display: block; } }
+.fore-edge ol { display: grid; gap: 3px; }
+.fore-edge a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 34px;
+  padding-right: 8px;
+  text-decoration: none;
+  color: var(--print-3);
+}
+.fore-edge a::after {
+  content: '';
+  width: 8px;
+  height: 100%;
+  background: var(--rule);
+  transition: background-color 0.35s var(--ease-settle), width 0.35s var(--ease-settle);
+}
+.fore-edge a.is-read::after { background: var(--ink-soft); }
+.fore-edge a[aria-current='true']::after { background: var(--ink); width: 12px; }
+.fore-edge__num {
+  font: 500 0.625rem/1 var(--font-mono);
+  letter-spacing: 0.04em;
+  margin-right: 8px;
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity var(--t-micro) var(--ease-lift), transform var(--t-micro) var(--ease-lift);
+}
+.fore-edge__name {
+  position: absolute;
+  right: 34px;
+  white-space: nowrap;
+  padding: 6px 10px;
+  background: var(--paper-hi);
+  box-shadow: 0 8px 20px -12px rgba(28, 28, 30, 0.4);
+  font: 400 0.9375rem/1 var(--font-display);
+  color: var(--print);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(6px);
+  transition: opacity var(--t-micro) var(--ease-lift), transform var(--t-micro) var(--ease-lift);
+}
+.fore-edge a:hover .fore-edge__num, .fore-edge a:focus-visible .fore-edge__num,
+.fore-edge a[aria-current='true'] .fore-edge__num { opacity: 1; transform: none; color: var(--ink); }
+.fore-edge a:hover .fore-edge__name, .fore-edge a:focus-visible .fore-edge__name { opacity: 1; transform: none; }
+html.on-binding .fore-edge a::after { background: var(--rule-rev); }
+html.on-binding .fore-edge a.is-read::after { background: var(--ink-soft); }
+html.on-binding .fore-edge a[aria-current='true']::after { background: var(--ink-rev); }

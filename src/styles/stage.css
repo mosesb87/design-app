@@ -1,0 +1,211 @@
+/* =====================================================================
+   Stage mode — desktop (≥ 900px) with motion allowed.
+   JavaScript adds html.stage-mode and pins .record for the opening
+   "single take": title page → the record → scattered → four systems →
+   the layer → the answer. Same DOM as the static edition, re-laid out.
+   Start states are always set from JS, never here.
+   ===================================================================== */
+
+html.stage-mode .record {
+  position: relative;
+  display: block;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  background: var(--paper-deep);
+}
+html.stage-mode .record > * { position: absolute; }
+
+/* ── The desk and its camera ── */
+html.stage-mode .desk {
+  inset: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(28, 28, 30, 0.07) 1px, transparent 1.2px) 0 0 / 18px 18px,
+    var(--paper-deep);
+}
+html.stage-mode .desk__camera {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  display: block;
+  padding: 0;
+}
+html.stage-mode .doc,
+html.stage-mode .doc--leaving {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 43vw;
+  padding: 2.1vw 2.3vw 2.3vw;
+  border-width: 0.2vw;
+  box-shadow: 0 0.12vw 0.12vw rgba(28, 28, 30, 0.05), 0 1.6vw 3.2vw -2.2vw rgba(28, 28, 30, 0.45);
+}
+html.stage-mode .doc__label { font-size: 1.62vw; letter-spacing: 0.02em; }
+html.stage-mode .doc__title { margin-top: 0.7vw; font-size: 2.7vw; line-height: 1.16; }
+html.stage-mode .doc__text { margin-top: 0.8vw; font-size: 1.95vw; line-height: 1.4; }
+html.stage-mode .doc--record .doc__text { font-size: 1.8vw; }
+html.stage-mode .doc--email { border-top-width: 0.6vw; }
+html.stage-mode .doc__query {
+  position: absolute;
+  top: 46%;
+  height: 0;
+  border-top: 0.42vw dashed var(--ink);
+  transform-origin: 0 50%;
+  pointer-events: none;
+}
+html.stage-mode .doc__query--r { left: 100%; width: 11vw; }
+html.stage-mode .doc__query--l { right: 100%; width: 11vw; transform-origin: 100% 50%; }
+html.stage-mode .doc__query span {
+  position: absolute;
+  top: -1.9vw;
+  font: italic 500 2.9vw/1 var(--font-display);
+  color: var(--ink);
+}
+html.stage-mode .doc__query--r span { right: -0.5vw; transform: translateX(100%); }
+html.stage-mode .doc__query--l span { left: -0.5vw; transform: translateX(-100%); }
+
+/* ── The title page is the first page on the desk ── */
+html.stage-mode #title {
+  inset: 0;
+  z-index: 3;
+  min-height: 0;
+  height: 100%;
+  background: var(--paper);
+  transform-origin: 50% 50%;
+  padding-bottom: 0;
+}
+html.stage-mode #title::after {
+  /* the page edge, visible once the camera pulls back */
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid var(--rule-strong);
+  pointer-events: none;
+  opacity: var(--page-edge, 0);
+}
+
+/* ── Chapter plates: slips laid on the desk ── */
+html.stage-mode .plate {
+  left: var(--margin-x);
+  top: calc(var(--head-h) + 2.6vh);
+  width: min(41vw, 620px);
+  max-height: calc(100% - var(--head-h) - var(--foot-h) - 5.2vh);
+  padding: clamp(24px, 3.4vh, 40px) clamp(26px, 2.4vw, 40px);
+  background: var(--paper-hi);
+  border-top: 2px solid var(--ink);
+  box-shadow: 0 1px 1px rgba(28, 28, 30, 0.06), 0 24px 48px -26px rgba(28, 28, 30, 0.45);
+  z-index: 6;
+  overflow: hidden;
+}
+html.stage-mode .plate__inner { display: block; padding: 0; max-width: none; }
+html.stage-mode .plate .display { font-size: clamp(1.9rem, 0.9rem + 2.1vw, 3.1rem); }
+html.stage-mode .plate .body { font-size: clamp(1rem, 0.9rem + 0.25vw, 1.15rem); margin-top: 1.1rem; }
+html.stage-mode .plate .reading { margin-top: 1.6rem; }
+html.stage-mode .plate .reading__figure { font-size: clamp(3.2rem, 1.6rem + 3.4vw, 5.4rem); }
+html.stage-mode .plate .pull { margin-top: 1.3rem; }
+html.stage-mode .plate .pull p { font-size: clamp(1.2rem, 0.95rem + 0.7vw, 1.6rem); }
+html.stage-mode .plate .verbs { margin-top: 1.3rem; }
+html.stage-mode .plate .verb { padding: 0.65rem 0; }
+html.stage-mode .plate .small { margin-top: 1rem; font-size: 0.8125rem; }
+
+/* ── The four systems and Sapience's layer ── */
+html.stage-mode .systems {
+  left: calc(var(--margin-x) + min(41vw, 620px) + clamp(40px, 4vw, 72px));
+  right: calc(var(--margin-x) + 24px);
+  top: calc(var(--head-h) + 3vh);
+  z-index: 4;
+  padding: 0;
+}
+html.stage-mode .systems__cap {
+  padding: 0 0 0.55rem;
+  border-bottom: 0;
+  font-size: 0.72rem;
+  position: relative;
+}
+html.stage-mode .systems__cap::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--print);
+  transform-origin: 0 50%;
+  transform: scaleX(var(--cap-rule, 0));
+}
+html.stage-mode .vellum {
+  position: absolute;
+  left: calc(var(--margin-x) + min(41vw, 620px) + clamp(40px, 4vw, 72px) - 18px);
+  right: calc(var(--margin-x) + 6px);
+  top: calc(var(--head-h) + 3vh + 2.4rem);
+  bottom: calc(var(--foot-h) + 2.4vh);
+  margin: 0;
+  padding: 1.1rem 1.3rem;
+  z-index: 5;
+  background: var(--vellum);
+  border-top: 1px solid var(--rule-strong);
+  box-shadow: 0 -24px 40px -34px rgba(28, 28, 30, 0.45);
+}
+html.stage-mode .vellum__q {
+  position: absolute;
+  z-index: 1;
+  left: 1.3rem;
+  right: 1.3rem;
+  bottom: 1.6rem;
+  font-size: clamp(1rem, 0.85rem + 0.45vw, 1.3rem);
+  max-width: 40ch;
+}
+html.stage-mode .desk__queries { display: block; z-index: 5; }
+
+/* ── Chapter III: the answer page ── */
+html.stage-mode .answer {
+  inset: 0;
+  z-index: 8;
+  padding: 0;
+  background: var(--paper);
+}
+html.stage-mode .answer__title {
+  position: absolute;
+  left: 0; right: 0;
+  top: 34%;
+}
+html.stage-mode .answer__title .display { font-size: clamp(2.3rem, 1rem + 3.4vw, 4.6rem); max-width: 17ch; }
+html.stage-mode .answer__spread {
+  position: absolute;
+  left: 0; right: 0;
+  top: calc(var(--head-h) + 5.2vh);
+  margin: 0 auto;
+}
+html.stage-mode .answer .question { font-size: clamp(1.4rem, 0.95rem + 1.15vw, 2.15rem); }
+html.stage-mode .answer .galley__text { font-size: clamp(1.15rem, 0.92rem + 0.62vw, 1.6rem); }
+html.stage-mode .answer .qualifier { font-size: 0.78rem; }
+html.stage-mode .answer .galley__ink { overflow: visible; }
+html.stage-mode .answer .stet {
+  position: absolute;
+  font: italic 400 1rem/1 var(--font-display);
+  color: var(--ink);
+}
+
+/* Riders: the excerpt clones that travel from margin to text. */
+.rider {
+  position: absolute;
+  left: 0; top: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 3;
+}
+.rider__it, .rider__ro { display: block; }
+.rider { line-height: 1; }
+.rider__it { font-style: italic; font-size: var(--fs-note); color: var(--print-2); line-height: 1; }
+.rider__ro { position: absolute; left: 0; bottom: 0; font-size: clamp(1.15rem, 0.92rem + 0.62vw, 1.6rem); color: var(--print); opacity: 0; line-height: 1; }
+
+/* Galley baselines drawn before the answer is set */
+.baseline { stroke: var(--rule-strong); stroke-width: 1; }
+
+/* Heading line masks (SplitText) */
+.line-mask { overflow: clip; overflow-clip-margin: 0.12em; padding-bottom: 0.06em; margin-bottom: -0.06em; }

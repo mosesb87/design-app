@@ -1,0 +1,118 @@
+/* ─────────────── Fonts (self-hosted, subset to Latin) ─────────────── */
+@font-face {
+  font-family: 'Newsreader';
+  src: url('../fonts/newsreader-roman.woff2') format('woff2-variations'), url('../fonts/newsreader-roman.woff2') format('woff2');
+  font-weight: 280 560;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Newsreader';
+  src: url('../fonts/newsreader-italic.woff2') format('woff2-variations'), url('../fonts/newsreader-italic.woff2') format('woff2');
+  font-weight: 280 560;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('../fonts/public-sans.woff2') format('woff2-variations'), url('../fonts/public-sans.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plex Mono';
+  src: url('../fonts/plex-mono-400.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plex Mono';
+  src: url('../fonts/plex-mono-500.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+/* Metric-matched fallbacks keep the swap from shifting the layout. */
+@font-face {
+  font-family: 'Newsreader Fallback';
+  src: local('Georgia'), local('Times New Roman'), local('Liberation Serif'), local('DejaVu Serif');
+  size-adjust: 93%;
+  ascent-override: 79%;
+  descent-override: 28.5%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Public Sans Fallback';
+  src: local('Arial'), local('Helvetica'), local('Liberation Sans'), local('DejaVu Sans');
+  size-adjust: 104%;
+  ascent-override: 91%;
+  descent-override: 21.5%;
+  line-gap-override: 0%;
+}
+
+/* ─────────────── Tokens ─────────────── */
+:root {
+  /* Paper and print: the community's record */
+  --paper: #F2EFEA;          /* Sapience cream */
+  --paper-deep: #E9E4DC;     /* the desk */
+  --paper-hi: #F8F6F2;       /* slips, offprints */
+  --vellum: rgba(248, 246, 242, 0.66); /* Sapience's layer: paper, not glass */
+  --print: #1C1C1E;
+  --print-2: #4A4643;
+  --print-3: #6E6862;
+  --rule: #CDC7BE;
+  --rule-strong: #A69E93;
+
+  /* Ink: what Sapience adds */
+  --ink: #5A2D82;
+  --ink-deep: #43205F;
+  --ink-wash: #E4DCE6;
+  --ink-soft: #8C6BB1;
+
+  /* The binding */
+  --binding: #1C1C1E;
+  --binding-2: #26252A;
+  --ink-rev: #BCA6D2;
+  --rule-rev: #45424A;
+
+  /* Type */
+  --font-display: 'Newsreader', 'Newsreader Fallback', Georgia, 'Times New Roman', serif;
+  --font-text: var(--font-display); /* one token: switch to --font-ui if the refresh keeps a sans body */
+  --font-ui: 'Public Sans', 'Public Sans Fallback', Arial, Helvetica, sans-serif;
+  --font-mono: 'Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  --fs-title: clamp(3.05rem, 0.7rem + 7vw, 8.25rem);
+  --fs-display-xl: clamp(2.6rem, 0.9rem + 5vw, 6.25rem);
+  --fs-display: clamp(2.15rem, 1rem + 3.3vw, 4.4rem);
+  --fs-subdisplay: clamp(1.6rem, 1.1rem + 1.5vw, 2.5rem);
+  --fs-question: clamp(1.45rem, 1.05rem + 1.25vw, 2.35rem);
+  --fs-galley: clamp(1.2rem, 1rem + 0.62vw, 1.72rem);
+  --fs-lede: clamp(1.2rem, 1.04rem + 0.5vw, 1.55rem);
+  --fs-body: clamp(1.0625rem, 1rem + 0.25vw, 1.25rem);
+  --fs-note: clamp(0.94rem, 0.9rem + 0.16vw, 1.06rem);
+  --fs-ui: 0.9375rem;
+  --fs-label: 0.6875rem;
+  --fs-mono: 0.78rem;
+
+  /* Space */
+  --head-h: 56px;
+  --foot-h: 34px;
+  --margin-x: clamp(20px, 4.4vw, 64px);
+  --gutter: clamp(16px, 1.7vw, 24px);
+  --section-y: clamp(96px, 16vh, 200px);
+  --leader: 1.5px;
+
+  /* Motion (mirrors src/motion/runtime.ts) */
+  --ease-draw: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-lift: cubic-bezier(0.2, 0, 0, 1);
+  --t-micro: 0.28s;
+
+  color-scheme: light;
+}
+
+@media (min-width: 1800px) {
+  :root { --leader: 2px; }
+}
+/* Presenter mode: heavier ink so hairlines survive a projector. */
+html.present { --leader: 2.25px; }

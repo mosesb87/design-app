@@ -1,0 +1,16 @@
+@media print {
+  @page { margin: 18mm 16mm 20mm; }
+  :root { --section-y: 12mm; }
+  html, body { background: #fff; }
+  .running-head, .running-foot, .fore-edge, .contents, .skip, .converge, .converge-mark,
+  .galley__ink, .final-leader, .vellum__ink, .desk__queries, .form, .actions, .router__desk, .binding__case { display: none !important; }
+  .page--title { min-height: 0; padding-top: 0; }
+  .chapter, .plate, .answer, .page--title { break-inside: avoid-page; }
+  .chapter--binding { background: #fff; color: var(--print); }
+  .chapter--binding .lede, .chapter--binding .kicker, .epigraph footer { color: var(--print-2); }
+  .chapter--binding .policies a { color: var(--print); }
+  .control__name { background: #fff; }
+  .clause, .source, .doc, .plate, #title, .slip, .offprint { opacity: 1 !important; transform: none !important; clip-path: none !important; visibility: visible !important; }
+  a[href^='http']::after { content: ' (' attr(href) ')'; font: 400 0.7em var(--font-ui); color: var(--print-3); word-break: break-all; }
+  .doc--leaving { display: none !important; }
+}
