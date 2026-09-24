@@ -88,9 +88,9 @@ function observeChapters() {
   window.addEventListener('scroll', () => {
     cancelAnimationFrame(raf);
     raf = requestAnimationFrame(() => {
-      if (stageOwnsRecord) return;
       const mid = innerHeight / 2;
       for (const s of sections) {
+        if (stageOwnsRecord && s.closest('[data-record]')) continue;
         const r = s.getBoundingClientRect();
         if (r.top <= mid && r.bottom >= mid) { setChapter(s.dataset.chapter || ''); break; }
       }
@@ -105,11 +105,7 @@ export function navigate(id: string, focus = true) {
   closeContents(false);
   if (navigateOverride && navigateOverride(id)) return;
   const heading = target.matches('h1,h2,h3') ? target : target.querySelector<HTMLElement>('h1, h2, h3') || target;
-  scrollToTarget(target, { offset: -8 });
-  if (focus) {
-    if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
-    window.setTimeout(() => heading.focus({ preventScroll: true }), 60);
-  }
+  scrollToTarget(target, { offset: -8, focus: focus ? heading : null });
 }
 
 function interceptAnchors() {
@@ -131,10 +127,11 @@ function openContents(trigger: HTMLElement) {
   if (!dlg) return;
   lastTrigger = trigger;
   dlg.hidden = false;
+  setInert(true);
   $$('[data-contents-open]').forEach((b) => b.setAttribute('aria-expanded', 'true'));
   const slip = $('.contents__slip', dlg)!;
   if (motionOn) {
-    gsap.fromTo(slip, { y: -10, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.42, ease: 'settle' });
+    gsap.fromTo(slip, { y: -10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.42, ease: 'settle' });
     gsap.fromTo($$('.toc__lead', dlg), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'draw', stagger: 0.03, delay: 0.12 });
   }
   (($('.toc a[aria-current="true"]', dlg) as HTMLElement) || $('.toc a', dlg))?.focus();
@@ -144,9 +141,18 @@ function closeContents(restore = true) {
   const dlg = $('#contents');
   if (!dlg || dlg.hidden) return;
   dlg.hidden = true;
+  setInert(false);
   $$('[data-contents-open]').forEach((b) => b.setAttribute('aria-expanded', 'false'));
   document.removeEventListener('keydown', trapKeys);
   if (restore) lastTrigger?.focus();
+}
+/** While the Contents slip is open, everything behind it is inert. */
+function setInert(on: boolean) {
+  ['main', '.running-foot', '.fore-edge', '.colophon', '.skip'].forEach((sel) => {
+    const el = $(sel);
+    if (el) el.inert = on;
+  });
+  $$('.running-head .wordmark, .running-head .head-cta, .running-head .head-btn--motion').forEach((el) => (el.inert = on));
 }
 function trapKeys(e: KeyboardEvent) {
   const dlg = $('#contents');
@@ -161,6 +167,10 @@ function trapKeys(e: KeyboardEvent) {
 }
 
 /* ─────────────── Toggles ─────────────── */
+export function contentsOpen() {
+  const dlg = $('#contents');
+  return Boolean(dlg && !dlg.hidden);
+}
 export function reflectMotion(on: boolean) {
   motionOn = on;
   $$('[data-motion-toggle]').forEach((b) => b.setAttribute('aria-pressed', String(on)));

@@ -2,7 +2,7 @@
 
 A motion-first website concept for [Sapience AI](https://sapienceai.co/), *the collective intelligence platform for professional communities*.
 
-> **Speculative design concept.** It is not affiliated with or endorsed by Sapience AI. Quotations are Sapience AI's own published words, each with a source. Scenarios marked *Illustrative* were written for the concept. The deployment is kept out of search on purpose.
+> **Speculative design concept.** It is not affiliated with or endorsed by Sapience AI. Quotations are attributed to their source: Sapience AI's published words, or the industry publisher named. Scenarios and quoted fragments marked *Illustrative* are fictional and written for the concept. The deployment is kept out of search on purpose.
 
 ## The idea
 
@@ -18,7 +18,7 @@ The story unfolds as one continuous take:
 3. The pages scatter.
 4. They settle into four systems (AMS, CRM, LMS, content), which never merge.
 5. A sheet of Sapience's layer slides over them.
-6. A question is answered from the margins. Each source rides a leader into the text, and the fifth source is a person.
+6. A question is answered from the margins. Each source's phrase is carried in ink to where its clause is set, and the fifth source is a person.
 7. The leaders straighten into the audit trail, and the site continues through Sage, institutional memory, security, Labs, and a final proofreader's correction that becomes the call to action.
 
 ## Documents

@@ -38,9 +38,9 @@ export function drawFore(): Fore | null {
   const counts: number[] = [];
   for (let y = FIRST; y <= LAST; y++) {
     const i = y - FIRST;
-    counts.push(2 + Math.floor(i / 6) + (rand() < 0.45 ? 1 : 0));
+    counts.push(1 + Math.floor(i / 7) + (rand() < 0.4 ? 1 : 0));
   }
-  const units = counts.reduce((a, b) => a + b, 0) + counts.length * 1.4;
+  const units = counts.reduce((a, b) => a + b, 0) + counts.length * 2.2;
   const unit = (H - padT - padB) / units;
 
   const defs = svgEl('defs');
@@ -71,7 +71,7 @@ export function drawFore(): Fore | null {
         const yy = y + (rand() - 0.5) * unit * 0.5;
         d += ` L${xx.toFixed(1)} ${yy.toFixed(2)}`;
       }
-      const inked = chairIdx >= 0 && j === n - 1 && (yr - CHAIRS[chairIdx][0]) % 2 === 0;
+      const inked = chairIdx >= 0 && j === n - 1;
       const p = svgEl('path', { d, class: inked ? 'band band--ink' : 'band' });
       g.appendChild(p);
       if (inked) {
@@ -80,8 +80,8 @@ export function drawFore(): Fore | null {
         inkLines.set(chairIdx, list);
       }
     }
-    y -= unit * 1.4;
-    bandY.set(yr, [y + unit * 1.4, bottom]);
+    y -= unit * 2.2;
+    bandY.set(yr, [y + unit * 2.2, bottom]);
     strata.appendChild(g);
     bands.push(g);
     if ((yr - FIRST) % 5 === 0 || yr === LAST) {
@@ -94,7 +94,19 @@ export function drawFore(): Fore | null {
 
   // Chairs: a bracket over their years, their inked lines, and leaders that outlast the term.
   const chairs: Fore['chairs'] = [];
-  if (!compact) {
+  if (compact) {
+    CHAIRS.forEach(([from, to], ci) => {
+      const ly = (inkLines.get(ci) ?? [])[0];
+      if (ly == null) return;
+      const g = svgEl('g', { class: 'chair' });
+      const label = svgEl('text', { x: x1 - 4, y: (ly - 4).toFixed(1), 'text-anchor': 'end', class: 'tag-text tag-text--halo' });
+      label.textContent = `Chair ’${String(from).slice(2)}–${String(to).slice(2)}`;
+      if (ci < CHAIRS.length - 1) label.classList.add('tag-text--past');
+      g.appendChild(label);
+      svg.appendChild(g);
+      chairs.push({ g, from, to });
+    });
+  } else {
     CHAIRS.forEach(([from, to], ci) => {
       const top = bandY.get(to - 1)![0];
       const bot = bandY.get(from)![1];
@@ -108,7 +120,7 @@ export function drawFore(): Fore | null {
       label.textContent = `Chair · ${from}–${String(to).slice(2)}`;
       const sub = svgEl('text', { x: bx + 10, y: ((top + bot) / 2 + 13).toFixed(1), class: 'tag-text tag-text--sub', 'data-sub': '' });
       sub.textContent = ci === CHAIRS.length - 1 ? 'Education Committee' : 'moved on · notes still cited';
-      if (ci < CHAIRS.length - 1) label.setAttribute('opacity', '0.45');
+      if (ci < CHAIRS.length - 1) label.classList.add('tag-text--past');
       g.append(label, sub);
       svg.appendChild(g);
       chairs.push({ g, from, to });
@@ -133,8 +145,10 @@ export function animateFore(f: Fore, trigger: Element) {
   gsap.set([...f.chairs.map((c) => c.g), f.now], { autoAlpha: 0 });
   f.chairs.forEach((c, i) => {
     if (i < f.chairs.length - 1) {
-      gsap.set(c.g.querySelector('.tag-text:not(.tag-text--sub)'), { opacity: 1 });
-      gsap.set(c.g.querySelector('[data-sub]'), { opacity: 0 });
+      const label = c.g.querySelector('.tag-text:not(.tag-text--sub)');
+      const sub = c.g.querySelector('[data-sub]');
+      if (label) gsap.set(label, { fill: '#5A2D82' });
+      if (sub) gsap.set(sub, { opacity: 0 });
     }
   });
   gsap.set(f.years, { autoAlpha: 0 });
@@ -149,7 +163,7 @@ export function animateFore(f: Fore, trigger: Element) {
     if (i < f.chairs.length - 1) {
       const sub = c.g.querySelector('[data-sub]');
       const label = c.g.querySelector('.tag-text:not(.tag-text--sub)');
-      tl.fromTo(label, { opacity: 1 }, { opacity: 0.45, duration: 0.6, immediateRender: false }, tOut + 0.4);
+      if (label) tl.fromTo(label, { fill: '#5A2D82' }, { fill: '#6E6862', duration: 0.6, immediateRender: false }, tOut + 0.4);
       if (sub) tl.fromTo(sub, { opacity: 0 }, { opacity: 1, duration: 0.6 }, tOut + 0.4);
     }
   });

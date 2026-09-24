@@ -57,6 +57,9 @@ export function sizeSvg(svg: SVGSVGElement, w: number, h: number) {
   svg.setAttribute('viewBox', `0 0 ${round(w)} ${round(h)}`);
   svg.setAttribute('width', String(round(w)));
   svg.setAttribute('height', String(round(h)));
+  // Inline size wins over stylesheet percentages, so user units always equal CSS pixels (no letterboxing).
+  svg.style.width = `${round(w)}px`;
+  svg.style.height = `${round(h)}px`;
 }
 
 /** Deterministic pseudo-random numbers so every render (and print) matches. */

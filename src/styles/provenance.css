@@ -7,16 +7,16 @@ html.provenance [data-copy] {
   box-shadow: none;
 }
 html.provenance [data-copy]::before {
-  position: absolute;
-  left: -1px;
-  bottom: calc(100% + 6px);
-  z-index: 20;
+  position: static;
+  display: table;
+  max-width: 100%;
+  margin: 0 0 6px -1px;
   padding: 3px 6px 2px;
   font: 500 10px/1.2 var(--font-mono);
   font-style: normal;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: normal;
   color: var(--paper);
   background: var(--print-2);
   pointer-events: none;
@@ -27,13 +27,13 @@ html.provenance [data-copy='adapted'] { outline: 1.5px dashed var(--ink); }
 html.provenance [data-copy='adapted']::before { content: 'Adapted from ' attr(data-src); background: var(--ink); }
 html.provenance [data-copy='concept']::before { content: 'Concept copy'; }
 html.provenance [data-copy='illustrative'] { outline: 1.5px dotted var(--ink-soft); }
-html.provenance [data-copy='illustrative']::before { content: 'Illustrative'; background: var(--ink-soft); }
+html.provenance [data-copy='illustrative']::before { content: 'Illustrative'; background: var(--ink); }
 html.provenance [data-copy='industry'] { outline: 1.5px solid var(--print); }
 html.provenance [data-copy='industry']::before { content: 'Industry source · ' attr(data-src); background: var(--print); }
 html.provenance [data-copy='tbc'] { outline: 3px double var(--ink); }
 html.provenance [data-copy='tbc']::before { content: 'To be confirmed by Sapience AI'; background: var(--ink-deep); }
 html.provenance .chapter--binding [data-copy]::before { background: var(--ink-rev); color: var(--binding); }
 html.provenance .chapter--binding [data-copy] { outline-color: var(--ink-rev); }
-/* Inline labels would collide inside running text; show only the outline there. */
-html.provenance .title-h [data-copy]::before { bottom: auto; top: calc(100% + 4px); }
+/* Inline passages inside running text: outline only, no label. */
 html.provenance .clause[data-copy]::before, html.provenance .verb__text[data-copy]::before { display: none; }
+html.provenance .title-h__category::before { font-style: normal; }

@@ -78,11 +78,13 @@ export function scrollToY(y: number, done?: () => void) {
 }
 
 /** In-page anchor navigation that respects smooth scroll, reduced motion and focus. */
-export function scrollToTarget(target: HTMLElement, opts: { offset?: number } = {}) {
+export function scrollToTarget(target: HTMLElement, opts: { offset?: number; focus?: HTMLElement | null } = {}) {
   const offset = opts.offset ?? 0;
+  const focusEl = opts.focus === undefined ? target : opts.focus;
   const moveFocus = () => {
-    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
-    target.focus({ preventScroll: true });
+    if (!focusEl) return;
+    if (!focusEl.hasAttribute('tabindex')) focusEl.setAttribute('tabindex', '-1');
+    focusEl.focus({ preventScroll: true });
   };
   if (lenis) {
     lenis.scrollTo(target, { offset, duration: 1.6, onComplete: moveFocus });

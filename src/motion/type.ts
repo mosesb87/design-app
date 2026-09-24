@@ -29,7 +29,7 @@ export function prepareLines(el: HTMLElement): SetLines {
 }
 
 /** Flow headings: set once when they arrive; they stay set (print is permanent). */
-export function setOnEnter(el: HTMLElement) {
+export function setOnEnter(el: HTMLElement, start = 'top 84%') {
   const s = prepareLines(el);
   gsap.set(s.lines, { yPercent: 104 });
   gsap.to(s.lines, {
@@ -37,7 +37,7 @@ export function setOnEnter(el: HTMLElement) {
     duration: 0.95,
     ease: 'settle',
     stagger: 0.08,
-    scrollTrigger: { trigger: el, start: 'top 84%', once: true },
+    scrollTrigger: { trigger: el, start, once: true },
   });
   return s;
 }

@@ -652,7 +652,7 @@ These were studied through live sites and gallery write-ups. The original refere
 | All four values, verbatim (§2.5); the "Our team" paragraph | https://sapienceai.co/company |
 | Labs H1 and intro; NoteBouncer copy; OpenClaw copy; Chrome copy **with an "early access / waitlist" qualifier** (§11.4) | https://sapienceai.co/labs |
 | "Build on the intelligence layer for professional communities" | https://sapienceai.co/developers |
-| Contact H1, "Book a conversation with our team." plus its body; contact@sapienceai.co | https://sapienceai.co/contact |
+| Contact H1, "Book a conversation with our team." plus its body ("We'll show you how Sapience AI works with your existing systems and what your community's data can do."); contact@sapienceai.co | https://sapienceai.co/contact |
 | "We are building a new way forward ... Come build with us." | https://sapienceai.co/careers |
 | "Institutional Knowledge Infrastructure for professional associations and membership organizations" | https://sapienceai.co/tos |
 

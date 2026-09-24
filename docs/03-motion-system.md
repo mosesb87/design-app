@@ -68,17 +68,17 @@ Durations:
 | Scatter | 0.22 → 0.45 | The pages drift apart and tilt slightly; two slide off the desk edge. Dashed leaders stop short in "Qy." queries. The Chapter I text plate is set. | "Insights sit scattered across inboxes, drives, and disconnected tools." Knowledge walks out at handover. |
 | Four systems | 0.45 → 0.6 | The pages settle into four columns: AMS · CRM · LMS · Content, in a quantized diagonal wave. The column captions ink in. | This is where the knowledge lives today. The systems never merge. |
 | The layer | 0.6 → 0.78 | A flat vellum sheet slides up *over* the columns; the columns do not move. The Chapter II text plate is set. | "We sit above your existing systems." |
-| Organize · Connect · Activate | 0.78 → 1 | A bracket groups the fragments (organize), ink ties run across columns (connect), and a caret inks at the question line (activate). | The three verbs as three marks. |
+| Organize · Connect · Activate | 0.78 → 1 | A brace draws under the four systems (organize). The pages that bear on the question are marked in ink and wired down their column gutters into the brace (connect). A stem runs from the brace to the question, and a caret and underline ink it (activate). | The three verbs as three marks. |
 
 **Act II — The answer** (Chapter III, the signature sequence, pinned about 260vh)
 
 | Phase | Scroll | Motion |
 |---|---|---|
 | Entry | 0 → .08 | The question is set (once). Five galley baselines draw. The notes sit dormant at 55% opacity. |
-| Transformation | .08 → .76 | Five insertions of about 13.5% each. For each one, the note wakes, its key phrase takes the ink wash, and a caret inks at the insertion point. The leader draws from the note through the gutter channel to the caret. An aria-hidden clone of the excerpt rides the leader and **changes from italic margin hand to roman text** as it lands. The real clause unmasks, the caret becomes the superscript, and the trail slot fills. |
+| Transformation | .08 → .76 | Five insertions of about 13.5% each. For each one, the note wakes and its key phrase takes the ink wash. The leader leaves the note from its outer edge, runs down the gutter channel, and turns under the line to a caret at the insertion point. The clause is then set word by word from there. **The same phrase is washed again where it lands in the answer**: a highlight rhyme that carries the source into the text, and the finished answer shows it. Each galley rule retires once its line is set. |
 | The person | inside insertion 5 | Nothing rides. The leader draws out *empty* to a dashed double frame: "Not written down." The clause names the past chair. |
 | Information reveal | .76 → .86 | All five leaders redraw together, and the trail readout completes: `SOURCES 4 · PERSON 1 · TRAIL RECORDED` (illustrative). |
-| Climax | .86 → .94 | The leaders straighten and gather into one vertical ink line down the paragraph's left edge (the editor's *stet*). |
+| Climax | .86 → .94 | The leaders retract into their insertion points. Short gather lines run left from each one, the vertical *stet* draws down through their ends, and the gather lines retract into it. |
 | Resolution | .94 → 1 | Still hold. The vertical line continues below the stage and becomes Chapter IV's audit trail. |
 
 **Chapters IV–IX** flow in normal layout, with scroll-linked figures:
@@ -88,8 +88,8 @@ Durations:
 | IV — The trail comes with it | The trail line draws down as you read. Each step's node inks, then the access labels (Members / Staff only / Board). | pause / proof |
 | V — Ask once (Sage) | Three illustrative question slips arrive. Sage's caret **steps in quantized clicks** (steps easing, no sliding) and routes each slip to the agents bracket, which is stamped `ROUTED`. It implies nothing about what individual agents do. | acceleration |
 | VI — The organization that never forgets | The fore-edge of the volume, 1996–2026 in hairline strata, is drawn by scroll. Role tags (Chair · 2013–16 …) fade as their leaders persist, and new hairlines deposit each year. | reflective pause |
-| VII — Bound in trust (security) | The cream record slides into the charcoal binding: one plane rises. The eight controls tick on as dot-leader spec lines. Almost nothing else moves. | stillness |
-| VIII — Reports and working papers | Reserved offprints slide in sideways, and Labs papers are set. | light |
+| VII — Bound in trust (security) | A hard edge of charcoal, with an ink spine drawn across its top. The eight controls tick on as dot-leader spec lines. Almost nothing else moves. | stillness |
+| VIII — Reports and working papers | Reserved offprints are tipped in on a strip of desk, and the Labs papers are set as a contents list with dot leaders. | light |
 | IX — Afterword and back matter | A dele stroke draws through "automate". "together" inks purple, then settles to charcoal. **The final leader travels and becomes the underline of "Book a conversation".** | resolution |
 
 ## 5. The evolving motif: caret and leader
@@ -125,7 +125,7 @@ The pacing follows impact → calm → discovery → pause → acceleration → 
 
 | Width | Composition |
 |---|---|
-| ≥ 1100px | Full spread: folio column, text, gutter channel and margin column. Acts I and II are pinned. |
+| ≥ 1100px | Full spread: folio column, text, gutter channel and margin column. Acts I and II are pinned. The stage needs at least 600px of height. Shorter windows, including 200% zoom, get the Pocket Edition. |
 | 900–1099px | Compact spread: narrower margin. Acts I and II are pinned with shorter ranges. |
 | < 900px, the "Pocket Edition" | A separate composition, described below. |
 

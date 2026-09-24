@@ -101,8 +101,8 @@ export function heroIntro(conv: Convergence) {
 
   const tl = gsap.timeline({ defaults: { ease: 'settle' } });
   tl.fromTo(lines, { yPercent: 108 }, { yPercent: 0, duration: 1.05, stagger: 0.09 }, 0.05)
-    .fromTo([kicker, category], { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.12 }, 0.25)
-    .fromTo(label, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 0.55)
+    .fromTo([kicker, category], { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.12 }, 0.25)
+    .fromTo(label, { opacity: 0 }, { opacity: 1, duration: 0.5 }, 0.55)
     .fromTo(fragments, { clipPath: 'inset(0% 0% 100% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.7, stagger: 0.07 }, 0.62)
     .fromTo(conv.paths, { drawSVG: '0% 0%' }, { drawSVG: '0% 100%', duration: 1.05, ease: 'draw', stagger: 0.075 }, 1.05)
     .fromTo(conv.mark, { autoAlpha: 0, scale: 0.6, transformOrigin: '0% 100%' }, { autoAlpha: 1, scale: 1, duration: 0.4 }, 1.95);

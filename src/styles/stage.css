@@ -104,7 +104,7 @@ html.stage-mode .plate {
   z-index: 6;
   overflow: hidden;
 }
-html.stage-mode .plate__inner { display: block; padding: 0; max-width: none; }
+html.stage-mode .plate__inner { display: block; padding: 0; max-width: none; transform-origin: 0 0; }
 html.stage-mode .plate .display { font-size: clamp(1.9rem, 0.9rem + 2.1vw, 3.1rem); }
 html.stage-mode .plate .body { font-size: clamp(1rem, 0.9rem + 0.25vw, 1.15rem); margin-top: 1.1rem; }
 html.stage-mode .plate .reading { margin-top: 1.6rem; }
@@ -114,6 +114,7 @@ html.stage-mode .plate .pull p { font-size: clamp(1.2rem, 0.95rem + 0.7vw, 1.6re
 html.stage-mode .plate .verbs { margin-top: 1.3rem; }
 html.stage-mode .plate .verb { padding: 0.65rem 0; }
 html.stage-mode .plate .small { margin-top: 1rem; font-size: 0.8125rem; }
+html.stage-mode #trail { padding-top: calc(var(--section-y) * 0.55); }
 
 /* ── The four systems and Sapience's layer ── */
 html.stage-mode .systems {
@@ -185,24 +186,12 @@ html.stage-mode .answer .question { font-size: clamp(1.4rem, 0.95rem + 1.15vw, 2
 html.stage-mode .answer .galley__text { font-size: clamp(1.15rem, 0.92rem + 0.62vw, 1.6rem); }
 html.stage-mode .answer .qualifier { font-size: 0.78rem; }
 html.stage-mode .answer .galley__ink { overflow: visible; }
+html.stage-mode .source--person { border-color: transparent; outline-color: transparent; }
 html.stage-mode .answer .stet {
   position: absolute;
   font: italic 400 1rem/1 var(--font-display);
   color: var(--ink);
 }
-
-/* Riders: the excerpt clones that travel from margin to text. */
-.rider {
-  position: absolute;
-  left: 0; top: 0;
-  pointer-events: none;
-  white-space: nowrap;
-  z-index: 3;
-}
-.rider__it, .rider__ro { display: block; }
-.rider { line-height: 1; }
-.rider__it { font-style: italic; font-size: var(--fs-note); color: var(--print-2); line-height: 1; }
-.rider__ro { position: absolute; left: 0; bottom: 0; font-size: clamp(1.15rem, 0.92rem + 0.62vw, 1.6rem); color: var(--print); opacity: 0; line-height: 1; }
 
 /* Galley baselines drawn before the answer is set */
 .baseline { stroke: var(--rule-strong); stroke-width: 1; }

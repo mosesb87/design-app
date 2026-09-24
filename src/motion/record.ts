@@ -1,6 +1,6 @@
 import { gsap, ScrollTrigger, SplitText } from './runtime';
 import type { Convergence } from './hero';
-import { prepareLines, type SetLines } from './type';
+import { prepareLines } from './type';
 import { layoutBox, ortho, seeded, sizeSvg, svgEl, type Box } from '../lib/geom';
 import { setChapter } from '../ui/chrome';
 
@@ -9,18 +9,29 @@ import { setChapter } from '../ui/chrome';
  * One pinned stage, one scrubbed timeline, measured in vh of scroll:
  *
  *   0 ─ 45   pull back      the title page is one page of the community's record
- *  45 ─ 105  scatter        inboxes, drives, disconnected tools; queries left open   (Ch I)
- * 105 ─ 150  four systems   where it lives today; the systems never merge
- * 150 ─ 200  the layer      a sheet of vellum slides *over* them                     (Ch II)
- * 200 ─ 240  organize · connect · activate
- * 240 ─ 305  the question   the layer becomes the page of Chapter III
- * 305 ─ 430  five insertions: margin → main text; the fifth source is a person        (Ch III)
- * 430 ─ 480  proof, climax (the trail straightens), hold
+ *  45 ─ 100  scatter        inboxes, drives, disconnected tools; queries left open   (Ch I)
+ * 100 ─ 145  four systems   where it lives today; the systems never merge
+ * 145 ─ 190  the layer      a sheet of vellum slides *over* them                     (Ch II)
+ * 190 ─ 235  organize · connect · activate   (then a short hold on the question)
+ * 247 ─ 300  the question   the layer opens from the question into Chapter III
+ * 300 ─ 325  the page is laid out
+ * 325 ─ 475  five insertions: margin → main text; the fifth source is a person
+ * 475 ─ 520  proof, the gather into one trail, hold
+ *
+ * Only text-free, aria-hidden marks ever use visibility; everything a reader
+ * (or a screen reader) can read stays in the accessibility tree.
  */
-export const PHASE = { pull: 0, scatter: 45, sort: 105, layer: 150, verbs: 200, question: 240, answer: 280, insert: 305, reveal: 430, climax: 448, end: 480 };
-const NAV: Record<string, number> = { title: 0, scattered: 92, layer: 196, answer: 300 };
+export const PHASE = { pull: 0, scatter: 45, sort: 100, layer: 145, verbs: 190, question: 247, answer: 300, insert: 325, reveal: 475, climax: 490, end: 520 };
+const SPAN = 30;
+const NAV: Record<string, number> = { title: 0, scattered: 86, layer: 186, answer: 283, 'answer-end': 484 };
 
-type Built = { st: ScrollTrigger; navTo: (id: string) => number | null; kill: () => void };
+export type Built = {
+  st: ScrollTrigger;
+  navTo: (id: string) => number | null;
+  yAtProgress: (p: number) => number;
+  stetPageX: number;
+  kill: () => void;
+};
 
 export function buildRecord(conv: Convergence | null): Built | null {
   const record = document.querySelector<HTMLElement>('[data-record]');
@@ -28,6 +39,7 @@ export function buildRecord(conv: Convergence | null): Built | null {
   const title = document.getElementById('title');
   const answer = document.querySelector<HTMLElement>('[data-answer]');
   if (!record || !camera || !title || !answer) return null;
+  void conv;
 
   const vw = window.innerWidth;
   const vh = window.innerHeight;
@@ -36,10 +48,36 @@ export function buildRecord(conv: Convergence | null): Built | null {
   const S = 0.36; // the pulled-back camera scale
   const rand = seeded(20261209);
   const cleanups: Array<() => void> = [];
+  const headH = document.querySelector<HTMLElement>('.running-head')?.offsetHeight ?? 56;
+  const footH = document.querySelector<HTMLElement>('.running-foot')?.offsetHeight ?? 34;
 
   const docs = Array.from(camera.querySelectorAll<HTMLElement>('.doc'));
   const stay = docs.filter((d) => !d.classList.contains('doc--leaving'));
   const leaving = docs.filter((d) => d.classList.contains('doc--leaving'));
+
+  /* ── 0. Chapter plates must fit short laptop screens: scale the slip's contents, never clip them ── */
+  const plateI = document.getElementById('scattered')!;
+  const plateII = document.getElementById('layer')!;
+  const fitPlate = (plate: HTMLElement) => {
+    const inner = plate.querySelector<HTMLElement>('.plate__inner')!;
+    inner.style.transform = '';
+    inner.style.width = '';
+    const cs = getComputedStyle(plate);
+    const avail = plate.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+    const need = inner.scrollHeight;
+    if (need > avail + 1) {
+      const s = Math.max(0.7, avail / need);
+      inner.style.transform = `scale(${s})`;
+      inner.style.width = `${100 / s}%`;
+    }
+  };
+  fitPlate(plateI);
+  fitPlate(plateII);
+  cleanups.push(() => [plateI, plateII].forEach((p) => {
+    const inner = p.querySelector<HTMLElement>('.plate__inner')!;
+    inner.style.transform = '';
+    inner.style.width = '';
+  }));
 
   /* ── 1. The record: sixteen pages around the title page (desk units, centre = 0,0) ── */
   const slots: Array<[number, number]> = [];
@@ -47,7 +85,6 @@ export function buildRecord(conv: Convergence | null): Built | null {
   xs.forEach((x) => slots.push([x, -0.74]));
   [-1.3, -0.78, 0.78, 1.3].forEach((x) => slots.push([x, 0]));
   xs.forEach((x) => slots.push([x, 0.74]));
-  // Interleave systems so no column of the desk is "about" one system.
   const home = new Map<HTMLElement, { x: number; y: number; r: number }>();
   stay.forEach((d, i) => {
     const [sx, sy] = slots[i % slots.length];
@@ -59,7 +96,9 @@ export function buildRecord(conv: Convergence | null): Built | null {
     gsap.set(d, { x: h.x, y: h.y, xPercent: -50, yPercent: -50, rotation: h.r, transformOrigin: '50% 50%' });
   });
 
-  /* ── 2. Scatter vectors: outward from the centre, a little turned ── */
+  /* ── 2. Scatter: outward, a little turned; the title page drifts into the open desk beside the slip ── */
+  const plateRight = layoutBox(plateI, record).x + plateI.offsetWidth;
+  const shift = Math.max(0, (plateRight + 24) / 2 - 20); // screen px: centre of the free desk
   const scatter = new Map<HTMLElement, { x: number; y: number; r: number }>();
   docs.forEach((d) => {
     const h = home.get(d)!;
@@ -91,67 +130,68 @@ export function buildRecord(conv: Convergence | null): Built | null {
   const stackTop = (capBoxes[0]?.y ?? 100) + (capBoxes[0]?.h ?? 20) + 18;
   const perCol: HTMLElement[][] = [[], [], [], []];
   stay.forEach((d) => perCol[colOf[d.dataset.sys || 'content'] ?? 3].push(d));
-  const docScreenW = 0.43 * vw * S * 0.92;
-  const k = colW / docScreenW; // scale so a filed page fits its column
-  const sorted = new Map<HTMLElement, { x: number; y: number; order: number }>();
   const sortScale = S * 0.92;
+  const docScreenW = 0.43 * vw * sortScale;
+  const k = colW / docScreenW;
+  const rowGap = Math.min((vh - stackTop - 190) / 5, vh * 0.115);
+  const sorted = new Map<HTMLElement, { x: number; y: number; order: number; box: Box }>();
   perCol.forEach((col, ci) => {
     const cb = capBoxes[ci];
-    const gap = Math.min((vh - stackTop - 80) / 5, vh * 0.12);
     col.forEach((d, ri) => {
+      const h = d.offsetHeight * sortScale * k;
       const screenX = cb.x + cb.w / 2;
-      const screenY = stackTop + ri * gap + (d.offsetHeight * sortScale * k) / 2;
-      sorted.set(d, { x: (screenX - vw / 2) / sortScale, y: (screenY - vh / 2) / sortScale, order: ci + ri * 0.6 });
+      const top = stackTop + ri * rowGap;
+      sorted.set(d, {
+        x: (screenX - vw / 2) / sortScale,
+        y: (top + h / 2 - vh / 2) / sortScale,
+        order: ci + ri * 0.6,
+        box: { x: cb.x, y: top, w: cb.w, h },
+      });
     });
   });
+  const lastDocBottom = Math.max(...Array.from(sorted.values()).map((s) => s.box.y + s.box.h));
 
   /* ── 5. Chapter plates: headings set by line inside the take ── */
-  const plateI = document.getElementById('scattered')!;
-  const plateII = document.getElementById('layer')!;
   const setI = prepareLines(plateI.querySelector('h2')!);
   const setII = prepareLines(plateII.querySelector('h2')!);
   const answerTitleSet = prepareLines(answer.querySelector('#answer-h')!);
   cleanups.push(setI.revert, setII.revert, answerTitleSet.revert);
 
-  /* ── 6. Vellum ink: organize (bracket), connect (ties), activate (caret) ── */
+  /* ── 6. Vellum: organize (the brace), connect (the relevant pages wired in), activate (the question) ── */
   const vellum = document.querySelector<HTMLElement>('[data-vellum]')!;
   const vInk = document.querySelector<SVGSVGElement>('[data-vellum-ink]')!;
   const vq = document.querySelector<HTMLElement>('[data-vellum-q]')!;
   const vBox = layoutBox(vellum, record);
+  const braceScreenY = Math.min(lastDocBottom + 30, vBox.y + vBox.h - 110);
+  vq.style.top = `${braceScreenY - vBox.y + 34}px`;
+  vq.style.bottom = 'auto';
+  cleanups.push(() => { vq.style.top = ''; vq.style.bottom = ''; });
   sizeSvg(vInk, vBox.w, vBox.h);
   vInk.replaceChildren();
   const toV = (x: number, y: number): [number, number] => [x - vBox.x, y - vBox.y];
-  // bracket spans the four columns just under the question
   const qBox = layoutBox(vq, vellum);
-  const bracketY = qBox.y - 26;
+  const bracketY = braceScreenY - vBox.y;
   const [bxL] = toV(capBoxes[0].x - 8, 0);
   const [bxR] = toV(capBoxes[3].x + capBoxes[3].w + 8, 0);
-  const bxM = (bxL + bxR) / 2;
-  // a brace under the four systems, gathering them into one point above the question
-  const bracket = svgEl('path', { d: ortho([[bxL, bracketY - 16], [bxL, bracketY], [bxR, bracketY], [bxR, bracketY - 16]]) + ` M${bxM} ${bracketY} V${qBox.y - 8}` });
-  vInk.appendChild(bracket);
-  // ties: horizontal correlation rows across the four columns, a dot on each filed page they touch
+  const bxM = qBox.x + 14;
+  const bracket = svgEl('path', { d: ortho([[bxL, bracketY - 14], [bxL, bracketY], [bxR, bracketY], [bxR, bracketY - 14]]) });
+  const stem = svgEl('path', { d: ortho([[bxM, bracketY], [bxM, qBox.y - 6]]) });
+  vInk.append(bracket, stem);
+  // connect: every page that bears on the question is marked, and leads down its column's gutter into the brace
+  const related = stay.filter((d) => d.hasAttribute('data-rel'));
   const ties: SVGPathElement[] = [];
-  const dots: SVGCircleElement[] = [];
-  const rowGap = Math.min((vh - stackTop - 80) / 5, vh * 0.12);
-  [0, 1, 2].forEach((row) => {
-    const y = stackTop + row * rowGap - 7;
-    const xsRow = perCol.map((col, ci) => (col[row] ? capBoxes[ci].x + capBoxes[ci].w / 2 : null));
-    const present = xsRow.filter((x): x is number => x !== null);
-    if (present.length < 2) return;
-    const [x0, yy] = toV(Math.min(...present), y);
-    const [x1] = toV(Math.max(...present), y);
-    const p = svgEl('path', { d: `M${x0.toFixed(1)} ${yy.toFixed(1)} H${x1.toFixed(1)}` });
-    vInk.appendChild(p);
-    ties.push(p);
-    present.forEach((x) => {
-      const [cx] = toV(x, y);
-      const c = svgEl('circle', { cx: cx.toFixed(1), cy: yy.toFixed(1), r: 3.4, fill: 'var(--ink)', stroke: 'none' });
-      vInk.appendChild(c);
-      dots.push(c);
-    });
+  const marks: SVGPathElement[] = [];
+  related.forEach((d) => {
+    const b = sorted.get(d)?.box;
+    if (!b) return;
+    const [x0, y0] = toV(b.x, b.y);
+    const gx = x0 - 10;
+    const m = svgEl('path', { d: `M${x0 - 2} ${y0 - 2} H${x0 + b.w + 2} V${y0 + b.h + 2} H${x0 - 2} Z`, 'stroke-width': 1.2 });
+    const t = svgEl('path', { d: ortho([[x0, y0 + 12], [gx, y0 + 12], [gx, bracketY]]) });
+    vInk.append(m, t);
+    marks.push(m);
+    ties.push(t);
   });
-  // activate: a caret under the question's first word, and the question underlined in ink
   const qx = qBox.x;
   const qy = qBox.y + qBox.h + 4;
   const caret = svgEl('path', { d: `M${qx - 7} ${qy + 9} L${qx} ${qy} L${qx + 7} ${qy + 9}` });
@@ -171,100 +211,102 @@ export function buildRecord(conv: Convergence | null): Built | null {
   const qualifier = answer.querySelector<HTMLElement>('.qualifier')!;
   const flag = answer.querySelector<HTMLElement>('.label--flag')!;
   const folio = answer.querySelector<HTMLElement>('.answer__spread .folio-mark')!;
+  const sourcesLabel = answer.querySelector<HTMLElement>('#sources-h');
+  const answerTitle = answer.querySelector<HTMLElement>('.answer__title')!;
   const galleyText = galley.querySelector<HTMLElement>('.galley__text')!;
 
-  // Clauses are set word by word (never by letter). The readable text is untouched for assistive tech.
+  // Clauses are set word by word (never by letter).
   const splits = clauses.map((c) => SplitText.create(c, { type: 'words', wordsClass: 'gw', aria: 'none' }));
   cleanups.push(() => splits.forEach((sp) => sp.revert()));
   const clauseWords = splits.map((sp) => sp.words as HTMLElement[]);
 
+  // Centre the page in the frame: the signature deserves the middle of the screen, not the top third.
+  const topMin = headH + vh * 0.045;
+  const centred = Math.max(topMin, (vh - footH - spread.offsetHeight) / 2 + headH * 0.3);
+  spread.style.top = `${centred}px`;
+  cleanups.push(() => { spread.style.top = ''; });
+
   const G = layoutBox(galley, spread);
-  const sizeG = () => sizeSvg(gInk, galley.offsetWidth, galley.offsetHeight);
-  sizeG();
+  sizeSvg(gInk, galley.offsetWidth, galley.offsetHeight);
   gInk.replaceChildren();
+  const gr = galley.getBoundingClientRect();
   const rel = (b: Box): Box => ({ x: b.x - G.x, y: b.y - G.y, w: b.w, h: b.h });
+  const vis = (el: Element): Box => { const r = el.getBoundingClientRect(); return { x: r.left - gr.left, y: r.top - gr.top, w: r.width, h: r.height }; };
   const mainRight = layoutBox(main, spread).x + main.offsetWidth - G.x;
   const marginLeft = layoutBox(margin, spread).x - G.x;
-  const chan = (i: number) => Math.min(mainRight + 18, marginLeft - 40) + i * 7;
+  const chan = (i: number) => Math.min(mainRight + 18, marginLeft - 44) + i * 7;
 
-  // Baselines of the galley: one hairline per line of the finished paragraph.
-  const range = document.createRange();
-  range.selectNodeContents(galleyText);
-  const gr = galley.getBoundingClientRect();
-  const lineBoxes = Array.from(range.getClientRects())
-    .map((r) => ({ x: r.left - gr.left, y: r.top - gr.top, w: r.width, h: r.height }))
-    .filter((r) => r.w > 1 && r.h > 4)
-    .sort((a, b) => a.y - b.y)
-    .reduce<Box[]>((acc, r) => {
-      const last = acc[acc.length - 1];
-      const mid = r.y + r.h / 2;
-      if (last && Math.abs(mid - (last.y + last.h / 2)) < last.h * 0.5) {
-        const right = Math.max(last.x + last.w, r.x + r.w);
-        last.x = Math.min(last.x, r.x);
-        last.w = right - last.x;
-        return acc;
-      }
-      acc.push({ ...r });
-      return acc;
-    }, []);
-  const baselines = lineBoxes.map((b) => {
-    const p = svgEl('path', { d: `M0 ${(b.y + b.h + 3).toFixed(1)} H${(galleyText.offsetWidth * 0.97).toFixed(1)}`, class: 'baseline' });
+  // One baseline per line of the finished paragraph, measured from the words themselves (not the citation marks).
+  type Line = { top: number; bottom: number; clauses: Set<number> };
+  const lines: Line[] = [];
+  clauseWords.forEach((words, ci) => {
+    words.filter((w) => !w.closest('.cite')).forEach((w) => {
+      const b = vis(w);
+      const line = lines.find((l) => b.y < l.bottom - 2 && b.y + b.h > l.top + 2);
+      if (line) { line.top = Math.min(line.top, b.y); line.bottom = Math.max(line.bottom, b.y + b.h); line.clauses.add(ci); }
+      else lines.push({ top: b.y, bottom: b.y + b.h, clauses: new Set([ci]) });
+    });
+  });
+  lines.sort((a, b) => a.top - b.top);
+  const baselines = lines.map((l) => {
+    const p = svgEl('path', { d: `M0 ${(l.bottom + 3).toFixed(1)} H${(galleyText.offsetWidth * 0.97).toFixed(1)}`, class: 'baseline' });
     gInk.appendChild(p);
     return p;
   });
+  const lineOf = (b: Box) => lines.find((l) => b.y + b.h / 2 >= l.top - 2 && b.y + b.h / 2 <= l.bottom + 2) ?? lines[0];
 
   const leaders: SVGPathElement[] = [];
   const carets: SVGPathElement[] = [];
-  const riders: HTMLElement[] = [];
+  const gathers: SVGPathElement[] = [];
+  const stetX = -26;
   let personFrame: SVGPathElement[] = [];
-  clauses.forEach((clause, i) => {
-    const cite = clause.querySelector<HTMLElement>('.cite')!;
+  clauses.forEach((_clause, i) => {
     const src = sources[i];
-    const cr = cite.getBoundingClientRect();
-    const cb = { x: cr.left - gr.left, y: cr.top - gr.top, w: cr.width, h: cr.height };
-    const line = lineBoxes.find((l) => cb.y + cb.h >= l.y && cb.y <= l.y + l.h) ?? { y: cb.y, h: cb.h * 2, x: 0, w: 0 };
-    const under = line.y + line.h + 1;
-    const cx = cb.x + cb.w / 2;
+    const fb = vis(clauseWords[i][0]);
+    const under = lineOf(fb).bottom + 4;
+    const ix = Math.max(0, fb.x); // the insertion point: where the clause begins
     const sb = rel(layoutBox(src, spread));
-    const sy = sb.y + 9;
     const lane = chan(i);
     const person = src.classList.contains('source--person');
-    const pts: Array<[number, number]> = person
-      ? [[cx, under + 4], [cx, under + 12], [lane, under + 12], [lane, sy], [sb.x - 10, sy]]
-      : [[sb.x - 8, sy], [lane, sy], [lane, under + 5], [cx, under + 5]];
+    let pts: Array<[number, number]>;
+    if (person) {
+      const sy = sb.y + 14;
+      pts = [[ix, under + 2], [ix, under + 10], [lane, under + 10], [lane, sy], [sb.x - 12, sy]];
+    } else {
+      // Leave the note from its outer edge, level with the marked phrase, so the ink never crosses the note's text.
+      const mark = src.querySelector('mark')!;
+      const mr = mark.getClientRects()[0] ?? mark.getBoundingClientRect();
+      const sy = mr.top - gr.top + mr.height * 0.55;
+      pts = [[sb.x - 8, sy], [lane, sy], [lane, under], [ix, under]];
+    }
     const leader = svgEl('path', { d: ortho(pts) });
     gInk.appendChild(leader);
     leaders.push(leader);
-    const c = svgEl('path', { d: `M${cx - 6} ${under + 11} L${cx} ${under + 2} L${cx + 6} ${under + 11}` });
+    const c = svgEl('path', { d: `M${ix - 6} ${under + 9} L${ix} ${under} L${ix + 6} ${under + 9}` });
     gInk.appendChild(c);
     carets.push(c);
+    const g = svgEl('path', { d: ortho([[ix, under], [stetX, under]]) });
+    gInk.appendChild(g);
+    gathers.push(g);
     if (person) {
       const pad = 3;
       personFrame = [0, 7].map((o) => {
         const r = svgEl('path', {
           d: `M${sb.x - pad - o} ${sb.y - pad - o} H${sb.x + sb.w + pad + o} V${sb.y + sb.h + pad + o} H${sb.x - pad - o} Z`,
+          'stroke-dasharray': '3 3',
         });
         gInk.appendChild(r);
         return r;
       });
-    } else {
-      const phrase = src.querySelector('mark')?.textContent ?? '';
-      const rider = document.createElement('span');
-      rider.className = 'rider';
-      rider.setAttribute('aria-hidden', 'true');
-      rider.innerHTML = `<span class="rider__it"></span><span class="rider__ro"></span>`;
-      rider.querySelector('.rider__it')!.textContent = phrase;
-      rider.querySelector('.rider__ro')!.textContent = phrase;
-      galley.appendChild(rider);
-      riders.push(rider);
     }
   });
-  cleanups.push(() => riders.forEach((r) => r.remove()));
+  // The phrase that carries each clause: washed in the note, then washed again where it lands in the answer.
+  const lands = clauses.map((c) => c.querySelector<HTMLElement>('mark.land'));
 
-  // The trail: one vertical ink line the answer leaves behind, running on into Chapter IV.
+  // The trail the answer leaves: one vertical ink line that runs on into Chapter IV.
   const qb = rel(layoutBox(question, spread));
-  const stetX = -26;
-  const stet = svgEl('path', { d: `M${stetX} ${qb.y - 6} V${vh - G.y - spread.offsetTop + 40}`, 'stroke-width': 2 });
+  const stetBottom = vh - (centred + G.y) + 40;
+  const stet = svgEl('path', { d: `M${stetX} ${qb.y - 6} V${stetBottom}`, 'stroke-width': 2 });
   gInk.appendChild(stet);
   const stetLabel = document.createElement('span');
   stetLabel.className = 'stet';
@@ -274,183 +316,186 @@ export function buildRecord(conv: Convergence | null): Built | null {
   stetLabel.style.top = `${qb.y + 2}px`;
   galley.appendChild(stetLabel);
   cleanups.push(() => stetLabel.remove());
+  const stetPageX = gr.left + stetX;
 
-  /* ── 8. Start states (JS only) ── */
-  const plateIParts = Array.from(plateI.querySelectorAll('.kicker, .body, .reading'));
-  const plateIIParts = Array.from(plateII.querySelectorAll('.kicker, .pull, .body, .small'));
+  // Where the vellum question sits (viewport %), for the match-cut into Chapter III.
+  const qScreen: Box = { x: vBox.x + qBox.x - 14, y: vBox.y + qBox.y - 10, w: qBox.w + 28, h: qBox.h + 20 };
+  const inset = (b: Box) =>
+    `inset(${((b.y / vh) * 100).toFixed(2)}% ${(((vw - b.x - b.w) / vw) * 100).toFixed(2)}% ${(((vh - b.y - b.h) / vh) * 100).toFixed(2)}% ${((b.x / vw) * 100).toFixed(2)}%)`;
+
+  /* ── 8. Start states (JS only; text stays readable by assistive tech) ── */
+  const plateIParts = Array.from(plateI.querySelectorAll('.body, .reading'));
+  const plateIIParts = Array.from(plateII.querySelectorAll('.pull, .small'));
   const verbs = Array.from(plateII.querySelectorAll<HTMLElement>('.verb'));
+  const wrap = document.querySelector<HTMLElement>('[data-converge-wrap]');
+  const convSvg = document.querySelector<SVGSVGElement>('[data-converge]');
   gsap.set([plateI, plateII], { xPercent: -118 });
   gsap.set([...setI.lines, ...setII.lines, ...answerTitleSet.lines], { yPercent: 104 });
-  gsap.set(verbs, { opacity: 0.32 });
+  gsap.set(verbs, { opacity: 0.8 });
   gsap.set(queries, { scaleX: 0 });
   gsap.set(queries.map((q) => q.querySelector('span')), { autoAlpha: 0 });
   gsap.set(caps, { autoAlpha: 0, '--cap-rule': 0 });
   gsap.set(vellum, { yPercent: 108 });
-  gsap.set([bracket, ...ties, caret, underline], { drawSVG: '0% 0%' });
-  gsap.set(dots, { scale: 0, transformOrigin: '50% 50%' });
-  gsap.set(answer, { autoAlpha: 0, clipPath: 'inset(0% 0% 0% 0%)' });
-  gsap.set(answer.querySelectorAll('.answer__title .kicker'), { autoAlpha: 0 });
-  gsap.set([folio, flag, question, qualifier, ...readout], { autoAlpha: 0 });
-  gsap.set(sources, { autoAlpha: 0, x: 18 });
+  gsap.set([bracket, stem, ...ties, ...marks, caret, underline], { drawSVG: '0% 0%' });
+  gsap.set(answer, { opacity: 0, pointerEvents: 'none', clipPath: 'inset(0% 0% 0% 0%)' });
+  gsap.set(answerTitle.querySelector('.kicker'), { opacity: 0 });
+  gsap.set([folio, flag, question, qualifier, ...readout], { opacity: 0 });
+  if (sourcesLabel) gsap.set(sourcesLabel, { opacity: 0 });
+  gsap.set(sources, { opacity: 0, x: 18 });
   gsap.set(answer.querySelectorAll('.source mark'), { backgroundSize: '0% 100%' });
   gsap.set(clauseWords.flat(), { opacity: 0 });
-  gsap.set(answer.querySelector('#sources-h'), { autoAlpha: 0 });
-  gsap.set([...baselines, ...leaders, ...carets, ...personFrame, stet], { drawSVG: '0% 0%' });
-  gsap.set(riders, { autoAlpha: 0 });
+  gsap.set([...baselines, ...leaders, ...carets, ...gathers, stet], { drawSVG: '0% 0%' });
+  gsap.set(personFrame, { opacity: 0, scale: 0.985, transformOrigin: '50% 50%' });
+  gsap.set(lands.filter(Boolean), { backgroundSize: '0% 100%' });
   gsap.set(stetLabel, { autoAlpha: 0 });
 
   /* ── 9. The timeline ── */
   const tl = gsap.timeline({ defaults: { ease: 'none' } });
-  const at = (t: number) => t;
 
-  // A · pull back
-  if (conv) {
-    tl.fromTo(conv.paths, { drawSVG: '0% 100%' }, { drawSVG: '0% 0%', duration: 12, stagger: 0.8, immediateRender: false }, at(0));
-    tl.fromTo(conv.mark, { autoAlpha: 1 }, { autoAlpha: 0, duration: 6, immediateRender: false }, at(0));
-  }
-  tl.fromTo([camera, title], { scale: 1 }, { scale: S, duration: 40, ease: 'power2.inOut' }, at(5));
-  tl.fromTo(title, { '--page-edge': 0 }, { '--page-edge': 1, duration: 18 }, at(10));
+  // A · pull back — the hero's ink retracts toward its sources. The intro owns the paths; this owns their frame.
+  if (convSvg) tl.fromTo(convSvg, { clipPath: 'inset(0% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 100%)', duration: 12, ease: 'power1.in', immediateRender: false }, 0.5);
+  if (wrap) tl.fromTo(wrap, { opacity: 1 }, { opacity: 0, duration: 5, immediateRender: false }, 0);
+  tl.fromTo([camera, title], { scale: 1 }, { scale: S, duration: 40, ease: 'power2.inOut' }, 5);
+  tl.fromTo(title, { '--page-edge': 0 }, { '--page-edge': 1, duration: 18 }, 10);
 
-  // B · scatter (Chapter I)
+  // B · scatter (Chapter I) — the desk shifts so the title page lands in open space beside the slip
   docs.forEach((d) => {
     const s = scatter.get(d)!;
-    const leave = d.classList.contains('doc--leaving');
-    const start = PHASE.scatter + rand() * 12;
-    if (leave) {
+    const start = PHASE.scatter + rand() * 10;
+    if (d.classList.contains('doc--leaving')) {
       const dir = Number(d.dataset.leave || 1);
-      tl.to(d, { x: dir * 2.6 * W, y: s.y * 0.6, rotation: dir * 14, duration: 40, ease: 'power2.in' }, at(PHASE.scatter + 14));
+      tl.to(d, { x: dir * 2.6 * W, y: s.y * 0.6, rotation: dir * 14, duration: 36, ease: 'power2.in' }, PHASE.scatter + 12);
     } else {
-      tl.to(d, { x: s.x, y: s.y, rotation: s.r, duration: 36, ease: 'power1.inOut' }, at(start));
+      tl.to(d, { x: s.x, y: s.y, rotation: s.r, duration: 33, ease: 'power1.inOut' }, start);
     }
   });
-  tl.to(title, { x: -0.035 * W * S, y: -0.02 * H * S, rotation: -1.6, duration: 40, ease: 'power1.inOut' }, at(PHASE.scatter));
-  tl.to([camera], { scale: S * 0.92, duration: 58 }, at(PHASE.scatter));
-  tl.to(title, { scale: S * 0.92, duration: 58 }, at(PHASE.scatter));
-  tl.to(queries, { scaleX: 1, duration: 10, stagger: 2.2, ease: 'power2.out' }, at(PHASE.scatter + 26));
-  tl.to(queries.map((q) => q.querySelector('span')), { autoAlpha: 1, duration: 4, stagger: 2.2 }, at(PHASE.scatter + 33));
-  tl.to(plateI, { xPercent: 0, duration: 15, ease: 'power3.out' }, at(PHASE.scatter + 3));
-  tl.to(setI.lines, { yPercent: 0, duration: 11, stagger: 2.2, ease: 'power3.out' }, at(PHASE.scatter + 9));
-  tl.fromTo(plateIParts.slice(1), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 9, stagger: 4.5, ease: 'power2.out' }, at(PHASE.scatter + 17));
+  tl.to(camera, { x: shift, scale: S * 0.92, duration: 50, ease: 'power1.inOut' }, PHASE.scatter);
+  tl.to(title, { x: shift - 0.03 * W * S, y: -0.02 * H * S, rotation: -1.6, scale: S * 0.92, duration: 50, ease: 'power1.inOut' }, PHASE.scatter);
+  tl.to(queries, { scaleX: 1, duration: 9, stagger: 2, ease: 'power2.out' }, PHASE.scatter + 24);
+  tl.to(queries.map((q) => q.querySelector('span')), { autoAlpha: 1, duration: 4, stagger: 2 }, PHASE.scatter + 30);
+  tl.to(plateI, { xPercent: 0, duration: 14, ease: 'power3.out' }, PHASE.scatter + 3);
+  tl.to(setI.lines, { yPercent: 0, duration: 10, stagger: 2.2, ease: 'power3.out' }, PHASE.scatter + 8);
+  tl.fromTo(plateIParts, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 9, stagger: 4.5, ease: 'power2.out' }, PHASE.scatter + 15);
 
   // C · four systems
-  tl.to(queries, { autoAlpha: 0, duration: 7 }, at(PHASE.sort));
-  tl.to(title, { autoAlpha: 0, duration: 12 }, at(PHASE.sort));
+  tl.to(queries, { autoAlpha: 0, duration: 6 }, PHASE.sort);
+  tl.to(title, { opacity: 0, duration: 11 }, PHASE.sort);
   stay.forEach((d) => {
     const s = sorted.get(d)!;
-    tl.to(d, { x: s.x, y: s.y, rotation: 0, scale: k, duration: 30, ease: 'power3.inOut' }, at(PHASE.sort + 3 + s.order * 3.2));
+    tl.to(d, { x: s.x, y: s.y, rotation: 0, scale: k, duration: 28, ease: 'power3.inOut' }, PHASE.sort + 2 + s.order * 3);
   });
-  tl.to(caps, { autoAlpha: 1, '--cap-rule': 1, duration: 12, stagger: 3, ease: 'power2.out' }, at(PHASE.sort + 16));
+  tl.to(camera, { x: 0, duration: 28, ease: 'power3.inOut' }, PHASE.sort + 2);
+  tl.to(caps, { autoAlpha: 1, '--cap-rule': 1, duration: 11, stagger: 3, ease: 'power2.out' }, PHASE.sort + 15);
 
-  // D · the layer (Chapter II)
-  tl.to(plateI, { xPercent: -118, duration: 14, ease: 'power2.in' }, at(PHASE.layer));
-  tl.to(plateII, { xPercent: 0, duration: 15, ease: 'power3.out' }, at(PHASE.layer + 8));
-  tl.to(setII.lines, { yPercent: 0, duration: 11, stagger: 2.2, ease: 'power3.out' }, at(PHASE.layer + 13));
-  tl.fromTo(plateIIParts.slice(1), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 9, stagger: 4, ease: 'power2.out' }, at(PHASE.layer + 24));
-  tl.to(vellum, { yPercent: 0, duration: 28, ease: 'power2.out' }, at(PHASE.layer + 12));
+  // D · the layer (Chapter II) — the slips change places vertically, never crossing on one axis
+  tl.to(plateI, { yPercent: -6, opacity: 0, duration: 10, ease: 'power2.in' }, PHASE.layer);
+  tl.to(plateII, { xPercent: 0, duration: 14, ease: 'power3.out' }, PHASE.layer + 9);
+  tl.to(setII.lines, { yPercent: 0, duration: 10, stagger: 2.2, ease: 'power3.out' }, PHASE.layer + 14);
+  tl.fromTo(plateIIParts, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 9, stagger: 5, ease: 'power2.out' }, PHASE.layer + 20);
+  tl.to(vellum, { yPercent: 0, duration: 26, ease: 'power2.out' }, PHASE.layer + 10);
 
   // E · organize · connect · activate
-  tl.to(bracket, { drawSVG: '0% 100%', duration: 11, ease: 'power2.inOut' }, at(PHASE.verbs));
-  tl.to(verbs[0], { opacity: 1, duration: 5 }, at(PHASE.verbs));
-  tl.to(ties, { drawSVG: '0% 100%', duration: 12, stagger: 2, ease: 'power2.inOut' }, at(PHASE.verbs + 11));
-  tl.to(dots, { scale: 1, duration: 3, stagger: 0.6 }, at(PHASE.verbs + 12));
-  tl.to(verbs[1], { opacity: 1, duration: 5 }, at(PHASE.verbs + 11));
-  tl.to(caret, { drawSVG: '0% 100%', duration: 6, ease: 'power2.out' }, at(PHASE.verbs + 26));
-  tl.to(underline, { drawSVG: '0% 100%', duration: 10, ease: 'power2.inOut' }, at(PHASE.verbs + 29));
-  tl.to(verbs[2], { opacity: 1, duration: 5 }, at(PHASE.verbs + 26));
+  tl.to(bracket, { drawSVG: '0% 100%', duration: 10, ease: 'power2.inOut' }, PHASE.verbs);
+  tl.to(verbs[0], { opacity: 1, duration: 5 }, PHASE.verbs);
+  tl.to(marks, { drawSVG: '0% 100%', duration: 7, stagger: 1.2, ease: 'power2.inOut' }, PHASE.verbs + 11);
+  tl.to(ties, { drawSVG: '0% 100%', duration: 8, stagger: 1.2, ease: 'power2.inOut' }, PHASE.verbs + 15);
+  tl.to(verbs[1], { opacity: 1, duration: 5 }, PHASE.verbs + 11);
+  tl.to(stem, { drawSVG: '0% 100%', duration: 5, ease: 'power2.inOut' }, PHASE.verbs + 30);
+  tl.to(caret, { drawSVG: '0% 100%', duration: 5, ease: 'power2.out' }, PHASE.verbs + 34);
+  tl.to(underline, { drawSVG: '0% 100%', duration: 9, ease: 'power2.inOut' }, PHASE.verbs + 36);
+  tl.to(verbs[2], { opacity: 1, duration: 5 }, PHASE.verbs + 32);
 
-  // F · the layer becomes the page of Chapter III
-  const vr = layoutBox(vellum, record);
-  const inset = `inset(${((vr.y / vh) * 100).toFixed(2)}% ${(((vw - vr.x - vr.w) / vw) * 100).toFixed(2)}% ${(((vh - vr.y - vr.h) / vh) * 100).toFixed(2)}% ${((vr.x / vw) * 100).toFixed(2)}%)`;
-  tl.set(answer, { autoAlpha: 1, clipPath: inset }, at(PHASE.question));
-  tl.fromTo(answer, { clipPath: inset }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 26, ease: 'power3.inOut', immediateRender: false }, at(PHASE.question));
-  tl.to(answer.querySelectorAll('.answer__title .kicker'), { autoAlpha: 1, duration: 6 }, at(PHASE.question + 14));
-  tl.to(answerTitleSet.lines, { yPercent: 0, duration: 12, stagger: 2.6, ease: 'power3.out' }, at(PHASE.question + 16));
+  // F · hold on the question, then the layer opens *from the question* into the page of Chapter III
+  tl.set(answer, { pointerEvents: 'auto' }, PHASE.question);
+  // The page is opaque from the first frame; the widening clip does the reveal (no text-on-text crossfade).
+  tl.fromTo(answer, { opacity: 0 }, { opacity: 1, duration: 3, immediateRender: false }, PHASE.question);
+  tl.fromTo(answer, { clipPath: inset(qScreen) }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 24, ease: 'power3.inOut', immediateRender: false }, PHASE.question);
+  tl.to([vInk, vq], { opacity: 0, duration: 8 }, PHASE.question + 8);
+  tl.to(answerTitle.querySelector('.kicker'), { opacity: 1, duration: 6 }, PHASE.question + 12);
+  tl.to(answerTitleSet.lines, { yPercent: 0, duration: 11, stagger: 2.6, ease: 'power3.out' }, PHASE.question + 14);
 
-  // G · title card lifts; the page is laid out
-  tl.to(answer.querySelector('.answer__title'), { y: -0.06 * vh, autoAlpha: 0, duration: 12, ease: 'power2.in' }, at(PHASE.answer));
-  tl.to([folio, flag], { autoAlpha: 1, duration: 6 }, at(PHASE.answer + 8));
-  tl.fromTo(question, { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: 10, ease: 'power2.out', immediateRender: false }, at(PHASE.answer + 9));
-  tl.to(baselines, { drawSVG: '0% 100%', duration: 10, stagger: 1.2, ease: 'power2.inOut' }, at(PHASE.answer + 12));
-  tl.to(answer.querySelector('#sources-h'), { autoAlpha: 1, duration: 6 }, at(PHASE.answer + 10));
-  tl.to(sources, { autoAlpha: 0.5, x: 0, duration: 10, stagger: 1.6, ease: 'power2.out' }, at(PHASE.answer + 12));
+  // G · the thesis holds, then lifts; the page is laid out
+  tl.to(answerTitle, { y: -0.06 * vh, opacity: 0, duration: 10, ease: 'power2.in' }, PHASE.answer);
+  tl.to([folio, flag], { opacity: 1, duration: 6 }, PHASE.answer + 9);
+  tl.fromTo(question, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 9, ease: 'power2.out', immediateRender: false }, PHASE.answer + 11);
+  tl.to(baselines, { drawSVG: '0% 100%', duration: 9, stagger: 1.1, ease: 'power2.inOut' }, PHASE.answer + 13);
+  if (sourcesLabel) tl.to(sourcesLabel, { opacity: 1, duration: 6 }, PHASE.answer + 12);
+  tl.to(sources, { opacity: 0.8, x: 0, duration: 9, stagger: 1.5, ease: 'power2.out' }, PHASE.answer + 13);
 
-  // H · five insertions
-  const span = 25;
-  clauses.forEach((_clause, i) => {
-    const b = PHASE.insert + i * span;
+  // H · five insertions: each marked phrase lifts off its note, rides the leader, and lands where its clause is set
+  const lineDone = new Map<number, number>();
+  clauseWords.forEach((words, i) => {
+    const b = PHASE.insert + i * SPAN;
     const src = sources[i];
     const person = src.classList.contains('source--person');
-    tl.to(src, { autoAlpha: 1, duration: 4 }, at(b));
+    const setAt = person ? b + 3 : b + 18;
+    tl.to(src, { opacity: 1, duration: 4 }, b);
     if (!person) {
-      tl.to(src.querySelector('mark'), { backgroundSize: '100% 100%', duration: 5, ease: 'power2.out' }, at(b + 1));
-      tl.to(leaders[i], { drawSVG: '0% 100%', duration: 8, ease: 'power2.inOut' }, at(b + 3));
-      tl.to(carets[i], { drawSVG: '0% 100%', duration: 4 }, at(b + 8));
-      const rider = riders[i];
-      tl.set(rider, { autoAlpha: 1 }, at(b + 9));
-      tl.fromTo(rider, { motionPath: { path: leaders[i], align: leaders[i], alignOrigin: [0, 0.6], start: 0, end: 0 } },
-        { motionPath: { path: leaders[i], align: leaders[i], alignOrigin: [0, 0.6], start: 0, end: 1 }, duration: 9, ease: 'power1.inOut', immediateRender: false }, at(b + 9));
-      tl.to(rider.querySelector('.rider__it'), { opacity: 0, duration: 1.4 }, at(b + 14));
-      tl.to(rider.querySelector('.rider__ro'), { opacity: 1, duration: 1.4 }, at(b + 14));
-      tl.to(clauseWords[i], { opacity: 1, duration: 1.2, stagger: 6 / clauseWords[i].length, ease: 'power1.out' }, at(b + 15.5));
-      tl.to(rider, { autoAlpha: 0, duration: 3 }, at(b + 18));
-      tl.to(carets[i], { autoAlpha: 0, duration: 3 }, at(b + 20));
-      tl.to(leaders[i], { drawSVG: '0% 5%', duration: 4, ease: 'power2.in' }, at(b + 21));
+      const leader = leaders[i];
+      tl.to(src.querySelector('mark'), { backgroundSize: '100% 100%', duration: 5, ease: 'power2.out' }, b + 1);
+      tl.to(leader, { drawSVG: '0% 100%', duration: 10, ease: 'power2.inOut' }, b + 5);
+      tl.to(carets[i], { drawSVG: '0% 100%', duration: 4 }, b + 14);
+      tl.to(words, { opacity: 1, duration: 1.2, stagger: 7 / words.length, ease: 'power1.out' }, setAt);
+      if (lands[i]) tl.to(lands[i], { backgroundSize: '100% 100%', duration: 5, ease: 'power2.out' }, setAt + 4);
+      tl.to(carets[i], { opacity: 0, duration: 3 }, b + 25);
+      tl.to(leader, { drawSVG: '0% 4%', duration: 4, ease: 'power2.in' }, b + 25);
     } else {
       // The fifth source is a person: nothing rides. The answer points out to them.
-      tl.to(clauseWords[i], { opacity: 1, duration: 1.2, stagger: 6 / clauseWords[i].length, ease: 'power1.out' }, at(b + 2));
-      tl.to(carets[i], { drawSVG: '0% 100%', duration: 4 }, at(b + 7));
-      tl.to(leaders[i], { drawSVG: '0% 100%', duration: 9, ease: 'power2.inOut' }, at(b + 9));
-      tl.to(personFrame, { drawSVG: '0% 100%', duration: 8, stagger: 2, ease: 'power2.inOut' }, at(b + 15));
+      tl.to(words, { opacity: 1, duration: 1.2, stagger: 7 / words.length, ease: 'power1.out' }, setAt);
+      tl.to(carets[i], { drawSVG: '0% 100%', duration: 4 }, b + 9);
+      tl.to(leaders[i], { drawSVG: '0% 100%', duration: 10, ease: 'power2.inOut' }, b + 11);
+      // dashed, so it is revealed rather than drawn (DrawSVG would overwrite the dash pattern)
+      tl.to(personFrame, { opacity: 1, scale: 1, duration: 6, stagger: 2, ease: 'power2.out' }, b + 19);
     }
+    lines.forEach((l, li) => { if (l.clauses.has(i)) lineDone.set(li, Math.max(lineDone.get(li) ?? 0, setAt + 8)); });
   });
+  // Each galley rule retires once the text on its line is set.
+  baselines.forEach((p, li) => tl.to(p, { opacity: 0, duration: 4 }, lineDone.get(li) ?? PHASE.reveal));
 
   // I · proof: every clause tied to its source at once
-  tl.to(leaders.slice(0, 4), { drawSVG: '0% 100%', opacity: 0.55, duration: 8, stagger: 1 }, at(PHASE.reveal));
-  tl.to(readout, { autoAlpha: 1, duration: 5, stagger: 3 }, at(PHASE.reveal + 2));
-  tl.to(qualifier, { autoAlpha: 1, duration: 8 }, at(PHASE.reveal + 6));
+  tl.to(leaders.slice(0, 4), { drawSVG: '0% 100%', opacity: 0.6, duration: 7, stagger: 1 }, PHASE.reveal);
+  tl.to(carets, { opacity: 0.6, duration: 5 }, PHASE.reveal + 2);
+  tl.to(readout, { opacity: 1, duration: 5, stagger: 3 }, PHASE.reveal + 2);
+  tl.to(qualifier, { opacity: 1, duration: 8 }, PHASE.reveal + 5);
 
-  // J · climax: the leaders gather into one trail
-  tl.to([...leaders, ...carets], { opacity: 0, duration: 7 }, at(PHASE.climax));
-  tl.to(baselines, { opacity: 0, duration: 7 }, at(PHASE.climax));
-  tl.to(stet, { drawSVG: '0% 100%', duration: 14, ease: 'power2.inOut' }, at(PHASE.climax + 2));
-  tl.to(stetLabel, { autoAlpha: 1, duration: 5 }, at(PHASE.climax + 8));
-  tl.to({}, { duration: PHASE.end - (PHASE.climax + 16) }, at(PHASE.climax + 16));
+  // J · the gather: leaders retract into their insertion points, run left into one line, and the trail is drawn
+  tl.to(leaders, { drawSVG: '100% 100%', duration: 6, stagger: 0.8, ease: 'power2.in' }, PHASE.climax);
+  tl.to(carets, { opacity: 0, duration: 4 }, PHASE.climax + 4);
+  tl.to(gathers, { drawSVG: '0% 100%', duration: 6, stagger: 1, ease: 'power2.inOut' }, PHASE.climax + 5);
+  tl.to(stet, { drawSVG: '0% 100%', duration: 12, ease: 'power2.inOut' }, PHASE.climax + 8);
+  tl.to(gathers, { drawSVG: '100% 100%', duration: 6, stagger: 0.6, ease: 'power2.in' }, PHASE.climax + 16);
+  tl.to(stetLabel, { autoAlpha: 1, duration: 4 }, PHASE.climax + 14);
+  tl.to({}, { duration: PHASE.end - (PHASE.climax + 22) }, PHASE.climax + 22);
 
   /* ── 10. Pin and scrub ── */
   const total = PHASE.end;
-  const pxPerUnit = vh / 100;
   const st = ScrollTrigger.create({
     trigger: record,
     start: 'top top',
-    end: `+=${total * pxPerUnit}`,
+    end: `+=${(total * vh) / 100}`,
     pin: true,
     pinSpacing: true,
     scrub: 0.6,
     animation: tl,
     anticipatePin: 1,
-    invalidateOnRefresh: false,
     onUpdate: (self) => {
+      if (!self.isActive) return;
       const u = self.progress * total;
-      setChapter(u < 30 ? 'title' : u < PHASE.layer ? 'scattered' : u < PHASE.question + 10 ? 'layer' : 'answer');
+      setChapter(u < 30 ? 'title' : u < PHASE.layer ? 'scattered' : u < PHASE.question + 8 ? 'layer' : 'answer');
     },
-    onLeave: () => setChapter('trail'),
-    onEnterBack: () => setChapter('answer'),
   });
 
-  const navTo = (id: string) => {
-    if (!(id in NAV)) return null;
-    return st.start + (NAV[id] / total) * (st.end - st.start);
-  };
-
+  const yAt = (u: number) => st.start + (u / total) * (st.end - st.start);
   return {
     st,
-    navTo,
+    navTo: (id: string) => (id in NAV ? yAt(NAV[id]) : null),
+    yAtProgress: (p: number) => st.start + p * (st.end - st.start),
+    stetPageX,
     kill: () => {
       st.kill();
       tl.kill();
-      cleanups.forEach((fn) => fn());
+      cleanups.forEach((fn) => { try { fn(); } catch { /* already reverted */ } });
+      gsap.set([question, answer, answerTitle, vInk, vq], { clearProps: 'transform,opacity,visibility,clipPath,pointerEvents' });
     },
   };
 }
-
-export type { SetLines };
