@@ -763,7 +763,7 @@
   .router__desk { grid-auto-flow: column; justify-content: start; align-items: center; }
   .router__switch { width: 40px; height: 120px; transform: rotate(-90deg); margin: -40px 40px; }
   .security-grid { grid-template-columns: 1fr; }
-  .title-h__target { margin-right: 0.6em; } /* room for the 1–6 mark after "knows." */
+  .title-h__target { margin-right: calc(0.1em + 22px); } /* room for the 1–6 mark after "knows." */
   .afterword .chapter-ghost-word { font-size: 18vw; }
   .offprints { display: grid; grid-template-columns: 1fr; row-gap: 1.2rem; margin-inline: calc(-1 * var(--margin-x)); }
   .offprints .offprint:nth-child(n) { grid-column: 1; margin-top: 0; }

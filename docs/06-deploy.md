@@ -51,10 +51,28 @@ FTP works the same way: upload the *contents* of the zip's `sapienceai/` folder 
 - Apache adds the trailing slash, so `/sapienceai` redirects to `/sapienceai/`.
 - Fingerprinted assets are cached for a year, and pages revalidate.
 - It sends `X-Robots-Tag: noindex, follow`, so the concept stays out of search and is never mistaken for Sapience AI's site.
+- Because it does not inherit the root's rules, it repeats the site's canonical address itself: http → https and www → the bare domain, with a check that avoids a loop on hosts that terminate TLS in front of Apache.
+- It declares UTF-8 for text files and shows the concept's page for 403s too.
+
+The page's canonical and `og:url` are `https://mousabatarseh.com/sapienceai`, as specified. Apache serves the folder at `/sapienceai/` and redirects the slashless form there. On a noindex page that one redirect has no effect.
 
 This was tested on a local Apache 2.4 set up like the host: a WordPress-style root `.htaccess`, a neighbouring app folder, and this folder.
 
 ## Check after upload
+
+From a terminal:
+
+```
+curl -sI http://mousabatarseh.com/sapienceai/          # 301 → https://mousabatarseh.com/sapienceai/
+curl -sI https://www.mousabatarseh.com/sapienceai/     # 301 → https://mousabatarseh.com/sapienceai/
+curl -sIL --max-redirs 3 https://mousabatarseh.com/sapienceai   # ends in 200, no redirect loop
+curl -sI https://mousabatarseh.com/sapienceai/notes    # 200
+curl -sI https://mousabatarseh.com/sapienceai/nope     # 404 (the concept's page)
+```
+
+If the third check loops, the host terminates TLS without telling Apache: delete the three lines under "https, no www" in `sapienceai/.htaccess`.
+
+In a browser:
 
 - https://mousabatarseh.com/sapienceai loads the title page. Without the slash it should redirect to `/sapienceai/`.
 - https://mousabatarseh.com/sapienceai/notes loads the notes page.

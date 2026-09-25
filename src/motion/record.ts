@@ -483,7 +483,7 @@ export function buildRecord(conv: Convergence | null): Built | null {
   tl.to(plateII, { xPercent: -118, duration: 8, ease: 'power2.in' }, PHASE.question - 4);
   tl.set(answer, { opacity: 1, pointerEvents: 'auto' }, PHASE.question);
   tl.fromTo(cut, { t: 0 }, { t: 1, duration: 24, ease: 'power3.inOut', immediateRender: false, onUpdate: () => { answer.style.clipPath = clipAt(cut.t); } }, PHASE.question);
-  tl.to([vInk, vq], { opacity: 0, duration: 8 }, PHASE.question + 8);
+  tl.to([vInk, vq], { opacity: 0, duration: 8 }, PHASE.question + 4);
   tl.to(answerTitle.querySelector('.kicker'), { opacity: 1, duration: 6 }, PHASE.question + 12);
   tl.to(answerTitleSet.lines, { yPercent: 0, duration: 11, stagger: 2.6, ease: 'power3.out' }, PHASE.question + 14);
 

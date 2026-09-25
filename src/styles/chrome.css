@@ -132,6 +132,10 @@
 @media (max-width: 37.49em) {
   .running-foot { font-size: 0.6875rem; }
 }
+/* Enlarged default fonts on the narrowest screens: the footer carries the disclosure alone. */
+@media (max-width: 17.5em) {
+  .wordmark__tag { display: none; }
+}
 /* The narrowest phones: the same disclosure, shorter; the notes stay one tap away in Contents. */
 @media (max-width: 24.37em) {
   .rf-short, .running-foot__notice a, .running-foot__notice .rf-sep { display: none; }

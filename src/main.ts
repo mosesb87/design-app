@@ -23,6 +23,8 @@ let pref: Pref = readPref();
 let firstBuild = true;
 let printing = false;
 let builtAsStage: boolean | null = null;
+let builtTwoColumn: boolean | null = null;
+const twoColumnMQ = window.matchMedia('(min-width: 900px)');
 // The hero's entrance plays once per visit: rebuilds (fonts, resize, toggles) carry on from where it was.
 let intro: gsap.core.Timeline | null = null;
 let introProgress: number | null = null;
@@ -131,6 +133,7 @@ function build(anchor: Anchor | null = null) {
   reflectMotion(allowed);
   const desktop = stageMQ.matches;
   builtAsStage = allowed && desktop;
+  builtTwoColumn = twoColumnMQ.matches;
   if (!allowed) {
     html.classList.remove('motion-pending');
     drawStatic();
@@ -251,7 +254,7 @@ async function boot() {
     timer = window.setTimeout(() => {
       const w = window.innerWidth;
       const h = window.innerHeight;
-      const crossed = motionAllowed() && stageMQ.matches !== builtAsStage;
+      const crossed = (motionAllowed() && stageMQ.matches !== builtAsStage) || twoColumnMQ.matches !== builtTwoColumn;
       const big = Math.abs(w - lastW) > 40 || (builtAsStage && Math.abs(h - lastH) > 120);
       lastW = w;
       lastH = h;
