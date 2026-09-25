@@ -153,6 +153,19 @@ The Pocket Edition:
 - The base CSS *is* this static edition. The motion layout is added by JavaScript (`html.motion`), and start states are only ever set from JS.
 - Still allowed: 150ms opacity changes for hover, focus and the Contents slip.
 
+## 8½. Supporting motion (brand redesign)
+
+The single take stays the primary animation. Everything below is quieter, runs once, and never repeats.
+
+| Element | Trigger | Motion | Reduced motion / Motion: Off |
+|---|---|---|---|
+| Chapter headings (IV–IX) | enters at 75% of the viewport | opacity 0 → 1, y 28px → 0, 800ms, `cubic-bezier(.16,1,.3,1)`, once | Shown in place |
+| Ghost words ("Trail", "Sage", "Together") | their chapter head enters at 75% | opacity 0 → .08, x −4% → 0, 1.1s, same curve, once; on desktop a ±8% vertical drift scrubbed by scroll | Static at .08 |
+| Statistics (43%, 92%) | 88% of the viewport (the stage's figure: when its reading is set in the single take) | count 0 → target, 900ms, prefix and suffix kept; assistive tech reads the final value; the box is held at its final width so nothing moves | Final value, no count |
+| Security tiles (VII) | the grid enters at 80% | opacity 0 → 1, y 12px → 0, 500ms, stagger 60ms, `cubic-bezier(.2,0,0,1)`, once | Shown in place |
+| Primary buttons | hover / press | background to `#43205f`, lift 2px with a soft purple shadow (280ms); press returns | Colour change only |
+| Running head and foot | a dark chapter passes beneath each bar | background and text switch to near-black (280ms) | Instant |
+
 ## 9. Engineering rules
 
 - Everything is set up inside `gsap.matchMedia()` with desktop, mobile and reduced-motion conditions, so it reverts automatically. The toggle calls `matchMediaRefresh()`.

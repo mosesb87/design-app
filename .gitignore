@@ -7,3 +7,4 @@ qa-shots
 scripts/dev
 undefined/
 .vercel-out/
+deploy/

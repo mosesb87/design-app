@@ -1,8 +1,10 @@
-# The Annotated Record: a speculative website concept for Sapience AI
+# The Annotated Record: an independent website concept for Sapience AI
 
 A motion-first website concept for [Sapience AI](https://sapienceai.co/), *the collective intelligence platform for professional communities*.
 
-> **Speculative design concept.** It is not affiliated with or endorsed by Sapience AI. Quotations are attributed to their source: Sapience AI's published words, or the industry publisher named. Scenarios and quoted fragments marked *Illustrative* are fictional and written for the concept. The deployment is kept out of search on purpose.
+> **Independent design concept by Mousa Batarseh. Not an official Sapience AI website.** It is not affiliated with or endorsed by Sapience AI. Quotations are attributed to their source: Sapience AI's published words, or the industry publisher named. Scenarios and quoted fragments marked *Illustrative* are fictional and written for the concept. The deployment is kept out of search on purpose.
+>
+> Live at **https://mousabatarseh.com/sapienceai** (see [`docs/06-deploy.md`](docs/06-deploy.md)); staging mirror at https://sapience-concept.vercel.app.
 
 ## The idea
 
@@ -31,6 +33,7 @@ The story unfolds as one continuous take:
 | [`docs/03-motion-system.md`](docs/03-motion-system.md) | The motion system: tokens, layers, the evolving motif, rhythm, responsive and reduced-motion rules |
 | [`docs/04-qa.md`](docs/04-qa.md) | QA and critique: what was tested, what was found, and what was fixed |
 | [`docs/05-launch-notes.md`](docs/05-launch-notes.md) | From concept to launch: SEO/AIO, HubSpot, Firebase, measurement, customer testing, and the plan |
+| [`docs/06-deploy.md`](docs/06-deploy.md) | Serving the concept at mousabatarseh.com/sapienceai: hosting findings, upload steps, `.htaccess`, checks |
 
 ## Run it
 
@@ -38,23 +41,27 @@ The story unfolds as one continuous take:
 npm install
 npm run dev        # http://localhost:5173
 npm run build      # type-check, then build static HTML5 to dist/
-npm run preview    # serve dist/ on http://localhost:4173
+npm run preview    # serve dist/ on http://localhost:4173/sapienceai/
+node scripts/package-sapienceai.mjs   # build deploy/sapienceai.zip for the host
 ```
+
+The site is built for the sub-path `/sapienceai/` (`base` in `vite.config.ts`); links in the HTML use Vite's `%BASE_URL%`.
 
 Options:
 - Add `?present` to the address for review sessions. Keys 0–9 jump to chapters, `M` toggles motion, `P` toggles Provenance view, and `C` opens Contents.
 - **Motion: Off** in the running head, or the OS reduced-motion setting, gives the complete static edition.
 - **Provenance view** (in Contents or the colophon) labels every passage by where its words came from.
 
-QA harness: `node scripts/capture.mjs http://localhost:4173/ ./qa-shots --steps=24 [--reduced] [--reverse] [--keyboard]` takes scroll-sampled screenshots at four viewports, with a console-error report.
+QA harness: `node scripts/capture.mjs http://localhost:4173/sapienceai/ ./qa-shots --steps=24 [--reduced] [--reverse] [--keyboard]` takes scroll-sampled screenshots at four viewports, with a console-error report.
 
 ## Stack
 
 - Static multi-page HTML5 built with Vite and TypeScript. Content lives in HTML, and there is no framework runtime.
 - GSAP 3.15 with ScrollTrigger, SplitText (lines and words only, never letters), DrawSVG and MotionPath, plus Lenis for smooth scrolling on desktop.
 - Figures are built from SVG and HTML. The site has no raster imagery, no video and no WebGL.
-- Newsreader, Public Sans and IBM Plex Mono are self-hosted and subset.
-- Firebase Hosting (`firebase.json`) runs on Google Cloud.
+- Type: Libre Baskerville (headings, statistics) and Inter (body and interface), both under the SIL Open Font License; Newsreader for annotations; IBM Plex Mono for technical tags. All self-hosted and subset. `--font-ui` names Switzer first, so a licensed copy can be dropped in; this build uses Inter.
+- Palette: cream `#f5f0e9`, near-black `#141414`, white, and Sapience purple `#5a2d82` (tokens in `src/styles/tokens.css`).
+- Served as static files from a folder on the portfolio's host (`public/.htaccess`); `vercel.json` keeps a staging mirror; `firebase.json` remains for a Google Cloud option.
 
 ## Structure
 
@@ -63,6 +70,6 @@ index.html  notes.html  404.html   pages (all content is static HTML)
 src/styles/                        tokens, static edition, stage mode, provenance, print
 src/motion/                        runtime, hero, the single take (record.ts), chapters, fore-edge, static edition
 src/ui/chrome.ts                   running head, contents, fore-edge index, toggles, presenter mode, form
-public/                            favicon, og.png, robots.txt, llms.txt
-scripts/                           QA capture harness, Open Graph renderer
+public/                            favicon, og.png, llms.txt, .htaccess (sub-folder rules for the host)
+scripts/                           QA capture harness, Open Graph renderer, deploy packager
 ```
