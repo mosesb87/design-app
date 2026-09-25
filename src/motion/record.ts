@@ -23,7 +23,7 @@ import { setChapter } from '../ui/chrome';
  */
 export const PHASE = { pull: 0, scatter: 45, sort: 100, layer: 145, verbs: 190, question: 247, answer: 300, insert: 325, reveal: 475, climax: 490, end: 520 };
 const SPAN = 30;
-const NAV: Record<string, number> = { title: 0, scattered: 86, layer: 186, answer: 283, 'answer-end': 484 };
+const NAV: Record<string, number> = { title: 0, scattered: 86, layer: 186, answer: 283, 'answer-end': 489 };
 
 export type Built = {
   st: ScrollTrigger;
@@ -60,19 +60,25 @@ export function buildRecord(conv: Convergence | null): Built | null {
   const plateII = document.getElementById('layer')!;
   const fitPlate = (plate: HTMLElement) => {
     const inner = plate.querySelector<HTMLElement>('.plate__inner')!;
-    inner.style.transform = '';
-    inner.style.width = '';
+    const apply = (s: number) => {
+      inner.style.transform = s < 1 ? `scale(${s})` : '';
+      inner.style.width = s < 1 ? `${100 / s}%` : '';
+    };
+    apply(1);
     const cs = getComputedStyle(plate);
     const avail = plate.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
-    const need = inner.scrollHeight;
-    if (need > avail + 1) {
-      const s = Math.max(0.7, avail / need);
-      inner.style.transform = `scale(${s})`;
-      inner.style.width = `${100 / s}%`;
+    if (inner.scrollHeight <= avail + 1) return;
+    // Scaling widens the measure, so the lines reflow and need less height: search for the largest scale that fits.
+    let lo = Math.max(0.7, avail / inner.scrollHeight); // fits: at a wider measure the text is never taller
+    let hi = 1;
+    for (let i = 0; i < 7; i++) {
+      const m = (lo + hi) / 2;
+      apply(m);
+      if (inner.scrollHeight * m <= avail + 1) lo = m;
+      else hi = m;
     }
+    apply(lo);
   };
-  fitPlate(plateI);
-  fitPlate(plateII);
   cleanups.push(() => [plateI, plateII].forEach((p) => {
     const inner = p.querySelector<HTMLElement>('.plate__inner')!;
     inner.style.transform = '';
@@ -156,29 +162,47 @@ export function buildRecord(conv: Convergence | null): Built | null {
   const setII = prepareLines(plateII.querySelector('h2')!);
   const answerTitleSet = prepareLines(answer.querySelector('#answer-h')!);
   cleanups.push(setI.revert, setII.revert, answerTitleSet.revert);
+  // Fit after the headings are split: the masked lines are what actually has to fit.
+  fitPlate(plateI);
+  fitPlate(plateII);
 
   /* ── 6. Vellum: organize (the brace), connect (the relevant pages wired in), activate (the question) ── */
   const vellum = document.querySelector<HTMLElement>('[data-vellum]')!;
   const vInk = document.querySelector<SVGSVGElement>('[data-vellum-ink]')!;
   const vq = document.querySelector<HTMLElement>('[data-vellum-q]')!;
+  const question = answer.querySelector<HTMLElement>('[data-question]')!;
   const vBox = layoutBox(vellum, record);
   const braceScreenY = Math.min(lastDocBottom + 30, vBox.y + vBox.h - 110);
-  vq.style.top = `${braceScreenY - vBox.y + 34}px`;
-  vq.style.bottom = 'auto';
-  cleanups.push(() => { vq.style.top = ''; vq.style.bottom = ''; });
-  sizeSvg(vInk, vBox.w, vBox.h);
-  vInk.replaceChildren();
   const toV = (x: number, y: number): [number, number] => [x - vBox.x, y - vBox.y];
-  const qBox = layoutBox(vq, vellum);
   const bracketY = braceScreenY - vBox.y;
   const [bxL] = toV(capBoxes[0].x - 8, 0);
   const [bxR] = toV(capBoxes[3].x + capBoxes[3].w + 8, 0);
-  const bxM = qBox.x + 14;
-  const bracket = svgEl('path', { d: ortho([[bxL, bracketY - 14], [bxL, bracketY], [bxR, bracketY], [bxR, bracketY - 14]]) });
-  const stem = svgEl('path', { d: ortho([[bxM, bracketY], [bxM, qBox.y - 6]]) });
+  const bxM = (bxL + bxR) / 2;
+  // The vellum's question is set to the measure of Chapter III's question, scaled, so the same words can carry across the cut.
+  const qScale = parseFloat(getComputedStyle(vq).fontSize) / parseFloat(getComputedStyle(question).fontSize);
+  const vqW = Math.min(question.offsetWidth * qScale, vBox.w - 40);
+  const vqL = Math.max(20, Math.min(bxM - 14, vBox.w - 20 - vqW));
+  Object.assign(vq.style, { top: `${bracketY + 34}px`, bottom: 'auto', left: `${vqL}px`, right: 'auto', width: `${vqW}px`, maxWidth: 'none' });
+  vq.style.setProperty('text-wrap', 'balance');
+  cleanups.push(() => vq.removeAttribute('style'));
+  sizeSvg(vInk, vBox.w, vBox.h);
+  vInk.replaceChildren();
+  const qBox = layoutBox(vq, vellum);
+  // A proofreader's brace: the ends turn in, and a nib at the centre is where the stem leaves for the question.
+  const nib = 7;
+  const bracket = svgEl('path', {
+    d: ortho([[bxL + 8, bracketY - 16], [bxL, bracketY - 16], [bxL, bracketY], [bxM - nib, bracketY], [bxM, bracketY + nib], [bxM + nib, bracketY], [bxR, bracketY], [bxR, bracketY - 16], [bxR - 8, bracketY - 16]]),
+  });
+  const sx = Math.max(qBox.x + 8, Math.min(bxM, qBox.x + qBox.w - 8));
+  const stem = svgEl('path', {
+    d: ortho(Math.abs(sx - bxM) < 1
+      ? [[bxM, bracketY + nib], [bxM, qBox.y - 6]]
+      : [[bxM, bracketY + nib], [bxM, bracketY + nib + 8], [sx, bracketY + nib + 8], [sx, qBox.y - 6]]),
+  });
   vInk.append(bracket, stem);
   // connect: every page that bears on the question is marked, and leads down its column's gutter into the brace
   const related = stay.filter((d) => d.hasAttribute('data-rel'));
+  const unrelated = stay.filter((d) => !d.hasAttribute('data-rel'));
   const ties: SVGPathElement[] = [];
   const marks: SVGPathElement[] = [];
   related.forEach((d) => {
@@ -206,7 +230,6 @@ export function buildRecord(conv: Convergence | null): Built | null {
   const sources = Array.from(answer.querySelectorAll<HTMLElement>('[data-source]'));
   const main = answer.querySelector<HTMLElement>('.answer__main')!;
   const margin = answer.querySelector<HTMLElement>('.margin--sources')!;
-  const question = answer.querySelector<HTMLElement>('[data-question]')!;
   const readout = Array.from(answer.querySelectorAll<HTMLElement>('[data-trail-readout] span'));
   const qualifier = answer.querySelector<HTMLElement>('.qualifier')!;
   const flag = answer.querySelector<HTMLElement>('.label--flag')!;
@@ -236,42 +259,70 @@ export function buildRecord(conv: Convergence | null): Built | null {
   const marginLeft = layoutBox(margin, spread).x - G.x;
   const chan = (i: number) => Math.min(mainRight + 18, marginLeft - 44) + i * 7;
 
-  // One baseline per line of the finished paragraph, measured from the words themselves (not the citation marks).
-  type Line = { top: number; bottom: number; clauses: Set<number> };
+  // The lines of the finished paragraph. Word boxes are line boxes (SplitText words are inline-blocks); the clauses'
+  // own client rects are the glyphs' content areas. All ink runs in the clear band between one line's glyphs and the next.
+  type Line = { top: number; bottom: number; gTop: number; gBottom: number; clauses: Set<number> };
   const lines: Line[] = [];
   clauseWords.forEach((words, ci) => {
     words.filter((w) => !w.closest('.cite')).forEach((w) => {
       const b = vis(w);
       const line = lines.find((l) => b.y < l.bottom - 2 && b.y + b.h > l.top + 2);
       if (line) { line.top = Math.min(line.top, b.y); line.bottom = Math.max(line.bottom, b.y + b.h); line.clauses.add(ci); }
-      else lines.push({ top: b.y, bottom: b.y + b.h, clauses: new Set([ci]) });
+      else lines.push({ top: b.y, bottom: b.y + b.h, gTop: Infinity, gBottom: -Infinity, clauses: new Set([ci]) });
     });
   });
   lines.sort((a, b) => a.top - b.top);
+  clauses.forEach((c) => Array.from(c.getClientRects()).forEach((r) => {
+    if (r.width < 1) return;
+    const mid = (r.top + r.bottom) / 2 - gr.top;
+    const l = lines.find((ln) => mid >= ln.top && mid <= ln.bottom);
+    if (l) { l.gTop = Math.min(l.gTop, r.top - gr.top); l.gBottom = Math.max(l.gBottom, r.bottom - gr.top); }
+  }));
+  lines.forEach((l) => {
+    if (Number.isFinite(l.gTop) && l.gBottom - l.gTop > 4) return;
+    const lead = (l.bottom - l.top) * 0.18;
+    l.gTop = l.top + lead;
+    l.gBottom = l.bottom - lead;
+  });
+  const lineOf = (b: Box) => lines.find((l) => b.y + b.h / 2 >= l.top - 2 && b.y + b.h / 2 <= l.bottom + 2) ?? lines[0];
+  /** The middle of the clear band under a line, and half its height. */
+  const bandUnder = (l: Line) => {
+    const next = lines[lines.indexOf(l) + 1];
+    const below = next ? next.gTop : l.gBottom + 2 * Math.max(4, l.bottom - l.gBottom);
+    return { y: (l.gBottom + below) / 2, half: Math.max(3, (below - l.gBottom) / 2) };
+  };
+  // The galley rules sit on the real baseline (probed once; every line shares the font), so the text is set onto them.
+  const probe = document.createElement('span');
+  probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+  const firstWord = clauseWords[0][0];
+  firstWord.appendChild(probe);
+  const baseOff = probe.getBoundingClientRect().top - firstWord.getBoundingClientRect().top;
+  probe.remove();
   const baselines = lines.map((l) => {
-    const p = svgEl('path', { d: `M0 ${(l.bottom + 3).toFixed(1)} H${(galleyText.offsetWidth * 0.97).toFixed(1)}`, class: 'baseline' });
+    const p = svgEl('path', { d: `M0 ${(l.top + baseOff + 1.5).toFixed(1)} H${(galleyText.offsetWidth * 0.97).toFixed(1)}`, class: 'baseline' });
     gInk.appendChild(p);
     return p;
   });
-  const lineOf = (b: Box) => lines.find((l) => b.y + b.h / 2 >= l.top - 2 && b.y + b.h / 2 <= l.bottom + 2) ?? lines[0];
 
   const leaders: SVGPathElement[] = [];
   const carets: SVGPathElement[] = [];
   const gathers: SVGPathElement[] = [];
   const stetX = -26;
   let personFrame: SVGPathElement[] = [];
+  let personIdx = -1;
   clauses.forEach((_clause, i) => {
     const src = sources[i];
     const fb = vis(clauseWords[i][0]);
-    const under = lineOf(fb).bottom + 4;
+    const band = bandUnder(lineOf(fb));
+    const under = band.y;
     const ix = Math.max(0, fb.x); // the insertion point: where the clause begins
     const sb = rel(layoutBox(src, spread));
     const lane = chan(i);
     const person = src.classList.contains('source--person');
     let pts: Array<[number, number]>;
     if (person) {
-      const sy = sb.y + 14;
-      pts = [[ix, under + 2], [ix, under + 10], [lane, under + 10], [lane, sy], [sb.x - 12, sy]];
+      personIdx = i;
+      pts = [[ix, under], [lane, under], [lane, sb.y + 14], [sb.x - 12, sb.y + 14]];
     } else {
       // Leave the note from its outer edge, level with the marked phrase, so the ink never crosses the note's text.
       const mark = src.querySelector('mark')!;
@@ -282,7 +333,9 @@ export function buildRecord(conv: Convergence | null): Built | null {
     const leader = svgEl('path', { d: ortho(pts) });
     gInk.appendChild(leader);
     leaders.push(leader);
-    const c = svgEl('path', { d: `M${ix - 6} ${under + 9} L${ix} ${under} L${ix + 6} ${under + 9}` });
+    // A small caret, sized to the band so it never touches the glyphs above or below.
+    const a = Math.min(2.5, band.half - 2);
+    const c = svgEl('path', { d: `M${ix - 4} ${(under + a).toFixed(1)} L${ix} ${(under - a).toFixed(1)} L${ix + 4} ${(under + a).toFixed(1)}` });
     gInk.appendChild(c);
     carets.push(c);
     const g = svgEl('path', { d: ortho([[ix, under], [stetX, under]]) });
@@ -318,10 +371,21 @@ export function buildRecord(conv: Convergence | null): Built | null {
   cleanups.push(() => stetLabel.remove());
   const stetPageX = gr.left + stetX;
 
-  // Where the vellum question sits (viewport %), for the match-cut into Chapter III.
-  const qScreen: Box = { x: vBox.x + qBox.x - 14, y: vBox.y + qBox.y - 10, w: qBox.w + 28, h: qBox.h + 20 };
-  const inset = (b: Box) =>
-    `inset(${((b.y / vh) * 100).toFixed(2)}% ${(((vw - b.x - b.w) / vw) * 100).toFixed(2)}% ${(((vh - b.y - b.h) / vh) * 100).toFixed(2)}% ${((b.x / vw) * 100).toFixed(2)}%)`;
+  // The match-cut into Chapter III. The page rises from a band just under the vellum's question, and the page's own
+  // question starts exactly where the vellum's sits (scaled to the same type size), so the words carry across the cut.
+  const V = { x: vBox.x + qBox.x, y: vBox.y + qBox.y };
+  const F = layoutBox(question, record);
+  const halfLead = (el: HTMLElement) => {
+    const cs = getComputedStyle(el);
+    const fs = parseFloat(cs.fontSize);
+    return ((parseFloat(cs.lineHeight) || fs * 1.2) - fs) / 2;
+  };
+  const qFrom = { x: V.x - F.x, y: V.y + halfLead(vq) - (F.y + halfLead(question) * qScale), scale: qScale };
+  const band: Box = { x: V.x - 16, y: V.y + qBox.h + 17, w: qBox.w + 32, h: 0 };
+  // Built by hand at every step: browsers serialize inset(0% 0% 0% 0%) as inset(0%), which breaks string tweening.
+  const bandInset = [band.y / vh, (vw - band.x - band.w) / vw, (vh - band.y - band.h) / vh, band.x / vw];
+  const clipAt = (t: number) => `inset(${bandInset.map((v) => `${(v * (1 - t) * 100).toFixed(3)}%`).join(' ')})`;
+  const cut = { t: 0 };
 
   /* ── 8. Start states (JS only; text stays readable by assistive tech) ── */
   const plateIParts = Array.from(plateI.querySelectorAll('.body, .reading'));
@@ -337,9 +401,10 @@ export function buildRecord(conv: Convergence | null): Built | null {
   gsap.set(caps, { autoAlpha: 0, '--cap-rule': 0 });
   gsap.set(vellum, { yPercent: 108 });
   gsap.set([bracket, stem, ...ties, ...marks, caret, underline], { drawSVG: '0% 0%' });
-  gsap.set(answer, { opacity: 0, pointerEvents: 'none', clipPath: 'inset(0% 0% 0% 0%)' });
+  gsap.set(answer, { opacity: 0, pointerEvents: 'none', clipPath: clipAt(0) });
   gsap.set(answerTitle.querySelector('.kicker'), { opacity: 0 });
-  gsap.set([folio, flag, question, qualifier, ...readout], { opacity: 0 });
+  gsap.set([folio, flag, qualifier, ...readout], { opacity: 0 });
+  gsap.set(question, { x: qFrom.x, y: qFrom.y, scale: qFrom.scale, transformOrigin: '0 0' });
   if (sourcesLabel) gsap.set(sourcesLabel, { opacity: 0 });
   gsap.set(sources, { opacity: 0, x: 18 });
   gsap.set(answer.querySelectorAll('.source mark'), { backgroundSize: '0% 100%' });
@@ -397,6 +462,8 @@ export function buildRecord(conv: Convergence | null): Built | null {
   // E · organize · connect · activate
   tl.to(bracket, { drawSVG: '0% 100%', duration: 10, ease: 'power2.inOut' }, PHASE.verbs);
   tl.to(verbs[0], { opacity: 1, duration: 5 }, PHASE.verbs);
+  // connect: the pages that bear on the question are marked; the rest recede under the layer, so no grid of rules is left
+  tl.to(unrelated, { opacity: 0.45, duration: 8 }, PHASE.verbs + 9);
   tl.to(marks, { drawSVG: '0% 100%', duration: 7, stagger: 1.2, ease: 'power2.inOut' }, PHASE.verbs + 11);
   tl.to(ties, { drawSVG: '0% 100%', duration: 8, stagger: 1.2, ease: 'power2.inOut' }, PHASE.verbs + 15);
   tl.to(verbs[1], { opacity: 1, duration: 5 }, PHASE.verbs + 11);
@@ -405,40 +472,38 @@ export function buildRecord(conv: Convergence | null): Built | null {
   tl.to(underline, { drawSVG: '0% 100%', duration: 9, ease: 'power2.inOut' }, PHASE.verbs + 36);
   tl.to(verbs[2], { opacity: 1, duration: 5 }, PHASE.verbs + 32);
 
-  // F · hold on the question, then the layer opens *from the question* into the page of Chapter III
-  tl.set(answer, { pointerEvents: 'auto' }, PHASE.question);
-  // The page is opaque from the first frame; the widening clip does the reveal (no text-on-text crossfade).
-  tl.fromTo(answer, { opacity: 0 }, { opacity: 1, duration: 3, immediateRender: false }, PHASE.question);
-  tl.fromTo(answer, { clipPath: inset(qScreen) }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 24, ease: 'power3.inOut', immediateRender: false }, PHASE.question);
+  // F · hold on the question. Chapter II's slip is taken off the desk, then the page of Chapter III rises from under
+  //     the question: its own question is already in place, so the words are set rather than replaced.
+  tl.to(plateII, { xPercent: -118, duration: 8, ease: 'power2.in' }, PHASE.question - 4);
+  tl.set(answer, { opacity: 1, pointerEvents: 'auto' }, PHASE.question);
+  tl.fromTo(cut, { t: 0 }, { t: 1, duration: 24, ease: 'power3.inOut', immediateRender: false, onUpdate: () => { answer.style.clipPath = clipAt(cut.t); } }, PHASE.question);
   tl.to([vInk, vq], { opacity: 0, duration: 8 }, PHASE.question + 8);
   tl.to(answerTitle.querySelector('.kicker'), { opacity: 1, duration: 6 }, PHASE.question + 12);
   tl.to(answerTitleSet.lines, { yPercent: 0, duration: 11, stagger: 2.6, ease: 'power3.out' }, PHASE.question + 14);
 
-  // G · the thesis holds, then lifts; the page is laid out
+  // G · the thesis holds, then lifts; the question travels to the head of the page, and the page is laid out
   tl.to(answerTitle, { y: -0.06 * vh, opacity: 0, duration: 10, ease: 'power2.in' }, PHASE.answer);
-  tl.to([folio, flag], { opacity: 1, duration: 6 }, PHASE.answer + 9);
-  tl.fromTo(question, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 9, ease: 'power2.out', immediateRender: false }, PHASE.answer + 11);
+  tl.to(question, { x: 0, y: 0, scale: 1, duration: 12, ease: 'power3.inOut' }, PHASE.answer + 4);
+  tl.to([folio, flag], { opacity: 1, duration: 6 }, PHASE.answer + 11);
   tl.to(baselines, { drawSVG: '0% 100%', duration: 9, stagger: 1.1, ease: 'power2.inOut' }, PHASE.answer + 13);
   if (sourcesLabel) tl.to(sourcesLabel, { opacity: 1, duration: 6 }, PHASE.answer + 12);
-  tl.to(sources, { opacity: 0.8, x: 0, duration: 9, stagger: 1.5, ease: 'power2.out' }, PHASE.answer + 13);
+  tl.to(sources, { opacity: 1, x: 0, duration: 9, stagger: 1.5, ease: 'power2.out' }, PHASE.answer + 13);
 
-  // H · five insertions: each marked phrase lifts off its note, rides the leader, and lands where its clause is set
+  // H · five insertions: each note's phrase is washed, its leader runs to the insertion point, and the clause is set there
   const lineDone = new Map<number, number>();
   clauseWords.forEach((words, i) => {
     const b = PHASE.insert + i * SPAN;
-    const src = sources[i];
-    const person = src.classList.contains('source--person');
+    const person = i === personIdx;
     const setAt = person ? b + 3 : b + 18;
-    tl.to(src, { opacity: 1, duration: 4 }, b);
     if (!person) {
       const leader = leaders[i];
-      tl.to(src.querySelector('mark'), { backgroundSize: '100% 100%', duration: 5, ease: 'power2.out' }, b + 1);
+      tl.to(sources[i].querySelector('mark'), { backgroundSize: '100% 100%', duration: 5, ease: 'power2.out' }, b + 1);
       tl.to(leader, { drawSVG: '0% 100%', duration: 10, ease: 'power2.inOut' }, b + 5);
       tl.to(carets[i], { drawSVG: '0% 100%', duration: 4 }, b + 14);
       tl.to(words, { opacity: 1, duration: 1.2, stagger: 7 / words.length, ease: 'power1.out' }, setAt);
       if (lands[i]) tl.to(lands[i], { backgroundSize: '100% 100%', duration: 5, ease: 'power2.out' }, setAt + 4);
       tl.to(carets[i], { opacity: 0, duration: 3 }, b + 25);
-      tl.to(leader, { drawSVG: '0% 4%', duration: 4, ease: 'power2.in' }, b + 25);
+      tl.to(leader, { drawSVG: '0% 0%', duration: 4, ease: 'power2.in' }, b + 25);
     } else {
       // The fifth source is a person: nothing rides. The answer points out to them.
       tl.to(words, { opacity: 1, duration: 1.2, stagger: 7 / words.length, ease: 'power1.out' }, setAt);
@@ -453,13 +518,16 @@ export function buildRecord(conv: Convergence | null): Built | null {
   baselines.forEach((p, li) => tl.to(p, { opacity: 0, duration: 4 }, lineDone.get(li) ?? PHASE.reveal));
 
   // I · proof: every clause tied to its source at once
-  tl.to(leaders.slice(0, 4), { drawSVG: '0% 100%', opacity: 0.6, duration: 7, stagger: 1 }, PHASE.reveal);
+  const noteLeaders = leaders.filter((_, i) => i !== personIdx);
+  const personLeader = personIdx >= 0 ? leaders[personIdx] : null;
+  tl.to(noteLeaders, { drawSVG: '0% 100%', opacity: 0.6, duration: 7, stagger: 1 }, PHASE.reveal);
   tl.to(carets, { opacity: 0.6, duration: 5 }, PHASE.reveal + 2);
   tl.to(readout, { opacity: 1, duration: 5, stagger: 3 }, PHASE.reveal + 2);
   tl.to(qualifier, { opacity: 1, duration: 8 }, PHASE.reveal + 5);
 
   // J · the gather: leaders retract into their insertion points, run left into one line, and the trail is drawn
-  tl.to(leaders, { drawSVG: '100% 100%', duration: 6, stagger: 0.8, ease: 'power2.in' }, PHASE.climax);
+  tl.to(noteLeaders, { drawSVG: '100% 100%', duration: 6, stagger: 0.8, ease: 'power2.in' }, PHASE.climax);
+  if (personLeader) tl.to(personLeader, { drawSVG: '0% 0%', duration: 6, ease: 'power2.in' }, PHASE.climax + 3);
   tl.to(carets, { opacity: 0, duration: 4 }, PHASE.climax + 4);
   tl.to(gathers, { drawSVG: '0% 100%', duration: 6, stagger: 1, ease: 'power2.inOut' }, PHASE.climax + 5);
   tl.to(stet, { drawSVG: '0% 100%', duration: 12, ease: 'power2.inOut' }, PHASE.climax + 8);

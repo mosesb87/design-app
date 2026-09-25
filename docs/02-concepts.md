@@ -90,7 +90,7 @@ All three judges saw the same weakness. **It could read as too quiet**: "the cur
 4. **The signature sequence scales up** (a graft from A).
    - The answer is set at reading size across a full-viewport spread, with 1.5px leaders that hold up on a projector.
    - The **fifth source is a person**, and nothing travels from it. Its leader draws out empty to a dashed double frame: *"Not written down. The reasoning sits with the past chair."*
-   - It is labelled *Illustrative · capability to be confirmed by Sapience AI*, because peer-matching is published only as early access.
+   - It is labeled *Illustrative · capability to be confirmed by Sapience AI*, because peer-matching is published only as early access.
 5. **The trail becomes the audit trail** (a graft from C). After the climax, the five leaders straighten into one vertical trail: question → sources → person → answer → reviewed by the people you permit. It becomes the governance chapter, so the proof follows the climax without a sag in pacing.
 6. **Memory gets an image** (a graft from A, without the extraction). "The organization that never forgets" is drawn as the fore-edge of a volume: thirty years of hairline strata. Role tags such as *Chair, 2016–19* fade out while their leaders stay put, so people move on and their notes stay cited. New hairlines arrive each year, because "it gets smarter every year".
 7. **The honesty is visible, not hidden:**

@@ -1,5 +1,5 @@
 import { gsap, ScrollTrigger, initScroll, destroyScroll, getLenis, scrollToY } from './motion/runtime';
-import { initChrome, reflectMotion, setMotionToggleHandler, setNavigator, setStageOwnsRecord, announce, navigate } from './ui/chrome';
+import { initChrome, reflectMotion, setMotionToggleHandler, setProvenanceHandler, setNavigator, setStageOwnsRecord, announce, navigate } from './ui/chrome';
 import { drawConvergence, heroIntro } from './motion/hero';
 import { buildRecord, type Built } from './motion/record';
 import { buildChapters, buildPocketRecord } from './motion/chapters';
@@ -11,7 +11,11 @@ const reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
 const stageMQ = window.matchMedia('(min-width: 900px) and (min-height: 600px)');
 
 type Pref = 'on' | 'off' | null;
-type Anchor = { kind: 'top' } | { kind: 'stage'; p: number } | { kind: 'section'; id: string; r: number };
+type Anchor =
+  | { kind: 'top' }
+  | { kind: 'stage'; p: number }
+  | { kind: 'section'; id: string; r: number; pastQ?: boolean }
+  | { kind: 'el'; sel: string };
 
 let ctx: gsap.Context | null = null;
 let rec: Built | null = null;
@@ -19,6 +23,9 @@ let pref: Pref = readPref();
 let firstBuild = true;
 let printing = false;
 let builtAsStage: boolean | null = null;
+// The hero's entrance plays once per visit: rebuilds (fonts, resize, toggles) carry on from where it was.
+let intro: gsap.core.Timeline | null = null;
+let introProgress: number | null = null;
 
 function readPref(): Pref {
   try {
@@ -54,7 +61,11 @@ function captureAnchor(): Anchor {
   for (const s of Array.from(document.querySelectorAll<HTMLElement>('[data-chapter]'))) {
     if (stage && s.closest('[data-record]')) continue;
     const r = s.getBoundingClientRect();
-    if (r.top <= mid && r.bottom >= mid) return { kind: 'section', id: s.id, r: (mid - r.top) / Math.max(1, r.height) };
+    if (r.top <= mid && r.bottom > mid) {
+      // In the answer, what matters is whether the reader had reached the question (and the answer under it).
+      const q = s.id === 'answer' ? s.querySelector('[data-question]') : null;
+      return { kind: 'section', id: s.id, r: (mid - r.top) / Math.max(1, r.height), pastQ: q ? q.getBoundingClientRect().top < mid : undefined };
+    }
   }
   return { kind: 'top' };
 }
@@ -66,17 +77,25 @@ function jump(y: number) {
   }
   else window.scrollTo({ top: y, behavior: 'instant' as ScrollBehavior });
 }
-function restoreAnchor(a: Anchor) {
+// Where each part of the stage's single take lives in the flowing editions (units as in record.ts PHASE).
+const STAGE_TO_FLOW: Array<[number, string]> = [[45, 'top'], [145, '#scattered'], [247, '#layer'], [300, '#answer'], [Infinity, '[data-question]']];
+function restoreAnchor(a: Anchor): void {
   if (a.kind === 'top') return jump(0);
+  const headH = document.querySelector<HTMLElement>('.running-head')?.offsetHeight ?? 56;
   if (a.kind === 'stage') {
     if (rec) return jump(rec.yAtProgress(a.p));
-    const id = a.p < 0.08 ? 'title' : a.p < 0.28 ? 'scattered' : a.p < 0.46 ? 'layer' : 'answer';
-    return restoreAnchor({ kind: 'section', id, r: 0 });
+    const sel = STAGE_TO_FLOW.find(([end]) => a.p * 520 < end)![1];
+    return sel === 'top' ? jump(0) : restoreAnchor({ kind: 'el', sel });
+  }
+  if (a.kind === 'el') {
+    const el = document.querySelector<HTMLElement>(a.sel);
+    if (el) jump(Math.max(0, el.getBoundingClientRect().top + window.scrollY - headH - 16));
+    return;
   }
   const el = document.getElementById(a.id);
   if (!el) return;
   if (rec && el.closest('[data-record]')) {
-    const y = rec.navTo(a.id);
+    const y = rec.navTo(a.id === 'answer' && a.pastQ ? 'answer-end' : a.id);
     if (y != null) return jump(y);
   }
   const top = el.getBoundingClientRect().top + window.scrollY;
@@ -85,6 +104,8 @@ function restoreAnchor(a: Anchor) {
 
 /* ─────────────── Build / teardown ─────────────── */
 function teardown() {
+  if (intro) introProgress = intro.progress();
+  intro = null;
   ctx?.revert();
   ctx = null;
   rec = null;
@@ -125,7 +146,8 @@ function build(anchor: Anchor | null = null) {
       setStageOwnsRecord(true);
     }
     const conv = drawConvergence(desktop ? 'spread' : 'rail');
-    const intro = conv ? heroIntro(conv) : null;
+    intro = conv ? heroIntro(conv) : null;
+    if (intro && introProgress != null) intro.progress(introProgress);
 
     let killPocket: (() => void) | null = null;
     let onFocus: ((e: FocusEvent) => void) | null = null;
@@ -134,10 +156,10 @@ function build(anchor: Anchor | null = null) {
       const r = rec;
       if (r) {
         const keyFor = (id: string) => (/^(src|cite)-\d$/.test(id) ? 'answer-end' : id);
-        setNavigator((id) => {
+        setNavigator((id, focus) => {
           const y = r.navTo(keyFor(id));
           if (y == null) return false;
-          scrollToY(y, () => focusHeading(id));
+          scrollToY(y, focus ? () => focusHeading(id) : undefined);
           return true;
         });
         // Keyboard focus inside the stage brings its phase on screen (focus inside the answer → the finished answer).
@@ -165,7 +187,7 @@ function build(anchor: Anchor | null = null) {
     requestAnimationFrame(() => {
       ScrollTrigger.refresh();
       if (firstBuild && location.hash && document.getElementById(location.hash.slice(1))) {
-        setTimeout(() => navigate(location.hash.slice(1), false), 120);
+        setTimeout(() => navigate(location.hash.slice(1), true), 120);
       } else if (anchor) {
         restoreAnchor(anchor);
       }
@@ -175,7 +197,6 @@ function build(anchor: Anchor | null = null) {
     return () => {
       window.removeEventListener('scroll', skipIntro);
       if (onFocus) document.removeEventListener('focusin', onFocus);
-      intro?.kill();
       killChapters();
       killPocket?.();
       rec?.kill();
@@ -198,6 +219,13 @@ function setMotion(on: boolean) {
 async function boot() {
   initChrome();
   setMotionToggleHandler(setMotion);
+  // Provenance labels change the layout: measure again, keeping the reader's place.
+  setProvenanceHandler((apply) => {
+    if (printing) return apply();
+    const anchor = captureAnchor();
+    apply();
+    build(anchor);
+  });
   reflectMotion(motionAllowed());
   await fontsReady();
   build();

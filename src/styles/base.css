@@ -209,14 +209,23 @@ h1, h2, h3, h4 { font-weight: inherit; }
 }
 .read-link:hover, .link-btn:hover { background-size: 100% 2px; }
 
-/* Coarse pointers: enlarge hit areas without changing the typesetting. */
+/* Coarse pointers: enlarge hit areas without changing the typesetting (no padding, no display change). */
 @media (pointer: coarse) {
   .cite { position: relative; }
   .cite::after { content: ''; position: absolute; inset: -17px -18px; }
-  .read-link, .link-btn, .paper__link, .wordmark, .contents__notes-link {
-    display: inline-flex; align-items: center; min-height: 44px;
+  .read-link, .link-btn, .paper__link, .wordmark, .contents__notes-link,
+  .trail__detail a, .policies a, .booking__meta a { position: relative; }
+  .read-link::before, .link-btn::before, .paper__link::before, .wordmark::before, .contents__notes-link::before,
+  .trail__detail a::before, .policies a::before, .booking__meta a::before {
+    content: '';
+    position: absolute;
+    left: -6px; right: -6px;
+    top: 50%;
+    height: 44px;
+    transform: translateY(-50%);
   }
-  .trail__detail a, .policies a, .booking__meta a, .running-foot a { padding-block: 12px; }
+  /* The foot's notice clips overflow, so its link grows instead. */
+  .running-foot a { min-height: 44px; display: flex; align-items: center; }
 }
 
 /* Margin notes */

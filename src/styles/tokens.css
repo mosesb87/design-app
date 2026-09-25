@@ -81,7 +81,7 @@
   --font-ui: 'Public Sans', 'Public Sans Fallback', Arial, Helvetica, sans-serif;
   --font-mono: 'Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
 
-  --fs-title: clamp(3.05rem, 0.7rem + 7vw, 8.25rem);
+  --fs-title: clamp(3.05rem, 0.7rem + 7vw, 7rem);
   --fs-display-xl: clamp(2.6rem, 0.9rem + 5vw, 6.25rem);
   --fs-display: clamp(2.15rem, 1rem + 3.3vw, 4.4rem);
   --fs-subdisplay: clamp(1.6rem, 1.1rem + 1.5vw, 2.5rem);

@@ -7,14 +7,14 @@ _Sapience AI shown as the wayfinding system of a professional community. One pur
 
 Professional associations already know how to move thousands of strangers through an unfamiliar building. At the annual meeting, a wayfinding system does it: overhead signs, room plates, colour-coded tracks, badges with ribbons, a session board and an information desk. Together they get each person to the right room at the right moment. Meeting Point treats Sapience AI as that system for a community's knowledge. The building is the association. Its rooms are the systems it already runs: AMS, CRM, LMS and content systems. They are never moved or rebuilt. Its people are the members and staff who hold what the documents leave out. Sapience is the layer hung above the rooms ("We sit above your existing systems to organize, connect, and activate relevant knowledge"). Sage is the information desk that "Routes every question to the right agent". The purple line painted on the floor is the route a question takes.
 
-The site follows one question, labelled Illustrative: "Why did the certification committee change the recertification requirement?" It is told through a transit-grade signage system in motion. One 12px purple line, drawn only at 0°, 45° and 90°, carries the visitor through ten numbered rooms. At each stop the question's ticket gets a route mark. In room 06 those marks turn out to have been the audit trail all along ("Every AI recommendation comes with a full audit trail"). The route never ends at a chatbot. It ends twice at people: first at a past committee chair (an illustrative role, never a named person), and finally at Sapience's own team ("Book a conversation with our team."). The system speaks in a working grotesk and people speak in a serif. Sapience's serif is not dropped; it becomes the voice of the humans the platform exists to reach.
+The site follows one question, labeled Illustrative: "Why did the certification committee change the recertification requirement?" It is told through a transit-grade signage system in motion. One 12px purple line, drawn only at 0°, 45° and 90°, carries the visitor through ten numbered rooms. At each stop the question's ticket gets a route mark. In room 06 those marks turn out to have been the audit trail all along ("Every AI recommendation comes with a full audit trail"). The route never ends at a chatbot. It ends twice at people: first at a past committee chair (an illustrative role, never a named person), and finally at Sapience's own team ("Book a conversation with our team."). The system speaks in a working grotesk and people speak in a serif. Sapience's serif is not dropped; it becomes the voice of the humans the platform exists to reach.
 
 ## Why it fits
 
 MECHANISM, 1:1 WITH VERIFIED CLAIMS
 • Information desk = Sage: "Your command center. Routes every question to the right agent automatically so your team always gets the right answer without knowing which tool to use." (sapienceai.co/platform). Needing no map of the building is exactly what a desk gives a visitor.
 • Signs hung above rooms that stay unchanged = "We sit above your existing systems to organize, connect, and activate relevant knowledge" (LinkedIn) and "We plug into your existing AMS, CRM, LMS, and content systems. No rip and replace." (Platform). Wayfinding is by nature a retrofit: you don't knock down walls to install signs.
-• A route that reaches the person who knows = the mission "so the right insight reaches the right person at the right moment" (LinkedIn), the value "The most powerful intelligence in a professional community already lives within its people" (/company), and the Labs line "you needed a person, not a prompt" / "Find the person who knows." (/labs). Person-routing is always labelled Illustrative, and the Chrome peer-matching is labelled "early access, waitlist" (§4.6, §11.4).
+• A route that reaches the person who knows = the mission "so the right insight reaches the right person at the right moment" (LinkedIn), the value "The most powerful intelligence in a professional community already lives within its people" (/company), and the Labs line "you needed a person, not a prompt" / "Find the person who knows." (/labs). Person-routing is always labeled Illustrative, and the Chrome peer-matching is labeled "early access, waitlist" (§4.6, §11.4).
 • The route is the record = "Every AI recommendation comes with a full audit trail. You set the permissions." (Platform), and §5.7 whitespace #6: animate question → sources → people → recommendation → reviewer.
 • A building that gains floors = "built to compound for the community it came from" and "it gets smarter every year" (values, Private Intelligence Core), plus "The Organization That Never Forgets" (proposed SXSW27 session, "When board members or committee chairs move on, so does the knowledge they carried.").
 
@@ -169,7 +169,7 @@ BELOW THE SIGN (y ≈ 600–820)
 BOTTOM (100svh − 76px)
 • The strip map: a 4px purple line from column 1 to column 12 with ten 14px stops.
 • Labels above in 12px caps: ENTRANCE, LOST & FOUND, INFORMATION DESK, CONCOURSE, MEETING POINT, TRIP LOG, ALL LEVELS, SERVICES, PROGRAM, MEETING ROOM. Codes 01–10 below.
-• The "You are here" marker (an 18px purple disc with a 3px cream ring, labelled in Newsreader italic) sits on 01.
+• The "You are here" marker (an 18px purple disc with a 3px cream ring, labeled in Newsreader italic) sits on 01.
 • This is the site's real chapter index: <nav><ol> of <a href> links, with aria-current="location".
 
 LOAD CHOREOGRAPHY: no loader, text never hidden
@@ -215,7 +215,7 @@ TRANSFORMATION (0 → 60vh), "confusion"
 INFORMATION REVEAL (30 → 70vh)
 • The stat plate at top right (columns 9–12) rolls "43%" on an odometer: tabular digit reels, 900ms settle, triggered at 30vh.
 • Beside it: "Only 43% can easily access and understand the data they need to monitor and improve performance." Footnote tile [1]: iMIS/ASI 2026 Membership Performance Benchmark Report.
-• It is labelled as industry context, never as a Sapience result.
+• It is labeled as industry context, never as a Sapience result.
 
 CLIMAX (70 → 115vh), "the alignment"
 • A diagonal wave re-signs the wall. Each plate's delay is (row + col) × 0.035 of the phase. Each arrow takes the shortest path to → in 45° clicks.
@@ -354,7 +354,7 @@ ROOM BY ROOM
 • 03: stacked. The ticket rides down the spine to the desk panel (scrubbed, not pinned), and the agents list follows.
 • 04: the corridor becomes a stairwell. Four room cards are stacked. As each enters, a purple sign strip is installed across its top (scaleX 0 → 1 from the spine side, 500ms) and a dashed spur draws from the spine. The cards themselves never change.
 • 05: the staff badge above, the meeting point between, the past chair below. The ticket's handoff travels downward.
-• 06: the spine itself becomes the strip map, with six stops labelled to the right. No MorphSVG: the visitor has been scrolling the record all along, and that is the point.
+• 06: the spine itself becomes the strip map, with six stops labeled to the right. No MorphSVG: the visitor has been scrolling the record all along, and that is the point.
 • 07: floors run full width, and the indicator is a sticky mini plate.
 • 08: the tenant diagram sits above the stacked board rows (28px pictograms).
 • 09: program cards with status chips.
@@ -432,7 +432,7 @@ Medium-high. About 11 developer-days for one senior creative developer, plus abo
 • A SYSTEM, NOT A PAGE. Sign, plate, tile, route, stop, badge and board are components with tokens and rules: route grammar, track codes, and the bilingual system-and-human hierarchy. That speaks directly to the Head of Brand & Communications' remit over the identity system and "naming and taxonomy architecture": wayfinding is taxonomy made visible, and it can survive product renames.
 • THE PRODUCT STORY THE CURRENT SITE LACKS. A non-technical executive can see how it works: scattered → organized, one desk, signs above unchanged systems, a person found, and every step on the record, without a single dashboard.
 • THEIR AUDIENCE'S OWN WORLD. Annual meetings, badges with ribbons, committee chairs, certification, the program at a glance. Association executives will recognise these at once, and no competitor uses them.
-• ENGINEERING-READY CRAFT. Static HTML on Firebase and Google infrastructure. Text is the LCP. There is one H1, aria-current="location" on the route, JSON-LD for disambiguation, GA4 chapter events, and a HubSpot seam labelled as engineering-owned. Reduced motion is a first-class static design, and the performance budget is explicit.
+• ENGINEERING-READY CRAFT. Static HTML on Firebase and Google infrastructure. Text is the LCP. There is one H1, aria-current="location" on the route, JSON-LD for disambiguation, GA4 chapter events, and a HubSpot seam labeled as engineering-owned. Reduced motion is a first-class static design, and the performance budget is explicit.
 • REVIEWABLE IN THE SEATTLE ROOM. Numbered rooms, a Directory, presenter keys, skip plates, and a persistent speculative-concept notice. It presents well on a big screen and it is honest about what it is.
 
 ## Narrative sections
@@ -490,7 +490,7 @@ Medium-high. About 11 developer-days for one senior creative developer, plus abo
 
 - **Purpose:** Put security and governance on the main path, shown as architecture and a directory of the 8 published controls. No certification badges.
 - **Headline:** H2 (verbatim): “Enterprise-grade security and controls”. Secondary (verbatim, Built on Trust value): “Safety and privacy are not features. They are how we build.” Body (verbatim): “Sapience AI runs on Google Cloud with the controls enterprise teams expect — private per-tenant data models, envelope encryption with per-tenant keys, SAML SSO, audit logging, and OWASP WAF protection.” Board rows (verbatim labels): PER-TENANT ENCRYPTION KEYS · SAML SSO · CLOUD AUDIT LOGS · OWASP WAF · PER-TENANT ISOLATION · MANAGED DATA LIFECYCLE · TLS 1.2+ IN TRANSIT · POINT-IN-TIME RESTORE, each with a one-line plain-language gloss marked as concept copy for Sapience review. Diagram label (concept): “Your floor. Your keys.”
-- **Composition:** Not pinned, about 130vh. Room sign 08 (key pictogram, G chip), the H2, the body and the tenant diagram sit in columns 1–5. In the diagram, the purple route closes into a rectangle around “Your organization” with a key pictogram at its door, beside two dashed ghost rectangles labelled “Another organization”, separated by 24px gaps. In columns 6–12, a charcoal directory board headed “SERVICES ON THIS LEVEL · as published by Sapience AI” lists 8 rows (a real <ul>, not H2s). Each row has a cream line pictogram (32px), the label in Archivo 650 wdth 88 18px caps and a gloss in 15px #B9B3C2. The footer row links to the Data Privacy & Governance Policy and the Privacy Policy.
+- **Composition:** Not pinned, about 130vh. Room sign 08 (key pictogram, G chip), the H2, the body and the tenant diagram sit in columns 1–5. In the diagram, the purple route closes into a rectangle around “Your organization” with a key pictogram at its door, beside two dashed ghost rectangles labeled “Another organization”, separated by 24px gaps. In columns 6–12, a charcoal directory board headed “SERVICES ON THIS LEVEL · as published by Sapience AI” lists 8 rows (a real <ul>, not H2s). Each row has a cream line pictogram (32px), the label in Archivo 650 wdth 88 18px caps and a gloss in 15px #B9B3C2. The footer row links to the Data Privacy & Governance Policy and the Privacy Policy.
 - **Motion:** Board enters at top 70%: rows letter in from masks (500ms settle, 70ms stagger, played once and then static) and pictograms draw (DrawSVG, 600ms). The point-in-time-restore clock hand clicks back 45° once. The tenant perimeter is scrubbed from 20% to 60% of the section and is reversible: the route closes into its loop.
 
 ### 09-program — discovery
@@ -510,7 +510,7 @@ Medium-high. About 11 developer-days for one senior creative developer, plus abo
 ## Risks
 
 - It could slide into literal clip-art if the pictograms are weak. Mitigation: one designer draws the whole 26-glyph set on a strict 24-unit, 0/45/90° grid before any build, with a 5-second legibility test. Pictograms always sit next to text and never replace it.
-- Overclaiming Sage: the story reaches a person, but Sage's published role is routing questions to the right agent. Mitigation: person-routing is always labelled Illustrative, the room 05 status plate names Sapience AI for Chrome as early access with a waitlist, and steps 03–06 of the trip log are illustrative. All of it needs a line-by-line copy review with Sapience before any external use.
+- Overclaiming Sage: the story reaches a person, but Sage's published role is routing questions to the right agent. Mitigation: person-routing is always labeled Illustrative, the room 05 status plate names Sapience AI for Chrome as early access with a waitlist, and steps 03–06 of the trip log are illustrative. All of it needs a line-by-line copy review with Sapience before any external use.
 - Too many track colours could dilute the purple-and-cream identity. Mitigation: the green and brass appear only as 20px chips, badge bands and ribbons, never as fields or lines. The route is always purple. All track colours are tokens, swappable if the icon refresh changes the palette.
 - The question ticket might be read as a disguised prompt box. Mitigation: it is designed as a paper tag, with a punched hole, route-mark squares, an ILLUSTRATIVE band, and no caret, input or send button.
 - Scroll fatigue and scroll-jacking: about 1,900vh on desktop, with six pinned rooms totalling about 820vh. Mitigation: pins stay at or below 200vh each, every pin has a visible skip plate, the header strip map allows jumping anywhere, mobile pins only room 02, and the motion toggle is always available.

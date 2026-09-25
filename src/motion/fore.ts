@@ -99,11 +99,14 @@ export function drawFore(): Fore | null {
       const ly = (inkLines.get(ci) ?? [])[0];
       if (ly == null) return;
       const g = svgEl('g', { class: 'chair' });
-      const label = svgEl('text', { x: x1 - 4, y: (ly - 4).toFixed(1), 'text-anchor': 'end', class: 'tag-text tag-text--halo' });
+      const label = svgEl('text', { x: x1 - 4, y: (ly - 4).toFixed(1), 'text-anchor': 'end', class: 'tag-text' });
       label.textContent = `Chair ’${String(from).slice(2)}–${String(to).slice(2)}`;
       if (ci < CHAIRS.length - 1) label.classList.add('tag-text--past');
       g.appendChild(label);
       svg.appendChild(g);
+      // A slip of paper behind the tag, so no hairline shows between its letters. It fades with the tag.
+      const b = label.getBBox();
+      if (b.width) g.insertBefore(svgEl('rect', { x: (b.x - 4).toFixed(1), y: (b.y - 1).toFixed(1), width: (b.width + 8).toFixed(1), height: (b.height + 2).toFixed(1), fill: 'var(--paper)' }), label);
       chairs.push({ g, from, to });
     });
   } else {
@@ -169,6 +172,6 @@ export function animateFore(f: Fore, trigger: Element) {
   });
   tl.to(f.now, { autoAlpha: 1, duration: 0.8 }, 9.6);
   gsap.timeline({
-    scrollTrigger: { trigger, start: 'top 78%', end: 'bottom 60%', scrub: 0.6 },
+    scrollTrigger: { trigger, start: 'top 78%', end: 'bottom 85%', scrub: 0.6 },
   }).add(tl);
 }

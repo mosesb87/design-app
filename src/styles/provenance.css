@@ -37,3 +37,7 @@ html.provenance .chapter--binding [data-copy] { outline-color: var(--ink-rev); }
 /* Inline passages inside running text: outline only, no label. */
 html.provenance .clause[data-copy]::before, html.provenance .verb__text[data-copy]::before { display: none; }
 html.provenance .title-h__category::before { font-style: normal; }
+/* The labels add height to the title page: on the stage the headline gives some back, so the call to action clears the foot. */
+html.provenance.stage-mode .title-h__display { font-size: calc(min(var(--fs-title), 11.6vh) * 0.8); }
+/* The deck's two sentences have different sources: their labels run inline, so the paragraph keeps its shape. */
+html.provenance .deck [data-copy]::before { display: inline-block; margin: 0 0.5em 0 0; vertical-align: 0.15em; }

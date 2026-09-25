@@ -68,17 +68,18 @@ Durations:
 | Scatter | 0.22 → 0.45 | The pages drift apart and tilt slightly; two slide off the desk edge. Dashed leaders stop short in "Qy." queries. The Chapter I text plate is set. | "Insights sit scattered across inboxes, drives, and disconnected tools." Knowledge walks out at handover. |
 | Four systems | 0.45 → 0.6 | The pages settle into four columns: AMS · CRM · LMS · Content, in a quantized diagonal wave. The column captions ink in. | This is where the knowledge lives today. The systems never merge. |
 | The layer | 0.6 → 0.78 | A flat vellum sheet slides up *over* the columns; the columns do not move. The Chapter II text plate is set. | "We sit above your existing systems." |
-| Organize · Connect · Activate | 0.78 → 1 | A brace draws under the four systems (organize). The pages that bear on the question are marked in ink and wired down their column gutters into the brace (connect). A stem runs from the brace to the question, and a caret and underline ink it (activate). | The three verbs as three marks. |
+| Organize · Connect · Activate | 0.78 → 1 | A proofreader's brace, ends turned in, draws under the four systems (organize). The pages that bear on the question are marked in ink and wired down their column gutters into the brace, while the rest recede under the layer (connect). A stem drops from the brace's centre nib onto the question, and a caret and underline ink it (activate). | The three verbs as three marks. |
 
 **Act II — The answer** (Chapter III, the signature sequence, pinned about 260vh)
 
 | Phase | Scroll | Motion |
 |---|---|---|
-| Entry | 0 → .08 | The question is set (once). Five galley baselines draw. The notes sit dormant at 55% opacity. |
-| Transformation | .08 → .76 | Five insertions of about 13.5% each. For each one, the note wakes and its key phrase takes the ink wash. The leader leaves the note from its outer edge, runs down the gutter channel, and turns under the line to a caret at the insertion point. The clause is then set word by word from there. **The same phrase is washed again where it lands in the answer**: a highlight rhyme that carries the source into the text, and the finished answer shows it. Each galley rule retires once its line is set. |
+| Match-cut | before 0 | Chapter II's slip is taken off the desk. The page of Chapter III rises from a band just under the vellum's question, and its own question is already in place, at the same size, so the italic note is *set* in roman type rather than replaced. The title card holds; then the question travels to the head of the page. Reverses exactly. |
+| Entry | 0 → .08 | Five galley rules draw on the lines' real baselines. The notes arrive at full strength; being cited is shown by the wash and the leader, never by dimmed text. |
+| Transformation | .08 → .76 | Five insertions of about 13.5% each. For each one, the note wakes and its key phrase takes the ink wash. The leader leaves the note from its outer edge, runs down the gutter channel, and turns into the clear band under the line (between one line's glyphs and the next) to a small caret at the insertion point. No ink ever crosses a glyph. The clause is then set word by word from there. **The same phrase is washed again where it lands in the answer**: a highlight rhyme that carries the source into the text, and the finished answer shows it. Each galley rule retires once its line is set. |
 | The person | inside insertion 5 | Nothing rides. The leader draws out *empty* to a dashed double frame: "Not written down." The clause names the past chair. |
 | Information reveal | .76 → .86 | All five leaders redraw together, and the trail readout completes: `SOURCES 4 · PERSON 1 · TRAIL RECORDED` (illustrative). |
-| Climax | .86 → .94 | The leaders retract into their insertion points. Short gather lines run left from each one, the vertical *stet* draws down through their ends, and the gather lines retract into it. |
+| Climax | .86 → .94 | The leaders retract into their insertion points (the person's too). Gather lines run left from each one in the band under its line, the vertical *stet* draws down through their ends, and the gather lines retract into it. |
 | Resolution | .94 → 1 | Still hold. The vertical line continues below the stage and becomes Chapter IV's audit trail. |
 
 **Chapters IV–IX** flow in normal layout, with scroll-linked figures:

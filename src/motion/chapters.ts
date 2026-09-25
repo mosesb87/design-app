@@ -36,8 +36,9 @@ function trail(opts: Opts, cleanups: Array<() => void>) {
   const sectionLeft = section.getBoundingClientRect().left;
   const listBox = layoutBox(list, section);
   // One x for the whole trail: the stage's stet line, the connector, and the list's own rule.
-  const x = opts.stageTrailX != null ? opts.stageTrailX - sectionLeft : listBox.x - 24;
-  list.style.setProperty('--trail-x', `${x - listBox.x}px`);
+  // x is the centre of the line; the 2px rules are placed by their left edge.
+  const x = opts.stageTrailX != null ? opts.stageTrailX - sectionLeft : listBox.x - 23;
+  list.style.setProperty('--trail-x', `${x - 1 - listBox.x}px`);
   cleanups.push(() => list.style.removeProperty('--trail-x'));
 
   if (opts.desktop) {
@@ -45,7 +46,7 @@ function trail(opts: Opts, cleanups: Array<() => void>) {
     link.setAttribute('aria-hidden', 'true');
     Object.assign(link.style, {
       position: 'absolute',
-      left: `${x}px`,
+      left: `${x - 1}px`,
       top: '0px',
       width: '2px',
       height: `${listBox.y}px`,
@@ -212,25 +213,36 @@ export function buildPocketRecord() {
     const gb = galley.getBoundingClientRect();
     const ab = answer.getBoundingClientRect();
     sizeSvg(gInk, galley.offsetWidth, ab.bottom - gb.top);
-    const railX = -Math.max(8, Math.min(14, gb.left - 6));
+    // One rail per clause in the page margin, later clauses outermost, so the rungs to the sources never cross.
+    // Each leg runs in the clear band under the clause's last line, not through the text.
+    const n = clauses.length;
+    const pitch = Math.min(3.5, Math.max(2, (gb.left - 4) / n));
+    const railX = (i: number) => -(gb.left - 3) + (n - 1 - i) * pitch;
     const paths = clauses.map((c, i) => {
       const cite = c.querySelector('.cite')!;
       const cr = cite.getBoundingClientRect();
+      const rects = Array.from(c.getClientRects()).filter((r) => r.width > 0);
+      const last = rects[rects.length - 1] ?? cr;
       const sr = sources[i].getBoundingClientRect();
-      const y0 = cr.bottom - gb.top + 3;
+      const y0 = last.bottom - gb.top + 2;
       const y1 = sr.top - gb.top + 9;
       const x0 = cr.left - gb.left + cr.width / 2;
-      const d = ortho([[x0, y0], [x0, y0 + 4], [railX - i * 2, y0 + 4], [railX - i * 2, y1], [sr.left - gb.left - 4, y1]]);
-      return gInk.appendChild(svgEl('path', { d, opacity: 0.7 }));
+      const person = sources[i].classList.contains('source--person');
+      const d = ortho([[x0, y0], [railX(i), y0], [railX(i), y1], [sr.left - gb.left - 4, y1]]);
+      return gInk.appendChild(svgEl('path', { d, opacity: 0.75, 'stroke-width': 1, ...(person ? { 'stroke-dasharray': '3 2.5', class: 'rail--person' } : {}) }));
     });
     // The text is always readable; what arrives with scroll is the ink: each clause's phrase is washed and tied to its source.
     const lands = clauses.map((c) => c.querySelector<HTMLElement>('mark.land'));
-    gsap.set(paths, { drawSVG: '0% 0%' });
+    // Dashed (the person) is revealed, not drawn: DrawSVG would overwrite the dash pattern.
+    const dashed = (p: SVGPathElement) => p.classList.contains('rail--person');
+    gsap.set(paths.filter((p) => !dashed(p)), { drawSVG: '0% 0%' });
+    gsap.set(paths.filter(dashed), { opacity: 0 });
     gsap.set(lands.filter(Boolean), { backgroundSize: '0% 100%' });
     const tl = gsap.timeline({ scrollTrigger: { trigger: galley, start: 'top 72%', end: 'bottom 40%', scrub: 0.5 } });
     clauses.forEach((_c, i) => {
       if (lands[i]) tl.to(lands[i], { backgroundSize: '100% 100%', duration: 0.6, ease: 'none' }, i);
-      tl.to(paths[i], { drawSVG: '0% 100%', duration: 1, ease: 'none' }, i + 0.2);
+      if (dashed(paths[i])) tl.to(paths[i], { opacity: 0.75, duration: 1, ease: 'none' }, i + 0.2);
+      else tl.to(paths[i], { drawSVG: '0% 100%', duration: 1, ease: 'none' }, i + 0.2);
     });
     cleanups.push(() => gInk.replaceChildren());
   }

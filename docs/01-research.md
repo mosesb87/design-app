@@ -10,7 +10,7 @@
 - **OBSERVATION**: something we saw (crawl structure, a screenshot, a count, a comparison). It can be checked, but it involves some judgment or a tool limitation.
 - **INTERPRETATION**: our inference or recommendation. It is not a claim about Sapience AI.
 
-Unlabelled bullets and table rows in §1, §2 and §9 are FACTS.
+Unlabeled bullets and table rows in §1, §2 and §9 are FACTS.
 
 ---
 
@@ -40,7 +40,7 @@ Unlabelled bullets and table rows in §1, §2 and §9 are FACTS.
 | Competitor visuals | Only 7 screenshots were taken, to save connector credits. The Guru capture rendered partly (loading skeletons). | Personify, Nimble, Fonteva, GrowthZone, Bloomfire, Notion and Microsoft were reviewed from text only |
 
 ### Confidence notes
-- Aggregator data (LinkedIn enrichment, VCBacked, GetLatka) is used only where something else corroborates it, and is labelled when used.
+- Aggregator data (LinkedIn enrichment, VCBacked, GetLatka) is used only where something else corroborates it, and is labeled when used.
 - Headcount estimates across sources vary by 3×. Titles for the founder vary across sources (§1.3).
 - The research team did not create any account, form submission or contact with Sapience AI.
 
@@ -69,7 +69,7 @@ Unlabelled bullets and table rows in §1, §2 and §9 are FACTS.
 | Indexed title | "Sapience AI \| Knowledge Platform for Membership Organizations" | https://sapienceai.co/ (Exa search result) |
 | Legal descriptor | "Sapience AI provides Institutional Knowledge Infrastructure for professional associations and membership organizations. Our services may include software applications, APIs, browser extensions, data analytics tools, and related documentation" | https://sapienceai.co/tos |
 | LinkedIn tagline | "We provide every person, at every level, meaningful access to the insights, guidance and expertise that already live inside their network." | https://www.linkedin.com/company/sapience-ai-corp |
-| LinkedIn "layer" line | "Sapience AI is the layer that changes everything. We sit above your existing systems to organize, connect, and activate relevant knowledge..." | https://www.linkedin.com/company/sapience-ai-corp |
+| LinkedIn "layer" line | "Sapience AI is the layer that changes everything. We sit above your existing systems to organize, connect, and activate relevant knowledge that no single tool can access on its own." | https://www.linkedin.com/company/sapience-ai-corp |
 | Mission | "Our mission is to make every member's intelligence and expertise searchable, actionable, and available at scale, so the right insight reaches the right person at the right moment. When that happens, retention grows, engagement deepens, and the community becomes indispensable." | https://www.linkedin.com/company/sapience-ai-corp |
 | Recruiting boilerplate | "Sapience AI is the collective intelligence platform for professional communities. The expertise inside an organization already exists. It lives in scattered documents, disconnected systems, and the people who have done the work before. We bring that expertise together into one place so it can be searched, shared, and acted on." | https://job-boards.greenhouse.io/sapienceaicorporation/jobs/4393679009 |
 | Product maturity (policy) | Defines "Design Partner" (pre-release phase) and "Minimum Viable Product" or "MVP" ("the initial version of Sapience AI's platform released to Design Partners"). Also: "Note: This policy describes our current and planned capabilities. Some features described herein may not yet be fully implemented." | https://sapienceai.co/data-privacy |
@@ -222,7 +222,7 @@ Sources: LinkedIn job 4471445588, posted through "Sundayy" (https://www.linkedin
 | 4 | Weekly in-person reviews in Seattle | Live walkthroughs on a big screen | Chaptered narrative; a section index; a motion toggle; a Firebase preview URL for every PR |
 | 5 | "Skilled in HTML5, with experience hosted on Google infrastructure" | A move off Framer onto Google Cloud (INTERPRETATION; §1.7) | A static multi-page Vite build deployed to Firebase Hosting, with firebase.json caching and security headers and no framework lock-in |
 | 6 | "Implement SEO and AIO foundations into the site structure and pages" | AI answers matter, and the company name collides with others (§9) | One H1 per page, semantic outline, unique titles and meta, Organization and WebSite JSON-LD with `sameAs`, an AI-crawler policy in robots.txt, sitemap, llms.txt plus `.md` twins, every word present in static HTML |
-| 7 | "HubSpot connection, which they own" | Respect ownership and leave clean seams | A semantic "Book a conversation" form with documented HubSpot hooks (hutk, consent, events, CSP entries), labelled as engineering-owned |
+| 7 | "HubSpot connection, which they own" | Respect ownership and leave clean seams | A semantic "Book a conversation" form with documented HubSpot hooks (hutk, consent, events, CSP entries), labeled as engineering-owned |
 | 8 | "Run customer testing with current customers" | They iterate on evidence | A test-plan appendix (tasks such as "find how data is protected", "explain what Sage does", "book a conversation") and proof modules ready to fill after testing |
 | 9 | Track traffic after launch | Outcomes are measured | A measurement plan: GA4 events on the CTA and on chapter progress, Search Console's generative-AI report, HubSpot AEO prompts (§8.10) |
 | 10 | Work with brand, content contributors and engineering | Other people will edit and extend the site | A token-based system; the logo as a swappable slot (the icon refresh runs in parallel, §3.2); content in editable partials; a component inventory |
@@ -235,7 +235,7 @@ Sources: LinkedIn job 4471445588, posted through "Sundayy" (https://www.linkedin
 
 ### 4.1 Information architecture (as crawled)
 ```
-Header:  Company(/company; labelled "About" on some pages) | Platform | Customers | Labs | [Get Started → destination unverified, probably /contact]
+Header:  Company(/company; labeled "About" on some pages) | Platform | Customers | Labs | [Get Started → destination unverified, probably /contact]
 Footer:  Platform | Developers | About(/company) | Customers | Contact | Careers | Terms of Service(/tos) | Privacy Policy(/privacy-policy) | Data Privacy & Governance Policy(/data-privacy)
 Off-site: Chrome Web Store · GitHub (Sapience-AI/openclaw-middleware-suite) · Zoom/NoteBouncer (buff.ly) · Greenhouse
 Missing: blog/resources/news, pricing, case studies, solutions, security page, docs
@@ -445,7 +445,7 @@ Evidence anchors are cited FACTS. The personas and needs are our inference.
 | **IT, security and data governance** (often a small team, or outsourced) | Privacy and data security is the top AI barrier (SAE survey). Only 6–13% have an AI policy (ASAE/Avenue M). | Specific controls, an architecture diagram, data ownership, SSO, sub-processors, links to policies | Contradictions between marketing and policy (§4.6); vague "enterprise-grade" claims; unverifiable badges | A dedicated Security & Governance page built on the 8 published controls; a diagram of per-tenant isolation and envelope encryption; policy links; no certification badges; claim wording that matches the policy |
 | **Board and volunteer leaders** | Knowledge is lost at officer handover (ASAE Sep 2026). "the reasoning behind the decision is not [documented]" (ASAE Jul 2026). Platform promises "Governance-ready for your board and your regulators". | Short, calm, printable answers on ownership, audit and continuity | Fiduciary and privacy exposure; technology they cannot evaluate | Legible type and reduced motion ("designing for trust across generations", mdg); a one-page summary; the institutional-memory story |
 | *Secondary:* **Developers and AI power users** | Labs and Developers pages; OpenClaw on npm; the Chrome extension; NoteBouncer | Working code, accurate status, a punchier tone | Overclaiming (the Chrome waitlist) | A Labs sub-register with mono accents and code; honest "early access" labels; Developers stays in the footer until docs exist |
-| *Secondary:* **The hiring panel** | §3 | Proof of strategy, craft, SEO/AIO and integration judgment | A pretty concept that ignores constraints | Rationale page, audit appendix, measurement plan, clearly labelled speculative concept |
+| *Secondary:* **The hiring panel** | §3 | Proof of strategy, craft, SEO/AIO and integration judgment | A pretty concept that ignores constraints | Rationale page, audit appendix, measurement plan, clearly labeled speculative concept |
 
 ---
 
@@ -469,7 +469,7 @@ These were studied through live sites and gallery write-ups. The original refere
 - **FACT:** H1 "Framer is the AI design agent for every step from idea to launch". First section: "Agents that work alongside you, not instead of you". The redesign shipped with Framer 3.0 on June 16, 2026 (https://www.framer.com/updates/framer-3). The agent makes "many small edits that add up to the final design", and every message can be rolled back (https://www.framer.com/blog/building-framer-agents/).
 - **OBSERVATION:** the homepage proves the product with dense, real UI fragments (a CMS table, SEO fields, Core Web Vitals tiles) rather than illustration.
 - **Principle (INTERPRETATION):** *the product narrates itself.* Motion shows the process step by step. "Alongside you, not instead of you" parallels Sapience's "Humans in Partnership".
-- **Translation:** a Sage routing panel that streams small, visible steps: question received → routed → specialist lane → a person surfaced. It is labelled "Illustrative concept". It uses only verified names, and invents no member data beyond Sapience's own mock values.
+- **Translation:** a Sage routing panel that streams small, visible steps: question received → routed → specialist lane → a person surfaced. It is labeled "Illustrative concept". It uses only verified names, and invents no member data beyond Sapience's own mock values.
 - **Context:** Sapience's current site runs on Framer. The concept argues for HTML5 on Google infrastructure (§8).
 
 ### 7.4 "EVR Ventures" hero
@@ -610,7 +610,7 @@ These were studied through live sites and gallery write-ups. The original refere
 
 ## 10. Design implications — statements the creative concept must honor
 
-1. **Trace every claim.** Every fact, figure and product name on the concept site traces to sapienceai.co or a cited third-party source. New copy is labelled as concept copy. Customers, logos, quotes, metrics and agent capabilities are never invented.
+1. **Trace every claim.** Every fact, figure and product name on the concept site traces to sapienceai.co or a cited third-party source. New copy is labeled as concept copy. Customers, logos, quotes, metrics and agent capabilities are never invented.
 2. **People before prompts.** The hero idea is Sapience's own: intelligence "already lives within its people", and sometimes "you needed a person, not a prompt." No chat-box, prompt-box or phone-assistant hero.
 3. **Motion explains a mechanism.** Each set piece shows something Sapience says it does:
    - knowledge "scattered across inboxes, drives, and disconnected tools";
@@ -627,7 +627,7 @@ These were studied through live sites and gallery write-ups. The original refere
 8. **Describe only what's described.** Affinity and Corporate appear as names only until Sapience supplies descriptions. Labs products carry their true status ("early access", waitlist).
 9. **The document comes first.** All content exists in static, semantic HTML before any script runs: one H1 per page, a logical outline, real links. Motion is progressive enhancement, and start states are set only by JS.
 10. **The visitor controls the motion.** Motion is scroll-linked and reversible. No loop runs over 5 s without a pause control. `prefers-reduced-motion` is honored, plus a visible site-wide toggle: "Your meetings. Your control." applied to the site itself.
-11. **Stable for people and agents.** CLS ≤ 0.1, LCP ≤ 2.5 s with text as the LCP element, native buttons and labelled fields, no overlays left over CTAs, SplitText on headings only (by lines or words).
+11. **Stable for people and agents.** CLS ≤ 0.1, LCP ≤ 2.5 s with text as the LCP element, native buttons and labeled fields, no overlays left over CTAs, SplitText on headings only (by lines or words).
 12. **Built for their stack.** Static HTML5 on Firebase Hosting (Google infrastructure). GA4 stays. The form leaves documented seams for the HubSpot connection engineering owns.
 13. **Disambiguate the entity.** Organization and WebSite structured data, `sameAs` links and precise copy ("collective intelligence platform for professional communities", plus association vocabulary) separate Sapience AI from sapienceai.eu, Sapience Labs, Sapience Cloud and the rest.
 14. **A system, not a page.** Tokens and components flex between the core association register and a punchier Labs/Developer register. The logo and icon are a swappable slot, because the icon refresh runs in parallel.
@@ -681,8 +681,8 @@ The §5.4 findings (iMIS/ASI 2026, MGI 2025/2026, ASAE, Naylor, the Momentive AS
 | "Today's most forward-thinking membership organizations trust Sapience AI" | Framed as pre-release, Design Partner, MVP elsewhere | Usable verbatim, but not next to invented proof |
 | Chrome "connects you with someone..." | The store says peer-matching is waitlisted | Always pair it with "early access" and the waitlist |
 | "live in days — not months" | Common across the category; no public detail behind it | Low on the page, verbatim only |
-| Sage mock values ("92/100", "Sustainable Tech with 34 active threads") | Illustrative data inside Sapience's own image | Only inside a mock labelled as illustrative, and only these values |
-| Sapience's real product screenshots and wordmark | Permission unknown; the icon is mid-refresh | Redraw the product UI as illustrative. Use the wordmark only as a labelled placeholder slot. |
+| Sage mock values ("92/100", "Sustainable Tech with 34 active threads") | Illustrative data inside Sapience's own image | Only inside a mock labeled as illustrative, and only these values |
+| Sapience's real product screenshots and wordmark | Permission unknown; the icon is mid-refresh | Redraw the product UI as illustrative. Use the wordmark only as a labeled placeholder slot. |
 
 ### 11.5 DO NOT USE
 - **Any "$8.8M" funding figure**, TipRanks items, or anything else about the Slovak GPU company (§9).

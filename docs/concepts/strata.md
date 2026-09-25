@@ -238,13 +238,13 @@ PLATE VI, “THE CORE”
 - Page range: 700–1020vh.
 - Pinned wrapper: .plate-vi__pin, start “top top”, end “+=300%”, scrub .6. The camera uses scrub .8 and line draws use .4.
 - Composition: frontal and orthographic, because this scene is about legibility.
-- The scenario is illustrative, and labelled so on the plate.
+- The scenario is illustrative, and labeled so on the plate.
 
 ENTRY (700–750vh; pin 0–17%)
 - 700–730vh: the fence from Plate V flattens (rotations go to 0°). Flip merges the four system columns into one full-width section: the connected record. Faint dashed tie marks stay visible inside it.
 - 730–750vh:
   - The question settles in at the surface as an engraved annotation in Bodoni italic, 28px, with a leader line: “What did we decide the last time the certification standards changed — and why?” Beneath it, in mono: “ILLUSTRATIVE · ASKED BY A MEMBER-SERVICES TEAM”.
-  - A ▽ marker labelled “Sage” draws at the left end of the surface. The marginal note is verbatim: “Sage — Routes every question to the right agent automatically so your team always gets the right answer without knowing which tool to use.”
+  - A ▽ marker labeled “Sage” draws at the left end of the surface. The marginal note is verbatim: “Sage — Routes every question to the right agent automatically so your team always gets the right answer without knowing which tool to use.”
   - Routing is shown as choosing where to drill. A dashed ink route line draws along the surface, and the question label slides along it to the bore collar at x 58% (0.4 scrub).
 
 TRANSFORMATION (750–880vh; 17–60%)
@@ -295,7 +295,7 @@ The fifth compartment. The core has come up through thirty years and the tray ha
 THE COLUMN
 A miniature stratigraphic column, 10px wide and 60vh tall, lives in the fixed left depth rail beside the plate numerals I–XI, which are real links. It records the state of the record as the visitor moves through the plates, and ends as the key column in the footer's title block.
 
-I Surface: pristine. 30 bands, uncored, unlabelled.
+I Surface: pristine. 30 bands, uncored, unlabeled.
 
 II Unconformity: three wavy hiatus glyphs draw in at 2024, 2021 and 2018 (MorphSVG, straight to wavy, 0.4 scrub). Three tiny notches mark where pieces scattered.
 
@@ -471,7 +471,7 @@ PLATES
   - The empty fifth row has a dashed outline.
 - VII Chain of custody: the log becomes stacked row entries (a <dl> per row). No horizontal scroll.
 - VIII Bedrock: one cased bore diagram, 200px tall and full width, then the 8 controls in a single column.
-- IX Deposition: three bands deposit onto the top of the spine as the paragraph passes; “No hiatus” is labelled inline.
+- IX Deposition: three bands deposit onto the top of the spine as the paragraph passes; “No hiatus” is labeled inline.
 - X Field instruments: the ledger stacks, with Chrome first.
 - XI Surface: the spine Flips back into a full-width horizontal band, bookending the hero. The CTA is full width and the title block stacks.
 
@@ -556,7 +556,7 @@ SCROLLTRIGGER
 
 SEO / AIO
 - One H1 per page, a sequential outline, footnotes as real <ol>, the legend and controls as <ul>, and every word present before JS.
-- All illustrative SVGs use role=img with aria-labelledby pointing to a plain-language figcaption. Decorative duplicates are aria-hidden.
+- All illustrative SVGs use role=img with aria-labeledby pointing to a plain-language figcaption. Decorative duplicates are aria-hidden.
 - Copy is tagged data-copy="verbatim|adapted|concept|illustrative" to feed the copy deck.
 - GA4 events: plate_view (I–XI), cta_click, motion_toggle, core_replay.
 
@@ -581,7 +581,7 @@ HEAD OF BRAND & COMMUNICATIONS / MARKETING COMMUNICATIONS (a remit of an identit
 - They will see their own palette kept, with a stated reason for the change: Baskerville's lineage carried on to the engraved romans of survey plates.
 - They get a real system, not a page: neatline, plate captions, legend, marginalia, title block, and a Labs register (field instruments in mono) that extends to developer products.
 - Product names are spelled exactly: Sage, Affinity, Corporate, OpenClaw Middleware Suite, NoteBouncer.
-- The logo is a labelled slot that respects the parallel icon refresh.
+- The logo is a labeled slot that respects the parallel icon refresh.
 - Every claim is footnoted, and the copy is tagged verbatim, adapted or concept.
 - The story is one they can repeat to boards in their own words: “The Organization That Never Forgets”, and “the next handover leaves no gap.”
 
@@ -634,7 +634,7 @@ THE WHOLE ROOM
 
 - **Purpose:** Make the record human. Every line is a person's contribution. Humans in Partnership.
 - **Headline:** Look closer. Every line is someone.
-- **Composition:** 400–500vh. Reading column: kicker ‘PLATE IV · DETAIL A (ENLARGED ×7) · HUMANS IN PARTNERSHIP’; H2; the verbatim value, “The most powerful intelligence in a professional community already lives within its people. Technology will never replace that. Our work is to elevate it, so every voice carries further and every contribution matters more.”; a pull line, “Not to automate humanity. To elevate it.” (Sapience AI, LinkedIn); a concept line, “Some of them moved on years ago. Their contribution didn't.” Stage: a Detail A circle (r 28px) on the founding slab, and a leader line to a neatline-framed enlarged panel covering 62% of the stage. The panel holds an SVG whose hatch lines are rows of 2.2-unit micro-text such as ‘question from the floor — member’, ‘minutes — committee secretary’, ‘reply that settled the thread — chapter member’, ‘mentoring notes — past president’, ‘revision comment — standards volunteer’. Roles only, no names, labelled Illustrative.
+- **Composition:** 400–500vh. Reading column: kicker ‘PLATE IV · DETAIL A (ENLARGED ×7) · HUMANS IN PARTNERSHIP’; H2; the verbatim value, “The most powerful intelligence in a professional community already lives within its people. Technology will never replace that. Our work is to elevate it, so every voice carries further and every contribution matters more.”; a pull line, “Not to automate humanity. To elevate it.” (Sapience AI, LinkedIn); a concept line, “Some of them moved on years ago. Their contribution didn't.” Stage: a Detail A circle (r 28px) on the founding slab, and a leader line to a neatline-framed enlarged panel covering 62% of the stage. The panel holds an SVG whose hatch lines are rows of 2.2-unit micro-text such as ‘question from the floor — member’, ‘minutes — committee secretary’, ‘reply that settled the thread — chapter member’, ‘mentoring notes — past president’, ‘revision comment — standards volunteer’. Roles only, no names, labeled Illustrative.
 - **Motion:** 400–420vh: the circle and leader draw (DrawSVG, .4 scrub). 420–470vh: the panel opens (clip-path from the circle's bounds to the full rect) while its SVG viewBox tweens from the full slab (0 0 1100 140) to a 150×19 window. That is a crisp ×7 zoom, so the ‘hatching’ resolves into legible lines at about 16px (scrub .6). 470–500vh: hold, then the panel folds back into the circle as the camera pulls back. The ascenders of the micro-text never animate individually.
 
 ### plate-v-correlation — acceleration
@@ -642,7 +642,7 @@ THE WHOLE ROOM
 - **Purpose:** Mechanism 1. Sapience sits above existing systems to organize, connect and activate, with no migration. Systems are shown generically, with no vendor names.
 - **Headline:** Nothing to excavate. Everything connects.
 - **Composition:** 500–700vh; pinned 500–680 (.plate-v__pin, end +=180%). Left (cols 1–3): kicker ‘PLATE V · CORRELATION’; H2; verbatim “We sit above your existing systems to organize, connect, and activate relevant knowledge.” (Sapience AI, LinkedIn); a mono stepper, ‘01 Organize: hang every system on one datum · 02 Connect: tie the same moment across systems · 03 Activate: make the tied layer usable’; verbatim “We plug into your existing AMS, CRM, LMS, and content systems. No rip and replace.” Small print, verbatim and footnoted as Sapience's own claim: “Secure, private, and live in days — not months.” A note: ‘Systems shown generically; Sapience AI names no specific vendors.’ Stage (cols 4–12): four borehole columns, each 160px wide and 62vh tall, captioned in mono AMS / CRM / LMS / CONTENT SYSTEMS. Each records the same years at different thicknesses and starts at a different vertical offset (−60, +90, −30, +140px).
-- **Motion:** 500–530vh: the 3D block collapses (explode → 0, rotations → 0) and scales into column 1, while columns 2–4 rise into place (y 100vh → 0, stagger). 530–580vh, Organize: the columns slide vertically to hang on one datum. A datum rule draws across their tops, labelled ‘SAPIENCE AI · SITS ABOVE YOUR EXISTING SYSTEMS’. 580–630vh, Connect: seven dashed correlation ties draw left to right between matching horizons (DrawSVG, stagger). 630–655vh, Activate: the ‘2019 · certification change’ horizon (illustrative) fills solid --ink in all four columns, and its tie band fills wash-3. 655–680vh: the fence rotates into 3D (rotateY −16°, rotateX 10°) so the viewer sees it as one connected surface. The stepper's active row inks in sync. Scrub .6, reversible.
+- **Motion:** 500–530vh: the 3D block collapses (explode → 0, rotations → 0) and scales into column 1, while columns 2–4 rise into place (y 100vh → 0, stagger). 530–580vh, Organize: the columns slide vertically to hang on one datum. A datum rule draws across their tops, labeled ‘SAPIENCE AI · SITS ABOVE YOUR EXISTING SYSTEMS’. 580–630vh, Connect: seven dashed correlation ties draw left to right between matching horizons (DrawSVG, stagger). 630–655vh, Activate: the ‘2019 · certification change’ horizon (illustrative) fills solid --ink in all four columns, and its tie band fills wash-3. 655–680vh: the fence rotates into 3D (rotateY −16°, rotateX 10°) so the viewer sees it as one connected surface. The stepper's active row inks in sync. Scrub .6, reversible.
 
 ### plate-vi-the-core — impact
 
@@ -662,14 +662,14 @@ THE WHOLE ROOM
 
 - **Purpose:** Security, as architecture rather than badges. Uses only the 8 published controls and no certification claims.
 - **Headline:** Enterprise-grade security and controls
-- **Composition:** 1160–1320vh; charcoal field. Left: kicker ‘PLATE VIII · BEDROCK’; H2 (verbatim); verbatim body, “Sapience AI runs on Google Cloud with the controls enterprise teams expect — private per-tenant data models, envelope encryption with per-tenant keys, SAML SSO, audit logging, and OWASP WAF protection.”; the link ‘Read the governance plate →’. Right: an engineering section in --ink-light linework on crystalline bedrock hatch. Three cased bores with double walls: ‘YOUR ORGANIZATION’ drawn prominently, and two thinner bores labelled ‘ANOTHER ORGANIZATION’. A keyed collar (a line-drawn key glyph) sits on each bore. ‘Detail B: envelope encryption’ shows nested outlines: data inside a data key inside a per-tenant key. Below: the 8 controls verbatim as a 2×4 <ul> in Plex Mono 500, 13px, uppercase, each with a bedrock swatch: PER-TENANT ENCRYPTION KEYS · SAML SSO · CLOUD AUDIT LOGS · OWASP WAF · PER-TENANT ISOLATION · MANAGED DATA LIFECYCLE · TLS 1.2+ IN TRANSIT · POINT-IN-TIME RESTORE. Caption (concept): ‘Your column is cased, keyed, and kept apart.’
+- **Composition:** 1160–1320vh; charcoal field. Left: kicker ‘PLATE VIII · BEDROCK’; H2 (verbatim); verbatim body, “Sapience AI runs on Google Cloud with the controls enterprise teams expect — private per-tenant data models, envelope encryption with per-tenant keys, SAML SSO, audit logging, and OWASP WAF protection.”; the link ‘Read the governance plate →’. Right: an engineering section in --ink-light linework on crystalline bedrock hatch. Three cased bores with double walls: ‘YOUR ORGANIZATION’ drawn prominently, and two thinner bores labeled ‘ANOTHER ORGANIZATION’. A keyed collar (a line-drawn key glyph) sits on each bore. ‘Detail B: envelope encryption’ shows nested outlines: data inside a data key inside a per-tenant key. Below: the 8 controls verbatim as a 2×4 <ul> in Plex Mono 500, 13px, uppercase, each with a bedrock swatch: PER-TENANT ENCRYPTION KEYS · SAML SSO · CLOUD AUDIT LOGS · OWASP WAF · PER-TENANT ISOLATION · MANAGED DATA LIFECYCLE · TLS 1.2+ IN TRANSIT · POINT-IN-TIME RESTORE. Caption (concept): ‘Your column is cased, keyed, and kept apart.’
 - **Motion:** 1160–1190vh: bedrock rises. A charcoal band's clip-path goes from inset(100% 0 0 0) to inset(0) (scrub). At 50% a ScrollTrigger class swaps the frame, rail and imprint tokens to the dark set. Pinned 1190–1270vh (end +=80%): casing walls draw top to bottom, wall by wall (DrawSVG, .4 scrub); keys stamp in (scale .92 → 1, settle); the envelope outlines draw from outside in. 1270–1320vh: control rows fall into place once (y −12 → 0, .6s settle, stagger .06). There are no ticks, checkmarks or badges.
 
 ### plate-ix-deposition — acceleration
 
 - **Purpose:** Value over time. A private core that compounds, and a future where a handover no longer leaves a gap.
 - **Headline:** The next handover leaves no gap.
-- **Composition:** 1320–1520vh; paper returns. Reading column: kicker ‘PLATE IX · DEPOSITION · PRIVATE INTELLIGENCE CORE’; H2 with a straight double rule under ‘no gap’; verbatim “Your data trains your model only.” and “Your organization builds its own foundational AI — and it gets smarter every year.” The flagged middle sentence is left out. Then “built to compound for the community it came from.” (Company values). Stage: the oblique exploded block again, with three new slabs above the 2026 surface labelled in mono ‘+1 YR’, ‘+2 YR · COMMITTEE CHAIR'S TERM ENDS · NO HIATUS’, ‘+3 YR’. They are relative, not dated claims.
+- **Composition:** 1320–1520vh; paper returns. Reading column: kicker ‘PLATE IX · DEPOSITION · PRIVATE INTELLIGENCE CORE’; H2 with a straight double rule under ‘no gap’; verbatim “Your data trains your model only.” and “Your organization builds its own foundational AI — and it gets smarter every year.” The flagged middle sentence is left out. Then “built to compound for the community it came from.” (Company values). Stage: the oblique exploded block again, with three new slabs above the 2026 surface labeled in mono ‘+1 YR’, ‘+2 YR · COMMITTEE CHAIR'S TERM ENDS · NO HIATUS’, ‘+3 YR’. They are relative, not dated claims.
 - **Motion:** 1320–1340vh: bedrock drops away (clip-path reverse). 1340–1400vh: the ascent. The camera rises 1996 → 2026 in 60vh as a time-lapse (translateY reversed, scrub .8), the rail year rolls upward, and the old wavy hiatus marks pass by unchanged. Pinned 1330–1500 (end +=170%). 1400–1480vh: three slabs deposit from above (y −40vh → 0, ease deposit, 25vh each). Older slabs compact (scaleY 1 → .94, ease compact). At +2 yr the contact draws as a straight line and the rail glyph morphs from wavy to straight (MorphSVG). 1480–1520vh: hold, then release.
 
 ### plate-x-field-instruments — discovery
@@ -701,6 +701,6 @@ Under the ledger: a reserved ‘Field reports’ core box with three empty compa
 - The illustrative scenario (certification question, roles, years) could be mistaken for customer data. Mitigation: an ‘Illustrative’ label on every figure, generic roles only, no names or counts, a footnote on each scenario, and the core-log caption ‘Illustrative sources’.
 - Jargon (unconformity, hiatus, datum, correlation, casing) could lose non-technical board readers. Mitigation: every term is glossed in plain words in the same sentence (for example ‘a missing layer — an unconformity’), and headlines always carry the human meaning.
 - Flip combined with scrub and resize complexity in the core tray could drift out of measurement. Mitigation: capture Flip states in onRefresh with invalidateOnRefresh, test resizing mid-pin, and fall back to precomputed transforms.
-- Brand friction. Bodoni Moda departs from Sapience's Baskerville-like serif while an icon and guidelines refresh is running in parallel (Brand Graphic Designer, Sep 14 to Oct 12). Mitigation: type is tokenized, a Libre Baskerville alternate token is ready, and the wordmark is a labelled slot.
+- Brand friction. Bodoni Moda departs from Sapience's Baskerville-like serif while an icon and guidelines refresh is running in parallel (Brand Graphic Designer, Sep 14 to Oct 12). Mitigation: type is tokenized, a Libre Baskerville alternate token is ready, and the wordmark is a labeled slot.
 - Name collision. ‘Sage’ is also MemberJunction's association agent and an accounting brand. Mitigation: always write ‘Sage, Sapience AI's assistant’ in body copy and structured data.
 - Governance claims could conflict with policy. Mitigation: exclude ‘You own the model.’ and ‘No third-party vendor processes your member records.’, show no certifications, and have Sapience legal confirm the audit-trail log fields.

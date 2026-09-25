@@ -15,4 +15,6 @@
   .doc--leaving { display: none !important; }
   .set-line, .title-h__in, .gw, .clause, .source, .trail__step, .slip, .paper, .offprint, .control { transform: none !important; opacity: 1 !important; visibility: visible !important; }
   .rider, .stet, .doc__query { display: none !important; }
+  .btn { background: none !important; color: var(--ink) !important; box-shadow: inset 0 0 0 1px var(--ink); }
+  .btn__caret { stroke: currentColor; }
 }

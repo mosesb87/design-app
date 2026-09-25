@@ -14,7 +14,7 @@ const TITLES: Record<string, string> = {
 };
 export const CHAPTER_ORDER = Object.keys(TITLES);
 
-type Navigator = (id: string) => boolean; // returns true if handled
+type Navigator = (id: string, focus: boolean) => boolean; // returns true if handled
 
 const root = document.documentElement;
 let current = '';
@@ -22,6 +22,7 @@ let stageOwnsRecord = false;
 let navigateOverride: Navigator | null = null;
 let motionOn = true;
 let onMotionToggle: (on: boolean) => void = () => {};
+let onProvenance: (apply: () => void) => void = (apply) => apply();
 
 const $ = <T extends Element = HTMLElement>(sel: string, ctx: ParentNode = document) => ctx.querySelector<T>(sel);
 const $$ = <T extends Element = HTMLElement>(sel: string, ctx: ParentNode = document) => Array.from(ctx.querySelectorAll<T>(sel));
@@ -103,7 +104,7 @@ export function navigate(id: string, focus = true) {
   const target = document.getElementById(id);
   if (!target) return;
   closeContents(false);
-  if (navigateOverride && navigateOverride(id)) return;
+  if (navigateOverride && navigateOverride(id, focus)) return;
   const heading = target.matches('h1,h2,h3') ? target : target.querySelector<HTMLElement>('h1, h2, h3') || target;
   scrollToTarget(target, { offset: -8, focus: focus ? heading : null });
 }
@@ -179,12 +180,18 @@ export function reflectMotion(on: boolean) {
 export function setMotionToggleHandler(fn: (on: boolean) => void) {
   onMotionToggle = fn;
 }
+/** The handler receives the change itself, so it can note the reader's place first and measure again after. */
+export function setProvenanceHandler(fn: (apply: () => void) => void) {
+  onProvenance = fn;
+}
 function toggleProvenance(force?: boolean) {
   const on = force ?? !root.classList.contains('provenance');
-  root.classList.toggle('provenance', on);
-  $$('[data-provenance-toggle]').forEach((b) => b.setAttribute('aria-pressed', String(on)));
-  $$('[data-provenance-state]').forEach((s) => (s.textContent = on ? 'On' : 'Off'));
-  announce(on ? 'Provenance view on. Every passage is labelled with its source.' : 'Provenance view off.');
+  onProvenance(() => {
+    root.classList.toggle('provenance', on);
+    $$('[data-provenance-toggle]').forEach((b) => b.setAttribute('aria-pressed', String(on)));
+    $$('[data-provenance-state]').forEach((s) => (s.textContent = on ? 'On' : 'Off'));
+  });
+  announce(on ? 'Provenance view on. Every passage is labeled with its source.' : 'Provenance view off.');
 }
 
 export function announce(msg: string) {

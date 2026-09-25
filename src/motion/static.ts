@@ -23,7 +23,9 @@ function drawAnswerLeaders() {
   sizeSvg(svg, galley.offsetWidth, galley.offsetHeight);
   const G = layoutBox(galley, spread);
   const marginLeft = layoutBox(margin, spread).x - G.x;
-  const textRight = galley.querySelector<HTMLElement>('.galley__text')!.offsetWidth;
+  const text = galley.querySelector<HTMLElement>('.galley__text')!;
+  const textRight = text.offsetWidth;
+  const lh = parseFloat(getComputedStyle(text).lineHeight) || 0;
   const clauses = Array.from(document.querySelectorAll<HTMLElement>('[data-clause]'));
   const sources = Array.from(document.querySelectorAll<HTMLElement>('[data-source]'));
   clauses.forEach((clause, i) => {
@@ -34,7 +36,10 @@ function drawAnswerLeaders() {
     const s = layoutBox(src, spread);
     if (!c) return;
     const lane = Math.min(textRight + 18, marginLeft - 40) + i * 7;
-    const y = c.y + c.h + 10;
+    // Run under the cited line in the clear band between its glyphs and the next line's (the line box's lower edge).
+    const rects = lineRects(clause, galley).filter((r) => r.w > 0);
+    const last = rects[rects.length - 1];
+    const y = last && lh ? last.y + last.h + Math.max(3, (lh - last.h) / 2) : c.y + c.h + 10;
     const d = ortho([[s.x - G.x - 8, s.y - G.y + 9], [lane, s.y - G.y + 9], [lane, y], [c.x + c.w / 2, y]]);
     svg.appendChild(svgEl('path', { d, opacity: 0.45 }));
   });

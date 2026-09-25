@@ -7,7 +7,7 @@ _Sapience AI's site typeset as a volume of proceedings. The community's record i
 
 Professional associations are publishers. They issue proceedings, journals, standards and minutes, and that is their official record. What their members actually know lives in the margins: why a rule was chosen, the answer given from the floor, the forum thread where a chapter leader worked out an edge case, the past chair who has handled this before. It is 'scattered across inboxes, drives, and disconnected tools', and it leaves at every handover. The Annotated Record sets Sapience AI's site as one volume of proceedings, in book order: title page, epigraph, contents, six chapters, an appendix of Labs working papers, an afterword, an index and a colophon. The whole volume follows one rule: print is set once, ink is live. The charcoal type is the community's record. It never performs. Sapience's deep purple is the editor's ink. It draws the proofreader's caret that inserts marginal knowledge into the main text, the leader line that ties every claim to its source, and the footnote that becomes an audit trail.
 
-One worked example, labelled Illustrative, runs through the book the way a textbook follows a single problem: how an association awarded continuing-education credit when its annual meeting went hybrid.
+One worked example, labeled Illustrative, runs through the book the way a textbook follows a single problem: how an association awarded continuing-education credit when its annual meeting went hybrid.
 - Chapter I scatters that knowledge across the margins.
 - Chapter II organizes it on a vellum layer that sits above existing systems, and none of those systems moves.
 - Chapter III typesets the answer from five cited sources. The fifth source is a person, not a prompt.
@@ -321,7 +321,7 @@ How it changes, section by section:
 - II, The layer: leaders become connectors on the vellum. A drawn square bracket groups the scattered fragments (organize, connect). One caret joins the group to the question (activate).
 - III, The answer: the caret does its job five times. Leaders carry excerpts into the text, carets become superscripts, and the fifth insertion is a person.
 - IV, Sage: the caret turns 90° and becomes a switch. It slides (y only, never rotating) to align with the right lane.
-- V, Never forgets: leaders become ribbons across years of the fore-edge. They persist after the role tags that made them fade out. Their count grows 0, 1, 3, 6, 10, 15, 21, labelled 'diagram, not data'.
+- V, Never forgets: leaders become ribbons across years of the fore-edge. They persist after the role tags that made them fade out. Their count grows 0, 1, 3, 6, 10, 15, 21, labeled 'diagram, not data'.
 - VI, The apparatus: every leader straightens into one vertical audit trail. On the charcoal binding it becomes the dot leaders of the eight controls. Ink becomes specification.
 - Appendix: the caret sits on each offprint's status line and points to the truth: early access, waitlist, open source v1.0.0.
 - Afterword: the caret rises. It draws under 'elevate' and lifts 6px, so insertion becomes elevation ('Not to automate humanity. To elevate it.').
@@ -561,7 +561,7 @@ HEAD OF BRAND & COMMUNICATIONS (visual identity across core and developer produc
 - Their palette, purple and serif are kept and each is given a job. Purple is formally defined as ink, never glow.
 - A two-register system: the core proceedings register and a mono Labs/Developer register.
 - The taxonomy is used exactly: Sage — AI Assistant, Affinity — AI Agent, Corporate — AI Agent, Private Intelligence Core, Governance You Control, No Migration Required, Humans in Partnership.
-- The wordmark is a labelled slot, ready for the parallel icon refresh.
+- The wordmark is a labeled slot, ready for the parallel icon refresh.
 - Provenance view lets them audit every word as verbatim, concept or illustrative.
 
 HEAD OF MARKETING COMMUNICATIONS
@@ -627,7 +627,7 @@ EVERYONE
 
 - **Purpose:** How it works, part one: Sapience sits above existing systems without migration, and organizes, connects and activates.
 - **Headline:** 'Chapter II · A layer above the record'. Display (concept): 'Nothing underneath has to move.' Verbatim (LinkedIn): 'We sit above your existing systems to organize, connect, and activate relevant knowledge.' Verbatim (Platform, No Migration Required): 'We plug into your existing AMS, CRM, LMS, and content systems. No rip and replace. Secure, private, and live in days — not months.'
-- **Composition:** Pinned stage. Text in cols 1–4: label, display line, the two verbatim lines, and the verbs 'organize · connect · activate' as a list. Diagram in cols 5–12: four deeper-paper sheets side by side, caps-labelled 'AMS', 'CRM', 'LMS' and 'CONTENT SYSTEMS', each with eight hairline rows. No vendor names, no fake data. Chapter I's slips sit on their home sheets (illustrative mapping: roster on AMS, email on CRM, session Q&A on LMS; notes, forum and memo on content). The vellum plane is labelled 'SAPIENCE AI · THE LAYER (ILLUSTRATIVE)'.
+- **Composition:** Pinned stage. Text in cols 1–4: label, display line, the two verbatim lines, and the verbs 'organize · connect · activate' as a list. Diagram in cols 5–12: four deeper-paper sheets side by side, caps-labeled 'AMS', 'CRM', 'LMS' and 'CONTENT SYSTEMS', each with eight hairline rows. No vendor names, no fake data. Chapter I's slips sit on their home sheets (illustrative mapping: roster on AMS, email on CRM, session Q&A on LMS; notes, forum and memo on content). The vellum plane is labeled 'SAPIENCE AI · THE LAYER (ILLUSTRATIVE)'.
 - **Motion:** Pin 200vh, scrub .6. 0–20%: slips settle on their sheets. 20–40%: the vellum rises over the sheets (y 100%→12%) and the sheets never move. 40–60%, ORGANIZE: outlined reference copies of the slips Flip onto a grid on the vellum; the originals stay put and gain a purple tick (references move, data doesn't). 60–80%, CONNECT: a drawn square bracket groups the six references, and short leaders tie each row to its spine. 80–100%, ACTIVATE: the slip 'Qy. How did we award CE credit when the annual meeting went hybrid?' lands at the top of the vellum, a caret inks, the bracket spine extends to it, and the group takes the wash. The three verbs in the text column underline in sync.
 
 ### v-chapter-iii-answer — climax
@@ -641,7 +641,7 @@ EVERYONE
 
 - **Purpose:** Explains Sage and the agents using only verified copy: there is one place to ask, and routing is Sapience's job, not the member's or the staff's.
 - **Headline:** 'Chapter IV · Ask once'. Kicker (verbatim): 'Purpose-built AI agents for your community'. Display (adapted from Platform): 'Sage routes every question to the right agent automatically.' Masthead (verbatim): '01. Sage — AI Assistant. Your command center. Routes every question to the right agent automatically so your team always gets the right answer without knowing which tool to use.' / '02. Affinity — AI Agent [Description forthcoming]' / '03. Corporate — AI Agent [Description forthcoming]'
-- **Composition:** A journal masthead page. The listing sits in cols 2–6: names in Newsreader, roles in Public Sans caps, the verbatim text, and '[Description forthcoming]' in italic #6E6862. The routing figure sits in cols 7–12: an inlet slot labelled 'ONE PLACE TO ASK' (concept), a channel down to Sage's switch (the caret turned 90°, in purple), and three lanes ending in pigeonholes labelled 'AFFINITY', 'CORPORATE' and 'SPECIALIZED AGENTS YOU DEPLOY'. The third label comes from the verbatim 'Deploy specialized agents that reflect how your organization works'. Sage is the switch, not a destination.
+- **Composition:** A journal masthead page. The listing sits in cols 2–6: names in Newsreader, roles in Public Sans caps, the verbatim text, and '[Description forthcoming]' in italic #6E6862. The routing figure sits in cols 7–12: an inlet slot labeled 'ONE PLACE TO ASK' (concept), a channel down to Sage's switch (the caret turned 90°, in purple), and three lanes ending in pigeonholes labeled 'AFFINITY', 'CORPORATE' and 'SPECIALIZED AGENTS YOU DEPLOY'. The third label comes from the verbatim 'Deploy specialized agents that reflect how your organization works'. Sage is the switch, not a destination.
 - **Motion:** Pin 140vh, scrub. 0–15%: the masthead is set. 15–85%: six blank 'Qy.' slips drop through the inlet one at a time. The caret slides on y only, never rotating, to align with a lane, and each slip follows an orthogonal leader into a pigeonhole, two per lane. 85–100%: 'without knowing which tool to use' underlines in the masthead.
 
 ### vii-chapter-v-memory — pause (reflective)

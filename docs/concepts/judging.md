@@ -35,7 +35,7 @@ It is also the most legible option for executives and boards: a readable documen
 - The fifth compartment of the core tray is a strong signature moment. It is left empty, with a dashed outline and a trail to the 2018 gap, and it shows 'a person, not a prompt' rather than saying it. It also draws on the ASAE finding that the reasoning behind a decision is not documented.
 - Every set piece maps to a published mechanism: the datum and tie lines for organize and connect, choosing where to drill for Sage's routing, the log sheet for the audit trail, the cased bores for per-tenant isolation.
 - The system shows the most craft of the three: neatline, plate captions, legend, marginalia, a title-block footer and a mono Labs register. Its art pipeline is deterministic and build-time, and it renders a finished 'Still plate edition' that also prints.
-- It shows awareness of the brand context. The logo is a labelled slot, it plans a Libre Baskerville fallback token, and it anticipates the Sage name collision.
+- It shows awareness of the brand context. The logo is a labeled slot, it plans a Libre Baskerville fallback token, and it anticipates the Sage name collision.
 
 **Weaknesses**
 - The drill-and-extract image works against the brand. For an AI company whose buyers name privacy as their top barrier, 'drilling' cores out of members' contributions reads as data extraction. That undercuts 'That knowledge belongs to the people who created it.' One of the eases is even named 'extract'. A vocabulary rule cannot change what the picture says.
@@ -92,7 +92,7 @@ It is also the most legible option for executives and boards: a readable documen
 
 ### Grafts proposed
 - From STRATA, the empty fifth compartment: in Ch III, render the person source as a margin note with no excerpt, a dashed rule, and the label 'Not written down. The reasoning sits with the past chair, Education Committee. Illustrative.' Then its double frame inks in. Tie it to the ASAE Jul 2026 footnote on undocumented reasoning. This makes 'a person, not a prompt' felt, not only said.
-- From STRATA, 'Drill another illustrative question' becomes 'Set another question': a native radiogroup after the Ch III pin with 2–3 hand-authored questions (for example, 'Who here has run a hybrid annual meeting?' and 'How have other chapters kept volunteers from burning out?'). Each re-sets the galley in a 2.4s time-based replay, labelled 'Hand-set, not generated.' Under reduced motion it swaps instantly. This gives sales a demo loop.
+- From STRATA, 'Drill another illustrative question' becomes 'Set another question': a native radiogroup after the Ch III pin with 2–3 hand-authored questions (for example, 'Who here has run a hybrid annual meeting?' and 'How have other chapters kept volunteers from burning out?'). Each re-sets the galley in a 2.4s time-based replay, labeled 'Hand-set, not generated.' Under reduced motion it swaps instantly. This gives sales a demo loop.
 - From STRATA, the stats discipline: lead Ch I with the verified iMIS/ASI 2026 figure, 'Only 43% can easily access and understand the data they need…', attributed to its publisher. Add the ASAE/Avenue M 2026 reading, '92%… using AI, but only 6% to 13% have an AI policy', as a footnoted reading beside 'Governance-ready for your board and your regulators.' in Ch VI.
 - From STRATA, the plate numerals in the depth rail become real links: turn the aria-hidden fore-edge progress strip into a focusable thumb index (reference-book tabs, real <a href> chapter links with titles on hover and focus), with Contents still the primary navigation.
 - From STRATA, the treatment of 'Secure, private, and live in days — not months.': set it as small print, footnoted as Sapience's own claim, per §11.4, rather than as a display line in Ch II.
@@ -159,7 +159,7 @@ None of these is a flaw in the idea itself. They can all be fixed by editing, mo
 - The motion has a physical grammar, not a list of effects: things arrive under gravity, lines are engraved, and only the answer rises. The descent covers 30 years in 140vh and the ascent covers them in 60vh, so time has weight. This is real choreography.
 - It has the strongest evolving motif of the three. The mini stratigraphic column in the rail gains state on every plate (hiatus glyphs, ties, core, LOGGED stamp, casing, new layers) and then Flips out of the rail into the title block as the key column.
 - Mobile is redesigned, not shrunk: a portrait phone becomes a borehole log with a 40px spine. The Still plate edition works for reduced motion, no-JS and print at once, which suits board readers.
-- It covers whitespace items #2, #3, #4, #5 and #6 of §5.7 at the same time. The honesty handling is careful: flagged sentences are left out, industry figures are attributed, and illustrative content is labelled.
+- It covers whitespace items #2, #3, #4, #5 and #6 of §5.7 at the same time. The honesty handling is careful: flagged sentences are left out, industry figures are attributed, and illustrative content is labeled.
 
 **Weaknesses**
 - It contradicts itself. Plate V's headline is 'Nothing to excavate', and Plate VI's signature act drills and extracts a core, with an ease literally named 'extract'. Mining members' knowledge also sits badly with 'That knowledge belongs to the people who created it.'
