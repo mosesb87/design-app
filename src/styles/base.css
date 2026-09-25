@@ -117,8 +117,7 @@ h1, h2, h3, h4 { font-weight: inherit; }
 .display--xl { font-size: var(--fs-display-xl); line-height: 1.06; letter-spacing: -0.03em; }
 /* Narrow phones: long single words (recommendation, organization) must fit the measure whole. */
 @media (max-width: 480px) {
-  .display { font-size: min(var(--fs-display), 9.4vw); }
-  .display--xl { font-size: min(var(--fs-display-xl), 10.4vw); }
+  .display, .display--xl { font-size: min(var(--fs-display), 9.4vw); }
 }
 .subdisplay {
   font-family: var(--font-display);
@@ -139,6 +138,9 @@ h1, h2, h3, h4 { font-weight: inherit; }
 .body { max-width: 62ch; text-wrap: pretty; }
 .small { font-size: 0.9375rem; line-height: 1.5; color: var(--text-secondary); max-width: 56ch; }
 .run-in { font-weight: 600; color: var(--text); }
+/* Inter ships upright only: italics in running text are set in the annotation face, never slanted by the browser. */
+em, cite, i { font-family: var(--font-note); font-style: italic; }
+body { font-synthesis-style: none; }
 .caption {
   font: 400 0.8125rem/1.5 var(--font-ui);
   color: var(--text-secondary);
@@ -178,7 +180,7 @@ h1, h2, h3, h4 { font-weight: inherit; }
 .cite:hover { color: var(--ink-deep); text-decoration: underline; text-underline-offset: 0.15em; }
 
 /* Links: a hairline of ink that thickens from the left. */
-.body a, .lede a, .caption a, .colophon a, .policies a, .booking__meta a, .form__note a, .trail__detail a, .notes-page a {
+.body a, .lede a, .caption a, .colophon a, .policies a, .booking__meta a, .form__note a, .trail__detail a, .notes a {
   color: var(--print);
   text-decoration: none;
   background: linear-gradient(var(--ink), var(--ink)) 0 100% / 100% 1px no-repeat,
@@ -186,7 +188,7 @@ h1, h2, h3, h4 { font-weight: inherit; }
   transition: background-size var(--t-micro) var(--ease-lift);
   padding-bottom: 0.08em;
 }
-.body a:hover, .lede a:hover, .caption a:hover, .colophon a:hover, .policies a:hover, .booking__meta a:hover, .form__note a:hover, .trail__detail a:hover, .notes-page a:hover {
+.body a:hover, .lede a:hover, .caption a:hover, .colophon a:hover, .policies a:hover, .booking__meta a:hover, .form__note a:hover, .trail__detail a:hover, .notes a:hover {
   background-size: 100% 1px, 100% 2px;
 }
 

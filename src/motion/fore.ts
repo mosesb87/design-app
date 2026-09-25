@@ -144,13 +144,20 @@ export function drawFore(): Fore | null {
 /** Scroll-scrubbed deposition: the record builds up from 1996; chairs arrive, move on, their ink stays. */
 export function animateFore(f: Fore, trigger: Element) {
   const H = f.height;
+  // Colours come from the stylesheet (the figure sits on the dark chapter): a sitting chair is
+  // inked like the current one, then settles to the "moved on" tone. Nothing is hard-coded here.
+  const labelOf = (g: Element) => g.querySelector<SVGTextElement>('.tag-text:not(.tag-text--sub)');
+  const current = f.chairs.length ? labelOf(f.chairs[f.chairs.length - 1].g) : null;
+  const pastProbe = f.chairs.length > 1 ? labelOf(f.chairs[0].g) : null;
+  const inkOn = current ? getComputedStyle(current).fill : 'currentColor';
+  const inkOff = pastProbe ? getComputedStyle(pastProbe).fill : inkOn;
   gsap.set(f.clip, { attr: { y: H, height: 0 } });
   gsap.set([...f.chairs.map((c) => c.g), f.now], { autoAlpha: 0 });
   f.chairs.forEach((c, i) => {
     if (i < f.chairs.length - 1) {
-      const label = c.g.querySelector('.tag-text:not(.tag-text--sub)');
+      const label = labelOf(c.g);
       const sub = c.g.querySelector('[data-sub]');
-      if (label) gsap.set(label, { fill: '#5A2D82' });
+      if (label) gsap.set(label, { fill: inkOn });
       if (sub) gsap.set(sub, { opacity: 0 });
     }
   });
@@ -165,8 +172,8 @@ export function animateFore(f: Fore, trigger: Element) {
     tl.to(c.g, { autoAlpha: 1, duration: 0.6 }, tIn);
     if (i < f.chairs.length - 1) {
       const sub = c.g.querySelector('[data-sub]');
-      const label = c.g.querySelector('.tag-text:not(.tag-text--sub)');
-      if (label) tl.fromTo(label, { fill: '#5A2D82' }, { fill: '#6E6862', duration: 0.6, immediateRender: false }, tOut + 0.4);
+      const label = labelOf(c.g);
+      if (label) tl.fromTo(label, { fill: inkOn }, { fill: inkOff, duration: 0.6, immediateRender: false }, tOut + 0.4);
       if (sub) tl.fromTo(sub, { opacity: 0 }, { opacity: 1, duration: 0.6 }, tOut + 0.4);
     }
   });

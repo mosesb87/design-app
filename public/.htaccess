@@ -7,10 +7,21 @@
 Options -MultiViews -Indexes
 DirectoryIndex index.html
 ErrorDocument 404 /sapienceai/404.html
+ErrorDocument 403 /sapienceai/404.html
+AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /sapienceai/
+
+  # This folder does not inherit the root's rules, so it repeats the site's canonical address:
+  # https, no www. The checks cover hosts that terminate TLS in front of Apache (no redirect loop).
+  RewriteCond %{HTTP_HOST} ^(www\.)?mousabatarseh\.com$ [NC]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://mousabatarseh.com%{REQUEST_URI} [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.mousabatarseh\.com$ [NC]
+  RewriteRule ^ https://mousabatarseh.com%{REQUEST_URI} [R=301,L]
 
   # /sapienceai/notes.html → /sapienceai/notes (one address per page)
   RewriteCond %{THE_REQUEST} \s/sapienceai/notes\.html[\s?] [NC]
@@ -24,6 +35,7 @@ ErrorDocument 404 /sapienceai/404.html
   AddType font/woff2 .woff2
   AddType image/svg+xml .svg
   AddType text/plain .txt
+  AddCharset utf-8 .txt .html .css .js .svg
 </IfModule>
 
 <IfModule mod_headers.c>

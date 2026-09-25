@@ -10,6 +10,11 @@ const css = `
   .title-h__display { font-size: 80px !important; }
   .title-h__category { font-size: 21px !important; margin-top: 18px !important; }
   .fragment__text { font-size: 14px !important; }
+  /* The disclosure must stay readable when the card is shown at feed size (~550px wide). */
+  .running-foot { height: auto !important; padding-block: 16px !important; font-size: 24px !important; line-height: 1.2 !important; }
+  .running-foot__notice a, .rf-sep, .running-foot__folio { display: none !important; }
+  .wordmark__tag { font-size: 20px !important; padding: 5px 10px !important; }
+  .running-head { height: 72px !important; }
 `;
 // Inject before the page measures anything, so the ink lines are drawn to the card's layout.
 await page.addInitScript((c) => {

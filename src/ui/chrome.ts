@@ -110,6 +110,11 @@ function reflectDarkUnderBars() {
   const under = (y: number) => dark.some((d) => { const r = d.getBoundingClientRect(); return r.top <= y && r.bottom > y; });
   if (head) root.classList.toggle('head-on-dark', under(head.getBoundingClientRect().bottom - 1));
   if (foot) root.classList.toggle('foot-on-dark', under(foot.getBoundingClientRect().top + 1));
+  // The fore-edge ticks sit mid-screen: each one takes the tone of the page directly behind it.
+  $$('.fore-edge a').forEach((a) => {
+    const r = a.getBoundingClientRect();
+    a.classList.toggle('is-on-dark', r.height > 0 && under(r.top + r.height / 2));
+  });
 }
 
 /* ─────────────── In-page navigation ─────────────── */

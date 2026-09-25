@@ -13,7 +13,8 @@ export function drawStatic() {
   if (wide) drawAnswerLeaders();
 }
 
-function drawAnswerLeaders() {
+/** Margin-to-gutter leaders for the two-column answer (static edition, and short desktop windows). */
+export function drawAnswerLeaders() {
   const galley = document.querySelector<HTMLElement>('[data-galley]');
   const svg = document.querySelector<SVGSVGElement>('[data-galley-ink]');
   const spread = document.querySelector<HTMLElement>('.answer__spread');

@@ -2,7 +2,7 @@
   @page { margin: 18mm 16mm 20mm; }
   :root { --section-y: 12mm; }
   html, body { background: #fff; }
-  .running-head, .running-foot, .fore-edge, .contents, .skip, .converge, .converge-mark,
+  .running-head, .fore-edge, .contents, .skip, .converge, .converge-mark,
   .galley__ink, .final-leader, .vellum__ink, .desk__queries, .form, .actions, .router__desk, .binding__case { display: none !important; }
   .page--title { min-height: 0; padding-top: 0; }
   .chapter, .plate, .answer, .page--title { break-inside: avoid-page; }
@@ -13,6 +13,11 @@
   .chapter--binding .policies a { color: var(--text); }
   .security-tile { background: #fff; border-color: var(--rule); }
   .chapter-ghost-word { display: none !important; }
+  /* The disclosure prints on every page */
+  .running-foot { position: fixed; left: 0; right: 0; bottom: 0; height: auto; padding: 6px 0 0; background: none; color: var(--text-secondary); }
+  .running-foot::before { left: 0; right: 0; }
+  .running-foot__notice a, .rf-sep, .rf-short, .rf-xs, .running-foot__folio { display: none !important; }
+  .rf-long { display: inline !important; }
   .clause, .source, .doc, .plate, #title, .slip, .offprint { opacity: 1 !important; transform: none !important; clip-path: none !important; visibility: visible !important; }
   a[href^='http']::after { content: ' (' attr(href) ')'; font: 400 0.7em var(--font-ui); color: var(--print-3); word-break: break-all; }
   .doc--leaving { display: none !important; }

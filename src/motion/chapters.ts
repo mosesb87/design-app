@@ -1,6 +1,7 @@
 import { gsap, ScrollTrigger } from './runtime';
 import { drawFore, animateFore } from './fore';
-import { prepareCount } from './count';
+import { prepareCount, played } from './count';
+import { drawAnswerLeaders } from './static';
 import { layoutBox, ortho, sizeSvg, svgEl, lineRects, type Box } from '../lib/geom';
 
 const $ = <T extends Element = HTMLElement>(sel: string, ctx: ParentNode = document) => ctx.querySelector<T>(sel);
@@ -12,9 +13,11 @@ type Opts = { desktop: boolean; stageTrailX?: number | null };
 export function buildChapters(opts: Opts) {
   const cleanups: Array<() => void> = [];
 
-  // Chapter headings arrive once, near three-quarters of the viewport: a short rise, no split, no replay.
+  // Chapter headings arrive once, near three-quarters of the viewport: a short rise, no split, no replay
+  // (not even when a resize, a late font or the Motion toggle rebuilds the page).
   $$('.chapter [data-set-lines]').forEach((h) => {
-    gsap.fromTo(h, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.8, ease: 'settle', scrollTrigger: { trigger: h, start: 'top 75%', once: true } });
+    if (played.has(h)) return;
+    gsap.fromTo(h, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.8, ease: 'settle', onStart: () => { played.add(h); }, scrollTrigger: { trigger: h, start: 'top 75%', once: true } });
   });
   ghostWords(opts);
   stats(opts, cleanups);
@@ -33,7 +36,9 @@ export function buildChapters(opts: Opts) {
 function ghostWords(opts: Opts) {
   $$('[data-ghost]').forEach((w) => {
     const head = w.parentElement ?? w;
-    gsap.fromTo(w, { opacity: 0, xPercent: -4 }, { opacity: 0.08, xPercent: 0, duration: 1.1, ease: 'settle', scrollTrigger: { trigger: head, start: 'top 75%', once: true } });
+    if (!played.has(w)) {
+      gsap.fromTo(w, { opacity: 0, xPercent: -4 }, { opacity: 0.08, xPercent: 0, duration: 1.1, ease: 'settle', onStart: () => { played.add(w); }, scrollTrigger: { trigger: head, start: 'top 75%', once: true } });
+    }
     if (opts.desktop) {
       gsap.fromTo(w, { yPercent: 8 }, { yPercent: -8, ease: 'none', scrollTrigger: { trigger: w.closest('.chapter') ?? head, start: 'top bottom', end: 'bottom top', scrub: true } });
     }
@@ -169,11 +174,14 @@ function binding() {
   const head = $$('.chapter__head .kicker, .chapter__head .lede', section);
   gsap.fromTo(section, { '--spine': 0 }, { '--spine': 1, ease: 'none', scrollTrigger: { trigger: section, start: 'top 92%', end: 'top 40%', scrub: 0.5 } });
   gsap.fromTo(head, { opacity: 0 }, { opacity: 1, duration: 0.8, stagger: 0.1, ease: 'settle', scrollTrigger: { trigger: section, start: 'top 70%', toggleActions: 'play none none reverse' } });
-  // Security tiles: square, and set in a quick, even sequence.
-  gsap.fromTo($$('[data-tile]', section), { opacity: 0, y: 12 }, {
-    opacity: 1, y: 0, duration: 0.5, ease: 'lift', stagger: 0.06,
-    scrollTrigger: { trigger: $('[data-controls]', section), start: 'top 80%', once: true },
-  });
+  // Security tiles: square, and set in a quick, even sequence (once per page view).
+  const grid = $('[data-controls]', section);
+  if (grid && !played.has(grid)) {
+    gsap.fromTo($$('[data-tile]', section), { opacity: 0, y: 12 }, {
+      opacity: 1, y: 0, duration: 0.5, ease: 'lift', stagger: 0.06, onStart: () => { played.add(grid); },
+      scrollTrigger: { trigger: grid, start: 'top 80%', once: true },
+    });
+  }
   gsap.fromTo($('.epigraph', section), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 1, ease: 'settle', scrollTrigger: { trigger: $('.epigraph', section), start: 'top 80%', toggleActions: 'play none none reverse' } });
 }
 
@@ -231,7 +239,13 @@ export function buildPocketRecord() {
   const galley = $('[data-galley]');
   const gInk = $<SVGSVGElement>('[data-galley-ink]');
   const sources = $$('[data-source]');
-  if (galley && gInk && clauses.length) {
+  // Short desktop windows keep the two-column spread (sources in the margin): rails would cross the text,
+  // so they get the static edition's margin leaders instead.
+  const twoColumn = window.matchMedia('(min-width: 900px)').matches;
+  if (galley && gInk && clauses.length && twoColumn) {
+    drawAnswerLeaders();
+    cleanups.push(() => gInk.replaceChildren());
+  } else if (galley && gInk && clauses.length) {
     gInk.replaceChildren();
     const answer = $('#answer')!;
     const gb = galley.getBoundingClientRect();
