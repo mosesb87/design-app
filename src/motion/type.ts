@@ -1,4 +1,4 @@
-import { gsap, SplitText } from './runtime';
+import { SplitText } from './runtime';
 
 /**
  * Headings are "set" by line — never by character. The readable original
@@ -26,18 +26,4 @@ export function prepareLines(el: HTMLElement): SetLines {
       el.innerHTML = original;
     },
   };
-}
-
-/** Flow headings: set once when they arrive; they stay set (print is permanent). */
-export function setOnEnter(el: HTMLElement, start = 'top 84%') {
-  const s = prepareLines(el);
-  gsap.set(s.lines, { yPercent: 104 });
-  gsap.to(s.lines, {
-    yPercent: 0,
-    duration: 0.95,
-    ease: 'settle',
-    stagger: 0.08,
-    scrollTrigger: { trigger: el, start, once: true },
-  });
-  return s;
 }

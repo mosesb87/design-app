@@ -60,7 +60,7 @@ export function setChapter(id: string) {
     if (a.getAttribute('href') === `#${id}`) a.setAttribute('aria-current', 'true');
     else a.removeAttribute('aria-current');
   });
-  root.classList.toggle('on-binding', id === 'binding');
+  root.classList.toggle('on-dark', id === 'memory' || id === 'binding');
 }
 
 export function setStageOwnsRecord(v: boolean) {
@@ -95,8 +95,21 @@ function observeChapters() {
         const r = s.getBoundingClientRect();
         if (r.top <= mid && r.bottom >= mid) { setChapter(s.dataset.chapter || ''); break; }
       }
+      reflectDarkUnderBars();
     });
   }, { passive: true });
+  window.addEventListener('resize', reflectDarkUnderBars, { passive: true });
+  reflectDarkUnderBars();
+}
+
+/* The running head and foot turn dark exactly while a dark chapter passes underneath each of them. */
+function reflectDarkUnderBars() {
+  const head = $('.running-head');
+  const foot = $('.running-foot');
+  const dark = $$('.chapter--dark');
+  const under = (y: number) => dark.some((d) => { const r = d.getBoundingClientRect(); return r.top <= y && r.bottom > y; });
+  if (head) root.classList.toggle('head-on-dark', under(head.getBoundingClientRect().bottom - 1));
+  if (foot) root.classList.toggle('foot-on-dark', under(foot.getBoundingClientRect().top + 1));
 }
 
 /* ─────────────── In-page navigation ─────────────── */

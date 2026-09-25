@@ -1,0 +1,41 @@
+# Sapience AI — independent design concept by Mousa Batarseh
+# Served from /sapienceai/ on mousabatarseh.com as static files.
+# Because this folder turns the rewrite engine on, the WordPress rules at the
+# site root are not inherited here: nothing below reaches WordPress, and
+# nothing here changes any other page on the domain.
+
+Options -MultiViews -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /sapienceai/404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /sapienceai/
+
+  # /sapienceai/notes.html → /sapienceai/notes (one address per page)
+  RewriteCond %{THE_REQUEST} \s/sapienceai/notes\.html[\s?] [NC]
+  RewriteRule ^ /sapienceai/notes [R=301,L]
+
+  # /sapienceai/notes and /sapienceai/notes/ → notes.html
+  RewriteRule ^notes/?$ notes.html [L]
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/svg+xml .svg
+  AddType text/plain .txt
+</IfModule>
+
+<IfModule mod_headers.c>
+  # A portfolio concept: kept out of search so it is never mistaken for Sapience AI's own site.
+  Header set X-Robots-Tag "noindex, follow"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  # Fingerprinted build files never change; pages always revalidate.
+  <FilesMatch "-[A-Za-z0-9_-]{8}\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

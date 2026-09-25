@@ -5,7 +5,7 @@ import { chromium } from 'playwright-core';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const [, , url = 'http://localhost:4173/', outDir = 'qa-shots', ...flags] = process.argv;
+const [, , url = 'http://localhost:4173/sapienceai/', outDir = 'qa-shots', ...flags] = process.argv;
 const reduced = flags.includes('--reduced');
 const steps = Number((flags.find((f) => f.startsWith('--steps=')) || '--steps=24').split('=')[1]);
 const only = (flags.find((f) => f.startsWith('--only=')) || '').split('=')[1];

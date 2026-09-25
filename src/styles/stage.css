@@ -108,7 +108,7 @@ html.stage-mode .plate__inner { display: block; padding: 0; max-width: none; tra
 html.stage-mode .plate .display { font-size: clamp(1.9rem, 0.9rem + 2.1vw, 3.1rem); }
 html.stage-mode .plate .body { font-size: clamp(1rem, 0.9rem + 0.25vw, 1.15rem); margin-top: 1.1rem; }
 html.stage-mode .plate .reading { margin-top: 1.6rem; }
-html.stage-mode .plate .reading__figure { font-size: clamp(3.2rem, 1.6rem + 3.4vw, 5.4rem); }
+html.stage-mode .plate .stat-number { font-size: clamp(3.25rem, 1.6rem + 2.6vw, 4.5rem); }
 html.stage-mode .plate .pull { margin-top: 1.3rem; }
 html.stage-mode .plate .pull p { font-size: clamp(1.2rem, 0.95rem + 0.7vw, 1.6rem); }
 html.stage-mode .plate .verbs { margin-top: 1.3rem; }

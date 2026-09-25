@@ -32,8 +32,8 @@ html.provenance [data-copy='industry'] { outline: 1.5px solid var(--print); }
 html.provenance [data-copy='industry']::before { content: 'Industry source · ' attr(data-src); background: var(--print); }
 html.provenance [data-copy='tbc'] { outline: 3px double var(--ink); }
 html.provenance [data-copy='tbc']::before { content: 'To be confirmed by Sapience AI'; background: var(--ink-deep); }
-html.provenance .chapter--binding [data-copy]::before { background: var(--ink-rev); color: var(--binding); }
-html.provenance .chapter--binding [data-copy] { outline-color: var(--ink-rev); }
+html.provenance .chapter--dark [data-copy]::before { background: var(--dark-label); color: var(--dark); }
+html.provenance .chapter--dark [data-copy] { outline-color: var(--dark-label); }
 /* Inline passages inside running text: outline only, no label. */
 html.provenance .clause[data-copy]::before, html.provenance .verb__text[data-copy]::before { display: none; }
 html.provenance .title-h__category::before { font-style: normal; }

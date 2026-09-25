@@ -1,4 +1,33 @@
-/* ─────────────── Fonts (self-hosted, subset to Latin) ─────────────── */
+/* ─────────────── Fonts (self-hosted, Latin subsets, SIL Open Font License — see src/fonts/OFL-*.txt) ─────────────── */
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('../fonts/libre-baskerville-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('../fonts/libre-baskerville-400-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('../fonts/libre-baskerville-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-variable.woff2') format('woff2-variations'), url('../fonts/inter-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Newsreader stays for quotations and editorial annotations: the manuscript's hand. */
 @font-face {
   font-family: 'Newsreader';
   src: url('../fonts/newsreader-roman.woff2') format('woff2-variations'), url('../fonts/newsreader-roman.woff2') format('woff2');
@@ -14,25 +43,34 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'Public Sans';
-  src: url('../fonts/public-sans.woff2') format('woff2-variations'), url('../fonts/public-sans.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Plex Mono';
+  font-family: 'IBM Plex Mono';
   src: url('../fonts/plex-mono-400.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Plex Mono';
+  font-family: 'IBM Plex Mono';
   src: url('../fonts/plex-mono-500.woff2') format('woff2');
   font-weight: 500;
   font-display: swap;
 }
 /* Metric-matched fallbacks keep the swap from shifting the layout. */
+@font-face {
+  font-family: 'Libre Baskerville Fallback';
+  src: local('Georgia'), local('Times New Roman'), local('Liberation Serif'), local('DejaVu Serif');
+  size-adjust: 107%;
+  ascent-override: 90.6%;
+  descent-override: 25.2%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial'), local('Helvetica'), local('Liberation Sans'), local('DejaVu Sans');
+  size-adjust: 107.12%;
+  ascent-override: 90.44%;
+  descent-override: 22.52%;
+  line-gap-override: 0%;
+}
 @font-face {
   font-family: 'Newsreader Fallback';
   src: local('Georgia'), local('Times New Roman'), local('Liberation Serif'), local('DejaVu Serif');
@@ -41,57 +79,65 @@
   descent-override: 28.5%;
   line-gap-override: 0%;
 }
-@font-face {
-  font-family: 'Public Sans Fallback';
-  src: local('Arial'), local('Helvetica'), local('Liberation Sans'), local('DejaVu Sans');
-  size-adjust: 104%;
-  ascent-override: 91%;
-  descent-override: 21.5%;
-  line-gap-override: 0%;
-}
 
 /* ─────────────── Tokens ─────────────── */
 :root {
-  /* Paper and print: the community's record */
-  --paper: #F2EFEA;          /* Sapience cream */
-  --paper-deep: #E9E4DC;     /* the desk */
-  --paper-hi: #F8F6F2;       /* slips, offprints */
-  --vellum: rgba(248, 246, 242, 0.66); /* Sapience's layer: paper, not glass */
-  --print: #1C1C1E;
-  --print-2: #4A4643;
-  --print-3: #6E6862;
-  --rule: #CDC7BE;
-  --rule-strong: #A69E93;
+  /* Brand palette: cream, near-black, white and one purple */
+  --paper: #f5f0e9;
+  --paper-deep: #ebe4dc;
+  --paper-highlight: #faf7f3;
 
-  /* Ink: what Sapience adds */
-  --ink: #5A2D82;
-  --ink-deep: #43205F;
-  --ink-wash: #E4DCE6;
-  --ink-soft: #8C6BB1;
+  --text: #141414;
+  --text-secondary: #45413d;
+  --text-muted: #746e68;     /* 4.4:1 on paper: large or decorative text only */
+  --rule: #d2cac1;
 
-  /* The binding */
-  --binding: #1C1C1E;
-  --binding-2: #26252A;
-  --ink-rev: #BCA6D2;
-  --rule-rev: #45424A;
+  --purple: #5a2d82;         /* Sapience purple: the ink */
+  --purple-dark: #43205f;
+  --purple-light: #e4dce6;
+
+  --dark: #141414;
+  --dark-border: rgba(255, 255, 255, 0.14);
+  --dark-text: rgba(255, 255, 255, 0.68);
+  --dark-label: #bca6d2;
+
+  /* Roles used across the stylesheets, mapped onto the palette above */
+  --paper-hi: var(--paper-highlight);
+  --vellum: rgba(250, 247, 243, 0.68); /* Sapience's layer: paper, not glass */
+  --print: var(--text);
+  --print-2: var(--text-secondary);
+  --print-3: var(--text-secondary); /* small labels must hold 4.5:1, so they share the secondary tone */
+  --rule-strong: var(--text-muted);
+  --ink: var(--purple);
+  --ink-deep: var(--purple-dark);
+  --ink-wash: var(--purple-light);
+  --ink-soft: var(--purple);
+  --binding: var(--dark);
+  --ink-rev: var(--dark-label);
+  --rule-rev: var(--dark-border);
 
   /* Type */
-  --font-display: 'Newsreader', 'Newsreader Fallback', Georgia, 'Times New Roman', serif;
-  --font-text: var(--font-display); /* one token: switch to --font-ui if the refresh keeps a sans body */
-  --font-ui: 'Public Sans', 'Public Sans Fallback', Arial, Helvetica, sans-serif;
-  --font-mono: 'Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --font-display: 'Libre Baskerville', 'Libre Baskerville Fallback', Georgia, serif;
+  --font-body: 'Inter', 'Inter Fallback', Arial, sans-serif;
+  --font-ui: 'Switzer', 'Inter', 'Inter Fallback', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --font-note: 'Newsreader', 'Newsreader Fallback', Georgia, serif; /* quotations and annotations */
+  --font-text: var(--font-body);
 
-  --fs-title: clamp(3.05rem, 0.7rem + 7vw, 7rem);
-  --fs-display-xl: clamp(2.6rem, 0.9rem + 5vw, 6.25rem);
-  --fs-display: clamp(2.15rem, 1rem + 3.3vw, 4.4rem);
-  --fs-subdisplay: clamp(1.6rem, 1.1rem + 1.5vw, 2.5rem);
-  --fs-question: clamp(1.45rem, 1.05rem + 1.25vw, 2.35rem);
-  --fs-galley: clamp(1.2rem, 1rem + 0.62vw, 1.72rem);
-  --fs-lede: clamp(1.2rem, 1.04rem + 0.5vw, 1.55rem);
-  --fs-body: clamp(1.0625rem, 1rem + 0.25vw, 1.25rem);
-  --fs-note: clamp(0.94rem, 0.9rem + 0.16vw, 1.06rem);
-  --fs-ui: 0.9375rem;
-  --fs-label: 0.6875rem;
+  --fs-title: clamp(3rem, 7vw, 6.25rem);
+  --fs-display-xl: clamp(2.75rem, 5vw, 4.5rem);
+  --fs-display: clamp(2.5rem, 4.6vw, 4rem);
+  --fs-subdisplay: clamp(1.75rem, 1.2rem + 1.2vw, 2.25rem);
+  --fs-question: clamp(1.75rem, 1.25rem + 1.1vw, 2.25rem);
+  --fs-galley: clamp(1.1875rem, 0.95rem + 0.6vw, 1.5rem);
+  --fs-lede: clamp(1.25rem, 1.6vw, 1.375rem);
+  --fs-body: clamp(1.0625rem, 1.25vw, 1.1875rem);
+  --fs-note: clamp(1rem, 0.94rem + 0.2vw, 1.125rem);
+  --fs-stat: clamp(4rem, 7vw, 4.5rem);
+  --fs-nav: 0.875rem;       /* 14/17 */
+  --fs-eyebrow: 0.8125rem;  /* 13/17 */
+  --fs-ui: 0.875rem;        /* buttons 14/18 */
+  --fs-label: 0.75rem;      /* chapter labels 12/16 */
   --fs-mono: 0.78rem;
 
   /* Space */
@@ -107,6 +153,8 @@
   --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-lift: cubic-bezier(0.2, 0, 0, 1);
   --t-micro: 0.28s;
+
+  --radius-button: 8px;
 
   color-scheme: light;
 }

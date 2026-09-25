@@ -1,6 +1,6 @@
 import { gsap, ScrollTrigger } from './runtime';
-import { setOnEnter, type SetLines } from './type';
 import { drawFore, animateFore } from './fore';
+import { prepareCount } from './count';
 import { layoutBox, ortho, sizeSvg, svgEl, lineRects, type Box } from '../lib/geom';
 
 const $ = <T extends Element = HTMLElement>(sel: string, ctx: ParentNode = document) => ctx.querySelector<T>(sel);
@@ -11,11 +11,13 @@ type Opts = { desktop: boolean; stageTrailX?: number | null };
 /** Chapters IV–IX: flowing pages with scroll-linked figures. Shared by desktop and the pocket edition. */
 export function buildChapters(opts: Opts) {
   const cleanups: Array<() => void> = [];
-  const sets: SetLines[] = [];
 
-  // Headings in flowing chapters are set once, as they arrive. The binding's heading waits for the charcoal.
-  $$('.chapter [data-set-lines]').forEach((h) => sets.push(setOnEnter(h, h.closest('[data-binding]') ? 'top 72%' : 'top 84%')));
-  cleanups.push(() => sets.forEach((s) => s.revert()));
+  // Chapter headings arrive once, near three-quarters of the viewport: a short rise, no split, no replay.
+  $$('.chapter [data-set-lines]').forEach((h) => {
+    gsap.fromTo(h, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.8, ease: 'settle', scrollTrigger: { trigger: h, start: 'top 75%', once: true } });
+  });
+  ghostWords(opts);
+  stats(opts, cleanups);
 
   trail(opts, cleanups);
   sage(opts, cleanups);
@@ -25,6 +27,28 @@ export function buildChapters(opts: Opts) {
   afterword(cleanups);
 
   return () => cleanups.forEach((fn) => { try { fn(); } catch { /* already reverted */ } });
+}
+
+/* Oversized ghost words behind three chapter headings: they surface once, then drift very slightly with scroll. */
+function ghostWords(opts: Opts) {
+  $$('[data-ghost]').forEach((w) => {
+    const head = w.parentElement ?? w;
+    gsap.fromTo(w, { opacity: 0, xPercent: -4 }, { opacity: 0.08, xPercent: 0, duration: 1.1, ease: 'settle', scrollTrigger: { trigger: head, start: 'top 75%', once: true } });
+    if (opts.desktop) {
+      gsap.fromTo(w, { yPercent: 8 }, { yPercent: -8, ease: 'none', scrollTrigger: { trigger: w.closest('.chapter') ?? head, start: 'top bottom', end: 'bottom top', scrub: true } });
+    }
+  });
+}
+
+/* Statistics count up once when they arrive. The stage's own figure is counted by the single take (record.ts). */
+function stats(opts: Opts, cleanups: Array<() => void>) {
+  $$('[data-count]').forEach((el) => {
+    if (opts.desktop && el.closest('[data-record]')) return;
+    const c = prepareCount(el);
+    if (!c) return;
+    cleanups.push(c.revert);
+    ScrollTrigger.create({ trigger: el, start: 'top 88%', once: true, onEnter: c.play });
+  });
 }
 
 /* IV — the trail: the line the answer left behind keeps going, and each step's node inks as you reach it. */
@@ -145,10 +169,10 @@ function binding() {
   const head = $$('.chapter__head .kicker, .chapter__head .lede', section);
   gsap.fromTo(section, { '--spine': 0 }, { '--spine': 1, ease: 'none', scrollTrigger: { trigger: section, start: 'top 92%', end: 'top 40%', scrub: 0.5 } });
   gsap.fromTo(head, { opacity: 0 }, { opacity: 1, duration: 0.8, stagger: 0.1, ease: 'settle', scrollTrigger: { trigger: section, start: 'top 70%', toggleActions: 'play none none reverse' } });
-  const controls = $$('.control', section);
-  gsap.fromTo(controls, { '--lead': 0 }, {
-    '--lead': 1, duration: 0.7, ease: 'draw', stagger: 0.07,
-    scrollTrigger: { trigger: $('[data-controls]', section), start: 'top 72%', toggleActions: 'play none none reverse' },
+  // Security tiles: square, and set in a quick, even sequence.
+  gsap.fromTo($$('[data-tile]', section), { opacity: 0, y: 12 }, {
+    opacity: 1, y: 0, duration: 0.5, ease: 'lift', stagger: 0.06,
+    scrollTrigger: { trigger: $('[data-controls]', section), start: 'top 80%', once: true },
   });
   gsap.fromTo($('.epigraph', section), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 1, ease: 'settle', scrollTrigger: { trigger: $('.epigraph', section), start: 'top 80%', toggleActions: 'play none none reverse' } });
 }
@@ -169,8 +193,8 @@ function afterword(cleanups: Array<() => void>) {
   const word = $('[data-together]');
   if (word) {
     gsap.timeline({ scrollTrigger: { trigger: word, start: 'top 78%', end: 'top 40%', scrub: 0.5 } })
-      .fromTo(word, { color: '#5A2D82' }, { color: '#5A2D82', duration: 1 })
-      .to(word, { color: '#1C1C1E', duration: 1 });
+      .fromTo(word, { color: '#5a2d82' }, { color: '#5a2d82', duration: 1 })
+      .to(word, { color: '#141414', duration: 1 });
   }
   const booking = $('.booking');
   const svg = $<SVGSVGElement>('[data-final-leader]');

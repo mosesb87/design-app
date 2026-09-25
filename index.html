@@ -3,20 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>The Annotated Record — a speculative website concept for Sapience AI</title>
-  <meta name="description" content="A speculative, motion-first website concept for Sapience AI, the collective intelligence platform for professional communities. Not affiliated with or endorsed by Sapience AI.">
-  <!-- Concept deployment: kept out of search so it can never be mistaken for the official site.
-       Remove on the production build, where the structured data below becomes the live entity markup. -->
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#F2EFEA">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="describedby" href="/llms.txt" type="text/plain">
+  <title>Sapience AI — Independent Design Concept | Mousa Batarseh</title>
+  <meta name="description" content="An independent product-design concept by Mousa Batarseh: how Sapience AI’s collective-intelligence story could read as an annotated, motion-led editorial site. Not an official Sapience AI website; not affiliated with or endorsed by Sapience AI.">
+  <meta name="author" content="Mousa Batarseh">
+  <!-- Portfolio concept: kept out of search so it can never be mistaken for Sapience AI's own site. -->
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://mousabatarseh.com/sapienceai">
+  <meta name="theme-color" content="#f5f0e9">
+  <link rel="icon" href="%BASE_URL%favicon.svg" type="image/svg+xml">
+  <link rel="describedby" href="%BASE_URL%llms.txt" type="text/plain">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Annotated Record — a speculative website concept for Sapience AI">
-  <meta property="og:description" content="Your community already knows. A motion-first concept showing collective intelligence as an answer you can trace to its sources.">
-  <meta property="og:image" content="/og.png">
-  <meta property="og:image:alt" content="The title page of the concept: “Your community already knows.” set in a large serif, with six purple leader lines converging on the word “knows” from notes in the margin.">
+  <meta property="og:site_name" content="Mousa Batarseh">
+  <meta property="og:url" content="https://mousabatarseh.com/sapienceai">
+  <meta property="og:title" content="Sapience AI — Independent Design Concept | Mousa Batarseh">
+  <meta property="og:description" content="An independent editorial design concept for Sapience AI by Mousa Batarseh. Not an official Sapience AI website.">
+  <meta property="og:image" content="https://mousabatarseh.com/sapienceai/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Title page of an independent design concept by Mousa Batarseh: “Your community already knows.” in a large serif, with purple leader lines converging from notes in the margin, and a notice that it is not an official Sapience AI website.">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sapience AI — Independent Design Concept | Mousa Batarseh">
+  <meta name="twitter:description" content="An independent editorial design concept for Sapience AI. Not an official Sapience AI website.">
   <script>
     // Progressive enhancement gate. The document is complete without JavaScript;
     // this only tells CSS that motion *may* take over, with a failsafe if it never does.
@@ -34,35 +41,22 @@
       }
     })(document);
   </script>
-  <link rel="preload" href="/src/fonts/newsreader-roman.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/src/fonts/libre-baskerville-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/src/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/src/fonts/newsreader-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/src/styles/index.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://sapienceai.co/#organization",
-        "name": "Sapience AI",
-        "legalName": "Sapience AI Corp",
-        "url": "https://sapienceai.co/",
-        "description": "The collective intelligence platform for professional communities.",
-        "foundingDate": "2024",
-        "email": "contact@sapienceai.co",
-        "sameAs": [
-          "https://www.linkedin.com/company/sapience-ai-corp",
-          "https://github.com/Sapience-AI"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://sapienceai.co/#website",
-        "name": "Sapience AI",
-        "url": "https://sapienceai.co/",
-        "publisher": { "@id": "https://sapienceai.co/#organization" }
-      }
-    ]
+    "@type": "CreativeWork",
+    "@id": "https://mousabatarseh.com/sapienceai#concept",
+    "name": "The Annotated Record — an independent website design concept for Sapience AI",
+    "url": "https://mousabatarseh.com/sapienceai",
+    "inLanguage": "en-US",
+    "genre": "Speculative design concept",
+    "description": "An independent portfolio concept by Mousa Batarseh. Not an official Sapience AI website; not affiliated with or endorsed by Sapience AI.",
+    "creator": { "@type": "Person", "name": "Mousa Batarseh", "url": "https://mousabatarseh.com/" },
+    "about": { "@type": "Organization", "name": "Sapience AI", "url": "https://sapienceai.co/" }
   }
   </script>
 </head>
@@ -71,12 +65,12 @@
 
   <!-- ─────────────── Running head ─────────────── -->
   <header class="running-head" data-running-head>
-    <a class="wordmark" href="#title" data-slot="wordmark" aria-label="Sapience AI, back to the title page">Sapience&nbsp;AI</a>
+    <a class="wordmark" href="#title" data-slot="wordmark" aria-label="Sapience AI independent concept, back to the title page"><span>Sapience&nbsp;AI</span><span class="wordmark__tag"><span class="tag-long">Independent concept</span><span class="tag-short">Concept</span></span></a>
     <p class="running-title" aria-hidden="true"><span data-running-title>The Annotated Record</span></p>
     <nav class="head-actions" aria-label="Site">
       <button class="head-btn" type="button" data-contents-open aria-expanded="false" aria-controls="contents">Contents</button>
       <button class="head-btn head-btn--motion" type="button" data-motion-toggle aria-pressed="true" aria-label="Motion">Motion: <span data-motion-state aria-hidden="true">On</span></button>
-      <a class="head-cta" href="#book">Book a conversation</a>
+      <a class="head-cta btn" href="#book">Book a conversation</a>
     </nav>
   </header>
 
@@ -103,7 +97,7 @@
         <button class="switch" type="button" data-motion-toggle aria-pressed="true" aria-label="Motion"><span class="switch__label">Motion</span><span class="switch__state" data-motion-state aria-hidden="true">On</span></button>
         <button class="switch" type="button" data-provenance-toggle aria-pressed="false" aria-label="Provenance view"><span class="switch__label">Provenance view</span><span class="switch__state" data-provenance-state aria-hidden="true">Off</span></button>
         <p class="contents__note">Motion: your reading, your control. Provenance view labels every passage as Sapience AI’s own words, concept copy, an illustration, or an industry source.</p>
-        <a class="contents__notes-link" href="/notes">Notes, sources &amp; colophon</a>
+        <a class="contents__notes-link" href="%BASE_URL%notes">Notes, sources &amp; colophon</a>
       </div>
     </div>
   </div>
@@ -204,8 +198,8 @@
         <h2 id="scattered-h" class="display" data-copy="concept" data-set-lines>Your record keeps the decisions. The margins keep the reasoning.</h2>
         <p class="body" data-copy="verbatim" data-src="sapienceai.co/customers">Insights sit scattered across inboxes, drives, and disconnected tools, leaving teams to make decisions without the full picture.</p>
         <figure class="reading" data-copy="industry" data-src="iMIS / ASI, 2026">
-          <p class="reading__figure"><span class="reading__only">Only</span> 43%</p>
-          <figcaption class="reading__text">of membership organizations surveyed can easily access and understand the data they need to monitor and improve performance.<a class="cite" href="/notes#note-1" aria-label="Note 1: source">1</a></figcaption>
+          <p class="reading__figure"><span class="reading__only">Only</span> <span class="stat-number" data-count>43%</span></p>
+          <figcaption class="reading__text">of membership organizations surveyed can easily access and understand the data they need to monitor and improve performance.<a class="cite" href="%BASE_URL%notes#note-1" aria-label="Note 1: source">1</a></figcaption>
         </figure>
         <p class="body" data-copy="concept">And when a committee chair or a long-serving colleague moves on, the reasoning in their margins goes with them.</p>
       </div>
@@ -224,7 +218,7 @@
           <li class="verb" data-verb="connect"><svg class="verb__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12 H22"/><circle cx="4" cy="12" r="2"/><circle cx="20" cy="12" r="2"/></svg><span class="verb__name">Connect</span> <span class="verb__text" data-copy="concept">across systems, and to the people behind them.</span></li>
           <li class="verb" data-verb="activate"><svg class="verb__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19 L12 5 L20 19"/></svg><span class="verb__name">Activate</span> <span class="verb__text" data-copy="verbatim" data-src="Sapience AI mission, LinkedIn">so the right insight reaches the right person at the right moment.</span></li>
         </ol>
-        <p class="small" data-copy="tbc" data-src="sapienceai.co/platform">We plug into your existing AMS, CRM, LMS, and content systems. No rip and replace. Secure, private, and live in <span class="nowrap">days — not months.<a class="cite" href="/notes#note-2" aria-label="Note 2">2</a></span></p>
+        <p class="small" data-copy="tbc" data-src="sapienceai.co/platform">We plug into your existing AMS, CRM, LMS, and content systems. No rip and replace. Secure, private, and live in <span class="nowrap">days — not months.<a class="cite" href="%BASE_URL%notes#note-2" aria-label="Note 2">2</a></span></p>
       </div>
     </section>
 
@@ -241,10 +235,10 @@
           <h3 class="question" data-copy="illustrative" data-question><span class="question__mark" aria-hidden="true">Q.</span> When our annual meeting went hybrid, how did we award continuing-education credit?</h3>
           <div class="galley" data-galley>
             <p class="galley__text" data-copy="illustrative">
-              <span class="clause" data-clause="1">Credit went to <mark class="land">live virtual attendance</mark>, verified at session check-in.<a class="cite" href="#src-1" id="cite-1" aria-describedby="src-1">1</a></span>
+              <span class="clause" data-clause="1">Credit went to <span class="nowrap"><mark class="land">live virtual attendance</mark>,</span> verified at session check-in.<a class="cite" href="#src-1" id="cite-1" aria-describedby="src-1">1</a></span>
               <span class="clause" data-clause="2">The committee chose <mark class="land">check-in over quizzes</mark> so hybrid attendees wouldn’t be penalized.<a class="cite" href="#src-2" id="cite-2" aria-describedby="src-2">2</a></span>
               <span class="clause" data-clause="3">Recordings watched later count only when <mark class="land">a chapter confirms</mark> attendance,<a class="cite" href="#src-3" id="cite-3" aria-describedby="src-3">3</a></span>
-              <span class="clause" data-clause="4">and staff apply the rule <mark class="land">at renewal</mark>.<a class="cite" href="#src-4" id="cite-4" aria-describedby="src-4">4</a></span>
+              <span class="clause" data-clause="4">and staff apply the rule <span class="nowrap"><mark class="land">at renewal</mark>.<a class="cite" href="#src-4" id="cite-4" aria-describedby="src-4">4</a></span></span>
               <span class="clause clause--person" data-clause="5">Why exceptions were allowed was never written down. The committee’s past chair can tell you.<a class="cite" href="#src-5" id="cite-5" aria-describedby="src-5">5</a></span>
             </p>
             <svg class="galley__ink" data-galley-ink aria-hidden="true"></svg>
@@ -270,13 +264,14 @@
   <section class="chapter chapter--trail" id="trail" aria-labelledby="trail-h" data-chapter="trail" data-folio="IV">
     <div class="spread">
       <p class="folio-mark folio-mark--chapter" aria-hidden="true">IV</p>
-      <div class="chapter__head">
+      <div class="chapter__head has-ghost">
+        <span class="chapter-ghost-word" aria-hidden="true" data-ghost>Trail</span>
         <p class="kicker"><span class="kicker__num">Chapter IV</span> The trail comes with it</p>
         <h2 id="trail-h" class="display" data-copy="verbatim" data-src="sapienceai.co/platform" data-set-lines>Every AI recommendation comes with a full audit trail.</h2>
-        <p class="lede" data-copy="verbatim" data-src="sapienceai.co/platform">You set the permissions. … Governance-ready for your board and your regulators.<a class="cite" href="/notes#note-3" aria-label="Note 3">3</a></p>
+        <p class="lede" data-copy="verbatim" data-src="sapienceai.co/platform">You set the permissions. … Governance-ready for your board and your regulators.<a class="cite" href="%BASE_URL%notes#note-3" aria-label="Note 3">3</a></p>
       </div>
       <aside class="margin margin--reading" aria-label="Industry reading: AI policy">
-        <p class="reading-note" data-copy="industry" data-src="ASAE, Sep 2026"><span class="reading-note__fig">92%</span> of association executives are using AI, but only 6% to 13% have an AI policy.<a class="cite" href="/notes#note-4" aria-label="Note 4">4</a></p>
+        <p class="reading-note" data-copy="industry" data-src="ASAE, Sep 2026"><span class="reading-note__fig"><span class="stat-number" data-count>92%</span></span> of association executives are using AI, but only 6% to 13% have an AI policy.<a class="cite" href="%BASE_URL%notes#note-4" aria-label="Note 4">4</a></p>
       </aside>
       <ol class="trail" data-trail>
         <li class="trail__step" data-step><span class="trail__num">01</span><span class="trail__name">Question</span><span class="trail__detail" data-copy="illustrative">When our annual meeting went hybrid, how did we award continuing-education credit?</span></li>
@@ -292,7 +287,8 @@
   <section class="chapter chapter--sage" id="sage" aria-labelledby="sage-h" data-chapter="sage" data-folio="V">
     <div class="spread">
       <p class="folio-mark folio-mark--chapter" aria-hidden="true">V</p>
-      <div class="chapter__head">
+      <div class="chapter__head has-ghost">
+        <span class="chapter-ghost-word" aria-hidden="true" data-ghost>Sage</span>
         <p class="kicker" data-copy="verbatim" data-src="sapienceai.co/platform"><span class="kicker__num">Chapter V</span> Purpose-built AI agents for your community</p>
         <h2 id="sage-h" class="display" data-copy="adapted" data-src="sapienceai.co/platform" data-set-lines>Ask once. Sage routes it to the right agent.</h2>
         <p class="lede" data-copy="concept">Sage, Sapience AI’s assistant, is where a question starts. Nobody on your team has to know which tool holds the answer.</p>
@@ -319,7 +315,7 @@
   </section>
 
   <!-- ═══════════════ Chapter VI — Memory ═══════════════ -->
-  <section class="chapter chapter--memory" id="memory" aria-labelledby="memory-h" data-chapter="memory" data-folio="VI">
+  <section class="chapter chapter--memory chapter--dark" id="memory" aria-labelledby="memory-h" data-chapter="memory" data-folio="VI">
     <div class="spread">
       <p class="folio-mark folio-mark--chapter" aria-hidden="true">VI</p>
       <div class="chapter__head">
@@ -330,7 +326,7 @@
         <p class="body" data-copy="verbatim" data-src="sapienceai.co/platform"><span class="run-in">Private Intelligence Core.</span> Your data trains your model only. … Your organization builds its own foundational AI — and it gets smarter every year.</p>
       </div>
       <aside class="margin margin--reading" aria-label="Industry reading: officer handovers">
-        <p class="reading-note" data-copy="industry" data-src="ASAE, Sep 2026">Departing officers “often take years of institutional knowledge with them.”<a class="cite" href="/notes#note-5" aria-label="Note 5">5</a></p>
+        <p class="reading-note" data-copy="industry" data-src="ASAE, Sep 2026">Departing officers “often take years of institutional knowledge with them.”<a class="cite" href="%BASE_URL%notes#note-5" aria-label="Note 5">5</a></p>
       </aside>
       <figure class="fore-figure" data-fore>
         <svg class="fore-figure__svg" data-fore-svg role="img" aria-labelledby="fore-cap"></svg>
@@ -340,7 +336,7 @@
   </section>
 
   <!-- ═══════════════ Chapter VII — Security (the binding) ═══════════════ -->
-  <section class="chapter chapter--binding" id="binding" aria-labelledby="binding-h" data-chapter="binding" data-folio="VII" data-binding>
+  <section class="chapter chapter--binding chapter--dark" id="binding" aria-labelledby="binding-h" data-chapter="binding" data-folio="VII" data-binding>
     <div class="binding__case" data-binding-case aria-hidden="true"></div>
     <div class="spread">
       <p class="folio-mark folio-mark--chapter" aria-hidden="true">VII</p>
@@ -349,15 +345,15 @@
         <h2 id="binding-h" class="display" data-copy="verbatim" data-src="sapienceai.co" data-set-lines>Enterprise-grade security and controls</h2>
         <p class="lede" data-copy="verbatim" data-src="sapienceai.co">Sapience AI runs on Google Cloud with the controls enterprise teams expect — private per-tenant data models, envelope encryption with per-tenant keys, SAML SSO, audit logging, and OWASP WAF protection.</p>
       </div>
-      <ul class="controls" data-copy="verbatim" data-src="sapienceai.co" data-controls>
-        <li class="control"><span class="control__num">01</span><span class="control__name">Per-tenant encryption keys</span></li>
-        <li class="control"><span class="control__num">02</span><span class="control__name">SAML SSO</span></li>
-        <li class="control"><span class="control__num">03</span><span class="control__name">Cloud audit logs</span></li>
-        <li class="control"><span class="control__num">04</span><span class="control__name">OWASP WAF</span></li>
-        <li class="control"><span class="control__num">05</span><span class="control__name">Per-tenant isolation</span></li>
-        <li class="control"><span class="control__num">06</span><span class="control__name">Managed data lifecycle</span></li>
-        <li class="control"><span class="control__num">07</span><span class="control__name">TLS 1.2+ in transit</span></li>
-        <li class="control"><span class="control__num">08</span><span class="control__name">Point-in-time restore</span></li>
+      <ul class="security-grid" data-copy="verbatim" data-src="sapienceai.co" data-controls aria-label="Security controls">
+        <li class="security-tile" data-tile><span class="security-tile__num">01</span><span class="security-tile__name">Per-tenant encryption keys</span></li>
+        <li class="security-tile" data-tile><span class="security-tile__num">02</span><span class="security-tile__name">SAML SSO</span></li>
+        <li class="security-tile" data-tile><span class="security-tile__num">03</span><span class="security-tile__name">Cloud audit logs</span></li>
+        <li class="security-tile" data-tile><span class="security-tile__num">04</span><span class="security-tile__name">OWASP WAF</span></li>
+        <li class="security-tile" data-tile><span class="security-tile__num">05</span><span class="security-tile__name">Per-tenant isolation</span></li>
+        <li class="security-tile" data-tile><span class="security-tile__num">06</span><span class="security-tile__name">Managed data lifecycle</span></li>
+        <li class="security-tile" data-tile><span class="security-tile__num">07</span><span class="security-tile__name">TLS 1.2+ in transit</span></li>
+        <li class="security-tile" data-tile><span class="security-tile__num">08</span><span class="security-tile__name">Point-in-time restore</span></li>
       </ul>
       <blockquote class="epigraph" data-copy="verbatim" data-src="sapienceai.co/company">
         <p>“Safety and privacy are not features. They are how we build.”</p>
@@ -420,7 +416,8 @@
   <section class="chapter chapter--book" id="book" aria-labelledby="afterword-h" data-chapter="book" data-folio="IX">
     <div class="spread">
       <p class="folio-mark folio-mark--chapter" aria-hidden="true">IX</p>
-      <div class="afterword">
+      <div class="afterword has-ghost">
+        <span class="chapter-ghost-word" aria-hidden="true" data-ghost>Together</span>
         <h2 class="kicker" id="afterword-h"><span class="kicker__num">Afterword</span> Humans in Partnership</h2>
         <p class="afterword__line" data-copy="verbatim" data-src="linkedin.com/company/sapience-ai-corp" data-afterword><span class="afterword__l">Not to <span class="dele" data-dele>automate<svg class="dele__stroke" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12 C 30 9, 70 9, 98 7"/></svg></span> humanity.</span> <span class="afterword__l">To elevate it.</span></p>
         <p class="body" data-copy="verbatim" data-src="sapienceai.co/company">The most powerful intelligence in a professional community already lives within its people. Technology will never replace that. Our work is to elevate it, so every voice carries further and every contribution matters more.</p>
@@ -472,10 +469,10 @@
       <p class="colophon__mark" aria-hidden="true">‸</p>
       <div class="colophon__body">
         <p class="label">Colophon</p>
-        <p>A speculative design concept for Sapience AI. It is not affiliated with or endorsed by Sapience AI. Quotations are attributed to their source: Sapience AI’s published words, or the industry publisher named. Scenarios and quoted fragments marked <em>Illustrative</em> are fictional, written for this concept.</p>
-        <p>Set in Newsreader, Public Sans and IBM Plex Mono. Built as static HTML5 for Firebase Hosting on Google Cloud. With motion off, the record reads the same.</p>
+        <p class="colophon__disclosure"><strong>Independent design concept by Mousa Batarseh. Not an official Sapience AI website.</strong> It is not affiliated with or endorsed by Sapience AI. Quotations are attributed to their source: Sapience AI’s published words, or the industry publisher named. Scenarios and quoted fragments marked <em>Illustrative</em> are fictional, written for this concept.</p>
+        <p>Set in Libre Baskerville and Inter, with Newsreader for annotations and IBM Plex Mono for technical tags. Built with Vite as static HTML5. With motion off, the record reads the same.</p>
         <p class="colophon__links">
-          <a href="/notes">Notes, sources &amp; colophon</a>
+          <a href="%BASE_URL%notes">Notes, sources &amp; colophon</a>
           <button class="link-btn" type="button" data-provenance-toggle aria-pressed="false" aria-label="Provenance view">Provenance view: <span data-provenance-state aria-hidden="true">Off</span></button>
           <button class="link-btn" type="button" data-print>Print this record</button>
         </p>
@@ -484,8 +481,8 @@
   </footer>
 
   <!-- ─────────────── Running foot ─────────────── -->
-  <aside class="running-foot" data-running-foot aria-label="Concept notice">
-    <p class="running-foot__notice"><span class="running-foot__dot" aria-hidden="true"></span><span class="rf-long">Speculative design concept · Not affiliated with or endorsed by Sapience AI</span><span class="rf-short">Concept · Not affiliated with Sapience AI</span> · <a href="/notes">Notes<span class="rf-long"> &amp; sources</span></a></p>
+  <aside class="running-foot" data-running-foot aria-label="Independent concept notice">
+    <p class="running-foot__notice"><span class="running-foot__dot" aria-hidden="true"></span><span class="rf-long">Independent design concept by Mousa Batarseh. Not an official Sapience AI website.</span><span class="rf-short">Independent concept · Not an official Sapience AI site</span><span class="rf-xs">Independent concept · Not Sapience AI’s site</span><span class="rf-sep"> · </span><a href="%BASE_URL%notes">Notes<span class="rf-long"> &amp; sources</span></a></p>
     <p class="running-foot__folio" aria-hidden="true"><span data-folio-out>i</span> / IX</p>
   </aside>
 

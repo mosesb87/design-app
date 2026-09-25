@@ -6,14 +6,17 @@
   .galley__ink, .final-leader, .vellum__ink, .desk__queries, .form, .actions, .router__desk, .binding__case { display: none !important; }
   .page--title { min-height: 0; padding-top: 0; }
   .chapter, .plate, .answer, .page--title { break-inside: avoid-page; }
-  .chapter--binding { background: #fff; color: var(--print); }
-  .chapter--binding .lede, .chapter--binding .kicker, .epigraph footer { color: var(--print-2); }
-  .chapter--binding .policies a { color: var(--print); }
-  .control__name { background: #fff; }
+  .chapter--dark { background: #fff; color: var(--text); }
+  .chapter--dark .display, .chapter--dark .run-in, .chapter--dark .security-tile__name, .chapter--dark .caption__fig { color: var(--text); }
+  .chapter--dark .lede, .chapter--dark .body, .chapter--dark .kicker, .chapter--dark .caption, .chapter--dark .reading-note, .epigraph footer { color: var(--text-secondary); }
+  .chapter--dark .kicker__num, .chapter--dark .security-tile__num { color: var(--purple); }
+  .chapter--binding .policies a { color: var(--text); }
+  .security-tile { background: #fff; border-color: var(--rule); }
+  .chapter-ghost-word { display: none !important; }
   .clause, .source, .doc, .plate, #title, .slip, .offprint { opacity: 1 !important; transform: none !important; clip-path: none !important; visibility: visible !important; }
   a[href^='http']::after { content: ' (' attr(href) ')'; font: 400 0.7em var(--font-ui); color: var(--print-3); word-break: break-all; }
   .doc--leaving { display: none !important; }
-  .set-line, .title-h__in, .gw, .clause, .source, .trail__step, .slip, .paper, .offprint, .control { transform: none !important; opacity: 1 !important; visibility: visible !important; }
+  .set-line, .title-h__in, .gw, .clause, .source, .trail__step, .slip, .paper, .offprint, .security-tile, .display { transform: none !important; opacity: 1 !important; visibility: visible !important; }
   .rider, .stet, .doc__query { display: none !important; }
   .btn { background: none !important; color: var(--ink) !important; box-shadow: inset 0 0 0 1px var(--ink); }
   .btn__caret { stroke: currentColor; }

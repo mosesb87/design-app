@@ -1,6 +1,7 @@
 import { gsap, ScrollTrigger, SplitText } from './runtime';
 import type { Convergence } from './hero';
 import { prepareLines } from './type';
+import { prepareCount } from './count';
 import { layoutBox, ortho, seeded, sizeSvg, svgEl, type Box } from '../lib/geom';
 import { setChapter } from '../ui/chrome';
 
@@ -389,6 +390,10 @@ export function buildRecord(conv: Convergence | null): Built | null {
 
   /* ── 8. Start states (JS only; text stays readable by assistive tech) ── */
   const plateIParts = Array.from(plateI.querySelectorAll('.body, .reading'));
+  // Chapter I's statistic counts up once, when its reading is set.
+  const statEl = plateI.querySelector<HTMLElement>('[data-count]');
+  const stat = statEl ? prepareCount(statEl) : null;
+  if (stat) cleanups.push(stat.revert);
   const plateIIParts = Array.from(plateII.querySelectorAll('.pull, .small'));
   const verbs = Array.from(plateII.querySelectorAll<HTMLElement>('.verb'));
   const wrap = document.querySelector<HTMLElement>('[data-converge-wrap]');
@@ -441,6 +446,7 @@ export function buildRecord(conv: Convergence | null): Built | null {
   tl.to(plateI, { xPercent: 0, duration: 14, ease: 'power3.out' }, PHASE.scatter + 3);
   tl.to(setI.lines, { yPercent: 0, duration: 10, stagger: 2.2, ease: 'power3.out' }, PHASE.scatter + 8);
   tl.fromTo(plateIParts, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 9, stagger: 4.5, ease: 'power2.out' }, PHASE.scatter + 15);
+  if (stat) tl.call(() => stat.play(), [], PHASE.scatter + 19.5);
 
   // C · four systems
   tl.to(queries, { autoAlpha: 0, duration: 6 }, PHASE.sort);

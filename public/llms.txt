@@ -1,16 +1,10 @@
-# The Annotated Record: a speculative website concept for Sapience AI
+# Sapience AI — independent design concept by Mousa Batarseh
 
-> A motion-first website concept for Sapience AI (https://sapienceai.co/), the collective intelligence platform for professional communities. This is a design proposal. It is not affiliated with or endorsed by Sapience AI and is not a source of official information about the company.
+> An independent portfolio concept: a motion-led, editorial website design exploring how Sapience AI's collective-intelligence story could be told. It is not an official Sapience AI website and is not affiliated with or endorsed by Sapience AI.
 
-Quotations are attributed to their source: Sapience AI's own published wording, or the industry publisher named (iMIS / Advanced Solutions International, ASAE). Scenarios and quoted fragments marked "Illustrative" are fictional and only demonstrate the concept.
+For Sapience AI itself, see https://sapienceai.co/
 
 ## Pages
 
-- [The record](/): the concept site. It has nine chapters: the problem (scattered knowledge), the approach (a layer above existing AMS, CRM, LMS and content systems), an illustrative cited answer, the audit trail, Sage and the agents, institutional memory, security controls, reserved design-partner reports and Labs, and the booking call to action.
-- [Notes, sources & colophon](/notes): every source used, what the concept keeps and changes from the current site, and how it is built.
-
-## Official sources
-
-- [Sapience AI](https://sapienceai.co/)
-- [Platform](https://sapienceai.co/platform)
-- [Contact](https://sapienceai.co/contact)
+- [The concept](https://mousabatarseh.com/sapienceai/): title page, the record, the answer with its sources, and the chapters on audit trails, Sage, memory, security, Labs and booking.
+- [Notes, sources & colophon](https://mousabatarseh.com/sapienceai/notes): every quotation and figure with its source, and which passages are illustrative or awaiting confirmation.

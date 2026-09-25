@@ -43,10 +43,11 @@ async function fontsReady(timeout = 1800) {
   if (!('fonts' in document)) return;
   await Promise.race([
     Promise.all([
-      document.fonts.load('320 100px Newsreader'),
+      document.fonts.load('400 100px "Libre Baskerville"'),
+      document.fonts.load('italic 400 20px "Libre Baskerville"'),
+      document.fonts.load('400 18px Inter'),
       document.fonts.load('italic 400 20px Newsreader'),
-      document.fonts.load('600 14px "Public Sans"'),
-      document.fonts.load('500 12px "Plex Mono"'),
+      document.fonts.load('500 12px "IBM Plex Mono"'),
     ]).then(() => document.fonts.ready),
     new Promise((r) => setTimeout(r, timeout)),
   ]);
