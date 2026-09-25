@@ -64,7 +64,7 @@ Whichever option is chosen:
 
 ```bash
 npm ci
-npm run build                      # tsc --noEmit && vite build → dist/
+BASE_PATH=/ npm run build          # tsc --noEmit && vite build → dist/, served from the root
 firebase deploy --only hosting     # production
 firebase hosting:channel:deploy review-$(date +%m%d) --expires 7d   # a preview URL for the weekly design review
 ```
