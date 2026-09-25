@@ -1,0 +1,26 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build && rm -rf .vercel-out && mkdir -p .vercel-out/sapienceai && cp -R dist/. .vercel-out/sapienceai/ && rm -f .vercel-out/sapienceai/.htaccess && cp dist/404.html .vercel-out/404.html",
+  "outputDirectory": ".vercel-out",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/", "destination": "/sapienceai", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/sapienceai/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    }
+  ]
+}

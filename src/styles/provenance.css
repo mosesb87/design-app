@@ -1,0 +1,43 @@
+/* Provenance view: every passage labelled with where its words came from.
+   A tool for brand, comms and legal review, not decoration. */
+html.provenance [data-copy] {
+  position: relative;
+  outline: 1px dashed var(--print-3);
+  outline-offset: 5px;
+  box-shadow: none;
+}
+html.provenance [data-copy]::before {
+  position: static;
+  display: table;
+  max-width: 100%;
+  margin: 0 0 6px -1px;
+  padding: 3px 6px 2px;
+  font: 500 10px/1.2 var(--font-mono);
+  font-style: normal;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: normal;
+  color: var(--paper);
+  background: var(--print-2);
+  pointer-events: none;
+}
+html.provenance [data-copy='verbatim'] { outline: 1.5px solid var(--ink); }
+html.provenance [data-copy='verbatim']::before { content: 'Sapience AI · verbatim · ' attr(data-src); background: var(--ink); }
+html.provenance [data-copy='adapted'] { outline: 1.5px dashed var(--ink); }
+html.provenance [data-copy='adapted']::before { content: 'Adapted from ' attr(data-src); background: var(--ink); }
+html.provenance [data-copy='concept']::before { content: 'Concept copy'; }
+html.provenance [data-copy='illustrative'] { outline: 1.5px dotted var(--ink-soft); }
+html.provenance [data-copy='illustrative']::before { content: 'Illustrative'; background: var(--ink); }
+html.provenance [data-copy='industry'] { outline: 1.5px solid var(--print); }
+html.provenance [data-copy='industry']::before { content: 'Industry source · ' attr(data-src); background: var(--print); }
+html.provenance [data-copy='tbc'] { outline: 3px double var(--ink); }
+html.provenance [data-copy='tbc']::before { content: 'To be confirmed by Sapience AI'; background: var(--ink-deep); }
+html.provenance .chapter--dark [data-copy]::before { background: var(--dark-label); color: var(--dark); }
+html.provenance .chapter--dark [data-copy] { outline-color: var(--dark-label); }
+/* Inline passages inside running text: outline only, no label. */
+html.provenance .clause[data-copy]::before, html.provenance .verb__text[data-copy]::before { display: none; }
+html.provenance .title-h__category::before { font-style: normal; }
+/* The labels add height to the title page: on the stage the headline gives some back, so the call to action clears the foot. */
+html.provenance.stage-mode .title-h__display { font-size: calc(min(var(--fs-title), 11.6vh) * 0.8); }
+/* The deck's two sentences have different sources: their labels run inline, so the paragraph keeps its shape. */
+html.provenance .deck [data-copy]::before { display: inline-block; margin: 0 0.5em 0 0; vertical-align: 0.15em; }

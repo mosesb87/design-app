@@ -1,0 +1,10 @@
+node_modules
+dist
+qa-shots
+.firebase
+*.log
+.DS_Store
+scripts/dev
+undefined/
+.vercel-out/
+deploy/

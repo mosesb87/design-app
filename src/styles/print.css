@@ -1,0 +1,39 @@
+@media print {
+  @page {
+    margin: 18mm 16mm 20mm;
+    @bottom-left {
+      content: 'Independent design concept by Mousa Batarseh. Not an official Sapience AI website.';
+      font: 500 8pt Inter, Arial, sans-serif;
+      color: #45413d;
+    }
+  }
+  :root { --section-y: 12mm; }
+  html, body { background: #fff; }
+  .running-head, .fore-edge, .contents, .skip, .converge, .converge-mark,
+  .galley__ink, .final-leader, .vellum__ink, .desk__queries, .form, .actions, .router__desk, .binding__case { display: none !important; }
+  .page--title { min-height: 0; padding-top: 0; }
+  .chapter, .plate, .answer, .page--title { break-inside: avoid-page; }
+  .chapter--dark { background: #fff; color: var(--text); }
+  .chapter--dark .display, .chapter--dark .run-in, .chapter--dark .security-tile__name, .chapter--dark .caption__fig { color: var(--text); }
+  .chapter--dark .lede, .chapter--dark .body, .chapter--dark .kicker, .chapter--dark .caption, .chapter--dark .reading-note, .epigraph footer { color: var(--text-secondary); }
+  .chapter--dark .kicker__num, .chapter--dark .security-tile__num { color: var(--purple); }
+  .chapter--binding .policies a { color: var(--text); }
+  .security-tile { background: #fff; border-color: var(--rule); }
+  .chapter-ghost-word { display: none !important; }
+  /* The disclosure prints in the page margin of every page (never over the text), and at the top of page one. */
+  .running-foot { display: none !important; }
+  main::before {
+    content: 'Independent design concept by Mousa Batarseh. Not an official Sapience AI website.';
+    display: block;
+    margin-bottom: 6mm;
+    font: 500 9pt/1.3 var(--font-ui);
+    color: var(--text-secondary);
+  }
+  .clause, .source, .doc, .plate, #title, .slip, .offprint { opacity: 1 !important; transform: none !important; clip-path: none !important; visibility: visible !important; }
+  a[href^='http']::after { content: ' (' attr(href) ')'; font: 400 0.7em var(--font-ui); color: var(--print-3); word-break: break-all; }
+  .doc--leaving { display: none !important; }
+  .set-line, .title-h__in, .gw, .clause, .source, .trail__step, .slip, .paper, .offprint, .security-tile, .display { transform: none !important; opacity: 1 !important; visibility: visible !important; }
+  .rider, .stet, .doc__query { display: none !important; }
+  .btn { background: none !important; color: var(--ink) !important; box-shadow: inset 0 0 0 1px var(--ink); }
+  .btn__caret { stroke: currentColor; }
+}

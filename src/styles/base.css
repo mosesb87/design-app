@@ -1,0 +1,264 @@
+/* ─────────────── Reset ─────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: clip;
+  scroll-padding-top: calc(var(--head-h) + 24px);
+  scroll-padding-bottom: calc(var(--foot-h) + 20px);
+}
+html.motion:not(.lenis) { scroll-behavior: smooth; }
+section[tabindex='-1']:focus, main[tabindex='-1']:focus { outline: none; box-shadow: none; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: clip; }
+body {
+  background: var(--paper);
+  color: var(--print);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.58;
+  font-optical-sizing: auto;
+  font-kerning: normal;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+img, svg { display: block; max-width: 100%; }
+svg { overflow: visible; }
+button, input, textarea { font: inherit; color: inherit; }
+button { background: none; border: 0; padding: 0; cursor: pointer; }
+ol, ul { padding: 0; list-style: none; }
+a { color: inherit; }
+h1, h2, h3, h4 { font-weight: inherit; }
+::selection { background: var(--ink-wash); color: var(--print); }
+
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip {
+  position: fixed; left: 12px; top: 8px; z-index: 100;
+  padding: 10px 14px; background: var(--ink); color: var(--paper);
+  font: 600 var(--fs-ui)/1 var(--font-ui); text-decoration: none;
+  transform: translateY(-160%);
+}
+.skip:focus-visible { transform: none; }
+
+/* Focus: a double ring — ink outside a paper offset. Always visible, never animated. */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--paper);
+}
+.chapter--dark :focus-visible { outline-color: var(--dark-label); box-shadow: 0 0 0 3px var(--dark); }
+
+/* ─────────────── Grid: the page ─────────────── */
+.spread {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: var(--margin-x);
+}
+@media (max-width: 899.98px) {
+  .spread { display: block; }
+}
+
+/* ─────────────── Type roles ─────────────── */
+/* Eyebrow 13/17; the chapter label inside it 12/16, in ink */
+.kicker {
+  font: 500 var(--fs-eyebrow)/1.3077 var(--font-ui);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.kicker__num {
+  display: inline-block;
+  margin-right: 1em;
+  font: 600 var(--fs-label)/1.3333 var(--font-ui);
+  letter-spacing: 0.12em;
+  color: var(--purple);
+}
+.label {
+  font: 600 var(--fs-label)/1.3333 var(--font-ui);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.label__flag, .tag {
+  display: inline-block;
+  margin-left: 0.6em;
+  padding: 0.18em 0.5em 0.14em;
+  border: 1px solid currentColor;
+  font: 500 0.625rem/1.2 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--print-2);
+  vertical-align: 0.12em;
+}
+.tag { margin-left: 0.4em; }
+/* Chapter titles: Libre Baskerville, tight and high-contrast */
+.display {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.display--xl { font-size: var(--fs-display-xl); line-height: 1.06; letter-spacing: -0.03em; }
+/* Narrow phones: long single words (recommendation, organization) must fit the measure whole. */
+@media (max-width: 480px) {
+  .display, .display--xl { font-size: min(var(--fs-display), 9.4vw); }
+}
+.subdisplay {
+  font-family: var(--font-display);
+  font-size: var(--fs-subdisplay);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.lede {
+  font-family: var(--font-body);
+  font-size: var(--fs-lede);
+  line-height: 1.42;
+  color: var(--text-secondary);
+  max-width: 44ch;
+  text-wrap: pretty;
+}
+.body { max-width: 62ch; text-wrap: pretty; }
+.small { font-size: 0.9375rem; line-height: 1.5; color: var(--text-secondary); max-width: 56ch; }
+.run-in { font-weight: 600; color: var(--text); }
+/* Inter ships upright only: italics in running text are set in the annotation face, never slanted by the browser. */
+em, cite, i { font-family: var(--font-note); font-style: italic; }
+body { font-synthesis-style: none; }
+.caption {
+  font: 400 0.8125rem/1.5 var(--font-ui);
+  color: var(--text-secondary);
+  max-width: 62ch;
+}
+.caption__fig {
+  font: 500 var(--fs-mono)/1 var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--print-2);
+  margin-right: 0.8em;
+}
+.folio-mark {
+  font: italic 400 0.95rem/1 var(--font-display);
+  color: var(--text-secondary);
+}
+.folio-mark--chapter {
+  font: 400 clamp(1.1rem, 0.9rem + 0.6vw, 1.6rem)/1 var(--font-display);
+  font-style: normal;
+  color: var(--purple);
+  letter-spacing: 0.04em;
+}
+
+/* Citation markers: ink, raised, linked. Inline, so a marker never wraps away from its word. */
+.nowrap { white-space: nowrap; }
+.cite {
+  display: inline;
+  margin-left: 0.14em;
+  font: 650 0.58em/1 var(--font-ui);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  text-decoration: none;
+  vertical-align: 0.62em;
+  padding: 0.1em 0.12em;
+  transition: color var(--t-micro) var(--ease-lift);
+}
+.cite:hover { color: var(--ink-deep); text-decoration: underline; text-underline-offset: 0.15em; }
+
+/* Links: a hairline of ink that thickens from the left. */
+.body a, .lede a, .caption a, .colophon a, .policies a, .booking__meta a, .form__note a, .trail__detail a, .notes a {
+  color: var(--print);
+  text-decoration: none;
+  background: linear-gradient(var(--ink), var(--ink)) 0 100% / 100% 1px no-repeat,
+              linear-gradient(var(--ink), var(--ink)) 0 100% / 0% 2px no-repeat;
+  transition: background-size var(--t-micro) var(--ease-lift);
+  padding-bottom: 0.08em;
+}
+.body a:hover, .lede a:hover, .caption a:hover, .colophon a:hover, .policies a:hover, .booking__meta a:hover, .form__note a:hover, .trail__detail a:hover, .notes a:hover {
+  background-size: 100% 1px, 100% 2px;
+}
+
+/* Buttons: the only rounded things on the page (8px). Panels, pages and tiles stay square. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+  min-height: 48px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: var(--radius-button);
+  background: var(--purple);
+  color: #fff;
+  font: 500 var(--fs-ui)/1.2857 var(--font-ui);
+  letter-spacing: 0.005em;
+  text-decoration: none;
+  transition:
+    background-color 280ms var(--ease-lift),
+    transform 280ms var(--ease-lift),
+    box-shadow 280ms var(--ease-lift);
+}
+.btn__caret { width: 12px; height: 10px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+.btn:hover { background: var(--purple-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(90, 45, 130, 0.28); }
+.btn:active { transform: translateY(0); box-shadow: 0 3px 8px rgba(90, 45, 130, 0.2); }
+.btn:focus-visible { outline-offset: 3px; }
+.btn--quiet {
+  background: transparent;
+  color: var(--purple);
+  box-shadow: inset 0 0 0 1.5px var(--purple);
+}
+.btn--quiet:hover { background: var(--purple); color: #fff; box-shadow: 0 8px 20px rgba(90, 45, 130, 0.28); }
+/* Understated text links: a hairline of ink that thickens */
+.read-link, .link-btn {
+  font: 500 var(--fs-nav)/1.2143 var(--font-ui);
+  color: var(--text);
+  text-decoration: none;
+  padding-block: 0.4em;
+  background: linear-gradient(var(--ink), var(--ink)) 0 100% / 100% 1px no-repeat;
+  transition: background-size var(--t-micro) var(--ease-lift), color var(--t-micro) var(--ease-lift);
+}
+.read-link:hover, .link-btn:hover { background-size: 100% 2px; color: var(--purple); }
+
+/* Coarse pointers: enlarge hit areas without changing the typesetting (no padding, no display change). */
+@media (pointer: coarse) {
+  .cite { position: relative; }
+  .cite::after { content: ''; position: absolute; inset: -17px -18px; }
+  .read-link, .link-btn, .paper__link, .wordmark, .contents__notes-link,
+  .trail__detail a, .policies a, .booking__meta a { position: relative; }
+  .read-link::before, .link-btn::before, .paper__link::before, .wordmark::before, .contents__notes-link::before,
+  .trail__detail a::before, .policies a::before, .booking__meta a::before {
+    content: '';
+    position: absolute;
+    left: -6px; right: -6px;
+    top: 50%;
+    height: 44px;
+    transform: translateY(-50%);
+  }
+  /* The foot's notice clips overflow, so its link grows instead. */
+  .running-foot a { min-height: 44px; display: flex; align-items: center; }
+}
+
+/* Margin notes */
+.margin { font-size: var(--fs-note); line-height: 1.45; }
+.margin .label { margin-bottom: 1.1rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  .btn:hover, .btn:active { transform: none; }
+}
+/* Motion: Off keeps the colour change, drops the lift */
+html.js:not(.motion) .btn:hover, html.js:not(.motion) .btn:active { transform: none; }

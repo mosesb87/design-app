@@ -1,0 +1,10 @@
+# Sapience AI — independent design concept by Mousa Batarseh
+
+> An independent portfolio concept: a motion-led, editorial website design exploring how Sapience AI's collective-intelligence story could be told. It is not an official Sapience AI website and is not affiliated with or endorsed by Sapience AI.
+
+For Sapience AI itself, see https://sapienceai.co/
+
+## Pages
+
+- [The concept](https://mousabatarseh.com/sapienceai/): title page, the record, the answer with its sources, and the chapters on audit trails, Sage, memory, security, Labs and booking.
+- [Notes, sources & colophon](https://mousabatarseh.com/sapienceai/notes): every quotation and figure with its source, and which passages are illustrative or awaiting confirmation.
