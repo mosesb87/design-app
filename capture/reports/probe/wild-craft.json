@@ -1,0 +1,269 @@
+{
+  "slug": "wild-craft",
+  "url": "https://craft.wild.as/",
+  "probedAt": "2026-09-26T14:16:49.550Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://craft.wild.as/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "#hero-kv.",
+        "canvas."
+      ]
+    },
+    "title": "Craft, engineered · wild",
+    "description": "Craft is the constant. Engineering, and now AI, is how we make more of it. A point of view from wild, a design and technology studio born in Vienna.",
+    "headings": [
+      "H1: Craft,engineered.",
+      "H2: Born in Vienna, where craft is a discipline.",
+      "H2: AI is good at everything except the last 10 percent.",
+      "H2: Explore. Generate.Refine. Scale.",
+      "H2: The Brand Context Protocol.",
+      "H2: Move your organisation up the levels of AI.",
+      "H2: The tools are everywhere. The judgment isn't."
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 6,
+      "video": 10,
+      "autoplayVideo": 10,
+      "iframes": 0,
+      "svg": 13,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 4,
+      "links": 17,
+      "images": 4
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "Sneak"
+    ],
+    "type": {
+      "body": "Sneak, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Family": "Sneak, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Size": "74.88px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(10, 10, 10)"
+    },
+    "scroll": {
+      "height": 7651,
+      "viewports": 8.5
+    },
+    "perf": {
+      "fcpMs": 380,
+      "domContentLoadedMs": 748,
+      "requests": 21,
+      "transferKB": 3029
+    },
+    "animationsNow": 8,
+    "motion": {
+      "scrollDrivenElements": 15,
+      "samples": [
+        "a#toplink.toplink.show",
+        "span.wlogo",
+        "div.head.reveal",
+        "div.reveal.in",
+        "div.head.reveal",
+        "div.reveal.in",
+        "div.ph.reveal",
+        "div.procflow.reveal",
+        "div.donuts.reveal",
+        "div.head.reveal",
+        "div.reveal.in",
+        "div.reveal.in"
+      ],
+      "pinnedCandidates": []
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://craft.wild.as/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "#hero-kv.",
+        "canvas."
+      ]
+    },
+    "title": "Craft, engineered · wild",
+    "description": "Craft is the constant. Engineering, and now AI, is how we make more of it. A point of view from wild, a design and technology studio born in Vienna.",
+    "headings": [
+      "H1: Craft,engineered.",
+      "H2: Born in Vienna, where craft is a discipline.",
+      "H2: AI is good at everything except the last 10 percent.",
+      "H2: Explore. Generate.Refine. Scale.",
+      "H2: The Brand Context Protocol.",
+      "H2: Move your organisation up the levels of AI.",
+      "H2: The tools are everywhere. The judgment isn't."
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 6,
+      "video": 10,
+      "autoplayVideo": 10,
+      "iframes": 0,
+      "svg": 13,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 4,
+      "links": 17,
+      "images": 4
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "Sneak"
+    ],
+    "type": {
+      "body": "Sneak, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Family": "Sneak, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Size": "74.88px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(10, 10, 10)"
+    },
+    "scroll": {
+      "height": 7651,
+      "viewports": 8.5
+    },
+    "perf": {
+      "fcpMs": 180,
+      "domContentLoadedMs": 559,
+      "requests": 21,
+      "transferKB": 3029
+    },
+    "animationsNow": 1,
+    "motion": {
+      "scrollDrivenElements": 1,
+      "samples": [
+        "a#toplink.toplink.show"
+      ],
+      "pinnedCandidates": []
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://craft.wild.as/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "#hero-kv."
+      ]
+    },
+    "title": "Craft, engineered · wild",
+    "description": "Craft is the constant. Engineering, and now AI, is how we make more of it. A point of view from wild, a design and technology studio born in Vienna.",
+    "headings": [
+      "H1: Craft,engineered.",
+      "H2: Born in Vienna, where craft is a discipline.",
+      "H2: AI is good at everything except the last 10 percent.",
+      "H2: Explore. Generate.Refine. Scale.",
+      "H2: The Brand Context Protocol.",
+      "H2: Move your organisation up the levels of AI.",
+      "H2: The tools are everywhere. The judgment isn't."
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 5,
+      "video": 10,
+      "autoplayVideo": 10,
+      "iframes": 0,
+      "svg": 9,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 3,
+      "links": 17,
+      "images": 4
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "Sneak"
+    ],
+    "type": {
+      "body": "Sneak, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Family": "Sneak, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Size": "32px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(10, 10, 10)"
+    },
+    "scroll": {
+      "height": 8219,
+      "viewports": 9.7
+    },
+    "perf": {
+      "fcpMs": 180,
+      "domContentLoadedMs": 467,
+      "requests": 21,
+      "transferKB": 2415
+    },
+    "animationsNow": 7,
+    "motion": null,
+    "mobileNav": {
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "slug": "aino-samsoe",
+  "url": "https://aino.agency/work/samsoe-samsoe",
+  "probedAt": "2026-09-26T14:16:27.606Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://aino.agency/work/samsoe-samsoe",
+    "gates": {
+      "actions": [],
+      "blocking": []
+    },
+    "title": "Samsøe Samsøe — Aino",
+    "description": "Samsøe Samsøe — e-commerce, replatforming, design, development, centra. A case study by Aino.",
+    "headings": [
+      "H1: Samsøe Samsøe",
+      "H2: Solutions",
+      "H2: past and present",
+      "H2: scandinavian calm",
+      "H2: How it’s built",
+      "H2: Let’s talk",
+      "H2: New Business"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 3,
+      "autoplayVideo": 3,
+      "iframes": 0,
+      "svg": 0,
+      "pinSpacers": 0,
+      "sticky": 1,
+      "fixed": 1,
+      "links": 34,
+      "images": 11
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "abc",
+      "abcplus"
+    ],
+    "type": {
+      "body": "abcplus, helvetica, sans-serif",
+      "h1Family": "abcplus, helvetica, sans-serif",
+      "h1Size": "12.5831px",
+      "h1Weight": "500"
+    },
+    "colors": {
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "rgb(24, 24, 24)"
+    },
+    "scroll": {
+      "height": 12410,
+      "viewports": 13.8
+    },
+    "perf": {
+      "fcpMs": 284,
+      "domContentLoadedMs": 352,
+      "requests": 42,
+      "transferKB": 1380
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 0,
+      "samples": [],
+      "pinnedCandidates": []
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://aino.agency/work/samsoe-samsoe",
+    "gates": {
+      "actions": [],
+      "blocking": []
+    },
+    "title": "Samsøe Samsøe — Aino",
+    "description": "Samsøe Samsøe — e-commerce, replatforming, design, development, centra. A case study by Aino.",
+    "headings": [
+      "H1: Samsøe Samsøe",
+      "H2: Solutions",
+      "H2: past and present",
+      "H2: scandinavian calm",
+      "H2: How it’s built",
+      "H2: Let’s talk",
+      "H2: New Business"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 3,
+      "autoplayVideo": 3,
+      "iframes": 0,
+      "svg": 0,
+      "pinSpacers": 0,
+      "sticky": 1,
+      "fixed": 1,
+      "links": 34,
+      "images": 11
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "abc",
+      "abcplus"
+    ],
+    "type": {
+      "body": "abcplus, helvetica, sans-serif",
+      "h1Family": "abcplus, helvetica, sans-serif",
+      "h1Size": "12.5831px",
+      "h1Weight": "500"
+    },
+    "colors": {
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "rgb(24, 24, 24)"
+    },
+    "scroll": {
+      "height": 12410,
+      "viewports": 13.8
+    },
+    "perf": {
+      "fcpMs": 112,
+      "domContentLoadedMs": 205,
+      "requests": 42,
+      "transferKB": 1380
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 0,
+      "samples": [],
+      "pinnedCandidates": []
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://aino.agency/work/samsoe-samsoe",
+    "gates": {
+      "actions": [],
+      "blocking": []
+    },
+    "title": "Samsøe Samsøe — Aino",
+    "description": "Samsøe Samsøe — e-commerce, replatforming, design, development, centra. A case study by Aino.",
+    "headings": [
+      "H1: Samsøe Samsøe",
+      "H2: Solutions",
+      "H2: past and present",
+      "H2: scandinavian calm",
+      "H2: How it’s built",
+      "H2: Let’s talk",
+      "H2: New Business"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 3,
+      "autoplayVideo": 3,
+      "iframes": 0,
+      "svg": 0,
+      "pinSpacers": 0,
+      "sticky": 1,
+      "fixed": 1,
+      "links": 34,
+      "images": 11
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "abc",
+      "abcplus"
+    ],
+    "type": {
+      "body": "abcplus, helvetica, sans-serif",
+      "h1Family": "abcplus, helvetica, sans-serif",
+      "h1Size": "12.6417px",
+      "h1Weight": "500"
+    },
+    "colors": {
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "rgb(24, 24, 24)"
+    },
+    "scroll": {
+      "height": 7716,
+      "viewports": 9.1
+    },
+    "perf": {
+      "fcpMs": 124,
+      "domContentLoadedMs": 231,
+      "requests": 42,
+      "transferKB": 713
+    },
+    "animationsNow": 0,
+    "motion": null,
+    "mobileNav": {
+      "label": "Settings",
+      "hasAriaExpanded": false,
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}

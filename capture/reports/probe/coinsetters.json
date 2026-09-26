@@ -1,0 +1,358 @@
+{
+  "slug": "coinsetters",
+  "url": "https://www.coinsetters.io/",
+  "probedAt": "2026-09-26T14:16:02.850Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://www.coinsetters.io/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.background-video-2._1",
+        "div.cursor"
+      ]
+    },
+    "title": "Coinsetters",
+    "description": "We provide development, marketing, and fundraising services to take blockchain projects from concept to success.",
+    "headings": [
+      "H1: What are you interested in?",
+      "H2: Thank You!",
+      "H2: We negotiate successful all-tier exchange listings for busy Web3 founders and teams 3X fas",
+      "H2: We negotiate successful all-tier exchange listings for busy Web3 founders and teams 3X fas",
+      "H1: (01)",
+      "H1: Fundraising",
+      "H1: (02)",
+      "H1: Development",
+      "H1: (03)",
+      "H1: Marketing",
+      "H1: (04)",
+      "H1: Listing",
+      "H2: Facts and figures that define us",
+      "H2: 90",
+      "H2: +",
+      "H2: 4",
+      "H2: +",
+      "H2: $",
+      "H2: 8",
+      "H2: M",
+      "H2: $",
+      "H2: 6.5",
+      "H2: M",
+      "H2: 50"
+    ],
+    "libs": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": true,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 2,
+      "autoplayVideo": 2,
+      "iframes": 0,
+      "svg": 4,
+      "pinSpacers": 0,
+      "sticky": 4,
+      "fixed": 4,
+      "links": 45,
+      "images": 86
+    },
+    "cursorHidden": true,
+    "viewTransitions": false,
+    "fonts": [
+      "Tungstennarrow",
+      "Inter"
+    ],
+    "type": {
+      "body": "Arial, sans-serif",
+      "h1Family": "Tungstennarrow, sans-serif",
+      "h1Size": "43.2px",
+      "h1Weight": "700"
+    },
+    "colors": {
+      "background": "rgb(243, 242, 255)",
+      "text": "rgb(51, 51, 51)"
+    },
+    "scroll": {
+      "height": 15227,
+      "viewports": 16.9
+    },
+    "perf": {
+      "fcpMs": 484,
+      "domContentLoadedMs": 1231,
+      "requests": 137,
+      "transferKB": 129
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 826,
+      "samples": [
+        "div.div-block",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span"
+      ],
+      "pinnedCandidates": [
+        "video#d9396030-47fd-f5bd-db8f-5cf17881a0bc-video",
+        "div.div-block-20",
+        "div.steps-container",
+        "div.step-container"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": [
+      "Cannot read properties of null (reading 'classList')",
+      "Cannot read properties of null (reading 'classList')",
+      "Cannot read properties of null (reading 'classList')",
+      "Cannot read properties of null (reading 'classList')",
+      "Cannot read properties of null (reading 'classList')"
+    ]
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://www.coinsetters.io/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.background-video-2._1",
+        "div.cursor"
+      ]
+    },
+    "title": "Coinsetters",
+    "description": "We provide development, marketing, and fundraising services to take blockchain projects from concept to success.",
+    "headings": [
+      "H1: What are you interested in?",
+      "H2: Thank You!",
+      "H2: We negotiate successful all-tier exchange listings for busy Web3 founders and teams 3X fas",
+      "H2: We negotiate successful all-tier exchange listings for busy Web3 founders and teams 3X fas",
+      "H1: (01)",
+      "H1: Fundraising",
+      "H1: (02)",
+      "H1: Development",
+      "H1: (03)",
+      "H1: Marketing",
+      "H1: (04)",
+      "H1: Listing",
+      "H2: Facts and figures that define us",
+      "H2: 90",
+      "H2: +",
+      "H2: 4",
+      "H2: +",
+      "H2: $",
+      "H2: 8",
+      "H2: M",
+      "H2: $",
+      "H2: 6.5",
+      "H2: M",
+      "H2: 50"
+    ],
+    "libs": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": true,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 2,
+      "autoplayVideo": 2,
+      "iframes": 0,
+      "svg": 4,
+      "pinSpacers": 0,
+      "sticky": 4,
+      "fixed": 4,
+      "links": 45,
+      "images": 86
+    },
+    "cursorHidden": true,
+    "viewTransitions": false,
+    "fonts": [
+      "Tungstennarrow",
+      "Inter"
+    ],
+    "type": {
+      "body": "Arial, sans-serif",
+      "h1Family": "Tungstennarrow, sans-serif",
+      "h1Size": "43.2px",
+      "h1Weight": "700"
+    },
+    "colors": {
+      "background": "rgb(243, 242, 255)",
+      "text": "rgb(51, 51, 51)"
+    },
+    "scroll": {
+      "height": 15227,
+      "viewports": 16.9
+    },
+    "perf": {
+      "fcpMs": 176,
+      "domContentLoadedMs": 719,
+      "requests": 136,
+      "transferKB": 129
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 826,
+      "samples": [
+        "div.div-block",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span",
+        "span.ws__span"
+      ],
+      "pinnedCandidates": [
+        "video#d9396030-47fd-f5bd-db8f-5cf17881a0bc-video",
+        "div.div-block-20",
+        "div.steps-container",
+        "div.step-container"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": [
+      "Cannot read properties of null (reading 'classList')",
+      "Cannot read properties of null (reading 'classList')",
+      "Cannot read properties of null (reading 'classList')",
+      "Cannot read properties of null (reading 'classList')",
+      "Cannot read properties of null (reading 'classList')"
+    ]
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://www.coinsetters.io/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.background-video-2._1"
+      ]
+    },
+    "title": "Coinsetters",
+    "description": "We provide development, marketing, and fundraising services to take blockchain projects from concept to success.",
+    "headings": [
+      "H1: What are you interested in?",
+      "H2: Thank You!",
+      "H2: We negotiate successful all-tier exchange listings for busy Web3 founders and teams 3X fas",
+      "H2: We negotiate successful all-tier exchange listings for busy Web3 founders and teams 3X fas",
+      "H1: (01)",
+      "H1: Fundraising",
+      "H1: (02)",
+      "H1: Development",
+      "H1: (03)",
+      "H1: Marketing",
+      "H1: (04)",
+      "H1: Listing",
+      "H2: Facts and figures that define us",
+      "H2: 90",
+      "H2: +",
+      "H2: 4",
+      "H2: +",
+      "H2: $",
+      "H2: 8",
+      "H2: M",
+      "H2: $",
+      "H2: 6.5",
+      "H2: M",
+      "H2: 50"
+    ],
+    "libs": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": true,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 2,
+      "autoplayVideo": 2,
+      "iframes": 0,
+      "svg": 4,
+      "pinSpacers": 0,
+      "sticky": 1,
+      "fixed": 4,
+      "links": 45,
+      "images": 86
+    },
+    "cursorHidden": true,
+    "viewTransitions": false,
+    "fonts": [
+      "Tungstennarrow",
+      "Inter"
+    ],
+    "type": {
+      "body": "Arial, sans-serif",
+      "h1Family": "Tungstennarrow, sans-serif",
+      "h1Size": "30px",
+      "h1Weight": "700"
+    },
+    "colors": {
+      "background": "rgb(243, 242, 255)",
+      "text": "rgb(51, 51, 51)"
+    },
+    "scroll": {
+      "height": 14795,
+      "viewports": 17.5
+    },
+    "perf": {
+      "fcpMs": 148,
+      "domContentLoadedMs": 671,
+      "requests": 135,
+      "transferKB": 129
+    },
+    "animationsNow": 0,
+    "motion": null,
+    "mobileNav": {
+      "label": "About us",
+      "hasAriaExpanded": false,
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}

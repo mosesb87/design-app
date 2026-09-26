@@ -1,0 +1,273 @@
+{
+  "slug": "s25-seance",
+  "url": "https://www.s25.studio/work/seance",
+  "probedAt": "2026-09-26T14:17:57.088Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://www.s25.studio/work/seance",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.cover",
+        "#smooth-wrapper.wrapper"
+      ]
+    },
+    "title": "Séance case study | S25 Studio",
+    "description": "A full brand, product, website, ecommerce and packaging system for Séance, unifying mind and body through a calm, sensory digital experience.",
+    "headings": [
+      "H1: One system for the whole self",
+      "H2: Unifying mind and body through a memorable product experience",
+      "H2: Explore Our case studies"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 5,
+      "svg": 16,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 10,
+      "links": 14,
+      "images": 22
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "S25Diatype-Light",
+      "S25Diatype-Bold",
+      "S25DiatypeSemi-Mono-Regular"
+    ],
+    "type": {
+      "body": "S25Diatype-Light, system-ui, sans-serif",
+      "h1Family": "S25Diatype-Bold, system-ui, sans-serif",
+      "h1Size": "120px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(27, 27, 28)",
+      "text": "rgb(223, 227, 230)"
+    },
+    "scroll": {
+      "height": 20786,
+      "viewports": 23.1
+    },
+    "perf": {
+      "fcpMs": 608,
+      "domContentLoadedMs": 400,
+      "requests": 101,
+      "transferKB": 2038
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 23,
+      "samples": [
+        "g",
+        "div#smooth-content.content",
+        "p.overline-large",
+        "img.case-study-image",
+        "img.case-study-image",
+        "div.case-study-embed",
+        "p.overline-large",
+        "div.case-study-embed",
+        "img.case-study-image",
+        "img.case-study-image",
+        "div.case-study-embed",
+        "p.overline-large"
+      ],
+      "pinnedCandidates": []
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://www.s25.studio/work/seance",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.cover"
+      ]
+    },
+    "title": "Séance case study | S25 Studio",
+    "description": "A full brand, product, website, ecommerce and packaging system for Séance, unifying mind and body through a calm, sensory digital experience.",
+    "headings": [
+      "H1: One system for the whole self",
+      "H2: Unifying mind and body through a memorable product experience",
+      "H2: Explore Our case studies"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 5,
+      "svg": 16,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 9,
+      "links": 14,
+      "images": 22
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "S25Diatype-Light",
+      "S25Diatype-Bold",
+      "S25DiatypeSemi-Mono-Regular"
+    ],
+    "type": {
+      "body": "S25Diatype-Light, system-ui, sans-serif",
+      "h1Family": "S25Diatype-Bold, system-ui, sans-serif",
+      "h1Size": "120px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(27, 27, 28)",
+      "text": "rgb(223, 227, 230)"
+    },
+    "scroll": {
+      "height": 20786,
+      "viewports": 23.1
+    },
+    "perf": {
+      "fcpMs": 244,
+      "domContentLoadedMs": 171,
+      "requests": 98,
+      "transferKB": 2038
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 18,
+      "samples": [
+        "g",
+        "div.case-study-embed",
+        "p.overline-large",
+        "div.case-study-embed",
+        "img.case-study-image",
+        "img.case-study-image",
+        "div.case-study-embed",
+        "p.overline-large",
+        "div.case-study-embed",
+        "img.case-study-image",
+        "img.case-study-image",
+        "img.case-study-image"
+      ],
+      "pinnedCandidates": []
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://www.s25.studio/work/seance",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.cover"
+      ]
+    },
+    "title": "Séance case study | S25 Studio",
+    "description": "A full brand, product, website, ecommerce and packaging system for Séance, unifying mind and body through a calm, sensory digital experience.",
+    "headings": [
+      "H1: One system for the whole self",
+      "H2: Unifying mind and body through a memorable product experience",
+      "H2: Explore Our case studies"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 5,
+      "svg": 16,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 9,
+      "links": 14,
+      "images": 22
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "S25Diatype-Light",
+      "S25Diatype-Bold",
+      "S25DiatypeSemi-Mono-Regular"
+    ],
+    "type": {
+      "body": "S25Diatype-Light, system-ui, sans-serif",
+      "h1Family": "S25Diatype-Bold, system-ui, sans-serif",
+      "h1Size": "64px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(27, 27, 28)",
+      "text": "rgb(223, 227, 230)"
+    },
+    "scroll": {
+      "height": 8800,
+      "viewports": 10.4
+    },
+    "perf": {
+      "fcpMs": 208,
+      "domContentLoadedMs": 267,
+      "requests": 99,
+      "transferKB": 1418
+    },
+    "animationsNow": 0,
+    "motion": null,
+    "mobileNav": {
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}

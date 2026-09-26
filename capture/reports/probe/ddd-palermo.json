@@ -1,0 +1,305 @@
+{
+  "slug": "ddd-palermo",
+  "url": "https://palermo.ddd.live/",
+  "probedAt": "2026-09-26T14:15:01.998Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://palermo.ddd.live/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.c-gl",
+        "div.c-noise"
+      ]
+    },
+    "title": "Digital Design Days Palermo | 27-28 June 2025",
+    "description": "DDDx is an itinerant event created as part of DDD’s mission, organized to provide local communities, organizations, and professionals with the same opportunities for inspiration, education, and networking just like the main DDD event in Milan.",
+    "headings": [
+      "H1: Digital Design Daysx",
+      "H2: Palermo",
+      "H2: Meet our headliners",
+      "H2: 27—28 June Cantieri Culturali alla Zisa",
+      "H2: Topics",
+      "H2: Get Tickets",
+      "H2: Become a partner",
+      "H2: Localpartner",
+      "H2: Gotquestions?"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 1,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 3,
+      "pinSpacers": 0,
+      "sticky": 2,
+      "fixed": 4,
+      "links": 46,
+      "images": 57
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "DM Mono",
+      "neue-haas-grotesk-display",
+      "neue-haas-grotesk-text"
+    ],
+    "type": {
+      "body": "neue-haas-grotesk-text, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Family": "neue-haas-grotesk-display, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Size": "120.38px",
+      "h1Weight": "600"
+    },
+    "colors": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(32, 26, 57)"
+    },
+    "scroll": {
+      "height": 13712,
+      "viewports": 15.2
+    },
+    "perf": {
+      "fcpMs": 3768,
+      "domContentLoadedMs": 1896,
+      "requests": 39,
+      "transferKB": 2342
+    },
+    "animationsNow": 119,
+    "motion": {
+      "scrollDrivenElements": 81,
+      "samples": [
+        "span.o-logo__inner",
+        "span.o-logo__shape.o-logo__shape--1",
+        "span.o-logo__shape.o-logo__shape--2",
+        "span.o-logo__shape.o-logo__shape--3",
+        "div.c-site-header__bg",
+        "span.c-button__dots",
+        "div.c-gallery-scroll__items",
+        "div.c-gallery-scroll__item",
+        "div.c-gallery-scroll__item",
+        "div.c-gallery-scroll__item",
+        "div.c-gallery-scroll__item",
+        "span.c-button__dots"
+      ],
+      "pinnedCandidates": [
+        "canvas"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": [
+      "The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+      "The element has no supported sources."
+    ]
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://palermo.ddd.live/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.c-gl",
+        "div.c-noise"
+      ]
+    },
+    "title": "Digital Design Days Palermo | 27-28 June 2025",
+    "description": "DDDx is an itinerant event created as part of DDD’s mission, organized to provide local communities, organizations, and professionals with the same opportunities for inspiration, education, and networking just like the main DDD event in Milan.",
+    "headings": [
+      "H1: Digital Design Daysx",
+      "H2: Palermo",
+      "H2: Meet our headliners",
+      "H2: 27—28 June Cantieri Culturali alla Zisa",
+      "H2: Topics",
+      "H2: Get Tickets",
+      "H2: Become a partner",
+      "H2: Localpartner",
+      "H2: Gotquestions?"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 1,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 3,
+      "pinSpacers": 0,
+      "sticky": 2,
+      "fixed": 4,
+      "links": 46,
+      "images": 57
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "DM Mono",
+      "neue-haas-grotesk-display",
+      "neue-haas-grotesk-text"
+    ],
+    "type": {
+      "body": "neue-haas-grotesk-text, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Family": "neue-haas-grotesk-display, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Size": "120.38px",
+      "h1Weight": "600"
+    },
+    "colors": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(32, 26, 57)"
+    },
+    "scroll": {
+      "height": 13712,
+      "viewports": 15.2
+    },
+    "perf": {
+      "fcpMs": 3988,
+      "domContentLoadedMs": 1229,
+      "requests": 38,
+      "transferKB": 2230
+    },
+    "animationsNow": 120,
+    "motion": {
+      "scrollDrivenElements": 185,
+      "samples": [
+        "span.o-logo__inner",
+        "span.o-logo__shape.o-logo__shape--1",
+        "span.o-logo__shape.o-logo__shape--2",
+        "span.o-logo__shape.o-logo__shape--3",
+        "div.c-site-header__bg",
+        "span.c-button__dots",
+        "div.c-gallery-scroll__items",
+        "div.c-gallery-scroll__item",
+        "div.o-media__image.lazypreload",
+        "div.c-gallery-scroll__item",
+        "div.c-gallery-scroll__item",
+        "div.c-gallery-scroll__item"
+      ],
+      "pinnedCandidates": [
+        "canvas"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": [
+      "The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22",
+      "The element has no supported sources."
+    ]
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://palermo.ddd.live/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.c-gl",
+        "div.c-noise"
+      ]
+    },
+    "title": "Digital Design Days Palermo | 27-28 June 2025",
+    "description": "DDDx is an itinerant event created as part of DDD’s mission, organized to provide local communities, organizations, and professionals with the same opportunities for inspiration, education, and networking just like the main DDD event in Milan.",
+    "headings": [
+      "H1: Digital Design Daysx",
+      "H2: Palermo",
+      "H2: Meet our headliners",
+      "H2: 27—28 June Cantieri Culturali alla Zisa",
+      "H2: Topics",
+      "H2: Get Tickets",
+      "H2: Become a partner",
+      "H2: Localpartner",
+      "H2: Gotquestions?"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 1,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 3,
+      "pinSpacers": 0,
+      "sticky": 2,
+      "fixed": 5,
+      "links": 46,
+      "images": 56
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "DM Mono",
+      "neue-haas-grotesk-display",
+      "neue-haas-grotesk-text"
+    ],
+    "type": {
+      "body": "neue-haas-grotesk-text, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Family": "neue-haas-grotesk-display, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "h1Size": "60.2956px",
+      "h1Weight": "600"
+    },
+    "colors": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(32, 26, 57)"
+    },
+    "scroll": {
+      "height": 12614,
+      "viewports": 14.9
+    },
+    "perf": {
+      "fcpMs": 1576,
+      "domContentLoadedMs": 1234,
+      "requests": 16,
+      "transferKB": 480
+    },
+    "animationsNow": 125,
+    "motion": null,
+    "mobileNav": {
+      "label": "Menu\n        Close",
+      "hasAriaExpanded": false,
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}

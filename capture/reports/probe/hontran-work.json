@@ -1,0 +1,281 @@
+{
+  "slug": "hontran-work",
+  "url": "https://www.hontran.dev/work",
+  "probedAt": "2026-09-26T14:17:30.547Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://www.hontran.dev/work",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.fixed.top-0",
+        "div."
+      ]
+    },
+    "title": "Selected Work — Award-Winning Websites — Hon Tran",
+    "description": "The full archive of award-winning websites by creative developer Hon Tran — 18 projects, 11 international awards and 19 recognitions in total. WebGL, Three.js and GSAP motion for founders, brands and agencies.",
+    "headings": [
+      "H1: SelectedWork",
+      "H2: Project index — 18 works",
+      "H2: Have a project in mind?"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 4,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 0,
+      "pinSpacers": 0,
+      "sticky": 1,
+      "fixed": 5,
+      "links": 40,
+      "images": 4
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "JetBrains Mono",
+      "f37Judge"
+    ],
+    "type": {
+      "body": "\"JetBrains Mono\", \"JetBrains Mono Fallback\"",
+      "h1Family": "f37Judge, \"f37Judge Fallback\"",
+      "h1Size": "127.5px",
+      "h1Weight": "700"
+    },
+    "colors": {
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "rgb(255, 255, 255)"
+    },
+    "scroll": {
+      "height": 3491,
+      "viewports": 3.9
+    },
+    "perf": {
+      "fcpMs": 480,
+      "domContentLoadedMs": 325,
+      "requests": 77,
+      "transferKB": 7734
+    },
+    "animationsNow": 2,
+    "motion": {
+      "scrollDrivenElements": 74,
+      "samples": [
+        "span",
+        "div.fixed.top-0",
+        "style",
+        "div.absolute.overflow-hidden",
+        "div",
+        "span",
+        "span",
+        "div",
+        "span",
+        "span",
+        "div",
+        "span"
+      ],
+      "pinnedCandidates": [
+        "div.absolute.overflow-hidden",
+        "div",
+        "canvas"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://www.hontran.dev/work",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.fixed.top-0",
+        "div."
+      ]
+    },
+    "title": "Selected Work — Award-Winning Websites — Hon Tran",
+    "description": "The full archive of award-winning websites by creative developer Hon Tran — 18 projects, 11 international awards and 19 recognitions in total. WebGL, Three.js and GSAP motion for founders, brands and agencies.",
+    "headings": [
+      "H1: SelectedWork",
+      "H2: Project index — 18 works",
+      "H2: Have a project in mind?"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 3,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 0,
+      "pinSpacers": 0,
+      "sticky": 1,
+      "fixed": 5,
+      "links": 40,
+      "images": 4
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "JetBrains Mono",
+      "f37Judge"
+    ],
+    "type": {
+      "body": "\"JetBrains Mono\", \"JetBrains Mono Fallback\"",
+      "h1Family": "f37Judge, \"f37Judge Fallback\"",
+      "h1Size": "127.5px",
+      "h1Weight": "700"
+    },
+    "colors": {
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "rgb(255, 255, 255)"
+    },
+    "scroll": {
+      "height": 3491,
+      "viewports": 3.9
+    },
+    "perf": {
+      "fcpMs": 200,
+      "domContentLoadedMs": 113,
+      "requests": 76,
+      "transferKB": 7733
+    },
+    "animationsNow": 2,
+    "motion": {
+      "scrollDrivenElements": 53,
+      "samples": [
+        "span",
+        "div.fixed.top-0",
+        "style",
+        "div.absolute.overflow-hidden",
+        "div",
+        "span",
+        "span",
+        "div",
+        "span",
+        "span",
+        "div",
+        "span"
+      ],
+      "pinnedCandidates": [
+        "div.absolute.overflow-hidden",
+        "div",
+        "canvas"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://www.hontran.dev/work",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div."
+      ]
+    },
+    "title": "Selected Work — Award-Winning Websites — Hon Tran",
+    "description": "The full archive of award-winning websites by creative developer Hon Tran — 18 projects, 11 international awards and 19 recognitions in total. WebGL, Three.js and GSAP motion for founders, brands and agencies.",
+    "headings": [
+      "H1: SelectedWork",
+      "H2: Project index — 18 works",
+      "H2: Have a project in mind?"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 2,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 0,
+      "pinSpacers": 0,
+      "sticky": 1,
+      "fixed": 4,
+      "links": 40,
+      "images": 4
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "JetBrains Mono",
+      "f37Judge"
+    ],
+    "type": {
+      "body": "\"JetBrains Mono\", \"JetBrains Mono Fallback\"",
+      "h1Family": "f37Judge, \"f37Judge Fallback\"",
+      "h1Size": "58.5px",
+      "h1Weight": "700"
+    },
+    "colors": {
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "rgb(255, 255, 255)"
+    },
+    "scroll": {
+      "height": 4602,
+      "viewports": 5.5
+    },
+    "perf": {
+      "fcpMs": 228,
+      "domContentLoadedMs": 136,
+      "requests": 49,
+      "transferKB": 7714
+    },
+    "animationsNow": 1,
+    "motion": null,
+    "mobileNav": {
+      "label": "Open menu",
+      "hasAriaExpanded": true,
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}
