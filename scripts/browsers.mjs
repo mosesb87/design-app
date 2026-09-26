@@ -60,7 +60,9 @@ for (const run of RUNS) {
       // Anything still hidden by a reveal after scrolling the whole page is a bug.
       const hidden = await page.evaluate(() => [...document.querySelectorAll('main h1, main h2, main h3, main p')].filter((e) => { const cs = getComputedStyle(e); const r = e.getBoundingClientRect(); return r.height > 0 && (cs.visibility === 'hidden' || +cs.opacity < 0.05) && !e.closest('[aria-hidden="true"], .visually-hidden, [data-step], .thesis__step, .thesis__verdict, .thesis__title-b'); }).map((e) => `${e.tagName.toLowerCase()}.${[...e.classList].join('.')}: ${e.textContent.trim().slice(0, 40)}`).slice(0, 8));
       const vt = await page.evaluate(() => 'onpagereveal' in window);
-      report.results.push({ browser: name, vp, page: p, status, ms: Date.now() - t0, overflow, hidden, logs: [...new Set(logs)].slice(0, 10), failed: [...new Set(failed)].slice(0, 10), viewTransitions: vt });
+      // Each font file should be fetched once (its preload); two entries for the same file means a double download.
+      const fonts = await page.evaluate(() => { const c = {}; performance.getEntriesByType('resource').filter((e) => e.name.endsWith('.woff2')).forEach((e) => { const n = e.name.split('/').pop(); c[n] = (c[n] || 0) + 1; }); return c; });
+      report.results.push({ browser: name, vp, page: p, status, ms: Date.now() - t0, overflow, hidden, logs: [...new Set(logs)].slice(0, 10), failed: [...new Set(failed)].slice(0, 10), viewTransitions: vt, fonts });
       console.log(`${name.padEnd(8)} ${vp.padEnd(12)} ${p.padEnd(26)} ${status} overflow=${overflow} hidden=${hidden.length} logs=${logs.length} failed=${failed.length}`);
     } catch (e) {
       report.results.push({ browser: name, vp, page: p, status, error: String(e).slice(0, 300), logs, failed });
