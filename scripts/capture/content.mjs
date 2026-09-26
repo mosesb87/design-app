@@ -126,7 +126,7 @@ const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, u
 // Blog
 fs.mkdirSync(path.join(OUT, 'blog'), { recursive: true });
 let posts = [];
-for (const base of ['https://work.mousabatarseh.com', 'https://mousabatarseh.com/blog']) {
+for (const base of ['https://work.mousabatarseh.com', 'https://mousabatarseh.com', 'https://mousabatarseh.com/blog']) {
   const got = await wpPosts(base);
   note(`${base}: ${got.length} posts from the REST API`);
   for (const p of got) if (!posts.find((x) => x.slug === p.slug)) posts.push({ ...p, source: base });
@@ -142,6 +142,35 @@ writeJSON(path.join(OUT, 'blog/wp-posts.json'), posts);
   note(`/blog/ → ${status}, ${data.cards.length} cards, ${data.links.length} links`);
   await page.close();
 }
+// Posts listed on /blog/ that no REST API returned: read them from their pages.
+{
+  const idx = readJSON(path.join(OUT, 'blog/blog-index.json'), { links: [] });
+  const listed = [...new Set(idx.links.map((l) => l.href).filter((h) => /^https:\/\/(work\.)?mousabatarseh\.com\/[^/]+\/?$/.test(h) && !/\/(blog|reviews|v2|work|about)\/?$/.test(h)))];
+  for (const href of listed) {
+    const slug = new URL(href).pathname.replace(/^\/|\/$/g, '');
+    if (posts.find((x) => x.slug === slug)) continue;
+    try {
+      const { page, status } = await openPage(ctx, href);
+      const art = await page.evaluate(() => {
+        const a = document.querySelector('article .entry-content, .entry-content, article, main');
+        const t = document.querySelector('h1');
+        return {
+          title: t?.innerText.trim() || document.title,
+          date: document.querySelector('meta[property="article:published_time"]')?.content || document.querySelector('time[datetime]')?.getAttribute('datetime') || '',
+          modified: document.querySelector('meta[property="article:modified_time"]')?.content || '',
+          content: a ? a.innerHTML : '',
+          excerpt: document.querySelector('meta[name=description]')?.content || '',
+          featured: document.querySelector('meta[property="og:image"]')?.content || null,
+          categories: [...document.querySelectorAll('a[rel~="category"], .cat-links a')].map((x) => x.innerText.trim()),
+        };
+      });
+      posts.push({ id: null, slug, link: href, ...art, tags: [], featuredAlt: '', source: 'page', status });
+      note(`post ${slug} → ${status}, ${art.content.length} chars (from its page)`);
+      await page.close();
+    } catch (e) { note(`post ${slug} failed: ${String(e).slice(0, 160)}`); }
+  }
+  writeJSON(path.join(OUT, 'blog/wp-posts.json'), posts);
+}
 for (const p of posts) {
   if (p.featured) await grab(p.featured);
   for (const m of (p.content || '').matchAll(/<img[^>]+src="([^"]+)"/g)) await grab(m[1]);
@@ -149,18 +178,21 @@ for (const p of posts) {
 
 // Reviews
 fs.mkdirSync(path.join(OUT, 'reviews'), { recursive: true });
-const { page: idx, status: idxStatus } = await openPage(ctx, 'https://mousabatarseh.com/reviews/');
+const { page: idx, status: idxStatus } = await openPage(ctx, 'https://mousabatarseh.com/reviews/reviews/index.html');
 const index = await idx.evaluate(EXTRACT);
 index.status = idxStatus;
-index.cards = await idx.evaluate(() => [...document.querySelectorAll('a[href]')].filter((a) => /-review\/?$|\/reviews\/[^/]+\/?$/.test(new URL(a.href).pathname) && !/\/reviews\/reviews\/?$/.test(a.href)).map((a) => { const card = a.closest('article, li, [class*=card], [class*=review], section > div') || a; return { href: a.href, text: a.innerText.trim(), card: card.innerText.trim().slice(0, 900) }; }));
+index.cards = await idx.evaluate(() => [...document.querySelectorAll('a[href]')].filter((a) => /\/reviews\/reviews\/[^/]+\/(index\.html)?$/.test(new URL(a.href).pathname)).map((a) => { const card = a.closest('article, li, [class*=card], [class*=review]') || a; return { href: a.href.split('?')[0].split('#')[0], text: a.innerText.trim(), card: card.innerText.trim().slice(0, 900) }; }));
 fs.writeFileSync(path.join(OUT, 'reviews/index.html'), await idx.content());
 writeJSON(path.join(OUT, 'reviews/index.json'), index);
 await idx.close();
-const reviewUrls = [...new Set(index.cards.map((c) => c.href.split('#')[0]))];
+const reviewUrls = [...new Set(index.cards.map((c) => c.href))];
+const extraPages = ['https://mousabatarseh.com/reviews/index.html', 'https://mousabatarseh.com/reviews/builds/index.html', 'https://mousabatarseh.com/reviews/method/index.html'];
+const companions = new Set();
 note(`/reviews/ → ${idxStatus}, ${reviewUrls.length} review links`);
 
 for (const url of reviewUrls) {
-  const slug = new URL(url).pathname.replace(/^\/|\/$/g, '').replace(/\//g, '--') || 'root';
+  const parts = new URL(url).pathname.replace(/\/index\.html$/, '').replace(/^\/|\/$/g, '').split('/');
+  const slug = parts[parts.length - 1] || 'root';
   try {
     const { page, status } = await openPage(ctx, url);
     const data = await page.evaluate(EXTRACT);
@@ -182,7 +214,28 @@ for (const url of reviewUrls) {
     await sharp(await mp.screenshot({ type: 'png' })).webp({ quality: 80 }).toFile(path.join(OUT, 'reviews', slug, 'mobile.webp'));
     await m.close();
     note(`review ${slug} → ${status}, ${data.blocks.length} blocks, ${data.images.length} images`);
+    data.links.filter((l) => /^https:\/\/mousabatarseh\.com\/[a-z0-9-]+-review\/?$/.test(l.href)).forEach((l) => companions.add(l.href));
   } catch (e) { note(`review ${slug} failed: ${String(e).slice(0, 200)}`); }
+}
+
+// The reviews site's other pages, and the companion pages (fixes, long-form reviews) the reviews link to.
+fs.mkdirSync(path.join(OUT, 'reviews/pages'), { recursive: true });
+for (const url of [...extraPages, ...companions]) {
+  const slug = new URL(url).pathname.replace(/\/index\.html$/, '').replace(/^\/|\/$/g, '').replace(/\//g, '--') || 'root';
+  try {
+    const { page, status } = await openPage(ctx, url);
+    const data = await page.evaluate(EXTRACT);
+    data.status = status;
+    fs.writeFileSync(path.join(OUT, 'reviews/pages', `${slug}.html`), await page.content());
+    for (const img of data.images.slice(0, 40)) img.file = await grab(img.src);
+    for (const b of data.blocks) if (b.t === 'img') b.file = await grab(b.src);
+    writeJSON(path.join(OUT, 'reviews/pages', `${slug}.json`), data);
+    await page.evaluate(() => scrollTo(0, 0));
+    await sleep(500);
+    await sharp(await page.screenshot({ type: 'png' })).webp({ quality: 82 }).toFile(path.join(OUT, 'reviews/pages', `${slug}.webp`));
+    note(`page ${slug} → ${status}, ${data.blocks.length} blocks`);
+    await page.close();
+  } catch (e) { note(`page ${slug} failed: ${String(e).slice(0, 160)}`); }
 }
 
 writeJSON(assetsFile, assets);
