@@ -1,0 +1,70 @@
+name: Cross-browser smoke test
+
+on:
+  push:
+    branches: ['claude/determined-lamport-4blt8a']
+    paths: ['docs/qa/browsers-run.json', '.github/workflows/browsers.yml']
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: browsers-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install
+        run: |
+          npm ci --no-audit --no-fund
+          npx playwright install --with-deps firefox webkit
+      - name: Build
+        run: npm run build
+      - name: Firefox + WebKit
+        continue-on-error: true
+        run: |
+          npx astro preview --port 4321 > preview.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf http://localhost:4321/ > /dev/null && break; sleep 1; done
+          BASE=http://localhost:4321 node scripts/browsers.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: browsers
+          path: qa-browsers/
+          retention-days: 3
+          if-no-files-found: ignore
+
+  commit:
+    needs: [smoke]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: browsers
+          path: docs/qa/browsers
+      - name: Commit
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/qa/browsers
+          if git diff --cached --quiet; then echo "Nothing new"; exit 0; fi
+          git commit -m "QA: Firefox and WebKit smoke results [skip ci]"
+          for i in 1 2 3 4; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

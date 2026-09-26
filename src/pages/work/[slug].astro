@@ -20,7 +20,6 @@ const m = media(c.media.hero);
 const date = capturedDate(c.media.hero);
 const full = view(c.media.full || '', 'desktop-full');
 const mobFull = view(c.media.mobile || '', 'mobile-full') || view(c.media.mobile || '', 'mobile-hero');
-const mobHero = view(c.media.mobile || c.media.hero, 'mobile-hero');
 const recs = c.media.video ? media(c.media.video) : undefined;
 const video = recs?.video || recs?.interaction;
 const hasOutline = !!m?.outline;

@@ -35,11 +35,11 @@ export default function media(els: HTMLElement[], env: Env) {
   const pick = () => {
     let best: HTMLVideoElement | null = null;
     let bestR = 0.55;
-    ratios.forEach((r, v) => { if (r > bestR) { best = v; bestR = r; } });
+    for (const [v, r] of ratios) if (r > bestR) { best = v; bestR = r; }
     if (best !== current) {
       current?.pause();
       current = best;
-      if (current) { loadSrc(current); current.play().catch(() => {}); }
+      if (best) { loadSrc(best); best.play().catch(() => {}); }
     }
   };
   const io = new IntersectionObserver((entries) => {

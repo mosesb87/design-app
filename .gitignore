@@ -4,9 +4,10 @@ dist/
 .vercel/
 deploy/*.zip
 deploy/build/
-qa/
+/qa/
 scripts/capture/node_modules/
 capture/raw/**/.frames-*/
 .DS_Store
 *.log
-qa-out/
+/qa-out/
+/qa-browsers/

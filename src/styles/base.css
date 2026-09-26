@@ -8,6 +8,9 @@ html {
   text-size-adjust: 100%;
   scroll-padding-top: calc(var(--nav-h) + 16px);
   hanging-punctuation: first last;
+  /* Given to the root so it propagates to the viewport, which leaves body's own clip in force: registration
+     ghosts on full-bleed plates sit a few pixels past the edge and must not widen the page on phones. */
+  overflow-x: clip;
 }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
