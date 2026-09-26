@@ -1,7 +1,7 @@
 {
   "slug": "s25-seance",
   "url": "https://www.s25.studio/work/seance",
-  "probedAt": "2026-09-26T14:17:57.088Z",
+  "probedAt": "2026-09-26T14:34:41.270Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://www.s25.studio/work/seance",
@@ -70,14 +70,14 @@
       "viewports": 23.1
     },
     "perf": {
-      "fcpMs": 608,
-      "domContentLoadedMs": 400,
-      "requests": 101,
+      "fcpMs": 500,
+      "domContentLoadedMs": 488,
+      "requests": 99,
       "transferKB": 2038
     },
     "animationsNow": 0,
     "motion": {
-      "scrollDrivenElements": 23,
+      "scrollDrivenElements": 22,
       "samples": [
         "g",
         "div#smooth-content.content",
@@ -164,8 +164,8 @@
       "viewports": 23.1
     },
     "perf": {
-      "fcpMs": 244,
-      "domContentLoadedMs": 171,
+      "fcpMs": 476,
+      "domContentLoadedMs": 523,
       "requests": 98,
       "transferKB": 2038
     },
@@ -258,8 +258,8 @@
       "viewports": 10.4
     },
     "perf": {
-      "fcpMs": 208,
-      "domContentLoadedMs": 267,
+      "fcpMs": 268,
+      "domContentLoadedMs": 169,
       "requests": 99,
       "transferKB": 1418
     },

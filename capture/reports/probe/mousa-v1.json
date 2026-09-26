@@ -1,7 +1,7 @@
 {
   "slug": "mousa-v1",
   "url": "https://mousabatarseh.com/",
-  "probedAt": "2026-09-26T14:22:37.806Z",
+  "probedAt": "2026-09-26T14:39:08.038Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://mousabatarseh.com/",
@@ -72,14 +72,14 @@
       "viewports": 14.3
     },
     "perf": {
-      "fcpMs": 436,
-      "domContentLoadedMs": 4372,
+      "fcpMs": 348,
+      "domContentLoadedMs": 3481,
       "requests": 10,
       "transferKB": 790
     },
     "animationsNow": 21,
     "motion": {
-      "scrollDrivenElements": 158,
+      "scrollDrivenElements": 147,
       "samples": [
         "span.motion-word",
         "span.about-w",
@@ -171,15 +171,17 @@
       "viewports": 14.3
     },
     "perf": {
-      "fcpMs": 332,
-      "domContentLoadedMs": 609,
+      "fcpMs": 336,
+      "domContentLoadedMs": 543,
       "requests": 10,
       "transferKB": 790
     },
     "animationsNow": 0,
     "motion": {
-      "scrollDrivenElements": 0,
-      "samples": [],
+      "scrollDrivenElements": 1,
+      "samples": [
+        "div.cert-popover"
+      ],
       "pinnedCandidates": [
         "nav.menu-links"
       ]
@@ -255,8 +257,8 @@
       "viewports": 20.1
     },
     "perf": {
-      "fcpMs": 7584,
-      "domContentLoadedMs": 7777,
+      "fcpMs": 4624,
+      "domContentLoadedMs": 4791,
       "requests": 7,
       "transferKB": 586
     },

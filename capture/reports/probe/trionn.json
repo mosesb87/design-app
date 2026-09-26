@@ -1,7 +1,7 @@
 {
   "slug": "trionn",
   "url": "https://trionn.com/",
-  "probedAt": "2026-09-26T14:20:20.110Z",
+  "probedAt": "2026-09-26T14:36:49.201Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://trionn.com/",
@@ -76,27 +76,27 @@
       "viewports": 28.3
     },
     "perf": {
-      "fcpMs": 1816,
-      "domContentLoadedMs": 1824,
-      "requests": 157,
-      "transferKB": 2891
+      "fcpMs": 1624,
+      "domContentLoadedMs": 1616,
+      "requests": 188,
+      "transferKB": 3219
     },
     "animationsNow": 0,
     "motion": {
-      "scrollDrivenElements": 229,
+      "scrollDrivenElements": 221,
       "samples": [
-        "div.lines",
-        "div.words",
-        "div.chars",
-        "div.chars",
-        "div.chars",
-        "div.chars",
-        "div.chars",
-        "div.chars",
         "path",
         "span.title.mt-4",
         "div.words",
-        "span.title.block"
+        "span.title.block",
+        "div.words",
+        "div.words",
+        "div.words",
+        "div.words",
+        "div.words",
+        "div.words",
+        "div.words",
+        "div.words"
       ],
       "pinnedCandidates": [
         "svg",
@@ -186,17 +186,15 @@
       "viewports": 28.3
     },
     "perf": {
-      "fcpMs": 1540,
-      "domContentLoadedMs": 1434,
-      "requests": 148,
-      "transferKB": 2817
+      "fcpMs": 1744,
+      "domContentLoadedMs": 1756,
+      "requests": 145,
+      "transferKB": 2810
     },
     "animationsNow": 0,
     "motion": {
-      "scrollDrivenElements": 229,
+      "scrollDrivenElements": 227,
       "samples": [
-        "div.lines",
-        "div.words",
         "div.chars",
         "div.chars",
         "div.chars",
@@ -206,7 +204,9 @@
         "path",
         "span.title.mt-4",
         "div.words",
-        "span.title.block"
+        "span.title.block",
+        "div.words",
+        "div.words"
       ],
       "pinnedCandidates": [
         "svg",
@@ -297,12 +297,12 @@
       "viewports": 22.6
     },
     "perf": {
-      "fcpMs": 1712,
-      "domContentLoadedMs": 1730,
-      "requests": 220,
-      "transferKB": 3567
+      "fcpMs": 1524,
+      "domContentLoadedMs": 1444,
+      "requests": 226,
+      "transferKB": 3861
     },
-    "animationsNow": 2,
+    "animationsNow": 0,
     "motion": null,
     "mobileNav": {
       "horizontalOverflowPx": 0

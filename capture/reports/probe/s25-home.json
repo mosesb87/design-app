@@ -1,7 +1,7 @@
 {
   "slug": "s25-home",
   "url": "https://www.s25.studio/",
-  "probedAt": "2026-09-26T14:18:43.258Z",
+  "probedAt": "2026-09-26T14:35:11.638Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://www.s25.studio/",
@@ -73,8 +73,8 @@
       "viewports": 17.3
     },
     "perf": {
-      "fcpMs": 360,
-      "domContentLoadedMs": 257,
+      "fcpMs": 236,
+      "domContentLoadedMs": 266,
       "requests": 152,
       "transferKB": 1386
     },
@@ -171,9 +171,9 @@
       "viewports": 17.3
     },
     "perf": {
-      "fcpMs": 240,
-      "domContentLoadedMs": 126,
-      "requests": 152,
+      "fcpMs": 352,
+      "domContentLoadedMs": 197,
+      "requests": 153,
       "transferKB": 1386
     },
     "animationsNow": 0,
@@ -268,9 +268,9 @@
       "viewports": 23
     },
     "perf": {
-      "fcpMs": 240,
-      "domContentLoadedMs": 334,
-      "requests": 152,
+      "fcpMs": 252,
+      "domContentLoadedMs": 265,
+      "requests": 153,
       "transferKB": 1386
     },
     "animationsNow": 0,

@@ -1,0 +1,155 @@
+{
+  "url": "https://mousabatarseh.com/biotrust-review/",
+  "height": 1518,
+  "heads": [
+    {
+      "tag": "h1",
+      "text": "Before the relaunch, the store is showing its work.",
+      "y": 200,
+      "sel": "body > main > div.wrap > h1"
+    },
+    {
+      "tag": "h3",
+      "text": "Own the relaunch",
+      "y": 741,
+      "sel": "div.wrap > div.cards:nth-of-type(2) > div.card:nth-of-type(1) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "A relaunch copies defects",
+      "y": 741,
+      "sel": "div.wrap > div.cards:nth-of-type(2) > div.card:nth-of-type(2) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "A pre-flight you can click",
+      "y": 741,
+      "sel": "div.wrap > div.cards:nth-of-type(2) > div.card:nth-of-type(3) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "MOUSA BATARSEH",
+      "y": 1175,
+      "sel": "div.wrap > div.foot > div.who:nth-of-type(1) > h3"
+    }
+  ],
+  "items": [
+    {
+      "tag": "a",
+      "text": "MOUSA·BATARSEH",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "index.html",
+      "sel": "body > header.mast > div.row > a.mark",
+      "x": 182,
+      "y": 12,
+      "w": 140,
+      "h": 29
+    },
+    {
+      "tag": "a",
+      "text": "01OVERVIEW",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "index.html",
+      "sel": "body > nav.tabs > div.row > a:nth-of-type(1)",
+      "x": 182,
+      "y": 63,
+      "w": 117,
+      "h": 44
+    },
+    {
+      "tag": "a",
+      "text": "02FINDINGS",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "findings.html",
+      "sel": "body > nav.tabs > div.row > a:nth-of-type(2)",
+      "x": 307,
+      "y": 63,
+      "w": 110,
+      "h": 44
+    },
+    {
+      "tag": "a",
+      "text": "03PRE-FLIGHT",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "preflight.html",
+      "sel": "body > nav.tabs > div.row > a:nth-of-type(3)",
+      "x": 425,
+      "y": 63,
+      "w": 124,
+      "h": 44
+    },
+    {
+      "tag": "a",
+      "text": "04PLAN",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "plan.html",
+      "sel": "body > nav.tabs > div.row > a:nth-of-type(4)",
+      "x": 557,
+      "y": 63,
+      "w": 83,
+      "h": 44
+    },
+    {
+      "tag": "a",
+      "text": "NEXT: FINDINGS →",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "findings.html",
+      "sel": "main > div.wrap > div.pagenav:nth-of-type(4) > a.next",
+      "x": 1115,
+      "y": 1012,
+      "w": 143,
+      "h": 45
+    },
+    {
+      "tag": "a",
+      "text": "mousabatarseh.com",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "https://mousabatarseh.com",
+      "sel": "div.wrap > div.foot > div.links:nth-of-type(2) > a:nth-of-type(1)",
+      "x": 996,
+      "y": 1157,
+      "w": 262,
+      "h": 42
+    },
+    {
+      "tag": "a",
+      "text": "linkedin.com/in/mousabatarseh",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "https://www.linkedin.com/in/mousabatarseh",
+      "sel": "div.wrap > div.foot > div.links:nth-of-type(2) > a:nth-of-type(2)",
+      "x": 996,
+      "y": 1206,
+      "w": 262,
+      "h": 42
+    },
+    {
+      "tag": "a",
+      "text": "hireme@mousabatarseh.com",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "mailto:hireme@mousabatarseh.com",
+      "sel": "div.wrap > div.foot > div.links:nth-of-type(2) > a:nth-of-type(3)",
+      "x": 996,
+      "y": 1256,
+      "w": 262,
+      "h": 42
+    }
+  ]
+}

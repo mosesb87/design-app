@@ -1,7 +1,7 @@
 {
   "slug": "monolayer",
   "url": "https://www.monolayer.dev/",
-  "probedAt": "2026-09-26T14:14:17.377Z",
+  "probedAt": "2026-09-26T14:30:54.287Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://www.monolayer.dev/",
@@ -75,8 +75,8 @@
       "viewports": 15.9
     },
     "perf": {
-      "fcpMs": 696,
-      "domContentLoadedMs": 808,
+      "fcpMs": 756,
+      "domContentLoadedMs": 841,
       "requests": 27,
       "transferKB": 141
     },
@@ -181,8 +181,8 @@
       "viewports": 13.5
     },
     "perf": {
-      "fcpMs": 336,
-      "domContentLoadedMs": 480,
+      "fcpMs": 300,
+      "domContentLoadedMs": 378,
       "requests": 25,
       "transferKB": 141
     },
@@ -286,8 +286,8 @@
       "viewports": 15.1
     },
     "perf": {
-      "fcpMs": 308,
-      "domContentLoadedMs": 415,
+      "fcpMs": 616,
+      "domContentLoadedMs": 703,
       "requests": 27,
       "transferKB": 141
     },

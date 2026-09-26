@@ -1,12 +1,16 @@
 {
   "slug": "ddd-palermo",
   "url": "https://palermo.ddd.live/",
-  "probedAt": "2026-09-26T14:15:01.998Z",
+  "probedAt": "2026-09-26T14:31:32.206Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://palermo.ddd.live/",
     "gates": {
-      "actions": [],
+      "actions": [
+        "clicked \"Close\"",
+        "clicked \"Close\"",
+        "clicked \"Close\""
+      ],
       "blocking": [
         "div.c-gl",
         "div.c-noise"
@@ -50,9 +54,9 @@
       "svg": 3,
       "pinSpacers": 0,
       "sticky": 2,
-      "fixed": 4,
-      "links": 46,
-      "images": 57
+      "fixed": 7,
+      "links": 47,
+      "images": 70
     },
     "cursorHidden": false,
     "viewTransitions": false,
@@ -76,19 +80,15 @@
       "viewports": 15.2
     },
     "perf": {
-      "fcpMs": 3768,
-      "domContentLoadedMs": 1896,
-      "requests": 39,
-      "transferKB": 2342
+      "fcpMs": 3908,
+      "domContentLoadedMs": 2324,
+      "requests": 52,
+      "transferKB": 3074
     },
     "animationsNow": 119,
     "motion": {
-      "scrollDrivenElements": 81,
+      "scrollDrivenElements": 88,
       "samples": [
-        "span.o-logo__inner",
-        "span.o-logo__shape.o-logo__shape--1",
-        "span.o-logo__shape.o-logo__shape--2",
-        "span.o-logo__shape.o-logo__shape--3",
         "div.c-site-header__bg",
         "span.c-button__dots",
         "div.c-gallery-scroll__items",
@@ -96,7 +96,11 @@
         "div.c-gallery-scroll__item",
         "div.c-gallery-scroll__item",
         "div.c-gallery-scroll__item",
-        "span.c-button__dots"
+        "div.o-media__image.lazypreload",
+        "span.c-button__dots",
+        "span.c-button__dots",
+        "ul",
+        "ul"
       ],
       "pinnedCandidates": [
         "canvas"
@@ -182,19 +186,16 @@
       "viewports": 15.2
     },
     "perf": {
-      "fcpMs": 3988,
-      "domContentLoadedMs": 1229,
-      "requests": 38,
-      "transferKB": 2230
+      "fcpMs": 2768,
+      "domContentLoadedMs": 1204,
+      "requests": 39,
+      "transferKB": 2435
     },
     "animationsNow": 120,
     "motion": {
-      "scrollDrivenElements": 185,
+      "scrollDrivenElements": 111,
       "samples": [
         "span.o-logo__inner",
-        "span.o-logo__shape.o-logo__shape--1",
-        "span.o-logo__shape.o-logo__shape--2",
-        "span.o-logo__shape.o-logo__shape--3",
         "div.c-site-header__bg",
         "span.c-button__dots",
         "div.c-gallery-scroll__items",
@@ -202,7 +203,10 @@
         "div.o-media__image.lazypreload",
         "div.c-gallery-scroll__item",
         "div.c-gallery-scroll__item",
-        "div.c-gallery-scroll__item"
+        "div.c-gallery-scroll__item",
+        "span.c-button__dots",
+        "span.c-button__dots",
+        "ul"
       ],
       "pinnedCandidates": [
         "canvas"
@@ -264,7 +268,7 @@
       "sticky": 2,
       "fixed": 5,
       "links": 46,
-      "images": 56
+      "images": 57
     },
     "cursorHidden": false,
     "viewTransitions": false,
@@ -288,12 +292,12 @@
       "viewports": 14.9
     },
     "perf": {
-      "fcpMs": 1576,
-      "domContentLoadedMs": 1234,
-      "requests": 16,
-      "transferKB": 480
+      "fcpMs": 1460,
+      "domContentLoadedMs": 1161,
+      "requests": 19,
+      "transferKB": 503
     },
-    "animationsNow": 125,
+    "animationsNow": 126,
     "motion": null,
     "mobileNav": {
       "label": "Menu\n        Close",
