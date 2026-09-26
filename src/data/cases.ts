@@ -32,6 +32,7 @@ const M = 'https://mousabatarseh.com';
 const V1 = `${M}/`;
 const V2 = `${M}/v2`;
 const WORK = `${M}/v2/work/`;
+const WORKSITE = 'https://work.mousabatarseh.com';
 
 export const cases: CaseStudy[] = [
   // ─────────────────────────────── Systems
@@ -63,6 +64,7 @@ export const cases: CaseStudy[] = [
       { label: 'Platform', value: 'WordPress · Elementor' },
       { label: 'Search', value: 'English + Arabic' },
       { label: 'Output', value: 'Native Elementor .JSON' },
+      { label: 'Widgets', value: '37 Elementor core widget types, no add-ons' },
       { label: 'Live', value: 'asas.build' },
     ],
     metrics: [
@@ -90,7 +92,7 @@ export const cases: CaseStudy[] = [
       'One wrong column in an import can quietly wipe barcodes or alt text across a catalog. ChangeAtlas compares a Matrixify or WooCommerce export in the browser and classifies every change before the import runs, with the evidence behind each one.',
       'It never writes to a store and never uploads a file: the catalog stays on the machine that opened it.',
     ],
-    role: { text: 'Concept, rules, design and build', source: `${M}/changeatlas/` },
+    role: { text: 'Concept, rules, design and build', source: `${WORK}changeatlas/` },
     features: [
       { title: 'Every change classified', text: 'Seven delta classes — from created to unknown — so nothing is summarised away.' },
       { title: 'Evidence attached', text: 'Six evidence classes; absence is not treated as emptiness.' },
@@ -130,6 +132,7 @@ export const cases: CaseStudy[] = [
       'A deal sheet names one price and the register charges a second. The Deals Operating System reads each promotion as a single intake row and runs sixteen checks against the system of record, so a stale price or a broken margin is blocked before it reaches a menu — with the reason written in plain words and an owner named.',
       'The rules exist twice — once as a workbook, once as a JavaScript engine — and the two must reach the same verdicts, to the dollar.',
     ],
+    role: { text: 'Workbook, rule engine, walkthrough and films', source: `${WORK}deals-os/` },
     features: [
       { title: 'One intake row', text: 'Eleven mandatory fields describe a promotion completely.' },
       { title: 'Sixteen checks', text: 'Five groups; every check answers pass, warn, fail or not applicable.' },
@@ -167,19 +170,22 @@ export const cases: CaseStudy[] = [
     media: { hero: 'csv-mapper', video: 'csv-mapper', shows: 'Loading a sample sheet and mapping its columns', more: [{ slug: 'commerce-studio', label: 'Commerce Studio — the published edition' }] },
     intro: [
       'Supplier spreadsheets never match a store’s import format. CSV Mapper maps the columns, checks the result in layers, and keeps a record of every decision a reviewer makes — so the file that reaches the store is one somebody actually looked at.',
+      'Blockers can’t be overridden; a warning needs a written reason before it is accepted. Blank means unknown, not zero or false.',
     ],
+    role: { text: 'Concept, mapping rules, design and build', source: `${WORK}csv-mapper/` },
     features: [
-      { title: 'Many destinations', text: 'Import formats for Shopify and WooCommerce tooling, including Matrixify, WebToffee and WP All Import.' },
+      { title: 'Twelve destinations', text: 'Six Shopify import formats, including Matrixify, and six for WooCommerce, including WP All Import.' },
       { title: 'Four kinds of sheet', text: 'Products, categories, customers and deals.' },
-      { title: 'Checks in layers', text: 'Problems surface before the import, not after it.' },
+      { title: 'Four layers of checks', text: 'File and mapping, values and logic, relationships, destination and evidence — before the import, not after it.' },
       { title: 'Nothing uploaded', text: 'Files are read in the browser.' },
     ],
     spec: [
       { label: 'Runs', value: 'In the browser' },
       { label: 'Sheets', value: 'Products · categories · customers · deals' },
+      { label: 'Limits', value: '10 MB · 5,000 rows · 200 columns per file' },
       { label: 'Sample data', value: 'Fictional' },
     ],
-    disclaimer: 'Sample data is fictional. Not a certified integration.',
+    disclaimer: 'Sample data is fictional. Files stay in the browser; nothing is written to a store.',
     family: [{ title: 'Commerce Studio', url: 'https://commerce-studio.mousabb2.chatgpt.site/', note: 'The published edition of the same workspace.' }],
   },
   {
@@ -203,9 +209,10 @@ export const cases: CaseStudy[] = [
       ],
     },
     intro: [
-      '“We need a four-station Med-Surg lab for 24 students. Where do we start?” A buyer asks in their own words; a catalog answers in product language. The lab follows that one question through search, catalog data, QA, a developer ticket and the measurement that would prove the fix worked.',
+      '“We need a four-station Med-Surg lab for 24 nursing students. Where do we start?” A buyer asks in their own words; a catalog answers in product language. The lab follows that one question through search, catalog data, QA, a developer ticket and the measurement that would prove the fix worked.',
       'It was built for a Marketing and eCommerce Coordinator application, from public pages only, and every number in it is labelled for what it is: public, bounded, modeled or a hypothesis.',
     ],
+    role: { text: 'Research, workbook, QA, walkthrough — independent, not commissioned', source: `${WORK}diamedical-lab/` },
     features: [
       { title: 'Search', text: 'What the buyer typed, and what the catalog returned.' },
       { title: 'Data', text: 'The product records behind the answer, scored for completeness.' },
@@ -215,9 +222,11 @@ export const cases: CaseStudy[] = [
     spec: [
       { label: 'Built from', value: 'Public pages only' },
       { label: 'Evidence', value: 'Public · bounded · modeled · hypothesis' },
+      { label: 'Workbook', value: '13 sheets' },
+      { label: 'Sample', value: '65 public product records · 16 audited pages' },
       { label: 'Suite', value: 'Lab · academy · review · workbook · walkthrough' },
     ],
-    disclaimer: 'An independent case study built from public information. Not commissioned or endorsed by DiaMedical USA.',
+    disclaimer: 'Not commissioned, approved or endorsed by DiaMedical USA. Not a redesign of the store. Not a claim of measured business results.',
     family: [
       { title: 'DiaMedical Academy', url: `${M}/diamedical/academy/`, note: 'Guided learning experience.' },
       { title: 'Experience review', url: `${M}/diamedical-review/`, note: 'Evidence-backed website review.' },
@@ -242,13 +251,22 @@ export const cases: CaseStudy[] = [
     media: { hero: 'united-textile', mobile: 'united-textile', full: 'united-textile', video: 'united-textile' },
     intro: [
       'A retail theme doesn’t explain case packs or wholesale pricing. United Textile is a Shopify storefront built for buyers who reorder rather than browse: collections organised around how retailers restock, case pricing shown alongside the unit price, and product details written for someone buying by the case.',
+      'Retailers don’t browse a wholesale site the way consumers browse a gift shop — so the navigation, the collections and the delivery and payment terms are written for the person placing the reorder.',
+    ],
+    role: { text: 'UX, catalog, merchandising & SEO', source: `${WORKSITE}/united-textile-wholesale/` },
+    features: [
+      { title: 'Wholesale-first navigation', text: 'Collections organised around how retailers restock.' },
+      { title: 'Case-pack pricing', text: 'The case price with its unit price, worked out from the pack size.' },
+      { title: 'Delivery and payment terms', text: 'Free next-day local delivery over $1,000 and payment on delivery, said up front.' },
+      { title: 'Search-focused product content', text: 'Product pages written to be found, not only browsed.' },
     ],
     spec: [
       { label: 'Platform', value: 'Shopify' },
       { label: 'Audience', value: 'Wholesale (B2B) buyers' },
       { label: 'Pricing', value: 'Case price with unit price' },
     ],
-    related: [{ title: 'B2B Collections That Match How Retailers Actually Shop', url: 'https://mousabatarseh.com/blog' }],
+    metrics: [{ value: '~1,000', label: 'products migrated from an offline inventory system', source: `${WORKSITE}/resume/` }],
+    related: [{ title: 'Shopify or WooCommerce: The Questions That Actually Decide It', url: `${WORKSITE}/shopify-or-woocommerce-decision/` }],
   },
   {
     slug: 'universal-wholesale',
@@ -264,13 +282,27 @@ export const cases: CaseStudy[] = [
     media: { hero: 'universal-wholesale', mobile: 'universal-wholesale', full: 'universal-wholesale', video: 'universal-wholesale' },
     intro: [
       'A catalog migration is decided before a single row is imported. Fourteen thousand items were prepared through detailed record cleanup, field mapping, import planning, quality checks and data validation — the work that decides whether a new store opens with a clean catalog or a messy one.',
+      'The import button is the least interesting part of a catalog migration. Four answers per field, across forty fields, is 160 decisions — and deciding them once, as policy, turns fourteen thousand “should we keep this?” questions into one decision and a short review.',
+    ],
+    role: { text: 'Catalog migration, QA & operations', source: `${WORKSITE}/universal-wholesale/` },
+    features: [
+      { title: 'SKU architecture', text: 'One scheme that had to hold across fourteen thousand items.' },
+      { title: 'Cleanup & normalisation', text: 'Naming, categories, packaging, pricing fields and image coverage made consistent.' },
+      { title: 'Reviewable batches', text: 'The migration ran as a controlled workflow, in batches that could be reviewed.' },
+      { title: 'Exceptions managed', text: 'Missing images, duplicates, pricing anomalies and mapping issues handled as exceptions, not surprises.' },
     ],
     spec: [
       { label: 'Catalog', value: '14,000 items' },
       { label: 'Work', value: 'Cleanup · field mapping · import planning · QA · validation' },
     ],
-    metrics: [{ value: '14,000', label: 'catalog items prepared for migration', source: V1 }],
-    related: [{ title: 'Field Mapping Is the Whole Migration', url: 'https://work.mousabatarseh.com/product-catalog-migration-field-mapping/' }],
+    metrics: [
+      { value: '14,000', label: 'catalog items prepared for migration', source: V1 },
+      { value: '11,000+', label: 'active items in the catalog', source: `${WORKSITE}/universal-wholesale/` },
+    ],
+    related: [
+      { title: 'Field Mapping Is the Whole Migration', url: `${WORKSITE}/product-catalog-migration-field-mapping/` },
+      { title: 'The SKU Is a Decision, Not a Label', url: `${WORKSITE}/sku-structure-product-catalog/` },
+    ],
   },
   {
     slug: 'firefly-burgers',
@@ -286,13 +318,15 @@ export const cases: CaseStudy[] = [
     media: { hero: 'firefly-burgers', mobile: 'firefly-burgers', full: 'firefly-burgers', video: 'firefly-burgers' },
     intro: [
       'Nobody sits at a desktop to find a burger special. Firefly Burgers was built mobile-first: the menu, hours, location and branding had to hold up for someone already in the parking lot.',
+      'For a menu, mobile isn’t a breakpoint — it’s the primary use case: someone standing outside deciding whether to come in. And a menu page is a maintenance problem before it is a design problem, so it was built for the people who update it.',
     ],
+    role: { text: 'I built Firefly Burgers MI as a mobile-first WordPress site: menu, hours, location, and branding', source: 'https://mousabatarseh.com/blog/' },
     spec: [
       { label: 'Platform', value: 'WordPress · Elementor' },
       { label: 'Priority', value: 'Mobile first' },
-      { label: 'Location', value: 'Michigan' },
+      { label: 'Location', value: 'Sterling Heights, Michigan' },
     ],
-    related: [{ title: 'Restaurant Websites That Work on a Phone: Firefly Burgers', url: 'https://mousabatarseh.com/blog' }],
+    related: [{ title: 'Building a Menu Page the Client Can Actually Update', url: `${WORKSITE}/client-editable-restaurant-menu-wordpress/` }],
   },
   {
     slug: 'eat-with-samar',
@@ -327,18 +361,21 @@ export const cases: CaseStudy[] = [
     languages: ['English'],
     media: { hero: 'great-lakes-cigar-festival', mobile: 'great-lakes-cigar-festival', full: 'great-lakes-cigar-festival', video: 'great-lakes-cigar-festival' },
     intro: [
-      'An event site has to hold tickets, vendors, schedules and sponsors without turning into a PDF. The festival hub was built in WordPress, then measured in Google Analytics 4 through the festival month to see whether people actually used it.',
+      'An event site has to hold tickets, vendors, schedules and sponsors without turning into a PDF. The festival hub was built in WordPress for the July 26, 2025 festival in Pontiac, Michigan, then measured in Google Analytics 4 through the festival month to see whether people actually used it.',
+      'Different people arrive with different questions: attendees compare ticket tiers, vendors and sponsors weigh taking part, first-timers need confidence in the venue and schedule. The launch was a team effort; the site was mine to build and run.',
     ],
+    role: { text: 'Strategy, UX, build, content & analytics', source: `${WORKSITE}/great-lakes-cigar-festival/` },
     spec: [
       { label: 'Platform', value: 'WordPress · Elementor' },
       { label: 'Holds', value: 'Tickets · schedule · sponsors · vendors' },
       { label: 'Measured with', value: 'Google Analytics 4' },
+      { label: 'Presented', value: '4 ticket experiences · 50+ vendors' },
     ],
     metrics: [
       { value: '287', label: 'users in GA4, July 4–31, 2025', source: V1, note: 'Date corrected to 2025 with Mousa' },
       { value: '1,954', label: 'events in GA4, July 4–31, 2025', source: V1, note: 'Date corrected to 2025 with Mousa' },
     ],
-    related: [{ title: 'Building a WordPress Event Website People Actually Use', url: 'https://mousabatarseh.com/blog' }],
+    related: [{ title: 'Eleven Steps, and the Three Where Projects Actually Fail', url: `${WORKSITE}/web-project-workflow-failure-points/` }],
   },
   {
     slug: 'ptee',

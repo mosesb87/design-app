@@ -415,6 +415,10 @@ const jsonLd = [
     .layer--surface { transform: translateZ(300px); }
     .layer__tag { font-size: 10px; }
     .features { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    /* Titles that wrap to two lines keep every description on one shared line. */
+    @supports (grid-template-rows: subgrid) {
+      .feature { grid-row: span 3; grid-template-rows: subgrid; row-gap: 6px; align-content: start; }
+    }
     .case__read-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
     .case__read-head { grid-column: 1 / span 3; position: sticky; top: calc(var(--nav-h) + 24px); }
     .sframe-fig--desk { grid-column: 4 / span 6; }
