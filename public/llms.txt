@@ -6,8 +6,8 @@
 - [Home](https://mousabatarseh.com/): who he is, how he thinks (sheet / register / shelf), selected sites and stores, the tools he built, independent reviews.
 - [All the work](https://mousabatarseh.com/work/): the complete archive — tools, case studies, websites, stores, reviews and proposals, each linked to its case study or live site.
 - [About](https://mousabatarseh.com/about/): method, services, skills, tools, courses.
-- [Reviews](https://mousabatarseh.com/reviews/): independent website reviews; every finding dated and sourced.
-- [Notes](https://mousabatarseh.com/blog): articles on catalogs, migrations, SEO and store operations.
+- [Reviews](https://mousabatarseh.com/reviews/): 22 independent reviews of live stores and websites, each on its own page — the headline number, three findings, and the full review; every finding dated, public pages only.
+- [Blog](https://mousabatarseh.com/blog/): articles on catalogs, migrations, product data, SEO and store operations, each on its own page.
 
 ## Contact
 - Email: hireme@mousabatarseh.com
