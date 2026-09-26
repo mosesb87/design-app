@@ -1,0 +1,1882 @@
+{
+  "url": "https://mousabatarseh.com/reviews/index.html",
+  "title": "Website Reviews · Mousa Batarseh",
+  "description": "22 independent website reviews and 58 builds by Mousa Batarseh: pricing, promotions, catalog data, SEO and AI search, each built from dated public evidence.",
+  "ogImage": "https://mousabatarseh.com/reviews/og.jpg",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "h1",
+      "text": "Independent website reviews,\nbuilt from live evidence"
+    },
+    {
+      "t": "p",
+      "text": "I read a company’s website the way a shopper, a crawler and an AI answer engine do. Then I date every finding and build the fix."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn light",
+      "text": "See the builds"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/petsafe-700.webp",
+      "alt": "",
+      "w": 547,
+      "h": 855,
+      "caption": "PetSafe\nDTC ops & insights review",
+      "file": "04d45e26aa65b0e8.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/highprofile-700.webp",
+      "alt": "",
+      "w": 547,
+      "h": 855,
+      "caption": "High Profile\nPromo readiness review",
+      "file": "755ddfb7d7b8bcbe.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/jars-700.webp",
+      "alt": "",
+      "w": 547,
+      "h": 855,
+      "caption": "JARS\nCatalog & store data review",
+      "file": "29b5061f37044c0a.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/lume-700.webp",
+      "alt": "",
+      "w": 547,
+      "h": 855,
+      "caption": "Lume\nPromotion rollout review",
+      "file": "68f90c4bb896f516.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/dutchie-700.webp",
+      "alt": "",
+      "w": 547,
+      "h": 855,
+      "caption": "Dutchie\nLaunch readiness review",
+      "file": "4afaecd06f340d25.webp"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "22"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "independent reviews"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "58"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "builds in the index"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "2,339"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "products checked by script"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "100%"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "of findings dated and sourced"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "logins used. Public pages only"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Read it"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Date it"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Build the fix"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Public pages only"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Evidence over opinion"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Read it"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Date it"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Build the fix"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Public pages only"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Evidence over opinion"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Read it"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Date it"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Build the fix"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Public pages only"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Evidence over opinion"
+    },
+    {
+      "t": "p",
+      "text": "Sites reviewed so far"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Featured"
+    },
+    {
+      "t": "h2",
+      "text": "Ten reviews,\nten different problems"
+    },
+    {
+      "t": "p",
+      "text": "Keep scrolling. Each one leads with the number that explains the rest."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/petsafe.webp",
+      "alt": "PetSafe review",
+      "w": 1100,
+      "h": 1719,
+      "file": "07190598d22888e9.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "01 / 10"
+    },
+    {
+      "t": "p",
+      "text": "JSON-LD blocks on the homepage"
+    },
+    {
+      "t": "h3",
+      "text": "PetSafe · DTC ops & insights review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/highprofile.webp",
+      "alt": "High Profile review",
+      "w": 1100,
+      "h": 1719,
+      "file": "02fb3ebb15402847.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "02 / 10"
+    },
+    {
+      "t": "p",
+      "text": "state deals pages still running an expired contest"
+    },
+    {
+      "t": "h3",
+      "text": "High Profile · Promo readiness review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/jars.webp",
+      "alt": "JARS review",
+      "w": 1100,
+      "h": 1719,
+      "file": "e4473623811b3288.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "03 / 10"
+    },
+    {
+      "t": "p",
+      "text": "prices for the same cartridge bundle"
+    },
+    {
+      "t": "h3",
+      "text": "JARS · Catalog & store data review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/lume.webp",
+      "alt": "Lume review",
+      "w": 1100,
+      "h": 1719,
+      "file": "577f663b66d81b53.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "04 / 10"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "25"
+    },
+    {
+      "t": "p",
+      "text": "configured on a deal sold as 20% off"
+    },
+    {
+      "t": "h3",
+      "text": "Lume · Promotion rollout review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/vanguard.webp",
+      "alt": "Vanguard review",
+      "w": 1100,
+      "h": 1719,
+      "file": "1aa234b88ad23e05.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "05 / 10"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "443"
+    },
+    {
+      "t": "p",
+      "text": "products carrying one template’s three defects"
+    },
+    {
+      "t": "h3",
+      "text": "Vanguard · Product-template review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/jbtools.webp",
+      "alt": "JB Tools review",
+      "w": 1100,
+      "h": 1719,
+      "file": "9cb133f4a1fdaa5e.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "06 / 10"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "34"
+    },
+    {
+      "t": "p",
+      "text": "of torque wrenches out of stock, one ranked #3"
+    },
+    {
+      "t": "h3",
+      "text": "JB Tools · Product-data review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/salt.webp",
+      "alt": "Salt Security review",
+      "w": 1100,
+      "h": 1719,
+      "file": "bd983c15aaef11fd.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "07 / 10"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "57"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "/60"
+    },
+    {
+      "t": "p",
+      "text": "pages without any JSON-LD"
+    },
+    {
+      "t": "h3",
+      "text": "Salt Security · AEO & structured-data review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/dunhams.webp",
+      "alt": "Dunham’s review",
+      "w": 1100,
+      "h": 1719,
+      "file": "deb778f23d0dd99b.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "08 / 10"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "275"
+    },
+    {
+      "t": "p",
+      "text": "stores with no indexable page"
+    },
+    {
+      "t": "h3",
+      "text": "Dunham’s · SEO review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/hayhouse.webp",
+      "alt": "Hay House review",
+      "w": 1100,
+      "h": 1719,
+      "file": "580561ac53121a95.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "09 / 10"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "874"
+    },
+    {
+      "t": "p",
+      "text": "products checked, plus a price check against hayhouse.com"
+    },
+    {
+      "t": "h3",
+      "text": "Hay House · Week 0 storefront report"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/carhartt.webp",
+      "alt": "Carhartt review",
+      "w": 1100,
+      "h": 1719,
+      "file": "829b7324cc546e3c.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "10 / 10"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "13"
+    },
+    {
+      "t": "p",
+      "text": "findings with captured evidence"
+    },
+    {
+      "t": "h3",
+      "text": "Carhartt · Digital shelf review"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "+12"
+    },
+    {
+      "t": "h3",
+      "text": "See every review"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Focus areas"
+    },
+    {
+      "t": "h2",
+      "text": "Five kinds of problems\nthat cost real money"
+    },
+    {
+      "t": "p",
+      "text": "Every review falls into at least one. Each area has its own color across the site."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "04"
+    },
+    {
+      "t": "h3",
+      "text": "Cannabis"
+    },
+    {
+      "t": "p",
+      "text": "Promotions, bundles and store data for multi-state dispensary brands."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/lume.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "feeb9819181f8778.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "12"
+    },
+    {
+      "t": "h3",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "p",
+      "text": "Product pages, offers, catalogs and the data under a storefront."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/petsafe.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "168103e69183a993.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/oakwood.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "ef745f4a85f119bf.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "06"
+    },
+    {
+      "t": "h3",
+      "text": "SEO & AI search"
+    },
+    {
+      "t": "p",
+      "text": "Canonicals, sitemaps, schema and what answer engines can read."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/petsafe.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "168103e69183a993.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/salt.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7c83ee3f3558bb89.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/dunhams.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "311b83ab7e6dacb2.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "03"
+    },
+    {
+      "t": "h3",
+      "text": "Launch readiness"
+    },
+    {
+      "t": "p",
+      "text": "Go-live gates, staging leaks and pre-flight checks before a relaunch."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/dutchie.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "5a744bb80d87ce88.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/biotrust.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "925f0c21ff0e8cbc.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/aedit.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "f8b445d1f7639411.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "06"
+    },
+    {
+      "t": "h3",
+      "text": "Catalog & listings"
+    },
+    {
+      "t": "p",
+      "text": "Feeds, titles, identifiers and marketplace listings at scale."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jbtools.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7527d28696c502a2.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "How I review"
+    },
+    {
+      "t": "h2",
+      "text": "Four steps,\nevery single time"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "01"
+    },
+    {
+      "t": "h3",
+      "text": "Read it like a machine"
+    },
+    {
+      "t": "p",
+      "text": "Sitemap, robots, canonicals, schema and prices, straight from the public HTML."
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "curl -s /sitemap.xml"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "grep -c ld+json"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "189 URLs · 44 redirects"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "02"
+    },
+    {
+      "t": "h3",
+      "text": "Date every claim"
+    },
+    {
+      "t": "p",
+      "text": "Every finding carries its date, URL and the check behind it."
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "observed 2026-09-20"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "curl -I /llms.txt → 404"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "[E3] 15-word template"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "03"
+    },
+    {
+      "t": "h3",
+      "text": "Build the fix"
+    },
+    {
+      "t": "p",
+      "text": "A scanner, a template or a working browser a team can use on Monday."
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "title-linter.js · 59 listings"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "store-page generator"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "species atlas"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "04"
+    },
+    {
+      "t": "h3",
+      "text": "Sequence the work"
+    },
+    {
+      "t": "p",
+      "text": "Template fixes first, because one change fixes hundreds of pages."
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "week 1 · template"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "weeks 2–3 · channels"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "week 4 · speed"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Latest"
+    },
+    {
+      "t": "h2",
+      "text": "Fresh off\nthe crawl"
+    },
+    {
+      "t": "p",
+      "text": "All 22 reviews"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/reworked-400.webp",
+      "alt": "Carhartt Reworked review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "f88b97ef2711130f.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "reworked.carhartt.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 25, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "1,446"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "/3,545"
+    },
+    {
+      "t": "p",
+      "text": "published listings with nothing left to buy"
+    },
+    {
+      "t": "h3",
+      "text": "Carhartt Reworked · Recommerce merchandising review"
+    },
+    {
+      "t": "p",
+      "text": "Six gift collections live and empty nine weeks before Black Friday, the fall-layers tag split across two spellings, the biggest sizes behind “See More,” and NewCondition schema on used gear — with four working fixes built on the day's catalog."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "reworked.carhartt.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/bran-400.webp",
+      "alt": "Bran Marketing review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "fa2d73d124c9e162.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "getbran.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "SEO & AI search"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 22, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "17"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "/22"
+    },
+    {
+      "t": "p",
+      "text": "sitemap pages with no JSON-LD"
+    },
+    {
+      "t": "h3",
+      "text": "Bran Marketing · Web & SEO department review"
+    },
+    {
+      "t": "p",
+      "text": "The page that sells SEO carries no JSON-LD, all six team pages still hold Wix placeholder copy, and the case-study build ships no meta layer — with a filterable line card built as the fix."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "getbran.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/petsafe-400.webp",
+      "alt": "PetSafe review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "5312f67bdb411c09.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "petsafe.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 20, 2026"
+    },
+    {
+      "t": "p",
+      "text": "JSON-LD blocks on the homepage"
+    },
+    {
+      "t": "h3",
+      "text": "PetSafe · DTC ops & insights review"
+    },
+    {
+      "t": "p",
+      "text": "The stack is right, the signals aren’t: /sitemap.xml returns homepage HTML, llms.txt is missing, and every product page ships the same 15-word meta description."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "petsafe.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile-400.webp",
+      "alt": "High Profile review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "7634de320c321602.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "highprofilecannabis.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Cannabis"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 20, 2026"
+    },
+    {
+      "t": "p",
+      "text": "state deals pages still running an expired contest"
+    },
+    {
+      "t": "h3",
+      "text": "High Profile · Promo readiness review"
+    },
+    {
+      "t": "p",
+      "text": "An expired Labor Day contest live on all seven state deals pages, and a Connecticut drawing date set before the contest starts."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "highprofilecannabis.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars-400.webp",
+      "alt": "JARS review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "cb371311a4e2c331.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "jarscannabis.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Cannabis"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 20, 2026"
+    },
+    {
+      "t": "p",
+      "text": "prices for the same cartridge bundle"
+    },
+    {
+      "t": "h3",
+      "text": "JARS · Catalog & store data review"
+    },
+    {
+      "t": "p",
+      "text": "A volume ladder where buying more costs more, Poison Control listed as customer service, and store records that disagree with their own pages."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "jarscannabis.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/lume-400.webp",
+      "alt": "Lume review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "a6b40652e69f7db5.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "lume.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Cannabis"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "25"
+    },
+    {
+      "t": "p",
+      "text": "configured on a deal sold as 20% off"
+    },
+    {
+      "t": "h3",
+      "text": "Lume · Promotion rollout review"
+    },
+    {
+      "t": "p",
+      "text": "Overlapping bundles priced above singles, and hero prices that don’t match their landing pages."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "lume.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/dutchie-400.webp",
+      "alt": "Dutchie review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "cd8bb522584a540d.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "dutchie.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Cannabis"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "97"
+    },
+    {
+      "t": "p",
+      "text": "days of Consumer AI with no help articles"
+    },
+    {
+      "t": "h3",
+      "text": "Dutchie · Launch readiness review"
+    },
+    {
+      "t": "p",
+      "text": "A shipped feature still marked ‘Coming soon’ in the help center, checked against every public launch surface."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "dutchie.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/salt-400.webp",
+      "alt": "Salt Security review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "9af0839a9777f62f.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "salt.security"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "SEO & AI search"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "57"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "/60"
+    },
+    {
+      "t": "p",
+      "text": "pages without any JSON-LD"
+    },
+    {
+      "t": "h3",
+      "text": "Salt Security · AEO & structured-data review"
+    },
+    {
+      "t": "p",
+      "text": "No FAQPage markup, llms.txt returns 404, and 720 disallowed sitemap URLs, with the markup to fix it."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "salt.security"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard-400.webp",
+      "alt": "Vanguard review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "8aa6f4e2a2d5e204.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "vanguardworld.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "437"
+    },
+    {
+      "t": "p",
+      "text": "products carrying one template’s three defects"
+    },
+    {
+      "t": "h3",
+      "text": "Vanguard · Product-template review"
+    },
+    {
+      "t": "p",
+      "text": "Fix one template, fix 443 products. There are also no links to the marketplace listings."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "vanguardworld.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/oakwood-400.webp",
+      "alt": "Oakwood Veneer review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "0b7a4c947a98e008.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "oakwoodveneer.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "6.5"
+    },
+    {
+      "t": "p",
+      "text": "mobile LCP on a 300+ species catalog"
+    },
+    {
+      "t": "h3",
+      "text": "Oakwood Veneer · Catalog & UX review"
+    },
+    {
+      "t": "p",
+      "text": "Three hundred species behind two filters, with a working species-faceted browser built as the fix."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "oakwoodveneer.com"
+    },
+    {
+      "t": "p",
+      "text": "Most website problems aren’t hidden. They’re on the live page, in the markup, in the price. Somebody just has to read it, date it, and fix the template that caused it."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Mousa Batarseh"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Web & e-commerce · Warren, MI"
+    },
+    {
+      "t": "h2",
+      "text": "Want one for\nyour site?"
+    },
+    {
+      "t": "p",
+      "text": "Send a URL. You’ll get the first findings back, dated and sourced."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn ghost",
+      "text": "hireme@mousabatarseh.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "t": "text",
+      "tag": "label",
+      "cls": "qsl1",
+      "text": "Start with your website"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Dated, sourced findings",
+        "One working fix, built for your site",
+        "Public pages only, no logins"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Browse the reviews",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html"
+    },
+    {
+      "text": "See the builds",
+      "href": "https://mousabatarseh.com/reviews/builds/index.html"
+    },
+    {
+      "text": "01 / 10\n0\n\nJSON-LD blocks on the homepage\n\nPetSafe · DTC ops & insights review",
+      "href": "https://mousabatarseh.com/reviews/reviews/petsafe/index.html"
+    },
+    {
+      "text": "02 / 10\n7\n\nstate deals pages still running an expired contest\n\nHigh Profile · Promo readiness review",
+      "href": "https://mousabatarseh.com/reviews/reviews/highprofile/index.html"
+    },
+    {
+      "text": "03 / 10\n2\n\nprices for the same cartridge bundle\n\nJARS · Catalog & store data review",
+      "href": "https://mousabatarseh.com/reviews/reviews/jars/index.html"
+    },
+    {
+      "text": "04 / 10\n25\n%\n\nconfigured on a deal sold as 20% off\n\nLume · Promotion rollout review",
+      "href": "https://mousabatarseh.com/reviews/reviews/lume/index.html"
+    },
+    {
+      "text": "05 / 10\n443\n\nproducts carrying one template’s three defects\n\nVanguard · Product-template review",
+      "href": "https://mousabatarseh.com/reviews/reviews/vanguard/index.html"
+    },
+    {
+      "text": "06 / 10\n34\n%\n\nof torque wrenches out of stock, one ranked #3\n\nJB Tools · Product-data review",
+      "href": "https://mousabatarseh.com/reviews/reviews/jbtools/index.html"
+    },
+    {
+      "text": "07 / 10\n57\n/60\n\npages without any JSON-LD\n\nSalt Security · AEO & structured-data review",
+      "href": "https://mousabatarseh.com/reviews/reviews/salt/index.html"
+    },
+    {
+      "text": "08 / 10\n275\n\nstores with no indexable page\n\nDunham’s · SEO review",
+      "href": "https://mousabatarseh.com/reviews/reviews/dunhams/index.html"
+    },
+    {
+      "text": "09 / 10\n874\n\nproducts checked, plus a price check against hayhouse.com\n\nHay House · Week 0 storefront report",
+      "href": "https://mousabatarseh.com/reviews/reviews/hayhouse/index.html"
+    },
+    {
+      "text": "10 / 10\n13\n\nfindings with captured evidence\n\nCarhartt · Digital shelf review",
+      "href": "https://mousabatarseh.com/reviews/reviews/carhartt/index.html"
+    },
+    {
+      "text": "+12\nSee every review",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html"
+    },
+    {
+      "text": "04\nCannabis\n\nPromotions, bundles and store data for multi-state dispensary brands.",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html?f=cannabis"
+    },
+    {
+      "text": "12\nE-commerce & DTC\n\nProduct pages, offers, catalogs and the data under a storefront.",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html?f=ecom"
+    },
+    {
+      "text": "06\nSEO & AI search\n\nCanonicals, sitemaps, schema and what answer engines can read.",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html?f=seo"
+    },
+    {
+      "text": "03\nLaunch readiness\n\nGo-live gates, staging leaks and pre-flight checks before a relaunch.",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html?f=launch"
+    },
+    {
+      "text": "06\nCatalog & listings\n\nFeeds, titles, identifiers and marketplace listings at scale.",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html?f=catalog"
+    },
+    {
+      "text": "The full method",
+      "href": "https://mousabatarseh.com/reviews/method/index.html"
+    },
+    {
+      "text": "All 22 reviews",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html"
+    },
+    {
+      "text": "reworked.carhartt.com\nE-commerce & DTC\nSep 25, 2026\n1,446\n/3,545\n\npublished listings with nothing left to buy\n\nCarhartt Reworked · Recommerc",
+      "href": "https://mousabatarseh.com/reviews/reviews/reworked/index.html"
+    },
+    {
+      "text": "getbran.com\nSEO & AI search\nSep 22, 2026\n17\n/22\n\nsitemap pages with no JSON-LD\n\nBran Marketing · Web & SEO department review\n\nThe page that ",
+      "href": "https://mousabatarseh.com/reviews/reviews/bran/index.html"
+    },
+    {
+      "text": "petsafe.com\nE-commerce & DTC\nSep 20, 2026\n0\n\nJSON-LD blocks on the homepage\n\nPetSafe · DTC ops & insights review\n\nThe stack is right, the si",
+      "href": "https://mousabatarseh.com/reviews/reviews/petsafe/index.html"
+    },
+    {
+      "text": "highprofilecannabis.com\nCannabis\nSep 20, 2026\n7\n\nstate deals pages still running an expired contest\n\nHigh Profile · Promo readiness review\n\n",
+      "href": "https://mousabatarseh.com/reviews/reviews/highprofile/index.html"
+    },
+    {
+      "text": "jarscannabis.com\nCannabis\nSep 20, 2026\n2\n\nprices for the same cartridge bundle\n\nJARS · Catalog & store data review\n\nA volume ladder where bu",
+      "href": "https://mousabatarseh.com/reviews/reviews/jars/index.html"
+    },
+    {
+      "text": "lume.com\nCannabis\nSep 20, 2026\n25\n%\n\nconfigured on a deal sold as 20% off\n\nLume · Promotion rollout review\n\nOverlapping bundles priced above",
+      "href": "https://mousabatarseh.com/reviews/reviews/lume/index.html"
+    },
+    {
+      "text": "dutchie.com\nCannabis\nSep 20, 2026\n97\n\ndays of Consumer AI with no help articles\n\nDutchie · Launch readiness review\n\nA shipped feature still ",
+      "href": "https://mousabatarseh.com/reviews/reviews/dutchie/index.html"
+    },
+    {
+      "text": "salt.security\nSEO & AI search\nSep 19, 2026\n57\n/60\n\npages without any JSON-LD\n\nSalt Security · AEO & structured-data review\n\nNo FAQPage marku",
+      "href": "https://mousabatarseh.com/reviews/reviews/salt/index.html"
+    },
+    {
+      "text": "vanguardworld.com\nE-commerce & DTC\nSep 19, 2026\n437\n\nproducts carrying one template’s three defects\n\nVanguard · Product-template review\n\nFix",
+      "href": "https://mousabatarseh.com/reviews/reviews/vanguard/index.html"
+    },
+    {
+      "text": "oakwoodveneer.com\nE-commerce & DTC\nSep 19, 2026\n6.5\ns\n\nmobile LCP on a 300+ species catalog\n\nOakwood Veneer · Catalog & UX review\n\nThree hun",
+      "href": "https://mousabatarseh.com/reviews/reviews/oakwood/index.html"
+    },
+    {
+      "text": "Request a review",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Review%20my%20site"
+    },
+    {
+      "text": "hireme@mousabatarseh.com",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Review%20my%20site"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/petsafe-700.webp",
+      "alt": "",
+      "w": 547,
+      "h": 855,
+      "file": "04d45e26aa65b0e8.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/highprofile-700.webp",
+      "alt": "",
+      "w": 547,
+      "h": 855,
+      "file": "755ddfb7d7b8bcbe.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/jars-700.webp",
+      "alt": "",
+      "w": 547,
+      "h": 855,
+      "file": "29b5061f37044c0a.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/lume-700.webp",
+      "alt": "",
+      "w": 547,
+      "h": 855,
+      "file": "68f90c4bb896f516.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/dutchie-700.webp",
+      "alt": "",
+      "w": 547,
+      "h": 855,
+      "file": "4afaecd06f340d25.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/petsafe.webp",
+      "alt": "PetSafe review",
+      "w": 1100,
+      "h": 1719,
+      "file": "07190598d22888e9.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/highprofile.webp",
+      "alt": "High Profile review",
+      "w": 1100,
+      "h": 1719,
+      "file": "02fb3ebb15402847.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/jars.webp",
+      "alt": "JARS review",
+      "w": 1100,
+      "h": 1719,
+      "file": "e4473623811b3288.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/lume.webp",
+      "alt": "Lume review",
+      "w": 1100,
+      "h": 1719,
+      "file": "577f663b66d81b53.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/vanguard.webp",
+      "alt": "Vanguard review",
+      "w": 1100,
+      "h": 1719,
+      "file": "1aa234b88ad23e05.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/jbtools.webp",
+      "alt": "JB Tools review",
+      "w": 1100,
+      "h": 1719,
+      "file": "9cb133f4a1fdaa5e.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/salt.webp",
+      "alt": "Salt Security review",
+      "w": 1100,
+      "h": 1719,
+      "file": "bd983c15aaef11fd.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/dunhams.webp",
+      "alt": "Dunham’s review",
+      "w": 1100,
+      "h": 1719,
+      "file": "deb778f23d0dd99b.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/hayhouse.webp",
+      "alt": "Hay House review",
+      "w": 1100,
+      "h": 1719,
+      "file": "580561ac53121a95.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/carhartt.webp",
+      "alt": "Carhartt review",
+      "w": 1100,
+      "h": 1719,
+      "file": "829b7324cc546e3c.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/lume.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "feeb9819181f8778.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/petsafe.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "168103e69183a993.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/oakwood.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "ef745f4a85f119bf.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/petsafe.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "168103e69183a993.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/salt.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7c83ee3f3558bb89.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/dunhams.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "311b83ab7e6dacb2.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/dutchie.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "5a744bb80d87ce88.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/biotrust.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "925f0c21ff0e8cbc.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/aedit.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "f8b445d1f7639411.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jbtools.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7527d28696c502a2.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/reworked-400.webp",
+      "alt": "Carhartt Reworked review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "f88b97ef2711130f.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/bran-400.webp",
+      "alt": "Bran Marketing review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "fa2d73d124c9e162.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/petsafe-400.webp",
+      "alt": "PetSafe review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "5312f67bdb411c09.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile-400.webp",
+      "alt": "High Profile review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "7634de320c321602.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars-400.webp",
+      "alt": "JARS review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "cb371311a4e2c331.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/lume-400.webp",
+      "alt": "Lume review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "a6b40652e69f7db5.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/dutchie-400.webp",
+      "alt": "Dutchie review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "cd8bb522584a540d.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/salt-400.webp",
+      "alt": "Salt Security review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "9af0839a9777f62f.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard-400.webp",
+      "alt": "Vanguard review, first screen",
+      "w": 345,
+      "h": 540
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/oakwood-400.webp",
+      "alt": "Oakwood Veneer review, first screen",
+      "w": 345,
+      "h": 540
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150
+    }
+  ],
+  "status": 200
+}

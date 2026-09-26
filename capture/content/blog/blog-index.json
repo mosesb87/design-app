@@ -1,0 +1,1402 @@
+{
+  "url": "https://mousabatarseh.com/blog/",
+  "title": "Blog | Mousa Batarseh, Webmaster",
+  "description": "Articles by Mousa Batarseh on running WordPress sites and e-commerce stores: product catalogs, WooCommerce and Shopify, SEO, speed, and web operations.",
+  "ogImage": "https://mousabatarseh.com/portfolio-home/social-preview-4c7b5bd03003.jpg",
+  "published": "2026-08-12",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "h1",
+      "text": "BLOG"
+    },
+    {
+      "t": "p",
+      "text": "Notes from running WordPress sites and e-commerce stores — catalogs, SEO, speed, and the boring habits that keep them working."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "project-count",
+      "text": "36"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/08/core-web-vitals-elementor-wordpress-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "WORDPRESS & WEB"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "AUG 12, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Core Web Vitals on a Page-Builder Site"
+    },
+    {
+      "t": "p",
+      "text": "A page builder does not make a site slow — it makes it easy to do four or five specific things that do, without warning you. The hero image trap, the three sources of layout shift, widget sprawl, and the caching settings that break templates."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/08/wordpress-event-website-tickets-vendors-analytics-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SEO · WEB OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "AUG 12, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Building a WordPress Event Website People Actually Use"
+    },
+    {
+      "t": "p",
+      "text": "The Great Lakes Cigar Festival site had to hold tickets, vendors, schedules, and sponsors without turning into a PDF. I built it in WordPress, then watched GA4 through July 2026 to see whether people actually used it."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/07/writing-product-descriptions-at-scale-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "CONTENT WRITING"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JUL 28, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Writing 400 Product Descriptions Without Losing the Plot"
+    },
+    {
+      "t": "p",
+      "text": "Treat 400 product descriptions as a writing job and you get forty good pages and a lot of filler. Treat it as an editorial system — tiers, structural templates, guardrails, and a handover — and the whole catalogue reads as though somebody cared."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/07/what-managing-metro-detroit-small-business-sites-taught-me-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PROCESS & OPERATIONS · WEB OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JUL 22, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "What Managing Metro Detroit Small Business Sites Taught Me"
+    },
+    {
+      "t": "p",
+      "text": "Restaurants, wholesalers, retail shops — a few years of managing sites for local businesses around Metro Detroit taught me things no tutorial covers."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/07/the-backup-habit-that-saved-a-clients-store-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PROCESS & OPERATIONS · WORDPRESS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JUL 11, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "The Backup Habit That Saved a Client’s Store"
+    },
+    {
+      "t": "p",
+      "text": "A plugin update took a store down on a Friday afternoon. Twenty minutes later it was back, because of a habit that costs almost nothing."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/07/ga4-small-store-measurement-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PROCESS & OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JUL 9, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "What GA4 Actually Tells You About a Small Store"
+    },
+    {
+      "t": "p",
+      "text": "On a few thousand sessions a month most of the GA4 interface is noise wearing a percentage sign. The four numbers worth tracking, the two Search Console reports that beat any dashboard, and the one-page monthly note I actually send."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/06/inventory-price-sync-drift-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "E-COMMERCE OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JUN 23, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Inventory and Price Sync: Where the Numbers Drift"
+    },
+    {
+      "t": "p",
+      "text": "Syncs between an ERP and a store are rarely broken — they drift. Timing windows, tiered schedules for fast movers, a one-page map of who owns each field, and the threshold alert that stops a bad feed from emptying the catalogue."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/06/restaurant-websites-that-work-on-a-phone-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "WEB OPERATIONS · WORDPRESS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JUN 12, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Restaurant Websites That Work on a Phone: Firefly Burgers"
+    },
+    {
+      "t": "p",
+      "text": "Nobody sits at a desktop to find a burger special. I built Firefly Burgers MI as a mobile-first WordPress site: menu, hours, location, and branding that still holds up when someone is already in the parking lot."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/06/product-images-at-catalog-scale-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PHOTOSHOP"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JUN 2, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Product Photography at Catalogue Scale"
+    },
+    {
+      "t": "p",
+      "text": "Image work on a large catalogue is a pipeline problem, not a design one. The four numbers to fix before opening a single file, why filenames belong to the SKU scheme, and the checks that catch inconsistency before the category grid does."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/05/product-photos-without-a-studio-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "E-COMMERCE OPERATIONS · PHOTOSHOP"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "MAY 23, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Product Photos Without a Studio: What Actually Works"
+    },
+    {
+      "t": "p",
+      "text": "No lightbox, no photographer, no budget. Most of the product photos I’ve published started as phone pictures. Here’s the process that makes them usable."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/05/product-filters-attributes-ecommerce-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "E-COMMERCE OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "MAY 14, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Filters Are the Real Search"
+    },
+    {
+      "t": "p",
+      "text": "On most stores the filter panel does the work the search box gets credit for — and it is a data problem, not a theme feature. Attribute coverage, controlled vocabularies, per-category filter sets, and the two failure states nobody designs."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/04/category-structure-large-catalog-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "E-COMMERCE OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "APR 28, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Category Trees That Don’t Collapse at 5,000 Products"
+    },
+    {
+      "t": "p",
+      "text": "Category structures do not break as a catalogue grows, they bloat — and the instinct to add more categories makes it worse. The rules I use for depth, size, naming, and planning a split before it becomes urgent."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/04/contact-forms-that-actually-reach-the-inbox-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "WEB OPERATIONS · WORDPRESS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "APR 25, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Contact Forms That Actually Reach the Inbox"
+    },
+    {
+      "t": "p",
+      "text": "The quietest way a website fails: the form works, the visitor hits send, and the message never arrives. Here’s how I make form email reliable."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/04/making-a-slow-wordpress-site-faster-without-a-rebuild-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "WEB OPERATIONS · WORDPRESS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "APR 13, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Making a Slow WordPress Site Faster Without a Rebuild"
+    },
+    {
+      "t": "p",
+      "text": "You don’t need a new site. Most slow WordPress sites have the same four or five problems, and none of them require starting over."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/04/shopify-or-woocommerce-decision-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "E-COMMERCE OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "APR 7, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Shopify or WooCommerce: The Questions That Actually Decide It"
+    },
+    {
+      "t": "p",
+      "text": "The platform comparison is almost never settled by features. Four questions about the business — who maintains it, how odd the pricing is, where product data comes from, and what else the site must do — settle it every time."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/03/redirect-mapping-ecommerce-migration-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SEO"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "MAR 19, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Redirects Are the Migration"
+    },
+    {
+      "t": "p",
+      "text": "On a replatforming project the redirect map is not a cleanup task at the end — it is the only artefact that carries the old site’s value across to the new one. Here is how I build one, and the verification pass most projects skip."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/03/keeping-store-inventory-in-sync-with-the-warehouse-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "E-COMMERCE OPERATIONS · PRODUCT DATA"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "MAR 4, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Keeping Store Inventory in Sync With the Warehouse"
+    },
+    {
+      "t": "p",
+      "text": "The website says in stock, the shelf says otherwise. Inventory sync is a boring problem that ruins customer trust fast. Here’s how I handle it."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/03/sku-structure-product-catalog-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PRODUCT DATA"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "MAR 3, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "The SKU Is a Decision, Not a Label"
+    },
+    {
+      "t": "p",
+      "text": "A SKU looks like a formality until the catalogue passes a few thousand items and nobody can tell which variants belong together. Here is the structure I use, the two identifiers people confuse, and the habits that quietly destroy a scheme."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/02/b2b-collections-that-match-how-retailers-shop-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "CATALOG DATA · SHOPIFY"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "FEB 24, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "B2B Collections That Match How Retailers Actually Shop"
+    },
+    {
+      "t": "p",
+      "text": "Retailers do not browse a wholesale site the way consumers browse a gift shop. I build Shopify and WooCommerce collections around restocking: season, use, pack, and the aisle in their own store — not around pretty campaign names."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/02/web-project-workflow-failure-points-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PROCESS & OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "FEB 13, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Eleven Steps, and the Three Where Projects Actually Fail"
+    },
+    {
+      "t": "p",
+      "text": "Every web project workflow lists roughly the same eleven steps. They are not equally risky. Three of them absorb almost all the pressure when a deadline moves, and what happens to those three determines whether the launch was a success or just an event."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/02/my-rules-before-installing-any-wordpress-plugin-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "WORDPRESS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "FEB 7, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "My Rules Before I Install Any WordPress Plugin"
+    },
+    {
+      "t": "p",
+      "text": "Every broken site I’ve rescued had the same thing in common: too many plugins, installed too casually. These are the rules I follow now."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/01/on-page-seo-large-product-catalog-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SEO"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JAN 27, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "On-Page SEO When You Have Thousands of Product Pages"
+    },
+    {
+      "t": "p",
+      "text": "Nobody hand-writes SEO for fourteen thousand products. The workable approach is to sort pages into three tiers — templated, written, and excluded — and spend real effort only where it changes anything. Here is how I decide the tiers and what goes into each."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/01/elementor-client-handoff-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "WORDPRESS & WEB"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JAN 8, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Elementor Builds That Survive the Handoff"
+    },
+    {
+      "t": "p",
+      "text": "A build is finished when someone who was not there can change it without breaking it. This covers what to standardise before the first page, what to leave behind at handover, and a simple six-month test for whether the structure held."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/01/cleaning-up-404s-and-redirects-after-a-site-migration-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SEO · WEB OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JAN 5, 2026"
+    },
+    {
+      "t": "h2",
+      "text": "Cleaning Up 404s and Redirects After a Site Migration"
+    },
+    {
+      "t": "p",
+      "text": "The migration is done, the new site is live, and traffic drops anyway. Nine times out of ten, the old URLs are hitting a wall. Here’s the cleanup."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/12/client-editable-restaurant-menu-wordpress-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "WORDPRESS & WEB"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "DEC 11, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "Building a Menu Page the Client Can Actually Update"
+    },
+    {
+      "t": "p",
+      "text": "A menu page is not a design problem, it is a maintenance problem. Three ways to structure one in WordPress, what each costs the client after launch, and the questions that decide which is right for a given restaurant."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/12/shopify-wholesale-store-case-packs-and-buyer-accounts-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "CATALOG DATA · SHOPIFY"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "DEC 9, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "Shopify Wholesale Store Setup: Case Packs, Hidden Pricing, and Buyer Accounts"
+    },
+    {
+      "t": "p",
+      "text": "A retail Shopify theme will not explain case packs or wholesale pricing. I built United Textile as a B2B storefront — hidden prices, registration, collections, and product content written for buyers who reorder, not browse for fun."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/11/writing-product-descriptions-when-the-supplier-gives-you-nothing-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "CONTENT WRITING · PRODUCT DATA"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "NOV 25, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "Writing Product Descriptions When the Supplier Gives You Nothing"
+    },
+    {
+      "t": "p",
+      "text": "A part number, a size, and maybe a blurry photo. That’s what you get. Here’s how I turn that into product pages that actually read like something."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/11/cleaning-product-data-csv-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PRODUCT DATA"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "NOV 24, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "Cleaning Product Data Before It Reaches the Store"
+    },
+    {
+      "t": "p",
+      "text": "A product CSV is not a transport format, it is the deliverable — and spreadsheets damage it in ways that stay invisible until import. Here is the prep sequence I run on supplier data, the validation column that replaces manual checking, and the point where a spreadsheet stops being the right tool."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/11/product-catalog-migration-field-mapping-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "E-COMMERCE OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "NOV 6, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "Field Mapping Is the Whole Migration"
+    },
+    {
+      "t": "p",
+      "text": "A catalog migration is decided before a single row is imported. This is the field-mapping method I use on large WooCommerce catalogs, the four decisions that have to be made per field, and the validation passes that catch problems while they are still cheap."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/11/three-search-console-reports-i-actually-open-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SEO"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "NOV 5, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "The Three Search Console Reports I Actually Open"
+    },
+    {
+      "t": "p",
+      "text": "Search Console has a dozen screens, and most people open none of them. These are the three I check on real client sites, and what I do with each."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/10/what-a-webmaster-actually-does-all-week-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PROCESS & OPERATIONS · WEB OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "OCT 13, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "What a Webmaster Actually Does All Week"
+    },
+    {
+      "t": "p",
+      "text": "People hear ‘webmaster’ and picture someone building websites all day. Most of the real work is smaller, quieter, and honestly more important."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/09/updating-hundreds-of-prices-without-breaking-the-store-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "E-COMMERCE OPERATIONS · PRODUCT DATA"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "SEP 16, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "Updating Hundreds of Prices Without Breaking the Store"
+    },
+    {
+      "t": "p",
+      "text": "Price updates sound simple until you’re doing four hundred of them at once. This is the process I use so nothing goes live wrong."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/08/woocommerce-csv-import-checklist-before-it-goes-live-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "CATALOG DATA · WOOCOMMERCE"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "AUG 25, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "What I Check Before a WooCommerce CSV Import Goes Live"
+    },
+    {
+      "t": "p",
+      "text": "A WooCommerce CSV import will publish whatever you give it, including the mistakes. This is the pre-import and post-import checklist I actually use on catalog migrations, from column mapping to duplicate SKUs and missing images."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/08/first-90-minutes-with-a-new-woocommerce-store-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "E-COMMERCE OPERATIONS · WOOCOMMERCE"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "AUG 10, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "The First 90 Minutes With a WooCommerce Store I’ve Never Seen"
+    },
+    {
+      "t": "p",
+      "text": "When a store owner hands me the keys, I don’t start fixing anything. I spend the first hour and a half just looking. Here’s exactly what I check and why."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/08/skus-variants-and-attributes-messy-product-data-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "CATALOG DATA · SHOPIFY"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "AUG 5, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "SKUs, Variants, and Attributes: Why Messy Product Data Costs Sales"
+    },
+    {
+      "t": "p",
+      "text": "If a buyer cannot tell which size, pack, or color they are ordering, they stop. I have watched that happen on wholesale catalogs more than once. Here is how I structure SKUs, variants, and attributes so the store matches how people actually buy."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/07/why-i-still-do-the-spreadsheet-work-myself-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "CATALOG DATA · WEB OPERATIONS"
+    },
+    {
+      "t": "text",
+      "tag": "time",
+      "cls": "",
+      "text": "JUL 25, 2025"
+    },
+    {
+      "t": "h2",
+      "text": "Why I Still Do the Spreadsheet Work Myself"
+    },
+    {
+      "t": "p",
+      "text": "Most catalog problems I get called about did not start in Shopify or WooCommerce. They started in a spreadsheet nobody wanted to sit with. Here is how I actually work through product data in Excel before anything hits a live store."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "end-line",
+      "text": "LET'S WORK"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "end-line",
+      "text": "TOGETHER!"
+    },
+    {
+      "t": "p",
+      "text": "I help brands turn ideas into high-performing digital experiences. Let's make something great together."
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "EMAIL ME"
+    },
+    {
+      "t": "text",
+      "tag": "strong",
+      "cls": "",
+      "text": "hireme@mousabatarseh.com"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "CONNECT ON LINKEDIN"
+    },
+    {
+      "t": "text",
+      "tag": "strong",
+      "cls": "",
+      "text": "linkedin.com/in/mousabatarseh"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "BASED IN"
+    },
+    {
+      "t": "text",
+      "tag": "strong",
+      "cls": "",
+      "text": "Warren, Michigan"
+    }
+  ],
+  "links": [
+    {
+      "text": "WORDPRESS & WEB\nAUG 12, 2026\nCore Web Vitals on a Page-Builder Site\n\nA page builder does not make a site slow — it makes it easy to do four ",
+      "href": "https://mousabatarseh.com/core-web-vitals-elementor-wordpress/"
+    },
+    {
+      "text": "SEO · WEB OPERATIONS\nAUG 12, 2026\nBuilding a WordPress Event Website People Actually Use\n\nThe Great Lakes Cigar Festival site had to hold ti",
+      "href": "https://mousabatarseh.com/wordpress-event-website-tickets-vendors-analytics/"
+    },
+    {
+      "text": "CONTENT WRITING\nJUL 28, 2026\nWriting 400 Product Descriptions Without Losing the Plot\n\nTreat 400 product descriptions as a writing job and y",
+      "href": "https://mousabatarseh.com/writing-product-descriptions-at-scale/"
+    },
+    {
+      "text": "PROCESS & OPERATIONS · WEB OPERATIONS\nJUL 22, 2026\nWhat Managing Metro Detroit Small Business Sites Taught Me\n\nRestaurants, wholesalers, ret",
+      "href": "https://mousabatarseh.com/what-managing-metro-detroit-small-business-sites-taught-me/"
+    },
+    {
+      "text": "PROCESS & OPERATIONS · WORDPRESS\nJUL 11, 2026\nThe Backup Habit That Saved a Client’s Store\n\nA plugin update took a store down on a Friday af",
+      "href": "https://mousabatarseh.com/the-backup-habit-that-saved-a-clients-store/"
+    },
+    {
+      "text": "PROCESS & OPERATIONS\nJUL 9, 2026\nWhat GA4 Actually Tells You About a Small Store\n\nOn a few thousand sessions a month most of the GA4 interfa",
+      "href": "https://mousabatarseh.com/ga4-small-store-measurement/"
+    },
+    {
+      "text": "E-COMMERCE OPERATIONS\nJUN 23, 2026\nInventory and Price Sync: Where the Numbers Drift\n\nSyncs between an ERP and a store are rarely broken — t",
+      "href": "https://mousabatarseh.com/inventory-price-sync-drift/"
+    },
+    {
+      "text": "WEB OPERATIONS · WORDPRESS\nJUN 12, 2026\nRestaurant Websites That Work on a Phone: Firefly Burgers\n\nNobody sits at a desktop to find a burger",
+      "href": "https://mousabatarseh.com/restaurant-websites-that-work-on-a-phone/"
+    },
+    {
+      "text": "PHOTOSHOP\nJUN 2, 2026\nProduct Photography at Catalogue Scale\n\nImage work on a large catalogue is a pipeline problem, not a design one. The f",
+      "href": "https://mousabatarseh.com/product-images-at-catalog-scale/"
+    },
+    {
+      "text": "E-COMMERCE OPERATIONS · PHOTOSHOP\nMAY 23, 2026\nProduct Photos Without a Studio: What Actually Works\n\nNo lightbox, no photographer, no budget",
+      "href": "https://mousabatarseh.com/product-photos-without-a-studio/"
+    },
+    {
+      "text": "E-COMMERCE OPERATIONS\nMAY 14, 2026\nFilters Are the Real Search\n\nOn most stores the filter panel does the work the search box gets credit for",
+      "href": "https://mousabatarseh.com/product-filters-attributes-ecommerce/"
+    },
+    {
+      "text": "E-COMMERCE OPERATIONS\nAPR 28, 2026\nCategory Trees That Don’t Collapse at 5,000 Products\n\nCategory structures do not break as a catalogue gro",
+      "href": "https://mousabatarseh.com/category-structure-large-catalog/"
+    },
+    {
+      "text": "WEB OPERATIONS · WORDPRESS\nAPR 25, 2026\nContact Forms That Actually Reach the Inbox\n\nThe quietest way a website fails: the form works, the v",
+      "href": "https://mousabatarseh.com/contact-forms-that-actually-reach-the-inbox/"
+    },
+    {
+      "text": "WEB OPERATIONS · WORDPRESS\nAPR 13, 2026\nMaking a Slow WordPress Site Faster Without a Rebuild\n\nYou don’t need a new site. Most slow WordPres",
+      "href": "https://mousabatarseh.com/making-a-slow-wordpress-site-faster-without-a-rebuild/"
+    },
+    {
+      "text": "E-COMMERCE OPERATIONS\nAPR 7, 2026\nShopify or WooCommerce: The Questions That Actually Decide It\n\nThe platform comparison is almost never set",
+      "href": "https://mousabatarseh.com/shopify-or-woocommerce-decision/"
+    },
+    {
+      "text": "SEO\nMAR 19, 2026\nRedirects Are the Migration\n\nOn a replatforming project the redirect map is not a cleanup task at the end — it is the only ",
+      "href": "https://mousabatarseh.com/redirect-mapping-ecommerce-migration/"
+    },
+    {
+      "text": "E-COMMERCE OPERATIONS · PRODUCT DATA\nMAR 4, 2026\nKeeping Store Inventory in Sync With the Warehouse\n\nThe website says in stock, the shelf sa",
+      "href": "https://mousabatarseh.com/keeping-store-inventory-in-sync-with-the-warehouse/"
+    },
+    {
+      "text": "PRODUCT DATA\nMAR 3, 2026\nThe SKU Is a Decision, Not a Label\n\nA SKU looks like a formality until the catalogue passes a few thousand items an",
+      "href": "https://mousabatarseh.com/sku-structure-product-catalog/"
+    },
+    {
+      "text": "CATALOG DATA · SHOPIFY\nFEB 24, 2026\nB2B Collections That Match How Retailers Actually Shop\n\nRetailers do not browse a wholesale site the way",
+      "href": "https://mousabatarseh.com/b2b-collections-that-match-how-retailers-shop/"
+    },
+    {
+      "text": "PROCESS & OPERATIONS\nFEB 13, 2026\nEleven Steps, and the Three Where Projects Actually Fail\n\nEvery web project workflow lists roughly the sam",
+      "href": "https://mousabatarseh.com/web-project-workflow-failure-points/"
+    },
+    {
+      "text": "WORDPRESS\nFEB 7, 2026\nMy Rules Before I Install Any WordPress Plugin\n\nEvery broken site I’ve rescued had the same thing in common: too many ",
+      "href": "https://mousabatarseh.com/my-rules-before-installing-any-wordpress-plugin/"
+    },
+    {
+      "text": "SEO\nJAN 27, 2026\nOn-Page SEO When You Have Thousands of Product Pages\n\nNobody hand-writes SEO for fourteen thousand products. The workable a",
+      "href": "https://mousabatarseh.com/on-page-seo-large-product-catalog/"
+    },
+    {
+      "text": "WORDPRESS & WEB\nJAN 8, 2026\nElementor Builds That Survive the Handoff\n\nA build is finished when someone who was not there can change it with",
+      "href": "https://mousabatarseh.com/elementor-client-handoff/"
+    },
+    {
+      "text": "SEO · WEB OPERATIONS\nJAN 5, 2026\nCleaning Up 404s and Redirects After a Site Migration\n\nThe migration is done, the new site is live, and tra",
+      "href": "https://mousabatarseh.com/cleaning-up-404s-and-redirects-after-a-site-migration/"
+    },
+    {
+      "text": "WORDPRESS & WEB\nDEC 11, 2025\nBuilding a Menu Page the Client Can Actually Update\n\nA menu page is not a design problem, it is a maintenance p",
+      "href": "https://mousabatarseh.com/client-editable-restaurant-menu-wordpress/"
+    },
+    {
+      "text": "CATALOG DATA · SHOPIFY\nDEC 9, 2025\nShopify Wholesale Store Setup: Case Packs, Hidden Pricing, and Buyer Accounts\n\nA retail Shopify theme wil",
+      "href": "https://mousabatarseh.com/shopify-wholesale-store-case-packs-and-buyer-accounts/"
+    },
+    {
+      "text": "CONTENT WRITING · PRODUCT DATA\nNOV 25, 2025\nWriting Product Descriptions When the Supplier Gives You Nothing\n\nA part number, a size, and may",
+      "href": "https://mousabatarseh.com/writing-product-descriptions-when-the-supplier-gives-you-nothing/"
+    },
+    {
+      "text": "PRODUCT DATA\nNOV 24, 2025\nCleaning Product Data Before It Reaches the Store\n\nA product CSV is not a transport format, it is the deliverable ",
+      "href": "https://mousabatarseh.com/cleaning-product-data-csv/"
+    },
+    {
+      "text": "E-COMMERCE OPERATIONS\nNOV 6, 2025\nField Mapping Is the Whole Migration\n\nA catalog migration is decided before a single row is imported. This",
+      "href": "https://mousabatarseh.com/product-catalog-migration-field-mapping/"
+    },
+    {
+      "text": "SEO\nNOV 5, 2025\nThe Three Search Console Reports I Actually Open\n\nSearch Console has a dozen screens, and most people open none of them. The",
+      "href": "https://mousabatarseh.com/three-search-console-reports-i-actually-open/"
+    },
+    {
+      "text": "PROCESS & OPERATIONS · WEB OPERATIONS\nOCT 13, 2025\nWhat a Webmaster Actually Does All Week\n\nPeople hear ‘webmaster’ and picture someone buil",
+      "href": "https://mousabatarseh.com/what-a-webmaster-actually-does-all-week/"
+    },
+    {
+      "text": "E-COMMERCE OPERATIONS · PRODUCT DATA\nSEP 16, 2025\nUpdating Hundreds of Prices Without Breaking the Store\n\nPrice updates sound simple until y",
+      "href": "https://mousabatarseh.com/updating-hundreds-of-prices-without-breaking-the-store/"
+    },
+    {
+      "text": "CATALOG DATA · WOOCOMMERCE\nAUG 25, 2025\nWhat I Check Before a WooCommerce CSV Import Goes Live\n\nA WooCommerce CSV import will publish whatev",
+      "href": "https://mousabatarseh.com/woocommerce-csv-import-checklist-before-it-goes-live/"
+    },
+    {
+      "text": "E-COMMERCE OPERATIONS · WOOCOMMERCE\nAUG 10, 2025\nThe First 90 Minutes With a WooCommerce Store I’ve Never Seen\n\nWhen a store owner hands me ",
+      "href": "https://mousabatarseh.com/first-90-minutes-with-a-new-woocommerce-store/"
+    },
+    {
+      "text": "CATALOG DATA · SHOPIFY\nAUG 5, 2025\nSKUs, Variants, and Attributes: Why Messy Product Data Costs Sales\n\nIf a buyer cannot tell which size, pa",
+      "href": "https://mousabatarseh.com/skus-variants-and-attributes-messy-product-data/"
+    },
+    {
+      "text": "CATALOG DATA · WEB OPERATIONS\nJUL 25, 2025\nWhy I Still Do the Spreadsheet Work Myself\n\nMost catalog problems I get called about did not star",
+      "href": "https://mousabatarseh.com/why-i-still-do-the-spreadsheet-work-myself/"
+    },
+    {
+      "text": "LET'S WORK\nTOGETHER!",
+      "href": "mailto:hireme@mousabatarseh.com"
+    },
+    {
+      "text": "EMAIL ME\nhireme@mousabatarseh.com",
+      "href": "mailto:hireme@mousabatarseh.com"
+    },
+    {
+      "text": "CONNECT ON LINKEDIN\nlinkedin.com/in/mousabatarseh",
+      "href": "https://www.linkedin.com/in/mousabatarseh/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/08/core-web-vitals-elementor-wordpress-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/08/wordpress-event-website-tickets-vendors-analytics-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/07/writing-product-descriptions-at-scale-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/07/what-managing-metro-detroit-small-business-sites-taught-me-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/07/the-backup-habit-that-saved-a-clients-store-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/07/ga4-small-store-measurement-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/06/inventory-price-sync-drift-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/06/restaurant-websites-that-work-on-a-phone-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/06/product-images-at-catalog-scale-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/05/product-photos-without-a-studio-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/05/product-filters-attributes-ecommerce-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/04/category-structure-large-catalog-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/04/contact-forms-that-actually-reach-the-inbox-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/04/making-a-slow-wordpress-site-faster-without-a-rebuild-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/04/shopify-or-woocommerce-decision-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/03/redirect-mapping-ecommerce-migration-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/03/keeping-store-inventory-in-sync-with-the-warehouse-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/03/sku-structure-product-catalog-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/02/b2b-collections-that-match-how-retailers-shop-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/02/web-project-workflow-failure-points-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/02/my-rules-before-installing-any-wordpress-plugin-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/01/on-page-seo-large-product-catalog-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/01/elementor-client-handoff-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2026/01/cleaning-up-404s-and-redirects-after-a-site-migration-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/12/client-editable-restaurant-menu-wordpress-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/12/shopify-wholesale-store-case-packs-and-buyer-accounts-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/11/writing-product-descriptions-when-the-supplier-gives-you-nothing-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/11/cleaning-product-data-csv-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/11/product-catalog-migration-field-mapping-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/11/three-search-console-reports-i-actually-open-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/10/what-a-webmaster-actually-does-all-week-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    },
+    {
+      "src": "https://mousabatarseh.com/wp-content/uploads/2025/09/updating-hundreds-of-prices-without-breaking-the-store-cover-1-1024x538.jpg",
+      "alt": "",
+      "w": 1024,
+      "h": 538
+    }
+  ],
+  "status": 200,
+  "cards": []
+}

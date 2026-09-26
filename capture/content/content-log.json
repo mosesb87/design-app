@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-09-26T19:39:18.308Z",
+  "steps": [
+    "WP https://work.mousabatarseh.com page 1/1: 16 posts",
+    "https://work.mousabatarseh.com: 16 posts from the REST API",
+    "WP https://mousabatarseh.com/blog/wp-json/wp/v2/posts?per_page=100&page=1&_embed=1 → 404",
+    "https://mousabatarseh.com/blog: 0 posts from the REST API",
+    "/blog/ → 200, 0 cards, 39 links",
+    "/reviews/ → 200, 7 review links",
+    "review reviews--reviews--index.html → 200, 210 blocks, 25 images",
+    "review reviews--index.html → 200, 249 blocks, 46 images",
+    "review reviews--reviews--index.html → 200, 46 blocks, 25 images",
+    "review reviews--reviews--index.html → 200, 120 blocks, 25 images",
+    "review reviews--reviews--index.html → 200, 67 blocks, 10 images",
+    "review reviews--reviews--index.html → 200, 40 blocks, 12 images",
+    "review reviews--reviews--index.html → 200, 66 blocks, 25 images"
+  ],
+  "finishedAt": "2026-09-26T19:41:15.899Z"
+}
