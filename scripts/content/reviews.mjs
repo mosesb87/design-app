@@ -67,7 +67,9 @@ const KEEP_INLINE = new Set(['a', 'strong', 'em', 'code', 'q', 'br', 'sup', 'sub
 const HEAD = { h1: 'h2', h2: 'h3', h3: 'h4', h4: 'h5', h5: 'h5', h6: 'h5' };
 
 function cls(el) { return (el.getAttribute?.('class') || '').toLowerCase(); }
-function isInlineNode(n) { return n.nodeType === 3 || (n.nodeType === 1 && INLINE.has(n.tagName.toLowerCase())); }
+// A link that wraps paragraphs or headings (a card) is a block: putting it inside a <p> would make browsers split it.
+const BLOCKS = 'p, h1, h2, h3, h4, h5, h6, ul, ol, dl, div, table, blockquote, figure, section, article, pre, hr';
+function isInlineNode(n) { return n.nodeType === 3 || (n.nodeType === 1 && INLINE.has(n.tagName.toLowerCase()) && !(n.tagName.toLowerCase() === 'a' && n.querySelector(BLOCKS))); }
 
 async function cleanSheet(html, ctx) {
   const doc = parse(`<div id="x">${html}</div>`, { comment: false });
