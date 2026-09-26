@@ -153,6 +153,7 @@
   --plate-b: var(--register-light);
   --plate-blend: screen;
   --focus: var(--night-ink);
+  --sheet-text: var(--sheet-light);
 }
 [data-ground='red'] {
   --bg: var(--sheet-ground);
@@ -163,4 +164,5 @@
   --plate-b: var(--ink);
   --plate-blend: normal;
   --focus: #fbf8f2;
+  --sheet-text: #fbe3dc;
 }

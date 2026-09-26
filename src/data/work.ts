@@ -19,7 +19,7 @@ export const statusLabel: Record<Status, string> = {
   login: 'Login required',
   adaptation: 'Fictional-company adaptation',
   independent: 'Independent — not commissioned',
-  unverified: 'Link being verified',
+  unverified: 'Host blocks automated checks',
 };
 
 export type Entry = {
@@ -41,7 +41,7 @@ const M = 'https://mousabatarseh.com';
 
 export const entries: Entry[] = [
   // ── Systems
-  { slug: 'asas-studio', title: 'ASAS Studio', category: 'systems', what: 'Elementor wireframe studio: real blocks, English and Arabic search, one colour system, native JSON export.', platform: 'WordPress · Elementor', languages: ['EN', 'AR'], url: 'https://asas.mousabatarseh.com/', status: 'live', caseStudy: 'asas-studio', media: 'asas' },
+  { slug: 'asas-studio', title: 'ASAS Studio', category: 'systems', what: 'Elementor wireframe studio: real blocks, English and Arabic search, one colour system, native JSON export.', platform: 'WordPress · Elementor', languages: ['EN', 'AR'], url: 'https://asas.build/', status: 'live', caseStudy: 'asas-studio', media: 'asas' },
   { slug: 'changeatlas', title: 'ChangeAtlas Commerce', category: 'systems', what: 'Shows what a catalog import will change before it runs.', platform: 'Browser tool', url: `${M}/changeatlas/`, status: 'live', caseStudy: 'changeatlas', media: 'changeatlas' },
   { slug: 'changeatlas-demo', title: 'ChangeAtlas review demo', category: 'systems', what: 'Interactive demo of the review workflow, processed locally in the browser.', platform: 'Browser tool', url: `${M}/changeatlas/app/`, status: 'live', family: 'changeatlas', media: 'changeatlas-app' },
   { slug: 'deals-os', title: 'The Deals Operating System', category: 'systems', what: 'Promotion QA: one intake row, sixteen checks, one verdict.', platform: 'Workbook · rule engine', url: `${M}/deals-os/`, status: 'live', caseStudy: 'deals-os', media: 'deals-os' },
@@ -71,19 +71,19 @@ export const entries: Entry[] = [
   { slug: 'ptee', title: 'PTEE', category: 'sites', what: 'Bilingual education platform: a courses website and a separate admissions platform.', languages: ['AR', 'EN'], url: 'https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/', status: 'live', caseStudy: 'ptee', media: 'ptee-renewal' },
   { slug: 'ptee-admissions', title: 'PTEE admissions portal', category: 'sites', what: 'Bilingual admissions and online-services portal.', languages: ['EN', 'AR'], url: 'https://ptee.moseswebworks.com/admissions/en', status: 'live', family: 'ptee', media: 'ptee-admissions' },
   { slug: 'btee', title: 'BTEE bilingual build', category: 'sites', what: 'Hosting-migration build of the PTEE redesign.', languages: ['AR'], url: 'https://btee.moseswebworks.com/ar/', status: 'live', family: 'ptee', media: 'btee-build' },
-  { slug: 'ptee-courses', title: 'PTEE courses & programs', category: 'sites', what: 'Bilingual course catalog.', languages: ['AR', 'EN'], url: 'https://ptee.moseswebworks.com/courses/ar', status: 'unverified', family: 'ptee', media: 'ptee-courses' },
+  { slug: 'ptee-courses', title: 'PTEE courses & programs', category: 'sites', what: 'Bilingual course catalog.', languages: ['AR', 'EN'], url: 'https://ptee.moseswebworks.com/courses/ar', status: 'live', family: 'ptee', media: 'ptee-courses' },
   { slug: 'ptee-org', title: 'PTEE — ptee.org', category: 'sites', what: 'The programme’s bilingual education website.', languages: ['AR'], url: 'https://ptee.org/', status: 'live', family: 'ptee', media: 'ptee-org' },
   { slug: 'ptee-online', title: 'PTEE company platform', category: 'sites', what: 'Education platform.', url: 'https://ptee.online/', status: 'login', family: 'ptee', media: 'ptee-online' },
   { slug: 'jabal-amman-publishers', title: 'Jabal Amman Publishers', category: 'sites', what: 'WooCommerce publishing house and bookstore.', platform: 'WooCommerce', languages: ['AR'], url: 'https://japublishers.com/', status: 'live', media: 'jabal-amman-publishers' },
   { slug: 'ophir-publishers', title: 'Ophir Publishers — Jordan', category: 'sites', what: 'WooCommerce publishing catalog.', platform: 'WooCommerce', languages: ['AR'], url: 'https://ophir.com.jo/', status: 'live', family: 'jabal-amman-publishers', media: 'ophir-publishers' },
-  { slug: 'mawtini-dabke', title: 'Mawtini Dabke Troupe', category: 'sites', what: 'Community organization website: services, performance galleries and a quote-request path.', platform: 'WordPress', languages: ['EN'], url: 'https://mawtinidabke.com/', status: 'live', media: 'mawtini-dabke' },
+  { slug: 'mawtini-dabke', title: 'Mawtini Dabke Troupe', category: 'sites', what: 'Community organization website: services, performance galleries and a quote-request path.', platform: 'WordPress', languages: ['EN'], url: 'https://mawtinidabke.com/', status: 'unverified', media: 'mawtini-dabke' },
   { slug: 'st-mary-berkley', title: 'St. Mary Church Berkley', category: 'sites', what: 'Church website: parish history, clergy, iconography, gallery and online donations.', platform: 'WordPress · Elementor', languages: ['EN'], url: 'https://stmaryberkley.org/', status: 'unverified', media: 'st-mary-berkley' },
   { slug: 'samona-hospitality', title: 'Samona Hospitality Group', category: 'sites', what: 'WordPress hospitality website.', platform: 'WordPress', languages: ['EN'], url: 'https://the-shg.com/', status: 'live', media: 'samona-hospitality' },
   { slug: 'larkspur-mobility', title: 'Larkspur Mobility', category: 'sites', what: 'WordPress website for a mobility service.', platform: 'WordPress', languages: ['EN'], url: `${M}/Larkspur/`, status: 'unverified', media: 'larkspur-mobility' },
   { slug: 'american-hot-wheel', title: 'American Hot Wheel', category: 'sites', what: 'WooCommerce storefront concept with a vehicle-first finder. Checkout disabled.', platform: 'WooCommerce', languages: ['EN'], url: 'https://interviewdemo.mousabatarseh.com/', status: 'demo', media: 'american-hot-wheel' },
   { slug: 'full-house-wholesale', title: 'Full House Wholesale', category: 'sites', what: 'B2B wholesale product catalog.', languages: ['EN'], url: 'https://www.fullhousewholesale.com/', status: 'login', media: 'full-house-wholesale' },
   { slug: 'wildbills-drivethru-menu', title: 'Wild Bill’s drive-thru menu', category: 'sites', what: 'WordPress digital catalog and menu.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/drivethru-menu/', status: 'live', media: 'wildbills-drivethru-menu' },
-  { slug: 'wildbills-disposables-menu', title: 'Mr. Vapor disposable menu', category: 'sites', what: 'WordPress product catalog and interactive menu.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/disposables-menu-2/', status: 'unverified', family: 'wildbills-drivethru-menu', media: 'wildbills-disposables-menu' },
+  { slug: 'wildbills-disposables-menu', title: 'Mr. Vapor disposable menu', category: 'sites', what: 'WordPress product catalog and interactive menu.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/disposables-menu-2/', status: 'live', family: 'wildbills-drivethru-menu', media: 'wildbills-disposables-menu' },
   { slug: 'wildbills-fathers-day', title: 'Father’s Day sales landing', category: 'sites', what: 'WordPress campaign landing page.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/fathers-day-specials/', status: 'live', family: 'wildbills-drivethru-menu', media: 'wildbills-fathers-day' },
   { slug: 'wildbills-christmas', title: 'Christmas sale landing', category: 'sites', what: 'WordPress holiday campaign landing page.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/christmas-sale-2024/', status: 'live', family: 'wildbills-drivethru-menu', media: 'wildbills-christmas' },
   { slug: 'wildbills-stpatrick', title: 'St. Patrick’s sales form', category: 'sites', what: 'WordPress campaign and sales form.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/stpatrick-form/', status: 'live', family: 'wildbills-drivethru-menu', media: 'wildbills-stpatrick' },
