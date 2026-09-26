@@ -150,27 +150,6 @@ a:hover { text-decoration-thickness: 2px; }
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--kicker-dot, var(--tomato)) 25%, transparent);
 }
 
-/* Registration type: three plates of the same text.
-   The ink text is the element itself; ::before (sheet) and ::after (register) are the offset plates. */
-.reg {
-  position: relative;
-  isolation: isolate;
-}
-.reg[data-text]::before,
-.reg[data-text]::after {
-  content: attr(data-text);
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  mix-blend-mode: var(--plate-blend);
-  white-space: inherit;
-  opacity: var(--plates, 0);
-  transition: opacity var(--d-small) var(--ease-drift);
-}
-.reg[data-text]::before { color: var(--plate-a); transform: translate3d(calc(var(--rx) - var(--s, 0px)), calc(var(--ry) - var(--s, 0px) * 0.5), 0); z-index: 1; }
-.reg[data-text]::after { color: var(--plate-b); transform: translate3d(calc(var(--bx) + var(--s, 0px)), calc(var(--by) + var(--s, 0px) * 0.5), 0); z-index: 1; }
-.reg.is-live { --plates: 1; }
-
 /* Buttons & links ──────────────────────────────────────────── */
 .btn {
   --btn-bg: var(--fg);

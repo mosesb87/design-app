@@ -15,9 +15,6 @@ Promise.all([
   mount('[data-check]', () => import('./motion/check')),
   mount('[data-pop-grid]', () => import('./motion/pop')),
   mount('[data-tilt]', () => import('./motion/tilt')),
-  mount('[data-opening]', () => import('./motion/opening')),
-  mount('[data-hero-press]', () => import('./motion/hero')),
-  mount('[data-thesis]', () => import('./motion/thesis')),
   mount('[data-exploded]', () => import('./motion/exploded')),
   mount('[data-rack]', () => import('./motion/rack')),
   mount('[data-loupe]', () => import('./motion/loupe')),
@@ -26,7 +23,6 @@ Promise.all([
   mount('[data-contact]', () => import('./motion/contact')),
   mount('[data-filter]', () => import('./motion/filter')),
   mount('[data-scrollframe]', () => import('./motion/scrollframe')),
-  mount('[data-parallax]', () => import('./motion/parallax')),
 ]).then(() => ScrollTrigger.refresh());
 
 document.fonts?.ready.then(() => ScrollTrigger.refresh());
