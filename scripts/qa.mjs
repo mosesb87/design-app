@@ -1,7 +1,7 @@
 // QA harness. For every page × viewport: scroll-sampled screenshots (forward + reverse), horizontal overflow,
 // console errors/warnings, failed requests, CLS, tap-target sizes, a keyboard focus pass and axe-core (WCAG 2.2 AA).
 // Also runs reduced-motion and touch passes. Writes qa/report.json and screenshots to qa/shots/.
-// Usage: node scripts/qa.mjs [--base=http://localhost:4321] [--pages=/,/work/] [--vps=desk,mob] [--no-shots] [--axe]
+// Usage: node scripts/qa.mjs [--base=http://localhost:4321] [--pages=/,/work/|all] [--vps=desk,mob] [--modes=motion,reduced] [--no-shots] [--axe] [--report=name.json]
 import fs from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright';
@@ -142,5 +142,6 @@ for (const vpKey of vps) {
   }
 }
 await browser.close();
-fs.writeFileSync(path.join(OUT, 'report.json'), JSON.stringify(report, null, 2));
-console.log(`\nReport: ${path.join(OUT, 'report.json')}`);
+const reportName = opt('report', 'report.json'); // --report=<name>.json lets several runs go in parallel
+fs.writeFileSync(path.join(OUT, reportName), JSON.stringify(report, null, 2));
+console.log(`\nReport: ${path.join(OUT, reportName)}`);
