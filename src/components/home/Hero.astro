@@ -1,7 +1,8 @@
 ---
 import Mark from '../Mark.astro';
 import { person, CHECKED } from '../../data/site';
-const proof = `Proof 01 · Warren, MI · Checked ${CHECKED}`;
+// Word joiners keep the date whole when the slug wraps on a narrow phone ("2026-09-" / "26" otherwise).
+const proof = `Proof 01 · Warren, MI · Checked ${CHECKED.replace(/-/g, '\u2060-\u2060')}`;
 ---
 <section class="hero" data-opening data-hero-press aria-labelledby="hero-title">
   <div class="hero__frame wrap">

@@ -33,6 +33,9 @@ export default function opening([hero]: HTMLElement[], env: Env) {
   }
   if (proof && fullText && !seen) {
     proof.setAttribute('aria-label', fullText);
+    // Hold the finished slug's height while it types, so a two-line slug on a phone never pushes the hero.
+    // (Set now, not in onStart: the tween's immediate render empties the slug as soon as it is created.)
+    proof.style.minHeight = `${proof.offsetHeight}px`;
     const counter = { n: 0 };
     tl.fromTo(counter, { n: 0 }, {
       n: fullText.length,
@@ -40,7 +43,7 @@ export default function opening([hero]: HTMLElement[], env: Env) {
       ease: 'none',
       onStart: () => { proof.textContent = ''; },
       onUpdate: () => { proof.textContent = fullText.slice(0, Math.round(counter.n)); },
-      onComplete: () => { proof.textContent = fullText; proof.removeAttribute('aria-label'); },
+      onComplete: () => { proof.textContent = fullText; proof.style.minHeight = ''; proof.removeAttribute('aria-label'); },
     }, 0.55);
   }
   if (target) tl.fromTo(target, { rotate: -90, scale: 1.12 }, { rotate: 0, scale: 1, duration: 0.5, transformOrigin: '50% 50%' }, seen ? 0.2 : 1.05);

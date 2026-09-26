@@ -67,7 +67,9 @@ for (const vpKey of vps) {
       for (let i = 0; i <= steps; i++) {
         const y = Math.round((total * i) / steps);
         await scrollTo(y);
-        const ov = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
+        // Compare with the device width, not innerWidth: in mobile emulation (as on a real phone) the layout
+        // viewport grows to fit overflowing content, so innerWidth hides exactly the bug this is looking for.
+        const ov = await page.evaluate((w) => Math.max(document.documentElement.scrollWidth, innerWidth) - w, vp.width);
         if (ov > 0) overflowAt.push({ y, px: ov });
         if (shots && (mode === 'motion' || i % 3 === 0)) await page.screenshot({ path: path.join(OUT, 'shots', `${tag}-${String(i).padStart(2, '0')}.jpg`), type: 'jpeg', quality: 60 });
       }

@@ -60,7 +60,7 @@ const { heading = person.contactLine } = Astro.props;
     font-stretch: 100%;
     /* One line at every width: the address is 24 characters, so it never gets bigger than its row allows. */
     font-size: min(clamp(1.5rem, 5.4vw, 5.25rem), calc(100cqi / 14.6));
-    line-height: 1;
+    line-height: 1.15; /* keeps the link a ≥ 24 px tap target at its smallest */
     letter-spacing: -0.03em;
     text-decoration: none;
     overflow-wrap: anywhere;

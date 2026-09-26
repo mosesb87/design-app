@@ -38,8 +38,8 @@ export default function thesis([section]: HTMLElement[], env: Env) {
     tl.to(stage, { rotationX: rx, rotationZ: rz, duration: 0.2, ease: 'power2.inOut' }, 0.1)
       .to(sheet, { z: zS, duration: 0.2, ease: 'power2.inOut' }, 0.1)
       .to(register, { z: zR, duration: 0.2, ease: 'power2.inOut' }, 0.1)
-      // 2 · The check sweeps through the stack.
-      .fromTo(scans, { left: '0%', opacity: 0 }, { left: '100%', opacity: 1, duration: 0.12, stagger: 0.02, ease: 'power1.inOut' }, 0.46)
+      // 2 · The check sweeps through the stack (a transform, so the sweep never counts as a layout shift).
+      .fromTo(scans, { x: 0, opacity: 0 }, { x: (_i: number, el: HTMLElement) => (el.parentElement?.clientWidth ?? 0) - 2, opacity: 1, duration: 0.12, stagger: 0.02, ease: 'power1.inOut' }, 0.46)
       .to(scans, { opacity: 0, duration: 0.02 }, 0.62)
       // The stale price is struck through by a class toggle in onUpdate (pseudo-elements can't be tweened).
       .to(q('[data-sheet-ok]'), { opacity: 0, duration: 0.03 }, 0.55)
@@ -65,6 +65,7 @@ export default function thesis([section]: HTMLElement[], env: Env) {
       end: 'bottom bottom',
       scrub: 0.6,
       animation: tl,
+      invalidateOnRefresh: true,
       onUpdate: (self) => {
         const p = self.progress;
         let active = -1;
