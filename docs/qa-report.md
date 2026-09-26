@@ -8,10 +8,10 @@ Covers the redesign (direction 2, [04-bright-and-playful.md](04-bright-and-playf
 |---|---|
 | Pages | 55: home, /work/, 11 case studies, /blog/ + 16 posts, /reviews/ + 22 reviews, /about/, 404 |
 | All-pages sweep (every page, phone + desktop, axe) | 110 runs. Findings fixed below; re-checked clean |
-| Six viewports × motion and reduced motion | {{SIX}} |
+| Six viewports × motion and reduced motion | 120 runs (10 representative pages × 6 viewports × 2 modes): **0 findings** — no overflow, disappearing content, axe violations, small targets, focus problems, console errors or failed requests; CLS 0 on every run; LCP at load ≤ 476 ms locally |
 | Interactions (Chromium) | 60/60 after fixes |
 | Firefox 142 / WebKit 26 (Actions) | {{BROWSERS}} |
-| Lighthouse 12 (9 pages × mobile + desktop) | {{LH_SUMMARY}} |
+| Lighthouse 12 (9 pages × mobile + desktop) | Accessibility, best practices and SEO **100** on all 18 runs; performance 100 on desktop, 97–99 on mobile, except the home page (92–95, see *Known limitations*) |
 | Internal links and assets | 3,098 references, 0 missing; in-page anchors checked too |
 | Type check | `astro check`: 0 errors |
 
@@ -47,7 +47,7 @@ Covers the redesign (direction 2, [04-bright-and-playful.md](04-bright-and-playf
 ### Cross-browser
 
 - **WebKit 26:** every page clean at desktop, phone and reduced motion; interactions 60/60.
-- **Firefox 142:** every page loads; its only messages are the advisory that the site "appears to use a scroll-linked positioning effect" (the pinned scenes — intentional). Interactions were 59/60: "Too many calls to Location or History APIs" when the test clicked through every filter chip in a burst. Filters now write the URL once clicking stops, and history updates can't throw. {{FIREFOX_RERUN}}
+- **Firefox 142:** every page loads; its only messages are the advisory that the site "appears to use a scroll-linked positioning effect" (the pinned scenes — intentional). Interactions were 59/60: "Too many calls to Location or History APIs". Firefox allows about 200 History calls per 10 seconds per tab. Two things added up: filters wrote the URL on every click (now once clicking stops, and history updates can't throw), and ScrollTrigger switches `history.scrollRestoration` to manual and back while it measures — 9 writes a page, now 6 (only real changes are written). The suite loaded 38 blog and review pages in one tab within seconds; it now opens each in its own tab, as a visitor would. Forcing `manual` permanently would remove the count entirely but break the Back button's scroll restoration, so the site keeps the default. {{FIREFOX_RERUN}}
 
 ### Lighthouse
 
@@ -55,11 +55,23 @@ Covers the redesign (direction 2, [04-bright-and-playful.md](04-bright-and-playf
 |---|---|
 | Blog post, mobile: TBT 240 ms, one 290 ms start-up task (ScrollTrigger re-measured the long page several times) | Start-up refreshes coalesced into one: TBT 0 ms, performance 99 |
 | Oakwood review: accessibility 99 (a heading skipped a level where the source did) | Review headings step down one level at a time |
-| Home, mobile: LCP 3.1 s | 2.9 s: the mono font is no longer preloaded and the stickers pop from 25% scale. See *Known limitations* |
+| Home, mobile: LCP 3.1 s | 2.9–3.1 s across runs, after dropping the mono-font preload and popping stickers from 25% scale. See *Known limitations* |
 
 ## Performance
 
-{{LH_TABLE}}
+| Page | Mobile (perf / a11y / BP / SEO) | Mobile LCP · TBT | Desktop | Desktop LCP |
+|---|---|---|---|---|
+| `/` | 92 / 100 / 100 / 100 | 3.1 s · 90 ms | 100 / 100 / 100 / 100 | 0.7 s |
+| `/work/` | 97 / 100 / 100 / 100 | 2.4 s · 10 ms | 100 / 100 / 100 / 100 | 0.7 s |
+| `/work/asas-studio/` | 99 / 100 / 100 / 100 | 2.1 s · 0 ms | 100 / 100 / 100 / 100 | 0.6 s |
+| `/about/` | 99 / 100 / 100 / 100 | 1.7 s · 0 ms | 100 / 100 / 100 / 100 | 0.5 s |
+| `/blog/` | 99 / 100 / 100 / 100 | 1.9 s · 10 ms | 100 / 100 / 100 / 100 | 0.6 s |
+| `/blog/on-page-seo-large-product-catalog/` | 99 / 100 / 100 / 100 | 2.1 s · 0 ms | 100 / 100 / 100 / 100 | 0.5 s |
+| `/reviews/` | 99 / 100 / 100 / 100 | 1.8 s · 0 ms | 100 / 100 / 100 / 100 | 0.5 s |
+| `/reviews/hayhouse/` (longest review) | 97 / 100 / 100 / 100 | 2.4 s · 10 ms | 100 / 100 / 100 / 100 | 0.6 s |
+| `/reviews/oakwood/` | 99 / 100 / 100 / 100 | 1.7 s · 10 ms | 100 / 100 / 100 / 100 | 0.5 s |
+
+CLS is 0 on every run. Page weight before images: about 164–168 KB, of which 53 KB is JavaScript (gzipped); the footer of each page prints its own measured weight. The home page scored 95 (LCP 2.9 s) on the previous run with the same build settings; Lighthouse's simulated mobile numbers vary by a few points between runs.
 
 Lighthouse ran locally against the production build with gzip and immutable asset caching; mobile uses simulated slow 4G and 4× CPU. Vercel adds Brotli and HTTP/2; cPanel hosting will differ. There is no field data yet.
 
@@ -90,7 +102,7 @@ Lighthouse ran locally against the production build with gzip and immutable asse
 ## Known limitations
 
 - **Emulation only.** No real phones or tablets; iOS Safari is approximated by Playwright's WebKit on Linux.
-- **Home LCP on mobile (simulated) is 2.9 s**, above the 2.8 s budget. The largest early paint is the price-tag sticker's text, which waits for the display font under simulated slow 4G. Removing the intro animation would fix the number and lose the point of the hero, so it stays.
+- **Home LCP on mobile (simulated) is 2.9–3.1 s**, above the 2.8 s budget. The largest early paint is the price-tag sticker's text, which waits for the display font under simulated slow 4G. Removing the intro animation would fix the number and lose the point of the hero, so it stays.
 - **20 blog posts are summaries only** — their text isn't published anywhere (`capture/content/blog/probe.json`).
 - **Review prototypes are not interactive here.** Each keeps its text and a screenshot of the sheet as published.
 - **Captured sites drift.** Screenshots are dated 2026-09-26.
