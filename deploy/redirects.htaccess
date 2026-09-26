@@ -1,0 +1,49 @@
+# mousabatarseh.com — redirects for the new portfolio. Paste right after "RewriteEngine On" in the ROOT .htaccess
+# (add "RewriteEngine On" first if the file doesn't have it). Generated 2026-09-26.
+
+# Blog: each post that has a page here (old links opened the blog index).
+RewriteRule ^core-web-vitals-elementor-wordpress/?$ /blog/core-web-vitals-elementor-wordpress/ [R=301,L]
+RewriteRule ^writing-product-descriptions-at-scale/?$ /blog/writing-product-descriptions-at-scale/ [R=301,L]
+RewriteRule ^ga4-small-store-measurement/?$ /blog/ga4-small-store-measurement/ [R=301,L]
+RewriteRule ^inventory-price-sync-drift/?$ /blog/inventory-price-sync-drift/ [R=301,L]
+RewriteRule ^product-images-at-catalog-scale/?$ /blog/product-images-at-catalog-scale/ [R=301,L]
+RewriteRule ^product-filters-attributes-ecommerce/?$ /blog/product-filters-attributes-ecommerce/ [R=301,L]
+RewriteRule ^category-structure-large-catalog/?$ /blog/category-structure-large-catalog/ [R=301,L]
+RewriteRule ^shopify-or-woocommerce-decision/?$ /blog/shopify-or-woocommerce-decision/ [R=301,L]
+RewriteRule ^redirect-mapping-ecommerce-migration/?$ /blog/redirect-mapping-ecommerce-migration/ [R=301,L]
+RewriteRule ^sku-structure-product-catalog/?$ /blog/sku-structure-product-catalog/ [R=301,L]
+RewriteRule ^web-project-workflow-failure-points/?$ /blog/web-project-workflow-failure-points/ [R=301,L]
+RewriteRule ^on-page-seo-large-product-catalog/?$ /blog/on-page-seo-large-product-catalog/ [R=301,L]
+RewriteRule ^elementor-client-handoff/?$ /blog/elementor-client-handoff/ [R=301,L]
+RewriteRule ^client-editable-restaurant-menu-wordpress/?$ /blog/client-editable-restaurant-menu-wordpress/ [R=301,L]
+RewriteRule ^cleaning-product-data-csv/?$ /blog/cleaning-product-data-csv/ [R=301,L]
+RewriteRule ^product-catalog-migration-field-mapping/?$ /blog/product-catalog-migration-field-mapping/ [R=301,L]
+
+# Reviews: the reviews site's summary pages → the review's page here.
+RewriteRule ^reviews/reviews/([a-z0-9-]+)/?(index.html)?$ /reviews/$1/ [R=301,L]
+RewriteRule ^reviews/index.html$ /reviews/ [R=301,L]
+
+# Optional — only if you want the full-review folders to point here too. They are the original work samples
+# (some were sent with job applications), so they are left alone unless you uncomment these.
+# RewriteRule ^reworked-review/?$ /reviews/reworked/ [R=301,L]
+# RewriteRule ^bran-review/?$ /reviews/bran/ [R=301,L]
+# RewriteRule ^petsafe-review/?$ /reviews/petsafe/ [R=301,L]
+# RewriteRule ^highprofile-review/?$ /reviews/highprofile/ [R=301,L]
+# RewriteRule ^jars-review/?$ /reviews/jars/ [R=301,L]
+# RewriteRule ^lume-review/?$ /reviews/lume/ [R=301,L]
+# RewriteRule ^dutchie-review/?$ /reviews/dutchie/ [R=301,L]
+# RewriteRule ^salt-review/?$ /reviews/salt/ [R=301,L]
+# RewriteRule ^vanguard-review/?$ /reviews/vanguard/ [R=301,L]
+# RewriteRule ^oakwood-review/?$ /reviews/oakwood/ [R=301,L]
+# RewriteRule ^moment-review/?$ /reviews/moment/ [R=301,L]
+# RewriteRule ^jbtools-review/?$ /reviews/jbtools/ [R=301,L]
+# RewriteRule ^dunhams-review/?$ /reviews/dunhams/ [R=301,L]
+# RewriteRule ^biotrust-review/?$ /reviews/biotrust/ [R=301,L]
+# RewriteRule ^bestlife-review/?$ /reviews/bestlife/ [R=301,L]
+# RewriteRule ^behealth-review/?$ /reviews/behealth/ [R=301,L]
+# RewriteRule ^aedit-review/?$ /reviews/aedit/ [R=301,L]
+# RewriteRule ^dehanche-review/?$ /reviews/dehanche/ [R=301,L]
+# RewriteRule ^hayhouse-review/?$ /reviews/hayhouse/ [R=301,L]
+# RewriteRule ^carhartt-review/?$ /reviews/carhartt/ [R=301,L]
+# RewriteRule ^icr-review/?$ /reviews/icr/ [R=301,L]
+# RewriteRule ^diamedical-review/?$ /reviews/diamedical/ [R=301,L]
