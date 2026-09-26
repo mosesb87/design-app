@@ -2,8 +2,8 @@
   "asas": {
     "slug": "asas",
     "project": "asas-studio",
-    "url": "https://asas.mousabatarseh.com/",
-    "capturedAt": "2026-09-26T14:14:18.227Z",
+    "url": "https://asas.build/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -18,7 +18,7 @@
         },
         "w": 2880,
         "h": 1800,
-        "bytes": 136084
+        "bytes": 135962
       },
       "desktop-full": {
         "ok": true,
@@ -33,7 +33,7 @@
         },
         "w": 1440,
         "h": 9000,
-        "bytes": 328536
+        "bytes": 271526
       },
       "mobile-hero": {
         "ok": true,
@@ -49,24 +49,39 @@
         "bytes": 108390
       },
       "mobile-full": {
-        "ok": false,
-        "error": "Processed image is too large for the WebP format"
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://asas.build/",
+        "title": "ASAS — Wireframe an Elementor page from 3,881 real blocks. Export native JSON.",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 410346
       }
     },
     "notes": [],
     "title": "ASAS — Wireframe an Elementor page from 3,881 real blocks. Export native JSON.",
     "recording": {
       "ok": true,
-      "frames": 270,
-      "seconds": 11.28,
-      "bytes": 652648
+      "frames": 259,
+      "seconds": 11.01,
+      "bytes": 682519
+    },
+    "interaction": {
+      "ok": true,
+      "frames": 250,
+      "seconds": 10.18,
+      "bytes": 404457
     }
   },
   "asas-studio-app": {
     "slug": "asas-studio-app",
     "project": "asas-studio",
-    "url": "https://asas.mousabatarseh.com/studio/",
-    "capturedAt": "2026-09-26T14:14:18.227Z",
+    "url": "https://asas.build/studio/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -111,7 +126,7 @@
     "slug": "changeatlas",
     "project": "changeatlas",
     "url": "https://mousabatarseh.com/changeatlas/",
-    "capturedAt": "2026-09-26T14:14:18.227Z",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -124,7 +139,7 @@
         },
         "w": 2880,
         "h": 1800,
-        "bytes": 142698
+        "bytes": 143252
       },
       "desktop-full": {
         "ok": true,
@@ -137,7 +152,7 @@
         },
         "w": 1440,
         "h": 6020,
-        "bytes": 389290
+        "bytes": 389330
       },
       "mobile-hero": {
         "ok": true,
@@ -153,24 +168,33 @@
         "bytes": 88730
       },
       "mobile-full": {
-        "ok": false,
-        "error": "Processed image is too large for the WebP format"
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/changeatlas/",
+        "title": "ChangeAtlas Commerce — know what an import will change before it runs",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 633120
       }
     },
     "notes": [],
     "title": "ChangeAtlas Commerce — know what an import will change before it runs",
     "recording": {
       "ok": true,
-      "frames": 282,
-      "seconds": 8.5,
-      "bytes": 626330
+      "frames": 301,
+      "seconds": 8.73,
+      "bytes": 754651
     }
   },
   "changeatlas-app": {
     "slug": "changeatlas-app",
     "project": "changeatlas",
     "url": "https://mousabatarseh.com/changeatlas/app/",
-    "capturedAt": "2026-09-26T14:14:18.227Z",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -185,7 +209,7 @@
         },
         "w": 2880,
         "h": 1800,
-        "bytes": 158640
+        "bytes": 194816
       },
       "desktop-full": {
         "ok": true,
@@ -200,7 +224,7 @@
         },
         "w": 1440,
         "h": 1678,
-        "bytes": 118306
+        "bytes": 133772
       },
       "mobile-hero": {
         "ok": true,
@@ -215,7 +239,7 @@
         },
         "w": 1170,
         "h": 2532,
-        "bytes": 140066
+        "bytes": 159960
       }
     },
     "notes": [],
@@ -223,15 +247,15 @@
     "recording": {
       "ok": true,
       "frames": 284,
-      "seconds": 7.56,
-      "bytes": 448075
+      "seconds": 7.55,
+      "bytes": 690190
     }
   },
   "deals-os": {
     "slug": "deals-os",
     "project": "deals-os",
     "url": "https://mousabatarseh.com/deals-os/",
-    "capturedAt": "2026-09-26T14:14:18.227Z",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -290,16 +314,22 @@
     "title": "Deals Operating System — Mousa Batarseh",
     "recording": {
       "ok": true,
-      "frames": 385,
-      "seconds": 8.32,
-      "bytes": 1250785
+      "frames": 386,
+      "seconds": 8.34,
+      "bytes": 1203396
+    },
+    "interaction": {
+      "ok": true,
+      "frames": 191,
+      "seconds": 7.82,
+      "bytes": 1010689
     }
   },
   "csv-mapper": {
     "slug": "csv-mapper",
     "project": "csv-mapper",
     "url": "https://mousabatarseh.com/csv-mapper/",
-    "capturedAt": "2026-09-26T14:14:18.227Z",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -360,14 +390,20 @@
       "ok": true,
       "frames": 361,
       "seconds": 8.06,
-      "bytes": 1444455
+      "bytes": 1521399
+    },
+    "interaction": {
+      "ok": true,
+      "frames": 341,
+      "seconds": 9.85,
+      "bytes": 1289131
     }
   },
   "dealproof": {
     "slug": "dealproof",
     "project": "deals-os",
     "url": "https://mousabatarseh.com/dealproof/",
-    "capturedAt": "2026-09-26T14:14:18.227Z",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -380,7 +416,7 @@
         },
         "w": 2880,
         "h": 1800,
-        "bytes": 130674
+        "bytes": 130668
       },
       "desktop-full": {
         "ok": true,
@@ -393,7 +429,7 @@
         },
         "w": 1440,
         "h": 4528,
-        "bytes": 183768
+        "bytes": 183774
       },
       "mobile-hero": {
         "ok": true,
@@ -406,23 +442,23 @@
         },
         "w": 1170,
         "h": 2532,
-        "bytes": 83974
+        "bytes": 84030
       }
     },
     "notes": [],
     "title": "Promotion checks before launch — DealProof",
     "recording": {
       "ok": true,
-      "frames": 528,
+      "frames": 529,
       "seconds": 8.79,
-      "bytes": 458328
+      "bytes": 399216
     }
   },
   "seo-tools": {
     "slug": "seo-tools",
     "project": "seo-tools",
     "url": "https://mousabatarseh.com/SEO-Tools/",
-    "capturedAt": "2026-09-26T14:14:18.227Z",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -470,14 +506,20 @@
       "ok": true,
       "frames": 287,
       "seconds": 7.54,
-      "bytes": 513596
+      "bytes": 530998
+    },
+    "interaction": {
+      "ok": true,
+      "frames": 302,
+      "seconds": 11.36,
+      "bytes": 521766
     }
   },
   "diamedical-lab": {
     "slug": "diamedical-lab",
     "project": "diamedical-lab",
     "url": "https://mousabatarseh.com/diamedical/",
-    "capturedAt": "2026-09-26T14:14:18.227Z",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -521,17 +563,28 @@
         "bytes": 186914
       },
       "mobile-full": {
-        "ok": false,
-        "error": "Processed image is too large for the WebP format"
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical/",
+        "title": "DiaMedical eCommerce case study — Mousa Batarseh (independent)",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#workspace-navigation.workbench-sidebar"
+          ]
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 1194918
       }
     },
     "notes": [],
     "title": "DiaMedical eCommerce case study — Mousa Batarseh (independent)",
     "recording": {
       "ok": true,
-      "frames": 330,
-      "seconds": 7.65,
-      "bytes": 1984670
+      "frames": 329,
+      "seconds": 7.67,
+      "bytes": 1944217
     }
   },
   "diamedical-intro": {

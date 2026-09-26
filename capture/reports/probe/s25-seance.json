@@ -1,7 +1,7 @@
 {
   "slug": "s25-seance",
   "url": "https://www.s25.studio/work/seance",
-  "probedAt": "2026-09-26T14:34:41.270Z",
+  "probedAt": "2026-09-26T15:04:02.278Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://www.s25.studio/work/seance",
@@ -70,9 +70,9 @@
       "viewports": 23.1
     },
     "perf": {
-      "fcpMs": 500,
-      "domContentLoadedMs": 488,
-      "requests": 99,
+      "fcpMs": 224,
+      "domContentLoadedMs": 197,
+      "requests": 102,
       "transferKB": 2038
     },
     "animationsNow": 0,
@@ -164,25 +164,25 @@
       "viewports": 23.1
     },
     "perf": {
-      "fcpMs": 476,
-      "domContentLoadedMs": 523,
-      "requests": 98,
+      "fcpMs": 176,
+      "domContentLoadedMs": 135,
+      "requests": 100,
       "transferKB": 2038
     },
     "animationsNow": 0,
     "motion": {
-      "scrollDrivenElements": 18,
+      "scrollDrivenElements": 19,
       "samples": [
         "g",
-        "div.case-study-embed",
-        "p.overline-large",
-        "div.case-study-embed",
-        "img.case-study-image",
         "img.case-study-image",
         "div.case-study-embed",
         "p.overline-large",
         "div.case-study-embed",
         "img.case-study-image",
+        "img.case-study-image",
+        "div.case-study-embed",
+        "p.overline-large",
+        "div.case-study-embed",
         "img.case-study-image",
         "img.case-study-image"
       ],
@@ -258,9 +258,9 @@
       "viewports": 10.4
     },
     "perf": {
-      "fcpMs": 268,
-      "domContentLoadedMs": 169,
-      "requests": 99,
+      "fcpMs": 156,
+      "domContentLoadedMs": 135,
+      "requests": 100,
       "transferKB": 1418
     },
     "animationsNow": 0,

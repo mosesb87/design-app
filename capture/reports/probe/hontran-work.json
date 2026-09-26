@@ -1,7 +1,7 @@
 {
   "slug": "hontran-work",
   "url": "https://www.hontran.dev/work",
-  "probedAt": "2026-09-26T14:34:15.578Z",
+  "probedAt": "2026-09-26T15:03:35.763Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://www.hontran.dev/work",
@@ -69,27 +69,27 @@
       "viewports": 3.9
     },
     "perf": {
-      "fcpMs": 596,
-      "domContentLoadedMs": 391,
+      "fcpMs": 252,
+      "domContentLoadedMs": 143,
       "requests": 77,
       "transferKB": 7734
     },
     "animationsNow": 2,
     "motion": {
-      "scrollDrivenElements": 20,
+      "scrollDrivenElements": 77,
       "samples": [
         "span",
         "div.fixed.top-0",
-        "a.WorkIndex-module-scss-module__XdKEaq__row",
-        "a.WorkIndex-module-scss-module__XdKEaq__row",
-        "a.WorkIndex-module-scss-module__XdKEaq__row",
-        "a.WorkIndex-module-scss-module__XdKEaq__row",
-        "a.WorkIndex-module-scss-module__XdKEaq__row",
-        "a.WorkIndex-module-scss-module__XdKEaq__row",
-        "a.WorkIndex-module-scss-module__XdKEaq__row",
-        "a.WorkIndex-module-scss-module__XdKEaq__row",
-        "a.WorkIndex-module-scss-module__XdKEaq__row",
-        "a.WorkIndex-module-scss-module__XdKEaq__row"
+        "style",
+        "div.absolute.overflow-hidden",
+        "div",
+        "span",
+        "span",
+        "div",
+        "span",
+        "span",
+        "div",
+        "span"
       ],
       "pinnedCandidates": [
         "div.absolute.overflow-hidden",
@@ -167,14 +167,14 @@
       "viewports": 3.9
     },
     "perf": {
-      "fcpMs": 352,
-      "domContentLoadedMs": 298,
+      "fcpMs": 264,
+      "domContentLoadedMs": 232,
       "requests": 76,
       "transferKB": 7733
     },
     "animationsNow": 2,
     "motion": {
-      "scrollDrivenElements": 62,
+      "scrollDrivenElements": 56,
       "samples": [
         "span",
         "div.fixed.top-0",
@@ -264,8 +264,8 @@
       "viewports": 5.5
     },
     "perf": {
-      "fcpMs": 200,
-      "domContentLoadedMs": 225,
+      "fcpMs": 132,
+      "domContentLoadedMs": 75,
       "requests": 49,
       "transferKB": 7714
     },

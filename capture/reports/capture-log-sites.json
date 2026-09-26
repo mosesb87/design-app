@@ -3,7 +3,7 @@
     "slug": "united-textile",
     "project": "united-textile",
     "url": "https://shopunitedtextile.com/",
-    "capturedAt": "2026-09-26T14:14:29.214Z",
+    "capturedAt": "2026-09-26T15:00:53.647Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -16,17 +16,20 @@
         },
         "w": 2880,
         "h": 1800,
-        "bytes": 202878
+        "bytes": 202002
       },
       "desktop-full": {
-        "ok": false,
-        "status": 503,
+        "ok": true,
+        "status": 200,
         "finalUrl": "https://shopunitedtextile.com/",
+        "title": "United Textile Wholesale: Quality Wholesale Clothing in Detroit – UNITED TEXTILE WHOLESALE",
         "gates": {
           "actions": [],
           "blocking": []
         },
-        "title": "Something went wrong"
+        "w": 1440,
+        "h": 4230,
+        "bytes": 336828
       },
       "mobile-hero": {
         "ok": true,
@@ -39,7 +42,7 @@
         },
         "w": 1170,
         "h": 2532,
-        "bytes": 95738
+        "bytes": 95516
       },
       "mobile-full": {
         "ok": true,
@@ -52,16 +55,16 @@
         },
         "w": 780,
         "h": 12654,
-        "bytes": 502422
+        "bytes": 499734
       }
     },
     "notes": [],
     "title": "United Textile Wholesale: Quality Wholesale Clothing in Detroit – UNITED TEXTILE WHOLESALE",
     "recording": {
       "ok": true,
-      "frames": 495,
-      "seconds": 8.33,
-      "bytes": 1269897
+      "frames": 494,
+      "seconds": 8.31,
+      "bytes": 1146458
     }
   },
   "universal-wholesale": {
@@ -136,7 +139,7 @@
     "slug": "firefly-burgers",
     "project": "firefly-burgers",
     "url": "https://fireflyburgersmi.com/ver2/",
-    "capturedAt": "2026-09-26T14:14:29.214Z",
+    "capturedAt": "2026-09-26T15:00:53.647Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -178,8 +181,17 @@
         "bytes": 109362
       },
       "mobile-full": {
-        "ok": false,
-        "error": "Processed image is too large for the WebP format"
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://fireflyburgersmi.com/ver2/",
+        "title": "Firefly Burgers Michigan",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 797758
       }
     },
     "notes": [],
@@ -187,15 +199,15 @@
     "recording": {
       "ok": true,
       "frames": 330,
-      "seconds": 7.67,
-      "bytes": 1041726
+      "seconds": 7.66,
+      "bytes": 871183
     }
   },
   "eat-with-samar": {
     "slug": "eat-with-samar",
     "project": "eat-with-samar",
     "url": "https://eatwithsamar.com/",
-    "capturedAt": "2026-09-26T14:14:29.214Z",
+    "capturedAt": "2026-09-26T15:00:53.647Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -237,8 +249,17 @@
         "bytes": 180414
       },
       "mobile-full": {
-        "ok": false,
-        "error": "Processed image is too large for the WebP format"
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://eatwithsamar.com/",
+        "title": "Eat With Samar — Bilingual Dietitian in Metro Detroit | Arabic & English",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 855236
       }
     },
     "notes": [],
@@ -247,14 +268,14 @@
       "ok": true,
       "frames": 385,
       "seconds": 8.33,
-      "bytes": 1185117
+      "bytes": 1180174
     }
   },
   "great-lakes-cigar-festival": {
     "slug": "great-lakes-cigar-festival",
     "project": "great-lakes-cigar-festival",
     "url": "https://greatlakescigarfest.com/home/",
-    "capturedAt": "2026-09-26T14:14:29.214Z",
+    "capturedAt": "2026-09-26T15:00:53.647Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -267,7 +288,7 @@
         },
         "w": 2880,
         "h": 1800,
-        "bytes": 152188
+        "bytes": 159050
       },
       "desktop-full": {
         "ok": true,
@@ -280,7 +301,7 @@
         },
         "w": 1440,
         "h": 5084,
-        "bytes": 272172
+        "bytes": 270188
       },
       "mobile-hero": {
         "ok": true,
@@ -293,27 +314,36 @@
         },
         "w": 1170,
         "h": 2532,
-        "bytes": 126496
+        "bytes": 125076
       },
       "mobile-full": {
-        "ok": false,
-        "error": "Processed image is too large for the WebP format"
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://greatlakescigarfest.com/home/",
+        "title": "Great Lakes Cigar Festival 2025 | Michigan's Ultimate Cigar Event",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 445136
       }
     },
     "notes": [],
     "title": "Great Lakes Cigar Festival 2025 | Michigan's Ultimate Cigar Event",
     "recording": {
       "ok": true,
-      "frames": 444,
+      "frames": 346,
       "seconds": 8.78,
-      "bytes": 1071954
+      "bytes": 892937
     }
   },
   "ptee-renewal": {
     "slug": "ptee-renewal",
     "project": "ptee",
     "url": "https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/",
-    "capturedAt": "2026-09-26T14:14:29.214Z",
+    "capturedAt": "2026-09-26T15:00:53.647Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -355,8 +385,17 @@
         "bytes": 143430
       },
       "mobile-full": {
-        "ok": false,
-        "error": "Processed image is too large for the WebP format"
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/courses/ar",
+        "title": "PTEE | التعليم اللاهوتي بالامتداد",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 743902
       }
     },
     "notes": [],
@@ -364,8 +403,8 @@
     "recording": {
       "ok": true,
       "frames": 385,
-      "seconds": 8.33,
-      "bytes": 1047812
+      "seconds": 8.32,
+      "bytes": 1119772
     }
   },
   "ptee-admissions": {
@@ -440,7 +479,7 @@
     "slug": "btee-build",
     "project": "ptee",
     "url": "https://btee.moseswebworks.com/ar/",
-    "capturedAt": "2026-09-26T14:14:29.214Z",
+    "capturedAt": "2026-09-26T15:00:53.647Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -469,8 +508,17 @@
         "bytes": 136100
       },
       "mobile-full": {
-        "ok": false,
-        "error": "Processed image is too large for the WebP format"
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://btee.moseswebworks.com/ar/",
+        "title": "PTEE | التعليم اللاهوتي بالامتداد في العالم العربي",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 765054
       }
     },
     "notes": [],

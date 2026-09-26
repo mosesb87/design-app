@@ -3,7 +3,7 @@
     "slug": "review-carhartt-reworked",
     "project": "reviews",
     "url": "https://mousabatarseh.com/reworked-review/",
-    "capturedAt": "2026-09-26T14:14:21.459Z",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -16,7 +16,7 @@
         },
         "w": 2880,
         "h": 1800,
-        "bytes": 173524
+        "bytes": 173406
       },
       "desktop-full": {
         "ok": true,
@@ -29,7 +29,7 @@
         },
         "w": 1440,
         "h": 9000,
-        "bytes": 534712
+        "bytes": 534968
       },
       "mobile-hero": {
         "ok": true,
@@ -49,16 +49,22 @@
     "title": "Carhartt Reworked · Recommerce Merchandising Review · Mousa Batarseh",
     "recording": {
       "ok": true,
-      "frames": 491,
+      "frames": 456,
       "seconds": 8.79,
-      "bytes": 925795
+      "bytes": 797070
+    },
+    "interaction": {
+      "ok": true,
+      "frames": 529,
+      "seconds": 14.31,
+      "bytes": 2028021
     }
   },
   "review-oakwood": {
     "slug": "review-oakwood",
     "project": "reviews",
     "url": "https://mousabatarseh.com/oakwood-review/",
-    "capturedAt": "2026-09-26T14:14:21.459Z",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -104,16 +110,16 @@
     "title": "Oakwood Veneer — Species Sample Book",
     "recording": {
       "ok": true,
-      "frames": 291,
-      "seconds": 7.56,
-      "bytes": 855258
+      "frames": 290,
+      "seconds": 7.57,
+      "bytes": 859673
     }
   },
   "review-vanguard": {
     "slug": "review-vanguard",
     "project": "reviews",
     "url": "https://mousabatarseh.com/vanguard-review/",
-    "capturedAt": "2026-09-26T14:14:21.459Z",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -161,14 +167,14 @@
       "ok": true,
       "frames": 325,
       "seconds": 7.65,
-      "bytes": 912202
+      "bytes": 961022
     }
   },
   "review-jbtools": {
     "slug": "review-jbtools",
     "project": "reviews",
     "url": "https://mousabatarseh.com/jbtools-review/",
-    "capturedAt": "2026-09-26T14:14:21.459Z",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -215,15 +221,15 @@
     "recording": {
       "ok": true,
       "frames": 321,
-      "seconds": 7.61,
-      "bytes": 1118029
+      "seconds": 7.62,
+      "bytes": 1140832
     }
   },
   "review-hayhouse": {
     "slug": "review-hayhouse",
     "project": "reviews",
     "url": "https://mousabatarseh.com/hayhouse-review/",
-    "capturedAt": "2026-09-26T14:14:21.459Z",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -271,14 +277,14 @@
       "ok": true,
       "frames": 386,
       "seconds": 8.34,
-      "bytes": 1597909
+      "bytes": 1648123
     }
   },
   "review-biotrust": {
     "slug": "review-biotrust",
     "project": "reviews",
     "url": "https://mousabatarseh.com/biotrust-review/",
-    "capturedAt": "2026-09-26T14:14:21.459Z",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -324,9 +330,9 @@
     "title": "BioTRUST — Relaunch Review",
     "recording": {
       "ok": true,
-      "frames": 290,
+      "frames": 291,
       "seconds": 7.54,
-      "bytes": 994042
+      "bytes": 962541
     }
   },
   "reviews-index": {

@@ -1,7 +1,7 @@
 {
   "slug": "driftime-2025",
   "url": "https://2025.driftime.com/",
-  "probedAt": "2026-09-26T14:37:46.709Z",
+  "probedAt": "2026-09-26T15:07:38.539Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://2025.driftime.com/",
@@ -73,8 +73,8 @@
       "viewports": 6.9
     },
     "perf": {
-      "fcpMs": 384,
-      "domContentLoadedMs": 268,
+      "fcpMs": 240,
+      "domContentLoadedMs": 121,
       "requests": 50,
       "transferKB": 1467
     },
@@ -170,8 +170,8 @@
       "viewports": 6.7
     },
     "perf": {
-      "fcpMs": 208,
-      "domContentLoadedMs": 116,
+      "fcpMs": 224,
+      "domContentLoadedMs": 63,
       "requests": 41,
       "transferKB": 1235
     },
@@ -266,8 +266,8 @@
       "viewports": 10
     },
     "perf": {
-      "fcpMs": 184,
-      "domContentLoadedMs": 132,
+      "fcpMs": 140,
+      "domContentLoadedMs": 60,
       "requests": 49,
       "transferKB": 1382
     },

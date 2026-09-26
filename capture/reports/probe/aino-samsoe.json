@@ -1,7 +1,7 @@
 {
   "slug": "aino-samsoe",
   "url": "https://aino.agency/work/samsoe-samsoe",
-  "probedAt": "2026-09-26T14:33:14.377Z",
+  "probedAt": "2026-09-26T15:02:34.434Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://aino.agency/work/samsoe-samsoe",
@@ -70,9 +70,9 @@
       "viewports": 13.8
     },
     "perf": {
-      "fcpMs": 304,
-      "domContentLoadedMs": 338,
-      "requests": 42,
+      "fcpMs": 120,
+      "domContentLoadedMs": 172,
+      "requests": 40,
       "transferKB": 1380
     },
     "animationsNow": 0,
@@ -152,9 +152,9 @@
       "viewports": 13.8
     },
     "perf": {
-      "fcpMs": 128,
-      "domContentLoadedMs": 197,
-      "requests": 42,
+      "fcpMs": 68,
+      "domContentLoadedMs": 137,
+      "requests": 39,
       "transferKB": 1380
     },
     "animationsNow": 0,
@@ -234,9 +234,9 @@
       "viewports": 9.1
     },
     "perf": {
-      "fcpMs": 128,
-      "domContentLoadedMs": 210,
-      "requests": 42,
+      "fcpMs": 84,
+      "domContentLoadedMs": 136,
+      "requests": 41,
       "transferKB": 713
     },
     "animationsNow": 0,

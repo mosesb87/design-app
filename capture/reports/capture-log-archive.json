@@ -310,7 +310,7 @@
     "slug": "ptee-online",
     "project": "ptee-online",
     "url": "https://ptee.online/",
-    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "capturedAt": "2026-09-26T15:00:54.355Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -1089,7 +1089,7 @@
     "slug": "changeatlas-review-demo",
     "project": "changeatlas-review-demo",
     "url": "https://mousabatarseh.com/changeatlas/app/",
-    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "capturedAt": "2026-09-26T15:00:54.355Z",
     "views": {
       "desktop-hero": {
         "ok": true,
@@ -1104,7 +1104,7 @@
         },
         "w": 2880,
         "h": 1800,
-        "bytes": 158640
+        "bytes": 194816
       },
       "mobile-hero": {
         "ok": true,
@@ -1119,7 +1119,7 @@
         },
         "w": 1170,
         "h": 2532,
-        "bytes": 140066
+        "bytes": 159960
       }
     },
     "notes": [],
