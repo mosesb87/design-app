@@ -1,7 +1,6 @@
 // Hero: letters pop in and bounce when touched; stickers pop in, float, follow the pointer (fine pointers),
 // drift with scroll, and spin when clicked. Reduced motion: everything is simply there.
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import type { Env } from './runtime';
 
 const BRIGHTS = ['#ff5a36', '#ff4fa3', '#5b3df5', '#2458e6', '#19c7b8', '#8fbf13'];
@@ -19,7 +18,7 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
   const k = seen ? 0.6 : 1;
   const tl = gsap.timeline({ defaults: { ease: 'back.out(1.7)' } });
   tl.from(letters, { yPercent: 110, rotation: () => gsap.utils.random(-14, 14), opacity: 0, duration: 0.8 * k, stagger: 0.045 * k }, 0)
-    .from(stickers, { scale: 0, rotation: (i) => (i % 2 ? -50 : 50), duration: 0.9 * k, ease: 'back.out(2.2)', stagger: 0.07 * k }, 0.35 * k)
+    .from(stickers, { scale: 0.25, rotation: (i) => (i % 2 ? -50 : 50), duration: 0.9 * k, ease: 'back.out(2.6)', stagger: 0.07 * k }, 0.2 * k)
     .from(fades, { y: 18, opacity: 0, duration: 0.6 * k, ease: 'power3.out', stagger: 0.08 }, 0.3 * k);
 
   // Float: each sticker bobs on its own rhythm.
@@ -65,5 +64,4 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
   holders.forEach((h) => {
     gsap.to(h, { yPercent: -80 * Number(h.dataset.depth || 0.5), ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.6 } });
   });
-  ScrollTrigger.refresh();
 }

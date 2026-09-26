@@ -3,6 +3,7 @@ import { env, startSmoothScroll, mount, ScrollTrigger } from './motion/runtime';
 import chrome from './motion/chrome';
 import reveals from './motion/reveals';
 
+let refreshTimer = 0;
 startSmoothScroll();
 chrome([], env);
 reveals([], env);
@@ -23,7 +24,14 @@ Promise.all([
   mount('[data-contact]', () => import('./motion/contact')),
   mount('[data-filter]', () => import('./motion/filter')),
   mount('[data-scrollframe]', () => import('./motion/scrollframe')),
-]).then(() => ScrollTrigger.refresh());
+]).then(refreshSoon);
 
-document.fonts?.ready.then(() => ScrollTrigger.refresh());
-addEventListener('load', () => ScrollTrigger.refresh());
+document.fonts?.ready.then(refreshSoon);
+addEventListener('load', refreshSoon);
+
+// Re-measuring a long page is the heaviest thing the scripts do at start-up, so requests that arrive close
+// together (scenes mounted, fonts in, page loaded) share one refresh.
+function refreshSoon() {
+  clearTimeout(refreshTimer);
+  refreshTimer = window.setTimeout(() => ScrollTrigger.refresh(), 120);
+}

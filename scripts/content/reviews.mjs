@@ -238,6 +238,14 @@ async function cleanSheet(html, ctx) {
     }
     i = j;
   }
+  // Headings step down one level at a time under the sheet's h2 (the source sometimes skips a level).
+  let prev = 2;
+  for (const h of x.querySelectorAll('h2, h3, h4, h5, h6')) {
+    const level = Number(h.tagName[1]);
+    const next = Math.max(3, Math.min(level, prev + 1));
+    if (next !== level) h.replaceWith(...parse(`<h${next}>${h.innerHTML}</h${next}>`).childNodes);
+    prev = next;
+  }
   const out = x.innerHTML.replace(/\n\s*\n+/g, '\n').trim();
   const words = squash(x.text).split(' ').filter(Boolean).length;
   return { title, kicker, html: out, words };
