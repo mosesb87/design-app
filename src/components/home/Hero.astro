@@ -1,0 +1,139 @@
+---
+import Mark from '../Mark.astro';
+import { person, CHECKED } from '../../data/site';
+const proof = `Proof 01 · Warren, MI · Checked ${CHECKED}`;
+---
+<section class="hero" data-opening data-hero-press aria-labelledby="hero-title">
+  <div class="hero__frame wrap">
+    <span class="hero__crop hero__crop--tl" aria-hidden="true" data-crop></span>
+    <span class="hero__crop hero__crop--tr" aria-hidden="true" data-crop></span>
+    <span class="hero__crop hero__crop--bl" aria-hidden="true" data-crop></span>
+    <span class="hero__crop hero__crop--br" aria-hidden="true" data-crop></span>
+
+    <div class="hero__top">
+      <p class="slug hero__disciplines">
+        {person.roles.map((r) => <span>{r}</span>)}
+      </p>
+      <p class="hero__intro" data-hero-intro>{person.intro}</p>
+    </div>
+
+    <div class="hero__word-wrap">
+      <h1 class="hero__word reg" id="hero-title" data-text={person.name} data-hero-word>{person.name}</h1>
+      <span class="hero__target" data-hero-target><Mark size={120} /></span>
+    </div>
+
+    <div class="hero__bottom">
+      <p class="slug hero__proof" data-proof data-proof-text={proof}>{proof}</p>
+      <p class="slug hero__where slug-list">
+        <span>{person.location}</span>
+        <span>{person.availability}</span>
+      </p>
+      <a class="hero__cue" href="#thesis">
+        <span class="hero__cue-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="slug">Scroll — the story is in the details</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    padding-top: calc(var(--nav-h) + var(--s-5));
+    padding-bottom: var(--s-6);
+    display: flex;
+  }
+  .hero__frame {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-6);
+    min-height: calc(100svh - var(--nav-h) - var(--s-5) - var(--s-6));
+  }
+  /* Phones & tablets: the name leads, the intro follows it. */
+  .hero__top { display: contents; }
+  .hero__disciplines { order: 1; }
+  .hero__word-wrap { order: 2; margin-top: auto; }
+  .hero__intro { order: 3; }
+  .hero__bottom { order: 4; }
+  .hero__crop { position: absolute; width: 22px; height: 22px; color: var(--ink-3); pointer-events: none; }
+  .hero__crop::before, .hero__crop::after { content: ''; position: absolute; background: currentColor; }
+  .hero__crop::before { width: 100%; height: 1px; }
+  .hero__crop::after { width: 1px; height: 100%; }
+  .hero__crop--tl { left: calc(var(--margin) - 14px); top: -8px; }
+  .hero__crop--tr { right: calc(var(--margin) - 14px); top: -8px; }
+  .hero__crop--tr::after { right: 0; }
+  .hero__crop--bl { left: calc(var(--margin) - 14px); bottom: -8px; }
+  .hero__crop--bl::before { bottom: 0; }
+  .hero__crop--br { right: calc(var(--margin) - 14px); bottom: -8px; }
+  .hero__crop--br::before { bottom: 0; }
+  .hero__crop--br::after { right: 0; }
+
+
+  .hero__disciplines { display: flex; flex-wrap: wrap; gap: 0 1.2em; color: var(--fg); }
+  .hero__disciplines span + span::before { content: '·'; margin-right: 1.2em; color: var(--fg-2); }
+  .hero__intro {
+    font-size: var(--t-lead);
+    line-height: 1.35;
+    font-weight: 450;
+    letter-spacing: -0.012em;
+    max-width: 30ch;
+    text-wrap: pretty;
+  }
+
+  .hero__word-wrap { position: relative; align-self: end; display: flex; align-items: flex-end; gap: 0.08em; }
+  .hero__word {
+    width: min-content;
+    font-family: var(--font-display);
+    font-size: var(--t-wordmark);
+    font-weight: 860;
+    font-stretch: 94%;
+    line-height: 0.82;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: -0.04em;
+    padding-bottom: 0.02em;
+  }
+  .hero__target {
+    display: none;
+    margin-bottom: 0.06em;
+    font-size: var(--t-wordmark);
+    line-height: 0;
+  }
+  .hero__target :global(svg) { width: 0.62em; height: 0.62em; }
+
+  .hero__bottom { display: grid; gap: var(--s-4); align-items: end; }
+  .hero__proof { color: var(--fg); min-height: 1.5em; }
+  .hero__where { color: var(--fg-2); }
+  .hero__cue { display: inline-flex; align-items: center; gap: var(--s-4); text-decoration: none; min-height: 44px; justify-self: start; }
+  .hero__cue-bar { display: inline-flex; height: 10px; }
+  .hero__cue-bar i { width: 10px; height: 10px; }
+  .hero__cue-bar i:nth-child(1) { background: var(--sheet); }
+  .hero__cue-bar i:nth-child(2) { background: var(--register); }
+  .hero__cue-bar i:nth-child(3) { background: var(--ink); }
+  .hero__cue-bar i:nth-child(4) { background: var(--paper-3); }
+  .hero__cue-bar i:nth-child(5) { background: var(--check); }
+  .hero__cue:hover .slug { color: var(--fg); }
+
+  @media (min-width: 700px) {
+    .hero__word { font-stretch: 104%; }
+    .hero__target { display: block; }
+  }
+  @media (max-width: 699px) {
+    .hero__word { font-size: clamp(3.3rem, 17.4vw, 6rem); }
+  }
+  @media (min-width: 1024px) {
+    .hero__frame { display: grid; grid-template-rows: auto 1fr auto; }
+    .hero__top { display: grid; gap: var(--s-5); align-content: start; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .hero__word-wrap { margin-top: 0; }
+    .hero__disciplines { grid-column: 1 / span 6; }
+    .hero__intro { grid-column: 8 / span 5; }
+    .hero__bottom { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .hero__proof { grid-column: 1 / span 5; }
+    .hero__where { grid-column: 6 / span 4; }
+    .hero__cue { grid-column: 9 / span 4; justify-self: end; }
+    .hero__word { font-stretch: 110%; }
+  }
+</style>

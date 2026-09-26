@@ -1,0 +1,12 @@
+// The register rack: seven tools Mousa built. Promises are his own lines from /v2.
+export type Tool = { n: string; name: string; promise: string; what: string; href: string; live: string; media: string; caseStudy?: boolean };
+const M = 'https://mousabatarseh.com';
+export const tools: Tool[] = [
+  { n: '01', name: 'ASAS Studio', promise: 'Build the page before you style it.', what: 'A structure-first Elementor studio: real blocks in grey, searchable in English and Arabic, stacked into a page and exported as native Elementor JSON.', href: '/work/asas-studio/', live: 'https://asas.build/', media: 'asas', caseStudy: true },
+  { n: '02', name: 'ChangeAtlas Commerce', promise: 'Know what an import will change before it runs.', what: 'Reads a catalog export in the browser and shows every change an import would make — before it runs.', href: '/work/changeatlas/', live: `${M}/changeatlas/`, media: 'changeatlas', caseStudy: true },
+  { n: '03', name: 'The Deals Operating System', promise: 'One intake row. Sixteen checks. One verdict.', what: 'Every promotion is checked against the system of record — price, cap, margin, dates — before it reaches a menu.', href: '/work/deals-os/', live: `${M}/deals-os/`, media: 'deals-os', caseStudy: true },
+  { n: '04', name: 'CSV Mapper', promise: 'A supplier’s spreadsheet arrives messy. It leaves as a store import.', what: 'Maps supplier columns to Shopify and WooCommerce import formats, checks them, and records every review decision.', href: '/work/csv-mapper/', live: `${M}/csv-mapper/`, media: 'csv-mapper', caseStudy: true },
+  { n: '05', name: 'DealProof', promise: 'Good deals. No surprises.', what: 'A guided promotion check before launch: price, dates, eligibility and channels.', href: `${M}/dealproof/`, live: `${M}/dealproof/`, media: 'dealproof' },
+  { n: '06', name: 'SEO Tools', promise: 'Sixty characters. Spend them on what people search for.', what: 'Nine private, in-browser SEO tools — SERP preview, schema, robots.txt, hreflang and more. Nothing is uploaded or tracked.', href: `${M}/SEO-Tools/`, live: `${M}/SEO-Tools/`, media: 'seo-tools' },
+  { n: '07', name: 'DiaMedical Commerce Intelligence Lab', promise: 'One question, followed all the way to the measurement.', what: 'An independent e-commerce case study: one buyer’s question traced through search, data, QA, a ticket and a measurement.', href: '/work/diamedical-lab/', live: `${M}/diamedical/`, media: 'diamedical-lab', caseStudy: true },
+];

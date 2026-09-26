@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+import IndexTable from '../../components/IndexTable.astro';
+import Plate from '../../components/Plate.astro';
+import { entries, entryCount, categories, countBy } from '../../data/work';
+import { orderedCases } from '../../data/cases';
+import { SITE_URL, CHECKED } from '../../data/site';
+
+const featured = orderedCases();
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/work/#page`,
+    name: 'All the work — Mousa Batarseh',
+    url: `${SITE_URL}/work/`,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: entries.length,
+      itemListElement: entries.map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: e.title, url: e.caseStudy ? `${SITE_URL}/work/${e.caseStudy}/` : e.url })),
+    },
+  },
+];
+---
+<Base title="All the work" description={`Every project, tool, case study, website, store, review and proposal by Mousa Batarseh — ${entryCount} entries, each linked to its case study or the live thing.`} path="/work/" og="work" jsonLd={jsonLd}>
+  <header class="archive__hero wrap">
+    <p class="kicker">The archive · checked {CHECKED}</p>
+    <h1 class="archive__title reg" data-text="All the work." data-register>All the work.</h1>
+    <p class="archive__lead lead"><span class="num">{entryCount}</span> entries. Rows marked → open a case study; rows marked ↗ open the live thing.</p>
+    <dl class="archive__counts">
+      {categories.map((c) => (
+        <div><dt class="slug">{c.label}</dt><dd class="num">{countBy(c.id)}</dd></div>
+      ))}
+    </dl>
+  </header>
+
+  <section class="archive__plates wrap" aria-labelledby="plates-title">
+    <h2 class="slug archive__label" id="plates-title">{featured.length} case studies</h2>
+    <ol class="plates" role="list">
+      {featured.map((c, i) => (
+        <li>
+          <a class="plate-link" href={`/work/${c.slug}/`} data-vt-plate data-part-host>
+            <Plate slug={c.media.hero} alt={`${c.title} — the live site`} title={c.title} url={c.url} caption={false} sizes="(min-width: 1024px) 30vw, (min-width: 700px) 45vw, 92vw" vtTarget aspect="16 / 10" />
+            <span class="plate-link__meta slug">{String(i + 1).padStart(2, '0')} · {c.kicker}</span>
+            <span class="plate-link__title reg" data-text={c.title} data-part>{c.title}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="archive__index section wrap" aria-labelledby="index-title">
+    <h2 class="h2 archive__index-title" id="index-title">The index.</h2>
+    <p class="archive__index-note">Grouped work sits under its parent. Statuses are honest: demos, fictional-company adaptations and independent studies are labelled as such.</p>
+    <IndexTable filters id="index-full" />
+  </section>
+</Base>
+
+<style>
+  .archive__hero { padding-top: calc(var(--nav-h) + var(--s-8)); display: grid; gap: var(--s-5); }
+  .archive__title { font-family: var(--font-display); font-size: clamp(3.5rem, 12vw, 12rem); font-weight: 860; font-stretch: 108%; line-height: 0.84; letter-spacing: -0.045em; }
+  .archive__lead { color: var(--fg-2); max-width: 44ch; }
+  .archive__counts { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--s-4) var(--gutter); margin-top: var(--s-5); }
+  .archive__counts div { border-top: 1px solid var(--fg); padding-top: var(--s-3); }
+  .archive__counts dd { margin: 4px 0 0; font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; }
+  .archive__plates { margin-top: var(--s-9); }
+  .archive__label { margin-bottom: var(--s-5); color: var(--fg); }
+  .plates { display: grid; gap: var(--s-7) var(--gutter); }
+  .plate-link { display: grid; gap: var(--s-3); text-decoration: none; }
+  .plate-link__meta { margin-top: var(--s-2); }
+  .plate-link__title { font-family: var(--font-display); font-weight: 780; font-stretch: 104%; font-size: clamp(1.4rem, 2.2vw, 2rem); line-height: 1.05; letter-spacing: -0.02em; transition: font-stretch var(--d-small) var(--ease-register); }
+  .plate-link:hover .plate-link__title { font-stretch: 112%; }
+  .archive__index-title { margin-bottom: var(--s-4); }
+  .archive__index-note { color: var(--fg-2); max-width: 60ch; margin-bottom: var(--s-7); }
+  @media (min-width: 700px) { .plates { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1024px) {
+    .plates { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .plates li:nth-child(3n + 2) { margin-top: var(--s-8); }
+    .plates li:nth-child(3n + 3) { margin-top: var(--s-5); }
+  }
+</style>

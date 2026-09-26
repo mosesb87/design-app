@@ -1,0 +1,25 @@
+---
+import { person } from '../data/site';
+const built = new Date().toISOString().slice(0, 10);
+const year = new Date().getFullYear();
+---
+<footer class="footer" data-ground-follow>
+  <div class="wrap footer__inner">
+    <p class="slug slug-list">
+      <span>© {year} {person.name}</span>
+      <span>{person.location}</span>
+      <span>Built {built}</span>
+      <!-- Replaced after the build with this page's measured weight (scripts/postbuild.mjs). -->
+      <span data-weight>This page: measured at build</span>
+    </p>
+    <p class="slug footer__type">Set in Hubot Sans, Mona Sans &amp; Azeret Mono · SIL Open Font License</p>
+    <p class="slug"><a href="#top">Back to top ↑</a></p>
+  </div>
+</footer>
+
+<style>
+  .footer { padding-block: var(--s-6) var(--s-7); background: var(--bg); color: var(--fg); }
+  :global(.grounds-js) .footer { background: transparent; }
+  .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-3) var(--s-6); border-top: 1px solid var(--line); padding-top: var(--s-5); }
+  .footer .slug { color: var(--fg-2); }
+</style>

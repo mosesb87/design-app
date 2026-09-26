@@ -1,0 +1,126 @@
+---
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/transitions.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import ContactFinale from '../components/ContactFinale.astro';
+import hubotUrl from '../fonts/hubot-sans-display.woff2?url';
+import monaUrl from '../fonts/mona-sans-text.woff2?url';
+import { person, SITE_URL } from '../data/site';
+import { entryCount } from '../data/work';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  og?: string;
+  type?: 'website' | 'article' | 'profile';
+  jsonLd?: Record<string, unknown>[];
+  contact?: boolean;
+  contactHeading?: string;
+  bodyClass?: string;
+}
+const { title, description, path, og = 'default', type = 'website', jsonLd = [], contact = true, contactHeading, bodyClass = '' } = Astro.props;
+const canonical = new URL(path, SITE_URL).href;
+const ogImage = new URL(`/og/${og}.png`, SITE_URL).href;
+const isPreview = process.env.VERCEL === '1' || process.env.PREVIEW === '1';
+const fullTitle = path === '/' ? title : `${title} — ${person.name}`;
+
+const personLd = {
+  '@type': 'Person',
+  '@id': `${SITE_URL}/#person`,
+  name: person.name,
+  url: `${SITE_URL}/`,
+  email: `mailto:${person.email}`,
+  telephone: '+1-248-810-1816',
+  jobTitle: 'Webmaster — WordPress, e-commerce, product data and SEO',
+  address: { '@type': 'PostalAddress', addressLocality: 'Warren', addressRegion: 'MI', addressCountry: 'US' },
+  knowsLanguage: ['en', 'ar'],
+  knowsAbout: ['WordPress', 'WooCommerce', 'Shopify', 'Elementor', 'Product data management', 'Catalog migration', 'Technical SEO', 'Google Analytics 4', 'Google Search Console', 'E-commerce operations'],
+  sameAs: [person.linkedin],
+};
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    personLd,
+    { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: person.name, publisher: { '@id': `${SITE_URL}/#person` }, inLanguage: 'en' },
+    ...jsonLd,
+  ],
+};
+---
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {isPreview && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="theme-color" content="#efece4" />
+    <meta name="color-scheme" content="light" />
+    <meta name="author" content={person.name} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href={hubotUrl} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={monaUrl} as="font" type="font/woff2" crossorigin />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={person.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${title} — ${person.name}`} />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(graph)} />
+
+    <script is:inline>
+      document.documentElement.classList.replace('no-js', 'js');
+      // View-transition naming must be registered before first render.
+      (function () {
+        var NAME = 'project-plate';
+        addEventListener('pageswap', function (e) {
+          if (!e.viewTransition || !e.activation || !e.activation.entry) return;
+          var to = new URL(e.activation.entry.url).pathname;
+          var links = document.querySelectorAll('a[data-vt-plate]');
+          for (var i = 0; i < links.length; i++) {
+            if (new URL(links[i].href).pathname === to) {
+              var t = links[i].querySelector('[data-vt-target]');
+              if (t) t.style.viewTransitionName = NAME;
+              break;
+            }
+          }
+        });
+        addEventListener('pagereveal', function (e) {
+          if (!e.viewTransition) return;
+          var hero = document.querySelector('[data-vt-hero]');
+          if (!hero) return;
+          hero.style.viewTransitionName = NAME;
+          e.viewTransition.finished.finally(function () { hero.style.viewTransitionName = ''; });
+        });
+      })();
+    </script>
+  </head>
+  <body class={bodyClass} id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Nav current={path} count={entryCount} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    {contact && <ContactFinale heading={contactHeading} />}
+    <Footer />
+    <script>
+      import '../scripts/app';
+    </script>
+  </body>
+</html>

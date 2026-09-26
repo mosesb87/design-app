@@ -1,0 +1,98 @@
+---
+import Mark from './Mark.astro';
+import { person } from '../data/site';
+interface Props { heading?: string }
+const { heading = person.contactLine } = Astro.props;
+---
+<section class="finale" id="contact" data-chapter="red" data-ground="red" aria-labelledby="contact-title" data-contact>
+  <div class="wrap finale__inner">
+    <p class="kicker finale__kicker">Contact</p>
+    <h2 class="finale__title reg" id="contact-title" data-text={heading} data-register>{heading}</h2>
+    <p class="finale__sub lead">{person.contactSub}</p>
+
+    <div class="finale__email-row">
+      <a class="finale__email reg" href={`mailto:${person.email}`} data-text={person.email} data-part data-email>
+        {person.email}
+      </a>
+      <div class="finale__actions">
+        <button class="btn finale__copy" type="button" data-copy={person.email}>
+          <span data-copy-label>Copy email</span>
+        </button>
+        <span class="finale__stamp" role="status" aria-live="polite" data-copy-status></span>
+      </div>
+    </div>
+
+    <dl class="finale__ledger">
+      <div><dt class="slug">Email</dt><dd><a href={`mailto:${person.email}`}>{person.email}</a></dd></div>
+      <div><dt class="slug">Phone</dt><dd><a href={person.phoneHref}>{person.phoneDisplay}</a></dd></div>
+      <div><dt class="slug">LinkedIn</dt><dd><a href={person.linkedin} rel="noopener">{person.linkedinLabel} <span aria-hidden="true">↗</span></a></dd></div>
+      <div><dt class="slug">Based in</dt><dd>{person.location} · {person.region}</dd></div>
+    </dl>
+    <Mark size={56} class="finale__mark" />
+  </div>
+</section>
+
+<style>
+  .finale {
+    background: var(--bg);
+    color: var(--fg);
+    padding-block: clamp(96px, 16vw, 240px) clamp(64px, 8vw, 128px);
+    position: relative;
+    overflow: hidden;
+  }
+  :global(.grounds-js) .finale { background: transparent; }
+  .finale__inner { display: grid; gap: var(--s-6); position: relative; }
+  .finale__kicker { color: var(--fg); }
+  .finale__title {
+    font-family: var(--font-display);
+    font-weight: 820;
+    font-stretch: 110%;
+    font-size: clamp(2.5rem, 7.2vw, 7.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    max-width: 16ch;
+    text-wrap: balance;
+  }
+  .finale__sub { color: var(--fg-2); max-width: 32ch; }
+  .finale__email-row { display: grid; gap: var(--s-5); margin-top: var(--s-6); padding-top: var(--s-6); border-top: 1px solid var(--line); }
+  .finale__email {
+    font-family: var(--font-display);
+    font-weight: 760;
+    font-stretch: 100%;
+    font-size: clamp(1.5rem, 5.4vw, 5.25rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    justify-self: start;
+    transition: font-stretch var(--d-small) var(--ease-register);
+  }
+  .finale__email:hover { font-stretch: 108%; }
+  .finale__actions { display: flex; align-items: center; gap: var(--s-5); flex-wrap: wrap; }
+  .finale__copy { --btn-bg: var(--fg); --btn-fg: var(--sheet-ground); }
+  .finale__copy:hover { box-shadow: -4px 4px 0 0 #ffd2c7, 4px -4px 0 0 var(--ink); }
+  .finale__stamp {
+    font: 600 var(--t-slug) / 1 var(--font-mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg);
+    min-height: 1em;
+  }
+  .finale__stamp:not(:empty) {
+    padding: 8px 10px;
+    border: 1.5px solid currentColor;
+    transform: rotate(-3deg);
+    display: inline-block;
+  }
+  .finale__ledger {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: var(--s-5) var(--gutter);
+    margin-top: var(--s-7);
+  }
+  .finale__ledger div { border-top: 1px solid var(--line); padding-top: var(--s-3); }
+  .finale__ledger dt { color: var(--fg-2); margin-bottom: 6px; }
+  .finale__ledger dd { margin: 0; font-weight: 500; }
+  .finale__ledger a { text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
+  .finale__inner :global(.finale__mark) { position: absolute; right: var(--margin); top: 0; color: var(--fg); }
+</style>

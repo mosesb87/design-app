@@ -1,0 +1,91 @@
+---
+// S5 — The register (night chapter): seven tools as real recorded runs on a horizontal track.
+// Desktop + motion: sticky track driven by scroll. Touch: native scroll-snap. Reduced motion: a vertical list.
+import VideoPlate from '../VideoPlate.astro';
+import Plate from '../Plate.astro';
+import { tools } from '../../data/tools';
+import { media } from '../../lib/media';
+---
+<section class="rack" id="systems" data-chapter="night" data-ground="night" data-rack aria-labelledby="rack-title">
+  <div class="rack__head wrap">
+    <p class="kicker">The register · Systems I built</p>
+    <h2 class="rack__title h2 reg" id="rack-title" data-text="Built to fix something real." data-register>Built to fix something real.</h2>
+    <p class="rack__sub">Working tools, running live. Each one makes the check run before the mistake does.</p>
+    <p class="slug rack__hint" aria-hidden="true">{tools.length} tools · scroll to move along the rack</p>
+  </div>
+  <div class="rack__viewport" data-rack-viewport>
+    <ol class="rack__track" role="list" data-rack-track>
+      {tools.map((t) => (
+        <li class="tool" data-tool>
+          <div class="tool__text">
+            <p class="slug tool__n">{t.n} / {String(tools.length).padStart(2, '0')}</p>
+            <h3 class="tool__name">{t.name}</h3>
+            <p class="tool__promise" data-promise>{t.promise}</p>
+            <p class="tool__what">{t.what}</p>
+            <p class="tool__links">
+              <a class="link-arrow" href={t.href}>{t.caseStudy ? 'Case study' : 'Open the tool'} <span class="arrow" aria-hidden="true">{t.caseStudy ? '→' : '↗'}</span></a>
+              {t.caseStudy && <a class="link-arrow tool__live" href={t.live} rel="noopener">Live <span class="arrow" aria-hidden="true">↗</span></a>}
+            </p>
+          </div>
+          <div class="tool__media">
+            {media(t.media)?.video ? (
+              <VideoPlate slug={t.media} label={`Recording of ${t.name} in use`} />
+            ) : (
+              <Plate slug={t.media} alt={`${t.name} — screenshot`} title={t.name} url={t.live} sizes="(min-width: 1024px) 40vw, 86vw" />
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .rack { background: var(--bg); color: var(--fg); padding-block: var(--section) calc(var(--section) * 0.8); overflow: clip; }
+  :global(.grounds-js) .rack { background: transparent; }
+  .rack__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-8); }
+  .rack__title { max-width: 16ch; }
+  .rack__sub { color: var(--fg-2); max-width: 44ch; font-size: var(--t-lead); line-height: 1.35; }
+  .rack__hint { color: var(--fg-2); }
+  .rack__viewport { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; padding-inline: var(--margin); scroll-padding-inline: var(--margin); -webkit-overflow-scrolling: touch; }
+  .rack__track { display: flex; gap: var(--s-6); width: max-content; padding-bottom: var(--s-5); }
+  .tool {
+    scroll-snap-align: start;
+    width: min(86vw, 1180px);
+    display: grid;
+    gap: var(--s-5);
+    align-content: start;
+    border-top: 1px solid var(--line);
+    padding-top: var(--s-5);
+  }
+  .tool__name { font-family: var(--font-mono); font-size: var(--t-slug); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg); margin-top: 6px; }
+  .tool__promise {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-stretch: 100%;
+    font-size: clamp(1.9rem, 4.2vw, 4.25rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-top: var(--s-3);
+    text-wrap: balance;
+  }
+  .tool__what { color: var(--fg-2); max-width: 44ch; margin-top: var(--s-4); }
+  .tool__links { display: flex; gap: var(--s-5); margin-top: var(--s-5); flex-wrap: wrap; }
+  .tool__links a { min-height: 44px; align-items: center; }
+  .tool__live { color: var(--fg-2); }
+
+  @media (min-width: 1024px) {
+    .rack__head { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .rack__head > * { grid-column: 1 / span 8; }
+    .rack__hint { grid-column: 10 / span 3; align-self: end; justify-self: end; }
+    .tool { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr); column-gap: var(--s-7); width: min(78vw, 1320px); }
+  }
+
+  /* Desktop with motion: the viewport becomes a sticky stage and scroll drives the track (rack.ts). */
+  :global(.motion-ok.pointer-fine) .rack[data-rack-sticky] .rack__viewport { overflow: visible; scroll-snap-type: none; }
+
+  /* Reduced motion: a calm vertical list. */
+  :global(.motion-reduced) .rack__viewport { overflow: visible; }
+  :global(.motion-reduced) .rack__track { flex-direction: column; width: auto; gap: var(--s-8); }
+  :global(.motion-reduced) .tool { width: auto; }
+</style>

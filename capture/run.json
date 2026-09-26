@@ -1,5 +1,5 @@
 {
- "nonce": 2,
+ "nonce": 3,
  "only": [
   "united-textile",
   "firefly-burgers",
@@ -26,10 +26,28 @@
   "ptee-online"
  ],
  "force": [
+  "united-textile",
+  "firefly-burgers",
+  "eat-with-samar",
+  "great-lakes-cigar-festival",
+  "ptee-renewal",
+  "btee-build",
   "asas",
   "asas-studio-app",
+  "changeatlas",
   "changeatlas-app",
   "changeatlas-review-demo",
+  "deals-os",
+  "csv-mapper",
+  "dealproof",
+  "seo-tools",
+  "diamedical-lab",
+  "review-oakwood",
+  "review-vanguard",
+  "review-biotrust",
+  "review-carhartt-reworked",
+  "review-jbtools",
+  "review-hayhouse",
   "ptee-online"
  ],
  "skipExisting": true,

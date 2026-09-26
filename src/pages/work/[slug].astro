@@ -1,0 +1,388 @@
+---
+import Base from '../../layouts/Base.astro';
+import Plate from '../../components/Plate.astro';
+import Picture from '../../components/Picture.astro';
+import VideoPlate from '../../components/VideoPlate.astro';
+import StructurePlate from '../../components/StructurePlate.astro';
+import Mark from '../../components/Mark.astro';
+import { orderedCases, type CaseStudy } from '../../data/cases';
+import { media, view, capturedDate, domain } from '../../lib/media';
+import { SITE_URL, person } from '../../data/site';
+
+export function getStaticPaths() {
+  const list = orderedCases();
+  return list.map((c, i) => ({ params: { slug: c.slug }, props: { c, i, next: list[(i + 1) % list.length], total: list.length } }));
+}
+interface Props { c: CaseStudy; i: number; next: CaseStudy; total: number }
+const { c, i, next, total } = Astro.props;
+const plateNo = `Plate ${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
+const m = media(c.media.hero);
+const date = capturedDate(c.media.hero);
+const full = view(c.media.full || '', 'desktop-full');
+const mobFull = view(c.media.mobile || '', 'mobile-full') || view(c.media.mobile || '', 'mobile-hero');
+const mobHero = view(c.media.mobile || c.media.hero, 'mobile-hero');
+const video = c.media.video ? media(c.media.video)?.video : undefined;
+const hasOutline = !!m?.outline;
+const nextHero = view(next.media.hero, 'desktop-hero');
+const group = c.group === 'systems' ? 'Systems' : 'Sites & stores';
+const description = c.summary;
+const jsonLd = [
+  {
+    '@type': 'CreativeWork',
+    '@id': `${SITE_URL}/work/${c.slug}/#work`,
+    name: c.title,
+    description: c.summary,
+    url: `${SITE_URL}/work/${c.slug}/`,
+    creator: { '@id': `${SITE_URL}/#person` },
+    genre: c.kicker,
+    inLanguage: c.languages.map((l) => (l === 'Arabic' ? 'ar' : 'en')),
+    sameAs: c.url,
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Work', item: `${SITE_URL}/work/` },
+      { '@type': 'ListItem', position: 3, name: c.title, item: `${SITE_URL}/work/${c.slug}/` },
+    ],
+  },
+];
+---
+<Base title={c.title} description={description} path={`/work/${c.slug}/`} og={`work-${c.slug}`} type="article" jsonLd={jsonLd}>
+  <article class="case">
+    <!-- C1 · Hero -->
+    <header class="case__hero wrap">
+      <nav class="slug case__crumbs slug-list" aria-label="Breadcrumb">
+        <a href="/work/">Work</a><span>{group}</span><span aria-current="page">{plateNo}</span>
+      </nav>
+      <p class="kicker case__kicker">{c.kicker}</p>
+      <h1 class="case__title reg" data-text={c.title} data-register>{c.title}</h1>
+      {c.promise && <p class="case__promise">{c.promise}</p>}
+      <p class="case__summary lead">{c.summary}</p>
+      <dl class="case__facts">
+        {c.platform.length > 0 && <div><dt class="slug">Platform</dt><dd>{c.platform.join(' · ')}</dd></div>}
+        <div><dt class="slug">Languages</dt><dd>{c.languages.join(' + ')}</dd></div>
+        <div><dt class="slug">Live</dt><dd><a href={c.url} rel="noopener">{c.urlLabel || domain(c.url)} <span aria-hidden="true">↗</span></a></dd></div>
+        <div><dt class="slug">Captured</dt><dd class="num">{date || 'Pending'}</dd></div>
+      </dl>
+    </header>
+    <div class="case__lead-plate wrap">
+      <Plate slug={c.media.hero} alt={`${c.title} — the live site, first screen, desktop`} title={c.title} url={c.url} plate={plateNo} meta={['Desktop · 1440 × 900']} sizes="(min-width: 1200px) 1600px, 100vw" eager vtHero aspect="16 / 10" />
+    </div>
+
+    <!-- C2 · The brief (calm) -->
+    <section class="case__brief section wrap" aria-labelledby="brief-title">
+      <h2 class="slug case__label" id="brief-title">The work</h2>
+      <div class="case__prose prose" data-reveal="lines">
+        {c.intro.map((p) => <p>{p}</p>)}
+      </div>
+      <aside class="case__notes">
+        {c.role && (
+          <div class="case__role">
+            <p class="slug">Role, as published</p>
+            <p>“{c.role.text}”</p>
+            <p class="slug"><a href={c.role.source} rel="noopener">Source ↗</a></p>
+          </div>
+        )}
+        {c.disclaimer && (
+          <div class="case__disclaimer">
+            <p class="slug">Note</p>
+            <p>{c.disclaimer}</p>
+          </div>
+        )}
+      </aside>
+    </section>
+
+    <!-- C3 · Exploded plates: Data / Structure / Surface -->
+    {m && (
+      <section class="exploded" data-exploded aria-labelledby="plates-title">
+        <div class="exploded__track" data-exploded-track>
+          <div class="exploded__sticky">
+            <div class="wrap exploded__grid">
+              <div class="exploded__legend">
+                <p class="kicker">Three plates, one page</p>
+                <h2 class="exploded__title h2" id="plates-title">What sits under the surface.</h2>
+                <ol class="exploded__labels" role="list">
+                  <li data-layer-label><span class="slug">01 · Surface</span> The live page, captured {date}.</li>
+                  <li data-layer-label><span class="slug">02 · Structure</span> Its layout, traced by script from the same page.</li>
+                  <li data-layer-label><span class="slug">03 · Data</span> The facts it runs on.</li>
+                </ol>
+              </div>
+              <div class="exploded__stage" aria-hidden="true">
+                <div class="stack" data-stack>
+                  <div class="layer layer--data" data-layer>
+                    <p class="layer__tag slug">03 · Data</p>
+                    <dl class="layer__rows">
+                      {c.spec.slice(0, 4).map((f) => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
+                      {(c.metrics || []).slice(0, 2).map((x) => <div><dt>{x.label}</dt><dd class="num">{x.value}</dd></div>)}
+                    </dl>
+                  </div>
+                  <div class="layer layer--structure" data-layer>
+                    <p class="layer__tag slug">02 · Structure</p>
+                    {hasOutline ? <StructurePlate slug={c.media.hero} /> : <div class="layer__blank"></div>}
+                  </div>
+                  <div class="layer layer--surface" data-layer>
+                    <p class="layer__tag slug">01 · Surface</p>
+                    <Picture slug={c.media.hero} v="desktop-hero" alt="" sizes="(min-width: 1024px) 50vw, 90vw" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- C4 · Features -->
+    {c.features && c.features.length > 0 && (
+      <section class="case__features section wrap" aria-labelledby="features-title">
+        <h2 class="slug case__label" id="features-title">How it works</h2>
+        <ol class="features" role="list" data-rows>
+          {c.features.map((f, n) => (
+            <li class="feature">
+              <span class="slug num">{String(n + 1).padStart(2, '0')}</span>
+              <h3 class="feature__title">{f.title}</h3>
+              <p class="feature__text">{f.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    <!-- C5 · The whole page, read top to bottom -->
+    {(full || mobFull) && (
+      <section class="case__read section" aria-labelledby="read-title">
+        <div class="wrap case__read-grid">
+          <header class="case__read-head">
+            <h2 class="slug case__label" id="read-title">The live page, top to bottom</h2>
+            <p class="case__read-note">Scroll past the frames and the page inside scrolls with you. Captured {date} in a real browser.</p>
+          </header>
+          {full && (
+            <figure class="sframe-fig sframe-fig--desk">
+              <div class="sframe crop" data-scrollframe tabindex="0" aria-label={`${c.title} — full desktop page (scrollable)`}>
+                <div class="sframe__inner" data-scrollframe-inner><Picture data={full} alt={`${c.title} — the full desktop page`} sizes="(min-width: 1024px) 60vw, 92vw" /></div>
+                <span class="crop__b" aria-hidden="true"></span>
+              </div>
+              <figcaption class="slug slug-list"><span>Desktop</span><span>1440 wide</span><span>{domain(c.url)}</span></figcaption>
+            </figure>
+          )}
+          {mobFull && (
+            <figure class="sframe-fig sframe-fig--mob">
+              <div class="sframe sframe--mob crop" data-scrollframe tabindex="0" aria-label={`${c.title} — full mobile page (scrollable)`}>
+                <div class="sframe__inner" data-scrollframe-inner><Picture data={mobFull} alt={`${c.title} — the full mobile page`} sizes="(min-width: 1024px) 22vw, 60vw" /></div>
+                <span class="crop__b" aria-hidden="true"></span>
+              </div>
+              <figcaption class="slug slug-list"><span>Mobile</span><span>390 wide</span></figcaption>
+            </figure>
+          )}
+        </div>
+      </section>
+    )}
+
+    <!-- C6 · A real session -->
+    {video && c.media.video && (
+      <section class="case__rec section section--tight wrap" aria-labelledby="rec-title">
+        <h2 class="slug case__label" id="rec-title">A real session</h2>
+        <VideoPlate slug={c.media.video} label={`Screen recording of ${c.title} being scrolled in a real browser`} />
+      </section>
+    )}
+
+    <!-- C7 · Receipts -->
+    {(c.metrics?.length || c.spec.length) && (
+      <section class="case__receipts section wrap" aria-labelledby="receipts-title">
+        <h2 class="case__receipts-title h2" id="receipts-title">{c.metrics?.length ? 'Receipts.' : 'The spec.'}</h2>
+        {c.metrics && c.metrics.length > 0 && (
+          <ul class="receipts" role="list">
+            {c.metrics.map((x) => (
+              <li class="receipt" data-count-host>
+                <p class="receipt__num num" data-count>{x.value}</p>
+                <p class="receipt__label">{x.label}</p>
+                <p class="slug" data-count-after>Source: <a href={x.source} rel="noopener">{domain(x.source)}</a>{x.note && <> · {x.note}</>}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+        <dl class="spec-table">
+          {c.spec.map((f) => <div><dt class="slug">{f.label}</dt><dd>{f.value}</dd></div>)}
+        </dl>
+      </section>
+    )}
+
+    <!-- C8 · More captures & family -->
+    {c.media.more && c.media.more.length > 0 && (
+      <section class="case__more section wrap" aria-labelledby="more-title">
+        <h2 class="slug case__label" id="more-title">Also part of this work</h2>
+        <ul class="more-grid" role="list">
+          {c.media.more.map((x) => (
+            <li><Plate slug={x.slug} alt={x.label} title={x.label} url={media(x.slug)?.url || undefined} meta={[x.label]} sizes="(min-width: 1024px) 40vw, 92vw" aspect="16 / 10" /></li>
+          ))}
+        </ul>
+      </section>
+    )}
+    {c.family && c.family.length > 0 && (
+      <section class="case__family section section--tight wrap" aria-labelledby="family-title">
+        <h2 class="slug case__label" id="family-title">The family</h2>
+        <ul class="family" role="list">
+          {c.family.map((f) => (
+            <li><a href={f.url} rel="noopener"><span class="family__title">{f.title}</span><span class="family__note">{f.note}</span><span aria-hidden="true">↗</span></a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section class="case__links section section--tight wrap" aria-label="Links">
+      <a class="btn" href={c.url} rel="noopener">Open the live {c.group === 'systems' ? 'tool' : 'site'} <span class="arrow" aria-hidden="true">↗</span></a>
+      {c.related?.map((r) => <a class="link-arrow" href={r.url} rel="noopener">Read: {r.title} <span class="arrow" aria-hidden="true">↗</span></a>)}
+    </section>
+
+    <!-- C9 · Next -->
+    <nav class="next" aria-label="Next case study">
+      <a class="next__link wrap" href={`/work/${next.slug}/`} data-vt-plate data-part-host>
+        <span class="slug">Next plate</span>
+        <span class="next__title reg" data-text={next.title} data-part>{next.title}</span>
+        <span class="next__kicker slug">{next.kicker} →</span>
+        {nextHero && <span class="next__peek" data-vt-target><Picture data={nextHero} alt="" sizes="40vw" /></span>}
+        <Mark size={40} class="next__mark" />
+      </a>
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .case__hero { padding-top: calc(var(--nav-h) + var(--s-8)); display: grid; gap: var(--s-5); }
+  .case__crumbs a { border: 0; text-decoration: underline; text-underline-offset: 3px; }
+  .case__title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 9.5vw, 10rem);
+    font-weight: 840;
+    font-stretch: 106%;
+    line-height: 0.86;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+    max-width: 14ch;
+  }
+  .case__promise { font-family: var(--font-display); font-weight: 700; font-stretch: 104%; font-size: var(--t-h3); line-height: 1.15; max-width: 28ch; }
+  .case__summary { color: var(--fg-2); max-width: 46ch; }
+  .case__facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4) var(--gutter); margin-top: var(--s-4); }
+  .case__facts div { border-top: 1px solid var(--line); padding-top: var(--s-3); }
+  .case__facts dd { margin: 4px 0 0; font-weight: 520; }
+  .case__lead-plate { margin-top: var(--s-8); }
+
+  .case__label { color: var(--fg); margin-bottom: var(--s-5); }
+  .case__brief { display: grid; gap: var(--s-6); }
+  .case__prose { font-size: var(--t-lead); line-height: 1.42; letter-spacing: -0.01em; max-width: 40ch; }
+  .case__notes { display: grid; gap: var(--s-5); align-content: start; }
+  .case__role, .case__disclaimer { border-top: 1px solid var(--line); padding-top: var(--s-3); display: grid; gap: 6px; max-width: 40ch; }
+  .case__role p:nth-child(2) { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; line-height: 1.2; }
+  .case__disclaimer p:last-child { color: var(--fg-2); }
+
+  /* Exploded plates — default is the static exploded diagram */
+  .exploded { padding-block: var(--section); }
+  .exploded__grid { display: grid; gap: var(--s-7); align-items: center; }
+  .exploded__legend { display: grid; gap: var(--s-4); }
+  .exploded__title { max-width: 12ch; }
+  .exploded__labels { display: grid; gap: var(--s-3); margin-top: var(--s-4); }
+  .exploded__labels li { border-top: 1px solid var(--line); padding-top: var(--s-3); max-width: 36ch; }
+  .exploded__labels .slug { display: block; color: var(--fg); margin-bottom: 4px; }
+  .exploded__stage { display: grid; place-items: center; min-height: 440px; }
+  .stack {
+    --w: min(80vw, 440px);
+    position: relative;
+    width: var(--w);
+    aspect-ratio: 16 / 10;
+    transform-style: preserve-3d;
+    transform: perspective(1600px) rotateX(54deg) rotateZ(-28deg);
+  }
+  .layer { position: absolute; inset: 0; overflow: hidden; background: var(--paper); box-shadow: 0 0 0 1px var(--rule), 0 26px 40px -24px rgb(20 20 20 / 0.35); backface-visibility: hidden; }
+  .layer--data { transform: translateZ(0); background: #fbfaf6; padding: 6% 7%; }
+  .layer--structure { transform: translateZ(90px); }
+  .layer--surface { transform: translateZ(180px); }
+  .layer :global(picture), .layer :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .layer__tag { position: absolute; left: 8px; top: 6px; z-index: 2; background: var(--ink); color: var(--paper); padding: 3px 6px; font-size: 9px; }
+  .layer--data .layer__tag { position: static; display: inline-block; margin-bottom: 8px; }
+  .layer__rows { display: grid; gap: 3px; font: 500 clamp(8px, 1vw, 12px) / 1.35 var(--font-mono); }
+  .layer__rows div { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed var(--rule); padding-bottom: 3px; }
+  .layer__rows dt { color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.04em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .layer__rows dd { margin: 0; font-weight: 600; text-align: right; }
+  .layer__blank { width: 100%; height: 100%; background: repeating-linear-gradient(0deg, var(--paper-2) 0 18px, var(--paper) 18px 36px); }
+
+  :global(.motion-ok) .exploded { padding-block: 0; }
+  :global(.motion-ok) .exploded__track { height: 240vh; }
+  :global(.motion-ok) .exploded__sticky { position: sticky; top: 0; height: 100svh; display: flex; align-items: center; overflow: hidden; }
+  :global(.motion-ok) .exploded__sticky > .wrap { width: 100%; }
+  :global(.motion-ok) .stack { transform: none; }
+  :global(.motion-ok) .layer { transform: none; }
+
+  .features { display: grid; gap: var(--s-5) var(--gutter); }
+  .feature { border-top: 1px solid var(--line); padding-top: var(--s-4); display: grid; gap: 6px; }
+  .feature__title { font-family: var(--font-display); font-weight: 760; font-stretch: 106%; font-size: var(--t-h3); line-height: 1.1; }
+  .feature__text { color: var(--fg-2); max-width: 40ch; }
+
+  .case__read-grid { display: grid; gap: var(--s-6); align-items: start; }
+  .case__read-note { color: var(--fg-2); max-width: 36ch; }
+  .sframe { position: relative; height: min(78vh, 760px); overflow-y: auto; overflow-x: hidden; background: var(--paper-2); overscroll-behavior: contain; }
+  .sframe--mob { height: min(78vh, 760px); max-width: 360px; }
+  :global(.is-driven).sframe { overflow: hidden; }
+  .sframe__inner :global(img) { width: 100%; height: auto; }
+  .sframe-fig figcaption { margin-top: var(--s-3); }
+
+  .receipts { display: grid; gap: var(--s-6) var(--gutter); margin-block: var(--s-7); }
+  .receipt { border-top: 1px solid var(--fg); padding-top: var(--s-4); }
+  .receipt__num { font-family: var(--font-display); font-weight: 840; font-size: clamp(3rem, 7vw, 6.5rem); line-height: 1; letter-spacing: -0.04em; font-stretch: 96%; white-space: nowrap; }
+  .receipt__num :global(.odo) { display: inline-block; height: 1em; overflow: hidden; vertical-align: top; }
+  .receipt__num :global(.odo__strip > span) { display: block; height: 1em; line-height: 1; }
+  .receipt__label { font-size: var(--t-lead); line-height: 1.3; max-width: 26ch; margin-top: var(--s-3); }
+  .spec-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: var(--s-4) var(--gutter); }
+  .spec-table div { border-top: 1px solid var(--line); padding-top: var(--s-3); }
+  .spec-table dd { margin: 4px 0 0; font-weight: 520; }
+
+  .more-grid { display: grid; gap: var(--s-8) var(--gutter); }
+  .family li { border-top: 1px solid var(--line); }
+  .family li:last-child { border-bottom: 1px solid var(--line); }
+  .family a { display: grid; grid-template-columns: 1fr auto; gap: 4px var(--s-4); padding-block: var(--s-4); text-decoration: none; }
+  .family__title { font-family: var(--font-display); font-weight: 720; font-size: var(--t-h3); line-height: 1.15; }
+  .family__note { grid-column: 1; color: var(--fg-2); font-size: var(--t-small); }
+  .family a > span:last-child { grid-row: 1; grid-column: 2; }
+  .case__links { display: flex; flex-wrap: wrap; gap: var(--s-5); align-items: center; }
+
+  .next { border-top: 1px solid var(--fg); margin-top: var(--s-8); }
+  .next__link { display: grid; gap: var(--s-3); padding-block: var(--s-9); text-decoration: none; position: relative; overflow: hidden; }
+  .next__title { font-family: var(--font-display); font-weight: 840; font-stretch: 104%; font-size: clamp(2.5rem, 8vw, 8rem); line-height: 0.9; letter-spacing: -0.04em; max-width: 12ch; transition: font-stretch var(--d-small) var(--ease-register); }
+  .next__link:hover .next__title { font-stretch: 114%; }
+  .next__peek { position: absolute; right: var(--margin); top: 50%; width: min(36vw, 520px); aspect-ratio: 16 / 10; overflow: hidden; transform: translateY(-50%) translateX(12%); opacity: 0.18; transition: opacity var(--d-line) var(--ease-register), transform var(--d-line) var(--ease-register); pointer-events: none; display: none; }
+  .next__peek :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .next__link:hover .next__peek, .next__link:focus-visible .next__peek { opacity: 1; transform: translateY(-50%) translateX(0); }
+  .next__link :global(.next__mark) { position: absolute; right: var(--margin); bottom: var(--s-6); }
+
+  @media (min-width: 700px) {
+    .case__facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .receipts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .more-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1024px) {
+    .case__hero { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .case__hero > * { grid-column: 1 / span 12; }
+    .case__summary { grid-column: 1 / span 6; }
+    .case__promise { grid-column: 1 / span 7; }
+    .case__facts { grid-column: 7 / span 6; align-self: end; }
+    .case__brief { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .case__brief .case__label { grid-column: 1 / span 2; }
+    .case__prose { grid-column: 3 / span 6; }
+    .case__notes { grid-column: 10 / span 3; }
+    .exploded__grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .exploded__legend { grid-column: 1 / span 4; }
+    .exploded__stage { grid-column: 5 / span 8; min-height: 640px; }
+    .stack { --w: min(44vw, 720px); }
+    .layer--structure { transform: translateZ(150px); }
+    .layer--surface { transform: translateZ(300px); }
+    .layer__tag { font-size: 10px; }
+    .features { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .case__read-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .case__read-head { grid-column: 1 / span 3; position: sticky; top: calc(var(--nav-h) + 24px); }
+    .sframe-fig--desk { grid-column: 4 / span 6; }
+    .sframe-fig--mob { grid-column: 10 / span 3; }
+    .receipts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .next__peek { display: block; }
+  }
+</style>

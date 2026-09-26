@@ -1,0 +1,61 @@
+---
+// A real recording in crop marks. Plays only while it is the most visible video; posters + a control otherwise.
+import { media } from '../lib/media';
+interface Props { slug: string; label: string; caption?: string; class?: string }
+const { slug, label, caption, class: cls = '' } = Astro.props;
+const m = media(slug);
+const v = m?.video;
+const secs = v?.seconds ? `${Math.round(v.seconds)} s` : null;
+---
+{v && (
+  <figure class:list={['vplate', cls]} data-video>
+    <div class="vplate__frame crop" style={`aspect-ratio: ${v.w} / ${v.h}`}>
+      <video
+        muted
+        playsinline
+        loop
+        preload="none"
+        data-src={v.src}
+        poster={v.poster || undefined}
+        width={v.w}
+        height={v.h}
+        aria-label={label}
+      ></video>
+      <button class="vplate__toggle" type="button" aria-pressed="false" data-video-toggle>
+        <span class="vplate__icon" aria-hidden="true"></span>
+        <span class="visually-hidden" data-video-label>Play recording</span>
+      </button>
+      <span class="crop__b" aria-hidden="true"></span>
+    </div>
+    <figcaption class="slug slug-list vplate__cap">
+      <span>Recorded {m?.capturedAt?.slice(0, 10)}</span>
+      {secs && <span>{secs}</span>}
+      <span>Real session, muted</span>
+      {caption && <span>{caption}</span>}
+    </figcaption>
+  </figure>
+)}
+
+<style>
+  .vplate { margin: 0; }
+  .vplate__frame { position: relative; background: var(--night-2); }
+  .vplate__frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .vplate__toggle {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    opacity: 0.92;
+    transition: opacity var(--d-micro), transform var(--d-small) var(--ease-register);
+  }
+  .vplate__toggle:hover { opacity: 1; transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--sheet); }
+  .vplate__icon { width: 0; height: 0; border-left: 11px solid currentColor; border-top: 7px solid transparent; border-bottom: 7px solid transparent; margin-left: 3px; }
+  :global(.is-playing) .vplate__icon { width: 11px; height: 13px; border: 0; margin: 0; border-left: 4px solid currentColor; border-right: 4px solid currentColor; }
+  .vplate__cap { margin-top: var(--s-3); }
+</style>

@@ -71,7 +71,7 @@ async function saveStill(buf, file, cap, width) {
   return { w: m.width, h: m.height, bytes: fs.statSync(file).size };
 }
 
-async function record(page, spec, dir) {
+async function record(page, spec, dir, name = 'scroll') {
   const client = await page.context().newCDPSession(page);
   const frames = [];
   client.on('Page.screencastFrame', (f) => {
@@ -111,6 +111,14 @@ async function record(page, spec, dir) {
     } else if (s.do === 'click' && s.sel) {
       await page.click(s.sel, { timeout: 4000 }).catch(() => {});
       await sleep(s.ms ?? 1200);
+    } else if (s.do === 'type' && s.sel) {
+      await page.click(s.sel, { timeout: 4000 }).catch(() => {});
+      if (s.clear) await page.fill(s.sel, '').catch(() => {});
+      await page.type(s.sel, s.text || '', { delay: s.delay ?? 55 }).catch(() => {});
+      await sleep(s.ms ?? 700);
+    } else if (s.do === 'select' && s.sel) {
+      await page.selectOption(s.sel, s.value ? { value: s.value } : { index: s.index ?? 1 }).catch(() => {});
+      await sleep(s.ms ?? 900);
     } else if (s.do === 'mouse') {
       await page.mouse.move(s.x, s.y, { steps: s.steps || 25 });
       await sleep(s.ms ?? 300);
@@ -131,12 +139,13 @@ async function record(page, spec, dir) {
   });
   lines.push(`file 'f${String(frames.length - 1).padStart(5, '0')}.jpg'`);
   fs.writeFileSync(path.join(tmp, 'list.txt'), lines.join('\n'));
-  const mp4 = path.join(dir, 'scroll.mp4');
+  const mp4 = path.join(dir, `${name}.mp4`);
   execFileSync(FFMPEG, ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', 'list.txt', '-vf', 'scale=1280:-2:flags=lanczos,fps=30', '-c:v', 'libx264', '-preset', 'slow', '-crf', '23', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-an', mp4], { cwd: tmp });
   // Poster: the settled hero, i.e. the last frame before scrolling began.
   const holdEnd = frames[0].t + ((steps[0]?.do === 'wait' ? steps[0].ms : 0) / 1000);
-  const posterFrame = [...frames].reverse().find((f) => f.t <= holdEnd) || frames[0];
-  await sharp(Buffer.from(posterFrame.data, 'base64')).resize(1280).webp({ quality: 86 }).toFile(path.join(dir, 'scroll-poster.webp'));
+  const at = spec.poster === 'mid' ? frames[0].t + (frames[frames.length - 1].t - frames[0].t) * (spec.posterAt ?? 0.55) : holdEnd;
+  const posterFrame = [...frames].reverse().find((f) => f.t <= at) || frames[0];
+  await sharp(Buffer.from(posterFrame.data, 'base64')).resize(1280).webp({ quality: 86 }).toFile(path.join(dir, `${name}-poster.webp`));
   fs.rmSync(tmp, { recursive: true, force: true });
   const secs = frames[frames.length - 1].t - frames[0].t;
   return { ok: true, frames: frames.length, seconds: +secs.toFixed(2), bytes: fs.statSync(mp4).size };
@@ -177,18 +186,21 @@ for (const t of targets) {
       await context.close();
     }
   }
-  if (t.record && !(skipExisting && fs.existsSync(path.join(dir, 'scroll.mp4')))) {
+  const recs = [...(t.record ? [{ name: 'scroll', ...(typeof t.record === 'object' ? t.record : {}) }] : []), ...(t.interact ? [{ name: 'interact', poster: 'mid', ...t.interact }] : [])];
+  for (const r of recs) {
+    if (skipExisting && fs.existsSync(path.join(dir, `${r.name}.mp4`))) continue;
     const { context, page } = await newPage('record');
     try {
       const o = await open(page, t.url);
       if (o.ok) {
         for (const k of t.keys || []) { await page.keyboard.press(k).catch(() => {}); await sleep(500); }
         if (t.css) await page.addStyleTag({ content: t.css }).catch(() => {});
-        entry.recording = await record(page, typeof t.record === 'object' ? t.record : {}, dir);
-        console.log(`  ${entry.recording.ok ? '✓' : '✗'} recording ${JSON.stringify(entry.recording)}`);
-      } else entry.recording = { ok: false, ...o };
+        const res = await record(page, r, dir, r.name);
+        if (r.name === 'scroll') entry.recording = res; else entry.interaction = res;
+        console.log(`  ${res.ok ? '✓' : '✗'} ${r.name} recording ${JSON.stringify(res)}`);
+      } else entry[r.name === 'scroll' ? 'recording' : 'interaction'] = { ok: false, ...o };
     } catch (e) {
-      entry.recording = { ok: false, error: String(e.message || e).split('\n')[0] };
+      entry[r.name === 'scroll' ? 'recording' : 'interaction'] = { ok: false, error: String(e.message || e).split('\n')[0] };
     } finally {
       await context.close();
     }

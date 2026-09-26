@@ -116,7 +116,54 @@
    "distance": 4.2,
    "dur": 9000
   },
-  "dump": true
+  "dump": true,
+  "interact": {
+   "steps": [
+    {
+     "do": "wait",
+     "ms": 800
+    },
+    {
+     "do": "scroll",
+     "sel": "div.kitrow",
+     "dur": 2400
+    },
+    {
+     "do": "wait",
+     "ms": 600
+    },
+    {
+     "do": "click",
+     "sel": "div.kitrow button.kit:has-text(\"Clay\")",
+     "ms": 1100
+    },
+    {
+     "do": "click",
+     "sel": "div.kitrow button.kit:has-text(\"Plum\")",
+     "ms": 1100
+    },
+    {
+     "do": "click",
+     "sel": "div.kitrow button.kit:has-text(\"Teal\")",
+     "ms": 1100
+    },
+    {
+     "do": "click",
+     "sel": "div.kitrow button.kit:has-text(\"Navy\")",
+     "ms": 1100
+    },
+    {
+     "do": "click",
+     "sel": "div.kitrow button.kit:has-text(\"Orange\")",
+     "ms": 1100
+    },
+    {
+     "do": "click",
+     "sel": "div.kitrow button.kit:has-text(\"Blueprint\")",
+     "ms": 1100
+    }
+   ]
+  }
  },
  {
   "slug": "asas-studio-app",
@@ -172,7 +219,39 @@
    "mobile-full"
   ],
   "record": true,
-  "dump": true
+  "dump": true,
+  "interact": {
+   "steps": [
+    {
+     "do": "wait",
+     "ms": 800
+    },
+    {
+     "do": "scroll",
+     "sel": "#reg",
+     "dur": 2600
+    },
+    {
+     "do": "wait",
+     "ms": 900
+    },
+    {
+     "do": "click",
+     "sel": "#b-fix",
+     "ms": 1800
+    },
+    {
+     "do": "click",
+     "sel": "#b-orig",
+     "ms": 1600
+    },
+    {
+     "do": "click",
+     "sel": "#b-1001",
+     "ms": 1800
+    }
+   ]
+  }
  },
  {
   "slug": "csv-mapper",
@@ -186,7 +265,40 @@
    "mobile-full"
   ],
   "record": true,
-  "dump": true
+  "dump": true,
+  "interact": {
+   "steps": [
+    {
+     "do": "wait",
+     "ms": 800
+    },
+    {
+     "do": "scroll",
+     "sel": "#sample-choice",
+     "dur": 2200
+    },
+    {
+     "do": "select",
+     "sel": "#sample-choice",
+     "index": 1,
+     "ms": 700
+    },
+    {
+     "do": "click",
+     "sel": "#load-sample",
+     "ms": 2600
+    },
+    {
+     "do": "scroll",
+     "by": 1.1,
+     "dur": 3200
+    },
+    {
+     "do": "wait",
+     "ms": 900
+    }
+   ]
+  }
  },
  {
   "slug": "dealproof",
@@ -212,7 +324,45 @@
    "mobile-hero"
   ],
   "record": true,
-  "dump": true
+  "dump": true,
+  "interact": {
+   "steps": [
+    {
+     "do": "wait",
+     "ms": 700
+    },
+    {
+     "do": "scroll",
+     "sel": "#m-title",
+     "dur": 1600
+    },
+    {
+     "do": "type",
+     "sel": "#m-title",
+     "clear": true,
+     "text": "Case-pack wholesale hoodies for retailers | United Textile",
+     "delay": 45,
+     "ms": 900
+    },
+    {
+     "do": "type",
+     "sel": "#m-url",
+     "clear": true,
+     "text": "https://shopunitedtextile.com/collections/hoodies",
+     "delay": 30,
+     "ms": 900
+    },
+    {
+     "do": "scroll",
+     "by": 0.6,
+     "dur": 1800
+    },
+    {
+     "do": "wait",
+     "ms": 900
+    }
+   ]
+  }
  },
  {
   "slug": "diamedical-lab",
@@ -250,7 +400,50 @@
    "mobile-hero"
   ],
   "record": true,
-  "dump": true
+  "dump": true,
+  "interact": {
+   "steps": [
+    {
+     "do": "wait",
+     "ms": 600
+    },
+    {
+     "do": "scroll",
+     "sel": "#gTabs",
+     "dur": 3200
+    },
+    {
+     "do": "click",
+     "sel": "#gTabs > button.chip:nth-of-type(2)",
+     "ms": 1300
+    },
+    {
+     "do": "click",
+     "sel": "#gTabs > button.chip:nth-of-type(3)",
+     "ms": 1300
+    },
+    {
+     "do": "click",
+     "sel": "#gTabs > button.chip:nth-of-type(5)",
+     "ms": 1300
+    },
+    {
+     "do": "scroll",
+     "sel": "#tFilter",
+     "dur": 2200
+    },
+    {
+     "do": "click",
+     "sel": "#tFilter > button.chip:nth-of-type(2)",
+     "ms": 1300
+    },
+    {
+     "do": "click",
+     "sel": "#tFilter > button.chip:nth-of-type(3)",
+     "ms": 1300
+    }
+   ]
+  }
  },
  {
   "slug": "review-oakwood",

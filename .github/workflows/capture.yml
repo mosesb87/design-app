@@ -44,9 +44,10 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: capture-${{ matrix.group }}
+          # Only what this job produced: its raw captures and its own group log.
           path: |
             capture/raw/
-            capture/reports/
+            capture/reports/capture-log-${{ matrix.group }}.json
           retention-days: 3
           if-no-files-found: ignore
 
@@ -71,7 +72,10 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: probe-reports
-          path: capture/reports/
+          # Only the probe and link reports — never stale copies of the capture logs.
+          path: |
+            capture/reports/probe/
+            capture/reports/links.json
           retention-days: 3
           if-no-files-found: ignore
 

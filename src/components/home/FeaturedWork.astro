@@ -1,0 +1,92 @@
+---
+// S4 — Then I make them work better: six sites and stores as plates in alternating asymmetric compositions.
+// The desktop capture bleeds to one edge; a mobile strip overlaps the opposite corner and moves at 1.12× (depth).
+import Plate from '../Plate.astro';
+import Picture from '../Picture.astro';
+import { siteCases } from '../../data/cases';
+import { view } from '../../lib/media';
+const items = siteCases();
+---
+<section class="featured section" id="work" aria-labelledby="featured-title">
+  <div class="wrap">
+    <header class="featured__head">
+      <p class="kicker">Sites & stores</p>
+      <h2 class="featured__title h2 reg" id="featured-title" data-text="Then I make them work better." data-register>Then I make them work better.</h2>
+      <p class="featured__sub">Storefronts and sites I built or ran — WooCommerce, Shopify and WordPress, in English and Arabic.</p>
+    </header>
+    <ol class="featured__list" role="list">
+      {items.map((c, i) => {
+        const mob = view(c.media.mobile || c.media.hero, 'mobile-hero');
+        return (
+          <li class:list={['feat', i % 2 ? 'feat--right' : 'feat--left']} data-part-host>
+            <a class="feat__link" href={`/work/${c.slug}/`} data-vt-plate aria-label={`${c.title} — case study`}>
+              <div class="feat__media">
+                <Plate slug={c.media.hero} alt={`${c.title} — desktop view of the live site`} title={c.title} url={c.url} plate={`Plate ${String(i + 1).padStart(2, '0')}`} meta={[c.platform.join(' · '), c.languages.join(' + ')].filter(Boolean)} sizes="(min-width: 1024px) 62vw, 92vw" vtTarget aspect="16 / 10" />
+                {mob && (
+                  <div class="feat__mobile" data-parallax="0.12" aria-hidden="true">
+                    <Picture data={mob} alt="" sizes="(min-width: 1024px) 14vw, 30vw" class="feat__mobile-pic" />
+                  </div>
+                )}
+              </div>
+              <div class="feat__text">
+                <p class="slug">{c.kicker}</p>
+                <h3 class="feat__title reg" data-text={c.title} data-part>{c.title}</h3>
+                <p class="feat__summary">{c.summary}</p>
+                <span class="feat__cta slug">Case study <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .featured { overflow-x: clip; }
+  .featured__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-9); }
+  .featured__title { max-width: 14ch; }
+  .featured__sub { color: var(--fg-2); max-width: 48ch; font-size: var(--t-lead); line-height: 1.35; }
+  .featured__list { display: grid; gap: clamp(96px, 14vw, 200px); }
+  .feat__link { display: grid; gap: var(--s-6); text-decoration: none; }
+  .feat__media { position: relative; }
+  .feat__mobile {
+    position: absolute;
+    width: 26%;
+    right: 4%;
+    bottom: -14%;
+    aspect-ratio: 390 / 844;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--rule), -8px 8px 0 var(--sheet), 8px -8px 0 var(--register);
+    background: var(--paper-2);
+  }
+  .feat__mobile :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .feat__text { display: grid; gap: var(--s-3); max-width: 46ch; }
+  .feat__title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-stretch: 104%;
+    font-size: clamp(2rem, 4.4vw, 4.25rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    transition: font-stretch var(--d-small) var(--ease-register);
+  }
+  .feat__summary { color: var(--fg-2); }
+  .feat__cta { color: var(--fg); display: inline-flex; gap: 8px; }
+  .feat__link:hover .feat__title, .feat__link:focus-visible .feat__title { font-stretch: 112%; }
+  .feat__link:focus-visible { outline-offset: 12px; }
+
+  @media (min-width: 1024px) {
+    .featured__head { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .featured__head > * { grid-column: 3 / span 8; }
+    .feat__link { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); align-items: end; }
+    .feat--left .feat__media { grid-column: 1 / span 8; margin-left: calc(var(--margin) * -1); }
+    .feat--left .feat__text { grid-column: 9 / span 4; padding-bottom: 4%; }
+    .feat--right .feat__media { grid-column: 5 / span 8; grid-row: 1; margin-right: calc(var(--margin) * -1); }
+    .feat--right .feat__text { grid-column: 1 / span 4; grid-row: 1; padding-bottom: 4%; }
+    .feat--left .feat__mobile { right: auto; left: calc(var(--margin) + 2%); }
+    .feat--right .feat__mobile { left: auto; right: calc(var(--margin) + 2%); }
+    .feat__mobile { width: 19%; bottom: -12%; }
+    .feat__text { padding-bottom: 0; }
+  }
+</style>

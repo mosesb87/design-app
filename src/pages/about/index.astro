@@ -1,0 +1,134 @@
+---
+import Base from '../../layouts/Base.astro';
+import { person, method, workflow, services, skills, toolGroups, courses, CHECKED } from '../../data/site';
+import { SITE_URL } from '../../data/site';
+const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url: `${SITE_URL}/about/`, mainEntity: { '@id': `${SITE_URL}/#person` } }];
+---
+<Base title="About" description={`About ${person.name}: seven years building and running WordPress sites and e-commerce stores — product data, SEO, operations and the tools that check them. Warren, Michigan.`} path="/about/" og="about" type="profile" jsonLd={jsonLd}>
+  <header class="about__hero wrap">
+    <p class="kicker">About · Warren, Michigan</p>
+    <h1 class="about__title reg" data-text="From fragile to boring." data-register>From fragile to boring.</h1>
+    <p class="about__lead lead">In the best way.</p>
+  </header>
+
+  <section class="about__intro section wrap" aria-labelledby="intro-title">
+    <h2 class="visually-hidden" id="intro-title">Who I am</h2>
+    <div class="about__prose prose" data-reveal="lines">
+      {person.about.map((p) => <p>{p}</p>)}
+    </div>
+    <dl class="about__ledger">
+      <div><dt class="slug">Based in</dt><dd>{person.location} · {person.region}</dd></div>
+      <div><dt class="slug">Experience</dt><dd>Seven years · WordPress since {person.wordpressSince}</dd></div>
+      <div><dt class="slug">Platforms</dt><dd>{[...person.platforms, ...person.builders].join(' · ')}</dd></div>
+      <div><dt class="slug">Languages</dt><dd>{person.languages.join(' · ')}</dd></div>
+    </dl>
+  </section>
+
+  <section class="about__method section wrap" aria-labelledby="method-title">
+    <h2 class="h2" id="method-title">Four steps, every single time.</h2>
+    <ol class="method" role="list" data-rows>
+      {method.map((m) => (
+        <li><span class="slug num">{m.n}</span><h3 class="method__title">{m.title}</h3><p class="method__text">{m.text}</p></li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="about__workflow section section--tight wrap" aria-labelledby="workflow-title">
+    <h2 class="slug about__label" id="workflow-title">The eleven-step workflow — start with the business goal, end with the measurement</h2>
+    <ol class="workflow" role="list">
+      {workflow.map(([t, d], i) => (
+        <li><span class="slug num">{String(i + 1).padStart(2, '0')}</span><span class="workflow__t">{t}</span><span class="workflow__d">{d}</span></li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="about__services section wrap" aria-labelledby="services-title">
+    <h2 class="h2" id="services-title">What I do.</h2>
+    <ol class="svc" role="list">
+      {services.map((s) => (
+        <li><span class="slug">{s.n}</span><h3 class="svc__t">{s.title}</h3><p class="svc__d">{s.text}</p><p class="slug svc__tools">{s.tools.join(' · ')}</p></li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="about__skills section wrap" aria-labelledby="skills-title">
+    <h2 class="h2" id="skills-title">The spec sheet.</h2>
+    <div class="skills">
+      {skills.map((g) => (
+        <div class="skills__group">
+          <h3 class="slug skills__title">{g.title}</h3>
+          <ul role="list">{g.items.map((it) => <li>{it}</li>)}</ul>
+        </div>
+      ))}
+      {toolGroups.map((g) => (
+        <div class="skills__group">
+          <h3 class="slug skills__title">Tools · {g.title}</h3>
+          <ul role="list">{g.items.map((it) => <li>{it}</li>)}</ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="about__courses section wrap" aria-labelledby="courses-title">
+    <h2 class="h2" id="courses-title">Courses & certifications.</h2>
+    <p class="about__courses-note">As listed on my previous portfolio; issuer as stated there.</p>
+    <ul class="courses" role="list" data-rows>
+      {courses.map((c) => (
+        <li><h3 class="courses__t">{c.title}</h3><p class="slug">{c.issuer}</p><p class="courses__d">{c.text}</p></li>
+      ))}
+    </ul>
+    <p class="slug about__checked">Content checked {CHECKED}</p>
+  </section>
+</Base>
+
+<style>
+  .about__hero { padding-top: calc(var(--nav-h) + var(--s-8)); display: grid; gap: var(--s-4); }
+  .about__title { font-family: var(--font-display); font-size: clamp(3.25rem, 11vw, 11rem); font-weight: 860; font-stretch: 108%; line-height: 0.84; letter-spacing: -0.045em; max-width: 10ch; }
+  .about__lead { font-family: var(--font-text); font-style: italic; color: var(--fg-2); }
+  .about__intro { display: grid; gap: var(--s-7); }
+  .about__prose { font-size: var(--t-lead); line-height: 1.42; letter-spacing: -0.01em; max-width: 40ch; }
+  .about__ledger { display: grid; gap: var(--s-4); align-content: start; }
+  .about__ledger div { border-top: 1px solid var(--line); padding-top: var(--s-3); }
+  .about__ledger dd { margin: 4px 0 0; font-weight: 520; }
+  .method { display: grid; gap: var(--s-5) var(--gutter); margin-top: var(--s-7); }
+  .method li { border-top: 1px solid var(--fg); padding-top: var(--s-4); display: grid; gap: 6px; }
+  .method__title { font-family: var(--font-display); font-weight: 780; font-stretch: 106%; font-size: var(--t-h3); line-height: 1.1; }
+  .method__text { color: var(--fg-2); }
+  .about__label { color: var(--fg); margin-bottom: var(--s-5); }
+  .workflow li { display: grid; grid-template-columns: 3em 1fr; gap: 2px var(--s-4); padding-block: 12px; border-top: 1px solid var(--line); }
+  .workflow__t { font-weight: 620; }
+  .workflow__d { grid-column: 2; color: var(--fg-2); font-size: var(--t-small); }
+  .svc { margin-top: var(--s-7); }
+  .svc li { display: grid; gap: 6px; padding-block: var(--s-5); border-top: 1px solid var(--line); }
+  .svc__t { font-family: var(--font-display); font-weight: 760; font-size: var(--t-h3); }
+  .svc__d { color: var(--fg-2); max-width: 56ch; }
+  .skills { display: grid; gap: var(--s-6) var(--gutter); margin-top: var(--s-7); }
+  .skills__title { color: var(--fg); border-top: 1px solid var(--fg); padding-top: var(--s-3); margin-bottom: var(--s-3); }
+  .skills__group li { padding-block: 6px; border-bottom: 1px solid var(--line); font-size: var(--t-small); }
+  .about__courses-note { color: var(--fg-2); margin-top: var(--s-3); }
+  .courses { display: grid; gap: var(--s-5) var(--gutter); margin-top: var(--s-6); }
+  .courses li { border-top: 1px solid var(--line); padding-top: var(--s-4); display: grid; gap: 4px; }
+  .courses__t { font-family: var(--font-display); font-weight: 720; font-size: 1.2rem; line-height: 1.15; }
+  .courses__d { color: var(--fg-2); font-size: var(--t-small); }
+  .about__checked { margin-top: var(--s-6); }
+  @media (min-width: 700px) {
+    .method { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .courses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1024px) {
+    .about__intro { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .about__prose { grid-column: 3 / span 6; }
+    .about__ledger { grid-column: 10 / span 3; }
+    .method { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .workflow { columns: 2; column-gap: var(--gutter); }
+    .workflow li { break-inside: avoid; }
+    .svc li { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); align-items: baseline; }
+    .svc li > .slug:first-child { grid-column: 1; }
+    .svc__t { grid-column: 2 / span 4; }
+    .svc__d { grid-column: 6 / span 4; }
+    .svc__tools { grid-column: 10 / span 3; }
+    .skills { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .courses { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+</style>

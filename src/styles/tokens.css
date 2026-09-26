@@ -1,0 +1,166 @@
+/* ─────────────────────────────────────────────────────────────
+   In Register — design tokens
+   Three plates: sheet (proof red) · register (blue) · shelf (ink)
+   Mirrors src/scripts/motion/tokens.ts — change both together.
+   ───────────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'Hubot';
+  src: url('../fonts/hubot-sans-display.woff2') format('woff2-variations');
+  font-weight: 500 900;
+  font-stretch: 88% 125%;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mona';
+  src: url('../fonts/mona-sans-text.woff2') format('woff2-variations');
+  font-weight: 380 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mona';
+  src: url('../fonts/mona-sans-text-italic.woff2') format('woff2-variations');
+  font-weight: 380 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Azeret';
+  src: url('../fonts/azeret-mono.woff2') format('woff2-variations');
+  font-weight: 400 600;
+  font-display: swap;
+}
+/* Metric-matched fallbacks keep layout stable while the variable fonts load. */
+@font-face {
+  font-family: 'Hubot Fallback';
+  src: local('Arial Black'), local('Arial Bold'), local('Helvetica Neue Bold'), local('Arial');
+  size-adjust: 96%;
+  ascent-override: 92%;
+  descent-override: 24%;
+}
+@font-face {
+  font-family: 'Mona Fallback';
+  src: local('Arial'), local('Helvetica Neue'), local('Helvetica');
+  size-adjust: 101%;
+  ascent-override: 90%;
+  descent-override: 23%;
+}
+
+:root {
+  /* Ground & ink */
+  --paper: #efece4;
+  --paper-2: #e4e0d5;
+  --paper-3: #d9d4c6;
+  --rule: #cfc9bb;
+  --ink: #141414;
+  --ink-2: #57534b;
+  --ink-3: #7a7569; /* non-text only: marks, rules (3.9:1) */
+  --night: #101114;
+  --night-2: #1b1d22;
+  --night-rule: #34373e;
+  --night-ink: #ecebe6;
+  --night-ink-2: #a9a8a1;
+
+  /* Plates */
+  --sheet: #e23d28; /* proof red — graphics & large text */
+  --sheet-text: #b3261a; /* small red text on paper */
+  --sheet-ground: #c4301d; /* contact finale ground */
+  --register: #1d3fd8; /* process blue */
+  --register-light: #8ea2ff; /* blue on night */
+  --sheet-light: #ff7a66; /* red on night */
+  --check: #0b6e3d; /* stamps only (5.3:1 on paper) */
+
+  /* Current chapter (overridden by [data-ground]) */
+  --bg: var(--paper);
+  --fg: var(--ink);
+  --fg-2: var(--ink-2);
+  --line: var(--rule);
+  --plate-a: var(--sheet);
+  --plate-b: var(--register);
+  --plate-blend: multiply;
+  --focus: var(--register);
+
+  /* Type families */
+  --font-display: 'Hubot', 'Hubot Fallback', 'Arial Black', system-ui, sans-serif;
+  --font-text: 'Mona', 'Mona Fallback', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --font-mono: 'Azeret', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* Type scale (fluid) */
+  --t-wordmark: clamp(3.3rem, 13.2vw, 13.5rem);
+  --t-h1: clamp(3rem, 8vw, 8.5rem);
+  --t-h2: clamp(2.25rem, 4.6vw, 4.75rem);
+  --t-h3: clamp(1.375rem, 2vw, 1.875rem);
+  --t-lead: clamp(1.25rem, 1.4vw, 1.625rem);
+  --t-body: clamp(1.0625rem, 0.35vw + 0.95rem, 1.1875rem);
+  --t-small: 0.9375rem;
+  --t-slug: 0.71875rem;
+  --t-number: clamp(3.5rem, 9vw, 9.5rem);
+
+  /* Space (8-pt) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+  --s-11: 192px;
+  --section: clamp(96px, 14vw, 224px);
+
+  /* Grid */
+  --margin: clamp(16px, 4vw, 64px);
+  --gutter: clamp(16px, 1.6vw, 28px);
+  --cols: 4;
+  --max: 1760px;
+  --nav-h: 64px;
+
+  /* Motion (mirrors tokens.ts) */
+  --ease-register: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-settle: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-drift: cubic-bezier(0.37, 0, 0.63, 1);
+  --ease-exit: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-sweep: cubic-bezier(0.65, 0, 0.35, 1);
+  --d-micro: 160ms;
+  --d-small: 320ms;
+  --d-line: 600ms;
+  --d-plate: 900ms;
+  --d-scene: 1300ms;
+
+  /* Registration offsets (driven by JS) */
+  --rx: 0px;
+  --ry: 0px;
+  --bx: 0px;
+  --by: 0px;
+}
+
+@media (min-width: 700px) {
+  :root { --cols: 8; --nav-h: 72px; }
+}
+@media (min-width: 1024px) {
+  :root { --cols: 12; }
+}
+
+[data-ground='night'] {
+  --bg: var(--night);
+  --fg: var(--night-ink);
+  --fg-2: var(--night-ink-2);
+  --line: var(--night-rule);
+  --plate-a: var(--sheet-light);
+  --plate-b: var(--register-light);
+  --plate-blend: screen;
+  --focus: var(--night-ink);
+}
+[data-ground='red'] {
+  --bg: var(--sheet-ground);
+  --fg: #fbf8f2;
+  --fg-2: #fbe3dc;
+  --line: rgb(251 248 242 / 0.35);
+  --plate-a: #ffd2c7;
+  --plate-b: var(--ink);
+  --plate-blend: normal;
+  --focus: #fbf8f2;
+}

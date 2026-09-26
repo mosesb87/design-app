@@ -1,0 +1,69 @@
+---
+// S3 — Every part in its place. The calm read: who he is and how he works. Line reveals only.
+import { person, method } from '../../data/site';
+---
+<section class="calm section" aria-labelledby="calm-title">
+  <div class="wrap calm__grid">
+    <p class="kicker calm__kicker">About</p>
+    <h2 class="calm__title h2 reg" id="calm-title" data-text="Every part in its place." data-register>Every part in its place.</h2>
+    <div class="calm__prose prose" data-reveal="lines">
+      {person.about.map((p) => <p>{p}</p>)}
+    </div>
+
+    <dl class="calm__ledger">
+      <div><dt class="slug">Based in</dt><dd>{person.location}</dd></div>
+      <div><dt class="slug">Platforms</dt><dd>{person.platforms.join(' · ')}</dd></div>
+      <div><dt class="slug">Languages</dt><dd>{person.languages.join(' · ')}</dd></div>
+      <div><dt class="slug">WordPress since</dt><dd class="num">{person.wordpressSince}</dd></div>
+    </dl>
+
+    <div class="calm__method">
+      <h3 class="slug calm__method-title">The method — every review, every build</h3>
+      <ol class="calm__steps" role="list" data-rows>
+        {method.map((m) => (
+          <li>
+            <span class="calm__n num">{m.n}</span>
+            <span class="calm__step-title">{m.title}</span>
+            <span class="calm__step-text">{m.text}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+    <a class="link-arrow calm__more" href="/about/">More about how I work <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<style>
+  .calm__grid { display: grid; gap: var(--s-6); }
+  .calm__title { max-width: 14ch; }
+  .calm__prose { font-size: var(--t-lead); line-height: 1.42; font-weight: 430; letter-spacing: -0.01em; max-width: 40ch; }
+  .calm__ledger { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5) var(--gutter); }
+  .calm__ledger div { border-top: 1px solid var(--line); padding-top: var(--s-3); }
+  .calm__ledger dt { margin-bottom: 4px; }
+  .calm__ledger dd { margin: 0; font-weight: 520; }
+  .calm__method-title { color: var(--fg); margin-bottom: var(--s-4); }
+  .calm__steps li {
+    display: grid;
+    grid-template-columns: 3ch 1fr;
+    gap: 2px var(--s-4);
+    padding-block: var(--s-4);
+    border-top: 1px solid var(--line);
+  }
+  .calm__steps li:last-child { border-bottom: 1px solid var(--line); }
+  .calm__n { grid-row: span 2; font-family: var(--font-mono); font-size: var(--t-slug); color: var(--fg-2); padding-top: 6px; }
+  .calm__step-title { font-family: var(--font-display); font-weight: 740; font-stretch: 106%; font-size: var(--t-h3); line-height: 1.1; }
+  .calm__step-text { color: var(--fg-2); font-size: var(--t-small); max-width: 48ch; }
+  .calm__more { justify-self: start; }
+
+  @media (min-width: 1024px) {
+    .calm__grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--s-7); }
+    .calm__kicker { grid-column: 1 / span 2; padding-top: 1.2em; }
+    .calm__title { grid-column: 3 / span 8; }
+    .calm__prose { grid-column: 3 / span 6; }
+    .calm__ledger { grid-column: 10 / span 3; grid-template-columns: 1fr; align-self: start; }
+    .calm__method { grid-column: 3 / span 8; }
+    .calm__steps li { grid-template-columns: 4ch minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: baseline; }
+    .calm__n { grid-row: auto; padding-top: 0; }
+    .calm__more { grid-column: 3 / span 4; }
+  }
+</style>
