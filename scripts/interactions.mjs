@@ -13,6 +13,8 @@ console.log(`${ENGINE} ${browser.version()} — ${BASE}`);
 const results = [];
 const check = (name, ok, detail = '') => { results.push({ name, ok, detail }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${detail ? ` — ${detail}` : ''}`); };
 const path = (p) => new URL(p.url()).pathname + new URL(p.url()).hash;
+// Smooth scrolling (Lenis, fine pointers) keeps moving the page after a jump; click only once it has stopped.
+const settle = async (p) => { let last = -1; for (let i = 0; i < 40; i++) { const y = await p.evaluate(() => scrollY); if (y === last) return; last = y; await p.waitForTimeout(120); } };
 
 async function ctx(opts) {
   // Firefox has no mobile emulation; it still gets the phone viewport and touch.
@@ -99,7 +101,7 @@ async function ctx(opts) {
   // Case studies: each loads, has one h1, and its "next" link leads to another case.
   const cases = internal.filter((h) => /^\/work\/[^/]+\/$/.test(h));
   for (const h of cases) {
-    await p.goto(BASE + h, { waitUntil: 'domcontentloaded' });
+    await p.goto(BASE + h, { waitUntil: 'load' }); // 'load', so leaving the page never cuts off an image mid-download
     const info = await p.evaluate(() => ({ h1: document.querySelectorAll('h1').length, next: document.querySelector('.next__link')?.getAttribute('href'), live: [...document.querySelectorAll('a[href^="http"]')].length }));
     check(`Case ${h}: one h1, next → ${info.next}`, info.h1 === 1 && !!info.next && info.next !== h);
   }
@@ -109,6 +111,7 @@ async function ctx(opts) {
   const tog = p.locator('[data-video-toggle]').first();
   await tog.scrollIntoViewIfNeeded();
   await p.waitForTimeout(900);
+  await settle(p);
   const h264 = await p.evaluate(() => document.createElement('video').canPlayType('video/mp4; codecs="avc1.42E01E"'));
   const vstate = () => p.evaluate(() => { const v = document.querySelector('[data-video] video'); return v ? `paused=${v.paused} t=${v.currentTime.toFixed(1)} ready=${v.readyState}` : 'none'; });
   const before = await tog.getAttribute('aria-pressed');
