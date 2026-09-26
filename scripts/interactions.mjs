@@ -47,9 +47,16 @@ async function ctx(opts) {
     if (l.href.startsWith('#')) {
       await p.goto(BASE + '/', { waitUntil: 'networkidle' });
       await p.click(`.nav a[href="${l.href}"]`);
-      await p.waitForTimeout(1600);
-      const inView = await p.evaluate((id) => { const t = document.querySelector(id); const r = t.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0; }, l.href);
-      check(`Nav "${l.text}" scrolls to ${l.href}`, inView);
+      // Smooth scroll over a long page: poll until the target is on screen (a slow runner may need more than a
+      // second), and report how long it took, so a scroll that lands short still fails.
+      const t0 = Date.now();
+      let inView = false;
+      while (!inView && Date.now() - t0 < 5000) {
+        await p.waitForTimeout(150);
+        inView = await p.evaluate((id) => { const t = document.querySelector(id); const r = t.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0; }, l.href);
+      }
+      const where = await p.evaluate((id) => ({ y: Math.round(scrollY), target: Math.round(document.querySelector(id).getBoundingClientRect().top + scrollY) }), l.href);
+      check(`Nav "${l.text}" scrolls to ${l.href}`, inView, `${inView ? `on screen after ${Date.now() - t0} ms` : 'not on screen after 5 s'} (scrollY ${where.y}, target at ${where.target})`);
       continue;
     }
     await p.goto(BASE + '/', { waitUntil: 'networkidle' });
