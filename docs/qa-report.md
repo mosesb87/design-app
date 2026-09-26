@@ -15,10 +15,10 @@ Tested on 2026-09-26 against production builds of this branch (`npm run build`),
 | Accessibility | axe-core (WCAG 2.0/2.1/2.2 A + AA) clean at the top of every page and on screen at the bottom, desktop and phone, both motion modes; Lighthouse accessibility 100 |
 | Performance | {{LIGHTHOUSE_SUMMARY}} |
 | Page weight | 150–175 KB per page before images, 53.5 KB of it JavaScript (gzipped), printed in each page's footer |
-| Interactions | 42/42 in Chromium, 42/42 in Firefox, {{WEBKIT}} in WebKit |
-| Cross-browser | Chromium 141, Firefox 142, WebKit 26 (Playwright, Linux): every page 200, no overflow, no stuck reveals, no script errors |
+| Interactions | 42/42 in Chromium, Firefox and WebKit |
+| Cross-browser | Chromium 141, Firefox 142, WebKit 26 (Playwright, Linux): 35 Firefox/WebKit runs, 0 issues; every font file fetched once |
 | Links | 1,284 internal references in the build, 0 missing; 89 external URLs checked from GitHub Actions, 4 hosts refuse automated requests (labelled on the site) |
-| Console | No errors or warnings in Chromium; one Firefox advisory and one WebKit preload warning, both explained below |
+| Console | No errors or warnings, apart from Firefox's advisory about scroll-linked effects (explained below) |
 
 ## Method
 
@@ -82,6 +82,14 @@ Motion pass: 90 runs. The reduced-motion pass was stopped after 13 runs because 
   - Reviews were stacked. At tablet width each review now sits beside its plate.
   - The contact details touched their neighbours. The ledger now uses wider columns.
 
+### Cross-browser fixes (between rounds 2 and 3, and after)
+
+- WebKit: a paused recording could restart. The toggle now decides from its own state, and a manual pause is remembered until the recording leaves the screen.
+- WebKit fonts were downloaded twice: a test-server artefact (see *Cross-browser notes*), confirmed by counting requests under production headers.
+- Two interaction-test races, not site bugs, were fixed in the test:
+  - Firefox reported "Image corrupt or truncated" when the test left a page before its images finished loading. The file decodes completely.
+  - A WebKit click landed during smooth scrolling.
+
 ### Round 3
 
 180 runs: **0 findings.** No overflow, stuck reveals, small targets, focus problems, console errors, failed requests or axe violations. CLS was 0 on every run.
@@ -101,8 +109,8 @@ Lighthouse was run locally against the production build, served with gzip and im
 - **Firefox 142:** all pages pass. Firefox logs an advisory that the site "appears to use a scroll-linked positioning effect". That describes the pinned, scroll-driven scenes, which are intentional. Firefox has no cross-document View Transitions yet, so pages change with a normal navigation.
 - **WebKit 26:**
   - All pages pass, and View Transitions work.
-  - WebKit warned that the preloaded fonts were not used within a few seconds, although its screenshots render the real fonts. The `@font-face` format hint was changed from `woff2-variations` to `woff2`.
-  - Recording play/pause: {{WEBKIT_TOGGLE}}
+  - Fonts: when the build was served with `Cache-Control: no-cache` (the Astro preview server), WebKit fetched each preloaded font twice and warned that the preload went unused. Under production headers (`/_assets/` immutable, as in `vercel.json` and the upload package) it fetches each font once and the warning disappears. The test now counts font requests per page, and the cross-browser run serves the build with the production headers (`scripts/serve.json`).
+  - Recording play/pause: a manual pause now sticks until the recording leaves the screen. Earlier, WebKit could restart it.
 - **Chromium (local):** this Chromium build has no H.264 decoder, so recordings are verified in Firefox and WebKit on Actions. Chrome, Edge and Safari all play H.264.
 
 ## Accessibility notes
