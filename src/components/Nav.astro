@@ -1,7 +1,8 @@
 ---
 import { nav, person } from '../data/site';
-interface Props { current?: string; count?: number }
-const { current = '', count } = Astro.props;
+interface Props { current?: string; count?: number; contact?: boolean }
+const { current = '', count, contact = true } = Astro.props;
+const talk = contact ? '#contact' : '/#contact';
 const isCurrent = (href: string) => (href === '/' ? current === '/' : current.startsWith(href));
 const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
 ---
@@ -23,7 +24,7 @@ const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
         ))}
       </ul>
     </nav>
-    <a class="nav__cta" href="#contact">Let’s talk</a>
+    <a class="nav__cta" href={talk}>Let’s talk</a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
       <span data-menu-label>Menu</span>
       <span class="nav__toggle-mark" aria-hidden="true"></span>
@@ -39,7 +40,7 @@ const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
     <ul role="list" class="menu__list">
       <li><a href="/" data-menu-item>Home</a></li>
       {nav.map((item) => (<li><a href={item.href} data-menu-item>{item.label}</a></li>))}
-      <li><a href="#contact" data-menu-item>Let’s talk</a></li>
+      <li><a href={talk} data-menu-item>Let’s talk</a></li>
     </ul>
     <p class="menu__foot">
       <a href={`mailto:${person.email}`}>{person.email}</a>

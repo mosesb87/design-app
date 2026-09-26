@@ -113,7 +113,7 @@ async function clean(html) {
   doc.querySelectorAll('p').forEach((p) => { if (!p.text.trim() && !p.querySelector('img')) p.remove(); });
   // Code blocks and tables can scroll sideways on phones, so keyboard users must be able to reach them.
   doc.querySelectorAll('pre').forEach((pre) => pre.setAttribute('tabindex', '0'));
-  doc.querySelectorAll('table').forEach((t) => t.replaceWith(parse(`<div class="table-scroll" tabindex="0">${t.toString()}</div>`)));
+  doc.querySelectorAll('table').forEach((t) => t.replaceWith(...parse(`<div class="table-scroll" tabindex="0">${t.toString()}</div>`).childNodes));
   const out = doc.querySelector('#x').innerHTML.replace(/\n{2,}/g, '\n').trim();
   return { html: out, images, text: doc.querySelector('#x').text };
 }

@@ -1,0 +1,98 @@
+---
+// The reviews, on this site: every review leads with its number, filterable by focus.
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/play/PageHead.astro';
+import { allReviews, focusAreas, focusKey, statText, toneFor } from '../../data/reviews';
+import { formatDate, SITE_URL } from '../../data/site';
+
+const DOTS = ['var(--pink)', 'var(--violet)', 'var(--aqua)', 'var(--tomato)', 'var(--blue)', 'var(--sun)'];
+const countIn = (f: string) => allReviews.filter((r) => r.focus.includes(f)).length;
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/reviews/#page`,
+    name: 'Reviews — Mousa Batarseh',
+    url: `${SITE_URL}/reviews/`,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: allReviews.length,
+      itemListElement: allReviews.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: r.title, url: `${SITE_URL}/reviews/${r.slug}/` })),
+    },
+  },
+];
+---
+<Base title="Reviews" description={`${allReviews.length} independent reviews of live stores and websites by Mousa Batarseh — public pages only, every finding dated, each one leading with the number that explains the rest.`} path="/reviews/" og="default" jsonLd={jsonLd}>
+  <PageHead title="Reviews, counted." kicker={`Reviews · ${allReviews.length} independent reviews`} dot="var(--violet)" lead="I read a company’s website the way a shopper, a crawler and an AI answer engine do — public pages only, every finding dated — and build a working fix alongside." stickers={['lens', 'percent', 'check']} id="reviews-title" />
+
+  <section class="wrap rl" aria-labelledby="rl-title">
+    <h2 class="visually-hidden" id="rl-title">All reviews</h2>
+    <div class="chips" role="group" aria-label="Filter reviews by focus" data-filter data-noun="review,reviews">
+      <button type="button" class="chip" aria-pressed="true" data-filter-value="all">All <span>{allReviews.length}</span></button>
+      {focusAreas.map((f, i) => (
+        <button type="button" class="chip" aria-pressed="false" data-filter-value={focusKey(f)} style={`--dot:${DOTS[i % DOTS.length]}`}>{f} <span>{countIn(f)}</span></button>
+      ))}
+      <p class="visually-hidden" role="status" aria-live="polite" data-filter-status></p>
+    </div>
+    <ul class="rl__grid" role="list" data-pop-grid>
+      {allReviews.map((r, i) => {
+        const t = toneFor(r.slug);
+        const stat = statText(r);
+        return (
+          <li class="rc" data-row data-cat={r.focus.map(focusKey).join(' ')} style={`--bg:${t.bg};--on:${t.fg};--r:${[-1.4, 1.1, -0.8, 1.6, -1.2, 0.9][i % 6]}deg`} data-pop>
+            <p class="rc__num num" style={`--chars:${Math.max(3, stat.length)}`}>{stat}</p>
+            <p class="rc__label">{r.stat.label}</p>
+            <h3 class="rc__title"><a href={`/reviews/${r.slug}/`}>{r.brand}<span class="rc__kind"> · {r.kind}</span></a></h3>
+            <p class="rc__blurb">{r.blurb}</p>
+            <p class="rc__meta"><span>{r.site}</span><span><time datetime={r.date}>{formatDate(r.date)}</time></span></p>
+            <p class="rc__focus">{r.focus.map((f) => <span>{f}</span>)}</p>
+            <span class="rc__arrow" aria-hidden="true">→</span>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .rl { padding-block: var(--s-7) var(--s-9); display: grid; gap: var(--s-6); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: var(--r-pill); background: var(--cloud); font-weight: 650; font-size: 0.9375rem; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
+  .chip::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--dot, var(--ink)); }
+  .chip span { font-size: 0.75rem; font-weight: 750; padding: 2px 7px; border-radius: var(--r-pill); background: rgb(22 18 31 / 0.08); }
+  .chip:hover { transform: translateY(-2px); }
+  .chip[aria-pressed='true'] { background: var(--ink); color: #fff; }
+  .chip[aria-pressed='true'] span { background: rgb(255 255 255 / 0.18); }
+  .rl__grid { display: grid; gap: clamp(16px, 1.8vw, 28px); }
+  .rc {
+    container-type: inline-size;
+    position: relative;
+    display: grid;
+    gap: 12px;
+    align-content: start;
+    padding: clamp(22px, 2.2vw, 32px);
+    padding-bottom: 76px;
+    border-radius: var(--r-xl);
+    background: var(--bg);
+    color: var(--on);
+    transform: rotate(var(--r));
+    transition: transform 0.6s var(--ease-pop), box-shadow var(--d-small);
+  }
+  .rc[hidden] { display: none; }
+  .rc:hover { transform: rotate(0deg) translateY(-6px); box-shadow: var(--shadow-2); }
+  .rc__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; line-height: 0.85; white-space: nowrap; font-size: min(7rem, calc(100cqi / (var(--chars) * 0.44))); }
+  .rc__label { font-size: 1.125rem; font-weight: 650; line-height: 1.2; max-width: 26ch; }
+  .rc__title { margin-top: 6px; font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.6rem, 2.2vw, 2.1rem); line-height: 0.95; text-transform: uppercase; }
+  .rc__kind { font-family: var(--font-text); font-stretch: 100%; font-weight: 650; font-size: 0.9375rem; text-transform: none; letter-spacing: 0; }
+  .rc__title a { text-decoration: none; }
+  .rc__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 2; }
+  .rc__title a:focus-visible { outline: none; }
+  .rc:has(a:focus-visible) { outline: 3px solid var(--ink); outline-offset: 4px; }
+  .rc__blurb { font-weight: 500; font-size: var(--t-small); line-height: 1.45; opacity: 0.92; }
+  .rc__meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 750 var(--t-slug) / 1.4 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
+  .rc__focus { display: flex; flex-wrap: wrap; gap: 6px; }
+  .rc__focus span { padding: 5px 10px; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.55); color: var(--ink); font: 700 0.75rem / 1 var(--font-text); }
+  .rc__arrow { position: absolute; right: clamp(22px, 2.2vw, 32px); bottom: 22px; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: #fff; transition: transform 0.5s var(--ease-pop); }
+  .rc:hover .rc__arrow { transform: rotate(-45deg); }
+  @media (min-width: 700px) { .rl__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .rl__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>

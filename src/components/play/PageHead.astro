@@ -11,7 +11,7 @@ interface Props {
   lead?: string;
   tone?: string; // a colour token, e.g. 'var(--lilac)'
   stickers?: StickerName[];
-  size?: 'xl' | 'l' | 'm';
+  size?: 'xl' | 'l' | 'm' | 's';
   id?: string;
 }
 const { title, kicker, dot = 'var(--tomato)', lead, tone, stickers = [], size = 'xl', id = 'page-title' } = Astro.props;
@@ -89,6 +89,7 @@ const depths = [0.9, 0.6, 1.2];
   .phd--xl .phd__title { font-size: clamp(4rem, 13.5vw, 13.5rem); }
   .phd--l .phd__title { font-size: clamp(3.25rem, 10vw, 10rem); max-width: 13ch; }
   .phd--m .phd__title { font-size: clamp(2.75rem, 7vw, 7.25rem); max-width: 16ch; line-height: 0.88; }
+  .phd--s .phd__title { font-size: clamp(2.4rem, 5.2vw, 5.25rem); max-width: 20ch; line-height: 0.9; }
   .phd__w { display: inline-block; white-space: nowrap; }
   .phd__l { display: inline-block; transition: color 0.4s var(--ease-register); }
   .phd__l.is-hot { transition-duration: 0.05s; }

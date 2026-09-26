@@ -1,7 +1,8 @@
 // The complete archive. Every non-review project from /v2/work/ is here (merged where they are the
-// same product), plus the six curated reviews and the three proposals. Two entries are deliberately
+// same product), plus every review (each has its own page here) and the three proposals. Two entries are deliberately
 // excluded at Mousa's request: the Job Search Log and the DiaMedical Interview Trainer.
 import { reviews } from './site';
+import { allReviews, statText } from './reviews';
 
 export type Category = 'systems' | 'case-studies' | 'sites' | 'reviews' | 'proposals';
 export const categories: { id: Category; label: string; blurb: string }[] = [
@@ -89,8 +90,8 @@ export const entries: Entry[] = [
   { slug: 'wildbills-stpatrick', title: 'St. Patrick’s sales form', category: 'sites', what: 'WordPress campaign and sales form.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/stpatrick-form/', status: 'live', family: 'wildbills-drivethru-menu', media: 'wildbills-stpatrick' },
   { slug: 'wildbills-wild-wednesdays', title: 'Wild Wednesdays landing page', category: 'sites', what: 'WordPress campaign landing page.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/wild-wednesdays/', status: 'live', family: 'wildbills-drivethru-menu', media: 'wildbills-wild-wednesdays' },
 
-  // ── Reviews (curated; the full index lives at /reviews/)
-  ...reviews.map((r): Entry => ({ slug: `review-${r.slug}`, title: r.title, category: 'reviews', what: `${r.number} ${r.numberLabel}. ${r.fix}`, platform: r.focus, url: r.url, status: 'live', media: r.media, date: r.date })),
+  // ── Reviews: every one, each with its page on this site (/reviews/<slug>/)
+  ...allReviews.map((r): Entry => ({ slug: `review-${r.slug}`, title: r.brand, category: 'reviews', what: `${r.kind}: ${statText(r)} ${r.stat.label}.`, platform: r.focus.join(' · '), url: `/reviews/${r.slug}/`, status: 'live', media: reviews.find((x) => x.slug === r.slug)?.media, date: r.date })),
 
   // ── Proposals
   { slug: 'proposal-gardner-white', title: 'Same-Day Answers — web-orders desk', category: 'proposals', what: 'Proposal site built for a job application: a working web-orders desk demo with fictional customers.', url: `${M}/gardner-white-proposal/`, status: 'live', media: 'proposal-gardner-white' },

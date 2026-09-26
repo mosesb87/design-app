@@ -3,6 +3,7 @@
 // Usage: node scripts/linkcrawl.mjs [dist]
 import fs from 'node:fs';
 import path from 'node:path';
+import { parse } from 'node-html-parser';
 
 const dist = path.resolve(process.argv[2] || 'dist');
 const pages = [];
@@ -21,13 +22,26 @@ const resolve = (from, ref) => {
 for (const file of pages) {
   const src = fs.readFileSync(file, 'utf8');
   const refs = [];
-  for (const m of src.matchAll(/\s(?:href|src|poster|data-src)="([^"]+)"/g)) refs.push(m[1]);
-  for (const m of src.matchAll(/\ssrcset="([^"]+)"/g)) m[1].split(',').forEach((p) => refs.push(p.trim().split(/\s+/)[0]));
-  for (const m of src.matchAll(/url\((['"]?)([^'")]+)\1\)/g)) refs.push(m[2]);
+  // HTML is parsed (attributes only, so code samples in text are never mistaken for links); CSS is scanned.
+  let ids = null;
+  if (file.endsWith('.html')) {
+    const doc = parse(src);
+    ids = new Set(doc.querySelectorAll('[id]').map((e) => e.getAttribute('id')));
+    for (const el of doc.querySelectorAll('[href], [src], [poster], [data-src], [srcset], [style]')) {
+      for (const a of ['href', 'src', 'poster', 'data-src']) { const v = el.getAttribute(a); if (v) refs.push(v); }
+      const ss = el.getAttribute('srcset');
+      if (ss) ss.split(',').forEach((p) => refs.push(p.trim().split(/\s+/)[0]));
+      const st = el.getAttribute('style');
+      if (st) for (const m of st.matchAll(/url\((['"]?)([^'")]+)\1\)/g)) refs.push(m[2]);
+    }
+    for (const m of src.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)) for (const u of m[1].matchAll(/url\((['"]?)([^'")]+)\1\)/g)) refs.push(u[2]);
+  } else for (const m of src.matchAll(/url\((['"]?)([^'")]+)\1\)/g)) refs.push(m[2]);
   for (const ref of refs) {
-    if (/^(mailto:|tel:|data:|javascript:|#)/.test(ref)) continue;
+    if (ref.startsWith('#')) { if (ids && ref.length > 1 && !ids.has(decodeURIComponent(ref.slice(1)))) missing.push(`${path.relative(dist, file)} → ${ref} (no such id)`); continue; }
+    if (/^(mailto:|tel:|data:|javascript:)/.test(ref)) continue;
     if (/^https?:\/\//.test(ref)) {
-      const u = new URL(ref);
+      let u;
+      try { u = new URL(ref); } catch { missing.push(`${path.relative(dist, file)} → ${ref} (invalid URL)`); continue; }
       if (u.hostname === 'mousabatarseh.com' && /^\/(work|about)?\/?/.test(u.pathname) && resolve(file, u.pathname)) { checked++; continue; }
       external.add(ref);
       continue;

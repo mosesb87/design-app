@@ -50,17 +50,17 @@ const thumb = (e: Entry) => {
     <tbody data-rows-body>
       {rows.map((e) => {
         const href = e.caseStudy ? `/work/${e.caseStudy}/` : e.url;
-        const internal = !!e.caseStudy;
+        const internal = !!e.caseStudy || !!href?.startsWith('/');
         const n = String(parents.indexOf(parents.find((p) => p.slug === e.slug)!) + 1).padStart(2, '0');
         return (
           <tr class:list={['index__row', { 'is-child': e.child, 'has-case': internal }]} data-cat={e.category} data-preview={preview(e) || undefined} data-row>
             <td class="index__c-n num slug">{e.child ? '—' : n}</td>
             <th scope="row" class="index__c-title">
               {href ? (
-                <a href={href} rel={internal ? undefined : 'noopener'} data-vt-plate={internal ? '' : undefined}>
+                <a href={href} rel={internal ? undefined : 'noopener'} data-vt-plate={e.caseStudy ? '' : undefined}>
                   <span class="index__title-text">{e.title}</span>
                   <span class="index__arrow" aria-hidden="true">{internal ? '→' : '↗'}</span>
-                  <span class="visually-hidden">{internal ? ' — case study' : ' — opens the live site'}</span>
+                  <span class="visually-hidden">{e.caseStudy ? ' — case study' : internal ? ' — review' : ' — opens the live site'}</span>
                 </a>
               ) : (
                 <span class="index__title-text">{e.title}</span>
