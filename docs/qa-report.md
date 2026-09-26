@@ -46,7 +46,7 @@ Covers the redesign (direction 2, [04-bright-and-playful.md](04-bright-and-playf
 
 ### Cross-browser
 
-- **WebKit 26:** every page clean at desktop, phone and reduced motion; interactions 60/60.
+- **WebKit 26:** every page clean at desktop, phone and reduced motion. Interactions found a real bug on a later run: "Let's talk" stopped 6,000 px short of the contact section (scrollY 16,658 of 22,690). The smooth scroller (Lenis) caps scrolls at its own measurement of the page, and right after load it still measured the page before the pinned scenes added their spacing (16,691 px of 23,402 in Chromium too, catching up about 1.5 s later). Lenis now re-measures on every ScrollTrigger refresh and before each in-page jump; an immediate click now lands. The check itself now polls and reports where the scroll landed, rather than looking after a fixed 1.6 s.
 - **Firefox 142:** every page loads; its only messages are the advisory that the site "appears to use a scroll-linked positioning effect" (the pinned scenes — intentional). Interactions were 59/60: "Too many calls to Location or History APIs". Firefox allows about 200 History calls per 10 seconds per tab. Two things added up: filters wrote the URL on every click (now once clicking stops, and history updates can't throw), and ScrollTrigger switches `history.scrollRestoration` to manual and back while it measures — 9 writes a page, now 6 (only real changes are written). The suite loaded 38 blog and review pages in one tab within seconds; it now opens each in its own tab, as a visitor would. Forcing `manual` permanently would remove the count entirely but break the Back button's scroll restoration, so the site keeps the default. {{FIREFOX_RERUN}}
 
 ### Lighthouse
