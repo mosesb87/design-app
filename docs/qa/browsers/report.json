@@ -1,6 +1,6 @@
 {
   "base": "http://localhost:4321",
-  "ranAt": "2026-09-26T16:41:27.387Z",
+  "ranAt": "2026-09-26T18:51:24.646Z",
   "versions": {
     "firefox": "142.0.1",
     "webkit": "26.0"
@@ -11,7 +11,7 @@
       "vp": "desk",
       "page": "/",
       "status": 200,
-      "ms": 8310,
+      "ms": 8201,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -25,7 +25,7 @@
       "vp": "desk",
       "page": "/work/",
       "status": 200,
-      "ms": 5246,
+      "ms": 5263,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -39,7 +39,7 @@
       "vp": "desk",
       "page": "/about/",
       "status": 200,
-      "ms": 4973,
+      "ms": 4965,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -53,7 +53,7 @@
       "vp": "desk",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5407,
+      "ms": 5413,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -67,7 +67,7 @@
       "vp": "desk",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5790,
+      "ms": 5777,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -81,7 +81,7 @@
       "vp": "desk",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5548,
+      "ms": 5543,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -109,7 +109,7 @@
       "vp": "mob",
       "page": "/",
       "status": 200,
-      "ms": 9051,
+      "ms": 8980,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -123,7 +123,7 @@
       "vp": "mob",
       "page": "/work/",
       "status": 200,
-      "ms": 8976,
+      "ms": 8960,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -137,7 +137,7 @@
       "vp": "mob",
       "page": "/about/",
       "status": 200,
-      "ms": 5672,
+      "ms": 5657,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -151,7 +151,7 @@
       "vp": "mob",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5355,
+      "ms": 5405,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -165,7 +165,7 @@
       "vp": "mob",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5607,
+      "ms": 5580,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -179,7 +179,7 @@
       "vp": "mob",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5608,
+      "ms": 5606,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -193,7 +193,7 @@
       "vp": "mob",
       "page": "/404.html",
       "status": 200,
-      "ms": 3253,
+      "ms": 3247,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -207,7 +207,7 @@
       "vp": "desk",
       "page": "/",
       "status": 200,
-      "ms": 12679,
+      "ms": 11703,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -223,7 +223,7 @@
       "vp": "desk",
       "page": "/work/",
       "status": 200,
-      "ms": 6255,
+      "ms": 6228,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -239,7 +239,7 @@
       "vp": "desk",
       "page": "/about/",
       "status": 200,
-      "ms": 5753,
+      "ms": 5736,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -255,7 +255,117 @@
       "vp": "desk",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 6403,
+      "ms": 6532,
+      "overflow": 0,
+      "hidden": [],
+      "logs": [
+        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
+      ],
+      "failed": [],
+      "viewTransitions": true
+    },
+    {
+      "browser": "webkit",
+      "vp": "desk",
+      "page": "/work/united-textile/",
+      "status": 200,
+      "ms": 6652,
+      "overflow": 0,
+      "hidden": [],
+      "logs": [
+        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
+      ],
+      "failed": [],
+      "viewTransitions": true
+    },
+    {
+      "browser": "webkit",
+      "vp": "desk",
+      "page": "/work/deals-os/",
+      "status": 200,
+      "ms": 6484,
+      "overflow": 0,
+      "hidden": [],
+      "logs": [
+        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
+      ],
+      "failed": [],
+      "viewTransitions": true
+    },
+    {
+      "browser": "webkit",
+      "vp": "desk",
+      "page": "/404.html",
+      "status": 200,
+      "ms": 3803,
+      "overflow": 0,
+      "hidden": [],
+      "logs": [
+        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
+      ],
+      "failed": [],
+      "viewTransitions": true
+    },
+    {
+      "browser": "webkit",
+      "vp": "mob",
+      "page": "/",
+      "status": 200,
+      "ms": 10196,
+      "overflow": 0,
+      "hidden": [],
+      "logs": [
+        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
+      ],
+      "failed": [],
+      "viewTransitions": true
+    },
+    {
+      "browser": "webkit",
+      "vp": "mob",
+      "page": "/work/",
+      "status": 200,
+      "ms": 9950,
+      "overflow": 0,
+      "hidden": [],
+      "logs": [
+        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
+      ],
+      "failed": [],
+      "viewTransitions": true
+    },
+    {
+      "browser": "webkit",
+      "vp": "mob",
+      "page": "/about/",
+      "status": 200,
+      "ms": 6372,
+      "overflow": 0,
+      "hidden": [],
+      "logs": [
+        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
+      ],
+      "failed": [],
+      "viewTransitions": true
+    },
+    {
+      "browser": "webkit",
+      "vp": "mob",
+      "page": "/work/asas-studio/",
+      "status": 200,
+      "ms": 6339,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -270,122 +380,10 @@
     },
     {
       "browser": "webkit",
-      "vp": "desk",
-      "page": "/work/united-textile/",
-      "status": 200,
-      "ms": 6731,
-      "overflow": 0,
-      "hidden": [],
-      "logs": [
-        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
-      ],
-      "failed": [],
-      "viewTransitions": true
-    },
-    {
-      "browser": "webkit",
-      "vp": "desk",
-      "page": "/work/deals-os/",
-      "status": 200,
-      "ms": 6439,
-      "overflow": 0,
-      "hidden": [],
-      "logs": [
-        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
-      ],
-      "failed": [],
-      "viewTransitions": true
-    },
-    {
-      "browser": "webkit",
-      "vp": "desk",
-      "page": "/404.html",
-      "status": 200,
-      "ms": 3791,
-      "overflow": 0,
-      "hidden": [],
-      "logs": [
-        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
-      ],
-      "failed": [],
-      "viewTransitions": true
-    },
-    {
-      "browser": "webkit",
-      "vp": "mob",
-      "page": "/",
-      "status": 200,
-      "ms": 10516,
-      "overflow": 0,
-      "hidden": [],
-      "logs": [
-        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
-      ],
-      "failed": [],
-      "viewTransitions": true
-    },
-    {
-      "browser": "webkit",
-      "vp": "mob",
-      "page": "/work/",
-      "status": 200,
-      "ms": 9918,
-      "overflow": 0,
-      "hidden": [],
-      "logs": [
-        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
-      ],
-      "failed": [],
-      "viewTransitions": true
-    },
-    {
-      "browser": "webkit",
-      "vp": "mob",
-      "page": "/about/",
-      "status": 200,
-      "ms": 6290,
-      "overflow": 0,
-      "hidden": [],
-      "logs": [
-        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
-      ],
-      "failed": [],
-      "viewTransitions": true
-    },
-    {
-      "browser": "webkit",
-      "vp": "mob",
-      "page": "/work/asas-studio/",
-      "status": 200,
-      "ms": 6363,
-      "overflow": 0,
-      "hidden": [],
-      "logs": [
-        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
-      ],
-      "failed": [],
-      "viewTransitions": true
-    },
-    {
-      "browser": "webkit",
       "vp": "mob",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 6564,
+      "ms": 6561,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -401,7 +399,7 @@
       "vp": "mob",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 6581,
+      "ms": 6485,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -417,7 +415,7 @@
       "vp": "mob",
       "page": "/404.html",
       "status": 200,
-      "ms": 3869,
+      "ms": 3855,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -433,7 +431,7 @@
       "vp": "mob-reduced",
       "page": "/",
       "status": 200,
-      "ms": 10563,
+      "ms": 10552,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -449,12 +447,13 @@
       "vp": "mob-reduced",
       "page": "/work/",
       "status": 200,
-      "ms": 9538,
+      "ms": 9554,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
+        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
       "viewTransitions": true
@@ -464,7 +463,7 @@
       "vp": "mob-reduced",
       "page": "/about/",
       "status": 200,
-      "ms": 6063,
+      "ms": 6115,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -480,7 +479,7 @@
       "vp": "mob-reduced",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5565,
+      "ms": 5596,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -496,7 +495,7 @@
       "vp": "mob-reduced",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5866,
+      "ms": 5844,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -512,7 +511,7 @@
       "vp": "mob-reduced",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5847,
+      "ms": 5832,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -528,7 +527,7 @@
       "vp": "mob-reduced",
       "page": "/404.html",
       "status": 200,
-      "ms": 3598,
+      "ms": 3481,
       "overflow": 0,
       "hidden": [],
       "logs": [
