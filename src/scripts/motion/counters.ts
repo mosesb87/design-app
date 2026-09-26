@@ -16,8 +16,12 @@ export default function counters(els: HTMLElement[], env: Env) {
       start: 'top 85%',
       once: true,
       onEnter: () => {
-        el.setAttribute('aria-label', original);
+        // The true value stays readable (as hidden text — aria-label isn't permitted on <p>) while the digits roll.
         const frag = document.createDocumentFragment();
+        const sr = document.createElement('span');
+        sr.className = 'visually-hidden';
+        sr.textContent = original;
+        frag.appendChild(sr);
         const strips: { strip: HTMLElement; d: number }[] = [];
         for (const ch of original) {
           if (/\d/.test(ch)) {
@@ -44,7 +48,6 @@ export default function counters(els: HTMLElement[], env: Env) {
           onComplete: () => {
             el.textContent = original;
             el.classList.remove('is-counting');
-            el.removeAttribute('aria-label');
           },
         });
         strips.forEach(({ strip, d }, i) => {

@@ -50,7 +50,9 @@ export default function reveals(_: HTMLElement[], env: Env) {
       SplitText.create(el, {
         type: 'lines',
         mask: 'lines',
-        aria: 'auto',
+        // Lines keep whole words, so assistive tech reads the paragraph as it is — and aria-label isn't
+        // permitted on <p> anyway. The split is reverted once the lines have risen.
+        aria: 'none',
         linesClass: 'split-line',
         onSplit(self) {
           return gsap.from(self.lines, {

@@ -39,7 +39,7 @@ const jsonLd = [
       {featured.map((c, i) => (
         <li>
           <a class="plate-link" href={`/work/${c.slug}/`} data-vt-plate data-part-host>
-            <Plate slug={c.media.hero} alt={`${c.title} — the live site`} title={c.title} url={c.url} caption={false} sizes="(min-width: 1024px) 30vw, (min-width: 700px) 45vw, 92vw" vtTarget aspect="16 / 10" />
+            <Plate slug={c.media.hero} alt={`${c.title} — the live site`} title={c.title} url={c.url} caption={false} sizes="(min-width: 1024px) 30vw, (min-width: 700px) 45vw, 92vw" vtTarget aspect="16 / 10" eager={i === 0} />
             <span class="plate-link__meta slug">{String(i + 1).padStart(2, '0')} · {c.kicker}</span>
             <span class="plate-link__title reg" data-text={c.title} data-part>{c.title}</span>
           </a>

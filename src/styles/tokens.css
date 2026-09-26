@@ -70,6 +70,9 @@
   --register-light: #8ea2ff; /* blue on night */
   --sheet-light: #ff7a66; /* red on night */
   --check: #0b6e3d; /* stamps only (5.3:1 on paper) */
+  /* Accent colours used as small text follow the chapter ground (see [data-ground] below). */
+  --register-text: var(--register);
+  --check-text: var(--check);
 
   /* Current chapter (overridden by [data-ground]) */
   --bg: var(--paper);
@@ -154,6 +157,8 @@
   --plate-blend: screen;
   --focus: var(--night-ink);
   --sheet-text: var(--sheet-light);
+  --register-text: var(--register-light);
+  --check-text: #6fd6a0;
 }
 [data-ground='red'] {
   --bg: var(--sheet-ground);
@@ -165,4 +170,6 @@
   --plate-blend: normal;
   --focus: #fbf8f2;
   --sheet-text: #fbe3dc;
+  --register-text: #fbf8f2;
+  --check-text: #fbf8f2;
 }

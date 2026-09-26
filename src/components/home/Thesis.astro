@@ -92,7 +92,8 @@ import { person, layers } from '../../data/site';
   .thesis__title-b { visibility: hidden; }
   .thesis__body { max-width: 48ch; color: var(--fg-2); text-wrap: pretty; }
   .thesis__steps { display: grid; gap: var(--s-5); }
-  .thesis__step { border-top: 1px solid var(--line); padding-top: var(--s-3); transition: opacity var(--d-small) var(--ease-drift); }
+  .thesis__step { border-top: 1px solid var(--line); padding-top: var(--s-3); transition: opacity var(--d-small) var(--ease-drift), border-color var(--d-small) var(--ease-drift); }
+  .thesis__step-title { transition: color var(--d-small) var(--ease-drift); }
   .thesis__step-title { font-family: var(--font-display); font-weight: 720; font-stretch: 104%; font-size: var(--t-h3); line-height: 1.1; margin-top: 4px; }
   .thesis__step-text { margin-top: 6px; color: var(--fg-2); max-width: 46ch; font-size: var(--t-small); line-height: 1.5; }
 
@@ -143,7 +144,7 @@ import { person, layers } from '../../data/site';
   .card__kv dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
   .card__tile { position: absolute; left: 16px; right: 16px; bottom: 14px; top: 42px; display: grid; align-content: end; gap: 2px; padding: 12px; background: var(--paper-2); }
   .card__tile--held { background: var(--sheet-ground); color: #fbf8f2; align-content: center; }
-  .card__badge { justify-self: start; font: 700 10px/1 var(--font-mono); background: var(--sheet); color: #fff; padding: 4px 6px; letter-spacing: 0.04em; }
+  .card__badge { justify-self: start; font: 700 10px/1 var(--font-mono); background: var(--sheet-ground); color: #fff; padding: 4px 6px; letter-spacing: 0.04em; }
   .card__price { font-family: var(--font-display); font-weight: 820; font-size: 28px; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
   .card__name { font-size: 11px; color: var(--ink-2); }
   .card__held { font-family: var(--font-display); font-weight: 760; font-size: 17px; line-height: 1.1; }
@@ -159,7 +160,7 @@ import { person, layers } from '../../data/site';
     font: 700 var(--t-slug) / 1 var(--font-mono);
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--check);
+    color: var(--check-text);
     border: 1.5px solid currentColor;
     padding: 9px 12px;
     background: var(--bg);
@@ -193,8 +194,9 @@ import { person, layers } from '../../data/site';
   :global(.motion-ok) .thesis__verdict { opacity: 0; }
   :global(.motion-ok) .card__stale::after { transform: scaleX(0); transition: transform var(--d-small) var(--ease-register); }
   :global(.motion-ok) .card__stale.is-struck::after { transform: scaleX(1); }
-  :global(.motion-ok) .thesis__step { opacity: 0.32; }
-  :global(.motion-ok) .thesis__step.is-active { opacity: 1; }
+  /* Every step stays readable (no dimming below contrast); the active one gets ink and a proof-red rule. */
+  :global(.motion-ok) .thesis__step:not(.is-active) .thesis__step-title { color: var(--fg-2); }
+  :global(.motion-ok) .thesis__step.is-active { border-top: 2px solid var(--sheet); margin-top: -1px; }
 
   @media (min-width: 1024px) {
     :global(.motion-ok) .thesis__title { font-size: clamp(2rem, 3.3vw, 3.6rem); }
@@ -214,7 +216,7 @@ import { person, layers } from '../../data/site';
     :global(.motion-ok) .thesis__stage { min-height: 0; grid-row: 2; }
     :global(.motion-ok) .thesis__steps { grid-row: 3; display: grid; }
     :global(.motion-ok) .thesis__step { grid-area: 1 / 1; opacity: 0; border-top: 0; padding-top: 0; }
-    :global(.motion-ok) .thesis__step.is-active { opacity: 1; }
+    :global(.motion-ok) .thesis__step.is-active { opacity: 1; border-top: 0; margin-top: 0; }
     :global(.motion-ok) .thesis__step-title { font-size: 1.2rem; }
     .stage { --w: min(72vw, 340px); }
     .card--sheet { transform: translateZ(200px); }

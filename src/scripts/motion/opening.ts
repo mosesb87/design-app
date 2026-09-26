@@ -32,18 +32,23 @@ export default function opening([hero]: HTMLElement[], env: Env) {
       .to(word, { '--rx': '0px', '--bx': '0px', duration: dur.settle, ease: ease.settle });
   }
   if (proof && fullText && !seen) {
-    proof.setAttribute('aria-label', fullText);
     // Hold the finished slug's height while it types, so a two-line slug on a phone never pushes the hero.
     // (Set now, not in onStart: the tween's immediate render empties the slug as soon as it is created.)
     proof.style.minHeight = `${proof.offsetHeight}px`;
+    // Screen readers get the whole slug at once; only the visible copy types.
+    const sr = document.createElement('span');
+    sr.className = 'visually-hidden';
+    sr.textContent = fullText;
+    const typed = document.createElement('span');
+    typed.setAttribute('aria-hidden', 'true');
+    proof.replaceChildren(sr, typed);
     const counter = { n: 0 };
     tl.fromTo(counter, { n: 0 }, {
       n: fullText.length,
       duration: 0.6,
       ease: 'none',
-      onStart: () => { proof.textContent = ''; },
-      onUpdate: () => { proof.textContent = fullText.slice(0, Math.round(counter.n)); },
-      onComplete: () => { proof.textContent = fullText; proof.style.minHeight = ''; proof.removeAttribute('aria-label'); },
+      onUpdate: () => { typed.textContent = fullText.slice(0, Math.round(counter.n)); },
+      onComplete: () => { proof.textContent = fullText; proof.style.minHeight = ''; },
     }, 0.55);
   }
   if (target) tl.fromTo(target, { rotate: -90, scale: 1.12 }, { rotate: 0, scale: 1, duration: 0.5, transformOrigin: '50% 50%' }, seen ? 0.2 : 1.05);

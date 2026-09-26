@@ -99,7 +99,7 @@ const graph = {
           var links = document.querySelectorAll('a[data-vt-plate]');
           for (var i = 0; i < links.length; i++) {
             if (new URL(links[i].href).pathname === to) {
-              var t = links[i].querySelector('[data-vt-target]');
+              var t = (links[i].closest('[data-vt-host]') || links[i]).querySelector('[data-vt-target]');
               if (t) t.style.viewTransitionName = NAME;
               break;
             }
