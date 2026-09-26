@@ -51,6 +51,9 @@ export function startSmoothScroll() {
   if (env.reduced || !env.fine) return null;
   const lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 1, smoothWheel: true, syncTouch: false, anchors: { offset: -80 } });
   lenis.on('scroll', ScrollTrigger.update);
+  // Pinned scenes add their spacing when ScrollTrigger measures; Lenis's own observer can take a second or more to
+  // notice (WebKit longer), and until then it caps every scroll at the old page height. Re-measure together.
+  ScrollTrigger.addEventListener('refresh', () => lenis.resize());
   gsap.ticker.add((t) => lenis.raf(t * 1000));
   gsap.ticker.lagSmoothing(0);
   env.lenis = lenis;
@@ -59,7 +62,7 @@ export function startSmoothScroll() {
 }
 
 export function scrollToEl(el: Element | string, offset = 0) {
-  if (env.lenis) env.lenis.scrollTo(el as HTMLElement, { offset });
+  if (env.lenis) { env.lenis.resize(); env.lenis.scrollTo(el as HTMLElement, { offset }); }
   else {
     const t = typeof el === 'string' ? document.querySelector(el) : el;
     t?.scrollIntoView({ behavior: env.reduced ? 'auto' : 'smooth', block: 'start' });

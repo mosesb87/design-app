@@ -116,7 +116,7 @@ export default function chrome(_: HTMLElement[], env: Env) {
       const t = document.querySelector<HTMLElement>(id);
       if (!t) return;
       e.preventDefault();
-      if (env.lenis) env.lenis.scrollTo(t, { offset: -16 });
+      if (env.lenis) { env.lenis.resize(); env.lenis.scrollTo(t, { offset: -16 }); }
       else t.scrollIntoView({ behavior: env.reduced ? 'auto' : 'smooth' });
       t.setAttribute('tabindex', '-1');
       t.focus({ preventScroll: true });

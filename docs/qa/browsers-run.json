@@ -1,1 +1,1 @@
-{ "nonce": 9, "note": "Changing this file re-runs the Firefox + WebKit smoke test on GitHub Actions." }
+{ "nonce": 10, "note": "Changing this file re-runs the Firefox + WebKit smoke test on GitHub Actions." }
