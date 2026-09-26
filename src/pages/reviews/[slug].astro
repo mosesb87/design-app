@@ -42,7 +42,7 @@ const jsonLd = [
   },
 ];
 ---
-<Base title={`${r.brand} review — ${r.headline}`} description={r.blurb} path={`/reviews/${r.slug}/`} og="default" type="article" jsonLd={jsonLd}>
+<Base title={`${r.brand} review — ${r.headline}`} description={r.blurb} path={`/reviews/${r.slug}/`} og={`review-${r.slug}`} type="article" jsonLd={jsonLd}>
   <article class="rv">
     <PageHead title={r.headline} kicker={r.title} dot={tone.bg} tone={tintFor(r.slug)} size={r.headline.length > 44 ? 's' : 'm'} stickers={['lens', 'check', 'percent']}>
       <nav class="rv__crumbs" slot="top" aria-label="Breadcrumb"><a href="/reviews/">← All reviews</a></nav>

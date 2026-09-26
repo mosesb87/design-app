@@ -1,10 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
-import Plate from '../../components/Plate.astro';
 import Picture from '../../components/Picture.astro';
+import PageHead from '../../components/play/PageHead.astro';
 import VideoPlate from '../../components/VideoPlate.astro';
 import StructurePlate from '../../components/StructurePlate.astro';
-import Mark from '../../components/Mark.astro';
 import { orderedCases, type CaseStudy } from '../../data/cases';
 import { media, view, capturedDate, domain, srcset } from '../../lib/media';
 import { SITE_URL, person } from '../../data/site';
@@ -15,7 +14,6 @@ export function getStaticPaths() {
 }
 interface Props { c: CaseStudy; i: number; next: CaseStudy; total: number }
 const { c, i, next, total } = Astro.props;
-const plateNo = `Plate ${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
 const m = media(c.media.hero);
 const date = capturedDate(c.media.hero);
 const full = view(c.media.full || '', 'desktop-full');
@@ -26,6 +24,15 @@ const hasOutline = !!m?.outline;
 const details = [c.media.hero, ...(c.media.more || []).map((x) => x.slug)].flatMap((sl) => media(sl)?.details || []);
 const nextHero = view(next.media.hero, 'desktop-hero');
 const group = c.group === 'systems' ? 'Systems' : 'Sites & stores';
+const heroView = view(c.media.hero, 'desktop-hero');
+const TINTS = ['var(--lilac)', 'var(--sky)', 'var(--mint)', 'var(--lemon)', 'var(--peach)', 'var(--blush)'];
+const BRIGHTS = ['var(--violet)', 'var(--blue)', 'var(--aqua)', 'var(--sun)', 'var(--tomato)', 'var(--pink)'];
+const tint = TINTS[i % TINTS.length];
+const nextTint = TINTS[(i + 1) % TINTS.length];
+const cardTones = ['var(--blush)', 'var(--mint)', 'var(--lilac)', 'var(--lemon)', 'var(--sky)', 'var(--peach)'];
+// My earlier portfolio pages are cited as text (this site replaces them); live projects stay linked.
+const ownPortfolio = (u?: string) => { try { const x = new URL(u || ''); return x.hostname === 'work.mousabatarseh.com' || (x.hostname === 'mousabatarseh.com' && /^\/(v2\/.*|blog\/.*|reviews\/.*)?$/.test(x.pathname)); } catch { return false; } };
+const sourceLabel = (u: string) => (ownPortfolio(u) ? 'my earlier portfolio' : domain(u));
 const description = c.summary;
 const jsonLd = [
   {
@@ -51,79 +58,80 @@ const jsonLd = [
 ---
 <Base title={c.title} description={description} path={`/work/${c.slug}/`} og={`work-${c.slug}`} type="article" jsonLd={jsonLd}>
   <article class="case">
-    <!-- C1 · Hero -->
-    <header class="case__hero wrap">
-      <nav class="slug case__crumbs slug-list" aria-label="Breadcrumb">
-        <a href="/work/">Work</a><span>{group}</span><span aria-current="page">{plateNo}</span>
-      </nav>
-      <p class="kicker case__kicker">{c.kicker}</p>
-      <h1 class="case__title reg" data-text={c.title} data-register>{c.title}</h1>
-      {c.promise && <p class="case__promise">{c.promise}</p>}
-      <p class="case__summary lead">{c.summary}</p>
-      <dl class="case__facts">
-        {c.platform.length > 0 && <div><dt class="slug">Platform</dt><dd>{c.platform.join(' · ')}</dd></div>}
-        <div><dt class="slug">Languages</dt><dd>{c.languages.join(' + ')}</dd></div>
-        <div><dt class="slug">Live</dt><dd><a href={c.url} rel="noopener">{c.urlLabel || domain(c.url)} <span aria-hidden="true">↗</span></a></dd></div>
-        <div><dt class="slug">Captured</dt><dd class="num">{date || 'Pending'}</dd></div>
+    <PageHead title={c.title} kicker={`${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')} · ${c.kicker}`} dot={BRIGHTS[i % BRIGHTS.length]} tone={tint} size={c.title.length > 22 ? 'm' : 'l'} stickers={c.group === 'systems' ? ['blocks', 'bolt', 'check'] : ['tag', 'cursor', 'spark']}>
+      <nav class="case__crumbs" slot="top" aria-label="Breadcrumb"><a href="/work/">← All the work</a><span>{group}</span></nav>
+      {c.promise && <p class="case__promise" data-ph-fade>{c.promise}</p>}
+      <p class="case__summary" data-ph-fade>{c.summary}</p>
+      <dl class="case__facts" data-ph-fade>
+        {c.platform.length > 0 && <div><dt>Platform</dt><dd>{c.platform.join(' · ')}</dd></div>}
+        <div><dt>Languages</dt><dd>{c.languages.join(' + ')}</dd></div>
+        <div><dt>Live</dt><dd><a href={c.url} rel="noopener">{c.urlLabel || domain(c.url)} <span aria-hidden="true">↗</span></a></dd></div>
+        <div><dt>Captured</dt><dd class="num">{date || 'Pending'}</dd></div>
       </dl>
-    </header>
-    <div class="case__lead-plate wrap">
-      <Plate slug={c.media.hero} alt={`${c.title} — the live site, first screen, desktop`} title={c.title} url={c.url} plate={plateNo} meta={['Desktop · 1440 × 900']} sizes="(min-width: 1200px) 1600px, 100vw" eager vtHero aspect="16 / 10" />
-    </div>
+    </PageHead>
+    {heroView && (
+      <figure class="case__lead wrap">
+        <div class="case__lead-frame" data-vt-hero>
+          <Picture data={heroView} alt={`${c.title} — the live site, first screen, desktop`} sizes="(min-width: 1200px) 1400px, 96vw" eager fetchpriority="high" />
+        </div>
+        <figcaption>{domain(c.url)} · desktop, 1440 wide · captured {date}</figcaption>
+      </figure>
+    )}
 
-    <!-- C2 · The brief (calm) -->
     <section class="case__brief section wrap" aria-labelledby="brief-title">
-      <h2 class="slug case__label" id="brief-title">The work</h2>
-      <div class="case__prose prose" data-reveal="lines">
+      <header class="case__head">
+        <p class="kicker" style="--kicker-dot: var(--tomato)">The work</p>
+        <h2 class="visually-hidden" id="brief-title">The work</h2>
+      </header>
+      <div class="case__prose">
         {c.intro.map((p) => <p>{p}</p>)}
       </div>
       <aside class="case__notes">
         {c.role && (
           <div class="case__role">
-            <p class="slug">Role, as published</p>
-            <p>“{c.role.text}”</p>
-            <p class="slug"><a href={c.role.source} rel="noopener">Source ↗</a></p>
+            <p class="case__note-label">Role, as published</p>
+            <p class="case__role-text">“{c.role.text}”</p>
+            <p class="case__note-src">{ownPortfolio(c.role.source) ? <>Source: my earlier portfolio</> : <>Source: <a href={c.role.source} rel="noopener">{domain(c.role.source)}</a></>}</p>
           </div>
         )}
         {c.disclaimer && (
           <div class="case__disclaimer">
-            <p class="slug">Note</p>
+            <p class="case__note-label">Note</p>
             <p>{c.disclaimer}</p>
           </div>
         )}
       </aside>
     </section>
 
-    <!-- C3 · Exploded plates: Data / Structure / Surface -->
     {m && (
       <section class="exploded" data-exploded aria-labelledby="plates-title">
         <div class="exploded__track" data-exploded-track>
           <div class="exploded__sticky">
             <div class="wrap exploded__grid">
               <div class="exploded__legend">
-                <p class="kicker">Three plates, one page</p>
+                <p class="kicker" style="--kicker-dot: var(--violet)">Three layers, one page</p>
                 <h2 class="exploded__title h2" id="plates-title">What sits under the surface.</h2>
                 <ol class="exploded__labels" role="list">
-                  <li data-layer-label><span class="slug">01 · Surface</span> The live page, captured {date}.</li>
-                  <li data-layer-label><span class="slug">02 · Structure</span> Its layout, traced by script from the same page.</li>
-                  <li data-layer-label><span class="slug">03 · Data</span> The facts it runs on.</li>
+                  <li data-layer-label><span class="exploded__n">01</span><b>Surface</b> The live page, captured {date}.</li>
+                  <li data-layer-label><span class="exploded__n">02</span><b>Structure</b> Its layout, traced by script from the same page.</li>
+                  <li data-layer-label><span class="exploded__n">03</span><b>Data</b> The facts it runs on.</li>
                 </ol>
               </div>
               <div class="exploded__stage" aria-hidden="true">
                 <div class="stack" data-stack>
                   <div class="layer layer--data" data-layer>
-                    <p class="layer__tag slug">03 · Data</p>
+                    <p class="layer__tag">03 · Data</p>
                     <dl class="layer__rows">
                       {c.spec.slice(0, 4).map((f) => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
                       {(c.metrics || []).slice(0, 2).map((x) => <div><dt>{x.label}</dt><dd class="num">{x.value}</dd></div>)}
                     </dl>
                   </div>
                   <div class="layer layer--structure" data-layer>
-                    <p class="layer__tag slug">02 · Structure</p>
+                    <p class="layer__tag">02 · Structure</p>
                     {hasOutline ? <StructurePlate slug={c.media.hero} /> : <div class="layer__blank"></div>}
                   </div>
                   <div class="layer layer--surface" data-layer>
-                    <p class="layer__tag slug">01 · Surface</p>
+                    <p class="layer__tag">01 · Surface</p>
                     <Picture slug={c.media.hero} v="desktop-hero" alt="" sizes="(min-width: 1024px) 50vw, 90vw" />
                   </div>
                 </div>
@@ -134,14 +142,16 @@ const jsonLd = [
       </section>
     )}
 
-    <!-- C4 · Features -->
     {c.features && c.features.length > 0 && (
       <section class="case__features section wrap" aria-labelledby="features-title">
-        <h2 class="slug case__label" id="features-title">How it works</h2>
-        <ol class="features" role="list" data-rows>
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--aqua)">How it works</p>
+          <h2 class="h2" id="features-title">The moving parts.</h2>
+        </header>
+        <ol class="features" role="list" data-pop-grid>
           {c.features.map((f, n) => (
-            <li class="feature">
-              <span class="slug num">{String(n + 1).padStart(2, '0')}</span>
+            <li class="feature" style={`--bg:${cardTones[n % cardTones.length]}`} data-pop>
+              <span class="feature__n num">{String(n + 1).padStart(2, '0')}</span>
               <h3 class="feature__title">{f.title}</h3>
               <p class="feature__text">{f.text}</p>
             </li>
@@ -150,19 +160,20 @@ const jsonLd = [
       </section>
     )}
 
-    <!-- C4b · Details: the work at reading distance -->
     {details.length > 0 && (
       <section class="case__details section wrap" aria-labelledby="details-title">
-        <h2 class="slug case__label" id="details-title">Details, at reading distance</h2>
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--pink)">Up close</p>
+          <h2 class="h2" id="details-title">Details, at reading distance.</h2>
+        </header>
         <ol class="details" role="list">
           {details.map((d, n) => (
             <li class:list={['detail', { 'detail--wide': d.w / d.h > 2.2 }]}>
               <figure>
-                <div class="detail__frame crop" style={`aspect-ratio: ${d.w} / ${d.h}`} data-plate data-part-host>
-                  <img class="plate__img" srcset={srcset(d.webp)} src={d.webp[d.webp.length - 1].src} sizes="(min-width: 1024px) 45vw, 92vw" alt={`${c.title} — detail: ${d.label}`} width={d.w} height={d.h} loading="lazy" decoding="async" />
-                  <span class="crop__b" aria-hidden="true"></span>
+                <div class="detail__frame" style={`aspect-ratio: ${d.w} / ${d.h}`}>
+                  <img srcset={srcset(d.webp)} src={d.webp[d.webp.length - 1].src} sizes="(min-width: 1024px) 45vw, 92vw" alt={`${c.title} — detail: ${d.label}`} width={d.w} height={d.h} loading="lazy" decoding="async" />
                 </div>
-                <figcaption class="detail__cap"><span class="slug num">{String(n + 1).padStart(2, '0')}</span><span>{d.label}</span></figcaption>
+                <figcaption class="detail__cap"><span class="detail__n num">{String(n + 1).padStart(2, '0')}</span><span>{d.label}</span></figcaption>
               </figure>
             </li>
           ))}
@@ -170,40 +181,40 @@ const jsonLd = [
       </section>
     )}
 
-    <!-- C5 · The whole page, read top to bottom -->
     {(full || mobFull) && (
       <section class="case__read section" aria-labelledby="read-title">
         <div class="wrap case__read-grid">
           <header class="case__read-head">
-            <h2 class="slug case__label" id="read-title">The live page, top to bottom</h2>
+            <p class="kicker" style="--kicker-dot: var(--blue)">Top to bottom</p>
+            <h2 class="h2" id="read-title">The live page, all of it.</h2>
             <p class="case__read-note">Scroll past the frames and the page inside scrolls with you. Captured {date} in a real browser.</p>
           </header>
           {full && (
             <figure class="sframe-fig sframe-fig--desk">
-              <div class="sframe crop" data-scrollframe tabindex="0" aria-label={`${c.title} — full desktop page (scrollable)`}>
+              <div class="sframe" data-scrollframe tabindex="0" aria-label={`${c.title} — full desktop page (scrollable)`}>
                 <div class="sframe__inner" data-scrollframe-inner><Picture data={full} alt={`${c.title} — the full desktop page`} sizes="(min-width: 1024px) 60vw, 92vw" /></div>
-                <span class="crop__b" aria-hidden="true"></span>
               </div>
-              <figcaption class="slug slug-list"><span>Desktop</span><span>1440 wide</span><span>{domain(c.url)}</span></figcaption>
+              <figcaption>Desktop · 1440 wide · {domain(c.url)}</figcaption>
             </figure>
           )}
           {mobFull && (
             <figure class="sframe-fig sframe-fig--mob">
-              <div class="sframe sframe--mob crop" data-scrollframe tabindex="0" aria-label={`${c.title} — full mobile page (scrollable)`}>
+              <div class="sframe sframe--mob" data-scrollframe tabindex="0" aria-label={`${c.title} — full mobile page (scrollable)`}>
                 <div class="sframe__inner" data-scrollframe-inner><Picture data={mobFull} alt={`${c.title} — the full mobile page`} sizes="(min-width: 1024px) 22vw, 60vw" /></div>
-                <span class="crop__b" aria-hidden="true"></span>
               </div>
-              <figcaption class="slug slug-list"><span>Mobile</span><span>390 wide</span></figcaption>
+              <figcaption>Mobile · 390 wide</figcaption>
             </figure>
           )}
         </div>
       </section>
     )}
 
-    <!-- C6 · A real session -->
     {video && c.media.video && (
       <section class="case__rec section section--tight wrap" aria-labelledby="rec-title">
-        <h2 class="slug case__label" id="rec-title">{recs?.interaction ? 'In use' : 'A real session'}</h2>
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--lime)">Recorded</p>
+          <h2 class="h2" id="rec-title">{recs?.interaction ? 'In use.' : 'A real session.'}</h2>
+        </header>
         <div class:list={['recs', { 'recs--two': recs?.interaction && recs?.video }]}>
           {recs?.interaction && <VideoPlate slug={c.media.video} kind="interact" label={`Screen recording of ${c.title} in use: ${c.media.shows || 'a real interaction'}`} caption={c.media.shows} />}
           {recs?.video && <VideoPlate slug={c.media.video} kind="scroll" label={`Screen recording of ${c.title} being scrolled in a real browser`} />}
@@ -211,125 +222,133 @@ const jsonLd = [
       </section>
     )}
 
-    <!-- C7 · Receipts -->
     {(c.metrics?.length || c.spec.length) && (
       <section class="case__receipts section wrap" aria-labelledby="receipts-title">
-        <h2 class="case__receipts-title h2" id="receipts-title">{c.metrics?.length ? 'Receipts.' : 'The spec.'}</h2>
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--sun)">Counted, not claimed</p>
+          <h2 class="h2" id="receipts-title">{c.metrics?.length ? 'Receipts.' : 'The spec.'}</h2>
+        </header>
         {c.metrics && c.metrics.length > 0 && (
-          <ul class="receipts" role="list">
-            {c.metrics.map((x) => (
-              <li class="receipt" data-count-host>
+          <ul class="receipts" role="list" data-pop-grid>
+            {c.metrics.map((x, n) => (
+              <li class="receipt" style={`--bg:${cardTones[(n + 2) % cardTones.length]}`} data-count-host data-pop>
                 <p class="receipt__num num" data-count>{x.value}</p>
                 <p class="receipt__label">{x.label}</p>
-                <p class="slug" data-count-after>Source: <a href={x.source} rel="noopener">{domain(x.source)}</a>{x.note && <> · {x.note}</>}</p>
+                <p class="receipt__src" data-count-after>Source: {ownPortfolio(x.source) ? 'my earlier portfolio' : <a href={x.source} rel="noopener">{domain(x.source)}</a>}{x.note && <> · {x.note}</>}</p>
               </li>
             ))}
           </ul>
         )}
         <dl class="spec-table">
-          {c.spec.map((f) => <div><dt class="slug">{f.label}</dt><dd>{f.value}</dd></div>)}
+          {c.spec.map((f) => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
         </dl>
       </section>
     )}
 
-    <!-- C8 · More captures & family -->
     {c.media.more && c.media.more.length > 0 && (
       <section class="case__more section wrap" aria-labelledby="more-title">
-        <h2 class="slug case__label" id="more-title">Also part of this work</h2>
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--tomato)">Also part of this work</p>
+          <h2 class="h2" id="more-title">More from the same build.</h2>
+        </header>
         <ul class="more-grid" role="list">
-          {c.media.more.map((x) => (
-            <li><Plate slug={x.slug} alt={x.label} title={x.label} url={media(x.slug)?.url || undefined} meta={[x.label]} sizes="(min-width: 1024px) 40vw, 92vw" aspect="16 / 10" /></li>
-          ))}
+          {c.media.more.map((x) => {
+            const v = view(x.slug, 'desktop-hero');
+            const mu = media(x.slug)?.url;
+            return (
+              <li class="more-card">
+                <div class="more-card__img">{v ? <Picture data={v} alt={x.label} sizes="(min-width: 1024px) 40vw, 92vw" /> : <span class="more-card__blank">{x.label}</span>}</div>
+                <p class="more-card__cap"><span>{x.label}</span>{mu && <span>{domain(mu)}</span>}</p>
+              </li>
+            );
+          })}
         </ul>
       </section>
     )}
     {c.family && c.family.length > 0 && (
       <section class="case__family section section--tight wrap" aria-labelledby="family-title">
-        <h2 class="slug case__label" id="family-title">The family</h2>
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--violet)">The family</p>
+          <h2 class="h2" id="family-title">Related builds.</h2>
+        </header>
         <ul class="family" role="list">
-          {c.family.map((f) => (
-            <li><a href={f.url} rel="noopener"><span class="family__title">{f.title}</span><span class="family__note">{f.note}</span><span aria-hidden="true">↗</span></a></li>
-          ))}
+          {c.family.map((f) => {
+            const internal = f.url.startsWith('/');
+            return <li><a href={f.url} rel={internal ? undefined : 'noopener'}><span class="family__title">{f.title}</span><span class="family__note">{f.note}</span><span class="family__arrow" aria-hidden="true">{internal ? '→' : '↗'}</span></a></li>;
+          })}
         </ul>
       </section>
     )}
 
     <section class="case__links section section--tight wrap" aria-label="Links">
       <a class="btn" href={c.url} rel="noopener">Open the live {c.group === 'systems' ? 'tool' : 'site'} <span class="arrow" aria-hidden="true">↗</span></a>
-      {c.related?.map((r) => <a class="link-arrow" href={r.url}>Read: {r.title} <span class="arrow" aria-hidden="true">→</span></a>)}
+      {c.related?.map((r) => <a class="btn btn--line" href={r.url}>Read: {r.title} <span class="arrow" aria-hidden="true">→</span></a>)}
     </section>
 
-    <!-- C9 · Next -->
-    <nav class="next" aria-label="Next case study">
-      <a class="next__link wrap" href={`/work/${next.slug}/`} data-vt-plate data-part-host>
-        <span class="slug">Next plate</span>
-        <span class="next__title reg" data-text={next.title} data-part>{next.title}</span>
-        <span class="next__kicker slug">{next.kicker} →</span>
-        {nextHero && <span class="next__peek" data-vt-target><Picture data={nextHero} alt="" sizes="40vw" /></span>}
-        <Mark size={40} class="next__mark" />
+    <nav class="next wrap" aria-label="Next case study">
+      <a class="next__link" href={`/work/${next.slug}/`} data-vt-plate data-vt-host style={`--bg:${nextTint}`}>
+        <span class="next__label">Next case study →</span>
+        <span class="next__title">{next.title}</span>
+        <span class="next__kicker">{next.kicker}</span>
+        {nextHero && <span class="next__peek" data-vt-target><Picture data={nextHero} alt="" sizes="(min-width: 1024px) 36vw, 80vw" /></span>}
       </a>
     </nav>
   </article>
 </Base>
 
 <style>
-  .case__hero { padding-top: calc(var(--nav-h) + var(--s-8)); display: grid; gap: var(--s-5); }
-  .case__crumbs a { border: 0; text-decoration: underline; text-underline-offset: 3px; display: inline-flex; align-items: center; min-height: 32px; min-width: 32px; }
-  .case__title {
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 9.5vw, 10rem);
-    font-weight: 840;
-    font-stretch: 106%;
-    line-height: 0.86;
-    letter-spacing: -0.045em;
-    text-wrap: balance;
-    max-width: 14ch;
-  }
-  .case__promise { font-family: var(--font-display); font-weight: 700; font-stretch: 104%; font-size: var(--t-h3); line-height: 1.15; max-width: 28ch; text-wrap: balance; }
-  .case__summary { color: var(--fg-2); max-width: 46ch; }
-  .case__facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4) var(--gutter); margin-top: var(--s-4); }
-  .case__facts div { border-top: 1px solid var(--line); padding-top: var(--s-3); }
-  .case__facts dd { margin: 4px 0 0; font-weight: 520; }
-  .case__lead-plate { margin-top: var(--s-8); }
+  .case__crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; justify-self: start; }
+  .case__crumbs a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.72); font-weight: 650; text-decoration: none; }
+  .case__crumbs span { padding: 6px 12px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 700 0.8125rem / 1 var(--font-text); }
+  .case__promise { font-family: var(--font-display); font-weight: 850; font-stretch: 85%; font-size: clamp(1.5rem, 2.4vw, 2.25rem); line-height: 1.05; max-width: 28ch; text-wrap: balance; }
+  .case__summary { font-size: var(--t-lead); line-height: 1.35; color: var(--ink-2); max-width: 48ch; }
+  .case__facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: var(--s-3); max-width: 1000px; }
+  .case__facts div { padding: 12px 16px; border-radius: var(--r-m); background: rgb(255 255 255 / 0.72); }
+  .case__facts dt { font: 750 var(--t-label) / 1.3 var(--font-text); text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-2); }
+  .case__facts dd { margin: 4px 0 0; font-weight: 650; overflow-wrap: anywhere; }
+  .case__facts a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  @media (min-width: 900px) { .case__facts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
-  .case__label { color: var(--fg); margin-bottom: var(--s-5); }
+  .case__lead { margin-top: calc(var(--s-7) * -1); position: relative; z-index: 2; }
+  .case__lead-frame { border-radius: var(--r-xl); overflow: hidden; background: #fff; box-shadow: var(--shadow-2); border: 6px solid #fff; }
+  .case__lead-frame :global(img) { width: 100%; height: auto; display: block; }
+  .case__lead figcaption { margin-top: 12px; text-align: center; font-size: 0.875rem; color: var(--fg-2); font-weight: 550; }
+
+  .case__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
   .case__brief { display: grid; gap: var(--s-6); }
-  .case__prose { font-size: var(--t-lead); line-height: 1.42; letter-spacing: -0.01em; max-width: 40ch; }
-  .case__notes { display: grid; gap: var(--s-5); align-content: start; }
-  .case__role, .case__disclaimer { border-top: 1px solid var(--line); padding-top: var(--s-3); display: grid; gap: 6px; max-width: 40ch; }
-  .case__role p:nth-child(2) { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; line-height: 1.2; }
-  .case__disclaimer p:last-child { color: var(--fg-2); }
+  .case__brief .case__head { margin-bottom: 0; }
+  .case__prose { display: grid; gap: 1em; font-size: var(--t-lead); line-height: 1.45; max-width: 42ch; font-weight: 450; }
+  .case__notes { display: grid; gap: 14px; align-content: start; }
+  .case__role, .case__disclaimer { display: grid; gap: 8px; padding: 20px 22px; border-radius: var(--r-l); max-width: 42ch; }
+  .case__role { background: var(--lilac); }
+  .case__disclaimer { background: var(--lemon); }
+  .case__note-label { font: 750 var(--t-label) / 1.3 var(--font-text); text-transform: uppercase; letter-spacing: 0.05em; }
+  .case__role-text { font-family: var(--font-display); font-weight: 850; font-stretch: 85%; font-size: 1.5rem; line-height: 1.1; }
+  .case__note-src { font-size: 0.875rem; font-weight: 600; color: var(--ink-2); }
 
-  /* Exploded plates — default is the static exploded diagram */
   .exploded { padding-block: var(--section); }
   .exploded__grid { display: grid; gap: var(--s-7); align-items: center; }
   .exploded__legend { display: grid; gap: var(--s-4); }
   .exploded__title { max-width: 12ch; }
-  .exploded__labels { display: grid; gap: var(--s-3); margin-top: var(--s-4); }
-  .exploded__labels li { border-top: 1px solid var(--line); padding-top: var(--s-3); max-width: 36ch; }
-  .exploded__labels .slug { display: block; color: var(--fg); margin-bottom: 4px; }
+  .exploded__labels { display: grid; gap: 10px; margin-top: var(--s-3); }
+  .exploded__labels li { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: baseline; padding: 14px 16px; border-radius: var(--r-m); background: var(--cloud); max-width: 40ch; }
+  .exploded__labels b { font-weight: 750; }
+  .exploded__labels li > :not(.exploded__n) { grid-column: 2; }
+  .exploded__n { grid-row: span 2; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; font: 750 0.75rem / 1 var(--font-text); }
   .exploded__stage { display: grid; place-items: center; min-height: 440px; }
-  .stack {
-    --w: min(80vw, 440px);
-    position: relative;
-    width: var(--w);
-    aspect-ratio: 16 / 10;
-    transform-style: preserve-3d;
-    transform: perspective(1600px) rotateX(54deg) rotateZ(-28deg);
-  }
-  .layer { position: absolute; inset: 0; overflow: hidden; background: var(--paper); box-shadow: 0 0 0 1px var(--rule), 0 26px 40px -24px rgb(20 20 20 / 0.35); backface-visibility: hidden; }
-  .layer--data { transform: translateZ(0); background: #fbfaf6; padding: 6% 7%; }
-  .layer--structure { transform: translateZ(90px); }
+  .stack { --w: min(80vw, 440px); position: relative; width: var(--w); aspect-ratio: 16 / 10; transform-style: preserve-3d; transform: perspective(1600px) rotateX(54deg) rotateZ(-28deg); }
+  .layer { position: absolute; inset: 0; overflow: hidden; border-radius: 18px; background: #fff; box-shadow: 0 30px 50px -26px rgb(40 20 90 / 0.45); backface-visibility: hidden; }
+  .layer--data { transform: translateZ(0); background: var(--mint); padding: 6% 7%; }
+  .layer--structure { transform: translateZ(90px); background: var(--lilac); }
   .layer--surface { transform: translateZ(180px); }
   .layer :global(picture), .layer :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-  .layer__tag { position: absolute; left: 8px; top: 6px; z-index: 2; background: var(--ink); color: var(--paper); padding: 3px 6px; font-size: 9px; }
+  .layer__tag { position: absolute; left: 10px; top: 8px; z-index: 2; padding: 4px 9px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 750 10px / 1.2 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; }
   .layer--data .layer__tag { position: static; display: inline-block; margin-bottom: 8px; }
-  .layer__rows { display: grid; gap: 3px; font: 500 clamp(8px, 1vw, 12px) / 1.35 var(--font-mono); }
-  .layer__rows div { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed var(--rule); padding-bottom: 3px; }
+  .layer__rows { display: grid; gap: 3px; font: 600 clamp(8px, 1vw, 12px) / 1.35 var(--font-text); }
+  .layer__rows div { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed rgb(22 18 31 / 0.2); padding-bottom: 3px; }
   .layer__rows dt { color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.04em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .layer__rows dd { margin: 0; font-weight: 600; text-align: right; }
-  .layer__blank { width: 100%; height: 100%; background: repeating-linear-gradient(0deg, var(--paper-2) 0 18px, var(--paper) 18px 36px); }
-
+  .layer__rows dd { margin: 0; font-weight: 750; text-align: right; }
+  .layer__blank { width: 100%; height: 100%; background: repeating-linear-gradient(0deg, rgb(255 255 255 / 0.5) 0 18px, transparent 18px 36px); }
   :global(.motion-ok) .exploded { padding-block: 0; }
   :global(.motion-ok) .exploded__track { height: 240vh; }
   :global(.motion-ok) .exploded__sticky { position: sticky; top: 0; height: 100svh; display: flex; align-items: center; overflow: hidden; }
@@ -337,88 +356,92 @@ const jsonLd = [
   :global(.motion-ok) .stack { transform: none; }
   :global(.motion-ok) .layer { transform: none; }
 
-  .features { display: grid; gap: var(--s-5) var(--gutter); }
-  .feature { border-top: 1px solid var(--line); padding-top: var(--s-4); display: grid; gap: 6px; }
-  .feature__title { font-family: var(--font-display); font-weight: 760; font-stretch: 106%; font-size: var(--t-h3); line-height: 1.1; }
-  .feature__text { color: var(--fg-2); max-width: 40ch; }
+  .features { display: grid; gap: clamp(14px, 1.6vw, 24px); }
+  .feature { display: grid; gap: 10px; align-content: start; padding: clamp(20px, 2.2vw, 28px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
+  .feature__n { justify-self: start; padding: 5px 10px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 750 0.75rem / 1 var(--font-text); }
+  .feature__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.5rem, 2vw, 2rem); line-height: 0.98; text-transform: uppercase; }
+  .feature__text { font-weight: 500; color: var(--ink-2); }
 
-  .details { display: grid; gap: var(--s-8) var(--gutter); }
-  .detail__frame { position: relative; overflow: visible; background: var(--paper-2); }
+  .details { display: grid; gap: var(--s-7) var(--gutter); }
+  .detail__frame { position: relative; border-radius: var(--r-l); overflow: hidden; background: var(--cloud); box-shadow: var(--shadow-1); }
   .detail__frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .detail__cap { display: flex; gap: var(--s-3); align-items: baseline; margin-top: var(--s-4); max-width: 44ch; font-weight: 520; }
-  .detail__cap .slug { color: var(--sheet-text); }
+  .detail__cap { display: flex; gap: 12px; align-items: baseline; margin-top: 14px; max-width: 48ch; font-weight: 550; }
+  .detail__n { flex: none; padding: 4px 9px; border-radius: var(--r-pill); background: var(--pink); color: var(--ink); font: 750 0.75rem / 1.2 var(--font-text); }
   @media (min-width: 1024px) {
     .details { grid-template-columns: repeat(12, minmax(0, 1fr)); }
     .detail { grid-column: span 6; }
     .detail--wide { grid-column: 2 / span 10; }
     .detail:nth-child(odd):not(.detail--wide) { margin-top: var(--s-8); }
   }
+
   .case__read-grid { display: grid; gap: var(--s-6); align-items: start; }
+  .case__read-head { display: grid; gap: var(--s-4); }
   .case__read-note { color: var(--fg-2); max-width: 36ch; }
-  .sframe { position: relative; height: min(78vh, 760px); overflow-y: auto; overflow-x: hidden; background: var(--paper-2); overscroll-behavior: contain; }
-  .sframe--mob { height: min(78vh, 760px); max-width: 360px; }
+  .sframe { position: relative; height: min(78vh, 760px); overflow-y: auto; overflow-x: hidden; border-radius: var(--r-l); background: var(--cloud); box-shadow: var(--shadow-2); overscroll-behavior: contain; border: 6px solid #fff; }
+  .sframe--mob { height: min(78vh, 760px); max-width: 360px; border-radius: 34px; border-width: 8px; border-color: var(--ink); }
   :global(.is-driven).sframe { overflow: hidden; }
   .sframe__inner :global(img) { width: 100%; height: auto; }
-  .sframe-fig figcaption { margin-top: var(--s-3); }
+  .sframe-fig figcaption { margin-top: 12px; font-size: 0.875rem; font-weight: 550; color: var(--fg-2); }
 
   .recs { display: grid; gap: var(--s-7) var(--gutter); }
+  .recs :global(.vplate__frame) { border-radius: var(--r-l); overflow: hidden; box-shadow: var(--shadow-2); }
+  .recs :global(.crop::before), .recs :global(.crop::after), .recs :global(.crop__b) { display: none; }
   @media (min-width: 1024px) { .recs--two { grid-template-columns: 1.35fr 1fr; align-items: start; } }
-  .receipts { display: grid; gap: var(--s-6) var(--gutter); margin-block: var(--s-7); }
-  .receipt { border-top: 1px solid var(--fg); padding-top: var(--s-4); }
-  .receipt__num { font-family: var(--font-display); font-weight: 840; font-size: clamp(3rem, 7vw, 6.5rem); line-height: 1; letter-spacing: -0.04em; font-stretch: 96%; white-space: nowrap; }
+
+  .receipts { display: grid; gap: clamp(14px, 1.6vw, 24px); margin-bottom: var(--s-6); }
+  .receipt { container-type: inline-size; display: grid; gap: 10px; align-content: start; padding: clamp(22px, 2.4vw, 32px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
+  .receipt__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: min(7rem, 22cqi); line-height: 0.88; white-space: nowrap; }
   .receipt__num :global(.odo) { display: inline-block; height: 1em; overflow: hidden; vertical-align: top; }
   .receipt__num :global(.odo__strip > span) { display: block; height: 1em; line-height: 1; }
-  .receipt__label { font-size: var(--t-lead); line-height: 1.3; max-width: 26ch; margin-top: var(--s-3); }
-  .spec-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: var(--s-4) var(--gutter); }
-  .spec-table div { border-top: 1px solid var(--line); padding-top: var(--s-3); }
-  .spec-table dd { margin: 4px 0 0; font-weight: 520; }
+  .receipt__label { font-size: 1.125rem; font-weight: 650; line-height: 1.25; max-width: 28ch; }
+  .receipt__src { font-size: 0.8125rem; font-weight: 600; color: var(--ink-2); }
+  .spec-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 10px; }
+  .spec-table div { padding: 14px 16px; border-radius: var(--r-m); background: var(--cloud); }
+  .spec-table dt { font: 750 var(--t-label) / 1.3 var(--font-text); text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-2); }
+  .spec-table dd { margin: 4px 0 0; font-weight: 600; }
 
-  .more-grid { display: grid; gap: var(--s-8) var(--gutter); }
-  .family li { border-top: 1px solid var(--line); }
-  .family li:last-child { border-bottom: 1px solid var(--line); }
-  .family a { display: grid; grid-template-columns: 1fr auto; gap: 4px var(--s-4); padding-block: var(--s-4); text-decoration: none; }
-  .family__title { font-family: var(--font-display); font-weight: 720; font-size: var(--t-h3); line-height: 1.15; }
-  .family__note { grid-column: 1; color: var(--fg-2); font-size: var(--t-small); }
-  .family a > span:last-child { grid-row: 1; grid-column: 2; }
-  .case__links { display: flex; flex-wrap: wrap; gap: var(--s-5); align-items: center; }
+  .more-grid { display: grid; gap: clamp(16px, 2vw, 28px); }
+  .more-card__img { border-radius: var(--r-l); overflow: hidden; aspect-ratio: 16 / 10; background: var(--cloud); box-shadow: var(--shadow-1); }
+  .more-card__img :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .more-card__blank { display: grid; place-items: center; height: 100%; padding: 20px; text-align: center; font-weight: 700; }
+  .more-card__cap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin-top: 12px; font-weight: 650; }
+  .more-card__cap span + span { color: var(--fg-2); font-weight: 550; font-size: 0.875rem; }
+  .family { display: grid; gap: 8px; }
+  .family a { display: grid; grid-template-columns: 1fr auto; gap: 4px var(--s-4); align-items: center; padding: 16px 20px; border-radius: var(--r-l); background: var(--cloud); text-decoration: none; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
+  .family a:hover { background: var(--lime); transform: translateX(4px); }
+  .family__title { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: 1.5rem; line-height: 1; text-transform: uppercase; }
+  .family__note { grid-column: 1; color: var(--ink-2); font-size: var(--t-small); font-weight: 500; }
+  .family__arrow { grid-row: 1 / span 2; grid-column: 2; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: #fff; }
+  .case__links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 
-  .next { border-top: 1px solid var(--fg); margin-top: var(--s-8); }
-  .next__link { display: grid; gap: var(--s-3); padding-block: var(--s-9); text-decoration: none; position: relative; overflow: hidden; }
-  .next__title { font-family: var(--font-display); font-weight: 840; font-stretch: 104%; font-size: clamp(2.5rem, 8vw, 8rem); line-height: 0.9; letter-spacing: -0.04em; max-width: 12ch; transition: font-stretch var(--d-small) var(--ease-register); }
-  .next__link:hover .next__title { font-stretch: 114%; }
-  .next__peek { position: absolute; right: var(--margin); top: 50%; width: min(36vw, 520px); aspect-ratio: 16 / 10; overflow: hidden; transform: translateY(-50%) translateX(12%); opacity: 0.18; transition: opacity var(--d-line) var(--ease-register), transform var(--d-line) var(--ease-register); pointer-events: none; display: none; }
+  .next { margin-top: var(--s-8); }
+  .next__link { position: relative; display: grid; gap: 10px; padding: clamp(28px, 4vw, 64px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); text-decoration: none; overflow: hidden; min-height: 280px; align-content: center; transition: transform 0.5s var(--ease-pop); }
+  .next__link:hover { transform: translateY(-6px); }
+  .next__label { justify-self: start; padding: 6px 12px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 700 0.8125rem / 1 var(--font-text); }
+  .next__title { position: relative; z-index: 1; font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(3rem, 8vw, 8rem); line-height: 0.86; text-transform: uppercase; max-width: 11ch; }
+  .next__kicker { position: relative; z-index: 1; font-weight: 650; }
+  .next__peek { display: none; position: absolute; right: clamp(20px, 3vw, 48px); top: 50%; width: min(36vw, 520px); aspect-ratio: 16 / 10; border-radius: var(--r-l); overflow: hidden; box-shadow: var(--shadow-2); transform: translateY(-50%) rotate(4deg); transition: transform 0.6s var(--ease-pop); }
   .next__peek :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-  .next__link:hover .next__peek, .next__link:focus-visible .next__peek { opacity: 1; transform: translateY(-50%) translateX(0); }
-  .next__link :global(.next__mark) { position: absolute; right: var(--margin); bottom: var(--s-6); }
+  .next__link:hover .next__peek { transform: translateY(-50%) rotate(0deg) scale(1.03); }
 
   @media (min-width: 700px) {
-    .case__facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .receipts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .more-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (min-width: 1024px) {
-    .case__hero { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
-    .case__hero > * { grid-column: 1 / span 12; }
-    .case__summary { grid-column: 1 / span 6; }
-    .case__promise { grid-column: 1 / span 7; }
-    .case__facts { grid-column: 7 / span 6; align-self: end; }
     .case__brief { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
-    .case__brief .case__label { grid-column: 1 / span 2; }
+    .case__brief .case__head { grid-column: 1 / span 2; }
     .case__prose { grid-column: 3 / span 6; }
-    .case__notes { grid-column: 10 / span 3; }
+    .case__notes { grid-column: 9 / span 4; }
     .exploded__grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
     .exploded__legend { grid-column: 1 / span 4; }
     .exploded__stage { grid-column: 5 / span 8; min-height: 640px; }
     .stack { --w: min(44vw, 720px); }
     .layer--structure { transform: translateZ(150px); }
     .layer--surface { transform: translateZ(300px); }
-    .layer__tag { font-size: 10px; }
+    .layer__tag { font-size: 11px; }
     .features { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    /* Titles that wrap to two lines keep every description on one shared line. */
-    @supports (grid-template-rows: subgrid) {
-      .feature { grid-row: span 3; grid-template-rows: subgrid; row-gap: 6px; align-content: start; }
-    }
     .case__read-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
     .case__read-head { grid-column: 1 / span 3; position: sticky; top: calc(var(--nav-h) + 24px); }
     .sframe-fig--desk { grid-column: 4 / span 6; }

@@ -26,7 +26,7 @@ interface Props {
 }
 const { title, description, path, og = 'default', type = 'website', jsonLd = [], contact = true, contactHeading, bodyClass = '', noindex = false } = Astro.props;
 const canonical = new URL(path, SITE_URL).href;
-const ogImage = new URL(`/og/${og}.png`, SITE_URL).href;
+const ogImage = new URL(`/og/${og}.jpg`, SITE_URL).href;
 // Build-time only (Node). Preview builds on Vercel, or with PREVIEW=1, are never indexable.
 const buildEnv: Record<string, string | undefined> = (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env ?? {};
 const isPreview = buildEnv.VERCEL === '1' || buildEnv.PREVIEW === '1';
@@ -63,7 +63,7 @@ const graph = {
     <meta name="description" content={description} />
     {!noindex && <link rel="canonical" href={canonical} />}
     {(isPreview || noindex) && <meta name="robots" content="noindex, nofollow" />}
-    <meta name="theme-color" content="#efece4" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="light" />
     <meta name="author" content={person.name} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

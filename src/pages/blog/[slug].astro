@@ -40,7 +40,7 @@ const jsonLd = [
   },
 ];
 ---
-<Base title={post.title} description={post.excerpt} path={`/blog/${post.slug}/`} og="default" type="article" jsonLd={jsonLd}>
+<Base title={post.title} description={post.excerpt} path={`/blog/${post.slug}/`} og={`blog-${post.slug}`} type="article" jsonLd={jsonLd}>
   <article class="post">
     <header class="post__head" style={`--bg:${tone}`}>
       <div class="wrap post__head-inner">

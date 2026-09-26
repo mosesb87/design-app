@@ -229,7 +229,7 @@ export const cases: CaseStudy[] = [
     disclaimer: 'Not commissioned, approved or endorsed by DiaMedical USA. Not a redesign of the store. Not a claim of measured business results.',
     family: [
       { title: 'DiaMedical Academy', url: `${M}/diamedical/academy/`, note: 'Guided learning experience.' },
-      { title: 'Experience review', url: `${M}/diamedical-review/`, note: 'Evidence-backed website review.' },
+      { title: 'Experience review', url: '/reviews/diamedical/', note: 'Evidence-backed website review — on this site.' },
       { title: 'Workbook explorer', url: `${M}/diamedical/v3/`, note: 'Interactive workbook.' },
       { title: 'How I Thought It Through', url: `${M}/diamedical-intro/`, note: 'Narrated reasoning walkthrough.' },
       { title: 'Halden Medical', url: 'https://lab.mousabatarseh.com/halden-medical/', note: 'Fictional-company adaptation.' },
