@@ -5,6 +5,16 @@ import Lenis from 'lenis';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// ScrollTrigger writes history.scrollRestoration = 'manual' on every programmatic scroll at start-up (nine times
+// a page), and Firefox rate-limits History calls per tab. Only a real change is written.
+try {
+  const d = Object.getOwnPropertyDescriptor(History.prototype, 'scrollRestoration');
+  if (d?.get && d.set) {
+    const get = d.get, set = d.set;
+    Object.defineProperty(history, 'scrollRestoration', { configurable: true, get: () => get.call(history), set: (v: ScrollRestoration) => { if (get.call(history) !== v) set.call(history, v); } });
+  }
+} catch {}
+
 export type Env = {
   reduced: boolean;
   fine: boolean; // fine pointer + hover
