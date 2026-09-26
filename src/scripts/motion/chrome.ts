@@ -120,7 +120,7 @@ export default function chrome(_: HTMLElement[], env: Env) {
       else t.scrollIntoView({ behavior: env.reduced ? 'auto' : 'smooth' });
       t.setAttribute('tabindex', '-1');
       t.focus({ preventScroll: true });
-      history.replaceState(null, '', id);
+      try { history.replaceState(history.state, '', id); } catch {}
     });
   });
 }
