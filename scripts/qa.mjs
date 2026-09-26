@@ -13,8 +13,16 @@ const BASE = opt('base', 'http://localhost:4321');
 const OUT = path.resolve('qa');
 const shots = !args.includes('--no-shots');
 const runAxe = args.includes('--axe');
-const ALL_PAGES = ['/', '/work/', '/about/', '/work/asas-studio/', '/work/changeatlas/', '/work/deals-os/', '/work/csv-mapper/', '/work/diamedical-lab/', '/work/united-textile/', '/work/universal-wholesale/', '/work/firefly-burgers/', '/work/eat-with-samar/', '/work/great-lakes-cigar-festival/', '/work/ptee/', '/404.html'];
-const pages = opt('pages', '') ? opt('pages', '').split(',') : ALL_PAGES;
+// The representative set: every template, plus the longest and the most interactive instances of each.
+const ALL_PAGES = ['/', '/work/', '/about/', '/work/asas-studio/', '/work/changeatlas/', '/work/deals-os/', '/work/csv-mapper/', '/work/diamedical-lab/', '/work/united-textile/', '/work/universal-wholesale/', '/work/firefly-burgers/', '/work/eat-with-samar/', '/work/great-lakes-cigar-festival/', '/work/ptee/', '/blog/', '/blog/on-page-seo-large-product-catalog/', '/blog/cleaning-product-data-csv/', '/reviews/', '/reviews/vanguard/', '/reviews/oakwood/', '/reviews/hayhouse/', '/reviews/diamedical/', '/404.html'];
+// --pages=all: every page in the build.
+const everyPage = () => {
+  const out = [];
+  const walk = (d, rel) => fs.readdirSync(d, { withFileTypes: true }).forEach((e) => (e.isDirectory() ? walk(path.join(d, e.name), `${rel}${e.name}/`) : e.name === 'index.html' ? out.push(rel) : e.name === '404.html' && out.push(`${rel}404.html`)));
+  walk(path.resolve('dist'), '/');
+  return out.sort();
+};
+const pages = opt('pages', '') === 'all' ? everyPage() : opt('pages', '') ? opt('pages', '').split(',') : ALL_PAGES;
 const VIEWPORTS = {
   smob: { width: 360, height: 740, isMobile: true, hasTouch: true, label: 'Small mobile 360×740' },
   mob: { width: 430, height: 932, isMobile: true, hasTouch: true, label: 'Large mobile 430×932' },

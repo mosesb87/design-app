@@ -59,27 +59,30 @@ async function ctx(opts) {
 
   // Home: featured cards and tool rack links.
   await p.goto(BASE + '/', { waitUntil: 'networkidle' });
-  const feats = await p.$$eval('.feat__cta', (as) => as.map((a) => a.getAttribute('href')));
+  const feats = await p.$$eval('.site__cta', (as) => as.map((a) => a.getAttribute('href')));
   check('Six featured case-study links on the home page', feats.length === 6, feats.join(' '));
   if (feats[0]) {
-    const card = p.locator('.feat').first();
+    const card = p.locator('.site').first();
     await card.scrollIntoViewIfNeeded();
-    const box = await card.locator('.feat__media').boundingBox();
+    await settle(p);
+    const box = await card.locator('.site__desk').boundingBox();
     await Promise.all([p.waitForURL((u) => new URL(u).pathname === feats[0], { timeout: 8000 }).catch(() => {}), p.mouse.click(box.x + box.width / 2, box.y + box.height / 3)]);
     check('Clicking a featured card image opens its case study (stretched link)', new URL(p.url()).pathname === feats[0], path(p));
   }
 
-  // Archive filters: the visible rows match each chip's count; aria-pressed follows.
-  await p.goto(BASE + '/work/', { waitUntil: 'networkidle' });
-  const chips = await p.$$eval('[data-filter] button', (bs) => bs.map((b) => ({ v: b.dataset.filterValue, n: Number(b.querySelector('.num')?.textContent || 0) })));
-  for (const ch of chips) {
-    await p.click(`[data-filter] button[data-filter-value="${ch.v}"]`);
-    await p.waitForTimeout(700);
-    const st = await p.evaluate((v) => ({ visible: [...document.querySelectorAll('[data-row]')].filter((r) => r.offsetParent !== null && getComputedStyle(r).display !== 'none').length, pressed: document.querySelector(`[data-filter] button[data-filter-value="${v}"]`).getAttribute('aria-pressed'), status: document.querySelector('[data-filter-status]')?.textContent || '' }), ch.v);
-    check(`Filter "${ch.v}" shows ${ch.n} rows`, st.visible === ch.n && st.pressed === 'true', `visible ${st.visible}, aria-pressed ${st.pressed}, status "${st.status}"`);
+  // Filters (archive, blog, reviews): the visible rows match each chip's count; aria-pressed and the status follow.
+  for (const where of ['/blog/', '/reviews/', '/work/']) {
+    await p.goto(BASE + where, { waitUntil: 'networkidle' });
+    const chips = await p.$$eval('[data-filter] button', (bs) => bs.map((b) => ({ v: b.dataset.filterValue, n: Number(b.querySelector('span:last-child')?.textContent || 0) })));
+    for (const ch of chips) {
+      await p.click(`[data-filter] button[data-filter-value="${ch.v}"]`);
+      await p.waitForTimeout(700);
+      const st = await p.evaluate((v) => ({ visible: [...document.querySelectorAll('[data-row]')].filter((r) => r.offsetParent !== null && getComputedStyle(r).display !== 'none').length, pressed: document.querySelector(`[data-filter] button[data-filter-value="${v}"]`).getAttribute('aria-pressed'), status: document.querySelector('[data-filter-status]')?.textContent || '' }), ch.v);
+      check(`${where} filter "${ch.v}" shows ${ch.n} rows`, st.visible === ch.n && st.pressed === 'true' && (ch.v === 'all' || new RegExp(`^${ch.n} `).test(st.status)), `visible ${st.visible}, aria-pressed ${st.pressed}, status "${st.status}"`);
+    }
+    await p.click('[data-filter] button[data-filter-value="all"]');
+    await p.waitForTimeout(500);
   }
-  await p.click('[data-filter] button[data-filter-value="all"]');
-  await p.waitForTimeout(500);
 
   // Every archive and plate link: internal ones must load, external ones must open in a way that keeps the site.
   const links = await p.$$eval('main a[href]', (as) => [...new Set(as.map((a) => a.getAttribute('href')))]);
@@ -104,6 +107,21 @@ async function ctx(opts) {
     await p.goto(BASE + h, { waitUntil: 'load' }); // 'load', so leaving the page never cuts off an image mid-download
     const info = await p.evaluate(() => ({ h1: document.querySelectorAll('h1').length, next: document.querySelector('.next__link')?.getAttribute('href'), live: [...document.querySelectorAll('a[href^="http"]')].length }));
     check(`Case ${h}: one h1, next → ${info.next}`, info.h1 === 1 && !!info.next && info.next !== h);
+  }
+
+  // Blog and reviews: every card opens a page on this site with one h1 and its article; sheet anchors resolve.
+  for (const [where, sel, body] of [['/blog/', '.card__title a', '.post__body'], ['/reviews/', '.rc__title a', '.sheet']]) {
+    await p.goto(BASE + where, { waitUntil: 'networkidle' });
+    const hrefs = await p.$$eval(sel, (as) => as.map((a) => a.getAttribute('href')));
+    const off = hrefs.filter((h) => !h.startsWith(where));
+    check(`${where}: every card links inside this site (${hrefs.length})`, hrefs.length > 0 && off.length === 0, off.slice(0, 3).join(' '));
+    const probs = [];
+    for (const h of hrefs) {
+      const r = await p.goto(BASE + h, { waitUntil: 'domcontentloaded' });
+      const info = await p.evaluate((b) => ({ h1: document.querySelectorAll('h1').length, body: !!document.querySelector(b), anchors: [...document.querySelectorAll('a[href^="#"]')].map((a) => a.getAttribute('href')).filter((x) => x.length > 1 && !document.getElementById(x.slice(1))) }), body);
+      if (r.status() !== 200 || info.h1 !== 1 || !info.body || info.anchors.length) probs.push(`${h} ${r.status()} h1=${info.h1} body=${info.body} anchors=${info.anchors.join(',')}`);
+    }
+    check(`${where}: all ${hrefs.length} pages load with one h1, their text, and working in-page anchors`, probs.length === 0, probs.slice(0, 3).join(' | '));
   }
 
   // Recording control: play and pause.
@@ -148,7 +166,7 @@ async function ctx(opts) {
   // 404 (last: the browser logs the 404 response itself as a console error).
   const r404 = await p.goto(BASE + '/no-such-page/', { waitUntil: 'domcontentloaded' });
   const t404 = await p.title();
-  check('Unknown URL serves the designed 404 with status 404', r404.status() === 404 && /Out of register/.test(t404), `${r404.status()} "${t404}"`);
+  check('Unknown URL serves the designed 404 with status 404', r404.status() === 404 && /Page not found/.test(t404), `${r404.status()} "${t404}"`);
   await c.close();
 }
 
