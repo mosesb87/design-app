@@ -30,7 +30,7 @@ PASS  Case /work/firefly-burgers/: one h1, next → /work/eat-with-samar/
 PASS  Case /work/eat-with-samar/: one h1, next → /work/great-lakes-cigar-festival/
 PASS  Case /work/great-lakes-cigar-festival/: one h1, next → /work/ptee/
 PASS  Case /work/ptee/: one h1, next → /work/asas-studio/
-PASS  Recording toggle flips play/pause state — true → false (video paused=false t=0.8 ready=4 → paused=true t=0.8 ready=4)
+FAIL  Recording toggle flips play/pause state — true → true (video paused=false t=0.8 ready=4 → paused=false t=2.1 ready=4)
 PASS  mailto link is the real address — mailto:hireme@mousabatarseh.com
 PASS  tel link present — tel:+12488101816
 PASS  Copy email answers (copied, or tells you to select the address) — "✓ Copied — checked"
@@ -42,4 +42,4 @@ PASS  Escape closes the menu and returns focus to the toggle — {"expanded":"fa
 PASS  Menu link "Work" navigates on tap — /work/
 PASS  Menu is closed on the new page
 
-42/42 passed
+41/42 passed

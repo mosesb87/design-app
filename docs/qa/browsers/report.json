@@ -1,6 +1,6 @@
 {
   "base": "http://localhost:4321",
-  "ranAt": "2026-09-26T18:51:24.646Z",
+  "ranAt": "2026-09-26T18:58:21.306Z",
   "versions": {
     "firefox": "142.0.1",
     "webkit": "26.0"
@@ -11,203 +11,275 @@
       "vp": "desk",
       "page": "/",
       "status": 200,
-      "ms": 8201,
+      "ms": 8000,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "desk",
       "page": "/work/",
       "status": 200,
-      "ms": 5263,
+      "ms": 5127,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "desk",
       "page": "/about/",
       "status": 200,
-      "ms": 4965,
+      "ms": 4907,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "desk",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5413,
+      "ms": 5313,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "desk",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5777,
+      "ms": 5686,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "desk",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5543,
+      "ms": 5427,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "desk",
       "page": "/404.html",
       "status": 200,
-      "ms": 3158,
+      "ms": 3128,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "mob",
       "page": "/",
       "status": 200,
-      "ms": 8980,
+      "ms": 8742,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "mob",
       "page": "/work/",
       "status": 200,
-      "ms": 8960,
+      "ms": 8832,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "mob",
       "page": "/about/",
       "status": 200,
-      "ms": 5657,
+      "ms": 5574,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "mob",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5405,
+      "ms": 5266,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "mob",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5580,
+      "ms": 5490,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "mob",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5606,
+      "ms": 5520,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "firefox",
       "vp": "mob",
       "page": "/404.html",
       "status": 200,
-      "ms": 3247,
+      "ms": 3209,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
-      "viewTransitions": false
+      "viewTransitions": false,
+      "fonts": {
+        "mona-sans-text.I9Ofhy8E.woff2": 1,
+        "hubot-sans-display.CVe9ZyrX.woff2": 1,
+        "azeret-mono.DHNnXo2L.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "desk",
       "page": "/",
       "status": 200,
-      "ms": 11703,
+      "ms": 11195,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -216,14 +288,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "desk",
       "page": "/work/",
       "status": 200,
-      "ms": 6228,
+      "ms": 5847,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -232,14 +310,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "desk",
       "page": "/about/",
       "status": 200,
-      "ms": 5736,
+      "ms": 5423,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -248,14 +332,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "desk",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 6532,
+      "ms": 6106,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -264,28 +354,42 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "desk",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 6652,
+      "ms": 6398,
       "overflow": 0,
       "hidden": [],
       "logs": [
-        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
+        "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "desk",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 6484,
+      "ms": 6138,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -294,14 +398,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "desk",
       "page": "/404.html",
       "status": 200,
-      "ms": 3803,
+      "ms": 3627,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -310,14 +420,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob",
       "page": "/",
       "status": 200,
-      "ms": 10196,
+      "ms": 9661,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -326,14 +442,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob",
       "page": "/work/",
       "status": 200,
-      "ms": 9950,
+      "ms": 9624,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -342,14 +464,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob",
       "page": "/about/",
       "status": 200,
-      "ms": 6372,
+      "ms": 6106,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -358,14 +486,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 6339,
+      "ms": 6015,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -373,17 +507,21 @@
         "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
-      "failed": [
-        "http://localhost:4321/media/asas/interact.mp4 Load request cancelled"
-      ],
-      "viewTransitions": true
+      "failed": [],
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 6561,
+      "ms": 6240,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -392,14 +530,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 6485,
+      "ms": 6280,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -408,14 +552,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob",
       "page": "/404.html",
       "status": 200,
-      "ms": 3855,
+      "ms": 3725,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -424,14 +574,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob-reduced",
       "page": "/",
       "status": 200,
-      "ms": 10552,
+      "ms": 10215,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -440,14 +596,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob-reduced",
       "page": "/work/",
       "status": 200,
-      "ms": 9554,
+      "ms": 9378,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -456,14 +618,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob-reduced",
       "page": "/about/",
       "status": 200,
-      "ms": 6115,
+      "ms": 5928,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -472,14 +640,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob-reduced",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5596,
+      "ms": 5354,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -488,14 +662,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob-reduced",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5844,
+      "ms": 5663,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -504,14 +684,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob-reduced",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5832,
+      "ms": 5653,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -520,14 +706,20 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     },
     {
       "browser": "webkit",
       "vp": "mob-reduced",
       "page": "/404.html",
       "status": 200,
-      "ms": 3481,
+      "ms": 3436,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -536,7 +728,13 @@
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
-      "viewTransitions": true
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.CVe9ZyrX.woff2": 2,
+        "mona-sans-text.I9Ofhy8E.woff2": 2,
+        "azeret-mono.DHNnXo2L.woff2": 2,
+        "mona-sans-text-italic.BTWO0_Hu.woff2": 1
+      }
     }
   ]
 }
