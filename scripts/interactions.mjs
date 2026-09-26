@@ -116,10 +116,16 @@ async function ctx(opts) {
     const off = hrefs.filter((h) => !h.startsWith(where));
     check(`${where}: every card links inside this site (${hrefs.length})`, hrefs.length > 0 && off.length === 0, off.slice(0, 3).join(' '));
     const probs = [];
+    // Each page in its own tab: 38 loads in a few seconds in one tab would trip Firefox's per-tab History rate
+    // limit (ScrollTrigger toggles history.scrollRestoration while it measures) — not something a visitor does.
     for (const h of hrefs) {
-      const r = await p.goto(BASE + h, { waitUntil: 'domcontentloaded' });
-      const info = await p.evaluate((b) => ({ h1: document.querySelectorAll('h1').length, body: !!document.querySelector(b), anchors: [...document.querySelectorAll('a[href^="#"]')].map((a) => a.getAttribute('href')).filter((x) => x.length > 1 && !document.getElementById(x.slice(1))) }), body);
+      const t = await c.newPage();
+      t.on('pageerror', (e) => errors.push(e.message));
+      t.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+      const r = await t.goto(BASE + h, { waitUntil: 'domcontentloaded' });
+      const info = await t.evaluate((b) => ({ h1: document.querySelectorAll('h1').length, body: !!document.querySelector(b), anchors: [...document.querySelectorAll('a[href^="#"]')].map((a) => a.getAttribute('href')).filter((x) => x.length > 1 && !document.getElementById(x.slice(1))) }), body);
       if (r.status() !== 200 || info.h1 !== 1 || !info.body || info.anchors.length) probs.push(`${h} ${r.status()} h1=${info.h1} body=${info.body} anchors=${info.anchors.join(',')}`);
+      await t.close();
     }
     check(`${where}: all ${hrefs.length} pages load with one h1, their text, and working in-page anchors`, probs.length === 0, probs.slice(0, 3).join(' | '));
   }
