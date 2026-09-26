@@ -19,10 +19,19 @@ export default function check([section]: HTMLElement[], env: Env) {
   const stage = section.querySelector<HTMLElement>('[data-check-stage]');
   if (!cards.length || !flip || !stage || !track) return;
 
+  const dealFrom = { y: 140, opacity: 0, rotation: (i: number) => [-12, 7, -6][i] ?? 0, scale: 0.88 };
+  const dealTo = { y: 0, opacity: 1, rotation: (i: number) => [-2, 1.5, -1][i] ?? 0, scale: 1, ease: 'back.out(1.6)' };
+  const deal = () => {
+    gsap.set(cards, dealFrom);
+    return ScrollTrigger.create({ trigger: track, start: 'top 80%', once: true, onEnter: () => gsap.to(cards, { ...dealTo, duration: 0.9, stagger: 0.1 }) });
+  };
+
   const build = (scrubbed: boolean) => {
     const tl = gsap.timeline({ paused: true, defaults: { ease: scrubbed ? 'none' : 'back.out(1.5)' } });
     const D = scrubbed ? 1 : 1; // same shape; the scrubbed version is mapped onto scroll
-    tl.fromTo(cards, { y: 140, opacity: 0, rotation: (i) => [-12, 7, -6][i] ?? 0, scale: 0.88 }, { y: 0, opacity: 1, rotation: (i) => [-2, 1.5, -1][i] ?? 0, scale: 1, duration: 0.22 * D, stagger: 0.05, ease: 'back.out(1.6)' }, 0);
+    // Scrubbed (desktop), the cards are dealt as the section arrives — see deal() — so the stage is never empty
+    // while it scrolls into view; the scrub then drives the check itself.
+    if (!scrubbed) tl.fromTo(cards, dealFrom, { ...dealTo, duration: 0.22 * D, stagger: 0.05 }, 0);
     if (lens && scrubbed) {
       tl.fromTo(lens, { x: () => -lens.offsetWidth, y: 0, rotation: -20, opacity: 0 }, { x: () => stage.offsetWidth * 0.12, opacity: 1, rotation: -8, duration: 0.1, ease: 'power2.out' }, 0.26)
         .to(lens, { x: () => stage.offsetWidth * 0.5 - lens.offsetWidth / 2, y: -20, rotation: 6, duration: 0.18, ease: 'power1.inOut' }, 0.36);
@@ -42,9 +51,10 @@ export default function check([section]: HTMLElement[], env: Env) {
 
   const mm = gsap.matchMedia();
   mm.add('(min-width: 1024px)', () => {
+    const dealt = deal();
     const tl = build(true);
     const st = ScrollTrigger.create({ trigger: track, start: 'top top', end: 'bottom bottom', scrub: 0.6, animation: tl, invalidateOnRefresh: true });
-    return () => { st.kill(); tl.kill(); gsap.set([...cards, fail, verdict, flip, lens].filter(Boolean), { clearProps: 'all' }); };
+    return () => { dealt.kill(); st.kill(); tl.kill(); gsap.set([...cards, fail, verdict, flip, lens].filter(Boolean), { clearProps: 'all' }); };
   });
   mm.add('(max-width: 1023px)', () => {
     const tl = build(false);

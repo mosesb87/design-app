@@ -32,7 +32,7 @@ import { person } from '../../data/site';
               <div><dt>Vendor cap</dt><dd>20%</dd></div>
               <div><dt>Margin floor</dt><dd>32%</dd></div>
             </dl>
-            <p class="chk__fail" data-fail><span aria-hidden="true">✕</span> Check 04 fails: the sheet price is stale</p>
+            <p class="chk__fail" data-fail data-rewinds><span aria-hidden="true">✕</span> Check 04 fails: the sheet price is stale</p>
           </article>
           <article class="chk__card chk__card--shelf" data-card>
             <p class="chk__tag"><b>03</b> The shelf</p>
@@ -50,7 +50,7 @@ import { person } from '../../data/site';
             </div>
           </article>
           <span class="chk__lens" data-lens><Sticker name="lens" /></span>
-          <p class="chk__verdict" data-verdict><span class="chk__vs" aria-hidden="true"><Sticker name="check" /></span>Nothing wrong reached the shelf</p>
+          <p class="chk__verdict" data-verdict data-rewinds><span class="chk__vs" aria-hidden="true"><Sticker name="check" /></span>Nothing wrong reached the shelf</p>
         </div>
         <p class="chk__close">{person.thesis.close}</p>
       </div>
