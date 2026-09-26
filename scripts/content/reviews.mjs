@@ -350,3 +350,11 @@ for (const slug of slugs) {
 reviews.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 fs.writeFileSync(path.join(root, 'src/data/reviews.json'), JSON.stringify(reviews, null, 1));
 console.log(`${reviews.length} reviews written`);
+
+// Remove media no page uses any more (left over from earlier runs).
+{
+  const text = ['src/data/reviews.json'].map((f) => fs.readFileSync(path.join(root, f), 'utf8')).join('');
+  const stale = fs.readdirSync(OUT_MEDIA).filter((n) => !text.includes(n));
+  stale.forEach((n) => fs.rmSync(path.join(OUT_MEDIA, n)));
+  if (stale.length) console.log(`removed ${stale.length} unused media files`);
+}

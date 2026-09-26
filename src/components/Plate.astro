@@ -1,5 +1,5 @@
 ---
-// A plate: one real capture inside crop marks, with registration ghosts and a provenance slug.
+// A plate: one real capture in a rounded frame, with a provenance line.
 // Without a capture it renders a designed typographic plate (never an empty box).
 import Picture from './Picture.astro';
 import { view as getView, capturedDate, domain } from '../lib/media';
@@ -33,8 +33,6 @@ const ratio = aspect || (d ? `${d.w} / ${Math.min(d.h, Math.round(d.w * 0.625))}
     {d ? (
       <>
         <Picture data={d} alt={alt} sizes={sizes} eager={eager} fetchpriority={eager ? 'high' : undefined} class="plate__img" />
-        {d.ghostA && <img class="plate__ghost plate__ghost--a" src={d.ghostA} alt="" aria-hidden="true" loading="lazy" decoding="async" width="640" height={Math.round((640 * d.h) / d.w)} />}
-        {d.ghostB && <img class="plate__ghost plate__ghost--b" src={d.ghostB} alt="" aria-hidden="true" loading="lazy" decoding="async" width="640" height={Math.round((640 * d.h) / d.w)} />}
       </>
     ) : (
       <div class="plate__type plate__img" role="img" aria-label={alt}>

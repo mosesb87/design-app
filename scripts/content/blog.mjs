@@ -154,3 +154,11 @@ for (const l of listed.filter((x) => !posts.find((p) => p.slug === x.slug))) {
 summaries.sort((a, b) => (a.date < b.date ? 1 : -1));
 fs.writeFileSync(path.join(root, 'src/data/blog-summaries.json'), JSON.stringify(summaries, null, 1));
 console.log(`${posts.length} full posts, ${summaries.length} summary-only (${listed.length} listed on the blog index)`);
+
+// Remove media no page uses any more (left over from earlier runs).
+{
+  const text = ['src/data/blog.json', 'src/data/blog-summaries.json'].map((f) => fs.readFileSync(path.join(root, f), 'utf8')).join('');
+  const stale = fs.readdirSync(OUT_MEDIA).filter((n) => !text.includes(n));
+  stale.forEach((n) => fs.rmSync(path.join(OUT_MEDIA, n)));
+  if (stale.length) console.log(`removed ${stale.length} unused media files`);
+}
