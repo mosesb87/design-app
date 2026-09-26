@@ -1,0 +1,226 @@
+{
+ "at": "2026-09-26T20:11:25.230Z",
+ "results": [
+  {
+   "url": "https://mousabatarseh.com/feed/",
+   "status": 404,
+   "final": "https://mousabatarseh.com/feed/",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/?feed=rss2",
+   "status": 200,
+   "final": "https://mousabatarseh.com/?feed=rss2",
+   "type": "text/html",
+   "bytes": 136607,
+   "title": "Mousa Batarseh — Webmaster, WordPress &amp; E-commerce Specialist",
+   "hasBackupText": false,
+   "head": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Mousa Batarseh — Webmaster, WordPress &amp; E-commerce Specialist</title>\n<meta name=\"description\" co"
+  },
+  {
+   "url": "https://mousabatarseh.com/blog/feed/",
+   "status": 404,
+   "final": "https://mousabatarseh.com/blog/feed/",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/?rest_route=/wp/v2/posts&per_page=100",
+   "status": 200,
+   "final": "https://mousabatarseh.com/?rest_route=/wp/v2/posts&per_page=100",
+   "type": "text/html",
+   "bytes": 136607,
+   "title": "Mousa Batarseh — Webmaster, WordPress &amp; E-commerce Specialist",
+   "hasBackupText": false,
+   "head": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Mousa Batarseh — Webmaster, WordPress &amp; E-commerce Specialist</title>\n<meta name=\"description\" co"
+  },
+  {
+   "url": "https://mousabatarseh.com/index.php?rest_route=/wp/v2/posts&per_page=100",
+   "status": 404,
+   "final": "https://mousabatarseh.com/index.php?rest_route=/wp/v2/posts&per_page=100",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/wp-json/",
+   "status": 404,
+   "final": "https://mousabatarseh.com/wp-json/",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/wp/wp-json/wp/v2/posts?per_page=100",
+   "status": 404,
+   "final": "https://mousabatarseh.com/wp/wp-json/wp/v2/posts?per_page=100",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/wordpress/wp-json/wp/v2/posts?per_page=100",
+   "status": 404,
+   "final": "https://mousabatarseh.com/wordpress/wp-json/wp/v2/posts?per_page=100",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/wp-sitemap.xml",
+   "status": 404,
+   "final": "https://mousabatarseh.com/wp-sitemap.xml",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/sitemap.xml",
+   "status": 200,
+   "final": "https://mousabatarseh.com/sitemap.xml",
+   "type": "application/xml",
+   "bytes": 1807,
+   "title": "",
+   "hasBackupText": false,
+   "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://mousabatarseh.com/</loc></url>\n  <url><loc>https://mousabatarseh.com/SEO-Tools/</loc></url>\n  <url><loc>https://mousabat",
+   "items": 0,
+   "locs": [
+    "https://mousabatarseh.com/",
+    "https://mousabatarseh.com/SEO-Tools/",
+    "https://mousabatarseh.com/changeatlas/",
+    "https://mousabatarseh.com/csv-mapper/",
+    "https://mousabatarseh.com/diamedical/",
+    "https://mousabatarseh.com/diamedical-review/",
+    "https://mousabatarseh.com/diamedical-review/case-study/",
+    "https://mousabatarseh.com/aedit-review/",
+    "https://mousabatarseh.com/behealth-review/",
+    "https://mousabatarseh.com/bestlife-review/",
+    "https://mousabatarseh.com/biotrust-review/",
+    "https://mousabatarseh.com/carhartt-review/",
+    "https://mousabatarseh.com/dehanche-review/",
+    "https://mousabatarseh.com/dunhams-review/",
+    "https://mousabatarseh.com/dutchie-review/",
+    "https://mousabatarseh.com/hayhouse-review/",
+    "https://mousabatarseh.com/highprofile-review/",
+    "https://mousabatarseh.com/icr-review/",
+    "https://mousabatarseh.com/jars-review/",
+    "https://mousabatarseh.com/jbtools-review/",
+    "https://mousabatarseh.com/lume-review/",
+    "https://mousabatarseh.com/moment-review/",
+    "https://mousabatarseh.com/oakwood-review/",
+    "https://mousabatarseh.com/petsafe-review/",
+    "https://mousabatarseh.com/salt-review/",
+    "https://mousabatarseh.com/vanguard-review/"
+   ]
+  },
+  {
+   "url": "https://mousabatarseh.com/sitemap_index.xml",
+   "status": 404,
+   "final": "https://mousabatarseh.com/sitemap_index.xml",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/post-sitemap.xml",
+   "status": 404,
+   "final": "https://mousabatarseh.com/post-sitemap.xml",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/?name=the-backup-habit-that-saved-a-clients-store",
+   "status": 200,
+   "final": "https://mousabatarseh.com/?name=the-backup-habit-that-saved-a-clients-store",
+   "type": "text/html",
+   "bytes": 136607,
+   "title": "Mousa Batarseh — Webmaster, WordPress &amp; E-commerce Specialist",
+   "hasBackupText": false,
+   "head": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Mousa Batarseh — Webmaster, WordPress &amp; E-commerce Specialist</title>\n<meta name=\"description\" co"
+  },
+  {
+   "url": "https://mousabatarseh.com/index.php/the-backup-habit-that-saved-a-clients-store/",
+   "status": 404,
+   "final": "https://mousabatarseh.com/index.php/the-backup-habit-that-saved-a-clients-store/",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/the-backup-habit-that-saved-a-clients-store",
+   "status": 404,
+   "final": "https://mousabatarseh.com/the-backup-habit-that-saved-a-clients-store",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://mousabatarseh.com/blog/the-backup-habit-that-saved-a-clients-store/",
+   "status": 404,
+   "final": "https://mousabatarseh.com/blog/the-backup-habit-that-saved-a-clients-store/",
+   "type": "text/html; charset=iso-8859-1",
+   "bytes": 355,
+   "title": "404 Not Found",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<p>Additionally, a "
+  },
+  {
+   "url": "https://work.mousabatarseh.com/the-backup-habit-that-saved-a-clients-store/",
+   "status": 404,
+   "final": "https://work.mousabatarseh.com/the-backup-habit-that-saved-a-clients-store/",
+   "type": "text/html; charset=UTF-8",
+   "bytes": 291463,
+   "title": "Page not found &#8211; Mousa Batarseh",
+   "hasBackupText": false,
+   "head": "<!DOCTYPE html><html dir=\"ltr\" lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"><head><meta charset=\"UTF-8\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com/\" crossorigin /><title>Page not found &#8211; Mousa Batarseh</title><meta name=\"r"
+  },
+  {
+   "url": "https://mousabatarseh.com/core-web-vitals-elementor-wordpress/",
+   "status": 200,
+   "final": "https://mousabatarseh.com/blog/",
+   "type": "text/html",
+   "bytes": 87161,
+   "title": "Blog | Mousa Batarseh, Webmaster",
+   "hasBackupText": true,
+   "head": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Blog | Mousa Batarseh, Webmaster</title>\n<meta name=\"description\" content=\"Articles by Mousa Batarseh"
+  },
+  {
+   "url": "https://work.mousabatarseh.com/feed/",
+   "status": 200,
+   "final": "https://work.mousabatarseh.com/feed/",
+   "type": "application/rss+xml; charset=UTF-8",
+   "bytes": 74960,
+   "title": "Mousa Batarseh",
+   "hasBackupText": false,
+   "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\"\n\txmlns:content=\"http://purl.org/rss/1.0/modules/content/\"\n\txmlns:wfw=\"http://wellformedweb.org/CommentAPI/\"\n\txmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n\txmlns:atom=\"http://www.w3.org",
+   "items": 10,
+   "locs": []
+  }
+ ]
+}

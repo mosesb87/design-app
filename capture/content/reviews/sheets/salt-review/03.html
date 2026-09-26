@@ -1,0 +1,55 @@
+<div class="wrap">
+
+  <p class="crumb">Sec. 03 — FAQPage</p>
+  <div class="sec-h"><span class="tag">THE MISSING MARKUP</span><h2>The FAQPage that isn't there</h2></div>
+  <p class="sec-sub">/api-security-101 already asks and answers questions with H2s — “What is API security?” Wrapping them in FAQPage markup is the documented way to make Q&amp;A content extractable. Nothing changes for a human reader.</p>
+  <div class="code2">
+<pre class="was"><span class="cap">Now — /api-security-101</span>&lt;h2&gt;What is API security?&lt;/h2&gt;
+&lt;p&gt;API security is the practice of…&lt;/p&gt;
+&lt;h2&gt;Why do APIs get attacked?&lt;/h2&gt;
+&lt;p&gt;APIs expose business logic…&lt;/p&gt;
+<b class="del">/* no JSON-LD — prose, not a quotable Q&amp;A */</b></pre>
+<pre class="now"><span class="cap">Fixed — same content, marked up</span>&lt;script type="application/ld+json"&gt;
+{ "@type": <b class="add">"FAQPage"</b>,
+  "mainEntity": [{ "@type": "Question",
+    "name": "What is API security?",
+    "acceptedAnswer": { "@type": "Answer",
+      "text": "API security is the practice of…" }
+  }] }
+&lt;/script&gt;</pre>
+  </div>
+
+  <div class="sec-h" style="margin-top:48px"><span class="tag">INTERACTIVE</span><h2>The Webflow embed, generated</h2></div>
+  <p class="sec-sub">Edit a question or answer and the JSON-LD rebuilds — the same pattern as a Webflow CMS embed bound to FAQ fields, so editors never touch code.</p>
+  <div class="gen">
+    <div class="qa"><div id="rows"><div class="row"><label for="q0">Question 1</label><input id="q0" data-i="0" data-f="q" value="What is API security?"><label for="a0">Answer</label><textarea id="a0" data-i="0" data-f="a">API security is the practice of…</textarea></div><div class="row"><label for="q1">Question 2</label><input id="q1" data-i="1" data-f="q" value="Why do APIs get attacked?"><label for="a1">Answer</label><textarea id="a1" data-i="1" data-f="a">APIs expose business logic…</textarea></div></div><button class="add" id="add" type="button">+ Add question</button></div>
+    <pre id="out">&lt;script type="application/ld+json"&gt;
+{
+  <span class="k">"@context"</span>: "https://schema.org",
+  <span class="k">"@type"</span>: "FAQPage",
+  <span class="k">"mainEntity"</span>: [
+    {
+      <span class="k">"@type"</span>: "Question",
+      <span class="k">"name"</span>: "What is API security?",
+      <span class="k">"acceptedAnswer"</span>: {
+        <span class="k">"@type"</span>: "Answer",
+        <span class="k">"text"</span>: "API security is the practice of…"
+      }
+    },
+    {
+      <span class="k">"@type"</span>: "Question",
+      <span class="k">"name"</span>: "Why do APIs get attacked?",
+      <span class="k">"acceptedAnswer"</span>: {
+        <span class="k">"@type"</span>: "Answer",
+        <span class="k">"text"</span>: "APIs expose business logic…"
+      }
+    }
+  ]
+}
+&lt;/script&gt;</pre>
+  </div>
+  <p style="margin-top:14px"><span class="ev">Evidence: /api-security-101 and /blog/the-role-of-agentic-ai-in-cybersecurity (Sep 10, 2026) source; Google Search Central FAQPage docs. Answers truncated here — the embed takes the full visible text.</span></p>
+
+
+<div class="pagenav"><a href="https://mousabatarseh.com/salt-review/coverage.html">← Coverage</a><a class="next" href="https://mousabatarseh.com/salt-review/plan.html">Next: Signals &amp; Plan →</a></div>
+</div>

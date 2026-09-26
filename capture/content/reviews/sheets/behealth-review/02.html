@@ -1,0 +1,33 @@
+<div class="wrap">
+
+  <p class="crumb">Sec. 02 — The canonical bug</p>
+  <div class="sec-h"><span class="tag">INTERACTIVE</span><h2>What Google is told</h2></div>
+  <p class="sec-sub">A canonical tag says “the real version of this page is here.” Toggle between today and the fix to follow the signal.</p>
+  <div class="board">
+    <div class="board-top"><span class="title" style="font-family:'Lora',serif;text-transform:none">Signal path</span><div class="progline"><div class="toggle" role="group" aria-label="State"><button aria-pressed="true" data-m="now">Now</button><button aria-pressed="false" data-m="fix">Fixed</button></div></div></div>
+    <div class="path">
+      <div class="nd"><div class="k">Page crawled</div><div class="v">behealthdigital.com/</div></div><div class="arr">→</div>
+      <div class="nd bad" id="n2"><div class="k">Canonical · og:url · schema @id</div><div class="v" id="v2">wellspring-web-make.lovable.app/</div></div><div class="arr">→</div>
+      <div class="nd bad" id="n3"><div class="k">Target responds</div><div class="v" id="v3">HTTP 404 — “No published build”</div></div>
+    </div>
+    <div class="verdict" id="vd">Google is told the real page lives on a host that doesn't exist. Authority has nowhere to consolidate.</div>
+  </div>
+  <div class="code2" style="margin-top:28px">
+<pre class="was"><span class="cap">Now — every page</span>&lt;link rel="canonical"
+  href="<b class="del">https://wellspring-web-make.lovable.app/…</b>"&gt;
+&lt;meta property="og:url"
+  content="<b class="del">https://wellspring-web-make.lovable.app/…</b>"&gt;
+"@id": "<b class="del">https://wellspring-web-make.lovable.app/#org</b>"
+// sitemap.xml lists only lovable.app URLs</pre>
+<pre class="now"><span class="cap">Fixed</span>&lt;link rel="canonical"
+  href="<b class="add">https://behealthdigital.com/…</b>"&gt;
+&lt;meta property="og:url"
+  content="<b class="add">https://behealthdigital.com/…</b>"&gt;
+"@id": "<b class="add">https://behealthdigital.com/#org</b>"
+// sitemap regenerated + Person author on Article</pre>
+  </div>
+  <p style="margin-top:14px"><span class="ev">Evidence: behealthdigital.com/sitemap.xml; page source canonical / og / Organization @id; curl wellspring-web-make.lovable.app → HTTP 404 “No published build”, Sep 19, 2026</span></p>
+
+
+<div class="pagenav"><a href="https://mousabatarseh.com/behealth-review/index.html">← Overview</a><a class="next" href="https://mousabatarseh.com/behealth-review/audit.html">Next: Client Audit →</a></div>
+</div>

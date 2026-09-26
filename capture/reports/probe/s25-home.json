@@ -1,0 +1,283 @@
+{
+  "slug": "s25-home",
+  "url": "https://www.s25.studio/",
+  "probedAt": "2026-09-26T16:45:19.184Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://www.s25.studio/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.cover",
+        "#smooth-wrapper.wrapper"
+      ]
+    },
+    "title": "S25 Studio | Digital-first brand & product design studio",
+    "description": "S25 Studio helps ambitious organisations create distinctive brands, digital products and connected experiences through strategy, design and technology.",
+    "headings": [
+      "H1: Great design is just the beginning",
+      "H2: Crafted to impress, built to perform Success by design",
+      "H2: Our clients don't just look better $500M+ raised with our design",
+      "H2: Speed without sacrifice Performance at Scale",
+      "H2: Three D’s that drive momentum",
+      "H2: Aussie-based, globally proven"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": true,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 1,
+      "svg": 89,
+      "pinSpacers": 1,
+      "sticky": 0,
+      "fixed": 11,
+      "links": 27,
+      "images": 56
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "S25Diatype-Light",
+      "S25Diatype-Bold",
+      "S25DiatypeSemi-Mono-Regular"
+    ],
+    "type": {
+      "body": "S25Diatype-Light, system-ui, sans-serif",
+      "h1Family": "S25Diatype-Bold, system-ui, sans-serif",
+      "h1Size": "144px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(255, 37, 0)",
+      "text": "rgb(223, 227, 230)"
+    },
+    "scroll": {
+      "height": 15602,
+      "viewports": 17.3
+    },
+    "perf": {
+      "fcpMs": 164,
+      "domContentLoadedMs": 76,
+      "requests": 152,
+      "transferKB": 1386
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 125,
+      "samples": [
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.footer-button",
+        "div.header",
+        "g"
+      ],
+      "pinnedCandidates": []
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://www.s25.studio/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.cover",
+        "section.section.section-hero"
+      ]
+    },
+    "title": "S25 Studio | Digital-first brand & product design studio",
+    "description": "S25 Studio helps ambitious organisations create distinctive brands, digital products and connected experiences through strategy, design and technology.",
+    "headings": [
+      "H1: Great design is just the beginning",
+      "H2: Crafted to impress, built to perform Success by design",
+      "H2: Our clients don't just look better $500M+ raised with our design",
+      "H2: Speed without sacrifice Performance at Scale",
+      "H2: Three D’s that drive momentum",
+      "H2: Aussie-based, globally proven"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": true,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 1,
+      "svg": 89,
+      "pinSpacers": 1,
+      "sticky": 0,
+      "fixed": 11,
+      "links": 27,
+      "images": 56
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "S25Diatype-Light",
+      "S25Diatype-Bold",
+      "S25DiatypeSemi-Mono-Regular"
+    ],
+    "type": {
+      "body": "S25Diatype-Light, system-ui, sans-serif",
+      "h1Family": "S25Diatype-Bold, system-ui, sans-serif",
+      "h1Size": "144px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(255, 37, 0)",
+      "text": "rgb(223, 227, 230)"
+    },
+    "scroll": {
+      "height": 15602,
+      "viewports": 17.3
+    },
+    "perf": {
+      "fcpMs": 196,
+      "domContentLoadedMs": 79,
+      "requests": 152,
+      "transferKB": 1386
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 119,
+      "samples": [
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.nav-group",
+        "div.footer-button",
+        "div.header",
+        "g",
+        "div.cube",
+        "g"
+      ],
+      "pinnedCandidates": []
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://www.s25.studio/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.cover"
+      ]
+    },
+    "title": "S25 Studio | Digital-first brand & product design studio",
+    "description": "S25 Studio helps ambitious organisations create distinctive brands, digital products and connected experiences through strategy, design and technology.",
+    "headings": [
+      "H1: Great design is just the beginning",
+      "H2: Crafted to impress, built to perform Success by design",
+      "H2: Our clients don't just look better $500M+ raised with our design",
+      "H2: Speed without sacrifice Performance at Scale",
+      "H2: Three D’s that drive momentum",
+      "H2: Aussie-based, globally proven"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": true,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 1,
+      "svg": 89,
+      "pinSpacers": 1,
+      "sticky": 0,
+      "fixed": 10,
+      "links": 27,
+      "images": 56
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "S25Diatype-Light",
+      "S25Diatype-Bold",
+      "S25DiatypeSemi-Mono-Regular"
+    ],
+    "type": {
+      "body": "S25Diatype-Light, system-ui, sans-serif",
+      "h1Family": "S25Diatype-Bold, system-ui, sans-serif",
+      "h1Size": "80px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(255, 37, 0)",
+      "text": "rgb(223, 227, 230)"
+    },
+    "scroll": {
+      "height": 19402,
+      "viewports": 23
+    },
+    "perf": {
+      "fcpMs": 260,
+      "domContentLoadedMs": 91,
+      "requests": 152,
+      "transferKB": 1386
+    },
+    "animationsNow": 0,
+    "motion": null,
+    "mobileNav": {
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}

@@ -1,0 +1,452 @@
+---
+import Base from '../../layouts/Base.astro';
+import Picture from '../../components/Picture.astro';
+import PageHead from '../../components/play/PageHead.astro';
+import VideoPlate from '../../components/VideoPlate.astro';
+import StructurePlate from '../../components/StructurePlate.astro';
+import { orderedCases, type CaseStudy } from '../../data/cases';
+import { media, view, capturedDate, domain, srcset } from '../../lib/media';
+import { SITE_URL, person } from '../../data/site';
+
+export function getStaticPaths() {
+  const list = orderedCases();
+  return list.map((c, i) => ({ params: { slug: c.slug }, props: { c, i, next: list[(i + 1) % list.length], total: list.length } }));
+}
+interface Props { c: CaseStudy; i: number; next: CaseStudy; total: number }
+const { c, i, next, total } = Astro.props;
+const m = media(c.media.hero);
+const date = capturedDate(c.media.hero);
+const full = view(c.media.full || '', 'desktop-full');
+const mobFull = view(c.media.mobile || '', 'mobile-full') || view(c.media.mobile || '', 'mobile-hero');
+const recs = c.media.video ? media(c.media.video) : undefined;
+const video = recs?.video || recs?.interaction;
+const hasOutline = !!m?.outline;
+const details = [c.media.hero, ...(c.media.more || []).map((x) => x.slug)].flatMap((sl) => media(sl)?.details || []);
+const nextHero = view(next.media.hero, 'desktop-hero');
+const group = c.group === 'systems' ? 'Systems' : 'Sites & stores';
+const heroView = view(c.media.hero, 'desktop-hero');
+const TINTS = ['var(--lilac)', 'var(--sky)', 'var(--mint)', 'var(--lemon)', 'var(--peach)', 'var(--blush)'];
+const BRIGHTS = ['var(--violet)', 'var(--blue)', 'var(--aqua)', 'var(--sun)', 'var(--tomato)', 'var(--pink)'];
+const tint = TINTS[i % TINTS.length];
+const nextTint = TINTS[(i + 1) % TINTS.length];
+const cardTones = ['var(--blush)', 'var(--mint)', 'var(--lilac)', 'var(--lemon)', 'var(--sky)', 'var(--peach)'];
+// My earlier portfolio pages are cited as text (this site replaces them); live projects stay linked.
+const ownPortfolio = (u?: string) => { try { const x = new URL(u || ''); return x.hostname === 'work.mousabatarseh.com' || (x.hostname === 'mousabatarseh.com' && /^\/(v2\/.*|blog\/.*|reviews\/.*)?$/.test(x.pathname)); } catch { return false; } };
+const sourceLabel = (u: string) => (ownPortfolio(u) ? 'my earlier portfolio' : domain(u));
+const description = c.summary;
+const jsonLd = [
+  {
+    '@type': 'CreativeWork',
+    '@id': `${SITE_URL}/work/${c.slug}/#work`,
+    name: c.title,
+    description: c.summary,
+    url: `${SITE_URL}/work/${c.slug}/`,
+    creator: { '@id': `${SITE_URL}/#person` },
+    genre: c.kicker,
+    inLanguage: c.languages.map((l) => (l === 'Arabic' ? 'ar' : 'en')),
+    sameAs: c.url,
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Work', item: `${SITE_URL}/work/` },
+      { '@type': 'ListItem', position: 3, name: c.title, item: `${SITE_URL}/work/${c.slug}/` },
+    ],
+  },
+];
+---
+<Base title={c.title} description={description} path={`/work/${c.slug}/`} og={`work-${c.slug}`} type="article" jsonLd={jsonLd}>
+  <article class="case">
+    <PageHead title={c.title} kicker={`${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')} · ${c.kicker}`} dot={BRIGHTS[i % BRIGHTS.length]} tone={tint} size={c.title.length > 22 ? 'm' : 'l'} stickers={c.group === 'systems' ? ['blocks', 'bolt', 'check'] : ['tag', 'cursor', 'spark']}>
+      <nav class="case__crumbs" slot="top" aria-label="Breadcrumb"><a href="/work/">← All the work</a><span>{group}</span></nav>
+      {c.promise && <p class="case__promise" data-ph-fade>{c.promise}</p>}
+      <p class="case__summary" data-ph-fade>{c.summary}</p>
+      <dl class="case__facts" data-ph-fade>
+        {c.platform.length > 0 && <div><dt>Platform</dt><dd>{c.platform.join(' · ')}</dd></div>}
+        <div><dt>Languages</dt><dd>{c.languages.join(' + ')}</dd></div>
+        <div><dt>Live</dt><dd><a href={c.url} rel="noopener">{c.urlLabel || domain(c.url)} <span aria-hidden="true">↗</span></a></dd></div>
+        <div><dt>Captured</dt><dd class="num">{date || 'Pending'}</dd></div>
+      </dl>
+    </PageHead>
+    {heroView && (
+      <figure class="case__lead wrap">
+        <div class="case__lead-frame" data-vt-hero>
+          <Picture data={heroView} alt={`${c.title} — the live site, first screen, desktop`} sizes="(min-width: 1200px) 1400px, 96vw" eager fetchpriority="high" />
+        </div>
+        <figcaption>{domain(c.url)} · desktop, 1440 wide · captured {date}</figcaption>
+      </figure>
+    )}
+
+    <section class="case__brief section wrap" aria-labelledby="brief-title">
+      <header class="case__head">
+        <p class="kicker" style="--kicker-dot: var(--tomato)">The work</p>
+        <h2 class="visually-hidden" id="brief-title">The work</h2>
+      </header>
+      <div class="case__prose">
+        {c.intro.map((p) => <p>{p}</p>)}
+      </div>
+      <aside class="case__notes">
+        {c.role && (
+          <div class="case__role">
+            <p class="case__note-label">Role, as published</p>
+            <p class="case__role-text">“{c.role.text}”</p>
+            <p class="case__note-src">{ownPortfolio(c.role.source) ? <>Source: my earlier portfolio</> : <>Source: <a href={c.role.source} rel="noopener">{domain(c.role.source)}</a></>}</p>
+          </div>
+        )}
+        {c.disclaimer && (
+          <div class="case__disclaimer">
+            <p class="case__note-label">Note</p>
+            <p>{c.disclaimer}</p>
+          </div>
+        )}
+      </aside>
+    </section>
+
+    {m && (
+      <section class="exploded" data-exploded aria-labelledby="plates-title">
+        <div class="exploded__track" data-exploded-track>
+          <div class="exploded__sticky">
+            <div class="wrap exploded__grid">
+              <div class="exploded__legend">
+                <p class="kicker" style="--kicker-dot: var(--violet)">Three layers, one page</p>
+                <h2 class="exploded__title h2" id="plates-title">What sits under the surface.</h2>
+                <ol class="exploded__labels" role="list">
+                  <li data-layer-label><span class="exploded__n">01</span><b>Surface</b> The live page, captured {date}.</li>
+                  <li data-layer-label><span class="exploded__n">02</span><b>Structure</b> Its layout, traced by script from the same page.</li>
+                  <li data-layer-label><span class="exploded__n">03</span><b>Data</b> The facts it runs on.</li>
+                </ol>
+              </div>
+              <div class="exploded__stage" aria-hidden="true">
+                <div class="stack" data-stack>
+                  <div class="layer layer--data" data-layer>
+                    <p class="layer__tag">03 · Data</p>
+                    <dl class="layer__rows">
+                      {c.spec.slice(0, 4).map((f) => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
+                      {(c.metrics || []).slice(0, 2).map((x) => <div><dt>{x.label}</dt><dd class="num">{x.value}</dd></div>)}
+                    </dl>
+                  </div>
+                  <div class="layer layer--structure" data-layer>
+                    <p class="layer__tag">02 · Structure</p>
+                    {hasOutline ? <StructurePlate slug={c.media.hero} /> : <div class="layer__blank"></div>}
+                  </div>
+                  <div class="layer layer--surface" data-layer>
+                    <p class="layer__tag">01 · Surface</p>
+                    <Picture slug={c.media.hero} v="desktop-hero" alt="" sizes="(min-width: 1024px) 50vw, 90vw" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+    {c.features && c.features.length > 0 && (
+      <section class="case__features section wrap" aria-labelledby="features-title">
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--aqua)">How it works</p>
+          <h2 class="h2" id="features-title">The moving parts.</h2>
+        </header>
+        <ol class="features" role="list" data-pop-grid>
+          {c.features.map((f, n) => (
+            <li class="feature" style={`--bg:${cardTones[n % cardTones.length]}`} data-pop>
+              <span class="feature__n num">{String(n + 1).padStart(2, '0')}</span>
+              <h3 class="feature__title">{f.title}</h3>
+              <p class="feature__text">{f.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    {details.length > 0 && (
+      <section class="case__details section wrap" aria-labelledby="details-title">
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--pink)">Up close</p>
+          <h2 class="h2" id="details-title">Details, at reading distance.</h2>
+        </header>
+        <ol class="details" role="list">
+          {details.map((d, n) => (
+            <li class:list={['detail', { 'detail--wide': d.w / d.h > 2.2 }]}>
+              <figure>
+                <div class="detail__frame" style={`aspect-ratio: ${d.w} / ${d.h}`}>
+                  <img srcset={srcset(d.webp)} src={d.webp[d.webp.length - 1].src} sizes="(min-width: 1024px) 45vw, 92vw" alt={`${c.title} — detail: ${d.label}`} width={d.w} height={d.h} loading="lazy" decoding="async" />
+                </div>
+                <figcaption class="detail__cap"><span class="detail__n num">{String(n + 1).padStart(2, '0')}</span><span>{d.label}</span></figcaption>
+              </figure>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    {(full || mobFull) && (
+      <section class="case__read section" aria-labelledby="read-title">
+        <div class="wrap case__read-grid">
+          <header class="case__read-head">
+            <p class="kicker" style="--kicker-dot: var(--blue)">Top to bottom</p>
+            <h2 class="h2" id="read-title">The live page, all of it.</h2>
+            <p class="case__read-note">Scroll past the frames and the page inside scrolls with you. Captured {date} in a real browser.</p>
+          </header>
+          {full && (
+            <figure class="sframe-fig sframe-fig--desk">
+              <div class="sframe" data-scrollframe tabindex="0" aria-label={`${c.title} — full desktop page (scrollable)`}>
+                <div class="sframe__inner" data-scrollframe-inner><Picture data={full} alt={`${c.title} — the full desktop page`} sizes="(min-width: 1024px) 60vw, 92vw" /></div>
+              </div>
+              <figcaption>Desktop · 1440 wide · {domain(c.url)}</figcaption>
+            </figure>
+          )}
+          {mobFull && (
+            <figure class="sframe-fig sframe-fig--mob">
+              <div class="sframe sframe--mob" data-scrollframe tabindex="0" aria-label={`${c.title} — full mobile page (scrollable)`}>
+                <div class="sframe__inner" data-scrollframe-inner><Picture data={mobFull} alt={`${c.title} — the full mobile page`} sizes="(min-width: 1024px) 22vw, 60vw" /></div>
+              </div>
+              <figcaption>Mobile · 390 wide</figcaption>
+            </figure>
+          )}
+        </div>
+      </section>
+    )}
+
+    {video && c.media.video && (
+      <section class="case__rec section section--tight wrap" aria-labelledby="rec-title">
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--lime)">Recorded</p>
+          <h2 class="h2" id="rec-title">{recs?.interaction ? 'In use.' : 'A real session.'}</h2>
+        </header>
+        <div class:list={['recs', { 'recs--two': recs?.interaction && recs?.video }]}>
+          {recs?.interaction && <VideoPlate slug={c.media.video} kind="interact" label={`Screen recording of ${c.title} in use: ${c.media.shows || 'a real interaction'}`} caption={c.media.shows} />}
+          {recs?.video && <VideoPlate slug={c.media.video} kind="scroll" label={`Screen recording of ${c.title} being scrolled in a real browser`} />}
+        </div>
+      </section>
+    )}
+
+    {(c.metrics?.length || c.spec.length) && (
+      <section class="case__receipts section wrap" aria-labelledby="receipts-title">
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--sun)">Counted, not claimed</p>
+          <h2 class="h2" id="receipts-title">{c.metrics?.length ? 'Receipts.' : 'The spec.'}</h2>
+        </header>
+        {c.metrics && c.metrics.length > 0 && (
+          <ul class="receipts" role="list" data-pop-grid>
+            {c.metrics.map((x, n) => (
+              <li class="receipt" style={`--bg:${cardTones[(n + 2) % cardTones.length]}`} data-count-host data-pop>
+                <p class="receipt__num num" data-count>{x.value}</p>
+                <p class="receipt__label">{x.label}</p>
+                <p class="receipt__src" data-count-after>Source: {ownPortfolio(x.source) ? 'my earlier portfolio' : <a href={x.source} rel="noopener">{domain(x.source)}</a>}{x.note && <> · {x.note}</>}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+        <dl class="spec-table">
+          {c.spec.map((f) => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
+        </dl>
+      </section>
+    )}
+
+    {c.media.more && c.media.more.length > 0 && (
+      <section class="case__more section wrap" aria-labelledby="more-title">
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--tomato)">Also part of this work</p>
+          <h2 class="h2" id="more-title">More from the same build.</h2>
+        </header>
+        <ul class="more-grid" role="list">
+          {c.media.more.map((x) => {
+            const v = view(x.slug, 'desktop-hero');
+            const mu = media(x.slug)?.url;
+            return (
+              <li class="more-card">
+                <div class="more-card__img">{v ? <Picture data={v} alt={x.label} sizes="(min-width: 1024px) 40vw, 92vw" /> : <span class="more-card__blank">{x.label}</span>}</div>
+                <p class="more-card__cap"><span>{x.label}</span>{mu && <span>{domain(mu)}</span>}</p>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    )}
+    {c.family && c.family.length > 0 && (
+      <section class="case__family section section--tight wrap" aria-labelledby="family-title">
+        <header class="case__head">
+          <p class="kicker" style="--kicker-dot: var(--violet)">The family</p>
+          <h2 class="h2" id="family-title">Related builds.</h2>
+        </header>
+        <ul class="family" role="list">
+          {c.family.map((f) => {
+            const internal = f.url.startsWith('/');
+            return <li><a href={f.url} rel={internal ? undefined : 'noopener'}><span class="family__title">{f.title}</span><span class="family__note">{f.note}</span><span class="family__arrow" aria-hidden="true">{internal ? '→' : '↗'}</span></a></li>;
+          })}
+        </ul>
+      </section>
+    )}
+
+    <section class="case__links section section--tight wrap" aria-label="Links">
+      <a class="btn" href={c.url} rel="noopener">Open the live {c.group === 'systems' ? 'tool' : 'site'} <span class="arrow" aria-hidden="true">↗</span></a>
+      {c.related?.map((r) => <a class="btn btn--line" href={r.url}>Read: {r.title} <span class="arrow" aria-hidden="true">→</span></a>)}
+    </section>
+
+    <nav class="next wrap" aria-label="Next case study">
+      <a class="next__link" href={`/work/${next.slug}/`} data-vt-plate data-vt-host style={`--bg:${nextTint}`}>
+        <span class="next__label">Next case study →</span>
+        <span class="next__title">{next.title}</span>
+        <span class="next__kicker">{next.kicker}</span>
+        {nextHero && <span class="next__peek" data-vt-target><Picture data={nextHero} alt="" sizes="(min-width: 1024px) 36vw, 80vw" /></span>}
+      </a>
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .case__crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; justify-self: start; }
+  .case__crumbs a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.72); font-weight: 650; text-decoration: none; }
+  .case__crumbs span { padding: 6px 12px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 700 0.8125rem / 1 var(--font-text); }
+  .case__promise { font-family: var(--font-display); font-weight: 850; font-stretch: 85%; font-size: clamp(1.5rem, 2.4vw, 2.25rem); line-height: 1.05; max-width: 28ch; text-wrap: balance; }
+  .case__summary { font-size: var(--t-lead); line-height: 1.35; color: var(--ink-2); max-width: 48ch; }
+  .case__facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: var(--s-3); max-width: 1000px; }
+  .case__facts div { padding: 12px 16px; border-radius: var(--r-m); background: rgb(255 255 255 / 0.72); }
+  .case__facts dt { font: 750 var(--t-label) / 1.3 var(--font-text); text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-2); }
+  .case__facts dd { margin: 4px 0 0; font-weight: 650; overflow-wrap: anywhere; }
+  .case__facts a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  @media (min-width: 900px) { .case__facts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+  .case__lead { margin-top: calc(var(--s-7) * -1); position: relative; z-index: 2; }
+  .case__lead-frame { border-radius: var(--r-xl); overflow: hidden; background: #fff; box-shadow: var(--shadow-2); border: 6px solid #fff; }
+  .case__lead-frame :global(img) { width: 100%; height: auto; display: block; }
+  .case__lead figcaption { margin-top: 12px; text-align: center; font-size: 0.875rem; color: var(--fg-2); font-weight: 550; }
+
+  .case__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
+  .case__brief { display: grid; gap: var(--s-6); }
+  .case__brief .case__head { margin-bottom: 0; }
+  .case__prose { display: grid; gap: 1em; font-size: var(--t-lead); line-height: 1.45; max-width: 42ch; font-weight: 450; }
+  .case__notes { display: grid; gap: 14px; align-content: start; }
+  .case__role, .case__disclaimer { display: grid; gap: 8px; padding: 20px 22px; border-radius: var(--r-l); max-width: 42ch; }
+  .case__role { background: var(--lilac); }
+  .case__disclaimer { background: var(--lemon); }
+  .case__note-label { font: 750 var(--t-label) / 1.3 var(--font-text); text-transform: uppercase; letter-spacing: 0.05em; }
+  .case__role-text { font-family: var(--font-display); font-weight: 850; font-stretch: 85%; font-size: 1.5rem; line-height: 1.1; }
+  .case__note-src { font-size: 0.875rem; font-weight: 600; color: var(--ink-2); }
+
+  .exploded { padding-block: var(--section); }
+  .exploded__grid { display: grid; gap: var(--s-7); align-items: center; }
+  .exploded__legend { display: grid; gap: var(--s-4); }
+  .exploded__title { max-width: 12ch; }
+  .exploded__labels { display: grid; gap: 10px; margin-top: var(--s-3); }
+  .exploded__labels li { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: baseline; padding: 14px 16px; border-radius: var(--r-m); background: var(--cloud); max-width: 40ch; }
+  .exploded__labels b { font-weight: 750; }
+  .exploded__labels li > :not(.exploded__n) { grid-column: 2; }
+  .exploded__n { grid-row: span 2; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; font: 750 0.75rem / 1 var(--font-text); }
+  .exploded__stage { display: grid; place-items: center; min-height: 440px; }
+  .stack { --w: min(80vw, 440px); position: relative; width: var(--w); aspect-ratio: 16 / 10; transform-style: preserve-3d; transform: perspective(1600px) rotateX(54deg) rotateZ(-28deg); }
+  .layer { position: absolute; inset: 0; overflow: hidden; border-radius: 18px; background: #fff; box-shadow: 0 30px 50px -26px rgb(40 20 90 / 0.45); backface-visibility: hidden; }
+  .layer--data { transform: translateZ(0); background: var(--mint); padding: 6% 7%; }
+  .layer--structure { transform: translateZ(90px); background: var(--lilac); }
+  .layer--surface { transform: translateZ(180px); }
+  .layer :global(picture), .layer :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .layer__tag { position: absolute; left: 10px; top: 8px; z-index: 2; padding: 4px 9px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 750 10px / 1.2 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; }
+  .layer--data .layer__tag { position: static; display: inline-block; margin-bottom: 8px; }
+  .layer__rows { display: grid; gap: 3px; font: 600 clamp(8px, 1vw, 12px) / 1.35 var(--font-text); }
+  .layer__rows div { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed rgb(22 18 31 / 0.2); padding-bottom: 3px; }
+  .layer__rows dt { color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.04em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .layer__rows dd { margin: 0; font-weight: 750; text-align: right; }
+  .layer__blank { width: 100%; height: 100%; background: repeating-linear-gradient(0deg, rgb(255 255 255 / 0.5) 0 18px, transparent 18px 36px); }
+  :global(.motion-ok) .exploded { padding-block: 0; }
+  :global(.motion-ok) .exploded__track { height: 240vh; }
+  :global(.motion-ok) .exploded__sticky { position: sticky; top: 0; height: 100svh; display: flex; align-items: center; overflow: hidden; }
+  :global(.motion-ok) .exploded__sticky > .wrap { width: 100%; }
+  :global(.motion-ok) .stack { transform: none; }
+  :global(.motion-ok) .layer { transform: none; }
+
+  .features { display: grid; gap: clamp(14px, 1.6vw, 24px); }
+  .feature { display: grid; gap: 10px; align-content: start; padding: clamp(20px, 2.2vw, 28px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
+  .feature__n { justify-self: start; padding: 5px 10px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 750 0.75rem / 1 var(--font-text); }
+  .feature__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.5rem, 2vw, 2rem); line-height: 0.98; text-transform: uppercase; }
+  .feature__text { font-weight: 500; color: var(--ink-2); }
+
+  .details { display: grid; gap: var(--s-7) var(--gutter); }
+  .detail__frame { position: relative; border-radius: var(--r-l); overflow: hidden; background: var(--cloud); box-shadow: var(--shadow-1); }
+  .detail__frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .detail__cap { display: flex; gap: 12px; align-items: baseline; margin-top: 14px; max-width: 48ch; font-weight: 550; }
+  .detail__n { flex: none; padding: 4px 9px; border-radius: var(--r-pill); background: var(--pink); color: var(--ink); font: 750 0.75rem / 1.2 var(--font-text); }
+  @media (min-width: 1024px) {
+    .details { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .detail { grid-column: span 6; }
+    .detail--wide { grid-column: 2 / span 10; }
+    .detail:nth-child(odd):not(.detail--wide) { margin-top: var(--s-8); }
+  }
+
+  .case__read-grid { display: grid; gap: var(--s-6); align-items: start; }
+  .case__read-head { display: grid; gap: var(--s-4); }
+  .case__read-note { color: var(--fg-2); max-width: 36ch; }
+  .sframe { position: relative; height: min(78vh, 760px); overflow-y: auto; overflow-x: hidden; border-radius: var(--r-l); background: var(--cloud); box-shadow: var(--shadow-2); overscroll-behavior: contain; border: 6px solid #fff; }
+  .sframe--mob { height: min(78vh, 760px); max-width: 360px; border-radius: 34px; border-width: 8px; border-color: var(--ink); }
+  :global(.is-driven).sframe { overflow: hidden; }
+  .sframe__inner :global(img) { width: 100%; height: auto; }
+  .sframe-fig figcaption { margin-top: 12px; font-size: 0.875rem; font-weight: 550; color: var(--fg-2); }
+
+  .recs { display: grid; gap: var(--s-7) var(--gutter); }
+  .recs :global(.vplate__frame) { border-radius: var(--r-l); overflow: hidden; box-shadow: var(--shadow-2); }
+  .recs :global(.crop::before), .recs :global(.crop::after), .recs :global(.crop__b) { display: none; }
+  @media (min-width: 1024px) { .recs--two { grid-template-columns: 1.35fr 1fr; align-items: start; } }
+
+  .receipts { display: grid; gap: clamp(14px, 1.6vw, 24px); margin-bottom: var(--s-6); }
+  .receipt { container-type: inline-size; display: grid; gap: 10px; align-content: start; padding: clamp(22px, 2.4vw, 32px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
+  .receipt__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: min(7rem, 22cqi); line-height: 1; white-space: nowrap; }
+  .receipt__num :global(.odo) { display: inline-block; height: 1em; overflow: hidden; vertical-align: top; }
+  .receipt__num :global(.odo__strip > span) { display: block; height: 1em; line-height: 1; }
+  .receipt__label { font-size: 1.125rem; font-weight: 650; line-height: 1.25; max-width: 28ch; }
+  .receipt__src { font-size: 0.8125rem; font-weight: 600; color: var(--ink-2); }
+  .spec-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 10px; }
+  .spec-table div { padding: 14px 16px; border-radius: var(--r-m); background: var(--cloud); }
+  .spec-table dt { font: 750 var(--t-label) / 1.3 var(--font-text); text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-2); }
+  .spec-table dd { margin: 4px 0 0; font-weight: 600; }
+
+  .more-grid { display: grid; gap: clamp(16px, 2vw, 28px); }
+  .more-card__img { border-radius: var(--r-l); overflow: hidden; aspect-ratio: 16 / 10; background: var(--cloud); box-shadow: var(--shadow-1); }
+  .more-card__img :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .more-card__blank { display: grid; place-items: center; height: 100%; padding: 20px; text-align: center; font-weight: 700; }
+  .more-card__cap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin-top: 12px; font-weight: 650; }
+  .more-card__cap span + span { color: var(--fg-2); font-weight: 550; font-size: 0.875rem; }
+  .family { display: grid; gap: 8px; }
+  .family a { display: grid; grid-template-columns: 1fr auto; gap: 4px var(--s-4); align-items: center; padding: 16px 20px; border-radius: var(--r-l); background: var(--cloud); text-decoration: none; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
+  .family a:hover { background: var(--lime); transform: translateX(4px); }
+  .family__title { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: 1.5rem; line-height: 1; text-transform: uppercase; }
+  .family__note { grid-column: 1; color: var(--ink-2); font-size: var(--t-small); font-weight: 500; }
+  .family__arrow { grid-row: 1 / span 2; grid-column: 2; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: #fff; }
+  .case__links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+  .next { margin-top: var(--s-8); }
+  .next__link { position: relative; display: grid; gap: 10px; padding: clamp(28px, 4vw, 64px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); text-decoration: none; overflow: hidden; min-height: 280px; align-content: center; transition: transform 0.5s var(--ease-pop); }
+  .next__link:hover { transform: translateY(-6px); }
+  .next__label { justify-self: start; padding: 6px 12px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 700 0.8125rem / 1 var(--font-text); }
+  .next__title { position: relative; z-index: 1; font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(3rem, 8vw, 8rem); line-height: 0.86; text-transform: uppercase; max-width: 11ch; }
+  .next__kicker { position: relative; z-index: 1; font-weight: 650; }
+  .next__peek { display: none; position: absolute; right: clamp(20px, 3vw, 48px); top: 50%; width: min(36vw, 520px); aspect-ratio: 16 / 10; border-radius: var(--r-l); overflow: hidden; box-shadow: var(--shadow-2); transform: translateY(-50%) rotate(4deg); transition: transform 0.6s var(--ease-pop); }
+  .next__peek :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .next__link:hover .next__peek { transform: translateY(-50%) rotate(0deg) scale(1.03); }
+
+  @media (min-width: 700px) {
+    .features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .receipts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .more-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1024px) {
+    .case__brief { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .case__brief .case__head { grid-column: 1 / span 2; }
+    .case__prose { grid-column: 3 / span 6; }
+    .case__notes { grid-column: 9 / span 4; }
+    .exploded__grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .exploded__legend { grid-column: 1 / span 4; }
+    .exploded__stage { grid-column: 5 / span 8; min-height: 640px; }
+    .stack { --w: min(44vw, 720px); }
+    .layer--structure { transform: translateZ(150px); }
+    .layer--surface { transform: translateZ(300px); }
+    .layer__tag { font-size: 11px; }
+    .features { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .case__read-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .case__read-head { grid-column: 1 / span 3; position: sticky; top: calc(var(--nav-h) + 24px); }
+    .sframe-fig--desk { grid-column: 4 / span 6; }
+    .sframe-fig--mob { grid-column: 10 / span 3; }
+    .receipts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .next__peek { display: block; }
+  }
+</style>

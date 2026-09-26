@@ -1,0 +1,295 @@
+{
+  "url": "https://mousabatarseh.com/lume-review/",
+  "title": "Lume — Promotion rollout review",
+  "description": "Independent review of lume.com promotions: overlapping bundles priced above singles, a 20% deal configured at 25%, hero prices that don't match landing pages, and store hours that disagree across three sources.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "k",
+      "text": "PROMOTION ROLLOUT REVIEW · LUME.COM"
+    },
+    {
+      "t": "h1",
+      "text": "What the deal says, and what the rule does"
+    },
+    {
+      "t": "p",
+      "text": "Six findings from reading lume.com's specials the way a rollout coordinator would: deal by deal, store by store, against the numbers the site itself serves."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "TAB 1 · FINDINGS"
+    },
+    {
+      "t": "p",
+      "text": "Promotions only work if they reach every store the way they were planned: right price, right dates, right stores, right disclaimer. So I read lume.com the way a promotions coordinator would — deal by deal, store by store — and checked whether what the site promises is what the rules actually do. Six things a rollout checklist would have caught, each with the check that catches it."
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "MENU SKUS READ",
+          "ACTIVE DISCOUNTS",
+          "BUNDLE PRICES ABOVE THE SINGLE PRICE",
+          "STORE PAGES WITH CONFLICTING HOURS"
+        ],
+        [
+          "888 (Ann Arbor)",
+          "117",
+          "509 SKU-bundle pairs",
+          "32 of 40"
+        ]
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "num",
+      "text": "FINDINGS"
+    },
+    {
+      "t": "h2",
+      "text": "What the site promises vs. what the rules do"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "no",
+      "text": "01"
+    },
+    {
+      "t": "h3",
+      "text": "Two bundles, same ten jars, two prices — both worse than buying singles"
+    },
+    {
+      "t": "p",
+      "text": "Baller Jars 7g – 2/$80 (weekly, ends 09-29) and Baller Jars 7g – 2/$98 (ongoing, no end date) target the identical ten Cannalicious SKUs and are both displayed. Those jars are $60 regular and $39 each right now under Cannalicious & Detroit Edibles – 35% Off. So the “deal” prices — $40 and $49 a jar — are both higher than two singles ($78). Across the Ann Arbor menu I counted 509 SKU-bundle pairs where the bundle's per-unit price is above the item's current single sale price, and 157 SKUs sitting in two or more bundles."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "Evidence: lume.com/specials/all (Ann Arbor) · discount ids 135314, 134549, 134849 · Ann Arbor menu, 888 SKUs · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C11 CONFLICT"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C5 PRICE MATH"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "no",
+      "text": "02"
+    },
+    {
+      "t": "h3",
+      "text": "A daily deal named 20% Off is configured at 25%"
+    },
+    {
+      "t": "p",
+      "text": "Daily Deal – Lume 3.5g 20% Off (id 135412, Tuesdays) carries unitPercentOff: 0.25. Every other “20% Off” deal on the same page — Doobie Tuesday, Muha Mates 5Pk — is configured at 0.2. The name promises one number and the rule applies another. (Read from the page's own data payload; not verified in a Tuesday cart.)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "Evidence: lume.com/specials/all · discountTypeMap · ids 135412, 135491 · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C5 PRICE MATH"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C16 WORDING"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "no",
+      "text": "03"
+    },
+    {
+      "t": "h3",
+      "text": "The homepage “$15 Each” eighth lands on a $17.50-each bundle"
+    },
+    {
+      "t": "p",
+      "text": "Hero slides Lume 1/8th Ongoing Global (“$20 Each”) and Lume 1/8th Ongoing Outlet (“$15 Each”) both deep-link to /specials/bundles/135343 = Flower 3.5g – 2/$35, $17.50 each. At the seven outlet stores the same eighths are $15 single, so the call-to-action lands on a bundle that costs more than the advertised price. Mount Pleasant Broomfield is on both slides' store lists — it shows “$20 Each” and “$15 Each” for the same eighths at once."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "Evidence: lume.com homepage hero data (content_filter_locations) · /specials/bundles/135343 · Ann Arbor menu · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C12 STORE SCOPE"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C15 ASSETS"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "no",
+      "text": "04"
+    },
+    {
+      "t": "h3",
+      "text": "A deal called “Disposable 2g” contains 1g carts"
+    },
+    {
+      "t": "p",
+      "text": "Disposable 2g – 2/$35 (id 135330) targets nine Mitten Extracts … Disposable Cart 1g SKUs ($18 reg). The sibling Disposable 2g – 2/$40 (id 135329) has no threshold and no unit price computed — a build error the page renders anyway. Same pattern with brand names: the same five Muha SKUs run as “Muha Mates 5Pk – 20% Off” and “Muha Meds 5-Pack – 2/$30”."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "Evidence: lume.com/specials/all · ids 135330, 135329, 135491, 135465 · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C3 DATA MATCH"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C1 REQUIRED FIELDS"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "no",
+      "text": "05"
+    },
+    {
+      "t": "h3",
+      "text": "Store hours disagree across three sources on 32 of 40 store pages"
+    },
+    {
+      "t": "p",
+      "text": "Each store page shows an hours table from the Dutchie feed; the CMS record and the page's own JSON-LD say something else. Adrian: table Sun–Thu 9–8, Fri–Sat 9–10; CMS Mon–Thu 10–8:45; JSON-LD Mo-Th 10:00-20:45. Big Rapids has three different answers and a JSON-LD phone of “(248)918-43610” — eleven digits. Only 8 stores match themselves. The homepage says “38 Michigan locations”; the locations page lists 40."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "Evidence: lume.com/stores/… (Adrian, Big Rapids, Cedar Springs, Menominee, New Buffalo) · /api/store-information · homepage copy · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C12 STORE CODES"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C16 WORDING"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "no",
+      "text": "06"
+    },
+    {
+      "t": "h3",
+      "text": "Stale promo copy still live and indexed"
+    },
+    {
+      "t": "p",
+      "text": "The Specials hub's Vendor Day Deals card lists a March/April schedule with no year, names “Mt Pleasant – Mission” and “Kalkaska” (no such stores) and spells “Broomflied”. /price-drop-10-5-24, /summer-fest, /menominee-closure (an October 2024 calendar) and /home-page (a January-2024 homepage build advertising “$20 1/8ths, $120 Oz”) all return 200, self-canonical, no noindex. Morenci's page thanks customers at “our Lansing location”; Kalamazoo's reads “:ume”."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "Evidence: lume.com/specials · sitemap.xml (7,651 URLs, 1,087 duplicates) · /home-page · /stores/…morenci · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C10 DATES"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chk",
+      "text": "C15 ASSETS"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "num",
+      "text": "WHAT'S RIGHT"
+    },
+    {
+      "t": "h2",
+      "text": "Worth keeping"
+    },
+    {
+      "t": "p",
+      "text": "Regular prices were identical for all 1,716 SKUs across the six store menus compared — no cross-store reg-price drift, which is the hardest thing to hold at 40 stores. Weekly deals carry end dates and the internal names already flag vendor funding (“(V)”), which is exactly the field a vendor-agreement check needs. The specials data is structured enough that every finding above could be a formula, not a person."
+    },
+    {
+      "t": "h3",
+      "text": "METHOD & SCOPE"
+    },
+    {
+      "t": "p",
+      "text": "Public pages only, Sep 20, 2026: lume.com specials (Ann Arbor selected, spot-checked at Kalamazoo, Evart, Iron Mountain, Mt Pleasant Broomfield), the site's own page data, 40 store pages, sitemap.xml and /api/store-information. No cart was checked out, so whether checkout auto-applies the cheapest overlapping deal is not verified — the finding is that two prices are displayed. The Dutchie-hosted menus returned 403 to me, so the site's menu is the only menu compared. Whether the CMS hours text is shown to shoppers or only to search engines is unverified; the JSON-LD conflict is certain."
+    }
+  ],
+  "links": [
+    {
+      "text": "mousabatarseh.com/deals-os",
+      "href": "https://mousabatarseh.com/deals-os/"
+    },
+    {
+      "text": "mousabatarseh.com",
+      "href": "https://mousabatarseh.com/"
+    },
+    {
+      "text": "LinkedIn",
+      "href": "https://www.linkedin.com/in/mousabatarseh"
+    },
+    {
+      "text": "hireme@mousabatarseh.com",
+      "href": "mailto:hireme@mousabatarseh.com"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

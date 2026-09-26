@@ -1,0 +1,31 @@
+---
+import { view as getView, srcset, pick, type View } from '../lib/media';
+interface Props {
+  slug?: string;
+  v?: 'desktop-hero' | 'desktop-full' | 'mobile-hero' | 'mobile-full' | 'tablet-hero';
+  data?: View;
+  alt: string;
+  sizes: string;
+  eager?: boolean;
+  class?: string;
+  fetchpriority?: 'high' | 'low' | 'auto';
+}
+const { slug, v = 'desktop-hero', data, alt, sizes, eager = false, class: cls = '', fetchpriority } = Astro.props;
+const d = data || getView(slug, v);
+---
+{d && (
+  <picture class={cls}>
+    {d.avif.length > 0 && <source type="image/avif" srcset={srcset(d.avif)} sizes={sizes} />}
+    <source type="image/webp" srcset={srcset(d.webp)} sizes={sizes} />
+    <img
+      src={pick(d.webp, 1280).src}
+      width={d.w}
+      height={d.h}
+      alt={alt}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding={eager ? 'sync' : 'async'}
+      fetchpriority={fetchpriority}
+      style={d.lqip ? `background: ${d.color || 'var(--paper-2)'} url(${d.lqip}) center top / cover no-repeat` : undefined}
+    />
+  </picture>
+)}

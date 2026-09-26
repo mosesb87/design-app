@@ -1,0 +1,85 @@
+{
+  "viewport": {
+    "w": 1440,
+    "h": 900
+  },
+  "background": "rgb(244, 247, 245)",
+  "text": "rgb(22, 36, 30)",
+  "fonts": {
+    "body": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+    "h1": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif"
+  },
+  "loadedFonts": [],
+  "items": [
+    {
+      "k": "nav",
+      "x": 0,
+      "y": 0.1573,
+      "w": 0.1708,
+      "h": 0.7098
+    },
+    {
+      "k": "button",
+      "x": 0.0069,
+      "y": 0.1706,
+      "w": 0.1569,
+      "h": 0.0489
+    },
+    {
+      "k": "button",
+      "x": 0.0069,
+      "y": 0.2217,
+      "w": 0.1569,
+      "h": 0.0489
+    },
+    {
+      "k": "button",
+      "x": 0.0069,
+      "y": 0.2728,
+      "w": 0.1569,
+      "h": 0.0489
+    },
+    {
+      "k": "button",
+      "x": 0.0069,
+      "y": 0.3239,
+      "w": 0.1569,
+      "h": 0.0489
+    },
+    {
+      "k": "button",
+      "x": 0.0069,
+      "y": 0.3751,
+      "w": 0.1569,
+      "h": 0.0489
+    },
+    {
+      "k": "button",
+      "x": 0.0069,
+      "y": 0.4262,
+      "w": 0.1569,
+      "h": 0.0489
+    },
+    {
+      "k": "button",
+      "x": 0.0069,
+      "y": 0.4773,
+      "w": 0.1569,
+      "h": 0.0489
+    },
+    {
+      "k": "heading",
+      "x": 0.1889,
+      "y": 0.0535,
+      "w": 0.1736,
+      "h": 0.0264
+    },
+    {
+      "k": "heading",
+      "x": 0.1896,
+      "y": 0.4197,
+      "w": 0.7917,
+      "h": 0.0531
+    }
+  ]
+}

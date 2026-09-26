@@ -1,0 +1,110 @@
+---
+// "Built to fix something real." — the tools, as bright cards on a night room, with real recordings.
+// Desktop + motion: the track is pinned and moves sideways with scroll (no hijack). Touch: native swipe.
+// Reduced motion: a vertical list. (Motion: scripts/motion/rack.ts.)
+import VideoPlate from '../VideoPlate.astro';
+import Plate from '../Plate.astro';
+import Sticker from './Sticker.astro';
+import { tools } from '../../data/tools';
+import { media } from '../../lib/media';
+const tones = ['var(--lime)', 'var(--sky)', 'var(--sun)', 'var(--pink)', 'var(--aqua)', 'var(--peach)', 'var(--lilac)'];
+---
+<section class="tools" id="systems" data-rack aria-labelledby="tools-title">
+  <div class="tools__head wrap">
+    <p class="kicker tools__kicker" style="--kicker-dot: var(--lime)">Systems I built</p>
+    <h2 class="h2 tools__title" id="tools-title">Built to fix<br />something real.</h2>
+    <p class="tools__sub">Working tools, running live. Each one makes the check run before the mistake does.</p>
+    <span class="tools__bolt" aria-hidden="true"><Sticker name="bolt" /></span>
+  </div>
+  <div class="rack__viewport tools__viewport" data-rack-viewport>
+    <ol class="tools__track" role="list" data-rack-track>
+      {tools.map((t, i) => (
+        <li class="tool" data-tool style={`--tone:${tones[i % tones.length]}`}>
+          <div class="tool__text">
+            <p class="tool__n"><span>{t.n}</span> {t.name}</p>
+            <p class="tool__promise" data-promise>{t.promise}</p>
+            <p class="tool__what">{t.what}</p>
+            <p class="tool__links">
+              <a class="btn tool__btn" href={t.href}>{t.caseStudy ? 'Case study' : 'Open the tool'} <span class="arrow" aria-hidden="true">{t.caseStudy ? '→' : '↗'}</span></a>
+              {t.caseStudy && <a class="tool__live" href={t.live} rel="noopener">Live tool <span aria-hidden="true">↗</span></a>}
+            </p>
+          </div>
+          <div class="tool__media">
+            {media(t.media)?.video || media(t.media)?.interaction ? (
+              <VideoPlate slug={t.media} label={`Recording of ${t.name} in use${t.shows ? ': ' + t.shows : ''}`} caption={media(t.media)?.interaction ? t.shows : undefined} />
+            ) : (
+              <Plate slug={t.media} alt={`${t.name} — screenshot`} title={t.name} url={t.live} caption={false} sizes="(min-width: 1024px) 40vw, 86vw" />
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .tools {
+    position: relative;
+    margin-inline: clamp(8px, 1.4vw, 24px);
+    border-radius: var(--r-xl);
+    background: var(--night);
+    color: var(--night-ink);
+    padding-block: var(--section) calc(var(--section) * 0.7);
+    overflow: clip;
+    --fg: var(--night-ink);
+    --fg-2: var(--night-ink-2);
+    --focus: var(--lime);
+  }
+  .tools::before {
+    content: '';
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: -20%;
+    height: 50%;
+    background: var(--spectrum);
+    filter: blur(110px);
+    opacity: 0.28;
+    pointer-events: none;
+  }
+  .tools__head { position: relative; display: grid; gap: var(--s-4); margin-bottom: var(--s-8); }
+  .tools__kicker { background: rgb(255 255 255 / 0.1); color: #fff; }
+  .tools__title { max-width: 9ch; color: #fff; }
+  .tools__sub { max-width: 40ch; color: var(--night-ink-2); font-size: var(--t-lead); line-height: 1.3; }
+  .tools__bolt { position: absolute; right: var(--margin); top: -10px; width: clamp(80px, 10vw, 150px); }
+  .tools__bolt :global(.sticker) { --size: 100%; width: 100%; }
+  .tools__viewport { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-inline: var(--margin); scroll-padding-inline: var(--margin); }
+  .tools__viewport::-webkit-scrollbar { display: none; }
+  .tools__track { display: flex; gap: clamp(14px, 1.6vw, 24px); width: max-content; padding-block: 8px 24px; }
+  .tool {
+    scroll-snap-align: start;
+    width: min(86vw, 1040px);
+    display: grid;
+    gap: var(--s-5);
+    padding: clamp(18px, 2vw, 32px);
+    border-radius: var(--r-xl);
+    background: var(--tone);
+    color: var(--ink);
+    --fg: var(--ink);
+    --fg-2: var(--ink-2);
+    --focus: var(--violet);
+  }
+  .tool__text { display: grid; gap: var(--s-4); align-content: start; }
+  .tool__n { display: inline-flex; align-items: center; gap: 10px; font: 750 var(--t-label) / 1 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
+  .tool__n span { display: inline-grid; place-items: center; min-width: 34px; height: 34px; padding-inline: 6px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font-size: 0.75rem; }
+  .tool__promise { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.25rem, 4vw, 4.25rem); line-height: 0.9; text-transform: uppercase; text-wrap: balance; }
+  .tool__what { max-width: 44ch; font-weight: 500; }
+  .tool__links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-4); margin-top: var(--s-2); }
+  .tool__btn { --btn-bg: var(--ink); --btn-fg: #fff; }
+  .tool__live { font-weight: 700; text-decoration: none; border-bottom: 2px solid currentColor; padding-bottom: 2px; min-height: 32px; display: inline-flex; align-items: center; }
+  .tool__media :global(.vplate__frame), .tool__media :global(.plate__frame) { border-radius: var(--r-l); overflow: hidden; box-shadow: var(--shadow-2); background: var(--white); }
+  .tool__media :global(.vplate__cap), .tool__media :global(.plate__cap) { color: var(--ink-2); }
+  @media (min-width: 1024px) {
+    .tool { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: center; width: min(78vw, 1180px); }
+  }
+  /* Pinned (set by rack.ts): the viewport sticks and the track moves; no native horizontal scroll */
+  :global(.motion-ok.pointer-fine) .tools[data-rack-sticky] .tools__viewport { overflow: visible; scroll-snap-type: none; }
+  :global(.motion-reduced) .tools__viewport { overflow: visible; }
+  :global(.motion-reduced) .tools__track { flex-direction: column; width: auto; }
+  :global(.motion-reduced) .tool { width: auto; }
+</style>

@@ -1,0 +1,116 @@
+---
+// All the work: the counts as bright tiles, the eleven case studies as cards, then the full index.
+import Base from '../../layouts/Base.astro';
+import IndexTable from '../../components/IndexTable.astro';
+import Picture from '../../components/Picture.astro';
+import PageHead from '../../components/play/PageHead.astro';
+import { entries, entryCount, categories, countBy } from '../../data/work';
+import { orderedCases } from '../../data/cases';
+import { view } from '../../lib/media';
+import { SITE_URL, CHECKED } from '../../data/site';
+
+const featured = orderedCases();
+const tileTones = ['var(--lilac)', 'var(--lemon)', 'var(--sky)', 'var(--mint)', 'var(--peach)'];
+const cardTones = ['var(--lilac)', 'var(--sky)', 'var(--mint)', 'var(--lemon)', 'var(--peach)', 'var(--blush)'];
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/work/#page`,
+    name: 'All the work — Mousa Batarseh',
+    url: `${SITE_URL}/work/`,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: entries.length,
+      itemListElement: entries.map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: e.title, url: e.caseStudy ? `${SITE_URL}/work/${e.caseStudy}/` : e.url })),
+    },
+  },
+];
+---
+<Base title="All the work" description={`Every project, tool, case study, website, store, review and proposal by Mousa Batarseh — ${entryCount} entries, each linked to its case study or the live thing.`} path="/work/" og="work" jsonLd={jsonLd}>
+  <PageHead title="All the work." kicker={`The archive · checked ${CHECKED}`} lead={`${entryCount} entries: the tools I built, the sites and stores I built or ran, reviews and proposals. Eleven have a full case study.`} stickers={['blocks', 'spark', 'tag']}>
+    <ul class="counts" role="list" data-pop-grid>
+      {categories.map((c, i) => (
+        <li class="count" style={`--bg:${tileTones[i % tileTones.length]}`} data-pop>
+          <span class="count__n num">{countBy(c.id)}</span>
+          <span class="count__l">{c.label}</span>
+        </li>
+      ))}
+    </ul>
+  </PageHead>
+
+  <section class="cases section wrap" aria-labelledby="cases-title">
+    <header class="cases__head">
+      <p class="kicker" style="--kicker-dot: var(--violet)">{featured.length} case studies</p>
+      <h2 class="h2" id="cases-title">The long versions.</h2>
+    </header>
+    <ol class="cases__grid" role="list" data-pop-grid>
+      {featured.map((c, i) => {
+        const hero = view(c.media.hero, 'desktop-hero');
+        return (
+          <li class="case-card" style={`--bg:${cardTones[i % cardTones.length]}`} data-pop data-tilt data-vt-host>
+            <div class="case-card__img" data-vt-target>
+              {hero ? <Picture data={hero} alt={`${c.title} — the live site`} sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 90vw" eager={i < 3} /> : <span class="case-card__blank">{c.title}</span>}
+            </div>
+            <p class="case-card__meta"><span class="case-card__n num">{String(i + 1).padStart(2, '0')}</span><span>{c.group === 'systems' ? 'System' : 'Site / store'}</span></p>
+            <h3 class="case-card__title"><a href={`/work/${c.slug}/`} data-vt-plate>{c.title}</a></h3>
+            <p class="case-card__kicker">{c.kicker}</p>
+            <span class="case-card__arrow" aria-hidden="true">→</span>
+          </li>
+        );
+      })}
+    </ol>
+  </section>
+
+  <section class="archive section wrap" aria-labelledby="index-title">
+    <header class="archive__head">
+      <p class="kicker" style="--kicker-dot: var(--aqua)">Every entry</p>
+      <h2 class="h2" id="index-title">The index.</h2>
+      <p class="archive__note">Grouped work sits under its parent. Statuses are honest: demos, fictional-company adaptations and independent studies are labelled as such.</p>
+    </header>
+    <IndexTable filters id="index-full" />
+  </section>
+</Base>
+
+<style>
+  .counts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: var(--s-5); max-width: 1100px; }
+  .count { display: grid; gap: 4px; padding: 16px 18px; border-radius: var(--r-l); background: var(--bg); color: var(--ink); }
+  .count__n { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.75rem, 5vw, 4.5rem); line-height: 0.9; }
+  .count__l { font: 750 var(--t-label) / 1.2 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
+  .count:last-child:nth-child(odd) { grid-column: span 2; }
+  @media (min-width: 700px) { .counts { grid-template-columns: repeat(5, minmax(0, 1fr)); } .count:last-child:nth-child(odd) { grid-column: auto; } }
+
+  .cases__head, .archive__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
+  .archive__note { color: var(--fg-2); max-width: 56ch; font-size: var(--t-lead); line-height: 1.32; }
+  .cases__grid { display: grid; gap: clamp(14px, 1.6vw, 24px); perspective: 1400px; }
+  .case-card {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    align-content: start;
+    padding: clamp(14px, 1.4vw, 20px) clamp(14px, 1.4vw, 20px) clamp(20px, 2vw, 28px);
+    border-radius: var(--r-xl);
+    background: var(--bg);
+    color: var(--ink);
+    transform-style: preserve-3d;
+    transition: box-shadow var(--d-small);
+  }
+  .case-card:hover { box-shadow: var(--shadow-2); }
+  .case-card__img { border-radius: var(--r-l); overflow: hidden; aspect-ratio: 16 / 10; background: #fff; box-shadow: var(--shadow-1); margin-bottom: 8px; transform: translateZ(24px); pointer-events: none; }
+  .case-card__img :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .case-card__blank { display: grid; place-items: center; height: 100%; font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: 2rem; text-transform: uppercase; }
+  .case-card__meta { display: flex; align-items: center; gap: 10px; font: 750 var(--t-label) / 1 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
+  .case-card__n { padding: 5px 9px; border-radius: var(--r-pill); background: var(--ink); color: #fff; }
+  .case-card__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2rem, 2.8vw, 2.875rem); line-height: 0.9; text-transform: uppercase; padding-right: 52px; }
+  .case-card__title a { text-decoration: none; }
+  .case-card__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 3; }
+  .case-card__title a:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; border-radius: 4px; }
+  .case-card__kicker { font-weight: 550; color: var(--ink-2); }
+  .case-card__arrow { position: absolute; right: clamp(14px, 1.4vw, 20px); bottom: clamp(20px, 2vw, 28px); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: #fff; transition: transform 0.5s var(--ease-pop); }
+  .case-card:hover .case-card__arrow { transform: rotate(-45deg); }
+  @media (min-width: 700px) { .cases__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) {
+    .cases__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .case-card:nth-child(3n + 2) { margin-top: var(--s-7); }
+    .case-card:nth-child(3n + 3) { margin-top: var(--s-4); }
+  }
+</style>

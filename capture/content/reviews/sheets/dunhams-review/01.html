@@ -1,0 +1,27 @@
+<div class="wrap">
+  <p class="crumb">Sec. 01 — Overview · for the SEO &amp; SEM Specialist role</p>
+  <h1>275 stores. Zero indexable store pages.</h1>
+  <p class="lede" style="margin-top:16px">The posting asks for SEO on Dunham's <b>local store pages</b>. There aren't any. The store locator is a 274-option dropdown of hashed IDs, <span class="mono">/stores/</span> returns raw JSON, no store has a URL in any sitemap, and <span class="mono">/stores/troy-mi</span> is a 404. Meanwhile the Shopware migration left category duplicates — <span class="mono">/apparel-1/</span> and <span class="mono">/apparel-2/</span> both live and indexed while <span class="mono">/apparel/</span> 404s — and no page on the site carries structured data. This is the store-page system I'd build.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">268</div><div class="l">active stores in the JSON the site already serves — none with a page</div></div>
+    <div class="stat"><div class="n">41</div><div class="l">category URLs with a “-1/-2” collision suffix</div></div>
+    <div class="stat"><div class="n">13<span style="font-size:1.3rem">/20</span></div><div class="l">sampled categories with an empty meta description</div></div>
+    <div class="stat"><div class="n dark">0</div><div class="l">pages with JSON-LD structured data, sitewide</div></div>
+  </div>
+
+  <div class="cards">
+    <div class="card"><span class="kicker b">The ask</span><h3 class="plain">SEO on local store pages</h3><p>“Identify and make recommendations to further optimize key pages, including homepage, category pages, product pages, vendor pages, content pages, <b>local store pages</b>.” Those pages don't exist yet — building them is the single biggest organic opportunity for a 275-store chain.</p></div>
+    <div class="card"><span class="kicker a">The data's ready</span><h3 class="plain">You already serve it</h3><p><span class="mono">/stores/</span> returns 268 active stores with address, city, state, zip and phone. A template turns each into an indexable page with hours, departments, a map and LocalBusiness schema — capturing “Dunham's + city” and “near me”.</p></div>
+    <div class="card"><span class="kicker c">The cleanup</span><h3 class="plain">Consolidate the catalog</h3><p>301 the 41 “-1/-2” duplicates to clean slugs, generate unique metadata for 1,764 categories, add Product schema, and give the sitemap real lastmod values instead of one bulk-stamped date.</p></div>
+  </div>
+
+  <div class="meta" style="margin-top:26px">
+    <span><b>Scope</b> dunhamssports.com stores + categories</span>
+    <span><b>Method</b> /stores JSON, sitemaps, page source, Lighthouse</span>
+    <span><b>Platform</b> Shopware 6 on Upsun</span>
+    <span><b>Independent — not affiliated with Dunham's</b></span>
+  </div>
+
+  <div class="pagenav"><span></span><a class="next" href="https://mousabatarseh.com/dunhams-review/findings.html">Next: The findings →</a></div>
+</div>

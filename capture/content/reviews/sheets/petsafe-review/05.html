@@ -1,0 +1,168 @@
+
+  <div class="wrap">
+    <p class="crumb">Sec. 05 — The 1,000-Page Fix · a specific problem, cited on 5 real product pages</p>
+    <span class="label-tag evidence-tag">Evidence + prescription — every claim on this page names the URL and the date I sampled it</span>
+    <h1>The copy is already written. It just isn't <em>reaching the head</em>.</h1>
+    <p class="lede">
+      Every PetSafe product page ships the same 15-word templated meta description: <br>
+      <b>"Buy the [product name] in the official PetSafe® store for your pet."</b><br>
+      Meanwhile, the JSON-LD on the same page carries <b>1,500–3,600 characters</b> of rich, benefit-focused product copy — copy that PetSafe already wrote, already stores in Sanity, already renders as machine-readable schema. That copy just never reaches <code>&lt;meta name="description"&gt;</code>. Every product page's Google snippet, every social share preview, every AI answer citation, uses the template. Fix once in the Gatsby template. Ships every page.
+    </p>
+
+    <div class="stats">
+      <div class="stat in">
+        <div class="n orange">5 / 5</div>
+        <div class="l">Product pages sampled across doors, GPS, and microchip categories — all ship the identical templated meta description</div>
+        <span class="evidence">2026-09-20 23:22 UTC · URLs and raw <code>&lt;meta&gt;</code> tags below · <b>[F1]</b></span>
+      </div>
+      <div class="stat in">
+        <div class="n">15</div>
+        <div class="l">Words in the current template — the same 15 words on every page, only the product name changes</div>
+        <span class="evidence">2026-09-20 · template is <code>"Buy the [name] in the official PetSafe® store for your pet."</code></span>
+      </div>
+      <div class="stat in">
+        <div class="n teal">3,626</div>
+        <div class="l">Chars of rich product copy already on the page (GPS Dog Tracker) — not reaching the meta tag</div>
+        <span class="evidence">2026-09-20 · <code>len(JSON-LD.description)</code> on <code>/p/gps-dog-tracker-bundle/PTK00-18293/</code> · <b>[F2]</b></span>
+      </div>
+      <div class="stat in">
+        <div class="n muted">1×</div>
+        <div class="l">Gatsby template change to fix every product page at once — the fix scales O(1), not O(N)</div>
+        <span class="evidence">2026-09-20 · React Helmet is already writing <code>&lt;meta name="description"&gt;</code> — swap the field it reads from Sanity</span>
+      </div>
+    </div>
+
+    <h2 class="reveal in">The Repair Bench</h2>
+    <p>Pick a real PetSafe product below. Each column shows one option for the meta description on that page: <b>what ships today</b>, <b>an automatic extract</b> from the description already on the page, or <b>a rewritten version</b> hand-crafted to the 150-char sweet spot. The mock SERP result below the columns shows what Google would render for each. Every product's data on this page was pulled from the live URL on 2026-09-20 23:22 UTC.</p>
+
+    <div class="bench">
+      <div class="picker frame">
+        <label for="prodSelect">Product</label>
+        <select id="prodSelect">
+          <option value="p1">Extreme Weather Aluminum Pet Door™ · ZPA19-16853 · $114.95</option>
+          <option value="p2">Wall Entry Pet Door · ZPA00-16201</option>
+          <option value="p3">Extreme Weather Sliding Glass Pet Door™ · ZPA17-17176</option>
+          <option value="p4">GPS Dog Tracker + Activity Monitoring Bundle · PTK00-18293</option>
+          <option value="p5">Microchip Cat Door · PPA19-16145</option>
+        </select>
+        <a class="btn btn-secondary" id="openLive" href="https://www.petsafe.com/p/extreme-weather-aluminum-pet-door/ZPA19-16853/" target="_blank" rel="noopener">Open the live page ↗</a>
+      </div>
+
+      <div class="compare">
+        <div class="col now">
+          <div class="colhead">
+            <span>Ships today</span>
+            <span class="count" id="nowCount">87 chars</span>
+          </div>
+          <p class="desc stale" id="nowDesc">Buy the Extreme Weather Aluminum Pet Door™ in the official PetSafe® store for your pet.</p>
+          <button class="copybtn" data-copy="now">Copy</button>
+        </div>
+        <div class="col next">
+          <div class="colhead">
+            <span>Auto-extract from JSON-LD</span>
+            <span class="count" id="autoCount">143 chars</span>
+          </div>
+          <p class="desc" id="autoDesc">Hot summers? Chilly winters? The Extreme Weather Aluminum Pet Door™ gives your dog or cat freedom to explore while keeping your home protected.</p>
+          <button class="copybtn" data-copy="auto">Copy</button>
+        </div>
+        <div class="col crafted">
+          <div class="colhead">
+            <span>Rewritten with intent</span>
+            <span class="count" id="craftCount">146 chars</span>
+          </div>
+          <p class="desc" id="craftDesc">Triple-flap aluminum pet door built for harsh weather — magnetic seals, insulating flaps, and a slide-in security panel. Fits most exterior doors.</p>
+          <button class="copybtn" data-copy="craft">Copy</button>
+        </div>
+      </div>
+
+      <div class="serp frame">
+        <div class="serphead">Mock Google SERP result — approximate render, ≤160 chars visible</div>
+        <div class="snip now">
+          <div class="u" id="serpU1">petsafe.com › p › extreme-weather-aluminum-pet-door › ZPA19-16853</div>
+          <div class="t" id="serpT1">Extreme Weather Aluminum Pet Door™ | PetSafe®</div>
+          <div class="d" id="serpD1">Buy the Extreme Weather Aluminum Pet Door™ in the official PetSafe® store for your pet.</div>
+        </div>
+        <div class="snip">
+          <div class="u" id="serpU2">petsafe.com › p › extreme-weather-aluminum-pet-door › ZPA19-16853</div>
+          <div class="t" id="serpT2">Extreme Weather Aluminum Pet Door™ | PetSafe®</div>
+          <div class="d" id="serpD2">Hot summers? Chilly winters? The Extreme Weather Aluminum Pet Door™ gives your dog or cat freedom to explore while keeping your home protected.</div>
+        </div>
+        <div class="snip">
+          <div class="u" id="serpU3">petsafe.com › p › extreme-weather-aluminum-pet-door › ZPA19-16853</div>
+          <div class="t" id="serpT3">Extreme Weather Aluminum Pet Door™ | PetSafe®</div>
+          <div class="d" id="serpD3">Triple-flap aluminum pet door built for harsh weather — magnetic seals, insulating flaps, and a slide-in security panel. Fits most exterior doors.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="reveal in">Where in the stack this fix lives</h2>
+    <span class="label-tag plan-tag">Prescription · one field, one template line</span>
+
+    <pre class="reveal in"><span class="cmt"># Sanity schema — the product document already has these fields</span>
+product {
+  <span class="key">name</span>:          <span class="val">string</span>
+  <span class="key">description</span>:   <span class="val">portableText</span>   <span class="cmt"># ← rich copy, already written, currently only feeds JSON-LD</span>
+  <span class="key">seoDescription</span>: <span class="val">string, 155 max</span> <span class="cmt"># ← ADD THIS. Optional; falls back to auto-extract from `description`.</span>
+  ...
+}
+
+<span class="cmt"># Gatsby template — one line change in the &lt;Helmet&gt; block</span>
+&lt;meta
+  name=<span class="val">"description"</span>
+  content={
+    product.seoDescription             <span class="cmt"># explicit override wins</span>
+    || firstSentence(product.description, 155)  <span class="cmt"># auto-extract fallback</span>
+    || <span class="val">`Buy the ${product.name} in the official PetSafe® store for your pet.`</span> <span class="cmt"># current template stays as last resort</span>
+  }
+/&gt;</pre>
+
+    <div class="cards reveal-stagger in">
+      <div class="card" style="--i: 0;">
+        <span class="kicker a">Ownership</span>
+        <h3>This is the DTC Ops role, not a dev sprint</h3>
+        <p>Sanity schema change: schema editor. Gatsby template change: one PR, one file, ~6 lines. Content: I write the first 20 <code>seoDescription</code> values for the top-selling products, and hand marketing/merch a template so they can write the rest at their own pace.</p>
+      </div>
+      <div class="card" style="--i: 1;">
+        <span class="kicker b">Measurement</span>
+        <h3>Success is provable in Search Console</h3>
+        <p>Baseline the top 20 product URLs' CTR and impressions this month. Ship the change. Read Search Console at 30 and 60 days. If the fix works, CTR on those URLs moves; if it doesn't, we know before we've scaled it.</p>
+      </div>
+      <div class="card" style="--i: 2;">
+        <span class="kicker c">Bonus finding</span>
+        <h3>Bazaarvoice Reviews SEO is off</h3>
+        <p>On the same product pages, the Questions widget carries <code>data-bv-seo="true"</code>. The Reviews widget carries <code>data-bv-seo="false"</code>. Reviews are the bigger data set and they're invisible to Google. Same category of fix; same order of magnitude of upside.</p>
+        <span class="evidence">2026-09-20 · attribute grep on <code>/p/extreme-weather-aluminum-pet-door/ZPA19-16853/</code></span>
+      </div>
+    </div>
+
+    <div class="callout reveal in">
+      <p class="who">The line I keep coming back to</p>
+      <p>This fix ships once and improves every product URL PetSafe has. It uses copy PetSafe already paid to write. It doesn't touch strategy, brand voice, or roadmap priorities. It's exactly the shape of ticket the "elbow grease backlog" line in the JD was written about — and it's the kind of thing I'd pull off the shelf in my first 30 days.</p>
+    </div>
+
+    <section class="evidence-log frame in">
+      <h3>Evidence log — Sec. 05</h3>
+      <p class="sub">Real product data behind the Repair Bench. All sampled 2026-09-20 between 23:22 and 23:25 UTC.</p>
+      <ol>
+        <li><b>[F1a]</b> <code>/p/extreme-weather-aluminum-pet-door/ZPA19-16853/</code> · <code>&lt;meta name="description" content="Buy the Extreme Weather Aluminum Pet Door™ in the official PetSafe® store for your pet."&gt;</code> · JSON-LD <code>description</code> length: 1,157 chars.</li>
+        <li><b>[F1b]</b> <code>/p/wall-entry-pet-door/ZPA00-16201/</code> · <code>&lt;meta name="description" content="Buy the Pet Door for Wall - Wall Entry Pet Door in the official PetSafe® store for your pet."&gt;</code> · <code>h1</code> appears twice on this page.</li>
+        <li><b>[F1c]</b> <code>/p/extreme-weather-sliding-glass-pet-door/ZPA17-17176/</code> · <code>&lt;meta name="description" content="Buy the Extreme Weather Sliding Glass Pet Door™ in the official PetSafe® store for your pet."&gt;</code></li>
+        <li><b>[F1d]</b> <code>/p/gps-dog-tracker-bundle/PTK00-18293/</code> · <code>&lt;meta name="description" content="Buy the GPS Dog Tracker + Activity Monitoring in the official PetSafe® store for your pet."&gt;</code> · JSON-LD <code>description</code> length: <b>3,626 chars</b>. First 200: <i>"Whether your dog is chasing squirrels at the park or napping under a shady tree in the backyard, you can stay connected to their adventures in real time. The PetSafe® GPS Dog Tracker brings together l…"</i></li>
+        <li><b>[F1e]</b> <code>/p/microchip-cat-door/PPA19-16145/</code> · <code>&lt;meta name="description" content="Buy the Microchip Cat Door in the official PetSafe® store for your pet."&gt;</code> · JSON-LD <code>description</code> length: 1,914 chars.</li>
+        <li><b>[F2]</b> Bazaarvoice SEO flags on <code>/p/extreme-weather-aluminum-pet-door/ZPA19-16853/</code>: <code>data-bv-show="questions" data-bv-seo="true"</code> (Q&amp;A is SEO-rendered); <code>data-bv-show="reviews" data-bv-seo="false"</code> and <code>data-bv-show="rating_summary" data-bv-seo="false"</code> (reviews and rating summaries are NOT SEO-rendered). Same values expected across the catalog since the widgets are template-driven.</li>
+        <li><b>[F3]</b> Google's rendered meta-description snippet typically caps around 155–160 chars on desktop and 120 on mobile; over-length descriptions are truncated. Sources: Google Search Central docs (public, permanent link) and my own recent SERP samples during snippet testing on other client sites.</li>
+      </ol>
+    </section>
+
+    <div class="meta reveal in">
+      <span><b>Products sampled</b> 5 URLs, 3 categories</span>
+      <span><b>Sampled</b> 2026-09-20 23:22–23:25 UTC</span>
+      <span><b>Method</b> curl + Python JSON-LD parse + attribute grep</span>
+      <span><b>Every rewrite crafted by me · not AI</b></span>
+    </div>
+
+    <div class="pagenav reveal in">
+      <a href="https://mousabatarseh.com/petsafe-review/plan.html">← First 30/60/90</a>
+      <a class="next" href="https://mousabatarseh.com/petsafe-review/index.html">Back to Overview →</a>
+    </div>
+  </div>

@@ -1,0 +1,53 @@
+{
+  "viewport": {
+    "w": 1440,
+    "h": 900
+  },
+  "background": "rgb(21, 22, 28)",
+  "text": "rgb(240, 241, 250)",
+  "fonts": {
+    "body": "Manrope, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "h1": "Manrope, \"Instrument Sans\", \"Helvetica Neue\", Arial, sans-serif"
+  },
+  "loadedFonts": [
+    "IBM Plex Mono",
+    "Manrope"
+  ],
+  "items": [
+    {
+      "k": "image",
+      "x": 0.05,
+      "y": 0.0189,
+      "w": 0.0194,
+      "h": 0.0311
+    },
+    {
+      "k": "nav",
+      "x": 0.586,
+      "y": 0.0224,
+      "w": 0.1949,
+      "h": 0.0241
+    },
+    {
+      "k": "button",
+      "x": 0.8574,
+      "y": 0.0156,
+      "w": 0.0926,
+      "h": 0.0378
+    },
+    {
+      "k": "image",
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "k": "button",
+      "x": 0.5232,
+      "y": 0.4574,
+      "w": 0.4367,
+      "h": 0.503
+    }
+  ]
+}

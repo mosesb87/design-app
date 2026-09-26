@@ -1,0 +1,39 @@
+---
+// "Fresh from the blog" — the latest posts, each opening its page on this site.
+import { formatDate } from '../../data/site';
+import { blogPosts, toneOf } from '../../data/blog';
+const latest = blogPosts.slice(0, 3);
+---
+<section class="notes section" aria-labelledby="notes-title">
+  <div class="wrap">
+    <header class="notes__head">
+      <p class="kicker" style="--kicker-dot: var(--tomato)">Blog</p>
+      <h2 class="h2" id="notes-title">Notes from<br />running stores.</h2>
+    </header>
+    <ul class="notes__grid" role="list">
+      {latest.map((p) => (
+        <li class="note" style={`--bg:${toneOf(p.categories[0])}`}>
+          <p class="note__meta"><span>{p.categories.join(' · ')}</span><span>{formatDate(p.date)}</span><span>{p.minutes} min read</span></p>
+          <h3 class="note__title"><a href={`/blog/${p.slug}/`}>{p.title}</a></h3>
+          <span class="note__arrow" aria-hidden="true">→</span>
+        </li>
+      ))}
+    </ul>
+    <p class="notes__more"><a class="btn btn--line" href="/blog/">Read the blog <span class="arrow" aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<style>
+  .notes__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
+  .notes__grid { display: grid; gap: clamp(14px, 1.6vw, 24px); }
+  .note { position: relative; display: grid; gap: var(--s-5); align-content: space-between; min-height: 240px; padding: clamp(22px, 2.4vw, 34px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); transition: transform 0.5s var(--ease-pop); }
+  .note:hover { transform: translateY(-6px) rotate(-1deg); }
+  .note__meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 700 var(--t-slug) / 1.4 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; }
+  .note__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.75rem, 2.6vw, 2.75rem); line-height: 0.95; text-transform: uppercase; }
+  .note__title a { text-decoration: none; }
+  .note__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  .note__arrow { justify-self: end; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--ink); color: #fff; font-weight: 700; transition: transform 0.5s var(--ease-pop); }
+  .note:hover .note__arrow { transform: rotate(-45deg); }
+  .notes__more { margin-top: var(--s-7); display: flex; justify-content: center; }
+  @media (min-width: 900px) { .notes__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>

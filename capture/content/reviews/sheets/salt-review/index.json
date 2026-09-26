@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/salt-review/",
+    "status": 200,
+    "title": "Salt Security — AEO & Structured-Data Review",
+    "h1": "Found by people. Quoted by machines.",
+    "description": "Independent answer-engine and structured-data review of salt.security by Mousa Batarseh — 57 of 60 pages without JSON-LD, no FAQPage, llms.txt 404 and 720 disallowed sitemap URLs. For the Website Manager role.",
+    "height": 1398
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/salt-review/coverage.html",
+    "status": 200,
+    "title": "Salt Security — Structured-Data Coverage",
+    "h1": "",
+    "description": "Interactive structured-data coverage map of 60 sampled salt.security pages, now vs after template-level schema.",
+    "height": 1474
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/salt-review/faq.html",
+    "status": 200,
+    "title": "Salt Security — FAQPage Generator",
+    "h1": "",
+    "description": "The FAQPage markup salt.security is missing, with a live JSON-LD generator for Webflow embeds.",
+    "height": 1930
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/salt-review/plan.html",
+    "status": 200,
+    "title": "Salt Security — Sitemap Signals & 30 Days",
+    "h1": "",
+    "description": "Sitemap-robots reconciliation, title and llms.txt fixes, and the first 30 days for Salt's Website Manager role.",
+    "height": 1831
+  }
+]

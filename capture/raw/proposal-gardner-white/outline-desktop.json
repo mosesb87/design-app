@@ -1,0 +1,60 @@
+{
+  "viewport": {
+    "w": 1440,
+    "h": 900
+  },
+  "background": "rgb(243, 241, 236)",
+  "text": "rgb(42, 47, 61)",
+  "fonts": {
+    "body": "Bricolage, \"Bricolage Grotesque\", \"Helvetica Neue\", Arial, system-ui, sans-serif",
+    "h1": "Bricolage, \"Bricolage Grotesque\", \"Helvetica Neue\", Arial, system-ui, sans-serif"
+  },
+  "loadedFonts": [
+    "Bricolage",
+    "JBMono"
+  ],
+  "items": [
+    {
+      "k": "button",
+      "x": 0.909,
+      "y": 0.0183,
+      "w": 0.0715,
+      "h": 0.0467
+    },
+    {
+      "k": "heading",
+      "x": 0.0486,
+      "y": 0.2217,
+      "w": 0.9028,
+      "h": 0.609
+    },
+    {
+      "k": "image",
+      "x": 0.0439,
+      "y": 0.4979,
+      "w": 0.4732,
+      "h": 0.0266
+    },
+    {
+      "k": "text",
+      "x": 0.0486,
+      "y": 0.8707,
+      "w": 0.4975,
+      "h": 0.1739
+    },
+    {
+      "k": "button",
+      "x": 0.5961,
+      "y": 0.904,
+      "w": 0.1361,
+      "h": 0.0622
+    },
+    {
+      "k": "image",
+      "x": 0.7009,
+      "y": 0.9263,
+      "w": 0.0111,
+      "h": 0.0178
+    }
+  ]
+}

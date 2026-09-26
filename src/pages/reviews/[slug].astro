@@ -1,0 +1,213 @@
+---
+// One review, on this site: the number that explains the rest, the three findings, then the full review
+// sheet by sheet — its own words, cleaned by scripts/content/reviews.mjs — with the first screen of each sheet.
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/play/PageHead.astro';
+import { allReviews, relatedReviews, statText, toneFor, tintFor, type FullReview } from '../../data/reviews';
+import { formatDate, person, SITE_URL } from '../../data/site';
+
+export function getStaticPaths() {
+  return allReviews.map((r) => ({ params: { slug: r.slug }, props: { r } }));
+}
+const { r } = Astro.props as { r: FullReview };
+const i = allReviews.findIndex((x) => x.slug === r.slug);
+const newer = allReviews[i - 1];
+const older = allReviews[i + 1];
+const more = relatedReviews(r);
+const tone = toneFor(r.slug);
+const stat = statText(r);
+const sheets = r.sheets.filter((s) => s.html || s.title);
+const findTones = ['var(--blush)', 'var(--mint)', 'var(--lilac)'];
+const jsonLd = [
+  {
+    '@type': 'Article',
+    '@id': `${SITE_URL}/reviews/${r.slug}/#review`,
+    headline: r.headline,
+    name: r.title,
+    description: r.blurb,
+    datePublished: r.date,
+    author: { '@id': `${SITE_URL}/#person` },
+    publisher: { '@id': `${SITE_URL}/#person` },
+    mainEntityOfPage: `${SITE_URL}/reviews/${r.slug}/`,
+    about: { '@type': 'WebSite', name: r.brand, url: `https://${r.site.replace(/^https?:\/\//, '').split(/[ ·]/)[0]}` },
+    keywords: r.focus.join(', '),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Reviews', item: `${SITE_URL}/reviews/` },
+      { '@type': 'ListItem', position: 3, name: r.title, item: `${SITE_URL}/reviews/${r.slug}/` },
+    ],
+  },
+];
+---
+<Base title={`${r.brand} review — ${r.headline}`} description={r.blurb} path={`/reviews/${r.slug}/`} og={`review-${r.slug}`} type="article" jsonLd={jsonLd}>
+  <article class="rv">
+    <PageHead title={r.headline} kicker={r.title} dot={tone.bg} tone={tintFor(r.slug)} size={r.headline.length > 44 ? 's' : 'm'} stickers={['lens', 'check', 'percent']}>
+      <nav class="rv__crumbs" slot="top" aria-label="Breadcrumb"><a href="/reviews/">← All reviews</a></nav>
+      {r.lede && r.lede !== r.headline && <p class="rv__lede" data-ph-fade>{r.lede}</p>}
+      <p class="rv__focus" data-ph-fade>{r.focus.map((f) => <span>{f}</span>)}</p>
+      <dl class="rv__facts" data-ph-fade>
+        <div><dt>Site</dt><dd>{r.site}</dd></div>
+        <div><dt>Observed</dt><dd><time datetime={r.date}>{formatDate(r.date, 'long')}</time></dd></div>
+        {r.sources && <div><dt>Sources</dt><dd>{r.sources}</dd></div>}
+        <div><dt>By</dt><dd>{person.name}</dd></div>
+      </dl>
+    </PageHead>
+
+    <section class="wrap rv__stat" aria-label="The number">
+      <div class="stat" style={`--bg:${tone.bg};--on:${tone.fg}`}>
+        <p class="stat__num num" style={`--chars:${Math.max(3, stat.length)}`}>{stat}</p>
+        <p class="stat__label">{r.stat.label}</p>
+      </div>
+      {r.hero && (
+        <figure class="rv__hero">
+          <img src={r.hero.src} srcset={`${r.hero.small} ${r.hero.sw}w, ${r.hero.src} ${r.hero.w}w`} sizes="(min-width: 1024px) 30vw, 70vw" width={r.hero.w} height={r.hero.h} alt={r.hero.alt} fetchpriority="high" />
+        </figure>
+      )}
+    </section>
+
+    {r.findings.length > 0 && (
+      <section class="wrap rv__finds section--tight" aria-labelledby="finds-title">
+        <header class="rv__head">
+          <p class="kicker" style="--kicker-dot: var(--pink)">Findings</p>
+          <h2 class="h2" id="finds-title">What the review found.</h2>
+        </header>
+        <ol class="finds" role="list" data-pop-grid>
+          {r.findings.map((f, n) => (
+            <li class="find" style={`--bg:${findTones[n % findTones.length]}`} data-pop>
+              <span class="find__n num">{f.n || String(n + 1).padStart(2, '0')}</span>
+              <h3 class="find__title">{f.title}</h3>
+              <p>{f.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    {sheets.length > 0 && (
+      <section class="rv__full" aria-labelledby="full-title">
+        <div class="wrap">
+          <header class="rv__head">
+            <p class="kicker" style="--kicker-dot: var(--aqua)">The full review · {r.minutes} min read</p>
+            <h2 class="h2" id="full-title">Read it all.</h2>
+            {sheets.length > 1 && (
+              <nav class="sheets-nav" aria-label="Sheets in this review">
+                <ol role="list">
+                  {sheets.map((s) => <li><a href={`#sheet-${s.n}`}><span class="num">{s.n}</span> {s.title || `Sheet ${s.n}`}</a></li>)}
+                </ol>
+              </nav>
+            )}
+          </header>
+          {sheets.map((s) => (
+            <section class="sheet" id={`sheet-${s.n}`} aria-labelledby={`sheet-${s.n}-title`}>
+              <div class="sheet__head">
+                {s.kicker && <p class="sheet__kicker">{s.kicker}</p>}
+                <h2 class="sheet__title" id={`sheet-${s.n}-title`}>{s.title || `Sheet ${s.n}`}</h2>
+              </div>
+              {s.shot && (
+                <figure class="sheet__shot">
+                  <img src={s.shot.src} srcset={`${s.shot.small} ${s.shot.sw}w, ${s.shot.src} ${s.shot.w}w`} sizes="(min-width: 1100px) 1000px, 92vw" width={s.shot.w} height={s.shot.h} alt={s.shot.alt} loading="lazy" decoding="async" />
+                  <figcaption>The sheet as published, first screen.</figcaption>
+                </figure>
+              )}
+              <div class="prose-play prose-review" set:html={s.html} />
+            </section>
+          ))}
+          {r.disclaimer && <p class="rv__disc"><strong>Note.</strong> {r.disclaimer}</p>}
+        </div>
+      </section>
+    )}
+
+    <nav class="wrap rv__pn" aria-label="More reviews">
+      {older && <a class="pn" href={`/reviews/${older.slug}/`}><span>← Older</span><b>{older.brand}</b><em>{older.headline}</em></a>}
+      {newer && <a class="pn pn--newer" href={`/reviews/${newer.slug}/`}><span>Newer →</span><b>{newer.brand}</b><em>{newer.headline}</em></a>}
+    </nav>
+  </article>
+
+  {more.length > 0 && (
+    <section class="wrap rv__more" aria-labelledby="more-title">
+      <h2 class="h2" id="more-title">More like this.</h2>
+      <ul class="more" role="list">
+        {more.map((x) => {
+          const t = toneFor(x.slug);
+          return (
+            <li class="more__card" style={`--bg:${t.bg};--on:${t.fg}`}>
+              <p class="more__num num">{statText(x)}</p>
+              <p class="more__label">{x.stat.label}</p>
+              <h3 class="more__title"><a href={`/reviews/${x.slug}/`}>{x.brand}</a></h3>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  )}
+</Base>
+
+<style>
+  .rv__crumbs a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.72); font-weight: 650; text-decoration: none; }
+  .rv__crumbs { justify-self: start; }
+  .rv__lede { font-size: var(--t-lead); line-height: 1.32; max-width: 46ch; color: var(--ink-2); font-weight: 450; }
+  .rv__focus { display: flex; flex-wrap: wrap; gap: 8px; }
+  .rv__focus span { padding: 7px 12px; border-radius: var(--r-pill); background: #fff; font: 700 0.8125rem / 1 var(--font-text); }
+  .rv__facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: var(--s-3); max-width: 1000px; }
+  .rv__facts div { padding: 12px 16px; border-radius: var(--r-m); background: rgb(255 255 255 / 0.7); }
+  .rv__facts dt { font: 750 var(--t-label) / 1.3 var(--font-text); text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-2); }
+  .rv__facts dd { margin: 4px 0 0; font-weight: 650; overflow-wrap: anywhere; }
+  @media (min-width: 900px) { .rv__facts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+  .rv__stat { display: grid; gap: clamp(16px, 2vw, 28px); margin-top: var(--s-8); align-items: stretch; }
+  .stat { container-type: inline-size; display: grid; align-content: end; gap: var(--s-4); padding: clamp(24px, 3vw, 48px); border-radius: var(--r-xl); background: var(--bg); color: var(--on); min-height: 280px; }
+  .stat__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; line-height: 0.82; white-space: nowrap; font-size: min(15rem, calc(100cqi / (var(--chars) * 0.44))); }
+  .stat__label { font-size: clamp(1.25rem, 2vw, 1.75rem); font-weight: 650; line-height: 1.15; max-width: 24ch; }
+  .rv__hero { border-radius: var(--r-xl); overflow: hidden; background: var(--cloud); box-shadow: var(--shadow-2); max-height: 560px; }
+  .rv__hero img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  @media (min-width: 1024px) { .rv__stat { grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); } .rv__hero { max-height: none; aspect-ratio: auto; } }
+
+  .rv__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-6); }
+  .rv__finds { padding-top: var(--s-9); }
+  .finds { display: grid; gap: clamp(14px, 1.6vw, 24px); }
+  .find { display: grid; gap: 10px; align-content: start; padding: clamp(20px, 2.2vw, 30px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
+  .find__n { justify-self: start; padding: 6px 11px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 750 0.8125rem / 1 var(--font-text); }
+  .find__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.6rem, 2.2vw, 2.25rem); line-height: 0.95; text-transform: uppercase; }
+  .find p { font-weight: 500; }
+  @media (min-width: 900px) { .finds { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+  .rv__full { padding-block: var(--s-9) var(--s-6); }
+  .sheets-nav ol { display: flex; flex-wrap: wrap; gap: 8px; }
+  .sheets-nav a { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px 0 6px; border-radius: var(--r-pill); background: var(--cloud); font-weight: 650; font-size: 0.9375rem; text-decoration: none; transition: background-color var(--d-small); }
+  .sheets-nav a:hover { background: var(--lime); }
+  .sheets-nav .num { display: grid; place-items: center; min-width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 0.75rem; font-weight: 750; }
+  .sheet { max-width: 1000px; margin: var(--s-8) auto 0; scroll-margin-top: calc(var(--nav-h) + 24px); }
+  .sheet + .sheet { padding-top: var(--s-8); border-top: 6px solid transparent; border-image: var(--spectrum) 1; }
+  .sheet__head { display: grid; gap: 10px; max-width: 72ch; margin-inline: auto; }
+  .sheet__kicker { justify-self: start; padding: 6px 12px; border-radius: var(--r-pill); background: var(--lemon); font: 750 0.8125rem / 1.2 var(--font-text); }
+  .sheet__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.25rem, 4.6vw, 4.5rem); line-height: 0.9; text-transform: uppercase; text-wrap: balance; }
+  .sheet__shot { margin: var(--s-6) 0; }
+  .sheet__shot img { width: 100%; height: auto; border-radius: var(--r-l); box-shadow: var(--shadow-2); background: var(--cloud); }
+  .sheet__shot figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--fg-2); text-align: center; }
+  .sheet .prose-review { max-width: 72ch; margin-inline: auto; margin-top: var(--s-6); }
+  .rv__disc { max-width: 72ch; margin: var(--s-8) auto 0; padding: 18px 20px; border-radius: var(--r-l); background: var(--cloud); font-size: var(--t-small); color: var(--ink-2); }
+
+  .rv__pn { display: grid; gap: 12px; padding-block: var(--s-8) 0; }
+  .pn { display: grid; gap: 6px; padding: 18px 20px; border-radius: var(--r-l); background: var(--cloud); text-decoration: none; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
+  .pn:hover { background: var(--lime); transform: translateY(-3px); }
+  .pn span { font: 700 var(--t-slug) / 1 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); }
+  .pn b { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: 1.5rem; line-height: 1; text-transform: uppercase; }
+  .pn em { font-style: normal; font-weight: 500; color: var(--ink-2); }
+  .pn--newer { text-align: right; }
+  @media (min-width: 700px) { .rv__pn { grid-template-columns: 1fr 1fr; } .pn--newer:only-child { grid-column: 2; } }
+
+  .rv__more { padding-block: var(--s-10) var(--s-6); display: grid; gap: var(--s-6); }
+  .more { display: grid; gap: clamp(14px, 1.6vw, 24px); }
+  .more__card { container-type: inline-size; position: relative; display: grid; gap: 10px; padding: clamp(20px, 2.2vw, 30px); border-radius: var(--r-xl); background: var(--bg); color: var(--on); transition: transform 0.5s var(--ease-pop); }
+  .more__card:hover { transform: translateY(-6px) rotate(-0.8deg); }
+  .more__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(3rem, 5vw, 4.5rem); line-height: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .more__label { font-weight: 600; }
+  .more__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.6rem, 2.2vw, 2.2rem); line-height: 0.95; text-transform: uppercase; }
+  .more__title a { text-decoration: none; }
+  .more__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  .more__title a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 4px; }
+  @media (min-width: 900px) { .more { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>

@@ -1,0 +1,96 @@
+---
+// "Every part in its place." — the about, beside a board of labelled slots. Scroll and the scattered
+// parts fly into their slots; when the last one lands, the board is stamped. Reduced motion: already in place.
+import Sticker from './Sticker.astro';
+import type { StickerName } from './types';
+import { person } from '../../data/site';
+const parts: { name: StickerName; label: string; tone: string }[] = [
+  { name: 'blocks', label: 'Pages', tone: 'var(--lilac)' },
+  { name: 'cell', label: 'Catalog', tone: 'var(--sky)' },
+  { name: 'tag', label: 'Prices', tone: 'var(--peach)' },
+  { name: 'barcode', label: 'SKUs', tone: 'var(--blush)' },
+  { name: 'percent', label: 'Promotions', tone: 'var(--lemon)' },
+  { name: 'lens', label: 'SEO', tone: 'var(--lilac)' },
+  { name: 'cursor', label: 'UX', tone: 'var(--sky)' },
+  { name: 'pin', label: 'Local', tone: 'var(--peach)' },
+  { name: 'check', label: 'QA', tone: 'var(--mint)' },
+];
+---
+<section class="parts section" id="about" aria-labelledby="parts-title" data-parts>
+  <div class="wrap parts__grid">
+    <div class="parts__text">
+      <p class="kicker" style="--kicker-dot: var(--aqua)">About</p>
+      <h2 class="h2 parts__title" id="parts-title">Every part<br />in its place.</h2>
+      <p class="lead parts__lead">I’m Mousa — the person you call when the website looks fine but nothing quite works.</p>
+      <p class="parts__body">Seven years building and running sites on WordPress, Elementor and Divi. I turn “someone does this by hand every Friday” into systems that run themselves — and I’m happiest when a site goes from fragile to boring, in the best way.</p>
+      <p class="parts__more"><a class="btn btn--line" href="/about/">More about me <span class="arrow" aria-hidden="true">→</span></a></p>
+    </div>
+    <div class="parts__board" data-parts-board>
+      <ul class="parts__slots" role="list" aria-label="What a working site needs">
+        {parts.map((p, i) => (
+          <li class="parts__slot" style={`--tone:${p.tone}`}>
+            <span class="parts__piece" data-piece data-i={i}><Sticker name={p.name} /></span>
+            <span class="parts__label">{p.label}</span>
+          </li>
+        ))}
+      </ul>
+      <span class="parts__stamp" data-parts-stamp aria-hidden="true">✓ All in place</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .parts__grid { display: grid; gap: var(--s-8); align-items: center; }
+  .parts__text { display: grid; gap: var(--s-5); }
+  .parts__title { max-width: 8ch; }
+  .parts__lead { max-width: 26ch; font-weight: 550; }
+  .parts__body { color: var(--fg-2); max-width: 46ch; }
+  .parts__board {
+    position: relative;
+    padding: clamp(14px, 2vw, 28px);
+    border-radius: var(--r-xl);
+    background: var(--cloud);
+  }
+  .parts__slots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1.4vw, 20px); }
+  .parts__slot {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: var(--r-l);
+    background: var(--tone);
+    display: grid;
+    place-items: center;
+    outline: 2px dashed rgb(22 18 31 / 0.14);
+    outline-offset: -8px;
+  }
+  .parts__piece { width: 64%; display: block; position: relative; z-index: 2; will-change: transform; }
+  .parts__piece :global(.sticker) { --size: 100%; width: 100%; }
+  .parts__label {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+    font: 700 clamp(0.6875rem, 0.9vw, 0.8125rem) / 1 var(--font-text);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .parts__stamp {
+    position: absolute;
+    right: -10px;
+    top: -18px;
+    z-index: 3;
+    padding: 12px 18px;
+    border-radius: var(--r-pill);
+    background: var(--lime);
+    font: 800 1rem/1 var(--font-text);
+    box-shadow: var(--shadow-sticker);
+    transform: rotate(6deg);
+  }
+  @media (min-width: 1024px) {
+    .parts__grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .parts__text { grid-column: 1 / span 5; }
+    .parts__board { grid-column: 7 / span 6; }
+  }
+  :global(.motion-ok) .parts__stamp { opacity: 0; }
+</style>

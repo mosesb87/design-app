@@ -1,0 +1,293 @@
+{
+  "url": "https://mousabatarseh.com/jars-review/",
+  "title": "JARS — Catalog & store data review",
+  "description": "Independent review of jarscannabis.com: the same cartridge bundle at two prices, a volume ladder where buying more costs more, Poison Control listed as customer service, and store records that disagree with their own pages.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "micro",
+      "text": "CATALOG · DEALS · STORE DATA"
+    },
+    {
+      "t": "h1",
+      "text": "Top-shelf menus, running on store data that disagrees with itself."
+    },
+    {
+      "t": "p",
+      "text": "JARS runs 55 stores across Michigan, Arizona and Colorado on one storefront. I read it the way a revenue-strategy team would want it read: the deals attached to real products, the store records behind every location page, and the data search engines are handed about both. Six findings; each maps to a check in the promotion QA engine I built."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "55"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "10,532"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "active deal records read"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "25"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "products with two prices for the same bundle (Lansing + Ann Arbor)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "stores whose page and schema list different phone numbers"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "13"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Arizona pages with an unfilled map template"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "micro",
+      "text": "FINDINGS"
+    },
+    {
+      "t": "h2",
+      "text": "What a catalog check would have stopped"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag fail",
+      "text": "BLOCKED"
+    },
+    {
+      "t": "h3",
+      "text": "Two prices for the same seven-cart bundle"
+    },
+    {
+      "t": "p",
+      "text": "At Lansing, 14 products carry both 7/$80 Cartridges 2g and 7/$90 Cartridges 2g at once; at Ann Arbor, 11 (Mitten Extracts “Super Nurdz”, “Rainbow Sherbert”, “Blueberry Pie” cartridges among them). Same quantity, two totals, one product. The pair 7/$60 and 7/$69 repeats the pattern."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "POST /api/v1/product-service/filter (Lansing 1,557 SKUs, Ann Arbor 1,154) · /deals · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C11 CONFLICT"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C5 PRICE MATH"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag warn",
+      "text": "NEEDS REVIEW"
+    },
+    {
+      "t": "h3",
+      "text": "A volume ladder where buying more costs more"
+    },
+    {
+      "t": "p",
+      "text": "2/$25 Pods 1g ($12.50 each) and 3/$40 Pods 1g ($13.33 each) are attached to the same STIIIZY pods at Flint, East Detroit, Hazel Park, Lansing and Ann Arbor; Wana gummies carry the same 2/$25 vs 3/$40 pair. The bigger bundle has the higher unit price."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "Same menu endpoint, five Michigan stores · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C5 PRICE MATH"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C6 CAP"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag fail",
+      "text": "BLOCKED"
+    },
+    {
+      "t": "h3",
+      "text": "The homepage lists Poison Control as customer service"
+    },
+    {
+      "t": "p",
+      "text": "Homepage Organization schema: contactPoint.telephone: +1-800-222-1222, contactType: \"Customer Service\". That's the National Poison Control hotline — correctly used in the footer warning, then reused as the company's phone for search engines. The same block lists 35 stores and none of the 19 in Arizona."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "jarscannabis.com homepage JSON-LD · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C16 WORDING"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C12 STORE CODES"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag fail",
+      "text": "BLOCKED"
+    },
+    {
+      "t": "h3",
+      "text": "Store phone numbers that differ on the same page"
+    },
+    {
+      "t": "p",
+      "text": "Grand Rapids 40th St: schema +1-616-931-9900, page (616) 931-0990 — transposed. Mt Morris: schema 810-225-3300, page (810)-255-3300. South Phoenix: schema +16024910420, page (602) 900-1867. Seven different phone formats across the 55 store records."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "/mi/grand-rapids-40th-st · /mi/mt-morris · /az/south-phoenix-dispensary · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C12 STORE CODES"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag warn",
+      "text": "NEEDS REVIEW"
+    },
+    {
+      "t": "h3",
+      "text": "Thirteen Arizona pages ship an unfilled template"
+    },
+    {
+      "t": "p",
+      "text": "Store schema sameAs Apple Maps link contains auid=PUT_ACTUAL_AUID_HERE on 13 Arizona location pages (Mesa among them). Four Michigan pages (Okemos, Owosso, Oxford, River Rouge) have no store schema at all. El Mirage's hours are literally \"start\":\"open\",\"end\":\"open\" all week."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "/az/mesa and 12 others · /mi/okemos · /az/el-mirage · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C1 REQUIRED"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C15 ASSETS"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag warn",
+      "text": "NEEDS REVIEW"
+    },
+    {
+      "t": "h3",
+      "text": "45% of active deals end in the year 4200"
+    },
+    {
+      "t": "p",
+      "text": "Of 10,532 active deal records, 4,768 carry endStamp: 4200-04-19 — a far-future date standing in for “no end”. One active “4 for $20 Keef Cola” deal (start 2023-06-01) is attached to a store that exists only in the closed-store list, which redirects to /find-a-dispensary. 108 deal names appear twice at the same store with the same URL slug."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "GET /api/v1/deals · retailer-settings-cms/closed-retailer-routes · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C10 DATES"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "C12 STORE CODES"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "micro",
+      "text": "WHAT'S WORKING"
+    },
+    {
+      "t": "h2",
+      "text": "The hard parts are already built"
+    },
+    {
+      "t": "p",
+      "text": "One storefront serves 55 stores, three states and two menu types from a single Dutchie-fed catalog with loyalty wired in — the plumbing most chains never finish. Every Michigan page carries the full CRA-style footer warning. Menu data is structured and consistent enough that every finding above came from a query, not a guess. The problems are in the records going in, which is the cheapest place to fix them."
+    },
+    {
+      "t": "h3",
+      "text": "Method & scope"
+    },
+    {
+      "t": "p",
+      "text": "Public data only, Sep 20, 2026: 55 location pages and their JSON-LD, the homepage schema, sitemaps (11,337 product URLs), and the unauthenticated storefront endpoints the site itself calls — all store records, the chain-wide deals feed (10,532 rows) and full menus for Lansing, Ann Arbor, Flint, East Detroit and Hazel Park. I didn't render /deals in a browser, so whether the storefront hides one of two conflicting deals isn't confirmed; the conflict is in the data it loads. Whether the 4200 end date is a Dutchie convention or a JARS entry practice is unknown. I haven't worked in cannabis; I have run two wholesalers' catalogs and promotion calendars."
+    }
+  ],
+  "links": [],
+  "images": [],
+  "status": 200
+}

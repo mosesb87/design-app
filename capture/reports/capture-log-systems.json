@@ -1,0 +1,632 @@
+{
+  "asas": {
+    "slug": "asas",
+    "project": "asas-studio",
+    "url": "https://asas.build/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://asas.build/",
+        "title": "ASAS — Wireframe an Elementor page from 3,881 real blocks. Export native JSON.",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.ground"
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 135962
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://asas.build/",
+        "title": "ASAS — Wireframe an Elementor page from 3,881 real blocks. Export native JSON.",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.ground"
+          ]
+        },
+        "w": 1440,
+        "h": 9000,
+        "bytes": 271526
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://asas.build/",
+        "title": "ASAS — Wireframe an Elementor page from 3,881 real blocks. Export native JSON.",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 108390
+      },
+      "mobile-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://asas.build/",
+        "title": "ASAS — Wireframe an Elementor page from 3,881 real blocks. Export native JSON.",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 410346
+      }
+    },
+    "notes": [],
+    "title": "ASAS — Wireframe an Elementor page from 3,881 real blocks. Export native JSON.",
+    "recording": {
+      "ok": true,
+      "frames": 259,
+      "seconds": 11.01,
+      "bytes": 682519
+    },
+    "interaction": {
+      "ok": true,
+      "frames": 250,
+      "seconds": 10.18,
+      "bytes": 404457
+    }
+  },
+  "asas-studio-app": {
+    "slug": "asas-studio-app",
+    "project": "asas-studio",
+    "url": "https://asas.build/studio/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://asas.build/studio/",
+        "title": "ASAS Studio",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#asas-studio."
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 243550
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://asas.build/studio/",
+        "title": "ASAS Studio",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#asas-studio.",
+            "#asas-rail.asas-rail"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 126424
+      }
+    },
+    "notes": [],
+    "title": "ASAS Studio",
+    "recording": {
+      "ok": false,
+      "error": "only 1 frames"
+    }
+  },
+  "changeatlas": {
+    "slug": "changeatlas",
+    "project": "changeatlas",
+    "url": "https://mousabatarseh.com/changeatlas/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/changeatlas/",
+        "title": "ChangeAtlas Commerce — know what an import will change before it runs",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 143252
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/changeatlas/",
+        "title": "ChangeAtlas Commerce — know what an import will change before it runs",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 6020,
+        "bytes": 389330
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/changeatlas/",
+        "title": "ChangeAtlas Commerce — know what an import will change before it runs",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 88730
+      },
+      "mobile-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/changeatlas/",
+        "title": "ChangeAtlas Commerce — know what an import will change before it runs",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 633120
+      }
+    },
+    "notes": [],
+    "title": "ChangeAtlas Commerce — know what an import will change before it runs",
+    "recording": {
+      "ok": true,
+      "frames": 301,
+      "seconds": 8.73,
+      "bytes": 754651
+    }
+  },
+  "changeatlas-app": {
+    "slug": "changeatlas-app",
+    "project": "changeatlas",
+    "url": "https://mousabatarseh.com/changeatlas/app/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/changeatlas/app/",
+        "title": "Demo · ChangeAtlas Commerce",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.fixed.inset-0"
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 194816
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/changeatlas/app/",
+        "title": "Demo · ChangeAtlas Commerce",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.fixed.inset-0"
+          ]
+        },
+        "w": 1440,
+        "h": 1678,
+        "bytes": 133772
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/changeatlas/app/",
+        "title": "Demo · ChangeAtlas Commerce",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.fixed.inset-0"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 159960
+      }
+    },
+    "notes": [],
+    "title": "Demo · ChangeAtlas Commerce",
+    "recording": {
+      "ok": true,
+      "frames": 284,
+      "seconds": 7.55,
+      "bytes": 690190
+    }
+  },
+  "deals-os": {
+    "slug": "deals-os",
+    "project": "deals-os",
+    "url": "https://mousabatarseh.com/deals-os/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/deals-os/",
+        "title": "Deals Operating System — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 148426
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/deals-os/",
+        "title": "Deals Operating System — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 5011,
+        "bytes": 435426
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/deals-os/",
+        "title": "Deals Operating System — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 144202
+      },
+      "mobile-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/deals-os/",
+        "title": "Deals Operating System — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 13514,
+        "bytes": 801182
+      }
+    },
+    "notes": [],
+    "title": "Deals Operating System — Mousa Batarseh",
+    "recording": {
+      "ok": true,
+      "frames": 386,
+      "seconds": 8.34,
+      "bytes": 1203396
+    },
+    "interaction": {
+      "ok": true,
+      "frames": 191,
+      "seconds": 7.82,
+      "bytes": 1010689
+    }
+  },
+  "csv-mapper": {
+    "slug": "csv-mapper",
+    "project": "csv-mapper",
+    "url": "https://mousabatarseh.com/csv-mapper/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/csv-mapper/",
+        "title": "CSV Mapper — Comma-Separated Values and Excel workspace",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 214698
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/csv-mapper/",
+        "title": "CSV Mapper — Comma-Separated Values and Excel workspace",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 2388,
+        "bytes": 232042
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/csv-mapper/",
+        "title": "CSV Mapper — Comma-Separated Values and Excel workspace",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 128542
+      },
+      "mobile-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/csv-mapper/",
+        "title": "CSV Mapper — Comma-Separated Values and Excel workspace",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 780,
+        "h": 14234,
+        "bytes": 892952
+      }
+    },
+    "notes": [],
+    "title": "CSV Mapper — Comma-Separated Values and Excel workspace",
+    "recording": {
+      "ok": true,
+      "frames": 361,
+      "seconds": 8.06,
+      "bytes": 1521399
+    },
+    "interaction": {
+      "ok": true,
+      "frames": 341,
+      "seconds": 9.85,
+      "bytes": 1289131
+    }
+  },
+  "dealproof": {
+    "slug": "dealproof",
+    "project": "deals-os",
+    "url": "https://mousabatarseh.com/dealproof/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/dealproof/",
+        "title": "Promotion checks before launch — DealProof",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 130668
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/dealproof/",
+        "title": "Promotion checks before launch — DealProof",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 4528,
+        "bytes": 183774
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/dealproof/",
+        "title": "Promotion checks before launch — DealProof",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 84030
+      }
+    },
+    "notes": [],
+    "title": "Promotion checks before launch — DealProof",
+    "recording": {
+      "ok": true,
+      "frames": 529,
+      "seconds": 8.79,
+      "bytes": 399216
+    }
+  },
+  "seo-tools": {
+    "slug": "seo-tools",
+    "project": "seo-tools",
+    "url": "https://mousabatarseh.com/SEO-Tools/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/SEO-Tools/",
+        "title": "Free SEO Tools in Your Browser | Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 118074
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/SEO-Tools/",
+        "title": "Free SEO Tools in Your Browser | Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 1499,
+        "bytes": 81726
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/SEO-Tools/",
+        "title": "Free SEO Tools in Your Browser | Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 118240
+      }
+    },
+    "notes": [],
+    "title": "Free SEO Tools in Your Browser | Mousa Batarseh",
+    "recording": {
+      "ok": true,
+      "frames": 287,
+      "seconds": 7.54,
+      "bytes": 530998
+    },
+    "interaction": {
+      "ok": true,
+      "frames": 302,
+      "seconds": 11.36,
+      "bytes": 521766
+    }
+  },
+  "diamedical-lab": {
+    "slug": "diamedical-lab",
+    "project": "diamedical-lab",
+    "url": "https://mousabatarseh.com/diamedical/",
+    "capturedAt": "2026-09-26T15:00:47.878Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical/",
+        "title": "DiaMedical eCommerce case study — Mousa Batarseh (independent)",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 353222
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical/",
+        "title": "DiaMedical eCommerce case study — Mousa Batarseh (independent)",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 7948,
+        "bytes": 1249424
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical/",
+        "title": "DiaMedical eCommerce case study — Mousa Batarseh (independent)",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#workspace-navigation.workbench-sidebar"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 186914
+      },
+      "mobile-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical/",
+        "title": "DiaMedical eCommerce case study — Mousa Batarseh (independent)",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#workspace-navigation.workbench-sidebar"
+          ]
+        },
+        "w": 780,
+        "h": 16000,
+        "bytes": 1194918
+      }
+    },
+    "notes": [],
+    "title": "DiaMedical eCommerce case study — Mousa Batarseh (independent)",
+    "recording": {
+      "ok": true,
+      "frames": 329,
+      "seconds": 7.67,
+      "bytes": 1944217
+    }
+  },
+  "diamedical-intro": {
+    "slug": "diamedical-intro",
+    "project": "diamedical-lab",
+    "url": "https://mousabatarseh.com/diamedical-intro/",
+    "capturedAt": "2026-09-26T14:14:18.227Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical-intro/",
+        "title": "How I thought it through",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 187230
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical-intro/",
+        "title": "How I thought it through",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 168688
+      }
+    },
+    "notes": [],
+    "title": "How I thought it through",
+    "recording": {
+      "ok": true,
+      "frames": 438,
+      "seconds": 8.71,
+      "bytes": 1724971
+    }
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/highprofile-review/",
+    "status": 200,
+    "title": "High Profile — Promo readiness review",
+    "h1": "The Labor Day promo is still live in seven states.",
+    "description": "Independent promotion-readiness review of highprofilecannabis.com: an expired Labor Day contest live on all seven state deals pages, a CT drawing date before the contest starts, and the same Missouri SKU at three promo depths.",
+    "height": 2697
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/highprofile-review/readiness.html",
+    "status": 200,
+    "title": "High Profile — State readiness grid",
+    "h1": "One promo, seven versions, one grid.",
+    "description": "A readiness grid for one promotion across seven state pages, with the observed text behind every cell.",
+    "height": 1806
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/highprofile-review/stores.html",
+    "status": 200,
+    "title": "High Profile — Same SKU, three stores",
+    "h1": "Same product, same reg, three prices.",
+    "description": "Same house-brand SKU, same regular price, three promo depths across St Louis, Chesterfield and Branson — plus store-status conflicts across surfaces.",
+    "height": 2375
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/highprofile-review/plan.html",
+    "status": 200,
+    "title": "High Profile — 30-day plan",
+    "h1": "Readiness before reach.",
+    "description": "A 30-day plan for promotional rollout readiness at High Profile: take down, template, rollout sheet, weekly escalation.",
+    "height": 1325
+  }
+]

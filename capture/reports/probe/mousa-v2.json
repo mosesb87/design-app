@@ -1,0 +1,282 @@
+{
+  "slug": "mousa-v2",
+  "url": "https://mousabatarseh.com/v2",
+  "probedAt": "2026-09-26T16:50:17.288Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://mousabatarseh.com/v2/",
+    "gates": {
+      "actions": [],
+      "blocking": []
+    },
+    "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist",
+    "description": "Mousa Batarseh builds and runs WordPress websites and e-commerce stores — catalogs, promotions, SEO and the checks that keep them honest. Warren, Michigan.",
+    "headings": [
+      "H1: MousaMousaMousa Mousa BatarsehBatarsehBatarseh Batarseh",
+      "H2: Every partin its place.",
+      "H2: Counted, not claimed.",
+      "H2: A request is trusted by default. Almost every error begins there.",
+      "H2: Built to fix something real.",
+      "H2: Then I make them work better.",
+      "H2: Each one leads with the number that explains the rest.",
+      "H2: Start with the business goal. End with the measurement.",
+      "H2: Put yoursPut yoursPut yours Put yours in place.in place.in place. in place."
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 3,
+      "pinSpacers": 0,
+      "sticky": 3,
+      "fixed": 3,
+      "links": 50,
+      "images": 22
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "Archivo",
+      "JetBrains Mono"
+    ],
+    "type": {
+      "body": "Archivo, system-ui, sans-serif",
+      "h1Family": "Archivo, system-ui, sans-serif",
+      "h1Size": "32px",
+      "h1Weight": "700"
+    },
+    "colors": {
+      "background": "rgb(243, 239, 230)",
+      "text": "rgb(17, 17, 17)"
+    },
+    "scroll": {
+      "height": 15731,
+      "viewports": 17.5
+    },
+    "perf": {
+      "fcpMs": 820,
+      "domContentLoadedMs": 706,
+      "requests": 7,
+      "transferKB": 227
+    },
+    "animationsNow": 12,
+    "motion": {
+      "scrollDrivenElements": 142,
+      "samples": [
+        "span.mono.label",
+        "span",
+        "span",
+        "span.w.on",
+        "span.w.on",
+        "span.w.on",
+        "span.w.on",
+        "span.w.on",
+        "span.w.on",
+        "span.w.on",
+        "span.w.on",
+        "span.w.on"
+      ],
+      "pinnedCandidates": [
+        "div.wrap.seam-sticky",
+        "div.seam-copy",
+        "div.stack",
+        "article.card",
+        "div.shelf-sticky",
+        "div.track",
+        "a.shelf-card",
+        "a.shelf-card"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://mousabatarseh.com/v2/",
+    "gates": {
+      "actions": [],
+      "blocking": []
+    },
+    "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist",
+    "description": "Mousa Batarseh builds and runs WordPress websites and e-commerce stores — catalogs, promotions, SEO and the checks that keep them honest. Warren, Michigan.",
+    "headings": [
+      "H1: MousaMousaMousa Mousa BatarsehBatarsehBatarseh Batarseh",
+      "H2: Every partin its place.",
+      "H2: Counted, not claimed.",
+      "H2: A request is trusted by default. Almost every error begins there.",
+      "H2: Built to fix something real.",
+      "H2: Then I make them work better.",
+      "H2: Each one leads with the number that explains the rest.",
+      "H2: Start with the business goal. End with the measurement.",
+      "H2: Put yoursPut yoursPut yours Put yours in place.in place.in place. in place."
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 3,
+      "pinSpacers": 0,
+      "sticky": 1,
+      "fixed": 3,
+      "links": 50,
+      "images": 22
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "Archivo",
+      "JetBrains Mono"
+    ],
+    "type": {
+      "body": "Archivo, system-ui, sans-serif",
+      "h1Family": "Archivo, system-ui, sans-serif",
+      "h1Size": "32px",
+      "h1Weight": "700"
+    },
+    "colors": {
+      "background": "rgb(243, 239, 230)",
+      "text": "rgb(17, 17, 17)"
+    },
+    "scroll": {
+      "height": 10237,
+      "viewports": 11.4
+    },
+    "perf": {
+      "fcpMs": 588,
+      "domContentLoadedMs": 607,
+      "requests": 7,
+      "transferKB": 227
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 2,
+      "samples": [
+        "img",
+        "img"
+      ],
+      "pinnedCandidates": []
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://mousabatarseh.com/v2/",
+    "gates": {
+      "actions": [],
+      "blocking": []
+    },
+    "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist",
+    "description": "Mousa Batarseh builds and runs WordPress websites and e-commerce stores — catalogs, promotions, SEO and the checks that keep them honest. Warren, Michigan.",
+    "headings": [
+      "H1: MousaMousaMousa Mousa BatarsehBatarsehBatarseh Batarseh",
+      "H2: Every partin its place.",
+      "H2: Counted, not claimed.",
+      "H2: A request is trusted by default. Almost every error begins there.",
+      "H2: Built to fix something real.",
+      "H2: Then I make them work better.",
+      "H2: Each one leads with the number that explains the rest.",
+      "H2: Start with the business goal. End with the measurement.",
+      "H2: Put yoursPut yoursPut yours Put yours in place.in place.in place. in place."
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 3,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 3,
+      "links": 50,
+      "images": 22
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "Archivo",
+      "JetBrains Mono"
+    ],
+    "type": {
+      "body": "Archivo, system-ui, sans-serif",
+      "h1Family": "Archivo, system-ui, sans-serif",
+      "h1Size": "32px",
+      "h1Weight": "700"
+    },
+    "colors": {
+      "background": "rgb(243, 239, 230)",
+      "text": "rgb(17, 17, 17)"
+    },
+    "scroll": {
+      "height": 12032,
+      "viewports": 14.3
+    },
+    "perf": {
+      "fcpMs": 544,
+      "domContentLoadedMs": 578,
+      "requests": 7,
+      "transferKB": 227
+    },
+    "animationsNow": 12,
+    "motion": null,
+    "mobileNav": {
+      "label": "Menu ＋",
+      "hasAriaExpanded": true,
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}

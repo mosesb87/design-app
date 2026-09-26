@@ -1,0 +1,623 @@
+{
+  "url": "https://mousabatarseh.com/reviews/reviews/moment/index.html",
+  "title": "Moment PDP & offer review · Mousa Batarseh",
+  "description": "Moment (drinkmoment.com): A 20% promise priced at 13.6%, and review counts that disagree across the same product.",
+  "ogImage": "https://mousabatarseh.com/reviews/og.jpg",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Observed Sep 19, 2026"
+    },
+    {
+      "t": "p",
+      "text": "MOMENT · PDP & OFFER REVIEW"
+    },
+    {
+      "t": "h1",
+      "text": "Every number a shopper sees should be true."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "43"
+    },
+    {
+      "t": "p",
+      "text": "sold-out products still published"
+    },
+    {
+      "t": "p",
+      "text": "A 20% promise priced at 13.6%, and review counts that disagree across the same product."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn light",
+      "text": "All reviews"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "SITE"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "mono",
+      "text": "drinkmoment.com"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "OBSERVED"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "SOURCES"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "Public pages only"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "mousabatarseh.com/moment-review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/moment-700.webp",
+      "alt": "Moment review, full first screen",
+      "w": 662,
+      "h": 1035,
+      "file": "137d9b347cf4b6c3.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Findings"
+    },
+    {
+      "t": "h2",
+      "text": "Three things\nthe review found"
+    },
+    {
+      "t": "p",
+      "text": "Quoted from the full review. Each one carries its date, source and a fix inside."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "01"
+    },
+    {
+      "t": "h3",
+      "text": "Reviews that disagree"
+    },
+    {
+      "t": "p",
+      "text": "An Okendo metafield hard-codes 3,302 / 4.7 while the SEO JSON-LD block says 8,848 / 4.8 — and the theme's Product JSON-LD fails strict parsing."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "02"
+    },
+    {
+      "t": "h3",
+      "text": "A promise the cart doesn't keep"
+    },
+    {
+      "t": "p",
+      "text": "Homepage: “20% off every shipment · up to $180/yr.” Selling plan: $51 vs $59 on the 18-pack, 15% on the sleep powder."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "03"
+    },
+    {
+      "t": "h3",
+      "text": "Dead weight in search"
+    },
+    {
+      "t": "p",
+      "text": "Holiday boxes sold out but live, the 18-pack under three handles, and indexed test pages in the sitemap."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Inside the review"
+    },
+    {
+      "t": "h2",
+      "text": "What’s in\nthe full review"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "01"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "02"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "03"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "04"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Related"
+    },
+    {
+      "t": "h2",
+      "text": "More in\nE-commerce & DTC"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/petsafe-400.webp",
+      "alt": "PetSafe review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "5312f67bdb411c09.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "petsafe.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 20, 2026"
+    },
+    {
+      "t": "p",
+      "text": "JSON-LD blocks on the homepage"
+    },
+    {
+      "t": "h3",
+      "text": "PetSafe · DTC ops & insights review"
+    },
+    {
+      "t": "p",
+      "text": "The stack is right, the signals aren’t: /sitemap.xml returns homepage HTML, llms.txt is missing, and every product page ships the same 15-word meta description."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "petsafe.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard-400.webp",
+      "alt": "Vanguard review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "8aa6f4e2a2d5e204.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "vanguardworld.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "439"
+    },
+    {
+      "t": "p",
+      "text": "products carrying one template’s three defects"
+    },
+    {
+      "t": "h3",
+      "text": "Vanguard · Product-template review"
+    },
+    {
+      "t": "p",
+      "text": "Fix one template, fix 443 products. There are also no links to the marketplace listings."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "vanguardworld.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/oakwood-400.webp",
+      "alt": "Oakwood Veneer review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "0b7a4c947a98e008.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "oakwoodveneer.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "6.5"
+    },
+    {
+      "t": "p",
+      "text": "mobile LCP on a 300+ species catalog"
+    },
+    {
+      "t": "h3",
+      "text": "Oakwood Veneer · Catalog & UX review"
+    },
+    {
+      "t": "p",
+      "text": "Three hundred species behind two filters, with a working species-faceted browser built as the fix."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "oakwoodveneer.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jbtools-400.webp",
+      "alt": "JB Tools review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "4f8ae266967eeb38.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "jbtools.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Catalog & listings"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "34"
+    },
+    {
+      "t": "p",
+      "text": "of torque wrenches out of stock, one ranked #3"
+    },
+    {
+      "t": "h3",
+      "text": "JB Tools · Product-data review"
+    },
+    {
+      "t": "p",
+      "text": "Double-encoded names in H1, title and JSON-LD, and no GTIN in Product schema across a 104,348-product index. Includes a supplier-price SOP."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "jbtools.com"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Oakwood Veneer"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Catalog & UX review"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "JB Tools"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Product-data review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jbtools.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7527d28696c502a2.webp"
+    },
+    {
+      "t": "h2",
+      "text": "Want one for\nyour site?"
+    },
+    {
+      "t": "p",
+      "text": "Send a URL. You’ll get the first findings back, dated and sourced."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn ghost",
+      "text": "hireme@mousabatarseh.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "t": "text",
+      "tag": "label",
+      "cls": "qsl1",
+      "text": "Start with your website"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Dated, sourced findings",
+        "One working fix, built for your site",
+        "Public pages only, no logins"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "https://mousabatarseh.com/reviews/index.html"
+    },
+    {
+      "text": "Reviews",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html"
+    },
+    {
+      "text": "E-commerce & DTC",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html?f=ecom"
+    },
+    {
+      "text": "Open the full review",
+      "href": "https://mousabatarseh.com/moment-review/"
+    },
+    {
+      "text": "All reviews",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html"
+    },
+    {
+      "text": "Read it on mousabatarseh.com",
+      "href": "https://mousabatarseh.com/moment-review/"
+    },
+    {
+      "text": "petsafe.com\nE-commerce & DTC\nSep 20, 2026\n0\n\nJSON-LD blocks on the homepage\n\nPetSafe · DTC ops & insights review\n\nThe stack is right, the si",
+      "href": "https://mousabatarseh.com/reviews/reviews/petsafe/index.html"
+    },
+    {
+      "text": "vanguardworld.com\nE-commerce & DTC\nSep 19, 2026\n439\n\nproducts carrying one template’s three defects\n\nVanguard · Product-template review\n\nFix",
+      "href": "https://mousabatarseh.com/reviews/reviews/vanguard/index.html"
+    },
+    {
+      "text": "oakwoodveneer.com\nE-commerce & DTC\nSep 19, 2026\n6.5\ns\n\nmobile LCP on a 300+ species catalog\n\nOakwood Veneer · Catalog & UX review\n\nThree hun",
+      "href": "https://mousabatarseh.com/reviews/reviews/oakwood/index.html"
+    },
+    {
+      "text": "jbtools.com\nCatalog & listings\nSep 19, 2026\n34\n%\n\nof torque wrenches out of stock, one ranked #3\n\nJB Tools · Product-data review\n\nDouble-enc",
+      "href": "https://mousabatarseh.com/reviews/reviews/jbtools/index.html"
+    },
+    {
+      "text": "Previous\nOakwood Veneer\nCatalog & UX review",
+      "href": "https://mousabatarseh.com/reviews/reviews/oakwood/index.html"
+    },
+    {
+      "text": "Next\nJB Tools\nProduct-data review",
+      "href": "https://mousabatarseh.com/reviews/reviews/jbtools/index.html"
+    },
+    {
+      "text": "Request a review",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Review%20my%20site"
+    },
+    {
+      "text": "hireme@mousabatarseh.com",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Review%20my%20site"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/moment-700.webp",
+      "alt": "Moment review, full first screen",
+      "w": 662,
+      "h": 1035,
+      "file": "137d9b347cf4b6c3.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/petsafe-400.webp",
+      "alt": "PetSafe review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "5312f67bdb411c09.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard-400.webp",
+      "alt": "Vanguard review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "8aa6f4e2a2d5e204.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/oakwood-400.webp",
+      "alt": "Oakwood Veneer review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "0b7a4c947a98e008.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jbtools-400.webp",
+      "alt": "JB Tools review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "4f8ae266967eeb38.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jbtools.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7527d28696c502a2.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    }
+  ],
+  "status": 200
+}

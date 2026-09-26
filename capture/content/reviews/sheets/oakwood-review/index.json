@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/oakwood-review/",
+    "status": 200,
+    "title": "Oakwood Veneer — Species Sample Book",
+    "h1": "Three hundred species. Two filters.",
+    "description": "Independent catalog and UX review of oakwoodveneer.com by Mousa Batarseh — 300+ species behind two filters, a 6.6-second mobile LCP, and a working species-faceted browser. For the Digital & Content Marketing role.",
+    "height": 1779
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/oakwood-review/gap.html",
+    "status": 200,
+    "title": "Oakwood Veneer — The Gap",
+    "h1": "What a shopper can't do",
+    "description": "What a veneer shopper can't do on oakwoodveneer.com today, and the five facets they need.",
+    "height": 1373
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/oakwood-review/atlas.html",
+    "status": 200,
+    "title": "Oakwood Veneer — Species Atlas",
+    "h1": "The Species Atlas — try it",
+    "description": "A working species-faceted browser prototype for Oakwood Veneer's catalog.",
+    "height": 2018
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/oakwood-review/mobile.html",
+    "status": 200,
+    "title": "Oakwood Veneer — Mobile Patch & Plan",
+    "h1": "Four edits, four failed audits",
+    "description": "The four-edit mobile patch and first-30-days plan for Oakwood Veneer.",
+    "height": 2100
+  }
+]

@@ -1,0 +1,63 @@
+webkit 26.0 — http://localhost:4321
+PASS  Skip link is the first Tab stop and becomes visible — {"text":"Skip to content","visible":true}
+PASS  Skip link moves focus to <main>
+PASS  Nav has links — Mousa Batarseh→/, Work 68→/work/, Reviews→/reviews/, Blog→/blog/, About→/about/, Let’s talk→#contact
+PASS  Nav "Mousa Batarseh" opens / — /
+PASS  Nav "Work 68" opens /work/ — /work/
+PASS  Nav "Reviews" opens /reviews/ — /reviews/
+PASS  Nav "Blog" opens /blog/ — /blog/
+PASS  Nav "About" opens /about/ — /about/
+PASS  Nav "Let’s talk" scrolls to #contact — on screen after 594 ms (scrollY 22043, target at 22690)
+PASS  Six featured case-study links on the home page — /work/united-textile/ /work/universal-wholesale/ /work/firefly-burgers/ /work/eat-with-samar/ /work/great-lakes-cigar-festival/ /work/ptee/
+PASS  Clicking a featured card image opens its case study (stretched link) — /work/united-textile/
+PASS  /blog/ filter "all" shows 16 rows — visible 16, aria-pressed true, status "16 posts shown"
+PASS  /blog/ filter "content-writing" shows 1 rows — visible 1, aria-pressed true, status "1 post shown"
+PASS  /blog/ filter "e-commerce-operations" shows 5 rows — visible 5, aria-pressed true, status "5 posts shown"
+PASS  /blog/ filter "photoshop" shows 1 rows — visible 1, aria-pressed true, status "1 post shown"
+PASS  /blog/ filter "process-and-operations" shows 2 rows — visible 2, aria-pressed true, status "2 posts shown"
+PASS  /blog/ filter "product-data" shows 2 rows — visible 2, aria-pressed true, status "2 posts shown"
+PASS  /blog/ filter "seo" shows 2 rows — visible 2, aria-pressed true, status "2 posts shown"
+PASS  /blog/ filter "wordpress-and-web" shows 3 rows — visible 3, aria-pressed true, status "3 posts shown"
+PASS  /reviews/ filter "all" shows 22 rows — visible 22, aria-pressed true, status "22 reviews shown"
+PASS  /reviews/ filter "cannabis" shows 4 rows — visible 4, aria-pressed true, status "4 reviews shown"
+PASS  /reviews/ filter "catalog-and-listings" shows 5 rows — visible 5, aria-pressed true, status "5 reviews shown"
+PASS  /reviews/ filter "e-commerce-and-dtc" shows 12 rows — visible 12, aria-pressed true, status "12 reviews shown"
+PASS  /reviews/ filter "launch-readiness" shows 3 rows — visible 3, aria-pressed true, status "3 reviews shown"
+PASS  /reviews/ filter "seo-and-ai-search" shows 6 rows — visible 6, aria-pressed true, status "6 reviews shown"
+PASS  /work/ filter "all" shows 68 rows — visible 68, aria-pressed true, status "68 entries shown"
+PASS  /work/ filter "systems" shows 12 rows — visible 12, aria-pressed true, status "12 entries shown"
+PASS  /work/ filter "case-studies" shows 6 rows — visible 6, aria-pressed true, status "6 entries shown"
+PASS  /work/ filter "sites" shows 25 rows — visible 25, aria-pressed true, status "25 entries shown"
+PASS  /work/ filter "reviews" shows 22 rows — visible 22, aria-pressed true, status "22 entries shown"
+PASS  /work/ filter "proposals" shows 3 rows — visible 3, aria-pressed true, status "3 entries shown"
+PASS  All 33 internal links on /work/ return 200
+PASS  External links on /work/ carry rel=noopener
+PASS  Archive loupe opens on row hover — {"opacity":"1","visibility":"visible","clip":"none"}
+PASS  Case /work/asas-studio/: one h1, next → /work/changeatlas/
+PASS  Case /work/changeatlas/: one h1, next → /work/deals-os/
+PASS  Case /work/deals-os/: one h1, next → /work/csv-mapper/
+PASS  Case /work/csv-mapper/: one h1, next → /work/diamedical-lab/
+PASS  Case /work/diamedical-lab/: one h1, next → /work/united-textile/
+PASS  Case /work/united-textile/: one h1, next → /work/universal-wholesale/
+PASS  Case /work/universal-wholesale/: one h1, next → /work/firefly-burgers/
+PASS  Case /work/firefly-burgers/: one h1, next → /work/eat-with-samar/
+PASS  Case /work/eat-with-samar/: one h1, next → /work/great-lakes-cigar-festival/
+PASS  Case /work/great-lakes-cigar-festival/: one h1, next → /work/ptee/
+PASS  Case /work/ptee/: one h1, next → /work/asas-studio/
+PASS  /blog/: every card links inside this site (16)
+PASS  /blog/: all 16 pages load with one h1, their text, and working in-page anchors
+PASS  /reviews/: every card links inside this site (22)
+PASS  /reviews/: all 22 pages load with one h1, their text, and working in-page anchors
+PASS  Recording toggle flips play/pause state — false → true (video paused=true t=0.0 ready=4 → paused=false t=1.2 ready=4)
+PASS  mailto link is the real address — mailto:hireme@mousabatarseh.com
+PASS  tel link present — tel:+12488101816
+PASS  Copy email answers (copied, or tells you to select the address) — "✓ Copied — checked"
+PASS  No page errors or console errors during the desktop run
+PASS  Unknown URL serves the designed 404 with status 404 — 404 "Page not found — Mousa Batarseh"
+PASS  Menu toggle is visible on a phone
+PASS  Menu opens (aria-expanded, visible, focus moves inside) — {"expanded":"true","hidden":false,"focusIn":true}
+PASS  Escape closes the menu and returns focus to the toggle — {"expanded":"false","focusOnToggle":true}
+PASS  Menu link "Work" navigates on tap — /work/
+PASS  Menu is closed on the new page
+
+60/60 passed

@@ -1,0 +1,154 @@
+{
+  "url": "https://mousabatarseh.com/oakwood-review/",
+  "height": 1779,
+  "heads": [
+    {
+      "tag": "h1",
+      "text": "Three hundred species. Two filters.",
+      "y": 135,
+      "sel": "body > div.book > article.page > h1"
+    },
+    {
+      "tag": "h2",
+      "text": "In this book",
+      "y": 826,
+      "sel": "div.book > article.page > div.sec:nth-of-type(5) > h2"
+    },
+    {
+      "tag": "h3",
+      "text": "What a shopper can't do",
+      "y": 937,
+      "sel": "div.sec:nth-of-type(5) > div.spread > div.leaf:nth-of-type(1) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "The Species Atlas",
+      "y": 937,
+      "sel": "div.sec:nth-of-type(5) > div.spread > div.leaf:nth-of-type(2) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "The mobile patch + 30 days",
+      "y": 1106,
+      "sel": "div.sec:nth-of-type(5) > div.spread > div.leaf:nth-of-type(3) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "What I bring",
+      "y": 1106,
+      "sel": "div.sec:nth-of-type(5) > div.spread > div.leaf:nth-of-type(4) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "Mousa Batarseh",
+      "y": 1363,
+      "sel": "article.page > div.colophon:nth-of-type(7) > div:nth-of-type(1) > h3"
+    }
+  ],
+  "items": [
+    {
+      "tag": "a",
+      "text": "Turn to II · The gap →",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "gap.html",
+      "sel": "div.book > article.page > div.turn:nth-of-type(6) > a",
+      "x": 961,
+      "y": 1243,
+      "w": 214,
+      "h": 52
+    },
+    {
+      "tag": "a",
+      "text": "mousabatarseh.com",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "https://mousabatarseh.com",
+      "sel": "article.page > div.colophon:nth-of-type(7) > div.ln:nth-of-type(2) > a:nth-of-type(1)",
+      "x": 769,
+      "y": 1363,
+      "w": 381,
+      "h": 41
+    },
+    {
+      "tag": "a",
+      "text": "linkedin.com/in/mousabatarseh",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "https://www.linkedin.com/in/mousabatarseh",
+      "sel": "article.page > div.colophon:nth-of-type(7) > div.ln:nth-of-type(2) > a:nth-of-type(2)",
+      "x": 769,
+      "y": 1412,
+      "w": 381,
+      "h": 41
+    },
+    {
+      "tag": "a",
+      "text": "hireme@mousabatarseh.com",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "mailto:hireme@mousabatarseh.com",
+      "sel": "article.page > div.colophon:nth-of-type(7) > div.ln:nth-of-type(2) > a:nth-of-type(3)",
+      "x": 769,
+      "y": 1461,
+      "w": 381,
+      "h": 41
+    },
+    {
+      "tag": "a",
+      "text": "ICOVER",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "index.html",
+      "sel": "body > div.book > nav.tabs > a:nth-of-type(1)",
+      "x": 1222,
+      "y": 66,
+      "w": 66,
+      "h": 105
+    },
+    {
+      "tag": "a",
+      "text": "IITHE GAP",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "gap.html",
+      "sel": "body > div.book > nav.tabs > a:nth-of-type(2)",
+      "x": 1222,
+      "y": 179,
+      "w": 66,
+      "h": 126
+    },
+    {
+      "tag": "a",
+      "text": "IIISPECIES ATLAS",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "atlas.html",
+      "sel": "body > div.book > nav.tabs > a:nth-of-type(3)",
+      "x": 1222,
+      "y": 314,
+      "w": 66,
+      "h": 186
+    },
+    {
+      "tag": "a",
+      "text": "IVMOBILE & PLAN",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "mobile.html",
+      "sel": "body > div.book > nav.tabs > a:nth-of-type(4)",
+      "x": 1222,
+      "y": 508,
+      "w": 66,
+      "h": 176
+    }
+  ]
+}

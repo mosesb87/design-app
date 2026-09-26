@@ -1,0 +1,127 @@
+---
+// Hero: the name, huge and condensed, with stickers from Mousa's world floating around it.
+// Letters pop in and bounce when touched; stickers pop, float, follow the pointer and spin when clicked.
+import Sticker from './Sticker.astro';
+import { person } from '../../data/site';
+const rows = [person.first.toUpperCase(), person.last.toUpperCase()];
+const stickers = [
+  { name: 'spark', cls: 's-spark', depth: 0.9, tilt: -10 },
+  { name: 'tag', cls: 's-tag', depth: 0.6, tilt: -8 },
+  { name: 'percent', cls: 's-percent', depth: 1.1, tilt: 12 },
+  { name: 'cursor', cls: 's-cursor', depth: 0.8, tilt: 0 },
+  { name: 'check', cls: 's-check', depth: 0.5, tilt: 8 },
+  { name: 'cell', cls: 's-cell', depth: 0.7, tilt: -4 },
+  { name: 'blocks', cls: 's-blocks', depth: 1, tilt: 0 },
+  { name: 'pin', cls: 's-pin', depth: 1.2, tilt: 14 },
+] as const;
+---
+<section class="ph" data-play-hero aria-labelledby="hero-title">
+  <div class="ph__glow" aria-hidden="true"></div>
+  <div class="ph__inner wrap">
+    <p class="kicker ph__kicker" data-ph-fade>{person.location} · {person.availability.toLowerCase()}</p>
+    <h1 class="ph__name" id="hero-title">
+      <span class="visually-hidden">{person.name}</span>
+      {rows.map((w, r) => (
+        <span class:list={['ph__row', `ph__row--${r + 1}`]} aria-hidden="true">
+          {[...w].map((ch) => <span class="ph__l" data-l>{ch}</span>)}
+        </span>
+      ))}
+    </h1>
+    <div class="ph__bottom">
+      <p class="ph__intro" data-ph-fade>I build and run <strong>WordPress websites</strong> and <strong>e-commerce stores</strong> — and the checks that keep them honest.</p>
+      <div class="ph__cta" data-ph-fade>
+        <a class="btn" href="#work">See the work <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--line" href="#contact">Say hello</a>
+      </div>
+    </div>
+    <div class="ph__stickers">
+      {stickers.map((s) => (
+        <span class:list={['ph__s', s.cls]} data-ph-sticker data-depth={s.depth}>
+          <Sticker name={s.name} tilt={s.tilt} depth={s.depth} />
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .ph {
+    position: relative;
+    min-height: 100svh;
+    padding-top: calc(var(--nav-h) + var(--s-6));
+    padding-bottom: var(--s-7);
+    overflow: clip;
+    display: flex;
+  }
+  .ph__glow {
+    position: absolute;
+    left: -15%;
+    right: -15%;
+    top: 38%;
+    height: 42%;
+    background: var(--spectrum);
+    background-size: 200% 100%;
+    filter: blur(90px);
+    opacity: 0.32;
+    border-radius: 50%;
+    animation: ph-drift 14s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes ph-drift { to { background-position: 200% 0; } }
+  .ph__inner { position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: var(--s-6); width: 100%; }
+  .ph__kicker { --kicker-dot: var(--lime); position: relative; z-index: 2; }
+  .ph__name {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-stretch: 75%;
+    line-height: 0.8;
+    letter-spacing: -0.012em;
+    /* BATARSEH fills the column (it measures ~3.6em at this width and weight), without pushing the intro
+       below the fold on short screens. */
+    font-size: min(calc((100vw - 2 * var(--margin)) / 3.62), calc((100svh - 300px) / 1.62), 27rem);
+    margin-top: auto;
+    user-select: none;
+  }
+  .ph__row { display: block; white-space: nowrap; }
+  .ph__row--2 { margin-top: 0.02em; }
+  .ph__l { display: inline-block; transition: color 0.4s var(--ease-register); }
+  .ph__l.is-hot { transition-duration: 0.05s; }
+  .ph__bottom { position: relative; z-index: 2; display: grid; gap: var(--s-5); align-items: end; }
+  .ph__intro { font-size: var(--t-lead); line-height: 1.3; max-width: 30ch; font-weight: 450; letter-spacing: -0.01em; }
+  .ph__intro strong { font-weight: 650; background: linear-gradient(transparent 62%, color-mix(in srgb, var(--lime) 80%, transparent) 0); }
+  .ph__cta { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+  .ph__stickers { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+  .ph__s { position: absolute; display: block; pointer-events: auto; cursor: grab; }
+  .ph__s :global(.sticker) { --size: 100%; width: 100%; }
+  /* Positions: stickers live in the open space (right of MOUSA, around the edges) and only overlap the name at
+     its corners. Phones first (four stickers), more from tablet up. */
+  .s-spark { width: 54px; top: 14%; left: 44%; }
+  .s-tag { width: 124px; top: 20%; right: 2%; }
+  .s-cursor { width: 64px; top: 38%; right: 30%; }
+  .s-check { width: 84px; top: 31%; left: 3%; }
+  .s-percent, .s-cell, .s-blocks, .s-pin { display: none; }
+  @media (min-width: 700px) {
+    .ph__bottom { grid-template-columns: 1fr auto; }
+    .s-spark { width: 76px; top: 16%; left: 70%; right: auto; }
+    .s-tag { width: 190px; top: 15%; right: 5%; }
+    .s-cursor { width: 104px; top: 37%; left: 80%; right: auto; }
+    .s-check { width: 128px; top: auto; bottom: 25%; left: auto; right: -1%; }
+    .s-percent { display: block; width: 88px; top: 36%; left: 70%; }
+    .s-cell { display: none; }
+  }
+  @media (min-width: 1024px) {
+    .s-blocks { display: block; width: 116px; top: 24%; left: 0; }
+    .s-pin { display: block; width: 66px; top: 12%; left: 31%; }
+    .s-spark { width: 84px; top: 17%; left: 70%; }
+    .s-tag { width: 230px; top: 15%; right: 10%; }
+    .s-cursor { width: 116px; top: 38%; left: 79%; }
+    .s-percent { width: 96px; top: 36%; left: 70%; }
+    .s-cell { display: block; width: 196px; top: 30%; right: -1%; }
+    .s-check { width: 146px; bottom: 23%; right: -1.5%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ph__glow { animation: none; }
+  }
+</style>

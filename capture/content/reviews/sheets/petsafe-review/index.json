@@ -1,0 +1,47 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/petsafe-review/",
+    "status": 200,
+    "title": "PetSafe DTC — Ops & Insights Review · Mousa Batarseh",
+    "h1": "The stack is right. The signals aren't.",
+    "description": "Independent DTC ecommerce operations & insights review of petsafe.com by Mousa Batarseh, for the PetSafe Brands DTC Ecommerce Ops & Insights Specialist role. Every claim dated and cited: 0 JSON-LD blocks on the homepage, sitemap.xml returning HTML, llms.txt 404, and the meta description on every product page is templated. Sampled 2026-09-20.",
+    "height": 3218
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/petsafe-review/stack.html",
+    "status": 200,
+    "title": "Stack & Data Loop · PetSafe DTC — Ops & Insights Review",
+    "h1": "What's already firing on petsafe.com",
+    "description": "Stack map of petsafe.com sampled 2026-09-20 — Gatsby, Sanity, headless Shopify, Klaviyo, Algolia, Triple Whale — and the trusted Tableau data loop I'd stand up on top of it. By Mousa Batarseh, for the PetSafe DTC Ecommerce Ops & Insights Specialist role. Every claim dated and cited.",
+    "height": 3568
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/petsafe-review/runway.html",
+    "status": 200,
+    "title": "Campaign Runway · PetSafe DTC — Ops & Insights Review",
+    "h1": "Every promo is a runway, not a launch.",
+    "description": "The intake → QA → launch → readout runway I'd run for PetSafe DTC campaigns, with a working UTM taxonomy and pre/post-launch QA checklist. By Mousa Batarseh, for the PetSafe DTC Ecommerce Ops & Insights Specialist role.",
+    "height": 3613
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/petsafe-review/plan.html",
+    "status": 200,
+    "title": "First 30/60/90 · PetSafe DTC — Ops & Insights Review",
+    "h1": "The capacity line at the bottom of the JD.",
+    "description": "First 30/60/90 for a DTC Ecommerce Ops & Insights Specialist at PetSafe Brands — tickets I'd close, dashboards I'd build, capacity I'd give back to channel owners. By Mousa Batarseh.",
+    "height": 3028
+  },
+  {
+    "n": "05",
+    "url": "https://mousabatarseh.com/petsafe-review/fix.html",
+    "status": 200,
+    "title": "The 1,000-Page Fix · PetSafe DTC — Ops & Insights Review",
+    "h1": "The copy is already written. It just isn't reaching the head.",
+    "description": "Every PetSafe product page ships the same 15-word templated meta description while carrying 1,500–3,600 characters of real product copy in its own JSON-LD. Interactive repair bench with 5 real PetSafe products, every claim dated 2026-09-20. By Mousa Batarseh.",
+    "height": 4526
+  }
+]

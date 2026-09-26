@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Independent product-data review of jbtools.com by Mousa Batarseh — encoding, schema and out-of-stock defects found in the live catalog, with a supplier-price SOP. Built for the eCommerce Database Manager role.">
+<meta name="robots" content="noindex">
+<title>JB Tools — Product-Data Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=Archivo+Black&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="mast"><div class="row"><a class="mark" href="index.html">MOUSA<b>·</b>BATARSEH</a><span class="tagline">Independent Digital-Shelf Review · JB Tools</span></div></header>
+<nav class="tabs"><div class="row">
+  <a href="index.html" aria-current="page"><span class="n">01</span>Overview</a>
+  <a href="findings.html"><span class="n">02</span>Findings</a>
+  <a href="triage.html"><span class="n">03</span>Triage Board</a>
+  <a href="plan.html"><span class="n">04</span>Plan &amp; Method</a>
+</div></nav>
+
+<main><div class="wrap">
+  <p class="crumb">Sec. 01 — Overview · for the eCommerce Database Manager role</p>
+  <h1>A 104,000-product catalog is only as good as its worst record.</h1>
+  <p class="lede" style="margin-top:16px">I sampled JB Tools' live search feed and product pages. In a 799-item slice I found <b>double-encoded characters in product names</b> that carry through to titles and JSON-LD, <b>UPCs printed on the page but missing from the schema</b>, percent-encoded schema descriptions, inconsistent attribute casing, and a torque-wrench category that is <b>a third out of stock</b> while sold-out items still rank in search. This is a four-page walkthrough of the defects, a working triage board, and the supplier-price SOP I'd run as your Database Manager.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">104,348</div><div class="l">products in the live Searchspring index (the About page still says “beyond 60,000”)</div></div>
+    <div class="stat"><div class="n">8<span style="font-size:1.3rem">/799</span></div><div class="l">sampled names with encoding artifacts — in H1, title <em>and</em> JSON-LD</div></div>
+    <div class="stat"><div class="n">122<span style="font-size:1.3rem">/358</span></div><div class="l">torque wrenches out of stock (34%); a sold-out item ranks #3 in search</div></div>
+    <div class="stat"><div class="n">0</div><div class="l">gtin in Product schema, though UPCs are shown on the page</div></div>
+  </div>
+
+  <div class="cards" style="margin-top:6px">
+    <div class="card"><span class="kicker data">The job</span><h3>What this role owns</h3><p>“Manage and maintain our catalog of tens of thousands of products across hundreds of suppliers… pricing, UPCs, SKUs, weights, dimensions, descriptions, images, specifications… supplier spreadsheets and large datasets… Excel/Google Sheets and AI tools.”</p><p style="color:var(--muted);font-size:.86rem">That is the job I've done: 14,000+ SKUs migrated and maintained by CSV, attribute mapping and QA.</p></div>
+    <div class="card"><span class="kicker schema">Why it matters</span><h3>Defects reach the shopper &amp; the feed</h3><p>Encoding artifacts show up in SERP titles. A missing <span class="mono">gtin</span> blocks clean Google Merchant Center matching. A sold-out item at #3 in search is a dead end at the top of results — the kind of thing behind the BBB complaint mix (Product 15 of 50).</p></div>
+    <div class="card"><span class="kicker stock">The approach</span><h3>Census → fix → prevent</h3><p>A full-catalog defect census, a fix-priority board weighted by price and stock, a schema patch that reaches every product at once, a sold-out policy, and a supplier price-change intake so a price file becomes a validated import — not a manual afternoon.</p></div>
+  </div>
+
+  <div class="meta" style="margin-top:26px">
+    <span><b>Scope</b> jbtools.com public catalog</span>
+    <span><b>Method</b> Searchspring API sample (799 items) + PDP source + Lighthouse</span>
+    <span><b>Platform</b> BigCommerce Stencil · Searchspring · Yotpo · Klaviyo</span>
+    <span><b>Independent — not affiliated with JB Tools</b></span>
+  </div>
+
+  <div class="pagenav">
+    <span></span>
+    <a class="next" href="findings.html">Next: The defect census →</a>
+  </div>
+</div></main>
+
+<footer><div class="wrap"><div class="foot">
+  <div class="who"><h3>Mousa Batarseh</h3><p>E-commerce &amp; website operations specialist, Metro Detroit. Six years running Shopify, WooCommerce and WordPress catalogs; 14,000+ SKUs migrated by CSV; I build my own catalog tooling. Livonia is a short drive from Warren.</p></div>
+  <div class="links"><a href="https://mousabatarseh.com">mousabatarseh.com</a><a href="https://www.linkedin.com/in/mousabatarseh">linkedin.com/in/mousabatarseh</a><a href="mailto:hireme@mousabatarseh.com">hireme@mousabatarseh.com</a></div>
+</div>
+<p class="disc">Independent, unsolicited review. All product names, brands and data belong to JB Tools and its suppliers and are shown here only as evidence for the findings. Figures are from public sources sampled Sep 19, 2026 and may have changed. No confidential or internal data was used. Not affiliated with, endorsed by, or created for J &amp; B Tool Sales, Inc. Color palette drawn from jbtools.com's own brand.</p>
+</div></footer>
+
+
+</body></html>

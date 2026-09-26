@@ -1,0 +1,1201 @@
+{
+  "jabal-amman-publishers": {
+    "slug": "jabal-amman-publishers",
+    "project": "jabal-amman-publishers",
+    "url": "https://japublishers.com/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://japublishers.com/",
+        "title": "الصفحة الرئيسية - Jabal Amman Publishers - جبل عمان ناشرون",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 124566
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://japublishers.com/",
+        "title": "الصفحة الرئيسية - Jabal Amman Publishers - جبل عمان ناشرون",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 119186
+      }
+    },
+    "notes": [],
+    "title": "الصفحة الرئيسية - Jabal Amman Publishers - جبل عمان ناشرون"
+  },
+  "ophir-publishers": {
+    "slug": "ophir-publishers",
+    "project": "ophir-publishers",
+    "url": "https://ophir.com.jo/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://ophir.com.jo/",
+        "title": "Homepage - Ophir",
+        "gates": {
+          "actions": [
+            "clicked \"CLOSE\"",
+            "clicked \"CLOSE\"",
+            "clicked \"CLOSE\""
+          ],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 90584
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://ophir.com.jo/",
+        "title": "Homepage - Ophir",
+        "gates": {
+          "actions": [
+            "clicked \"CLOSE\"",
+            "clicked \"CLOSE\"",
+            "clicked \"CLOSE\""
+          ],
+          "blocking": [
+            "div.bookory-mobile-nav",
+            "div.site-header-cart-side"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 65032
+      }
+    },
+    "notes": [],
+    "title": "Homepage - Ophir"
+  },
+  "mawtini-dabke": {
+    "slug": "mawtini-dabke",
+    "project": "mawtini-dabke",
+    "url": "https://mawtinidabke.com/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": false,
+        "status": 403,
+        "finalUrl": "https://mawtinidabke.com/",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "title": "403 Forbidden"
+      },
+      "mobile-hero": {
+        "ok": false,
+        "status": 403,
+        "finalUrl": "https://mawtinidabke.com/",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "title": "403 Forbidden"
+      }
+    },
+    "notes": []
+  },
+  "st-mary-berkley": {
+    "slug": "st-mary-berkley",
+    "project": "st-mary-berkley",
+    "url": "https://stmaryberkley.org/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": false,
+        "status": 403,
+        "finalUrl": "https://stmaryberkley.org/?__cf_chl_rt_tk=NN68FD3bSd0ubWsvvtcjTKqZcFxhKqcGcd5voP2gRl0-1790432184-1.0.1.1-SODpx4p5bLKdP36ybM5VeEdcE_YT1l_0rIWbY514szc",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "title": "Just a moment..."
+      },
+      "mobile-hero": {
+        "ok": false,
+        "status": 403,
+        "finalUrl": "https://stmaryberkley.org/?__cf_chl_rt_tk=e8cnLDAZEUVK1SsdjaIK2yVpRhmfmA3og6GH0qfIyas-1790432226-1.0.1.1-GEJu_jjUlriD9Uh1EIoQgT3AV4nCd7.9RQH3nWCMeO0",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "title": "Just a moment..."
+      }
+    },
+    "notes": []
+  },
+  "samona-hospitality": {
+    "slug": "samona-hospitality",
+    "project": "samona-hospitality",
+    "url": "https://the-shg.com/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://the-shg.com/",
+        "title": "SHG – Samona Hospitality Group",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 176974
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://the-shg.com/",
+        "title": "SHG – Samona Hospitality Group",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 94484
+      }
+    },
+    "notes": [],
+    "title": "SHG – Samona Hospitality Group"
+  },
+  "larkspur-mobility": {
+    "slug": "larkspur-mobility",
+    "project": "larkspur-mobility",
+    "url": "https://mousabatarseh.com/Larkspur/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": false,
+        "status": 403,
+        "finalUrl": "https://mousabatarseh.com/Larkspur/",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "title": "403 Forbidden"
+      },
+      "mobile-hero": {
+        "ok": false,
+        "status": 403,
+        "finalUrl": "https://mousabatarseh.com/Larkspur/",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "title": "403 Forbidden"
+      }
+    },
+    "notes": []
+  },
+  "american-hot-wheel": {
+    "slug": "american-hot-wheel",
+    "project": "american-hot-wheel",
+    "url": "https://interviewdemo.mousabatarseh.com/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": false,
+        "status": 403,
+        "finalUrl": "https://interviewdemo.mousabatarseh.com/?__cf_chl_rt_tk=W0G427Gjo26kemhMvqszC0Jw8NFFWWCKgI_MJ2u4BsQ-1790432285-1.0.1.1-4Kpe.4NwQEzU.a0Lqu17uieg7Pcxh3fqwUzGqjCXHwA",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "title": "Just a moment..."
+      },
+      "mobile-hero": {
+        "ok": false,
+        "status": 403,
+        "finalUrl": "https://interviewdemo.mousabatarseh.com/?__cf_chl_rt_tk=JDxIB.GGdL1bW3yX8ko40eq2XUmXeBiW_Ge128JWED8-1790432327-1.0.1.1-EbLzEI0CL8xGJ2hMzoCpTWXO4p_dL9bXuFK5WR4CfVw",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "title": "Just a moment..."
+      }
+    },
+    "notes": []
+  },
+  "full-house-wholesale": {
+    "slug": "full-house-wholesale",
+    "project": "full-house-wholesale",
+    "url": "https://www.fullhousewholesale.com/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://www.fullhousewholesale.com/",
+        "title": "FullHouse Wholesale |",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 38414
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://www.fullhousewholesale.com/",
+        "title": "FullHouse Wholesale |",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 35896
+      }
+    },
+    "notes": [],
+    "title": "FullHouse Wholesale |"
+  },
+  "ptee-org": {
+    "slug": "ptee-org",
+    "project": "ptee-org",
+    "url": "https://ptee.org/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 202,
+        "finalUrl": "https://ptee.org/",
+        "title": "Robot Challenge Screen",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 42448
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 202,
+        "finalUrl": "https://ptee.org/",
+        "title": "Robot Challenge Screen",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 52668
+      }
+    },
+    "notes": [],
+    "title": "Robot Challenge Screen"
+  },
+  "ptee-online": {
+    "slug": "ptee-online",
+    "project": "ptee-online",
+    "url": "https://ptee.online/",
+    "capturedAt": "2026-09-26T15:00:54.355Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://ptee.online/",
+        "title": "الصفحة الرئيسية | PTEE",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 98582
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://ptee.online/",
+        "title": "الصفحة الرئيسية | PTEE",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 118620
+      }
+    },
+    "notes": [],
+    "title": "الصفحة الرئيسية | PTEE"
+  },
+  "ptee-courses": {
+    "slug": "ptee-courses",
+    "project": "ptee-courses",
+    "url": "https://ptee.moseswebworks.com/courses/ar",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://ptee.moseswebworks.com/courses/ar",
+        "title": "PTEE | التعليم اللاهوتي بالامتداد",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 169126
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://ptee.moseswebworks.com/courses/ar",
+        "title": "PTEE | التعليم اللاهوتي بالامتداد",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 143430
+      }
+    },
+    "notes": [],
+    "title": "PTEE | التعليم اللاهوتي بالامتداد"
+  },
+  "wildbills-fathers-day": {
+    "slug": "wildbills-fathers-day",
+    "project": "wildbills-fathers-day",
+    "url": "https://wildbillstobacco.com/fathers-day-specials/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/fathers-day-specials/",
+        "title": "Father's Day Specials - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 295604
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/fathers-day-specials/",
+        "title": "Father's Day Specials - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 202174
+      }
+    },
+    "notes": [],
+    "title": "Father's Day Specials - Wild Bills Tobacco"
+  },
+  "wildbills-christmas": {
+    "slug": "wildbills-christmas",
+    "project": "wildbills-christmas",
+    "url": "https://wildbillstobacco.com/christmas-sale-2024/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/christmas-sale-2024/",
+        "title": "Christmas Sale 2024 - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 380034
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/christmas-sale-2024/",
+        "title": "Christmas Sale 2024 - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 465018
+      }
+    },
+    "notes": [],
+    "title": "Christmas Sale 2024 - Wild Bills Tobacco"
+  },
+  "wildbills-stpatrick": {
+    "slug": "wildbills-stpatrick",
+    "project": "wildbills-stpatrick",
+    "url": "https://wildbillstobacco.com/stpatrick-form/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/stpatrick-form/",
+        "title": "ST. Patrick Upload Receipt Form - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 184550
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/stpatrick-form/",
+        "title": "ST. Patrick Upload Receipt Form - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 136392
+      }
+    },
+    "notes": [],
+    "title": "ST. Patrick Upload Receipt Form - Wild Bills Tobacco"
+  },
+  "wildbills-wild-wednesdays": {
+    "slug": "wildbills-wild-wednesdays",
+    "project": "wildbills-wild-wednesdays",
+    "url": "https://wildbillstobacco.com/wild-wednesdays/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/wild-wednesdays/",
+        "title": "Wild Wednesdays - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 482108
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/wild-wednesdays/",
+        "title": "Wild Wednesdays - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 247914
+      }
+    },
+    "notes": [],
+    "title": "Wild Wednesdays - Wild Bills Tobacco"
+  },
+  "wildbills-drivethru-menu": {
+    "slug": "wildbills-drivethru-menu",
+    "project": "wildbills-drivethru-menu",
+    "url": "https://wildbillstobacco.com/drivethru-menu/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/drivethru-menu/",
+        "title": "Largest Selection of Mr. Vapor Disposables and Top Brands - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 147346
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/drivethru-menu/",
+        "title": "Largest Selection of Mr. Vapor Disposables and Top Brands - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 105276
+      }
+    },
+    "notes": [],
+    "title": "Largest Selection of Mr. Vapor Disposables and Top Brands - Wild Bills Tobacco"
+  },
+  "wildbills-disposables-menu": {
+    "slug": "wildbills-disposables-menu",
+    "project": "wildbills-disposables-menu",
+    "url": "https://wildbillstobacco.com/disposables-menu-2/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/disposables-menu-2/",
+        "title": "Largest Selection of Mr. Vapor Disposables and Top Brands - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 248696
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://wildbillstobacco.com/disposables-menu-2/",
+        "title": "Largest Selection of Mr. Vapor Disposables and Top Brands - Wild Bills Tobacco",
+        "gates": {
+          "actions": [
+            "clicked \"Accept\"",
+            "clicked \"YES\""
+          ],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 149852
+      }
+    },
+    "notes": [],
+    "title": "Largest Selection of Mr. Vapor Disposables and Top Brands - Wild Bills Tobacco"
+  },
+  "the-lab": {
+    "slug": "the-lab",
+    "project": "the-lab",
+    "url": "https://lab.mousabatarseh.com/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://lab.mousabatarseh.com/",
+        "title": "The Lab — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.stage",
+            "#bench-veil.",
+            "#bench."
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 279858
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://lab.mousabatarseh.com/",
+        "title": "The Lab — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#bench-veil.",
+            "#bench."
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 105552
+      }
+    },
+    "notes": [],
+    "title": "The Lab — Mousa Batarseh"
+  },
+  "halden-medical": {
+    "slug": "halden-medical",
+    "project": "halden-medical",
+    "url": "https://lab.mousabatarseh.com/halden-medical/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://lab.mousabatarseh.com/halden-medical/",
+        "title": "Halden Medical eCommerce case study — Mousa Batarseh (independent)",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 340534
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://lab.mousabatarseh.com/halden-medical/",
+        "title": "Halden Medical eCommerce case study — Mousa Batarseh (independent)",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#workspace-navigation.workbench-sidebar"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 189142
+      }
+    },
+    "notes": [],
+    "title": "Halden Medical eCommerce case study — Mousa Batarseh (independent)"
+  },
+  "northgate-retail": {
+    "slug": "northgate-retail",
+    "project": "northgate-retail",
+    "url": "https://lab.mousabatarseh.com/northgate-group/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://lab.mousabatarseh.com/northgate-group/",
+        "title": "Marketing Operations Walkthrough — Mousa Batarseh | Northgate Retail Group",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 236784
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://lab.mousabatarseh.com/northgate-group/",
+        "title": "Marketing Operations Walkthrough — Mousa Batarseh | Northgate Retail Group",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 117290
+      }
+    },
+    "notes": [],
+    "title": "Marketing Operations Walkthrough — Mousa Batarseh | Northgate Retail Group"
+  },
+  "house-of-dank-demo": {
+    "slug": "house-of-dank-demo",
+    "project": "house-of-dank-demo",
+    "url": "https://hod-demo.mousabatarseh.com/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://hod-demo.mousabatarseh.com/",
+        "title": "Marketing Ops Demo — Menu & Promotion Manager | Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 307252
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://hod-demo.mousabatarseh.com/",
+        "title": "Marketing Ops Demo — Menu & Promotion Manager | Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 114042
+      }
+    },
+    "notes": [],
+    "title": "Marketing Ops Demo — Menu & Promotion Manager | Mousa Batarseh"
+  },
+  "ai-academy": {
+    "slug": "ai-academy",
+    "project": "ai-academy",
+    "url": "https://apps.moseswebworks.com/aiacademy/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://apps.moseswebworks.com/aiacademy/",
+        "title": "أكاديمية الآي آي — AI Academy",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 180624
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://apps.moseswebworks.com/aiacademy/",
+        "title": "أكاديمية الآي آي — AI Academy",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "aside.sidebar"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 87638
+      }
+    },
+    "notes": [],
+    "title": "أكاديمية الآي آي — AI Academy"
+  },
+  "commerce-studio": {
+    "slug": "commerce-studio",
+    "project": "commerce-studio",
+    "url": "https://commerce-studio.mousabb2.chatgpt.site/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://commerce-studio.mousabb2.chatgpt.site/",
+        "title": "Commerce Studio — Spreadsheet workspace",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 161618
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://commerce-studio.mousabb2.chatgpt.site/",
+        "title": "Commerce Studio — Spreadsheet workspace",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 128514
+      }
+    },
+    "notes": [],
+    "title": "Commerce Studio — Spreadsheet workspace"
+  },
+  "diamedical-academy": {
+    "slug": "diamedical-academy",
+    "project": "diamedical-academy",
+    "url": "https://mousabatarseh.com/diamedical/academy/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical/academy/",
+        "title": "DiaMedical Academy",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 369646
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical/academy/",
+        "title": "DiaMedical Academy",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#sidebar.sidebar"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 182436
+      }
+    },
+    "notes": [],
+    "title": "DiaMedical Academy"
+  },
+  "diamedical-review": {
+    "slug": "diamedical-review",
+    "project": "diamedical-review",
+    "url": "https://mousabatarseh.com/diamedical-review/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical-review/",
+        "title": "Start — DiaMedical Experience Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 175182
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical-review/",
+        "title": "Start — DiaMedical Experience Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 128296
+      }
+    },
+    "notes": [],
+    "title": "Start — DiaMedical Experience Review"
+  },
+  "diamedical-workbook": {
+    "slug": "diamedical-workbook",
+    "project": "diamedical-workbook",
+    "url": "https://mousabatarseh.com/diamedical/v3/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical/v3/",
+        "title": "Workbook explorer — DiaMedical case study — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 374810
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/diamedical/v3/",
+        "title": "Workbook explorer — DiaMedical case study — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 115658
+      }
+    },
+    "notes": [],
+    "title": "Workbook explorer — DiaMedical case study — Mousa Batarseh"
+  },
+  "proposal-gardner-white": {
+    "slug": "proposal-gardner-white",
+    "project": "proposal-gardner-white",
+    "url": "https://mousabatarseh.com/gardner-white-proposal/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/gardner-white-proposal/",
+        "title": "Same-Day Answers · A web-orders desk for Gardner-White · Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#loader.loader.count"
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 147352
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/gardner-white-proposal/",
+        "title": "Same-Day Answers · A web-orders desk for Gardner-White · Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 143606
+      }
+    },
+    "notes": [],
+    "title": "Same-Day Answers · A web-orders desk for Gardner-White · Mousa Batarseh"
+  },
+  "proposal-bran": {
+    "slug": "proposal-bran",
+    "project": "proposal-bran",
+    "url": "https://mousabatarseh.com/bran-proposal/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/bran-proposal/",
+        "title": "Bran Marketing · Web Department Proposal by Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.ld"
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 178084
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/bran-proposal/",
+        "title": "Bran Marketing · Web Department Proposal by Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.ld"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 193990
+      }
+    },
+    "notes": [],
+    "title": "Bran Marketing · Web Department Proposal by Mousa Batarseh"
+  },
+  "proposal-rmc": {
+    "slug": "proposal-rmc",
+    "project": "proposal-rmc",
+    "url": "https://mousabatarseh.com/rmc-proposal/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/rmc-proposal/",
+        "title": "Recovery Movement Consulting · Website Proposal by Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.bg"
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 173572
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/rmc-proposal/",
+        "title": "Recovery Movement Consulting · Website Proposal by Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.bg"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 186890
+      }
+    },
+    "notes": [],
+    "title": "Recovery Movement Consulting · Website Proposal by Mousa Batarseh"
+  },
+  "changeatlas-review-demo": {
+    "slug": "changeatlas-review-demo",
+    "project": "changeatlas-review-demo",
+    "url": "https://mousabatarseh.com/changeatlas/app/",
+    "capturedAt": "2026-09-26T15:00:54.355Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/changeatlas/app/",
+        "title": "Demo · ChangeAtlas Commerce",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.fixed.inset-0"
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 194816
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/changeatlas/app/",
+        "title": "Demo · ChangeAtlas Commerce",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.fixed.inset-0"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 159960
+      }
+    },
+    "notes": [],
+    "title": "Demo · ChangeAtlas Commerce"
+  },
+  "version-v1": {
+    "slug": "version-v1",
+    "project": "versions",
+    "url": "https://mousabatarseh.com/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/",
+        "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#pagefluid."
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 42250
+      }
+    },
+    "notes": [],
+    "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist"
+  },
+  "version-v2": {
+    "slug": "version-v2",
+    "project": "versions",
+    "url": "https://mousabatarseh.com/v2",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/v2/",
+        "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 90032
+      }
+    },
+    "notes": [],
+    "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist"
+  },
+  "version-work": {
+    "slug": "version-work",
+    "project": "versions",
+    "url": "https://work.mousabatarseh.com/",
+    "capturedAt": "2026-09-26T14:14:25.275Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/",
+        "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "#pagefluid."
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 42206
+      }
+    },
+    "notes": [],
+    "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist"
+  }
+}

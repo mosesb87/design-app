@@ -1,0 +1,129 @@
+
+  <div class="wrap">
+    <p class="crumb">Sec. 02 — Stack &amp; Data Loop · GA4 · Shopify · Tableau</p>
+    <span class="label-tag evidence-tag">Half evidence · half prescription — each block below is labeled</span>
+    <h1>What's <em>already firing</em> on petsafe.com</h1>
+    <p class="lede">
+      A DTC Ops &amp; Insights Specialist inherits, not builds from scratch. Before proposing dashboards, it's worth counting what's already emitting events. Numbers below are grep counts against the raw HTML of <code>petsafe.com/</code> sampled 2026-09-20 23:20 UTC — reproducible one-liners in the evidence log at the bottom.
+    </p>
+
+    <div class="flow reveal-stagger in">
+      <div class="node" style="--i: 0;">
+        <div class="k">Frontend</div>
+        <div class="t">Gatsby 5.16.1</div>
+        <div class="d">Netlify-hosted static frontend. <code>generator</code> meta tag public. React Helmet drives per-page meta. <span class="evidence">2026-09-20 · <code>&lt;meta name="generator" content="Gatsby 5.16.1"&gt;</code>; response <code>server: Netlify</code></span></div>
+      </div>
+      <div class="node on-teal" style="--i: 1;">
+        <div class="k">CMS</div>
+        <div class="t">Sanity</div>
+        <div class="d">149 references in home HTML. Content model likely feeds every brand under one repo. <span class="evidence">2026-09-20 · <code>grep -oiE 'sanity' home.html | wc -l</code> → 149</span></div>
+      </div>
+      <div class="node on-orange" style="--i: 2;">
+        <div class="k">Commerce</div>
+        <div class="t">Headless Shopify</div>
+        <div class="d">Cart and checkout run on Shopify behind the Gatsby shell. <span class="evidence">2026-09-20 · <code>grep -oiE 'cdn\.shopify\.com' home.html | wc -l</code> → 12; also confirmed by <code>/cart.json</code> disallow in robots.txt</span></div>
+      </div>
+      <div class="node" style="--i: 3;">
+        <div class="k">Email &amp; SMS</div>
+        <div class="t">Klaviyo</div>
+        <div class="d">4 refs in HTML. <code>/klaviyo-form/</code> disallowed in robots — form endpoints are template routes. <span class="evidence">2026-09-20 · <code>grep -oiE 'klaviyo' home.html | wc -l</code> → 4</span></div>
+      </div>
+      <div class="node" style="--i: 4;">
+        <div class="k">Search</div>
+        <div class="t">Algolia</div>
+        <div class="d">3 refs. Powers on-site search. Ties directly to conversion funnel measurement. <span class="evidence">2026-09-20 · <code>grep -oiE 'algolia' home.html | wc -l</code> → 3</span></div>
+      </div>
+      <div class="node" style="--i: 5;">
+        <div class="k">Attribution</div>
+        <div class="t">Triple Whale</div>
+        <div class="d">5 refs. Cross-channel attribution and pixel — checks the box on the JD's preferred list. <span class="evidence">2026-09-20 · <code>grep -oiE 'triplewhale' home.html | wc -l</code> → 5</span></div>
+      </div>
+      <div class="node" style="--i: 6;">
+        <div class="k">Reviews</div>
+        <div class="t">Bazaarvoice</div>
+        <div class="d">5 refs. Product ratings + Q&amp;A widgets. Robots blocks <code>?bvstate=</code> parameters (good). Reviews widget has <code>data-bv-seo="false"</code> — reviews aren't SEO-rendered. Fix on <a href="https://mousabatarseh.com/petsafe-review/fix.html">Sec. 05</a>. <span class="evidence">2026-09-20 · attr grep on a real product page</span></div>
+      </div>
+      <div class="node" style="--i: 7;">
+        <div class="k">Tag Manager</div>
+        <div class="t">GTM</div>
+        <div class="d"><code>gtm.js</code> loads. This is the injection point for a clean, documented event layer. <span class="evidence">2026-09-20 · <code>grep -oiE 'gtm\.js' home.html | wc -l</code> → 2</span></div>
+      </div>
+    </div>
+
+    <h2 class="reveal in">The data loop I'd trust</h2>
+    <span class="label-tag plan-tag">Prescription · what I would build once hired</span>
+    <p>The JD asks for "trusted Tableau dashboards and consistent definitions for core DTC performance." Trust is built at the seams, not in the dashboard. Here's the loop I'd defend:</p>
+
+    <pre class="reveal in"><span class="cmt"># The four seams that most often desync</span>
+Shopify order  <span class="key">─▶</span>  <span class="val">GA4 purchase</span>       <span class="cmt"># dedupe on order_id, not transaction_id</span>
+GA4 session    <span class="key">─▶</span>  <span class="val">Triple Whale</span>       <span class="cmt"># UTM taxonomy is the join key</span>
+Klaviyo event  <span class="key">─▶</span>  <span class="val">GA4 event</span>          <span class="cmt"># email_opened ≠ engagement — define once</span>
+Algolia click  <span class="key">─▶</span>  <span class="val">GA4 view_item</span>      <span class="cmt"># tie internal-search results to conversion</span>
+
+<span class="cmt"># Then Tableau reads from one place — a modeled layer, not raw connectors</span>
+Modeled layer  <span class="key">─▶</span>  <span class="val">Tableau</span>           <span class="cmt"># definitions live in a shared metric dictionary</span></pre>
+
+    <div class="cards reveal-stagger in">
+      <div class="card" style="--i: 0;">
+        <span class="kicker a">Definition first</span>
+        <h3>Metric dictionary before any new dashboard</h3>
+        <p>"Conversion rate," "AOV," "new vs. returning" — each defined with the exact filter, window, and source of truth. One page, versioned, linked from every dashboard.</p>
+      </div>
+      <div class="card" style="--i: 1;">
+        <span class="kicker b">Reconciliation, weekly</span>
+        <h3>Shopify ↔ GA4 ↔ Triple Whale</h3>
+        <p>A one-tab Tableau view that flags any day where the three sources disagree on order count by &gt;3%. Silent 99% of the time; loud when something's actually broken.</p>
+      </div>
+      <div class="card" style="--i: 2;">
+        <span class="kicker c">AI in the loop, not on the throne</span>
+        <h3>Claude for exploration, humans for calls</h3>
+        <p>The JD is explicit — approved AI tools "explore data exports, identify patterns or anomalies" but outputs are validated. I already use Claude this way for weekly SKU-health and search-console rollups.</p>
+      </div>
+    </div>
+
+    <h2 class="reveal in">The three gaps at the front door</h2>
+    <span class="label-tag evidence-tag">Evidence · sampled 2026-09-20</span>
+
+    <div class="checklist reveal in">
+      <h3>Front-door signal quality</h3>
+      <ul>
+        <li>
+          <span class="box"></span>
+          <span class="txt"><b>Homepage schema.</b> Zero <code>application/ld+json</code> blocks on <code>petsafe.com/</code>. Recommend <code>Organization</code> + <code>WebSite</code> + <code>BreadcrumbList</code> as the baseline; brand-page schema per sub-brand. <span class="evidence">2026-09-20 · [E1] on Overview</span></span>
+          <span class="who">SEO · owner</span>
+        </li>
+        <li>
+          <span class="box"></span>
+          <span class="txt"><b>Sitemap endpoint.</b> <code>/sitemap.xml</code> currently returns 200 with an HTML body. Bing and AI crawlers will silently drop this. Repoint or generate an XML index at build time. <span class="evidence">2026-09-20 · [E2] on Overview</span></span>
+          <span class="who">Ops · this sprint</span>
+        </li>
+        <li>
+          <span class="box"></span>
+          <span class="txt"><b><code>llms.txt</code>.</b> 404. A 40-line file naming the brand, product families, and canonical URLs materially improves how ChatGPT and Claude cite the site. Cheap, high-ROI. <span class="evidence">2026-09-20 · [E3] on Overview</span></span>
+          <span class="who">Ops · this sprint</span>
+        </li>
+        <li>
+          <span class="box on"></span>
+          <span class="txt"><b>Robots hygiene.</b> Already clean — <code>?sort=</code>, <code>?page=</code>, <code>?limit=</code>, <code>?bvstate=</code>, <code>/klaviyo-form/</code>, <code>/cart.json</code>, and <code>/search</code> are all correctly disallowed. Someone has been careful here. <span class="evidence">2026-09-20 · [E7] on Overview</span></span>
+          <span class="who">Confirmed good</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="callout reveal in">
+      <p class="who">Boundary check — from the JD</p>
+      <p>None of this is a strategy call. Site architecture, brand narrative, roadmap priorities stay with the channel owners. What I'd own is technical execution, QA, ticket-writing, dashboard maintenance, and honest reporting on whether we shipped what we said we'd ship.</p>
+    </div>
+
+    <div class="meta reveal in">
+      <span><b>Sampled</b> 2026-09-20 23:20 UTC</span>
+      <span><b>Scope</b> homepage HTML + robots + sitemap + llms.txt</span>
+      <span><b>Method</b> curl + grep + JSON parse</span>
+      <span><b>Not read</b> checkout, account, admin, private analytics</span>
+    </div>
+
+    <div class="pagenav reveal in">
+      <a href="https://mousabatarseh.com/petsafe-review/index.html">← Overview</a>
+      <a class="next" href="https://mousabatarseh.com/petsafe-review/runway.html">Next: Campaign Runway →</a>
+    </div>
+  </div>

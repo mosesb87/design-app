@@ -1,0 +1,111 @@
+---
+// Inner-page header in the home page's language: a huge condensed title whose letters pop in (and hop when
+// touched), a few stickers that float, lean towards the pointer and spin when clicked. The same motion module
+// as the home hero (play-hero.ts). Optional tone turns the header into a coloured room.
+import Sticker from './Sticker.astro';
+import type { StickerName } from './types';
+interface Props {
+  title: string;
+  kicker?: string;
+  dot?: string;
+  lead?: string;
+  tone?: string; // a colour token, e.g. 'var(--lilac)'
+  stickers?: StickerName[];
+  size?: 'xl' | 'l' | 'm' | 's';
+  id?: string;
+}
+const { title, kicker, dot = 'var(--tomato)', lead, tone, stickers = [], size = 'xl', id = 'page-title' } = Astro.props;
+const words = title.toUpperCase().split(/\s+/);
+const tilts = [-9, 11, -5];
+const depths = [0.9, 0.6, 1.2];
+---
+<header class:list={['phd', `phd--${size}`, { 'phd--room': !!tone }]} style={tone ? `--bg:${tone}` : undefined} data-play-hero>
+  {!tone && <div class="phd__glow" aria-hidden="true"></div>}
+  <div class="wrap phd__inner">
+    <slot name="top" />
+    {kicker && <p class="kicker phd__kicker" style={`--kicker-dot:${dot}`} data-ph-fade>{kicker}</p>}
+    <h1 class="phd__title" id={id}>
+      <span class="visually-hidden">{title}</span>
+      <span aria-hidden="true">
+        {words.map((w, i) => (
+          <>
+            <span class="phd__w">{[...w].map((ch) => <span class="phd__l" data-l>{ch}</span>)}</span>{i < words.length - 1 && ' '}
+          </>
+        ))}
+      </span>
+    </h1>
+    {lead && <p class="phd__lead" data-ph-fade>{lead}</p>}
+    <slot />
+  </div>
+  {stickers.length > 0 && (
+    <div class="phd__stickers" aria-hidden="true">
+      {stickers.slice(0, 3).map((s, i) => (
+        <span class:list={['phd__s', `phd__s--${i + 1}`]} data-ph-sticker data-depth={depths[i]}>
+          <Sticker name={s} tilt={tilts[i]} />
+        </span>
+      ))}
+    </div>
+  )}
+</header>
+
+<style>
+  .phd { position: relative; overflow: clip; padding-top: calc(var(--nav-h) + var(--s-8)); padding-bottom: var(--s-8); }
+  .phd--room {
+    background: var(--bg);
+    color: var(--ink);
+    margin-inline: clamp(8px, 1.4vw, 24px);
+    border-radius: 0 0 var(--r-xl) var(--r-xl);
+    --fg: var(--ink);
+    --fg-2: var(--ink-2);
+  }
+  .phd__glow {
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    top: 30%;
+    height: 50%;
+    background: var(--spectrum);
+    background-size: 200% 100%;
+    filter: blur(100px);
+    opacity: 0.2;
+    border-radius: 50%;
+    animation: phd-drift 16s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes phd-drift { to { background-position: 200% 0; } }
+  .phd__inner { position: relative; z-index: 1; display: grid; gap: var(--s-5); }
+  .phd__kicker { justify-self: start; }
+  .phd--room .phd__kicker { background: rgb(255 255 255 / 0.72); }
+  .phd__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-stretch: 75%;
+    line-height: 0.84;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+    max-width: 11ch;
+    user-select: none;
+  }
+  .phd--xl .phd__title { font-size: clamp(4rem, 13.5vw, 13.5rem); }
+  .phd--l .phd__title { font-size: clamp(3.25rem, 10vw, 10rem); max-width: 13ch; }
+  .phd--m .phd__title { font-size: clamp(2.75rem, 7vw, 7.25rem); max-width: 16ch; line-height: 0.88; }
+  .phd--s .phd__title { font-size: clamp(2.4rem, 5.2vw, 5.25rem); max-width: 20ch; line-height: 0.9; }
+  .phd__w { display: inline-block; white-space: nowrap; }
+  .phd__l { display: inline-block; transition: color 0.4s var(--ease-register); }
+  .phd__l.is-hot { transition-duration: 0.05s; }
+  .phd__lead { font-size: var(--t-lead); line-height: 1.32; max-width: 40ch; color: var(--fg-2); font-weight: 450; text-wrap: pretty; }
+  .phd__stickers { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+  .phd__s { position: absolute; display: block; pointer-events: auto; cursor: grab; }
+  .phd__s :global(.sticker) { --size: 100%; width: 100%; }
+  .phd__s--1 { width: clamp(84px, 13vw, 210px); right: var(--margin); top: calc(var(--nav-h) + 28px); }
+  .phd__s--2 { width: clamp(44px, 5.5vw, 88px); right: calc(var(--margin) + clamp(96px, 15vw, 250px)); top: calc(var(--nav-h) + 12px); }
+  .phd__s--3 { display: none; }
+  @media (min-width: 1024px) {
+    .phd__s--3 { display: block; width: clamp(90px, 8vw, 130px); right: calc(var(--margin) + 4vw); bottom: 16%; }
+  }
+  @media (max-width: 699px) {
+    .phd__s--1 { top: calc(var(--nav-h) + 8px); }
+    .phd__s--2 { top: calc(var(--nav-h) + 4px); }
+  }
+  @media (prefers-reduced-motion: reduce) { .phd__glow { animation: none; } }
+</style>

@@ -1,0 +1,178 @@
+---
+import { nav, person } from '../data/site';
+interface Props { current?: string; count?: number; contact?: boolean }
+const { current = '', count, contact = true } = Astro.props;
+const talk = contact ? '#contact' : '/#contact';
+const isCurrent = (href: string) => (href === '/' ? current === '/' : current.startsWith(href));
+const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
+---
+<header class="nav" data-nav>
+  <div class="nav__bar">
+    <a class="nav__home" href="/" aria-label={`${person.name} — home`}>
+      <span class="nav__logo" aria-hidden="true"><i></i></span>
+      <span class="nav__name">{person.name}</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <ul role="list">
+        {nav.map((item, i) => (
+          <li>
+            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined} style={`--dot:${dots[i % dots.length]}`}>
+              <span>{item.label}</span>
+              {item.label === 'Work' && count ? <sup class="nav__count num">{count}</sup> : null}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <a class="nav__cta" href={talk}>Let’s talk</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+      <span data-menu-label>Menu</span>
+      <span class="nav__toggle-mark" aria-hidden="true"></span>
+    </button>
+    <div class="progress" data-progress aria-hidden="true">
+      <span class="progress__fill" data-progress-fill></span>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="site-menu" data-menu hidden>
+  <nav aria-label="Menu" class="menu__inner wrap">
+    <ul role="list" class="menu__list">
+      <li><a href="/" data-menu-item>Home</a></li>
+      {nav.map((item) => (<li><a href={item.href} data-menu-item>{item.label}</a></li>))}
+      <li><a href={talk} data-menu-item>Let’s talk</a></li>
+    </ul>
+    <p class="menu__foot">
+      <a href={`mailto:${person.email}`}>{person.email}</a>
+      <span>{person.location}</span>
+    </p>
+  </nav>
+</div>
+
+<style>
+  .nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 50;
+    padding: 12px var(--margin) 0;
+    pointer-events: none;
+    transition: transform var(--d-line) var(--ease-register);
+  }
+  .nav.is-tucked { transform: translateY(-120%); }
+  /* Keyboard focus inside the nav shows it at once (no slide), so a focused link is never off-screen. */
+  .nav:focus-within { transform: none; transition: none; }
+  :global(.menu-open) .nav { transform: none; }
+  .nav__bar {
+    position: relative;
+    pointer-events: auto;
+    max-width: calc(var(--max) - 2 * var(--margin));
+    margin-inline: auto;
+    height: calc(var(--nav-h) - 16px);
+    display: flex;
+    align-items: center;
+    gap: var(--s-4);
+    padding: 0 8px 0 18px;
+    border-radius: var(--r-pill);
+    background: rgb(255 255 255 / 0.86);
+    backdrop-filter: blur(14px) saturate(1.4);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+    color: var(--ink);
+    box-shadow: 0 0 0 1px rgb(22 18 31 / 0.06), var(--shadow-1);
+    overflow: hidden;
+  }
+  .nav__home { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; min-height: 44px; }
+  .nav__logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: conic-gradient(from 200deg, #ff5a36, #ff4fa3, #a15cff, #5b3df5, #2e6bff, #19c7b8, #c5f03a, #ffc933, #ff5a36);
+    display: grid;
+    place-items: center;
+    flex: none;
+    transition: transform 0.8s var(--ease-pop);
+  }
+  .nav__logo i { width: 12px; height: 12px; border-radius: 50%; background: #fff; }
+  .nav__home:hover .nav__logo { transform: rotate(180deg) scale(1.08); }
+  .nav__name { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: 1.375rem; letter-spacing: 0; text-transform: uppercase; line-height: 1; }
+  .nav__links ul { display: none; gap: 2px; }
+  .nav__links a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: var(--r-pill);
+    font: 600 0.9375rem/1 var(--font-text);
+    text-decoration: none;
+    transition: background-color var(--d-small) var(--ease-register);
+  }
+  .nav__links a::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: var(--dot);
+    transform: scale(0);
+    transition: transform var(--d-small) var(--ease-pop);
+  }
+  .nav__links a:hover, .nav__links a[aria-current='page'] { background: var(--cloud); }
+  .nav__links a:hover::before, .nav__links a[aria-current='page']::before { transform: scale(1); }
+  .nav__count { font: 700 0.625rem/1 var(--font-text); color: var(--ink-2); align-self: flex-start; margin-top: 12px; }
+  .nav__cta {
+    display: none;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 20px;
+    border-radius: var(--r-pill);
+    background: var(--ink);
+    color: #fff;
+    font: 650 0.9375rem/1 var(--font-text);
+    text-decoration: none;
+    transition: transform var(--d-small) var(--ease-pop), background-color var(--d-small);
+  }
+  .nav__cta:hover { transform: scale(1.04); background: var(--violet); }
+  .nav__toggle { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 650 0.9375rem/1 var(--font-text); }
+  .nav__toggle-mark { width: 16px; height: 10px; position: relative; }
+  .nav__toggle-mark::before, .nav__toggle-mark::after { content: ''; position: absolute; left: 0; right: 0; height: 2px; border-radius: 2px; background: currentColor; transition: transform var(--d-small) var(--ease-register); }
+  .nav__toggle-mark::before { top: 0; }
+  .nav__toggle-mark::after { bottom: 0; }
+  .nav__toggle[aria-expanded='true'] .nav__toggle-mark::before { transform: translateY(4px) rotate(45deg); }
+  .nav__toggle[aria-expanded='true'] .nav__toggle-mark::after { transform: translateY(-4px) rotate(-45deg); }
+  @media (min-width: 900px) {
+    .nav__links ul { display: flex; }
+    .nav__cta { display: inline-flex; }
+    .nav__toggle { display: none; }
+  }
+  .progress { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; pointer-events: none; }
+  .progress__fill { display: block; height: 100%; width: 100%; background: var(--spectrum); transform: scaleX(0); transform-origin: left center; }
+
+  .menu {
+    position: fixed;
+    inset: 0;
+    z-index: 45;
+    background: var(--violet);
+    color: #fff;
+    padding-top: calc(var(--nav-h) + var(--s-6));
+    overflow-y: auto;
+  }
+  .menu[hidden] { display: none; }
+  .menu__inner { display: flex; flex-direction: column; justify-content: space-between; min-height: calc(100% - var(--s-6)); padding-bottom: var(--s-6); }
+  .menu__list li { overflow: hidden; }
+  .menu__list a {
+    display: block;
+    padding-block: 6px;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-stretch: 75%;
+    font-size: clamp(3.25rem, 17vw, 6rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .menu__list a:hover { color: var(--lime); }
+  .menu__foot { display: flex; flex-direction: column; gap: 8px; margin-top: var(--s-7); font-weight: 600; }
+  .menu__foot a { color: #fff; }
+  @media (min-width: 900px) { .menu { display: none !important; } }
+</style>

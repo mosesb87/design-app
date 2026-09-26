@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/moment-review/",
+    "status": 200,
+    "title": "Moment — PDP & Offer Review",
+    "h1": "Every number a shopper sees should be true.",
+    "description": "Independent PDP and offer review of drinkmoment.com by Mousa Batarseh — conflicting review counts, a 20% promise priced at 13.6%, and 43 sold-out products still published. For the Ecommerce Specialist role.",
+    "height": 1499
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/moment-review/ledger.html",
+    "status": 200,
+    "title": "Moment — The Ritual Ledger",
+    "h1": "",
+    "description": "What Moment's product pages say versus what the store does — an interactive ledger with fixes.",
+    "height": 1314
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/moment-review/pdp.html",
+    "status": 200,
+    "title": "Moment — The Product Page, Fixed",
+    "h1": "",
+    "description": "Moment's PDP now vs fixed, with a toggle for matching the subscribe price to the headline promise.",
+    "height": 1601
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/moment-review/plan.html",
+    "status": 200,
+    "title": "Moment — Catalog & Six-Week Plan",
+    "h1": "",
+    "description": "Catalog hygiene findings and the first six weeks for Moment's Ecommerce Specialist role.",
+    "height": 1751
+  }
+]

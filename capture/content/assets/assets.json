@@ -1,0 +1,1445 @@
+{
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb16-core-web-vitals.jpg": {
+    "file": "a80d3ff1ab1808f0.webp",
+    "bytes": 187266,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb15-copy-tiers.jpg": {
+    "file": "e40c78b594afe7e1.webp",
+    "bytes": 215442,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb15-copy-tiers-2048x1075.jpg": {
+    "file": "ceb8ec43adf57496.webp",
+    "bytes": 170900,
+    "type": "image/webp",
+    "w": 2048,
+    "h": 1075
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb14-four-metrics.jpg": {
+    "file": "51fc3e6faf3b1476.webp",
+    "bytes": 214388,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb13-sync-drift.jpg": {
+    "file": "ed6f31c598211f9e.webp",
+    "bytes": 250256,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb12-image-pipeline.jpg": {
+    "file": "fb41cff41b3ad332.webp",
+    "bytes": 212526,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb11-filter-coverage.jpg": {
+    "file": "7323658b87aad5a7.webp",
+    "bytes": 197154,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb10-category-tree.jpg": {
+    "file": "4916e6addddbc3d5.webp",
+    "bytes": 205346,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb09-platform-decision.jpg": {
+    "file": "25197a5f793c6403.webp",
+    "bytes": 253470,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb09-platform-decision-1024x538.jpg": {
+    "file": "04ace0e713a979c0.webp",
+    "bytes": 58366,
+    "type": "image/webp",
+    "w": 1024,
+    "h": 538
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb08-redirect-map-v2.jpg": {
+    "file": "4d50b119f73d742a.webp",
+    "bytes": 196230,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb08-redirect-map-v2-1024x538.jpg": {
+    "file": "ccd5ac9f62a572f3.webp",
+    "bytes": 48350,
+    "type": "image/webp",
+    "w": 1024,
+    "h": 538
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb07-sku-structure-v2.jpg": {
+    "file": "16d86781bf3f0a7a.webp",
+    "bytes": 251568,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb06-workflow-failure-red.jpg": {
+    "file": "eeb7a83e0e3b07f6.webp",
+    "bytes": 203262,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb05-seo-tiers-red.jpg": {
+    "file": "99649d885d8bf04a.webp",
+    "bytes": 198268,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb04-handoff-red.jpg": {
+    "file": "5688ef50bc8a025b.webp",
+    "bytes": 259962,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb03-menu-page-red.jpg": {
+    "file": "4c9f04567cead32e.webp",
+    "bytes": 220430,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb02-data-cleaning-red.jpg": {
+    "file": "0bb07bf022322f97.webp",
+    "bytes": 248402,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://work.mousabatarseh.com/wp-content/uploads/2026/08/mb01-field-mapping-red.jpg": {
+    "file": "ac22a23e67c35b49.webp",
+    "bytes": 204718,
+    "type": "image/webp",
+    "w": 2400,
+    "h": 1260
+  },
+  "https://mousabatarseh.com/reviews/assets/logo.svg": {
+    "file": "de25f41a354470dc.svg",
+    "bytes": 8061,
+    "type": "image/svg+xml"
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/reworked-400.webp": {
+    "file": "f88b97ef2711130f.webp",
+    "bytes": 24310,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/bran-400.webp": {
+    "file": "fa2d73d124c9e162.webp",
+    "bytes": 22554,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/petsafe-400.webp": {
+    "file": "5312f67bdb411c09.webp",
+    "bytes": 27202,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/highprofile-400.webp": {
+    "file": "7634de320c321602.webp",
+    "bytes": 29804,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/jars-400.webp": {
+    "file": "cb371311a4e2c331.webp",
+    "bytes": 29166,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/lume-400.webp": {
+    "file": "a6b40652e69f7db5.webp",
+    "bytes": 25232,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/dutchie-400.webp": {
+    "file": "cd8bb522584a540d.webp",
+    "bytes": 28050,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/salt-400.webp": {
+    "file": "9af0839a9777f62f.webp",
+    "bytes": 15480,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/vanguard-400.webp": {
+    "file": "8aa6f4e2a2d5e204.webp",
+    "bytes": 18170,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/oakwood-400.webp": {
+    "file": "0b7a4c947a98e008.webp",
+    "bytes": 16978,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/moment-400.webp": {
+    "file": "7125590019aa29f6.webp",
+    "bytes": 16006,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/jbtools-400.webp": {
+    "file": "4f8ae266967eeb38.webp",
+    "bytes": 19144,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/dunhams-400.webp": {
+    "file": "90d0c5bf6c444ed6.webp",
+    "bytes": 16202,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/biotrust-400.webp": {
+    "file": "c7744bbd8cff6d6e.webp",
+    "bytes": 16642,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/bestlife-400.webp": {
+    "file": "fb34f7e5720c1f7f.webp",
+    "bytes": 16244,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/behealth-400.webp": {
+    "file": "db51f577532ad4a4.webp",
+    "bytes": 14336,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/aedit-400.webp": {
+    "file": "05368bfeee1513be.webp",
+    "bytes": 14366,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/dehanche-400.webp": {
+    "file": "dc6f9d0c9df4b01c.webp",
+    "bytes": 19692,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/hayhouse-400.webp": {
+    "file": "8b899e0d21992ed6.webp",
+    "bytes": 23088,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/carhartt-400.webp": {
+    "file": "cd1ff368c93bf5d7.webp",
+    "bytes": 23856,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/icr-400.webp": {
+    "file": "bf59f89b7bfbcfe6.webp",
+    "bytes": 24556,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/diamedical-400.webp": {
+    "file": "3ec0bb05ac74b225.webp",
+    "bytes": 25456,
+    "type": "image/webp",
+    "w": 400,
+    "h": 625
+  },
+  "https://mousabatarseh.com/reviews/img/hero/petsafe-700.webp": {
+    "file": "04d45e26aa65b0e8.webp",
+    "bytes": 69998,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/highprofile-700.webp": {
+    "file": "755ddfb7d7b8bcbe.webp",
+    "bytes": 76432,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/jars-700.webp": {
+    "file": "29b5061f37044c0a.webp",
+    "bytes": 72350,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/lume-700.webp": {
+    "file": "68f90c4bb896f516.webp",
+    "bytes": 66266,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/dutchie-700.webp": {
+    "file": "4afaecd06f340d25.webp",
+    "bytes": 71610,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/petsafe.webp": {
+    "file": "07190598d22888e9.webp",
+    "bytes": 149092,
+    "type": "image/webp",
+    "w": 1100,
+    "h": 1719
+  },
+  "https://mousabatarseh.com/reviews/img/hero/highprofile.webp": {
+    "file": "02fb3ebb15402847.webp",
+    "bytes": 185896,
+    "type": "image/webp",
+    "w": 1100,
+    "h": 1719
+  },
+  "https://mousabatarseh.com/reviews/img/hero/jars.webp": {
+    "file": "e4473623811b3288.webp",
+    "bytes": 168126,
+    "type": "image/webp",
+    "w": 1100,
+    "h": 1719
+  },
+  "https://mousabatarseh.com/reviews/img/hero/lume.webp": {
+    "file": "577f663b66d81b53.webp",
+    "bytes": 162822,
+    "type": "image/webp",
+    "w": 1100,
+    "h": 1719
+  },
+  "https://mousabatarseh.com/reviews/img/hero/vanguard.webp": {
+    "file": "1aa234b88ad23e05.webp",
+    "bytes": 106012,
+    "type": "image/webp",
+    "w": 1100,
+    "h": 1719
+  },
+  "https://mousabatarseh.com/reviews/img/hero/jbtools.webp": {
+    "file": "9cb133f4a1fdaa5e.webp",
+    "bytes": 121532,
+    "type": "image/webp",
+    "w": 1100,
+    "h": 1719
+  },
+  "https://mousabatarseh.com/reviews/img/hero/salt.webp": {
+    "file": "bd983c15aaef11fd.webp",
+    "bytes": 92964,
+    "type": "image/webp",
+    "w": 1100,
+    "h": 1719
+  },
+  "https://mousabatarseh.com/reviews/img/hero/dunhams.webp": {
+    "file": "deb778f23d0dd99b.webp",
+    "bytes": 103350,
+    "type": "image/webp",
+    "w": 1100,
+    "h": 1719
+  },
+  "https://mousabatarseh.com/reviews/img/hero/hayhouse.webp": {
+    "file": "580561ac53121a95.webp",
+    "bytes": 139196,
+    "type": "image/webp",
+    "w": 1100,
+    "h": 1719
+  },
+  "https://mousabatarseh.com/reviews/img/hero/carhartt.webp": {
+    "file": "829b7324cc546e3c.webp",
+    "bytes": 151976,
+    "type": "image/webp",
+    "w": 1100,
+    "h": 1719
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp": {
+    "file": "923d7eb45d6a5555.webp",
+    "bytes": 92578,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/jars.webp": {
+    "file": "34412ac47ea66afa.webp",
+    "bytes": 87120,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/lume.webp": {
+    "file": "feeb9819181f8778.webp",
+    "bytes": 80122,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/petsafe.webp": {
+    "file": "168103e69183a993.webp",
+    "bytes": 81312,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp": {
+    "file": "7ed8828138d03bcb.webp",
+    "bytes": 54202,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/oakwood.webp": {
+    "file": "ef745f4a85f119bf.webp",
+    "bytes": 52196,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/salt.webp": {
+    "file": "7c83ee3f3558bb89.webp",
+    "bytes": 49324,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/dunhams.webp": {
+    "file": "311b83ab7e6dacb2.webp",
+    "bytes": 53284,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/dutchie.webp": {
+    "file": "5a744bb80d87ce88.webp",
+    "bytes": 86186,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/biotrust.webp": {
+    "file": "925f0c21ff0e8cbc.webp",
+    "bytes": 51270,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/aedit.webp": {
+    "file": "f8b445d1f7639411.webp",
+    "bytes": 47736,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/jbtools.webp": {
+    "file": "7527d28696c502a2.webp",
+    "bytes": 61584,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/portfolio-home/social-preview-4c7b5bd03003.jpg": {
+    "file": "e1fc5ecb8eb0d6ba.jpg",
+    "bytes": 168102,
+    "type": "image/jpeg",
+    "w": 1200,
+    "h": 630
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/08/core-web-vitals-elementor-wordpress-cover-1-1024x538.jpg": {
+    "file": "e14210135a79606c.jpg",
+    "bytes": 31474,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/08/wordpress-event-website-tickets-vendors-analytics-cover-1-1024x538.jpg": {
+    "file": "5da07f391eef802f.jpg",
+    "bytes": 36247,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/07/writing-product-descriptions-at-scale-cover-1-1024x538.jpg": {
+    "file": "53a09f35309b937c.jpg",
+    "bytes": 36759,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/07/what-managing-metro-detroit-small-business-sites-taught-me-cover-1-1024x538.jpg": {
+    "file": "ec8c68d2dfc9eeb7.jpg",
+    "bytes": 31410,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/07/the-backup-habit-that-saved-a-clients-store-cover-1-1024x538.jpg": {
+    "file": "f049a80710f4f4fa.jpg",
+    "bytes": 38888,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/07/ga4-small-store-measurement-cover-1-1024x538.jpg": {
+    "file": "9d366d7967157829.jpg",
+    "bytes": 31895,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/06/inventory-price-sync-drift-cover-1-1024x538.jpg": {
+    "file": "0ea52ce97d0dbb21.jpg",
+    "bytes": 25698,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/06/restaurant-websites-that-work-on-a-phone-cover-1-1024x538.jpg": {
+    "file": "e0c2eca75af4133f.jpg",
+    "bytes": 36014,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/06/product-images-at-catalog-scale-cover-1-1024x538.jpg": {
+    "file": "c0f7476cfccd54c0.jpg",
+    "bytes": 37652,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/05/product-photos-without-a-studio-cover-1-1024x538.jpg": {
+    "file": "579a14e65e1e4220.jpg",
+    "bytes": 37209,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/05/product-filters-attributes-ecommerce-cover-1-1024x538.jpg": {
+    "file": "4f116ce9a26bfb47.jpg",
+    "bytes": 26971,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/04/category-structure-large-catalog-cover-1-1024x538.jpg": {
+    "file": "ac854c7cba65d99e.jpg",
+    "bytes": 33912,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/04/contact-forms-that-actually-reach-the-inbox-cover-1-1024x538.jpg": {
+    "file": "e97accfef9541d30.jpg",
+    "bytes": 34306,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/04/making-a-slow-wordpress-site-faster-without-a-rebuild-cover-1-1024x538.jpg": {
+    "file": "7ea85d4f43552483.jpg",
+    "bytes": 28268,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/04/shopify-or-woocommerce-decision-cover-1-1024x538.jpg": {
+    "file": "bedcaa4eab446ab9.jpg",
+    "bytes": 41517,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/03/redirect-mapping-ecommerce-migration-cover-1-1024x538.jpg": {
+    "file": "2215c900f57446a9.jpg",
+    "bytes": 27798,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/03/keeping-store-inventory-in-sync-with-the-warehouse-cover-1-1024x538.jpg": {
+    "file": "8329bf48f6b5d95a.jpg",
+    "bytes": 28148,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/03/sku-structure-product-catalog-cover-1-1024x538.jpg": {
+    "file": "8094c1f7170ed01e.jpg",
+    "bytes": 28617,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/02/b2b-collections-that-match-how-retailers-shop-cover-1-1024x538.jpg": {
+    "file": "c35a30dcdbd7d8ae.jpg",
+    "bytes": 40928,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/02/web-project-workflow-failure-points-cover-1-1024x538.jpg": {
+    "file": "967ab55060b8e858.jpg",
+    "bytes": 36669,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/02/my-rules-before-installing-any-wordpress-plugin-cover-1-1024x538.jpg": {
+    "file": "396eb40630736f7a.jpg",
+    "bytes": 31031,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/01/on-page-seo-large-product-catalog-cover-1-1024x538.jpg": {
+    "file": "24b86fee7c0ab44a.jpg",
+    "bytes": 32711,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/01/elementor-client-handoff-cover-1-1024x538.jpg": {
+    "file": "916f7ab5be38ff2f.jpg",
+    "bytes": 33862,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2026/01/cleaning-up-404s-and-redirects-after-a-site-migration-cover-1-1024x538.jpg": {
+    "file": "f3bb9241e5bb4a40.jpg",
+    "bytes": 27627,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/12/client-editable-restaurant-menu-wordpress-cover-1-1024x538.jpg": {
+    "file": "b2d64727f2936444.jpg",
+    "bytes": 38701,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/12/shopify-wholesale-store-case-packs-and-buyer-accounts-cover-1-1024x538.jpg": {
+    "file": "a8c45ff67507ed67.jpg",
+    "bytes": 39915,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/11/writing-product-descriptions-when-the-supplier-gives-you-nothing-cover-1-1024x538.jpg": {
+    "file": "d6f58d0a03f43504.jpg",
+    "bytes": 29640,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/11/cleaning-product-data-csv-cover-1-1024x538.jpg": {
+    "file": "88c05c3ded4d4538.jpg",
+    "bytes": 32032,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/11/product-catalog-migration-field-mapping-cover-1-1024x538.jpg": {
+    "file": "85e92fdfd01b2ab5.jpg",
+    "bytes": 37686,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/11/three-search-console-reports-i-actually-open-cover-1-1024x538.jpg": {
+    "file": "ebe3048d8bc72b33.jpg",
+    "bytes": 32515,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/10/what-a-webmaster-actually-does-all-week-cover-1-1024x538.jpg": {
+    "file": "3f233954cb62f2b0.jpg",
+    "bytes": 35120,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/09/updating-hundreds-of-prices-without-breaking-the-store-cover-1-1024x538.jpg": {
+    "file": "5a0b0c719f282711.jpg",
+    "bytes": 37996,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/08/woocommerce-csv-import-checklist-before-it-goes-live-cover-1-1024x538.jpg": {
+    "file": "bd9ba5a8d1adcab1.jpg",
+    "bytes": 37661,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/08/first-90-minutes-with-a-new-woocommerce-store-cover-1-1024x538.jpg": {
+    "file": "8d3bad50d5569955.jpg",
+    "bytes": 29370,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/08/skus-variants-and-attributes-messy-product-data-cover-1-1024x538.jpg": {
+    "file": "965607fe22452eec.jpg",
+    "bytes": 43129,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/wp-content/uploads/2025/07/why-i-still-do-the-spreadsheet-work-myself-cover-1-1024x538.jpg": {
+    "file": "fb05c77119a26c8c.jpg",
+    "bytes": 35885,
+    "type": "image/jpeg",
+    "w": 1024,
+    "h": 538
+  },
+  "https://mousabatarseh.com/reviews/img/hero/reworked-700.webp": {
+    "file": "f11ad3c1c0fb4258.webp",
+    "bytes": 58274,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/carhartt.webp": {
+    "file": "5976828381181330.webp",
+    "bytes": 76522,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/hero/bran-700.webp": {
+    "file": "9235f78381320e2d.webp",
+    "bytes": 53754,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/salt-700.webp": {
+    "file": "57008eddcb3077e0.webp",
+    "bytes": 37376,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/vanguard-700.webp": {
+    "file": "ab6cd608b6727626.webp",
+    "bytes": 43734,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/oakwood-700.webp": {
+    "file": "908388c170b4216c.webp",
+    "bytes": 41382,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/moment.webp": {
+    "file": "c7baa5c97d8e5a06.webp",
+    "bytes": 48726,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/hero/moment-700.webp": {
+    "file": "137d9b347cf4b6c3.webp",
+    "bytes": 38116,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/jbtools-700.webp": {
+    "file": "1a13b446c52fdc24.webp",
+    "bytes": 49666,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/dunhams-700.webp": {
+    "file": "5a34c7cbe2503577.webp",
+    "bytes": 41520,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/biotrust-700.webp": {
+    "file": "dee956b1dedf41d4.webp",
+    "bytes": 40412,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/bestlife.webp": {
+    "file": "40ef9d9c17983102.webp",
+    "bytes": 49362,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/hero/bestlife-700.webp": {
+    "file": "1129a6515fd0c6d3.webp",
+    "bytes": 38734,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/behealth.webp": {
+    "file": "77f7182409202275.webp",
+    "bytes": 47104,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/hero/behealth-700.webp": {
+    "file": "85d465fa5e9c1207.webp",
+    "bytes": 36384,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/aedit-700.webp": {
+    "file": "a4210822a56d1528.webp",
+    "bytes": 35740,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/dehanche.webp": {
+    "file": "2bad5d134924ea2e.webp",
+    "bytes": 61506,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/hero/dehanche-700.webp": {
+    "file": "02f5a5bc8b871eec.webp",
+    "bytes": 49796,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/hayhouse.webp": {
+    "file": "143e63d334012d90.webp",
+    "bytes": 69666,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/hero/hayhouse-700.webp": {
+    "file": "9cc178685befeac4.webp",
+    "bytes": 57558,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/hero/carhartt-700.webp": {
+    "file": "77344be42a6070fe.webp",
+    "bytes": 61042,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/icr.webp": {
+    "file": "d38bcb215d9a4daf.webp",
+    "bytes": 71960,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/hero/icr-700.webp": {
+    "file": "5e45e4288d598482.webp",
+    "bytes": 58662,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/thumbs/diamedical.webp": {
+    "file": "f1dd55d00b3e75b5.webp",
+    "bytes": 78298,
+    "type": "image/webp",
+    "w": 720,
+    "h": 1125
+  },
+  "https://mousabatarseh.com/reviews/img/hero/diamedical-700.webp": {
+    "file": "145c537b2b1f0a9c.webp",
+    "bytes": 62644,
+    "type": "image/webp",
+    "w": 700,
+    "h": 1094
+  },
+  "https://mousabatarseh.com/reviews/img/builds/changeatlas-500.webp": {
+    "file": "ef6e09677532931b.webp",
+    "bytes": 11664,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/dealproof-500.webp": {
+    "file": "9effe483fb0446cc.webp",
+    "bytes": 12470,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/jobs-500.webp": {
+    "file": "1c28779ff8b0a98c.webp",
+    "bytes": 10156,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/asas-500.webp": {
+    "file": "17745e3cb21b3a2d.webp",
+    "bytes": 14448,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/ptee-500.webp": {
+    "file": "159a447930473719.webp",
+    "bytes": 13834,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/gardner-white-proposal-500.webp": {
+    "file": "eb88f54c2939ebb4.webp",
+    "bytes": 14282,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/reworked-review-500.webp": {
+    "file": "053899ac164fbc5d.webp",
+    "bytes": 14688,
+    "type": "image/webp",
+    "w": 500,
+    "h": 313
+  },
+  "https://mousabatarseh.com/reviews/img/builds/bran-review-500.webp": {
+    "file": "c367293f82d91fa8.webp",
+    "bytes": 18464,
+    "type": "image/webp",
+    "w": 500,
+    "h": 313
+  },
+  "https://mousabatarseh.com/reviews/img/builds/bran-proposal-500.webp": {
+    "file": "5d430b6049c4be43.webp",
+    "bytes": 16300,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/sapienceai-500.webp": {
+    "file": "131f8a651b9415fe.webp",
+    "bytes": 15966,
+    "type": "image/webp",
+    "w": 500,
+    "h": 313
+  },
+  "https://mousabatarseh.com/reviews/img/builds/firefly-500.webp": {
+    "file": "fb39cf233141bd5c.webp",
+    "bytes": 8594,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/mawtini-500.webp": {
+    "file": "1147304bd5806d9e.webp",
+    "bytes": 18762,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/larkspur-500.webp": {
+    "file": "6251b7c7a620a4d6.webp",
+    "bytes": 19286,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/btee-500.webp": {
+    "file": "67544c44ecfa4182.webp",
+    "bytes": 13834,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/rmc-proposal-500.webp": {
+    "file": "a8aaf2b8773b87ed.webp",
+    "bytes": 12978,
+    "type": "image/webp",
+    "w": 500,
+    "h": 312
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-lab.webp": {
+    "file": "4a6d3fa8ac8255f0.webp",
+    "bytes": 59654,
+    "type": "image/webp",
+    "w": 900,
+    "h": 563
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-academy.webp": {
+    "file": "889af860fe252bda.webp",
+    "bytes": 64850,
+    "type": "image/webp",
+    "w": 900,
+    "h": 563
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-review.webp": {
+    "file": "fa368d68020b7b9a.webp",
+    "bytes": 33856,
+    "type": "image/webp",
+    "w": 900,
+    "h": 563
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-training.webp": {
+    "file": "c670f66b269a38e8.webp",
+    "bytes": 36128,
+    "type": "image/webp",
+    "w": 900,
+    "h": 563
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-intro.webp": {
+    "file": "03e78fbcdd6455dc.webp",
+    "bytes": 36364,
+    "type": "image/webp",
+    "w": 900,
+    "h": 563
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-workbook.webp": {
+    "file": "110f92162d9ea762.webp",
+    "bytes": 62820,
+    "type": "image/webp",
+    "w": 900,
+    "h": 563
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-pathfinder.webp": {
+    "file": "b0eb87da1b65fd61.webp",
+    "bytes": 26242,
+    "type": "image/webp",
+    "w": 900,
+    "h": 563
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-decision-brief.webp": {
+    "file": "c67c5a79e5389671.webp",
+    "bytes": 20880,
+    "type": "image/webp",
+    "w": 900,
+    "h": 563
+  },
+  "https://mousabatarseh.com/reviews/img/builds/changeatlas-demo-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/csv-mapper-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/seo-tools-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-lab-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/halden-medical-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/northgate-group-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/hod-os-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/mousa-portfolio-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/deals-os-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/commerce-studio-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/the-lab-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/ai-academy-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/asas-studio-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-academy-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-review-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-training-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-intro-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-workbook-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-pathfinder-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/diamedical-decision-brief-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/hod-training-pack-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/projects-archive-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/work-portfolio-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/eat-with-samar-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/universal-wholesale-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/united-textile-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/full-house-wholesale-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/great-lakes-cigar-festival-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/wildbills-drive-menu-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/wildbills-st-patrick-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/mr-vapor-disposable-menu-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/wild-wednesdays-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/jabal-amman-publishers-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/wildbills-fathers-day-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/ophir-publishers-jordan-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/samona-hospitality-group-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/wildbills-christmas-sale-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/ptee-admissions-portal-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/ptee-courses-programs-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/american-hot-wheel-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/st-mary-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/ptee-renewal-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reviews/img/builds/ptee-online-500.webp": {
+    "error": 404
+  },
+  "https://mousabatarseh.com/reworked-review/assets/ev-st-patricks.webp": {
+    "file": "127e87dfc7d7333e.webp",
+    "bytes": 34198,
+    "type": "image/webp",
+    "w": 773,
+    "h": 462
+  },
+  "https://mousabatarseh.com/reworked-review/assets/ev-shirt-jacs-test.webp": {
+    "file": "8fa4900a9f31f368.webp",
+    "bytes": 32280,
+    "type": "image/webp",
+    "w": 773,
+    "h": 462
+  },
+  "https://mousabatarseh.com/reworked-review/assets/ev-size-facet.webp": {
+    "file": "d1aa67a04382233c.webp",
+    "bytes": 39314,
+    "type": "image/webp",
+    "w": 936,
+    "h": 829
+  },
+  "https://mousabatarseh.com/reworked-review/assets/ev-short-above-new.webp": {
+    "file": "c1bc8fedfb3abbb7.webp",
+    "bytes": 24052,
+    "type": "image/webp",
+    "w": 1097,
+    "h": 445
+  },
+  "https://mousabatarseh.com/dehanche-review/img/ev-soldout-slot.webp": {
+    "file": "c094b0efd948a54d.webp",
+    "bytes": 16018,
+    "type": "image/webp",
+    "w": 560,
+    "h": 496
+  },
+  "https://mousabatarseh.com/dehanche-review/img/ev-preorder.webp": {
+    "file": "1ab045e4c6b0f357.webp",
+    "bytes": 24842,
+    "type": "image/webp",
+    "w": 390,
+    "h": 844
+  },
+  "https://mousabatarseh.com/dehanche-review/img/ev-sizesheet.webp": {
+    "file": "d3175884e2190ca5.webp",
+    "bytes": 22048,
+    "type": "image/webp",
+    "w": 390,
+    "h": 844
+  },
+  "https://mousabatarseh.com/dehanche-review/img/ev-badge.webp": {
+    "file": "58f3be13d94b99ef.webp",
+    "bytes": 8754,
+    "type": "image/webp",
+    "w": 570,
+    "h": 210
+  },
+  "https://mousabatarseh.com/dehanche-review/img/constance-black-silver.webp": {
+    "file": "13e3eb54d31c6b20.webp",
+    "bytes": 12394,
+    "type": "image/webp",
+    "w": 480,
+    "h": 720
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ev-price-hh.webp": {
+    "file": "047239669f110aa4.webp",
+    "bytes": 34498,
+    "type": "image/webp",
+    "w": 900,
+    "h": 615
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ev-price-shop.webp": {
+    "file": "55c9d887ec8390de.webp",
+    "bytes": 36726,
+    "type": "image/webp",
+    "w": 900,
+    "h": 625
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ev-ychyl-a.webp": {
+    "file": "ce1843fe48b5424a.webp",
+    "bytes": 6976,
+    "type": "image/webp",
+    "w": 700,
+    "h": 280
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ev-ychyl-b.webp": {
+    "file": "aee5b1bac7813947.webp",
+    "bytes": 6994,
+    "type": "image/webp",
+    "w": 700,
+    "h": 280
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ev-filter-format.webp": {
+    "file": "0807af2812249475.webp",
+    "bytes": 12974,
+    "type": "image/webp",
+    "w": 300,
+    "h": 480
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ev-filter-authors.webp": {
+    "file": "66f3575a3bd482f4.webp",
+    "bytes": 10896,
+    "type": "image/webp",
+    "w": 300,
+    "h": 300
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ev-spanish.webp": {
+    "file": "aa6e230e94739bde.webp",
+    "bytes": 24082,
+    "type": "image/webp",
+    "w": 900,
+    "h": 562
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ev-nav.webp": {
+    "file": "5c3ac7b90e202447.webp",
+    "bytes": 3672,
+    "type": "image/webp",
+    "w": 900,
+    "h": 75
+  },
+  "https://mousabatarseh.com/icr-review/img/tpu2-before.jpg": {
+    "file": "73f8ce33165890aa.jpg",
+    "bytes": 173545,
+    "type": "image/jpeg",
+    "w": 1200,
+    "h": 1200
+  },
+  "https://mousabatarseh.com/icr-review/img/tpu2-after.jpg": {
+    "file": "d81dd7254f089238.jpg",
+    "bytes": 178243,
+    "type": "image/jpeg",
+    "w": 1200,
+    "h": 1200
+  },
+  "https://mousabatarseh.com/icr-review/img/tpu2-angle.jpg": {
+    "file": "3871d9ee61cd6471.jpg",
+    "bytes": 47826,
+    "type": "image/jpeg",
+    "w": 600,
+    "h": 600
+  },
+  "https://mousabatarseh.com/icr-review/img/tpu2-label.jpg": {
+    "file": "e801af351731b3e6.jpg",
+    "bytes": 61852,
+    "type": "image/jpeg",
+    "w": 600,
+    "h": 600
+  },
+  "https://mousabatarseh.com/diamedical-review/evidence/compare-desktop.png": {
+    "file": "9afc53e25e084a65.png",
+    "bytes": 65383,
+    "type": "image/png",
+    "w": 1430,
+    "h": 894
+  },
+  "https://mousabatarseh.com/dehanche-review/img/bx/koru-black-gold.webp": {
+    "file": "12572e9a00c6c5bf.webp",
+    "bytes": 10486,
+    "type": "image/webp",
+    "w": 320,
+    "h": 320
+  },
+  "https://mousabatarseh.com/dehanche-review/img/bx/koru-choker-gold.webp": {
+    "file": "eae0a01630b15c1f.webp",
+    "bytes": 8840,
+    "type": "image/webp",
+    "w": 320,
+    "h": 320
+  },
+  "https://mousabatarseh.com/dehanche-review/img/bx/koru-dangle-earrings-gold.webp": {
+    "file": "d141e065ddecc7ae.webp",
+    "bytes": 11010,
+    "type": "image/webp",
+    "w": 320,
+    "h": 320
+  },
+  "https://mousabatarseh.com/diamedical-review/evidence/home-desktop.png": {
+    "file": "0524485b665cdb2b.png",
+    "bytes": 1130093,
+    "type": "image/png",
+    "w": 1430,
+    "h": 894
+  },
+  "https://mousabatarseh.com/diamedical-review/evidence/home-mobile.png": {
+    "file": "34e456ad131e04a1.png",
+    "bytes": 323727,
+    "type": "image/png",
+    "w": 380,
+    "h": 822
+  },
+  "https://mousabatarseh.com/diamedical-review/evidence/beds-desktop.png": {
+    "file": "e3940ef828bf9999.png",
+    "bytes": 95830,
+    "type": "image/png",
+    "w": 1430,
+    "h": 894
+  },
+  "https://www.diamedicalusa.com/ProductImages/BS029901_media_01.jpg?resizeid=12&resizeh=300&resizew=300": {
+    "file": "2cf993fc33a9fb97.jpg",
+    "bytes": 12971,
+    "type": "image/jpeg",
+    "w": 300,
+    "h": 300
+  },
+  "https://www.diamedicalusa.com/ProductImages/BS130116-Scale_media_01.jpg?resizeid=13&resizeh=600&resizew=600": {
+    "file": "16232b1ee46167ba.jpg",
+    "bytes": 62720,
+    "type": "image/jpeg",
+    "w": 600,
+    "h": 600
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ai-cover.webp": {
+    "file": "021ae06241b69eb9.webp",
+    "bytes": 17848,
+    "type": "image/webp",
+    "w": 252,
+    "h": 390
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ai-interior.webp": {
+    "file": "d393d376c5fd6e89.webp",
+    "bytes": 7174,
+    "type": "image/webp",
+    "w": 251,
+    "h": 390
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/sets/ask-and-it-is-given.webp": {
+    "file": "4286312a34ee6760.webp",
+    "bytes": 13822,
+    "type": "image/webp",
+    "w": 240,
+    "h": 359
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/sets/ask-and-it-is-given-cards.webp": {
+    "file": "98d60f294172018a.webp",
+    "bytes": 15266,
+    "type": "image/webp",
+    "w": 240,
+    "h": 336
+  }
+}

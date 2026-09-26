@@ -1,0 +1,303 @@
+{
+  "slug": "monolayer",
+  "url": "https://www.monolayer.dev/",
+  "probedAt": "2026-09-26T16:41:14.217Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://www.monolayer.dev/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.transition"
+      ]
+    },
+    "title": "monolayer // self-running software in your own cloud",
+    "description": "monolayer turns code or intent into a running, self-managed system in your own cloud — handling setup, deployment, scaling, recovery, and system health.",
+    "headings": [
+      "H2: how to setup a account in monolayer",
+      "H1: monolayer shifts software toward what it should be: a system that runs, maintains, and sca",
+      "H2: writing code is only one part of getting software live. setup, deployment, scaling, recove",
+      "H2: monolayer takes code or intent and turns it into a running, self-managed system in your ow",
+      "H2: the system",
+      "H2: connect your cloud",
+      "H2: connect your repository",
+      "H2: push intent",
+      "H2: what used to be managed by hand, is now automated with monolayer",
+      "H2: you work from intent, not infrastructure. the system understands what needs to happen and ",
+      "H2: Your infrastructure runs in your AWS account and is billed directly by AWS"
+    ],
+    "libs": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": true,
+      "swiper": false,
+      "webflow": true,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 1,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 16,
+      "pinSpacers": 1,
+      "sticky": 1,
+      "fixed": 4,
+      "links": 40,
+      "images": 0
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "PPFrama"
+    ],
+    "type": {
+      "body": "PPFrama, Arial, sans-serif",
+      "h1Family": "PPFrama, Arial, sans-serif",
+      "h1Size": "72px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(229, 229, 229)",
+      "text": "rgb(0, 0, 0)"
+    },
+    "scroll": {
+      "height": 14303,
+      "viewports": 15.9
+    },
+    "perf": {
+      "fcpMs": 676,
+      "domContentLoadedMs": 781,
+      "requests": 27,
+      "transferKB": 141
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 90,
+      "samples": [
+        "div.nav-main__progress-labels",
+        "div.shutter-scroll-transition__cell",
+        "div.shutter-scroll-transition__cell",
+        "div.shutter-scroll-transition__cell",
+        "div.shutter-scroll-transition__cell",
+        "div.shutter-scroll-transition__cell",
+        "div.shutter-scroll-transition__cell",
+        "div.shutter-scroll-transition__cell",
+        "div.shutter-scroll-transition__cell",
+        "div.shutter-scroll-transition__cell",
+        "div.shutter-scroll-transition__cell",
+        "div.shutter-scroll-transition__cell"
+      ],
+      "pinnedCandidates": [
+        "div.modal__collection.w-dyn-list",
+        "div.modal__list.w-dyn-items",
+        "div.modal__backdrop",
+        "div.nav__bg-overlay",
+        "div.system-visual__stage"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://www.monolayer.dev/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.transition"
+      ]
+    },
+    "title": "monolayer // self-running software in your own cloud",
+    "description": "monolayer turns code or intent into a running, self-managed system in your own cloud — handling setup, deployment, scaling, recovery, and system health.",
+    "headings": [
+      "H2: how to setup a account in monolayer",
+      "H1: monolayer shifts software toward what it should be: a system that runs, maintains, and sca",
+      "H2: writing code is only one part of getting software live. setup, deployment, scaling, recove",
+      "H2: monolayer takes code or intent and turns it into a running, self-managed system in your ow",
+      "H2: the system",
+      "H2: connect your cloud",
+      "H2: connect your repository",
+      "H2: push intent",
+      "H2: what used to be managed by hand, is now automated with monolayer",
+      "H2: you work from intent, not infrastructure. the system understands what needs to happen and ",
+      "H2: Your infrastructure runs in your AWS account and is billed directly by AWS"
+    ],
+    "libs": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": true,
+      "swiper": false,
+      "webflow": true,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 16,
+      "pinSpacers": 0,
+      "sticky": 1,
+      "fixed": 4,
+      "links": 40,
+      "images": 0
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "PPFrama"
+    ],
+    "type": {
+      "body": "PPFrama, Arial, sans-serif",
+      "h1Family": "PPFrama, Arial, sans-serif",
+      "h1Size": "72px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(229, 229, 229)",
+      "text": "rgb(0, 0, 0)"
+    },
+    "scroll": {
+      "height": 12143,
+      "viewports": 13.5
+    },
+    "perf": {
+      "fcpMs": 224,
+      "domContentLoadedMs": 323,
+      "requests": 25,
+      "transferKB": 141
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 142,
+      "samples": [
+        "div.nav-main__progress-labels",
+        "span",
+        "span",
+        "span",
+        "span",
+        "span",
+        "span",
+        "span",
+        "span",
+        "span",
+        "span",
+        "span"
+      ],
+      "pinnedCandidates": [
+        "div.modal__collection.w-dyn-list",
+        "div.modal__list.w-dyn-items",
+        "div.modal__backdrop",
+        "div.nav__bg-overlay"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://www.monolayer.dev/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.transition"
+      ]
+    },
+    "title": "monolayer // self-running software in your own cloud",
+    "description": "monolayer turns code or intent into a running, self-managed system in your own cloud — handling setup, deployment, scaling, recovery, and system health.",
+    "headings": [
+      "H2: how to setup a account in monolayer",
+      "H1: monolayer shifts software toward what it should be: a system that runs, maintains, and sca",
+      "H2: writing code is only one part of getting software live. setup, deployment, scaling, recove",
+      "H2: monolayer takes code or intent and turns it into a running, self-managed system in your ow",
+      "H2: the system",
+      "H2: connect your cloud",
+      "H2: connect your repository",
+      "H2: push intent",
+      "H2: what used to be managed by hand, is now automated with monolayer",
+      "H2: you work from intent, not infrastructure. the system understands what needs to happen and ",
+      "H2: Your infrastructure runs in your AWS account and is billed directly by AWS"
+    ],
+    "libs": {
+      "gsap": true,
+      "scrollTrigger": true,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": true,
+      "swiper": false,
+      "webflow": true,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 1,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 16,
+      "pinSpacers": 1,
+      "sticky": 1,
+      "fixed": 4,
+      "links": 40,
+      "images": 0
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "PPFrama"
+    ],
+    "type": {
+      "body": "PPFrama, Arial, sans-serif",
+      "h1Family": "PPFrama, Arial, sans-serif",
+      "h1Size": "35.8246px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(229, 229, 229)",
+      "text": "rgb(0, 0, 0)"
+    },
+    "scroll": {
+      "height": 12717,
+      "viewports": 15.1
+    },
+    "perf": {
+      "fcpMs": 196,
+      "domContentLoadedMs": 306,
+      "requests": 27,
+      "transferKB": 141
+    },
+    "animationsNow": 0,
+    "motion": null,
+    "mobileNav": {
+      "label": "Open menu",
+      "hasAriaExpanded": true,
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}

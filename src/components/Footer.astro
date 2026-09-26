@@ -1,0 +1,32 @@
+---
+import { person, nav } from '../data/site';
+const built = new Date().toISOString().slice(0, 10);
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="/">Home</a>
+      {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+      <a href="#top" class="footer__top">Back to top <span aria-hidden="true">↑</span></a>
+    </nav>
+    <p class="footer__meta">
+      <span>© {year} {person.name}</span>
+      <span>{person.location}</span>
+      <span>Built {built}</span>
+      <!-- Replaced after the build with this page's measured weight (scripts/postbuild.mjs). -->
+      <span data-weight>This page: measured at build</span>
+      <span>Set in Hubot Sans &amp; Mona Sans (SIL Open Font License)</span>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer { padding-block: var(--s-6) var(--s-7); }
+  .footer__inner { display: grid; gap: var(--s-5); }
+  .footer__nav { display: flex; flex-wrap: wrap; gap: 8px; }
+  .footer__nav a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 18px; border-radius: var(--r-pill); background: var(--cloud); color: var(--ink); font-weight: 650; text-decoration: none; transition: background-color var(--d-small); }
+  .footer__nav a:hover { background: var(--lime); }
+  .footer__top { margin-left: auto; }
+  .footer__meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: var(--t-small); color: var(--ink-2); }
+</style>

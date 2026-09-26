@@ -1,0 +1,82 @@
+---
+// "Each one leads with the number that explains the rest." — six reviews as number stickers.
+// Every card opens that review's page on this site.
+import { reviews, formatDate } from '../../data/site';
+const tones = [
+  { bg: 'var(--pink)', fg: 'var(--ink)' },
+  { bg: 'var(--lime)', fg: 'var(--ink)' },
+  { bg: 'var(--violet)', fg: '#fff' },
+  { bg: 'var(--sun)', fg: 'var(--ink)' },
+  { bg: 'var(--aqua)', fg: 'var(--ink)' },
+  { bg: 'var(--tomato)', fg: 'var(--ink)' },
+];
+---
+<section class="revs section" id="reviews" aria-labelledby="revs-title">
+  <div class="wrap">
+    <header class="revs__head">
+      <p class="kicker" style="--kicker-dot: var(--violet)">Independent reviews</p>
+      <h2 class="h2" id="revs-title">Each one leads with the number that explains the rest.</h2>
+      <p class="revs__sub">I read a company’s website the way a shopper, a crawler and an AI answer engine do — public pages only, every finding dated — and build a working fix alongside.</p>
+    </header>
+    <ul class="revs__grid" role="list" data-pop-grid>
+      {reviews.map((r, i) => (
+        <li class="rev" style={`--bg:${tones[i].bg};--ink-on:${tones[i].fg};--r:${[-2, 1.5, -1.2, 2.2, -1.6, 1][i]}deg`} data-pop>
+          <p class="rev__num num" style={`--chars:${r.number.length}`}>{r.number}</p>
+          <p class="rev__label">{r.numberLabel}</p>
+          <p class="rev__meta"><span>{r.title}</span><span>{formatDate(r.date)}</span></p>
+          <a class="rev__link" href={`/reviews/${r.slug}/`}>Read the review<span class="visually-hidden">: {r.title}</span> <span aria-hidden="true">→</span></a>
+        </li>
+      ))}
+    </ul>
+    <p class="revs__more"><a class="btn" href="/reviews/">All the reviews <span class="arrow" aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<style>
+  .revs__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-8); }
+  .revs__head .h2 { max-width: 16ch; }
+  .revs__sub { max-width: 52ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.3; }
+  .revs__grid { display: grid; gap: clamp(16px, 1.8vw, 28px); }
+  .rev {
+    container-type: inline-size;
+    position: relative;
+    display: grid;
+    gap: var(--s-4);
+    align-content: start;
+    padding: clamp(22px, 2.4vw, 36px);
+    border-radius: var(--r-xl);
+    background: var(--bg);
+    color: var(--ink-on);
+    transform: rotate(var(--r));
+    transition: transform 0.6s var(--ease-pop);
+  }
+  .rev:hover { transform: rotate(0deg) translateY(-6px); }
+  .rev__num {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-stretch: 75%;
+    line-height: 0.85;
+    white-space: nowrap;
+    font-size: min(8rem, calc(100cqi / (var(--chars) * 0.42)));
+  }
+  .rev__label { font-size: var(--t-lead); font-weight: 600; line-height: 1.2; max-width: 22ch; }
+  .rev__meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 700 var(--t-slug) / 1.4 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
+  .rev__link {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 18px;
+    border-radius: var(--r-pill);
+    background: var(--ink);
+    color: #fff;
+    font-weight: 650;
+    text-decoration: none;
+  }
+  .rev__link::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  .rev__link:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .revs__more { margin-top: var(--s-8); display: flex; justify-content: center; }
+  @media (min-width: 700px) { .revs__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .revs__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>

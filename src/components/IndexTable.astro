@@ -1,0 +1,149 @@
+---
+// The archive table — the most crafted utility on the site. Rows open the case study (→) or the live thing (↗).
+// Desktop: a proof loupe previews each row's capture. Touch: inline thumbnails. Keyboard: the loupe follows focus.
+import { entries as all, statusLabel, categories, type Entry } from '../data/work';
+import { view, pick } from '../lib/media';
+interface Props { limit?: number; filters?: boolean; id?: string }
+const { limit, filters = false, id = 'index' } = Astro.props;
+
+// Parents first, their family rows right after them.
+const parents = all.filter((e) => !e.family);
+const ordered: (Entry & { child: boolean })[] = [];
+for (const p of parents) {
+  ordered.push({ ...p, child: false });
+  for (const c of all.filter((e) => e.family === p.slug)) ordered.push({ ...c, child: true });
+}
+const rows = limit ? ordered.filter((e) => !e.child).slice(0, limit) : ordered;
+const catLabel = Object.fromEntries(categories.map((c) => [c.id, c.label]));
+const DOTS = ['var(--violet)', 'var(--tomato)', 'var(--blue)', 'var(--pink)', 'var(--aqua)'];
+const counts = Object.fromEntries(categories.map((c) => [c.id, all.filter((e) => e.category === c.id).length]));
+const preview = (e: Entry) => {
+  const d = view(e.media, 'desktop-hero');
+  return d ? pick(d.webp, 960).src : '';
+};
+const thumb = (e: Entry) => {
+  const d = view(e.media, 'desktop-hero');
+  return d ? pick(d.webp, 480).src : '';
+};
+---
+<div class="index" data-loupe id={id}>
+  {filters && (
+    <div class="index__filters" role="group" aria-label="Filter the archive" data-filter data-noun="entry,entries">
+      <button type="button" class="chip" aria-pressed="true" data-filter-value="all">All <span class="num">{all.length}</span></button>
+      {categories.map((c, i) => (
+        <button type="button" class="chip" aria-pressed="false" data-filter-value={c.id} style={`--dot:${DOTS[i % DOTS.length]}`}>{c.label} <span class="num">{counts[c.id]}</span></button>
+      ))}
+      <p class="visually-hidden" role="status" aria-live="polite" data-filter-status></p>
+    </div>
+  )}
+  <table class="index__table">
+    <caption class="visually-hidden">Every project, tool, case study, review and proposal, with what it is and where it lives.</caption>
+    <thead>
+      <tr>
+        <th scope="col" class="index__c-n">No.</th>
+        <th scope="col">Project</th>
+        <th scope="col" class="index__c-what">What it is</th>
+        <th scope="col" class="index__c-plat">Platform</th>
+        <th scope="col" class="index__c-status">Status</th>
+      </tr>
+    </thead>
+    <tbody data-rows-body>
+      {rows.map((e) => {
+        const href = e.caseStudy ? `/work/${e.caseStudy}/` : e.url;
+        const internal = !!e.caseStudy || !!href?.startsWith('/');
+        const n = String(parents.indexOf(parents.find((p) => p.slug === e.slug)!) + 1).padStart(2, '0');
+        return (
+          <tr class:list={['index__row', { 'is-child': e.child, 'has-case': internal }]} data-cat={e.category} data-preview={preview(e) || undefined} data-row>
+            <td class="index__c-n num slug">{e.child ? '—' : n}</td>
+            <th scope="row" class="index__c-title">
+              {href ? (
+                <a href={href} rel={internal ? undefined : 'noopener'} data-vt-plate={e.caseStudy ? '' : undefined}>
+                  <span class="index__title-text">{e.title}</span>
+                  <span class="index__arrow" aria-hidden="true">{internal ? '→' : '↗'}</span>
+                  <span class="visually-hidden">{e.caseStudy ? ' — case study' : internal ? ' — review' : ' — opens the live site'}</span>
+                </a>
+              ) : (
+                <span class="index__title-text">{e.title}</span>
+              )}
+              {thumb(e) && <img class="index__thumb" src={thumb(e)} alt="" aria-hidden="true" loading="lazy" decoding="async" width="480" height="300" />}
+            </th>
+            <td class="index__c-what">{e.what}</td>
+            <td class="index__c-plat slug">{[catLabel[e.category], e.platform, e.languages?.join(' + ')].filter(Boolean).join(' · ')}</td>
+            <td class="index__c-status slug"><span class:list={['status', `status--${e.status}`]}>{statusLabel[e.status]}</span></td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+  <div class="loupe" aria-hidden="true" data-loupe-lens><img alt="" data-loupe-img /></div>
+</div>
+
+<style>
+  .index { position: relative; }
+  .index__filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: var(--s-6); }
+  .chip { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: var(--r-pill); background: var(--cloud); font-weight: 650; font-size: 0.9375rem; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
+  .chip::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--dot, var(--ink)); }
+  .chip .num { font-size: 0.75rem; font-weight: 750; padding: 2px 7px; border-radius: var(--r-pill); background: rgb(22 18 31 / 0.08); }
+  .chip:hover { transform: translateY(-2px); }
+  .chip[aria-pressed='true'] { background: var(--ink); color: #fff; }
+  .chip[aria-pressed='true'] .num { background: rgb(255 255 255 / 0.18); }
+
+  .index__table { width: 100%; border-collapse: separate; border-spacing: 0 6px; }
+  .index__table thead th { text-align: left; font: 750 var(--t-label) / 1.4 var(--font-text); letter-spacing: 0.05em; text-transform: uppercase; color: var(--fg-2); padding: 0 14px 4px 0; }
+  .index__table thead th:first-child { padding-left: 18px; }
+  .index__row td, .index__row th { padding: 16px 14px 16px 0; vertical-align: top; text-align: left; font-weight: inherit; background: var(--cloud); transition: background-color var(--d-small); }
+  .index__row > :first-child { padding-left: 18px; border-radius: var(--r-m) 0 0 var(--r-m); }
+  .index__row > :last-child { border-radius: 0 var(--r-m) var(--r-m) 0; }
+  .index__c-n { width: 3.5em; color: var(--fg-2); font-weight: 700; }
+  .index__c-title a { display: inline; padding-block: 4px; text-decoration: none; }
+  .index__c-title a:focus-visible { outline-offset: 4px; border-radius: 4px; }
+  .index__title-text { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.35rem, 2vw, 1.875rem); line-height: 1; text-transform: uppercase; }
+  .index__arrow { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-left: 0.3em; vertical-align: middle; border-radius: 50%; background: var(--ink); color: #fff; font-size: 0.8rem; transform: translateY(-0.12em); transition: transform 0.45s var(--ease-pop), background-color var(--d-small); }
+  .index__row:hover > *, .index__row:focus-within > * { background: var(--lemon); }
+  .index__row.has-case:hover > *, .index__row.has-case:focus-within > * { background: var(--lime); }
+  .index__row:hover .index__arrow, .index__row:focus-within .index__arrow { transform: translateY(-0.12em) rotate(-45deg); }
+  .is-child .index__title-text { font-size: clamp(1.1rem, 1.4vw, 1.3rem); font-stretch: 85%; }
+  .is-child .index__c-title { padding-left: 1.2em; }
+  .is-child > * { background: color-mix(in srgb, var(--cloud) 55%, #fff); }
+  .index__c-what { color: var(--ink-2); max-width: 46ch; font-size: var(--t-small); font-weight: 500; }
+  .index__c-plat { font: 650 0.8125rem / 1.45 var(--font-text); color: var(--ink-2); }
+  .status { display: inline-block; padding: 5px 10px; border-radius: var(--r-pill); background: var(--mint); color: var(--ink); font: 750 0.75rem / 1 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+  .status--demo, .status--adaptation, .status--independent { background: var(--lilac); }
+  .status--login, .status--unverified { background: var(--lemon); }
+  .index__thumb { display: none; }
+
+  .loupe {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: min(34vw, 460px);
+    aspect-ratio: 16 / 10;
+    pointer-events: none;
+    z-index: 40;
+    clip-path: circle(0% at 50% 50%);
+    background: #fff;
+    border-radius: var(--r-l);
+    box-shadow: var(--shadow-2);
+    will-change: transform, clip-path;
+  }
+  .loupe img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+  /* Narrow screens: rows become cards with inline thumbnails (no hover on touch). */
+  @media (max-width: 899px) {
+    .index__table, .index__table tbody, .index__row, .index__row > * { display: block; }
+    .index__table thead { display: none; }
+    .index__row { display: grid; grid-template-columns: 2.4em 1fr; column-gap: 6px; padding: 16px 16px 16px 12px; margin-bottom: 8px; border-radius: var(--r-l); background: var(--cloud); }
+    .index__row.is-child { background: color-mix(in srgb, var(--cloud) 55%, #fff); }
+    .index__row > td, .index__row > th { padding: 0; border-radius: 0; background: transparent !important; }
+    .index__row:hover, .index__row:focus-within { background: var(--lemon); }
+    .index__row.has-case:hover, .index__row.has-case:focus-within { background: var(--lime); }
+    .index__row > .index__c-n { grid-row: span 4; padding-top: 6px; }
+    .index__c-what { margin-top: 6px; }
+    .index__c-plat, .index__c-status { margin-top: 8px; }
+    .is-child .index__c-title { padding-left: 0; }
+    .index__thumb { display: block; width: 100%; max-width: 360px; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; margin-top: 12px; border-radius: var(--r-m); background: #fff; }
+    .loupe { display: none; }
+  }
+  @media (min-width: 900px) and (max-width: 1199px) { .index__c-plat { display: none; } }
+  :global(.pointer-coarse) .loupe { display: none; }
+</style>

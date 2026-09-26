@@ -1,0 +1,31 @@
+---
+// The registration target — the new mark. Evolves the old red/blue/green plus into a press register mark:
+// a red horizontal (sheet), a blue vertical (register), an ink circle (shelf).
+interface Props { size?: number; class?: string; title?: string; animate?: boolean }
+const { size = 22, class: cls = '', title, animate = false } = Astro.props;
+---
+<svg
+  class:list={['mark', cls, { 'mark--anim': animate }]}
+  width={size}
+  height={size}
+  viewBox="0 0 40 40"
+  role={title ? 'img' : undefined}
+  aria-label={title}
+  aria-hidden={title ? undefined : 'true'}
+  focusable="false"
+  data-mark
+>
+  <circle class="mark__ring" cx="20" cy="20" r="12.5" fill="none" stroke="currentColor" stroke-width="2.4" />
+  <line class="mark__h" x1="1.5" y1="20" x2="38.5" y2="20" stroke="var(--sheet)" stroke-width="3" stroke-linecap="square" />
+  <line class="mark__v" x1="20" y1="1.5" x2="20" y2="38.5" stroke="var(--register)" stroke-width="3" stroke-linecap="square" />
+</svg>
+
+<style>
+  .mark { display: inline-block; flex: none; overflow: visible; }
+  .mark__h, .mark__v { mix-blend-mode: multiply; }
+  :global([data-ground='night']) .mark__h, :global([data-ground='night']) .mark__v { mix-blend-mode: normal; }
+  :global([data-ground='night']) .mark__h { stroke: var(--sheet-light); }
+  :global([data-ground='night']) .mark__v { stroke: var(--register-light); }
+  :global([data-ground='red']) .mark__h { stroke: #ffd2c7; }
+  :global([data-ground='red']) .mark__v { stroke: var(--ink); }
+</style>

@@ -1,0 +1,59 @@
+---
+// "Counted, not claimed." — big numbers on bright tiles, each with its source. The true value is in the HTML;
+// the digits roll only as decoration.
+import { entryCount } from '../../data/work';
+const tiles = [
+  { value: '7', unit: 'years', label: 'building and running WordPress sites', source: 'WordPress since 2019', bg: 'var(--tomato)' },
+  { value: '14,000', unit: 'items', label: 'in one catalog, prepared for migration', source: 'Universal Wholesale', bg: 'var(--lilac)' },
+  { value: '3,881', unit: 'blocks', label: 'real Elementor blocks in ASAS Studio', source: 'asas.build', bg: 'var(--lime)' },
+  { value: '16', unit: 'checks', label: 'every promotion passes before a menu', source: 'The Deals Operating System', bg: 'var(--sky)' },
+  { value: String(entryCount), unit: 'entries', label: 'tools, sites, reviews and proposals in the archive', source: 'This site’s archive', bg: 'var(--sun)' },
+  { value: '2', unit: 'languages', label: 'English and Arabic, right-to-left included', source: 'Bilingual builds', bg: 'var(--pink)' },
+];
+---
+<section class="nums section" aria-labelledby="nums-title">
+  <div class="wrap">
+    <header class="nums__head">
+      <p class="kicker" style="--kicker-dot: var(--sun)">By the numbers</p>
+      <h2 class="h2" id="nums-title">Counted,<br />not claimed.</h2>
+    </header>
+    <ul class="nums__grid" role="list" data-pop-grid>
+      {tiles.map((t, i) => (
+        <li class="nums__tile" style={`--bg:${t.bg};--r:${[-2.5, 1.5, -1, 2, -1.8, 1.2][i]}deg`} data-pop data-count-host>
+          <p class="nums__value"><span class="num" data-count>{t.value}</span><span class="nums__unit">{t.unit}</span></p>
+          <p class="nums__label">{t.label}</p>
+          <p class="nums__src">{t.source}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .nums__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-8); }
+  .nums__grid { display: grid; gap: clamp(14px, 1.6vw, 24px); }
+  .nums__tile {
+    position: relative;
+    display: grid;
+    align-content: space-between;
+    gap: var(--s-4);
+    min-height: clamp(220px, 24vw, 340px);
+    padding: clamp(22px, 2.4vw, 36px);
+    border-radius: var(--r-xl);
+    background: var(--bg);
+    color: var(--ink);
+    transform: rotate(var(--r));
+    transition: transform 0.6s var(--ease-pop);
+  }
+  .nums__tile:hover { transform: rotate(0deg) scale(1.02); }
+  .nums__value { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.12em; font-family: var(--font-display); font-weight: 900; font-stretch: 75%; line-height: 0.82; }
+  .nums__value .num { font-size: var(--t-number); letter-spacing: -0.01em; white-space: nowrap; }
+  .nums__value :global(.odo) { display: inline-block; height: 0.82em; overflow: hidden; vertical-align: top; }
+  .nums__value :global(.odo__strip) { display: block; }
+  .nums__value :global(.odo__strip > span) { display: block; height: 0.82em; line-height: 0.82; }
+  .nums__unit { font-size: clamp(1.5rem, 2.4vw, 2.5rem); text-transform: uppercase; }
+  .nums__label { font-size: var(--t-lead); line-height: 1.2; font-weight: 550; max-width: 20ch; letter-spacing: -0.01em; }
+  .nums__src { font: 700 var(--t-slug) / 1.3 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; }
+  @media (min-width: 700px) { .nums__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .nums__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>

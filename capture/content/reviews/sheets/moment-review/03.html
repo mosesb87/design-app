@@ -1,0 +1,26 @@
+<div class="wrap">
+
+  <p class="crumb">Sec. 03 — The product page, fixed</p>
+  <div class="sec-h"><span class="tag">PDP</span><h2>Now vs fixed</h2></div>
+  <p class="sec-sub">One review system, rendered live on every PDP, with valid schema — and a subscribe price that matches the headline promise.</p>
+  <div class="pdps">
+    <div class="pdp"><div class="lbl">Now</div><div class="in"><h3>The Moment Collection · 18-pack</h3><div class="stars warn">No star rating on the page</div>
+      <div class="row"><span>Schema block A</span><b>4.7 · 3,302</b></div><div class="row"><span>Schema block B</span><b class="warn">4.8 · 8,848</b></div>
+      <div class="row"><span>Subscribe</span><b>$51 vs $59 = 13.6% off</b></div>
+      <p class="note">Footer “Reviews” → 301 to homepage. Homepage promise: “20% off every shipment.”</p></div></div>
+    <div class="pdp fixed"><div class="lbl">Fixed</div><div class="in"><h3>The Moment Collection · 18-pack</h3><div class="stars">★★★★★ <span style="color:var(--ink)">4.8 · one review source</span></div>
+      <div class="row"><span>Reviews</span><b>Live on the page</b></div><div class="row"><span>Schema</span><b>Valid Product JSON-LD</b></div>
+      <div class="row"><span>Subscribe</span><b>$47.20 vs $59 = 20% off</b></div>
+      <p class="note">/pages/reviews restored. Page and charge agree.</p></div></div>
+  </div>
+  <div class="calc">
+    <h3 style="margin:0 0 10px">Make the page and the charge agree</h3>
+    <div class="toggle" role="group" aria-label="Fix approach"><button aria-pressed="true" data-m="price">Match price to promise</button><button aria-pressed="false" data-m="copy">Match promise to price</button></div>
+    <div class="out"><div class="o"><div class="k">Headline says</div><div class="v" id="c-h">20% off</div></div><div class="o"><div class="k">18-pack subscribe</div><div class="v" id="c-p">$47.20</div></div><div class="o"><div class="k">Yearly saving (monthly)</div><div class="v" id="c-y">$141.60</div></div></div>
+    <p class="hint" id="c-n">Plan discount raised to 20% — costs margin, keeps the campaign copy.</p>
+  </div>
+  <p style="margin-top:16px"><span class="ev">Evidence: /products/mixed-variety-18-pack-still and /products/chocolate-dream-blend-for-sleep-1 source; curl -L /pages/reviews; homepage copy vs selling plans, Sep 19, 2026</span></p>
+
+
+<div class="pagenav"><a href="https://mousabatarseh.com/moment-review/ledger.html">← The Ledger</a><a class="next" href="https://mousabatarseh.com/moment-review/plan.html">Next: Catalog &amp; Plan →</a></div>
+</div>

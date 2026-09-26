@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/jars-review/",
+    "status": 200,
+    "title": "JARS — Catalog & store data review",
+    "h1": "Top-shelf menus, running on store data that disagrees with itself.",
+    "description": "Independent review of jarscannabis.com: the same cartridge bundle at two prices, a volume ladder where buying more costs more, Poison Control listed as customer service, and store records that disagree with their own pages.",
+    "height": 3020
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/jars-review/stores.html",
+    "status": 200,
+    "title": "JARS — Store record check",
+    "h1": "Pick a store. See where its own records disagree.",
+    "description": "Compare any of JARS's 55 store records against the page schema and homepage data, with the fix for each conflict.",
+    "height": 1763
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/jars-review/deals.html",
+    "status": 200,
+    "title": "JARS — Deal conflict check",
+    "h1": "Two deals, one product. Which price does the shopper see?",
+    "description": "Find products carrying two prices for the same bundle quantity, or ladders where the bigger bundle costs more — on real JARS menus.",
+    "height": 4235
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/jars-review/plan.html",
+    "status": 200,
+    "title": "JARS — 30-day plan",
+    "h1": "One record per store. One rule per ladder.",
+    "description": "A 30-day plan for JARS catalog and store-data accuracy: stop the wrong numbers, rules at intake, weekly report.",
+    "height": 1419
+  }
+]

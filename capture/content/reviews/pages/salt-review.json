@@ -1,0 +1,144 @@
+{
+  "url": "https://mousabatarseh.com/salt-review/",
+  "title": "Salt Security — AEO & Structured-Data Review",
+  "description": "Independent answer-engine and structured-data review of salt.security by Mousa Batarseh — 57 of 60 pages without JSON-LD, no FAQPage, llms.txt 404 and 720 disallowed sitemap URLs. For the Website Manager role.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "p",
+      "text": "SEC. 01 — OVERVIEW · FOR THE WEBSITE MANAGER ROLE"
+    },
+    {
+      "t": "h1",
+      "text": "Found by people. Quoted by machines."
+    },
+    {
+      "t": "p",
+      "text": "Salt is repositioning around agentic security and answer engines — but its pages give machines nothing to quote. 57 of 60 sampled pages carry no structured data. There's no FAQPage anywhere, even where the H2s are questions. llms.txt is a 404. And the sitemap submits 720 URLs that robots.txt disallows. Here's the answer layer I'd build in Webflow."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "57 / 60"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "sampled pages with no JSON-LD"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "FAQPage blocks — even on question-form H2s"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "720"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "sitemap URLs robots.txt disallows"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n dark",
+      "text": "404"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "llms.txt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker b",
+      "text": "COVERAGE"
+    },
+    {
+      "t": "h3",
+      "text": "The selling pages are silent"
+    },
+    {
+      "t": "p",
+      "text": "The homepage (Corporation) and blog posts (BlogPosting) carry schema. /platform, /demo-request, every use-case and comparison page don't."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker a",
+      "text": "EXTRACTABILITY"
+    },
+    {
+      "t": "h3",
+      "text": "Q&A with no markup"
+    },
+    {
+      "t": "p",
+      "text": "/api-security-101 already asks and answers in H2s. Wrapped in FAQPage, it becomes something an answer engine can lift."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker c",
+      "text": "SIGNALS"
+    },
+    {
+      "t": "h3",
+      "text": "Mixed crawl instructions"
+    },
+    {
+      "t": "p",
+      "text": "2,929 sitemap URLs, 720 of them under disallowed paths; 32 noindex customer stubs; titles still say “API Security.”"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Scope"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Method"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Platform"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Independent — not affiliated with Salt Security"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "next",
+      "text": "Next: Coverage →"
+    }
+  ],
+  "links": [
+    {
+      "text": "Next: Coverage →",
+      "href": "https://mousabatarseh.com/salt-review/coverage.html"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

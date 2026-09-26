@@ -1,0 +1,96 @@
+
+  <div class="wrap">
+    <p class="crumb">Sec. 03 — Campaign Runway · intake → QA → launch → readout</p>
+    <span class="label-tag plan-tag">Prescription · this is what I would build; the worked SportDOG example below is hypothetical</span>
+    <h1>Every promo is a <em>runway</em>, not a launch.</h1>
+    <p class="lede">
+      The JD's operator-voice sentence is my favorite line in the whole post: <b>"Shopify changes, campaigns, promotions, and site initiatives launch accurately and on time, with strong pre- and post-launch QA."</b> That's the outcome I'd sign up to be measured on. Here's how I'd get there — a single template that scales across brands, one shared UTM taxonomy, one QA gate.
+    </p>
+
+    <h2 class="reveal in">Intake template — one page, one form</h2>
+    <p>Marketing, merch, and brand shouldn't have to know how the sausage is made. They fill out this form; I make it real.</p>
+
+    <pre class="reveal in"><span class="cmt"># campaign-brief.md — filed in the ops backlog on submit</span>
+<span class="key">brand</span>:            <span class="val">PetSafe | SportDOG | Invisible Fence | ScoopFree | ...</span>
+<span class="key">campaign_name</span>:    <span class="val">SportDOG SD-425X Fall Hunt Promo</span>
+<span class="key">offer</span>:            <span class="val">$40 off, code HUNT40, min $199</span>
+<span class="key">skus_in_scope</span>:    <span class="val">SD-425X, SD-1225X, SD-1825X (3 SKUs, 1 collection)</span>
+<span class="key">go_live</span>:          <span class="val">2026-10-01 06:00 America/New_York</span>
+<span class="key">end</span>:              <span class="val">2026-10-14 23:59 America/New_York</span>
+<span class="key">channels</span>:         <span class="val">Klaviyo email, on-site banner, paid social, organic social</span>
+<span class="key">success_metric</span>:   <span class="val">Incremental units on the 3 SKUs vs. prior-4-week baseline</span>
+<span class="key">approver</span>:         <span class="val">CRM lead + brand owner (JD boundary rule)</span></pre>
+
+    <h2 class="reveal in">UTM taxonomy — one page, hard rules</h2>
+    <p>The single most common cause of "the numbers don't agree" is inconsistent UTMs. This is the rule sheet I'd publish and enforce.</p>
+
+    <pre class="reveal in"><span class="cmt"># All lowercase. No spaces. No punctuation. Hyphens only.</span>
+<span class="key">utm_source</span>    <span class="cmt">= the platform: klaviyo | meta | google | tiktok | pinterest | affiliate-{name}</span>
+<span class="key">utm_medium</span>    <span class="cmt">= the channel type: email | sms | paid-social | paid-search | organic-social | display</span>
+<span class="key">utm_campaign</span>  <span class="cmt">= {brand}-{offer-slug}-{yyyy-mm}   e.g. sportdog-hunt40-2026-10</span>
+<span class="key">utm_content</span>   <span class="cmt">= the creative: {format}-{variant}  e.g. hero-a | carousel-v2 | button-primary</span>
+<span class="key">utm_term</span>      <span class="cmt">= paid only: keyword or audience id</span>
+
+<span class="cmt"># Bonus: a 'sub_id' cookie captured at first-touch for later attribution reconciliation.</span></pre>
+
+    <div class="callout reveal in">
+      <p class="who">Why this matters for Tableau</p>
+      <p><code>utm_campaign</code> is the join key across Klaviyo, Triple Whale, GA4, and Shopify. If it's inconsistent, every dashboard downstream lies quietly. The rule above is boring on purpose.</p>
+    </div>
+
+    <h2 class="reveal in">Pre-launch QA — the 20-line gate</h2>
+    <p>Nothing goes live until every box is checked. I ran a version of this for United Textile Wholesale's Shopify migration; the shape is the same regardless of stack.</p>
+
+    <div class="checklist reveal in">
+      <h3>Pre-launch QA — SportDOG SD-425X Fall Hunt Promo (worked example)</h3>
+      <ul>
+        <li><span class="box on"></span><span class="txt">Discount code <code>HUNT40</code> created, $ off, min $199, correct SKUs, correct dates (Shopify admin)</span><span class="who">Shopify</span></li>
+        <li><span class="box on"></span><span class="txt">Collection page shows the 3 SKUs, correct order, correct pricing, no orphaned products</span><span class="who">Shopify</span></li>
+        <li><span class="box on"></span><span class="txt">Product page copy &amp; images updated in Sanity, published to preview URL, brand-owner approval logged</span><span class="who">Sanity</span></li>
+        <li><span class="box on"></span><span class="txt">Homepage banner links to the collection with correct UTMs (per taxonomy sheet)</span><span class="who">Sanity + UTM</span></li>
+        <li><span class="box on"></span><span class="txt">Klaviyo send list segmented, subject line + preview text spellchecked, links carry correct UTMs</span><span class="who">Klaviyo</span></li>
+        <li><span class="box on"></span><span class="txt">Paid social creative delivered to media buyer with the exact UTM string, not a Bitly</span><span class="who">Paid</span></li>
+        <li><span class="box on"></span><span class="txt">GA4 event for <code>select_promotion</code> firing on the banner (checked in DebugView)</span><span class="who">GA4</span></li>
+        <li><span class="box on"></span><span class="txt">Triple Whale campaign named to match <code>utm_campaign</code> exactly</span><span class="who">Triple Whale</span></li>
+        <li><span class="box on"></span><span class="txt">Tableau: baseline snapshot for the 3 SKUs (prior 4 weeks) exported and pinned</span><span class="who">Tableau</span></li>
+        <li><span class="box on"></span><span class="txt">Bazaarvoice widget still loading on the 3 PDPs; no missing reviews behind the discount</span><span class="who">Bazaarvoice</span></li>
+        <li><span class="box on"></span><span class="txt">Rollback plan written: 3 steps, 5 minutes, doesn't require a developer</span><span class="who">Ops</span></li>
+        <li><span class="box on"></span><span class="txt">All of the above logged in the campaign brief; brief timestamped and posted in the channel</span><span class="who">PM</span></li>
+      </ul>
+    </div>
+
+    <h2 class="reveal in">Post-launch — day 1, day 7, close</h2>
+    <div class="cards reveal-stagger in">
+      <div class="card" style="--i: 0;">
+        <span class="kicker a">Day 1 · monitoring</span>
+        <h3>15 minutes at go-live, then a check at hour 2 and hour 6</h3>
+        <p>Look at three numbers: sessions to the collection, code applications, orders. If any is zero when it shouldn't be, walk the funnel with the UTM.</p>
+      </div>
+      <div class="card" style="--i: 1;">
+        <span class="kicker b">Day 7 · early read</span>
+        <h3>Half-page readout in the channel, in prose, not a dashboard link</h3>
+        <p>What ran, what converted, one thing that surprised us, one thing to change in the second week. Written so a busy CRM lead reads it in 60 seconds.</p>
+      </div>
+      <div class="card" style="--i: 2;">
+        <span class="kicker c">Close · learnings</span>
+        <h3>One row in the promo library, one paragraph, versioned</h3>
+        <p>Over a year, this library becomes the answer to "have we tried something like this before?" — which is the question that most often blocks a decision.</p>
+      </div>
+    </div>
+
+    <div class="callout reveal in">
+      <p class="who">The pattern is portable</p>
+      <p>I've run the intake → QA → launch → close loop for seasonal apparel drops at United Textile Wholesale and for multi-location retail at Wild Bill's Tobacco. The names on the columns change; the shape doesn't.</p>
+    </div>
+
+    <div class="meta reveal in">
+      <span><b>Worked example</b> hypothetical SportDOG fall promo</span>
+      <span><b>Real evidence</b> Klaviyo, Sanity, Bazaarvoice live on petsafe.com</span>
+      <span><b>Rollout</b> one brand first, then the family</span>
+    </div>
+
+    <div class="pagenav reveal in">
+      <a href="https://mousabatarseh.com/petsafe-review/stack.html">← Stack &amp; Data Loop</a>
+      <a class="next" href="https://mousabatarseh.com/petsafe-review/plan.html">Next: First 30/60/90 →</a>
+    </div>
+  </div>

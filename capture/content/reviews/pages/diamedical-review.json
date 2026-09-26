@@ -1,0 +1,490 @@
+{
+  "url": "https://mousabatarseh.com/diamedical-review/",
+  "title": "Start — DiaMedical Experience Review",
+  "description": "An independent website evaluation by Mousa Batarseh: current public evidence, Hospital Beds & Stretchers analysis, and working improvement concepts.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "p",
+      "text": "DIAMEDICAL EXPERIENCE REVIEW"
+    },
+    {
+      "t": "h1",
+      "text": "Website experience,\nexamined."
+    },
+    {
+      "t": "p",
+      "text": "An evaluation of DiaMedical’s website, with a detailed review of Hospital Beds & Stretchers. Strengths, opportunities, and working examples grounded in recorded evidence."
+    },
+    {
+      "t": "p",
+      "text": "Prepared by Mousa Batarseh for the Marketing & eCommerce Coordinator interview."
+    },
+    {
+      "t": "p",
+      "text": "20 sampled pages and states\n·\n6 product pages\n·\nObserved September 9, 2026"
+    },
+    {
+      "t": "p",
+      "text": "THE STORY, FROM PROBLEM TO PROPOSAL"
+    },
+    {
+      "t": "h2",
+      "text": "See the problem before trying the fix."
+    },
+    {
+      "t": "p",
+      "text": "Each path begins with a dated observation. The working proposal then holds the sample constant, makes one change, and checks the result."
+    },
+    {
+      "t": "ol",
+      "items": [
+        "Quote labels disagree.\n\nThe saved comparison shows $0.00 and Add To Cart; the product pages describe a quote. The proposal uses one quote state across four views, then runs three QA checks.\n\nRead the problem\nTry the quote rule",
+        "A matching capacity is missing from the filter.\n\nStryker’s product page states 500 lb, but it is absent from the recorded 500 lbs results. The proposal tests a normalized capacity value within six local records.\n\nRead the problem\nTry the filter change",
+        "Product information needs to support discovery.\n\nStart with the card decision-support finding. Then explore a proposed search model: add aliases, compare completeness and ranking, inspect every scoring reason, and reset. This is not a measured production search defect.\n\nRead the finding\nTry scoring and QA"
+      ]
+    },
+    {
+      "t": "p",
+      "text": "These are three working demonstrations, not a claim that every finding has an implemented fix. Other findings include a recommendation and a validation plan."
+    },
+    {
+      "t": "p",
+      "text": "01 · WHAT I WAS ASKED TO DO"
+    },
+    {
+      "t": "h2",
+      "text": "Review the experience.\nGo deeper on the products."
+    },
+    {
+      "t": "p",
+      "text": "I was asked to identify what works well and suggest improvements across DiaMedical’s website. The assignment then asks for a closer review of Hospital Beds & Stretchers: how products are presented, how filters work, and how useful the content is. Search, metadata, and SEO provide additional areas to consider."
+    },
+    {
+      "t": "p",
+      "text": "I organized the response around one purchase a real buyer would make:"
+    },
+    {
+      "t": "blockquote",
+      "text": "“I need a reconditioned bed rated for 500 lb. Which ones, and what will they cost?”"
+    },
+    {
+      "t": "p",
+      "text": "It is a question the catalog can answer. Fourteen products in Hospital Beds & Stretchers state 500 lb or more and are listed as reconditioned. The filters as they stand today reach eleven of them, because three carry no capacity or condition value the facets can read; and none of the fourteen shows a price, so the answer to the second half is a phone call. Following that one question is what produced the strengths and the opportunities in this review."
+    },
+    {
+      "t": "p",
+      "text": "02 · THE PROBLEM I INVESTIGATED"
+    },
+    {
+      "t": "h2",
+      "text": "Useful information.\nMoments of uncertainty."
+    },
+    {
+      "t": "p",
+      "text": "DiaMedical already provides product discovery, educational guidance, detailed specifications, and procurement support. I examined how those pieces agree when a customer moves between them."
+    },
+    {
+      "t": "p",
+      "text": "The clearest example is the quote journey. In the captured comparison, Vantage and Stryker S3 With Scale displayed $0.00 and Add To Cart. Their product pages displayed Call for Price and Add To Quote."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/diamedical-review/evidence/compare-desktop.png",
+      "alt": "Saved DiaMedical comparison of Vantage and Stryker, observed September 9, 2026",
+      "w": 1430,
+      "h": 894,
+      "caption": "Captured comparison · September 9, 2026\nInspect the source record",
+      "file": "9afc53e25e084a65.png"
+    },
+    {
+      "t": "p",
+      "text": "The labels disagree. That could make the next step unclear, but its effect on customers still needs a usability check. Other findings include repeated specifications that conflict and a product missing from the tested capacity filter despite matching its stated capacity."
+    },
+    {
+      "t": "p",
+      "text": "My question is how to make the information more consistent while preserving the useful tools and content already there."
+    },
+    {
+      "t": "p",
+      "text": "03 · WHAT I AM DOING HERE"
+    },
+    {
+      "t": "h2",
+      "text": "Make the reasoning\nsomething you can follow."
+    },
+    {
+      "t": "p",
+      "text": "I explain five strengths and nineteen opportunities — twelve from the September 9 walkthrough and seven from a fuller crawl of the category and site on September 10. Each finding connects a public observation to a proposed response and a way to check it. The working examples carry that reasoning into the same customer task."
+    },
+    {
+      "t": "ol",
+      "items": [
+        "01\nPathfinder\nUnderstand\n\nChoose a buyer task, such as finding a bed for a simulation space.\n\nA starting point",
+        "02\nProduct Discovery\nFind\n\nNarrow the six-product sample and compare the details behind a selection.\n\nAn explained shortlist",
+        "03\nWorking examples\nImprove\n\nTry a proposed quote rule, capacity mapping, or search alias.\n\nOne recorded change",
+        "04\nChecks & scoring\nValidate\n\nRepeat the task and inspect what changed and what still needs approval.\n\nA result to inspect"
+      ]
+    },
+    {
+      "t": "p",
+      "text": "The useful connection: a customer-facing problem becomes a specific catalog, content, or interface task, with evidence and an expected result attached."
+    },
+    {
+      "t": "p",
+      "text": "04 · HOW I DID IT"
+    },
+    {
+      "t": "h2",
+      "text": "Observe. Record.\nExplain. Test."
+    },
+    {
+      "t": "p",
+      "text": "The review starts with public evidence. The interactive examples use a local sample built from those observations."
+    },
+    {
+      "t": "ol",
+      "items": [
+        "01\nInspect the experience.\n\nI moved from the wider website into Hospital Beds & Stretchers, then followed selected products through product pages, filtering, and comparison.",
+        "02\nKeep an evidence record.\n\nI retained public URLs, screenshots, page text, product details, and sampled metadata. Each sample has an observation date and links back to its saved evidence.",
+        "03\nExplain the finding.\n\nI separated what I observed from why it might matter, what I would change, and how I would check it. I included strengths as well as opportunities.",
+        "04\nBuild a focused example.\n\nI used the six product records to demonstrate selected ideas. Proposed aliases and display rules stay separate from the captured source information.",
+        "05\nRepeat the same task.\n\nI held the sample and rules constant, made one local change, and compared the result. Conflicting specifications remain open for confirmation."
+      ]
+    },
+    {
+      "t": "p",
+      "text": "WHERE THE SAMPLES CAME FROM"
+    },
+    {
+      "t": "h2",
+      "text": "20 pages and states.\nSix deliberately chosen products."
+    },
+    {
+      "t": "p",
+      "text": "The products cover a simulation bed, a reconditioned bed, two stretcher types, a configurable homecare bed, and a low bed. This exposes different content and pricing experiences. It is a curated sample of the reviewed experience."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Wider website pages"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "09"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Category routes"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "03"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Product pages"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "06"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Filter & comparison states"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "02"
+    },
+    {
+      "t": "p",
+      "text": "These counts describe inspected pages and states, not unique inventory. Evidence was observed September 9 in America/Detroit; the register was assembled September 10. Exact screenshot times were not recorded."
+    },
+    {
+      "t": "p",
+      "text": "05 · HOW THE NUMBERS ARE MADE"
+    },
+    {
+      "t": "h2",
+      "text": "Three questions.\nThree separate answers."
+    },
+    {
+      "t": "p",
+      "text": "The numbers help explain the demonstration. Each answers a different question."
+    },
+    {
+      "t": "h3",
+      "text": "How complete is this record?"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "0–100"
+    },
+    {
+      "t": "p",
+      "text": "Record completeness combines six weighted field checks: identity 25%, taxonomy 25%, content 20%, SEO 15%, merchandising 10%, and provenance 5%."
+    },
+    {
+      "t": "p",
+      "text": "Example: applying three suggested Vantage aliases raises local completeness from 75 to 80. It adds merchandising credit; it does not verify the specifications."
+    },
+    {
+      "t": "h3",
+      "text": "Why did this product match?"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Ranking points"
+    },
+    {
+      "t": "p",
+      "text": "Search adds points for matching fields such as SKU, title, alias, category, and use case. The page lists the reason for each contribution and shows the product’s position in the sample."
+    },
+    {
+      "t": "p",
+      "text": "For “simulation bed”, those aliases add 240 points: 290 becomes 530, moving Vantage from second to first in this six-record example."
+    },
+    {
+      "t": "h3",
+      "text": "Did the local change pass its checks?"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Pass / open"
+    },
+    {
+      "t": "p",
+      "text": "The quote example checks the comparison label, agreement across all four demonstrated views, and whether a product with a published price keeps that price unchanged."
+    },
+    {
+      "t": "p",
+      "text": "Applying the quote rule changes the result from 1 of 3 to 3 of 3. This is a local validation result; approval and production testing are still separate steps."
+    },
+    {
+      "t": "p",
+      "text": "HOW TO READ THIS WORK"
+    },
+    {
+      "t": "h2",
+      "text": "The source, the idea,\nand the next check."
+    },
+    {
+      "t": "p",
+      "text": "The website makes each stage visible so a reviewer can assess the reasoning."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Observed"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "What appeared on a dated public page or interaction state."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Interpretation"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "Why that observation may affect a customer’s decision."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Proposed"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "The change I would consider, including a working local example."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "To validate"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "The check, approved product information, or team confirmation still needed."
+    },
+    {
+      "t": "text",
+      "tag": "summary",
+      "cls": "",
+      "text": "How the website itself was built"
+    },
+    {
+      "t": "p",
+      "text": "READY TO EXPLORE"
+    },
+    {
+      "t": "h2",
+      "text": "Follow one example.\nThen choose your own path."
+    },
+    {
+      "t": "p",
+      "text": "This review follows the Commerce Intelligence Lab, applying its scoring and QA-loop approach to selected proposals. The walkthrough explains each page and gives you one thing to try. You can go back, hide the instructions, or finish whenever you are ready."
+    }
+  ],
+  "links": [
+    {
+      "text": "Start the guided walkthrough",
+      "href": "https://mousabatarseh.com/diamedical-review/walkthrough"
+    },
+    {
+      "text": "Read the explanation ↓",
+      "href": "https://mousabatarseh.com/diamedical-review/#assignment"
+    },
+    {
+      "text": "The reviewReview the evidence.Inspect strengths and opportunities across Hospital Beds & Stretchers and related pages.",
+      "href": "https://mousabatarseh.com/diamedical-review/review"
+    },
+    {
+      "text": "The working exampleTry an improvement.Apply a proposed change and inspect its result against the same recorded sample.",
+      "href": "https://mousabatarseh.com/diamedical-review/workbench?task=quote"
+    },
+    {
+      "text": "Read the problem",
+      "href": "https://mousabatarseh.com/diamedical-review/review?finding=beds-compare-pricing"
+    },
+    {
+      "text": "Try the quote rule",
+      "href": "https://mousabatarseh.com/diamedical-review/workbench?task=quote"
+    },
+    {
+      "text": "Read the problem",
+      "href": "https://mousabatarseh.com/diamedical-review/review?finding=beds-capacity-coverage"
+    },
+    {
+      "text": "Try the filter change",
+      "href": "https://mousabatarseh.com/diamedical-review/workbench?task=capacity"
+    },
+    {
+      "text": "Read the finding",
+      "href": "https://mousabatarseh.com/diamedical-review/review?finding=beds-card-decision-support"
+    },
+    {
+      "text": "Try scoring and QA",
+      "href": "https://mousabatarseh.com/diamedical-review/workbench?task=search&q=simulation%20bed&product=BS029901"
+    },
+    {
+      "text": "The assignment",
+      "href": "https://mousabatarseh.com/diamedical-review/#assignment"
+    },
+    {
+      "text": "The problem",
+      "href": "https://mousabatarseh.com/diamedical-review/#problem"
+    },
+    {
+      "text": "My approach",
+      "href": "https://mousabatarseh.com/diamedical-review/#approach"
+    },
+    {
+      "text": "The method",
+      "href": "https://mousabatarseh.com/diamedical-review/#method"
+    },
+    {
+      "text": "The numbers",
+      "href": "https://mousabatarseh.com/diamedical-review/#numbers"
+    },
+    {
+      "text": "Read the five strengths",
+      "href": "https://mousabatarseh.com/diamedical-review/review?finding=SITE-S01"
+    },
+    {
+      "text": "Inspect the source record",
+      "href": "https://mousabatarseh.com/diamedical-review/sources?sample=STATE-compare"
+    },
+    {
+      "text": "Read the observation and proposed response",
+      "href": "https://mousabatarseh.com/diamedical-review/review?finding=beds-compare-pricing"
+    },
+    {
+      "text": "01\nPathfinder\nUnderstand\n\nChoose a buyer task, such as finding a bed for a simulation space.\n\nA starting point",
+      "href": "https://mousabatarseh.com/diamedical-review/beds?mode=compare&task=simulation#pathfinder"
+    },
+    {
+      "text": "02\nProduct Discovery\nFind\n\nNarrow the six-product sample and compare the details behind a selection.\n\nAn explained shortlist",
+      "href": "https://mousabatarseh.com/diamedical-review/beds?mode=compare"
+    },
+    {
+      "text": "03\nWorking examples\nImprove\n\nTry a proposed quote rule, capacity mapping, or search alias.\n\nOne recorded change",
+      "href": "https://mousabatarseh.com/diamedical-review/workbench?task=quote"
+    },
+    {
+      "text": "04\nChecks & scoring\nValidate\n\nRepeat the task and inspect what changed and what still needs approval.\n\nA result to inspect",
+      "href": "https://mousabatarseh.com/diamedical-review/workbench?task=quote#checks"
+    },
+    {
+      "text": "Inspect all 20 samples",
+      "href": "https://mousabatarseh.com/diamedical-review/sources"
+    },
+    {
+      "text": "Inspect every scoring reason",
+      "href": "https://mousabatarseh.com/diamedical-review/workbench?task=search&q=simulation%20bed&product=BS029901"
+    },
+    {
+      "text": "Commerce Intelligence Lab",
+      "href": "https://mousabatarseh.com/diamedical/"
+    },
+    {
+      "text": "Start the guided walkthrough",
+      "href": "https://mousabatarseh.com/diamedical-review/walkthrough"
+    },
+    {
+      "text": "Read the review independently",
+      "href": "https://mousabatarseh.com/diamedical-review/review"
+    },
+    {
+      "text": "See the proposed next steps",
+      "href": "https://mousabatarseh.com/diamedical-review/priorities"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://mousabatarseh.com/diamedical-review/evidence/compare-desktop.png",
+      "alt": "Saved DiaMedical comparison of Vantage and Stryker, observed September 9, 2026",
+      "w": 1430,
+      "h": 894,
+      "file": "9afc53e25e084a65.png"
+    }
+  ],
+  "status": 200
+}

@@ -1,0 +1,9 @@
+{
+ "nonce": 4,
+ "only": [
+  "__links-only__"
+ ],
+ "force": [],
+ "skipExisting": true,
+ "note": "Edit nonce (or only[]/force[]) and push to re-run the capture workflow. only: [\"__links-only__\"] re-runs just the probes and the link check."
+}
