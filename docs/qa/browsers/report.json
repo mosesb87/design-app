@@ -1,6 +1,6 @@
 {
   "base": "http://localhost:4321",
-  "ranAt": "2026-09-26T22:40:18.229Z",
+  "ranAt": "2026-09-26T22:56:25.448Z",
   "versions": {
     "firefox": "142.0.1",
     "webkit": "26.0"
@@ -11,7 +11,7 @@
       "vp": "desk",
       "page": "/",
       "status": 200,
-      "ms": 7789,
+      "ms": 7752,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -30,7 +30,7 @@
       "vp": "desk",
       "page": "/work/",
       "status": 200,
-      "ms": 5990,
+      "ms": 5961,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -48,7 +48,7 @@
       "vp": "desk",
       "page": "/about/",
       "status": 200,
-      "ms": 5278,
+      "ms": 5215,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -66,7 +66,7 @@
       "vp": "desk",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5701,
+      "ms": 5652,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -84,7 +84,7 @@
       "vp": "desk",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 6043,
+      "ms": 5982,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -102,7 +102,7 @@
       "vp": "desk",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5840,
+      "ms": 5859,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -120,7 +120,7 @@
       "vp": "desk",
       "page": "/blog/",
       "status": 200,
-      "ms": 5570,
+      "ms": 5467,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -138,7 +138,7 @@
       "vp": "desk",
       "page": "/blog/on-page-seo-large-product-catalog/",
       "status": 200,
-      "ms": 5152,
+      "ms": 5113,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -147,8 +147,8 @@
       "failed": [],
       "viewTransitions": false,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "azeret-mono.CkvrJe9w.woff2": 1
       }
     },
@@ -157,7 +157,7 @@
       "vp": "desk",
       "page": "/reviews/",
       "status": 200,
-      "ms": 4720,
+      "ms": 4797,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -175,7 +175,7 @@
       "vp": "desk",
       "page": "/reviews/oakwood/",
       "status": 200,
-      "ms": 6539,
+      "ms": 6580,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -193,7 +193,7 @@
       "vp": "desk",
       "page": "/reviews/hayhouse/",
       "status": 200,
-      "ms": 14133,
+      "ms": 14675,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -213,7 +213,7 @@
       "vp": "desk",
       "page": "/404.html",
       "status": 200,
-      "ms": 3383,
+      "ms": 3386,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -231,7 +231,7 @@
       "vp": "mob",
       "page": "/",
       "status": 200,
-      "ms": 8061,
+      "ms": 7914,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -250,7 +250,7 @@
       "vp": "mob",
       "page": "/work/",
       "status": 200,
-      "ms": 10343,
+      "ms": 10253,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -268,7 +268,7 @@
       "vp": "mob",
       "page": "/about/",
       "status": 200,
-      "ms": 6189,
+      "ms": 6100,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -286,7 +286,7 @@
       "vp": "mob",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5574,
+      "ms": 5556,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -304,7 +304,7 @@
       "vp": "mob",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5817,
+      "ms": 5755,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -322,7 +322,7 @@
       "vp": "mob",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5809,
+      "ms": 5751,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -340,7 +340,7 @@
       "vp": "mob",
       "page": "/blog/",
       "status": 200,
-      "ms": 8192,
+      "ms": 8083,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -358,7 +358,7 @@
       "vp": "mob",
       "page": "/blog/on-page-seo-large-product-catalog/",
       "status": 200,
-      "ms": 5572,
+      "ms": 5521,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -377,7 +377,7 @@
       "vp": "mob",
       "page": "/reviews/",
       "status": 200,
-      "ms": 6191,
+      "ms": 6139,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -395,7 +395,7 @@
       "vp": "mob",
       "page": "/reviews/oakwood/",
       "status": 200,
-      "ms": 7122,
+      "ms": 7103,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -413,7 +413,7 @@
       "vp": "mob",
       "page": "/reviews/hayhouse/",
       "status": 200,
-      "ms": 16942,
+      "ms": 16735,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -433,7 +433,7 @@
       "vp": "mob",
       "page": "/404.html",
       "status": 200,
-      "ms": 3379,
+      "ms": 3357,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -451,15 +451,15 @@
       "vp": "desk",
       "page": "/",
       "status": 200,
-      "ms": 13051,
+      "ms": 14312,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
@@ -469,7 +469,7 @@
       "vp": "desk",
       "page": "/work/",
       "status": 200,
-      "ms": 8070,
+      "ms": 8246,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -486,15 +486,15 @@
       "vp": "desk",
       "page": "/about/",
       "status": 200,
-      "ms": 6878,
+      "ms": 6748,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -503,15 +503,15 @@
       "vp": "desk",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 6852,
+      "ms": 6866,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -520,7 +520,7 @@
       "vp": "desk",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 7755,
+      "ms": 7844,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -537,15 +537,15 @@
       "vp": "desk",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 7348,
+      "ms": 7086,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -554,15 +554,15 @@
       "vp": "desk",
       "page": "/blog/",
       "status": 200,
-      "ms": 8713,
+      "ms": 8299,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -571,7 +571,7 @@
       "vp": "desk",
       "page": "/blog/on-page-seo-large-product-catalog/",
       "status": 200,
-      "ms": 6582,
+      "ms": 6373,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -580,8 +580,8 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1
+        "mona-sans-text-italic.CoFY8irn.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1
       }
     },
     {
@@ -589,7 +589,7 @@
       "vp": "desk",
       "page": "/reviews/",
       "status": 200,
-      "ms": 6600,
+      "ms": 6471,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -606,7 +606,7 @@
       "vp": "desk",
       "page": "/reviews/oakwood/",
       "status": 200,
-      "ms": 8319,
+      "ms": 8132,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -623,7 +623,7 @@
       "vp": "desk",
       "page": "/reviews/hayhouse/",
       "status": 200,
-      "ms": 16576,
+      "ms": 16248,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -632,8 +632,8 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "azeret-mono.CkvrJe9w.woff2": 1,
+        "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
     {
@@ -641,7 +641,7 @@
       "vp": "desk",
       "page": "/404.html",
       "status": 200,
-      "ms": 4456,
+      "ms": 4230,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -658,7 +658,7 @@
       "vp": "mob",
       "page": "/",
       "status": 200,
-      "ms": 11101,
+      "ms": 10692,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -667,8 +667,8 @@
       "fonts": {
         "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1
+        "mona-sans-text-italic.CoFY8irn.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1
       }
     },
     {
@@ -676,7 +676,7 @@
       "vp": "mob",
       "page": "/work/",
       "status": 200,
-      "ms": 12132,
+      "ms": 12296,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -693,7 +693,7 @@
       "vp": "mob",
       "page": "/about/",
       "status": 200,
-      "ms": 7464,
+      "ms": 7484,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -710,7 +710,7 @@
       "vp": "mob",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 7295,
+      "ms": 6918,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -727,7 +727,7 @@
       "vp": "mob",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 7759,
+      "ms": 7441,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -744,7 +744,7 @@
       "vp": "mob",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 7351,
+      "ms": 7390,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -761,7 +761,7 @@
       "vp": "mob",
       "page": "/blog/",
       "status": 200,
-      "ms": 10508,
+      "ms": 10263,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -778,17 +778,17 @@
       "vp": "mob",
       "page": "/blog/on-page-seo-large-product-catalog/",
       "status": 200,
-      "ms": 6933,
+      "ms": 6821,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1,
+        "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
     {
@@ -796,7 +796,7 @@
       "vp": "mob",
       "page": "/reviews/",
       "status": 200,
-      "ms": 7901,
+      "ms": 7563,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -813,7 +813,7 @@
       "vp": "mob",
       "page": "/reviews/oakwood/",
       "status": 200,
-      "ms": 8407,
+      "ms": 8241,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -830,15 +830,15 @@
       "vp": "mob",
       "page": "/reviews/hayhouse/",
       "status": 200,
-      "ms": 18311,
+      "ms": 18241,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
@@ -848,7 +848,7 @@
       "vp": "mob",
       "page": "/404.html",
       "status": 200,
-      "ms": 4380,
+      "ms": 4278,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -865,7 +865,7 @@
       "vp": "mob-reduced",
       "page": "/",
       "status": 200,
-      "ms": 9670,
+      "ms": 9636,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -874,8 +874,8 @@
       "fonts": {
         "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1
+        "mona-sans-text-italic.CoFY8irn.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1
       }
     },
     {
@@ -883,7 +883,7 @@
       "vp": "mob-reduced",
       "page": "/work/",
       "status": 200,
-      "ms": 11037,
+      "ms": 10896,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -900,7 +900,7 @@
       "vp": "mob-reduced",
       "page": "/about/",
       "status": 200,
-      "ms": 6628,
+      "ms": 6516,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -917,7 +917,7 @@
       "vp": "mob-reduced",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5715,
+      "ms": 5646,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -934,15 +934,15 @@
       "vp": "mob-reduced",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 6153,
+      "ms": 6095,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -951,15 +951,15 @@
       "vp": "mob-reduced",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5992,
+      "ms": 5996,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -968,7 +968,7 @@
       "vp": "mob-reduced",
       "page": "/blog/",
       "status": 200,
-      "ms": 8806,
+      "ms": 8832,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -985,7 +985,7 @@
       "vp": "mob-reduced",
       "page": "/blog/on-page-seo-large-product-catalog/",
       "status": 200,
-      "ms": 6136,
+      "ms": 6050,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -994,8 +994,8 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "azeret-mono.CkvrJe9w.woff2": 1,
+        "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
     {
@@ -1003,7 +1003,7 @@
       "vp": "mob-reduced",
       "page": "/reviews/",
       "status": 200,
-      "ms": 6802,
+      "ms": 6758,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -1020,15 +1020,15 @@
       "vp": "mob-reduced",
       "page": "/reviews/oakwood/",
       "status": 200,
-      "ms": 7466,
+      "ms": 7414,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -1037,15 +1037,15 @@
       "vp": "mob-reduced",
       "page": "/reviews/hayhouse/",
       "status": 200,
-      "ms": 17525,
+      "ms": 17399,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
@@ -1055,7 +1055,7 @@
       "vp": "mob-reduced",
       "page": "/404.html",
       "status": 200,
-      "ms": 3696,
+      "ms": 3622,
       "overflow": 0,
       "hidden": [],
       "logs": [],

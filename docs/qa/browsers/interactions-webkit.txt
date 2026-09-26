@@ -7,7 +7,7 @@ PASS  Nav "Work 68" opens /work/ — /work/
 PASS  Nav "Reviews" opens /reviews/ — /reviews/
 PASS  Nav "Blog" opens /blog/ — /blog/
 PASS  Nav "About" opens /about/ — /about/
-FAIL  Nav "Let’s talk" scrolls to #contact — not on screen after 5 s (scrollY 16658, target at 22690)
+PASS  Nav "Let’s talk" scrolls to #contact — on screen after 594 ms (scrollY 22043, target at 22690)
 PASS  Six featured case-study links on the home page — /work/united-textile/ /work/universal-wholesale/ /work/firefly-burgers/ /work/eat-with-samar/ /work/great-lakes-cigar-festival/ /work/ptee/
 PASS  Clicking a featured card image opens its case study (stretched link) — /work/united-textile/
 PASS  /blog/ filter "all" shows 16 rows — visible 16, aria-pressed true, status "16 posts shown"
@@ -60,4 +60,4 @@ PASS  Escape closes the menu and returns focus to the toggle — {"expanded":"fa
 PASS  Menu link "Work" navigates on tap — /work/
 PASS  Menu is closed on the new page
 
-59/60 passed
+60/60 passed
