@@ -86,7 +86,8 @@ async function cleanSheet(html, ctx) {
   }
   x.querySelectorAll('[data-hidden], [aria-hidden="true"], [hidden], .topbar, .ruler, .next, .skip, [class*=toast], [role=tablist]').forEach((e) => e.remove());
   // The sheet's own h1 becomes the section title.
-  const h1 = x.querySelector('h1');
+  // The sheet's h1 (or, failing that, its first heading) becomes the section title.
+  const h1 = x.querySelector('h1') || x.querySelector('h2');
   const title = h1 ? squash(h1.structuredText.replace(/\n/g, ' ')) : '';
   if (h1) h1.remove();
   const kick = x.querySelector('.kick, .eyebrow');
@@ -156,11 +157,16 @@ async function cleanSheet(html, ctx) {
       if (KEEP_INLINE.has(tag) || tag === 'b' || tag === 'i') {
         if (tag === 'b') { const s = parse(`<strong>${c.innerHTML}</strong>`).firstChild; c.replaceWith(s); continue; }
         if (tag === 'i') { const s = parse(`<em>${c.innerHTML}</em>`).firstChild; c.replaceWith(s); continue; }
-        if (tag === 'span') { c.replaceWith(...c.childNodes); continue; }
+        if (tag === 'span') {
+          // A styled span is usually a chip or cell laid out apart from its neighbours: keep a space either side.
+          if (k) c.replaceWith(parse(' ').childNodes[0] || '', ...c.childNodes, parse(' ').childNodes[0] || '');
+          else c.replaceWith(...c.childNodes);
+          continue;
+        }
         for (const a of Object.keys(c.attributes)) c.removeAttribute(a);
         continue;
       }
-      if (INLINE.has(tag)) { c.replaceWith(...c.childNodes); continue; }
+      if (INLINE.has(tag)) { if (k && tag !== 'a') c.replaceWith(parse(' ').childNodes[0] || '', ...c.childNodes, parse(' ').childNodes[0] || ''); else c.replaceWith(...c.childNodes); continue; }
       // Any other container: its loose inline runs become paragraphs; notes become a quote card.
       const isNote = /\b(callout|notice|note|aside)\b/.test(k) || tag === 'aside';
       const isKick = /\b(kick|eyebrow|cat|tag)\b/.test(k);
@@ -192,7 +198,7 @@ async function cleanSheet(html, ctx) {
   for (const p of x.querySelectorAll('p')) {
     const t = squash(p.text);
     const next = p.nextElementSibling;
-    if (next?.tagName === 'P' && t.length <= 14 && /\d/.test(t) && squash(next.text).length > t.length) {
+    if (next?.tagName === 'P' && t.length <= 14 && /^([$€£~≈+−<>]?\d|[A-Z]{1,2}-\d)/.test(t) && squash(next.text).length > t.length) {
       p.replaceWith(...parse(`<p class="rv-stat"><strong>${p.innerHTML.trim()}</strong> <span>${next.innerHTML.trim()}</span></p>`).childNodes);
       next.remove();
     }
@@ -208,6 +214,22 @@ async function cleanSheet(html, ctx) {
   }
   x.querySelectorAll('p, li, dd, h2, h3, h4, h5').forEach((e) => { const t = squash(e.text); if ((!t || /^[—–\-·•|/]+$/.test(t)) && !e.querySelector('img')) e.remove(); });
   x.querySelectorAll('ul, ol, dl').forEach((e) => { if (!e.querySelector('li, dt, dd')) e.remove(); });
+  // Prototype sheets leave runs of short interface labels ("Cut", "Backer", "Week 1"). Three or more in a row
+  // read as one compact row of chips instead of a column of one-word paragraphs; every word is kept.
+  const isFrag = (n) => n?.nodeType === 1 && n.tagName === 'P' && !n.getAttribute('class') && !n.querySelector('img') && squash(n.text).length < 50 && !/[.!?:;]$/.test(squash(n.text));
+  const kids = [...x.childNodes];
+  for (let i = 0; i < kids.length; i++) {
+    if (!isFrag(kids[i])) continue;
+    const run = [];
+    let j = i;
+    while (j < kids.length && (isFrag(kids[j]) || (kids[j].nodeType === 3 && !kids[j].text.trim()))) { if (kids[j].nodeType === 1) run.push(kids[j]); j++; }
+    if (run.length >= 3) {
+      const ul = parse(`<ul class="rv-frags">${run.map((p) => `<li>${p.innerHTML.trim()}</li>`).join('')}</ul>`).childNodes[0];
+      run[0].replaceWith(ul);
+      run.slice(1).forEach((p) => p.remove());
+    }
+    i = j;
+  }
   const out = x.innerHTML.replace(/\n\s*\n+/g, '\n').trim();
   const words = squash(x.text).split(' ').filter(Boolean).length;
   return { title, kicker, html: out, words };

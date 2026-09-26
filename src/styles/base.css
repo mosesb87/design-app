@@ -343,3 +343,6 @@ a:hover { text-decoration-thickness: 2px; }
 .prose-review td, .prose-review th { font-size: 0.9375rem; }
 .prose-review .rv-src { font: 600 0.8125rem / 1.5 var(--font-mono); color: var(--ink-2); overflow-wrap: anywhere; }
 .prose-review .rv-src + blockquote { margin-top: 0.5em; font-size: 1em; }
+.prose-review ul.rv-frags { display: flex; flex-wrap: wrap; gap: 6px; }
+.prose-review ul.rv-frags > li { padding: 5px 10px; border-radius: var(--r-pill); background: var(--cloud); font-size: 0.8125rem; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
+.prose-review ul.rv-frags > li::before { display: none; }
