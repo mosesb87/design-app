@@ -85,8 +85,7 @@ const jsonLd = [
   .rc__kind { font-family: var(--font-text); font-stretch: 100%; font-weight: 650; font-size: 0.9375rem; text-transform: none; letter-spacing: 0; }
   .rc__title a { text-decoration: none; }
   .rc__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 2; }
-  .rc__title a:focus-visible { outline: none; }
-  .rc:has(a:focus-visible) { outline: 3px solid var(--ink); outline-offset: 4px; }
+  .rc__title a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 4px; }
   .rc__blurb { font-weight: 500; font-size: var(--t-small); line-height: 1.45; opacity: 0.92; }
   .rc__meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 750 var(--t-slug) / 1.4 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
   .rc__focus { display: flex; flex-wrap: wrap; gap: 6px; }

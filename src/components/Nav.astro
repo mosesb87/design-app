@@ -59,6 +59,8 @@ const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
     transition: transform var(--d-line) var(--ease-register);
   }
   .nav.is-tucked { transform: translateY(-120%); }
+  /* Keyboard focus inside the nav shows it at once (no slide), so a focused link is never off-screen. */
+  .nav:focus-within { transform: none; transition: none; }
   :global(.menu-open) .nav { transform: none; }
   .nav__bar {
     position: relative;

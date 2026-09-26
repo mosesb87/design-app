@@ -46,13 +46,16 @@ const cards = new Map();
 for (const c of index.cards) {
   const slug = new URL(c.href).pathname.match(/\/reviews\/reviews\/([^/]+)/)?.[1];
   if (!slug || cards.has(slug)) continue;
+  // Card text: site, focus, date, the number (split over one to three lines), its label, "Brand · kind", the blurb.
+  // The title line is the anchor: everything is read relative to it, so a number printed as "$ / 36 / /$49" can't shift it.
   const lines = c.text.split('\n').map((x) => x.trim()).filter(Boolean);
-  const [site, focus, date, value] = lines;
-  let i = 4;
-  const of = lines[i]?.startsWith('/') ? lines[i++].slice(1) : '';
-  const label = lines[i++] || '';
-  const title = lines[i++] || '';
-  const blurb = lines[i++] || '';
+  const [site, focus, date] = lines;
+  const t = lines.findIndex((l, i) => i > 3 && / · .*(review|report)/i.test(l));
+  const title = t > 0 ? lines[t] : '';
+  const blurb = t > 0 ? lines[t + 1] || '' : '';
+  const label = t > 0 ? lines[t - 1] : '';
+  const value = lines[3] || '';
+  const of = '';
   cards.set(slug, { slug, site, focus, date: isoDate(date), value, of, label, title, blurb });
 }
 
@@ -214,6 +217,9 @@ async function cleanSheet(html, ctx) {
   }
   x.querySelectorAll('p, li, dd, h2, h3, h4, h5').forEach((e) => { const t = squash(e.text); if ((!t || /^[—–\-·•|/]+$/.test(t)) && !e.querySelector('img')) e.remove(); });
   x.querySelectorAll('ul, ol, dl').forEach((e) => { if (!e.querySelector('li, dt, dd')) e.remove(); });
+  // A link with nothing to say (its label was an icon) is dropped; code blocks that scroll sideways take focus.
+  x.querySelectorAll('a').forEach((a) => { if (!squash(a.text) && !a.querySelector('img[alt]:not([alt=""])')) a.remove(); });
+  x.querySelectorAll('pre').forEach((pre) => pre.setAttribute('tabindex', '0'));
   // Prototype sheets leave runs of short interface labels ("Cut", "Backer", "Week 1"). Three or more in a row
   // read as one compact row of chips instead of a column of one-word paragraphs; every word is kept.
   const isFrag = (n) => n?.nodeType === 1 && n.tagName === 'P' && !n.getAttribute('class') && !n.querySelector('img') && squash(n.text).length < 50 && !/[.!?:;]$/.test(squash(n.text));

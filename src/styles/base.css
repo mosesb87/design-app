@@ -273,7 +273,7 @@ a:hover { text-decoration-thickness: 2px; }
 .prose-play h3, .prose-play h4 { margin-top: 1.8em; font-family: var(--font-display); font-weight: 850; font-stretch: 85%; font-size: clamp(1.35rem, 1.8vw, 1.625rem); line-height: 1.1; }
 .prose-play h2 + *, .prose-play h3 + *, .prose-play h4 + * { margin-top: 0.7em; }
 .prose-play strong, .prose-play b { font-weight: 720; }
-.prose-play a { text-decoration: underline; text-decoration-color: var(--lime-deep, #8fbf13); text-decoration-thickness: 0.18em; text-underline-offset: 0.18em; font-weight: 600; transition: background-color var(--d-small), text-decoration-color var(--d-small); }
+.prose-play a { text-decoration: underline; text-decoration-color: var(--lime-deep, #8fbf13); text-decoration-thickness: 0.18em; text-underline-offset: 0.18em; font-weight: 600; padding-block: 0.16em; transition: background-color var(--d-small), text-decoration-color var(--d-small); }
 .prose-play a:hover { background: var(--lemon); text-decoration-color: var(--ink); }
 .prose-play ul, .prose-play ol { padding-left: 0; list-style: none; display: grid; gap: 0.55em; }
 .prose-play li { position: relative; padding-left: 1.7em; }

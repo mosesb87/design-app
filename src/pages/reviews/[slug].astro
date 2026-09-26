@@ -208,7 +208,6 @@ const jsonLd = [
   .more__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.6rem, 2.2vw, 2.2rem); line-height: 0.95; text-transform: uppercase; }
   .more__title a { text-decoration: none; }
   .more__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
-  .more__card:has(a:focus-visible) { outline: 3px solid var(--ink); outline-offset: 4px; }
-  .more__title a:focus-visible { outline: none; }
+  .more__title a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 4px; }
   @media (min-width: 900px) { .more { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 </style>

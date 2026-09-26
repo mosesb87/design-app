@@ -54,7 +54,8 @@ const tones = ['var(--sky)', 'var(--peach)', 'var(--lemon)', 'var(--mint)', 'var
     transition: box-shadow var(--d-small) var(--ease-register);
   }
   .site:hover { box-shadow: var(--shadow-2); }
-  .site__media { position: relative; padding-right: 14%; padding-bottom: 6%; }
+  /* The lifted captures sit in front of the stretched link in 3D; let clicks fall through to it. */
+  .site__media { position: relative; padding-right: 14%; padding-bottom: 6%; pointer-events: none; }
   .site__desk { border-radius: var(--r-l); overflow: hidden; box-shadow: var(--shadow-1); background: #fff; aspect-ratio: 16 / 10; transform: translateZ(20px); }
   .site__desk :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
   .site__phone {

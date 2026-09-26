@@ -85,8 +85,8 @@ for (const vpKey of vps) {
       const hiddenOnReverse = [];
       for (let i = steps; i >= 0; i -= 2) {
         await scrollTo(Math.round((total * i) / steps));
-        const n = await page.evaluate(() => [...document.querySelectorAll('main h1, main h2, main h3, main p')].filter((el) => { const r = el.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight || r.height === 0) return false; const cs = getComputedStyle(el); return Number(cs.opacity) < 0.05 && !el.closest('[aria-hidden="true"], [data-title-b], .thesis__step, [data-count-after]'); }).length);
-        if (n) hiddenOnReverse.push({ step: i, invisible: n });
+        const hid = await page.evaluate(() => [...document.querySelectorAll('main h1, main h2, main h3, main p')].filter((el) => { const r = el.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight || r.height === 0) return false; let o = 1; for (let e = el; e && e !== document.body; e = e.parentElement) o *= Number(getComputedStyle(e).opacity); return o < 0.05 && !el.closest('[aria-hidden="true"], [data-count-after]'); }).map((el) => `${el.tagName.toLowerCase()}.${(el.className || '').toString().split(' ')[0]} "${el.textContent.trim().slice(0, 30)}"`));
+        if (hid.length) hiddenOnReverse.push({ step: i, invisible: hid.length, els: hid.slice(0, 4) });
       }
       // Tap targets (touch only): interactive elements smaller than 24×24 CSS px (WCAG 2.2 AA 2.5.8)
       const smallTargets = vp.hasTouch ? await page.evaluate(() => [...document.querySelectorAll('a[href], button, [role=button], input, select')].filter((el) => { const r = el.getBoundingClientRect(); if (!r.width || !r.height) return false; if (getComputedStyle(el).display === 'inline' && el.closest('p, li, dd, td')) return false; return r.width < 24 || r.height < 24; }).slice(0, 12).map((el) => `${el.tagName.toLowerCase()} "${(el.textContent || el.getAttribute('aria-label') || '').trim().slice(0, 30)}" ${Math.round(el.getBoundingClientRect().width)}×${Math.round(el.getBoundingClientRect().height)}`)) : [];
