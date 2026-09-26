@@ -52,7 +52,7 @@ PASS  Recording toggle flips play/pause state — true → false (video paused=f
 PASS  mailto link is the real address — mailto:hireme@mousabatarseh.com
 PASS  tel link present — tel:+12488101816
 PASS  Copy email answers (copied, or tells you to select the address) — "✓ Copied — checked"
-FAIL  No page errors or console errors during the desktop run — [JavaScript Error: "Too many calls to Location or History APIs within a short timeframe." {file: "http://localhost:4321/_assets/Base.astro_astro_type_script_index_0_lang.knWq1HU8.js" line: 1}] | The operation is insecure. | [JavaScript Error: "Too many calls to Location or History APIs within a short timeframe." {file: "http://localhost:4321/_assets/Base.astro_astro_type_script_index_0_lang.knWq1HU8.js" line: 1}]
+PASS  No page errors or console errors during the desktop run
 PASS  Unknown URL serves the designed 404 with status 404 — 404 "Page not found — Mousa Batarseh"
 PASS  Menu toggle is visible on a phone
 PASS  Menu opens (aria-expanded, visible, focus moves inside) — {"expanded":"true","hidden":false,"focusIn":true}
@@ -60,4 +60,4 @@ PASS  Escape closes the menu and returns focus to the toggle — {"expanded":"fa
 PASS  Menu link "Work" navigates on tap — /work/
 PASS  Menu is closed on the new page
 
-59/60 passed
+60/60 passed
