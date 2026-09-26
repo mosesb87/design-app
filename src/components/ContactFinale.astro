@@ -53,12 +53,13 @@ const { heading = person.contactLine } = Astro.props;
     text-wrap: balance;
   }
   .finale__sub { color: var(--fg-2); max-width: 32ch; }
-  .finale__email-row { display: grid; gap: var(--s-5); margin-top: var(--s-6); padding-top: var(--s-6); border-top: 1px solid var(--line); }
+  .finale__email-row { container-type: inline-size; display: grid; gap: var(--s-5); margin-top: var(--s-6); padding-top: var(--s-6); border-top: 1px solid var(--line); }
   .finale__email {
     font-family: var(--font-display);
     font-weight: 760;
     font-stretch: 100%;
-    font-size: clamp(1.5rem, 5.4vw, 5.25rem);
+    /* One line at every width: the address is 24 characters, so it never gets bigger than its row allows. */
+    font-size: min(clamp(1.5rem, 5.4vw, 5.25rem), calc(100cqi / 14.6));
     line-height: 1;
     letter-spacing: -0.03em;
     text-decoration: none;

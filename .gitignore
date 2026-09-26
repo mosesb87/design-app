@@ -3,6 +3,7 @@ dist/
 .astro/
 .vercel/
 deploy/*.zip
+deploy/build/
 qa/
 scripts/capture/node_modules/
 capture/raw/**/.frames-*/

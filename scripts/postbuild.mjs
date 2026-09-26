@@ -5,7 +5,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
 
-const dist = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../dist');
+// Usage: node scripts/postbuild.mjs [outDir]   (defaults to dist/)
+const dist = process.argv[2] ? path.resolve(process.argv[2]) : path.resolve(path.dirname(new URL(import.meta.url).pathname), '../dist');
 const gz = (buf) => zlib.gzipSync(buf, { level: 9 }).length;
 const kb = (n) => `${Math.round(n / 1024)} KB`;
 const cache = new Map();
@@ -63,4 +64,14 @@ for (const file of walk(dist)) {
   report['/' + path.relative(dist, file).replace(/index\.html$/, '')] = { totalKB: +(total / 1024).toFixed(1), htmlKB: +(gz(Buffer.from(html)) / 1024).toFixed(1), cssKB: +(cssBytes / 1024).toFixed(1), jsKB: +(jsBytes / 1024).toFixed(1), fontKB: +(fontBytes / 1024).toFixed(1), inlineJsChars: inlineJs, modules: [...js].length };
 }
 fs.writeFileSync(path.join(dist, '_weights.json'), JSON.stringify(report, null, 2));
+
+// A sitemap for the new pages only. It gets its own name so it never replaces the sitemap.xml already on the
+// live domain (which covers /v2/, /reviews/, the tools and the blog); robots.txt lists both.
+const SITE = 'https://mousabatarseh.com';
+const today = new Date().toISOString().slice(0, 10);
+const urls = Object.keys(report).filter((p) => !p.endsWith('.html')).sort((a, b) => a.split('/').length - b.split('/').length || a.localeCompare(b));
+fs.writeFileSync(
+  path.join(dist, 'sitemap-portfolio.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod></url>`).join('\n')}\n</urlset>\n`,
+);
 for (const [p, r] of Object.entries(report)) console.log(`${p.padEnd(34)} ${String(r.totalKB).padStart(6)} KB  (js ${r.jsKB} · css ${r.cssKB} · fonts ${r.fontKB} · html ${r.htmlKB})`);

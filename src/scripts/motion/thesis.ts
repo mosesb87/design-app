@@ -19,10 +19,12 @@ export default function thesis([section]: HTMLElement[], env: Env) {
   const titleB = q('[data-title-b]');
 
   const mm = gsap.matchMedia();
-  mm.add({ desk: '(min-width: 1024px)', mob: '(max-width: 1023px)' }, (ctx) => {
+  mm.add({ desk: '(min-width: 1024px)', mob: '(max-width: 1023px)', short: '(max-width: 1023px) and (max-height: 820px)' }, (ctx) => {
     const desk = !!ctx.conditions?.desk;
-    const zS = desk ? 300 : 200;
-    const zR = desk ? 150 : 100;
+    // Short phones (360×740) have less stage between the title and the step text: separate the plates less.
+    const short = !!ctx.conditions?.short;
+    const zS = desk ? 300 : short ? 120 : 200;
+    const zR = desk ? 150 : short ? 60 : 100;
     const rx = desk ? 52 : 48;
     const rz = desk ? -32 : -26;
 

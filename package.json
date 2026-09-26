@@ -10,7 +10,8 @@
     "build": "astro build && node scripts/postbuild.mjs",
     "preview": "astro preview",
     "check": "astro check",
-    "qa": "node scripts/qa.mjs"
+    "qa": "node scripts/qa.mjs",
+    "package:root": "node scripts/package-root.mjs"
   },
   "engines": {
     "node": ">=22"
