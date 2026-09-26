@@ -1,6 +1,6 @@
 {
   "base": "http://localhost:4321",
-  "ranAt": "2026-09-26T21:39:38.509Z",
+  "ranAt": "2026-09-26T22:08:01.957Z",
   "versions": {
     "firefox": "142.0.1",
     "webkit": "26.0"
@@ -11,7 +11,7 @@
       "vp": "desk",
       "page": "/",
       "status": 200,
-      "ms": 7577,
+      "ms": 7506,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -30,7 +30,7 @@
       "vp": "desk",
       "page": "/work/",
       "status": 200,
-      "ms": 5873,
+      "ms": 5803,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -40,8 +40,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -49,7 +48,7 @@
       "vp": "desk",
       "page": "/about/",
       "status": 200,
-      "ms": 5173,
+      "ms": 5131,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -59,8 +58,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -68,7 +66,7 @@
       "vp": "desk",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5598,
+      "ms": 5623,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -78,8 +76,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -87,7 +84,7 @@
       "vp": "desk",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5941,
+      "ms": 5908,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -97,8 +94,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -106,7 +102,7 @@
       "vp": "desk",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5688,
+      "ms": 5649,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -116,8 +112,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -125,7 +120,7 @@
       "vp": "desk",
       "page": "/blog/",
       "status": 200,
-      "ms": 5341,
+      "ms": 5395,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -135,7 +130,6 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
@@ -144,7 +138,7 @@
       "vp": "desk",
       "page": "/blog/on-page-seo-large-product-catalog/",
       "status": 200,
-      "ms": 5095,
+      "ms": 5067,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -154,8 +148,8 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1
       }
     },
     {
@@ -163,7 +157,7 @@
       "vp": "desk",
       "page": "/reviews/",
       "status": 200,
-      "ms": 4607,
+      "ms": 4567,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -173,8 +167,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -182,7 +175,7 @@
       "vp": "desk",
       "page": "/reviews/oakwood/",
       "status": 200,
-      "ms": 6458,
+      "ms": 6431,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -192,8 +185,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -201,7 +193,7 @@
       "vp": "desk",
       "page": "/reviews/hayhouse/",
       "status": 200,
-      "ms": 14290,
+      "ms": 13918,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -212,8 +204,8 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1
+        "mona-sans-text-italic.CoFY8irn.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1
       }
     },
     {
@@ -221,7 +213,7 @@
       "vp": "desk",
       "page": "/404.html",
       "status": 200,
-      "ms": 3300,
+      "ms": 3280,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -231,7 +223,6 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
@@ -240,7 +231,7 @@
       "vp": "mob",
       "page": "/",
       "status": 200,
-      "ms": 8359,
+      "ms": 7676,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -259,19 +250,17 @@
       "vp": "mob",
       "page": "/work/",
       "status": 200,
-      "ms": 10188,
+      "ms": 10104,
       "overflow": 0,
       "hidden": [],
       "logs": [
-        "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature",
-        "warning: [JavaScript Warning: \"The resource at “http://localhost:4321/_assets/azeret-mono.CkvrJe9w.woff2” preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly.\" {file: \"http://localhost:4321/work/\" line: 0}]"
+        "warning: [JavaScript Warning: \"This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and feature"
       ],
       "failed": [],
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -279,7 +268,7 @@
       "vp": "mob",
       "page": "/about/",
       "status": 200,
-      "ms": 6043,
+      "ms": 6020,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -289,8 +278,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -298,7 +286,7 @@
       "vp": "mob",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5477,
+      "ms": 5459,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -308,7 +296,6 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
@@ -317,7 +304,7 @@
       "vp": "mob",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5681,
+      "ms": 5659,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -327,8 +314,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -336,7 +322,7 @@
       "vp": "mob",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5684,
+      "ms": 5662,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -346,8 +332,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -355,7 +340,7 @@
       "vp": "mob",
       "page": "/blog/",
       "status": 200,
-      "ms": 7969,
+      "ms": 7954,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -365,8 +350,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -374,7 +358,7 @@
       "vp": "mob",
       "page": "/blog/on-page-seo-large-product-catalog/",
       "status": 200,
-      "ms": 5480,
+      "ms": 5492,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -393,7 +377,7 @@
       "vp": "mob",
       "page": "/reviews/",
       "status": 200,
-      "ms": 6070,
+      "ms": 6120,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -403,8 +387,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -422,8 +405,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -431,7 +413,7 @@
       "vp": "mob",
       "page": "/reviews/hayhouse/",
       "status": 200,
-      "ms": 16694,
+      "ms": 16602,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -442,8 +424,8 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1
+        "mona-sans-text-italic.CoFY8irn.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1
       }
     },
     {
@@ -451,7 +433,7 @@
       "vp": "mob",
       "page": "/404.html",
       "status": 200,
-      "ms": 3293,
+      "ms": 3303,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -461,8 +443,7 @@
       "viewTransitions": false,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1
+        "mona-sans-text.DXLWIdoy.woff2": 1
       }
     },
     {
@@ -470,7 +451,7 @@
       "vp": "desk",
       "page": "/",
       "status": 200,
-      "ms": 11754,
+      "ms": 11222,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -488,7 +469,7 @@
       "vp": "desk",
       "page": "/work/",
       "status": 200,
-      "ms": 7032,
+      "ms": 7227,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -496,7 +477,6 @@
       "viewTransitions": true,
       "fonts": {
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
@@ -506,7 +486,7 @@
       "vp": "desk",
       "page": "/about/",
       "status": 200,
-      "ms": 6312,
+      "ms": 6311,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -515,7 +495,6 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -524,16 +503,15 @@
       "vp": "desk",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 6409,
+      "ms": 6621,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -542,16 +520,15 @@
       "vp": "desk",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 7082,
+      "ms": 7050,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -560,7 +537,7 @@
       "vp": "desk",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 6635,
+      "ms": 6834,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -569,7 +546,6 @@
       "fonts": {
         "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -578,16 +554,15 @@
       "vp": "desk",
       "page": "/blog/",
       "status": 200,
-      "ms": 6993,
+      "ms": 7182,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -596,7 +571,7 @@
       "vp": "desk",
       "page": "/blog/on-page-seo-large-product-catalog/",
       "status": 200,
-      "ms": 6009,
+      "ms": 6156,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -604,9 +579,9 @@
       "viewTransitions": true,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1
+        "mona-sans-text-italic.CoFY8irn.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1
       }
     },
     {
@@ -614,16 +589,15 @@
       "vp": "desk",
       "page": "/reviews/",
       "status": 200,
-      "ms": 5811,
+      "ms": 5980,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -632,16 +606,15 @@
       "vp": "desk",
       "page": "/reviews/oakwood/",
       "status": 200,
-      "ms": 7537,
+      "ms": 7604,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -650,7 +623,7 @@
       "vp": "desk",
       "page": "/reviews/hayhouse/",
       "status": 200,
-      "ms": 15350,
+      "ms": 15460,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -658,8 +631,8 @@
       "viewTransitions": true,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -668,7 +641,7 @@
       "vp": "desk",
       "page": "/404.html",
       "status": 200,
-      "ms": 3906,
+      "ms": 4071,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -676,7 +649,6 @@
       "viewTransitions": true,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
@@ -686,7 +658,7 @@
       "vp": "mob",
       "page": "/",
       "status": 200,
-      "ms": 9442,
+      "ms": 9720,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -704,16 +676,15 @@
       "vp": "mob",
       "page": "/work/",
       "status": 200,
-      "ms": 11470,
+      "ms": 11535,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -722,7 +693,7 @@
       "vp": "mob",
       "page": "/about/",
       "status": 200,
-      "ms": 6955,
+      "ms": 7068,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -731,7 +702,6 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -740,7 +710,7 @@
       "vp": "mob",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 6517,
+      "ms": 6567,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -749,7 +719,6 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -758,7 +727,7 @@
       "vp": "mob",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 6857,
+      "ms": 6950,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -767,7 +736,6 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -776,7 +744,7 @@
       "vp": "mob",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 6608,
+      "ms": 7011,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -785,7 +753,6 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -794,16 +761,15 @@
       "vp": "mob",
       "page": "/blog/",
       "status": 200,
-      "ms": 9458,
+      "ms": 9804,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -812,7 +778,7 @@
       "vp": "mob",
       "page": "/blog/on-page-seo-large-product-catalog/",
       "status": 200,
-      "ms": 6429,
+      "ms": 6473,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -821,8 +787,8 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1
+        "mona-sans-text-italic.CoFY8irn.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1
       }
     },
     {
@@ -830,16 +796,15 @@
       "vp": "mob",
       "page": "/reviews/",
       "status": 200,
-      "ms": 7136,
+      "ms": 7215,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "azeret-mono.CkvrJe9w.woff2": 1,
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -848,7 +813,7 @@
       "vp": "mob",
       "page": "/reviews/oakwood/",
       "status": 200,
-      "ms": 7736,
+      "ms": 7930,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -856,7 +821,6 @@
       "viewTransitions": true,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
@@ -866,17 +830,17 @@
       "vp": "mob",
       "page": "/reviews/hayhouse/",
       "status": 200,
-      "ms": 17695,
+      "ms": 18010,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1
+        "mona-sans-text-italic.CoFY8irn.woff2": 1,
+        "azeret-mono.CkvrJe9w.woff2": 1
       }
     },
     {
@@ -884,7 +848,24 @@
       "vp": "mob",
       "page": "/404.html",
       "status": 200,
-      "ms": 3991,
+      "ms": 4073,
+      "overflow": 0,
+      "hidden": [],
+      "logs": [],
+      "failed": [],
+      "viewTransitions": true,
+      "fonts": {
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
+        "mona-sans-text-italic.CoFY8irn.woff2": 1
+      }
+    },
+    {
+      "browser": "webkit",
+      "vp": "mob-reduced",
+      "page": "/",
+      "status": 200,
+      "ms": 9247,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -900,27 +881,9 @@
     {
       "browser": "webkit",
       "vp": "mob-reduced",
-      "page": "/",
-      "status": 200,
-      "ms": 9180,
-      "overflow": 0,
-      "hidden": [],
-      "logs": [],
-      "failed": [],
-      "viewTransitions": true,
-      "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "mona-sans-text-italic.CoFY8irn.woff2": 1
-      }
-    },
-    {
-      "browser": "webkit",
-      "vp": "mob-reduced",
       "page": "/work/",
       "status": 200,
-      "ms": 10652,
+      "ms": 10701,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -929,7 +892,6 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -947,7 +909,6 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -956,7 +917,7 @@
       "vp": "mob-reduced",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5553,
+      "ms": 5568,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -964,7 +925,6 @@
       "viewTransitions": true,
       "fonts": {
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
@@ -974,16 +934,15 @@
       "vp": "mob-reduced",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5904,
+      "ms": 5916,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -992,16 +951,15 @@
       "vp": "mob-reduced",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5795,
+      "ms": 5841,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
-        "mona-sans-text.DXLWIdoy.woff2": 1,
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
+        "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -1010,7 +968,7 @@
       "vp": "mob-reduced",
       "page": "/blog/",
       "status": 200,
-      "ms": 8472,
+      "ms": 8505,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -1019,7 +977,6 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -1028,7 +985,7 @@
       "vp": "mob-reduced",
       "page": "/blog/on-page-seo-large-product-catalog/",
       "status": 200,
-      "ms": 5851,
+      "ms": 5919,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -1046,7 +1003,7 @@
       "vp": "mob-reduced",
       "page": "/reviews/",
       "status": 200,
-      "ms": 6478,
+      "ms": 6513,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -1055,7 +1012,6 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -1064,7 +1020,7 @@
       "vp": "mob-reduced",
       "page": "/reviews/oakwood/",
       "status": 200,
-      "ms": 7214,
+      "ms": 7212,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -1072,7 +1028,6 @@
       "viewTransitions": true,
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
@@ -1082,16 +1037,16 @@
       "vp": "mob-reduced",
       "page": "/reviews/hayhouse/",
       "status": 200,
-      "ms": 17167,
+      "ms": 17083,
       "overflow": 0,
       "hidden": [],
       "logs": [],
       "failed": [],
       "viewTransitions": true,
       "fonts": {
+        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
         "azeret-mono.CkvrJe9w.woff2": 1,
-        "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     },
@@ -1100,7 +1055,7 @@
       "vp": "mob-reduced",
       "page": "/404.html",
       "status": 200,
-      "ms": 3548,
+      "ms": 3551,
       "overflow": 0,
       "hidden": [],
       "logs": [],
@@ -1109,7 +1064,6 @@
       "fonts": {
         "hubot-sans-display.JJkRrFSO.woff2": 1,
         "mona-sans-text.DXLWIdoy.woff2": 1,
-        "azeret-mono.CkvrJe9w.woff2": 1,
         "mona-sans-text-italic.CoFY8irn.woff2": 1
       }
     }
