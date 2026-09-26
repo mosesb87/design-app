@@ -35,6 +35,8 @@ jobs:
           npx astro preview --port 4321 > preview.log 2>&1 &
           for i in $(seq 1 30); do curl -sf http://localhost:4321/ > /dev/null && break; sleep 1; done
           BASE=http://localhost:4321 node scripts/browsers.mjs
+          for b in webkit firefox; do node scripts/interactions.mjs --base=http://localhost:4321 --browser=$b > qa-browsers/interactions-$b.txt 2>&1 || true; done
+          cat qa-browsers/interactions-*.txt
       - uses: actions/upload-artifact@v4
         with:
           name: browsers
