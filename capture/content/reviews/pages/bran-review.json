@@ -1,0 +1,1504 @@
+{
+  "url": "https://mousabatarseh.com/bran-review/",
+  "title": "Bran Marketing — Web & SEO Department Review",
+  "description": "Independent review of getbran.com and three client sites: schema coverage, template leftovers, a filterable line-card prototype and a 90-day build standard.",
+  "ogImage": "https://mousabatarseh.com/portfolio-home/social-preview-4c7b5bd03003.jpg",
+  "published": "2026-09-22",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "p",
+      "text": "SEC. 01 FINDINGS · FOR THE WEB DEVELOPMENT & TECHNICAL SEO LEAD ROLE"
+    },
+    {
+      "t": "h1",
+      "text": "The page that sells SEO has no structured data."
+    },
+    {
+      "t": "p",
+      "text": "Bran Marketing is the outsourced marketing department for industrial manufacturers, manufacturers' reps and wholesaler-distributors, and it is hiring a Web Development & Technical SEO Lead to build the web side of that department. On getbran.com, /web-design-seo carries no JSON-LD, and only 5 of 22 sitemap pages carry any. All 6 team pages still hold Wix placeholder copy, and Marsh & Moore, the build Bran presents as a case study, has 0 of 36 pages with a meta description. None of that is a backlog problem, so the department should start with a build standard, not a backlog: what I'd fix in week one, a line card you can filter, and the 90-day standard I'd run."
+    },
+    {
+      "t": "p",
+      "text": "SPECIMEN 01\nPAGE SOURCE"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "URL"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "",
+      "text": "getbran.com/web-design-seo"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FETCHED"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "TITLE"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "44 chars"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "H1"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "Your Website Should Work as Hard as the Rest of Your Business."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "JSON-LD BLOCKS"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "HTML"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "TTFB"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "0.074 s"
+    },
+    {
+      "t": "ol",
+      "items": [
+        "5 / 22\n\ngetbran.com sitemap pages with any JSON-LD; none on /web-design-seo",
+        "6 / 6\n\nteam pages carrying the Wix placeholder sentence; 4 of 6 URLs name a different person",
+        "0 / 36\n\nMarsh & Moore pages with a meta description, JSON-LD or an OG tag",
+        "63\n\n<script> tags in 1,275,015 bytes of homepage HTML; no Lighthouse (PSI quota 429), so weight stands in"
+      ]
+    },
+    {
+      "t": "p",
+      "text": "Scope getbran.com (47 pages + llms.txt) · marshmoore.com (36) · timmorales.com (25) · armstrong-weatherly.com (30)\nMethod page source, robots.txt, every sitemap, llms.txt\nPlatforms Wix ×3 · WordPress/Divi ×1\nSampled 2026-09-22 13:23–13:37 UTC\nIndependent not affiliated with Bran Marketing"
+    },
+    {
+      "t": "p",
+      "text": "TABLE 01 · COVERAGE"
+    },
+    {
+      "t": "h2",
+      "text": "Four sites, one pattern"
+    },
+    {
+      "t": "p",
+      "text": "Medians across the sampled pages. No Lighthouse scores: PageSpeed Insights returned HTTP 429 (daily quota) for all four homepages, so HTML bytes, script counts and TTFB stand in."
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "SITE",
+          "PAGES",
+          "META DESC.",
+          "JSON-LD",
+          "ANY OG",
+          "IMG ALT",
+          "HTML B, MEDIAN",
+          "SCRIPTS",
+          "TTFB"
+        ],
+        [
+          "getbran.com\nWix",
+          "47",
+          "32 / 47",
+          "27 / 47",
+          "46 / 47",
+          "98.5%",
+          "1,008,942",
+          "62",
+          "0.11 s"
+        ],
+        [
+          "marshmoore.com\nWordPress, Divi v.4.27.4",
+          "36",
+          "0 / 36",
+          "0 / 36",
+          "0 / 36",
+          "29.3%",
+          "216,964",
+          "51",
+          "0.52 s"
+        ],
+        [
+          "timmorales.com\nWix",
+          "25",
+          "13 / 25",
+          "8 / 25 Wix-auto",
+          "25 / 25",
+          "85.2%",
+          "860,331",
+          "63",
+          "1.12 s"
+        ],
+        [
+          "armstrong-weatherly.com\nWix",
+          "30",
+          "18 / 30",
+          "6 / 30 Wix-auto",
+          "30 / 30",
+          "88.0%",
+          "692,444",
+          "61",
+          "1.31 s"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "text": "HTML bytes decoded body\nTTFB final hop, from an AWS host, location-dependent\ngetbran.com homepage 1,275,015 B HTML · 211,428 B on the wire · 63 script tags · TTFB 0.101 s · title 83 chars · description 167 chars"
+    },
+    {
+      "t": "p",
+      "text": "FINDINGS · FIVE PLATES"
+    },
+    {
+      "t": "h2",
+      "text": "What I'd fix in week one"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "plate-num",
+      "text": "01"
+    },
+    {
+      "t": "p",
+      "text": "PLATE 01 · OWN HOUSE"
+    },
+    {
+      "t": "h3",
+      "text": "Team pages are still on template URLs"
+    },
+    {
+      "t": "p",
+      "text": "All 6 team pages contain the Wix sentence “This is placeholder text. To change this content, double-click on the element and click Change Content.” Four of the six slugs name a different person: /team/brian-chung renders Alicia Branham, /team/ashley-amerson renders Marcie Flatt. /team is titled “Team (List) | Bran Marketing”, has no H1 and links to none of the six. 0 of 6 have a meta description."
+    },
+    {
+      "t": "p",
+      "text": "WHAT I'D SHIP IN WEEK ONE\nReal-name slugs with 301s from the old ones, placeholder blocks removed, a description and Person schema per page, and links from /team."
+    },
+    {
+      "t": "ul",
+      "items": [
+        "getbran.com/team\ntitle “Team (List)”, 0 H1, 0 team links",
+        "/team/brian-chung\nrenders Alicia Branham",
+        "/team/ashley-amerson\nrenders Marcie Flatt"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "plate-num",
+      "text": "02"
+    },
+    {
+      "t": "p",
+      "text": "PLATE 02 · COVERAGE"
+    },
+    {
+      "t": "h3",
+      "text": "The selling pages are silent"
+    },
+    {
+      "t": "p",
+      "text": "5 of 22 sitemap pages carry any JSON-LD: the homepage, /manufacturers, /the-bran-method, /marketing-consulting-training and /marshmoorecasestudy. The service and audience pages carry none: /web-design-seo, /manufacturers-reps, /wholesalers-distributors, /small-businesses, /the-bran-marketing-department, /3d-modeling-product-visualization. The blog is the exception: 15 of 15 sampled posts have BlogPosting, 4 with HowTo."
+    },
+    {
+      "t": "p",
+      "text": "WHAT I'D SHIP IN WEEK ONE\nOne Service + BreadcrumbList block on every service and audience page, Organization declared once, the homepage graph deduplicated (WebSite appears twice)."
+    },
+    {
+      "t": "ul",
+      "items": [
+        "getbran.com/web-design-seo\n0 JSON-LD blocks",
+        "/manufacturers-reps\n0 JSON-LD blocks",
+        "/wholesalers-distributors\n0 JSON-LD blocks"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "plate-num",
+      "text": "03"
+    },
+    {
+      "t": "p",
+      "text": "PLATE 03 · SIGNALS"
+    },
+    {
+      "t": "h3",
+      "text": "One post at three URLs, a members area in the sitemap"
+    },
+    {
+      "t": "p",
+      "text": "One post is live at three self-canonical URLs with the same title and H1: …-a-comprehensive-guide, …-a-comprehensive-guide-1 and /post/top-social-media-for-your-business. Every sampled post has two H1s (“BRANBLOG BY BRAN MARKETING” plus the title); 34 of 56 posts share the lastmod 2026-08-07. /groups, /forum and /members (H1 “BRAN MEMBER ONLY AREA”) are indexable and in the pages sitemap. llms.txt is present; /about-1 is a clean 404 with no internal links."
+    },
+    {
+      "t": "p",
+      "text": "WHAT I'D SHIP IN WEEK ONE\nOne canonical URL for the post with 301s from the other two, one H1 in the blog template, noindex on the community pages, and a title lint: 12 of 47 titles pass 60 characters, the homepage's is 83."
+    },
+    {
+      "t": "ul",
+      "items": [
+        "getbran.com/post/top-social-media-for-your-business\nthird copy, self-canonical",
+        "/members\n200, indexable, in sitemap",
+        "/llms.txt\n200, text/plain"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "plate-num",
+      "text": "04"
+    },
+    {
+      "t": "p",
+      "text": "PLATE 04 · CLIENTS"
+    },
+    {
+      "t": "h3",
+      "text": "Marsh & Moore: the case-study build has no meta layer"
+    },
+    {
+      "t": "p",
+      "text": "marshmoore.com (WordPress, Divi v.4.27.4) is the build Bran presents at /marshmoorecasestudy. Across 36 sampled pages: 0 meta descriptions, 0 JSON-LD, 0 Open Graph tags, 285 of 403 images with empty alt (29.3% coverage). Leftovers are live and indexable: /lines-represented/ (H1 “Portfolio Grid” / “No Results Found”), /sample-mfg/, /awl_filter_gallery/manufacturers-duplicate/, /home/ duplicating /, /contactus/ beside /contact-us/. It is also the lightest site here: 216,964 bytes of HTML at the median, 51 script tags, 0.52 s TTFB."
+    },
+    {
+      "t": "p",
+      "text": "WHAT I'D SHIP IN WEEK ONE\nDescription, Open Graph and Organization + BreadcrumbList schema from one template hook, an alt-text pass, 301s or noindex for the leftovers, author archives out of the sitemap."
+    },
+    {
+      "t": "ul",
+      "items": [
+        "marshmoore.com\n0 description, 0 JSON-LD, 0 OG",
+        "/manufacturers/\n27 tiles, 28 of 32 images empty alt",
+        "getbran.com/marshmoore­casestudy\nthe case study"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "plate-num",
+      "text": "05"
+    },
+    {
+      "t": "p",
+      "text": "PLATE 05 · CLIENTS"
+    },
+    {
+      "t": "h3",
+      "text": "Three line cards, none you can filter by what a buyer needs"
+    },
+    {
+      "t": "p",
+      "text": "Marsh & Moore's /manufacturers/: 27 logo tiles behind a Divi filter (All/Commercial/Residential/Waterworks/Irrigation), 28 of 32 images with empty alt, no PDF, a “Request Our Line Card!” form; 4 of 30 manufacturer pages unlinked from the grid. Tim Morales & Associates runs its line card through Wix Stores: 25 manufacturers behind a “Price $1–$250” slider, territory codes in slugs (-ms-la-al-wfl), /product-page/copy-of-franke-al-wfl rendering “Fluidmaster”. Armstrong-Weatherly's /line-card: title “2024 LINECARD”, H1 “2026 LINE CARD”, 13 manufacturers, 1 PDF, no filter or search, 8 of 21 manufacturer pages missing from it, 12 “I'm a product” placeholders in the sitemap since 2016-06-10."
+    },
+    {
+      "t": "p",
+      "text": "WHAT I'D SHIP IN WEEK ONE\nThe prototype below: a line card with the facets a buyer uses, a spec sheet per product, and Product + DigitalDocument schema, on WordPress or Wix."
+    },
+    {
+      "t": "ul",
+      "items": [
+        "marshmoore.com/manufacturers/\nDivi filter, no PDF",
+        "timmorales.com/partners\nWix Stores, price slider",
+        "armstrong-weatherly.com/line-card\n1 PDF, no filter"
+      ]
+    },
+    {
+      "t": "p",
+      "text": "METHOD"
+    },
+    {
+      "t": "p",
+      "text": "166 read-only GET requests on 2026-09-22 between 13:23:32Z and 13:36:55Z, Chrome user agent, at least 0.6 s apart: robots.txt and every sitemap for all four sites, then 47 getbran.com pages plus llms.txt, 36 on marshmoore.com, 25 on timmorales.com, 30 on armstrong-weatherly.com. HTML bytes are the decoded body; TTFB is the final hop from an AWS host, so location-dependent. No Lighthouse or Core Web Vitals scores: PageSpeed Insights answered HTTP 429 for all four homepages."
+    },
+    {
+      "t": "p",
+      "text": "SEC. 02 PROTOTYPE"
+    },
+    {
+      "t": "h2",
+      "text": "A line card you can filter."
+    },
+    {
+      "t": "p",
+      "text": "Three of the four sites publish a line card. None lets a buyer narrow it by size, material or lead time, and none marks up a spec sheet as structured data. This is the page type Bran's clients need most, built here as a static prototype: 18 fictional products from 6 fictional manufacturers, facets, search, a spec table per product, and Product + DigitalDocument JSON-LD that rewrites itself as you click. Everything in the demo is invented; no real Bran client products appear."
+    },
+    {
+      "t": "p",
+      "text": "Ridgeline Industrial Sales · Line card"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fic",
+      "text": "FICTIONAL DEMO DATA"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c-note",
+      "text": "facets: AND across groups, OR within"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c-count",
+      "text": "18 of 18 products"
+    },
+    {
+      "t": "text",
+      "tag": "label",
+      "cls": "",
+      "text": "SEARCH THE LINE CARD"
+    },
+    {
+      "t": "text",
+      "tag": "legend",
+      "cls": "sr",
+      "text": "Manufacturer"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Bluepine Fittings"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Cascade Valve Works"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Ironbridge Hangers"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Kestrel Controls"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Northfork Pump Co."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Summit Backflow"
+    },
+    {
+      "t": "text",
+      "tag": "legend",
+      "cls": "sr",
+      "text": "Category"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Actuators"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Backflow preventers"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Fittings"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Pipe supports"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Pumps"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Valves"
+    },
+    {
+      "t": "text",
+      "tag": "legend",
+      "cls": "sr",
+      "text": "Size range"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "½–2 in"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "2½–4 in"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "6–12 in"
+    },
+    {
+      "t": "text",
+      "tag": "legend",
+      "cls": "sr",
+      "text": "Body material"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Aluminum"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Bronze / brass"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Carbon steel"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Cast iron"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Copper"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Ductile iron"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Galvanized steel"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "Stainless steel"
+    },
+    {
+      "t": "text",
+      "tag": "legend",
+      "cls": "sr",
+      "text": "Lead time"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "In stock"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "1 week"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "2–3 weeks"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "fv",
+      "text": "4–6 weeks"
+    },
+    {
+      "t": "p",
+      "text": "18 of 18 products shown"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Bronze ball valve, two-piece, full port\nCascade Valve Works · Valves · ½–2 in\nIN STOCK",
+        "Flanged ball valve, Class 300\nCascade Valve Works · Valves · 2½–4 in\n2–3 WEEKS",
+        "Lug butterfly valve, resilient seat\nCascade Valve Works · Valves · 6–12 in\n4–6 WEEKS",
+        "Swing check valve, bolted bonnet\nCascade Valve Works · Valves · 2½–4 in\nIN STOCK",
+        "Submersible effluent pump, ½ hp\nNorthfork Pump Co. · Pumps · ½–2 in\nIN STOCK",
+        "Wet-rotor circulator, three-speed\nNorthfork Pump Co. · Pumps · ½–2 in\n1 WEEK",
+        "Sewage grinder pump, 2 hp\nNorthfork Pump Co. · Pumps · 2½–4 in\n2–3 WEEKS",
+        "Press elbow, 90°, lead-free brass\nBluepine Fittings · Fittings · ½–2 in\nIN STOCK",
+        "Press coupling, copper, no stop\nBluepine Fittings · Fittings · ½–2 in\nIN STOCK",
+        "Grooved rigid coupling\nBluepine Fittings · Fittings · 2½–4 in\n1 WEEK",
+        "Reduced-pressure zone assembly\nSummit Backflow · Backflow preventers · ½–2 in\n1 WEEK",
+        "Double check assembly, flanged\nSummit Backflow · Backflow preventers · 2½–4 in\n2–3 WEEKS",
+        "RPZ assembly, large diameter\nSummit Backflow · Backflow preventers · 6–12 in\n4–6 WEEKS",
+        "Clevis hanger, adjustable\nIronbridge Hangers · Pipe supports · ½–2 in\nIN STOCK",
+        "Riser clamp, two-bolt\nIronbridge Hangers · Pipe supports · 2½–4 in\nIN STOCK",
+        "Trapeze kit, channel strut\nIronbridge Hangers · Pipe supports · 6–12 in\n1 WEEK",
+        "Electric quarter-turn actuator\nKestrel Controls · Actuators · ½–2 in\n2–3 WEEKS",
+        "Pneumatic rack-and-pinion actuator\nKestrel Controls · Actuators · 2½–4 in\n1 WEEK"
+      ]
+    },
+    {
+      "t": "h3",
+      "text": "Bronze ball valve, two-piece, full port"
+    },
+    {
+      "t": "p",
+      "text": "CVW-B150 · Cascade Valve Works · Valves · represented by Ridgeline Industrial Sales (fictional)"
+    },
+    {
+      "t": "p",
+      "text": "Two-piece bronze ball valve with a full-port bore, PTFE seats and a lockable lever handle for potable water and general service."
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "ATTRIBUTE",
+          "VALUE"
+        ],
+        [
+          "Manufacturer",
+          "Cascade Valve Works"
+        ],
+        [
+          "Category",
+          "Valves"
+        ],
+        [
+          "Size range",
+          "½–2 in"
+        ],
+        [
+          "Body material",
+          "Bronze / brass"
+        ],
+        [
+          "Lead time",
+          "In stock"
+        ],
+        [
+          "Pressure class",
+          "600 WOG / 150 SWP"
+        ],
+        [
+          "End connection",
+          "Threaded NPT"
+        ],
+        [
+          "Seat",
+          "PTFE"
+        ],
+        [
+          "Stem",
+          "Blowout-proof, adjustable packing"
+        ],
+        [
+          "Handle",
+          "Lever, lockable"
+        ],
+        [
+          "Listing",
+          "Lead-free (demo)"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "text": "Demo link: this catalog is fictional, so there is no PDF behind it. On a real build it points at the manufacturer’s sheet stored with the product, and the same URL is the DigitalDocument below."
+    },
+    {
+      "t": "p",
+      "text": "JSON-LD FOR THE SELECTED PRODUCT · UPDATES LIVE"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@context\": \"https://schema.org\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@graph\": ["
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"Product\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@id\": \"https://ridgeline.example/line-card/valves/cvw-b150/#product\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"url\": \"https://ridgeline.example/line-card/valves/cvw-b150/\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Bronze ball valve, two-piece, full port\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"mpn\": \"CVW-B150\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"sku\": \"RIS-CVW-B150\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"description\": \"Fictional demo product for a line-card prototype. Two-piece bronze ball valve with a full-port bore, PTFE seats and a lockable lever handle for potable water and general service.\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"category\": \"Valves\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"brand\": {"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"Brand\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Cascade Valve Works\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"manufacturer\": {"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"Organization\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Cascade Valve Works\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"material\": \"Bronze / brass\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"additionalProperty\": ["
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"PropertyValue\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Size range\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"value\": \"½–2 in\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"PropertyValue\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Body material\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"value\": \"Bronze / brass\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"PropertyValue\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Lead time\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"value\": \"In stock\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"PropertyValue\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Pressure class\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"value\": \"600 WOG / 150 SWP\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"PropertyValue\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"End connection\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"value\": \"Threaded NPT\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"PropertyValue\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Seat\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"value\": \"PTFE\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"PropertyValue\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Stem\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"value\": \"Blowout-proof, adjustable packing\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"PropertyValue\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Handle\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"value\": \"Lever, lockable\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"PropertyValue\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Listing\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"value\": \"Lead-free (demo)\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "],"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"subjectOf\": {"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"DigitalDocument\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@id\": \"https://ridgeline.example/spec-sheets/cvw-b150.pdf\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"CVW-B150 spec sheet (fictional)\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"url\": \"https://ridgeline.example/spec-sheets/cvw-b150.pdf\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"encodingFormat\": \"application/pdf\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"inLanguage\": \"en\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"about\": {"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@id\": \"https://ridgeline.example/line-card/valves/cvw-b150/#product\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"offers\": {"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"Offer\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"availability\": \"https://schema.org/InStock\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"deliveryLeadTime\": {"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"QuantitativeValue\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"minValue\": 1,"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"maxValue\": 2,"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"unitCode\": \"DAY\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"itemCondition\": \"https://schema.org/NewCondition\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"seller\": {"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"Organization\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Ridgeline Industrial Sales\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"url\": \"https://ridgeline.example/\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"BreadcrumbList\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"itemListElement\": ["
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"ListItem\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"position\": 1,"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Line card\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"item\": \"https://ridgeline.example/line-card/\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"ListItem\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"position\": 2,"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Valves\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"item\": \"https://ridgeline.example/line-card/valves/\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "},"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"@type\": \"ListItem\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"position\": 3,"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"name\": \"Bronze ball valve, two-piece, full port\","
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "\"item\": \"https://ridgeline.example/line-card/valves/cvw-b150/\""
+    },
+    {
+      "t": "p",
+      "text": "Also injected live into the page as <script type=\"application/ld+json\" id=\"lc-ld-live\">. Offer carries availability and lead time but no price: valid schema.org, honest for a rep firm, and it won't pretend to be a store."
+    },
+    {
+      "t": "p",
+      "text": "SHIPS ON"
+    },
+    {
+      "t": "h3",
+      "text": "The same standard on WordPress or Wix"
+    },
+    {
+      "t": "p",
+      "text": "Same fields, same facet names, same JSON-LD shape on either platform. That shared shape is the build standard."
+    },
+    {
+      "t": "p",
+      "text": "WORDPRESS"
+    },
+    {
+      "t": "h4",
+      "text": "Custom post type + taxonomies"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "CONTENT MODEL\na product post type; taxonomies for manufacturer, category, size range, material and lead time; specs as post meta; the spec sheet as an attachment on the product.",
+        "FACETS\nFacetWP or a custom WP_Query with tax_query behind this same checkbox UI, filter state in the query string so a filtered view is shareable.",
+        "URLS\n/line-card/{category}/{product}/ via rewrite rules; manufacturer and category archives become landing pages.",
+        "SCHEMA\none wp_head hook builds Product, DigitalDocument, Offer and BreadcrumbList from post meta, so no editor touches code.",
+        "PERFORMANCE\nserver-rendered list, page cache, lazy images; only the facet script ships."
+      ]
+    },
+    {
+      "t": "p",
+      "text": "WIX"
+    },
+    {
+      "t": "h4",
+      "text": "CMS collection + dataset filters"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "CONTENT MODEL\na Products collection with reference fields to Manufacturers and Categories, tags for size range and material, a Document field for the PDF.",
+        "FACETS\na dynamic list page with dataset filters, or Velo wixData.query().hasSome() behind this checkbox UI; Wix Search for the text box.",
+        "URLS\ndynamic item pages at /line-card/{slug}; category pages from the Categories collection, picked up by the sitemap automatically.",
+        "SCHEMA\nstructured-data variables in the dynamic page's SEO settings, or wixSeo.setStructuredData() in Velo for the Product + DigitalDocument graph.",
+        "PERFORMANCE\nthe platform already ships 61 to 63 script tags per page at the median across the three Wix sites sampled, so keep sections and apps per page lean."
+      ]
+    },
+    {
+      "t": "p",
+      "text": "SEC. 03 PLAN"
+    },
+    {
+      "t": "h2",
+      "text": "Ninety days: a standard first, then the first build under it."
+    },
+    {
+      "t": "p",
+      "text": "The findings above are not a backlog to grind through. They are what a build standard prevents: template leftovers, pages without schema, line cards that can't be filtered. So the department starts by writing the standard, uses the own-house fixes as its first test, then ships one client build the same way."
+    },
+    {
+      "t": "ol",
+      "items": [
+        "DAYS 1–30\n\nAudit and baseline\nAccess: Search Console, GA4, Wix and WordPress admin, DNS. One URL inventory from robots.txt and every sitemap, this page's method made repeatable.\nBaseline by page type: schema coverage, title and description lengths, H1 count, HTML weight, script count, TTFB; Lighthouse and CrUX when quota allows.\nOwn-house fixes: team slugs and placeholder copy, one canonical URL for the triple post, Service + BreadcrumbList on all 22 sitemap pages, noindex on /groups, /forum and /members, one H1 per post.\nDeliverable: a one-page before/after in the same numbers as this review.",
+        "DAYS 31–60\n\nBuild standard\nTemplates for line card, manufacturer page and product/spec-sheet page on WordPress and Wix, with this prototype's facet UI.\nSchema library: Organization, Service, BreadcrumbList, Product, DigitalDocument, Offer, BlogPosting, Person, validated in QA.\nMigration checklist: URL inventory, redirect map, 404 sweep, alt text, metadata, sitemap and robots, launch QA.\nPerformance budget per template and a launch checklist: viewport, canonical, one H1, description, schema, alt coverage.\nEstimating and time-tracking template so web work fits inside client credits and account leads see where hours go.",
+        "DAYS 61–90\n\nFirst build under the standard\nOne client build or migration end to end: scope, estimate, build, QA, launch, redirects verified in Search Console.\nProcess documented where the team works: templates, checklists, handoff notes, a written definition of done.\nHandoff: designers and account managers can brief web work without a developer in the room.\nRetro against the posting's criteria, with numbers; the standard revised from what the build taught."
+      ]
+    },
+    {
+      "t": "p",
+      "text": "HOW THE POSTING SAYS I'D BE MEASURED, AND WHAT I'D SHOW"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "TECHNICAL PERFORMANCE"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "The baseline numbers move: own-house schema coverage from 5 of 22 pages to all 22, team pages off template slugs, weight tracked per template."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "COMMUNICATION"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "A one-page weekly note: what shipped, what's blocked, what it cost in hours. Findings written like this page, evidence first."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "RELIABILITY"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "Hours tracked against estimates, dates kept, redirects checked in Search Console after every launch."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "TEAM FIT"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "A small team where design leads the work: I build what the designers design, brief in plain language, and say what's hard before it's late."
+    },
+    {
+      "t": "p",
+      "text": "SEC. 04 ABOUT"
+    },
+    {
+      "t": "h2",
+      "text": "Said plainly: what I bring."
+    },
+    {
+      "t": "ol",
+      "items": [
+        "Seven years of web development, WordPress since 2019. Independent contractor: I scope, estimate, track hours and ship.",
+        "A production Wix build for K-WAV (now Total LED), a Direct-View LED display manufacturer: spec-sheet product-line pages, forms, and rebrand-migration planning.\nk-wav.com",
+        "14,000+ SKU catalog migrations at Universal Wholesale / United Textile, with redirects, data cleanup and QA.\nmousabatarseh.com/changeatlas\nmousabatarseh.com/SEO-Tools",
+        "Schema/JSON-LD and Core Web Vitals into the high 90s. Two more reviews in this format:\nmousabatarseh.com/salt-review\nmousabatarseh.com/oakwood-review"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker",
+      "text": "END OF REVIEW"
+    }
+  ],
+  "links": [
+    {
+      "text": "getbran.com/web-design-seo",
+      "href": "https://www.getbran.com/web-design-seo"
+    },
+    {
+      "text": "getbran.com/team",
+      "href": "https://www.getbran.com/team"
+    },
+    {
+      "text": "/team/brian-chung",
+      "href": "https://www.getbran.com/team/brian-chung"
+    },
+    {
+      "text": "/team/ashley-amerson",
+      "href": "https://www.getbran.com/team/ashley-amerson"
+    },
+    {
+      "text": "getbran.com/web-design-seo",
+      "href": "https://www.getbran.com/web-design-seo"
+    },
+    {
+      "text": "/manufacturers-reps",
+      "href": "https://www.getbran.com/manufacturers-reps"
+    },
+    {
+      "text": "/wholesalers-distributors",
+      "href": "https://www.getbran.com/wholesalers-distributors"
+    },
+    {
+      "text": "getbran.com/post/top-social-media-for-your-business",
+      "href": "https://www.getbran.com/post/top-social-media-for-your-business"
+    },
+    {
+      "text": "/members",
+      "href": "https://www.getbran.com/members"
+    },
+    {
+      "text": "/llms.txt",
+      "href": "https://www.getbran.com/llms.txt"
+    },
+    {
+      "text": "marshmoore.com",
+      "href": "https://marshmoore.com/"
+    },
+    {
+      "text": "/manufacturers/",
+      "href": "https://marshmoore.com/manufacturers/"
+    },
+    {
+      "text": "getbran.com/marshmoore­casestudy",
+      "href": "https://www.getbran.com/marshmoorecasestudy"
+    },
+    {
+      "text": "marshmoore.com/manufacturers/",
+      "href": "https://marshmoore.com/manufacturers/"
+    },
+    {
+      "text": "timmorales.com/partners",
+      "href": "https://www.timmorales.com/partners"
+    },
+    {
+      "text": "armstrong-weatherly.com/line-card",
+      "href": "https://www.armstrong-weatherly.com/line-card"
+    },
+    {
+      "text": "Download spec sheet (PDF)",
+      "href": "https://mousabatarseh.com/bran-review/#spec-sheet-demo"
+    },
+    {
+      "text": "k-wav.com",
+      "href": "https://www.k-wav.com/"
+    },
+    {
+      "text": "mousabatarseh.com/changeatlas",
+      "href": "https://mousabatarseh.com/changeatlas/"
+    },
+    {
+      "text": "mousabatarseh.com/SEO-Tools",
+      "href": "https://mousabatarseh.com/SEO-Tools/"
+    },
+    {
+      "text": "mousabatarseh.com/salt-review",
+      "href": "https://mousabatarseh.com/salt-review/"
+    },
+    {
+      "text": "mousabatarseh.com/oakwood-review",
+      "href": "https://mousabatarseh.com/oakwood-review/"
+    },
+    {
+      "text": "Next: Salt Security — AEO & Structured-Data Review →",
+      "href": "https://mousabatarseh.com/salt-review/"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

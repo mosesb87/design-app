@@ -1,0 +1,138 @@
+{
+  "url": "https://mousabatarseh.com/moment-review/",
+  "title": "Moment — PDP & Offer Review",
+  "description": "Independent PDP and offer review of drinkmoment.com by Mousa Batarseh — conflicting review counts, a 20% promise priced at 13.6%, and 43 sold-out products still published. For the Ecommerce Specialist role.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "p",
+      "text": "SEC. 01 — OVERVIEW · FOR THE ECOMMERCE SPECIALIST ROLE"
+    },
+    {
+      "t": "h1",
+      "text": "Every number a shopper sees should be true."
+    },
+    {
+      "t": "p",
+      "text": "The role is site conversion work — landing pages, PDPs, offers, bundles. So I read the product pages closely. The same PDP reports “3,302 reviews, 4.7” in one schema block and “8,848, 4.8” in another, no product shows a live rating, the footer's Reviews link redirects to the homepage, and “20% off every shipment” prices at 13.6–15% in the plans."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "review counts on one PDP — 3,302 and 8,848"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "13.6%"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "real subscribe discount vs the “20% off” headline"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "43 / 152"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "products published but sold out"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "PDPs with a live star rating on the page"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker b",
+      "text": "TRUST"
+    },
+    {
+      "t": "h3",
+      "text": "Reviews that disagree"
+    },
+    {
+      "t": "p",
+      "text": "An Okendo metafield hard-codes 3,302 / 4.7 while the SEO JSON-LD block says 8,848 / 4.8 — and the theme's Product JSON-LD fails strict parsing."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker a",
+      "text": "OFFER"
+    },
+    {
+      "t": "h3",
+      "text": "A promise the cart doesn't keep"
+    },
+    {
+      "t": "p",
+      "text": "Homepage: “20% off every shipment · up to $180/yr.” Selling plan: $51 vs $59 on the 18-pack, 15% on the sleep powder."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker c",
+      "text": "CATALOG"
+    },
+    {
+      "t": "h3",
+      "text": "Dead weight in search"
+    },
+    {
+      "t": "p",
+      "text": "Holiday boxes sold out but live, the 18-pack under three handles, and indexed test pages in the sitemap."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Scope"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Method"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Platform"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Independent — not affiliated with Moment"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "next",
+      "text": "Next: The Ledger →"
+    }
+  ],
+  "links": [
+    {
+      "text": "Next: The Ledger →",
+      "href": "https://mousabatarseh.com/moment-review/ledger.html"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

@@ -1,0 +1,156 @@
+{
+  "url": "https://mousabatarseh.com/aedit-review/",
+  "title": "AEDIT — Medshop Launch Review",
+  "description": "Independent launch review of AEDIT Medshop by Mousa Batarseh — a parked domain, sitewide links to a password page, no analytics, and a ten-day go-live countdown. For the Business Operations & Ecommerce Manager role.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "p",
+      "text": "SEC. 01 — OVERVIEW · FOR THE BUSINESS OPERATIONS & ECOMMERCE MANAGER ROLE"
+    },
+    {
+      "t": "h1",
+      "text": "The launch is stuck at the plumbing."
+    },
+    {
+      "t": "p",
+      "text": "AEDIT Medshop is linked from every page of aedit.com — to a password-locked myshopify.com address marked “Coming Soon.” The domain it should live on, aeditmedshop.com, has been parked at GoDaddy since February 2025, and the store has no GA4 or Tag Manager. So day one is a domain cutover, tracking and a go-live checklist — not merchandising. Here's the countdown I'd run."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "19 mo."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "aeditmedshop.com parked since registration (2025-02-13)"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "Every page"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "of aedit.com links “Medshop” to a password page"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "analytics tags on the store — no GA4, no GTM"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "10"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "days in the go-live countdown I'd run"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker b",
+      "text": "DOMAIN"
+    },
+    {
+      "t": "h3",
+      "text": "Parked, not connected"
+    },
+    {
+      "t": "p",
+      "text": "aeditmedshop.com serves a GoDaddy parking lander; RDAP shows it registered 2025-02-13, expiring 2035. It was never pointed at the store."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "Evidence: aeditmedshop.com; rdap.verisign.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker a",
+      "text": "LINKS"
+    },
+    {
+      "t": "h3",
+      "text": "Sitewide to a password page"
+    },
+    {
+      "t": "p",
+      "text": "Header and footer link “Medshop” to the raw myshopify URL (pointer-events-none, title “Coming soon”). The medspa page shows “Shop… Coming Soon.”"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "Evidence: aedit.com source; /aedit-medspa"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker c",
+      "text": "TRACKING"
+    },
+    {
+      "t": "h3",
+      "text": "No baseline"
+    },
+    {
+      "t": "p",
+      "text": "The store (theme Concept 4.0.0) has Klaviyo but no GA4 or GTM — nothing to measure the launch against."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "Evidence: aeditmedshop.myshopify.com/password source"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Scope"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Method"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Independent — not affiliated with AEDIT"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "next",
+      "text": "NEXT: CUTOVER →"
+    }
+  ],
+  "links": [
+    {
+      "text": "NEXT: CUTOVER →",
+      "href": "https://mousabatarseh.com/aedit-review/cutover.html"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

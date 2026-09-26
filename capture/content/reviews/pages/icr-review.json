@@ -1,0 +1,2266 @@
+{
+  "url": "https://mousabatarseh.com/icr-review/",
+  "title": "ICR Listing Review — Mousa Batarseh",
+  "description": "Independent eBay store and webstore listing review for ICR Services by Mousa Batarseh — 12 findings, a title linter run on all 59 live listings, a photo standard, a rewritten listing, and a 30/60/90 plan.",
+  "ogImage": "https://mousabatarseh.com/icr-review/img/tpu2-after.jpg",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "WHAT WORKS"
+    },
+    {
+      "t": "h2",
+      "text": "START FROM WHAT'S ALREADY RIGHT"
+    },
+    {
+      "t": "p",
+      "text": "The store has the hard things in place: trust, a clean photo look, and real part numbers. The fixes below are about getting more buyers to find and believe each listing."
+    },
+    {
+      "t": "h4",
+      "text": "TRUST"
+    },
+    {
+      "t": "p",
+      "text": "100% positive feedback across 2.3K items sold, 30-day returns with the seller paying return shipping, and 24-hour handling."
+    },
+    {
+      "t": "h4",
+      "text": "A CONSISTENT PHOTO LOOK"
+    },
+    {
+      "t": "p",
+      "text": "White sweep, the ICR mark in the corner, and a close-up of the nameplate — the label shot is exactly what a technician checks first."
+    },
+    {
+      "t": "h4",
+      "text": "REAL IDENTIFIERS"
+    },
+    {
+      "t": "p",
+      "text": "Titles lead with brand and model and carry the controller; parts carry the manufacturer part number and an MPN item specific."
+    },
+    {
+      "t": "h4",
+      "text": "WEBSTORE STRUCTURED DATA"
+    },
+    {
+      "t": "p",
+      "text": "Product pages publish Product schema with MPN, price, stock, RefurbishedCondition, and a 30-day return policy — a solid SEO foundation."
+    },
+    {
+      "t": "h4",
+      "text": "LOCAL FULFILLMENT"
+    },
+    {
+      "t": "p",
+      "text": "Listings ship from Warren (the pendant I checked quoted 2–4 day delivery), and the webstore offers same-day shipping on in-stock parts ordered by 1 PM."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "12 FINDINGS"
+    },
+    {
+      "t": "h2",
+      "text": "WHAT I'D FIX FIRST"
+    },
+    {
+      "t": "p",
+      "text": "Everything below was captured from the live eBay store and icrservices.com on September 15, 2026. Each finding has the evidence, why it costs sales, and the fix. Fixes marked with a tool link are built further down this page."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "01"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev high",
+      "text": "HIGH"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · item 132708949075"
+    },
+    {
+      "t": "h3",
+      "text": "“TESTED, WARRANTY” IS IN THE TITLE BUT NOWHERE IN THE LISTING"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "ABB TPU2 teach pendant — US $3,499.95 or Best Offer"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "**TESTED WARRANTY**"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "Seller refurbished"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "no test details, no warranty term"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "all items are sold as used unless otherwise stated"
+    },
+    {
+      "t": "p",
+      "text": "A buyer spending $3,500 on a pendant wants proof it works and to know what the warranty covers. When the title, the condition, and the description say three different things, the buyer either messages and waits, or buys elsewhere — and a sale made on a mismatch can come back as “not as described.”"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "One description template for every tested item: what was tested and on which stand, the warranty length, and what's in the box — with the condition wording matching the title. SEE THE REWRITTEN LISTING →"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "02"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev high",
+      "text": "HIGH"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · FANUC titles"
+    },
+    {
+      "t": "h3",
+      "text": "ONE ROBOT FAMILY, SEVEN SPELLINGS"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "R-2000 family across the 59 live titles"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "R2000IB"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "R2000iB"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "R-2000IB"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "R-2000IC"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "R2000IC"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "R2000iC"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "R-2000iB"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "R30IA"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "R30iA"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "R30IB"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "R30IB+"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "R30IB Plus"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "R30IB PLUS"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "R-30iA"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "R-30iB Plus"
+    },
+    {
+      "t": "p",
+      "text": "Technicians search the way the nameplate or the manual reads, and plenty type it without the hyphen. A listing shouldn't depend on the search engine guessing that “R-2000iB” and “R2000iB” are the same robot. Inconsistent naming also makes the store look like it was listed by five different people."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "A naming convention: Brand + official model + type + official controller, then the no-hyphen variant where space allows (e.g. FANUC R-2000iB/210F Industrial Robot Arm w/ R-30iA Controller R2000iB 210F). LINTER + REWRITES →"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "03"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · 42 of 59 titles"
+    },
+    {
+      "t": "h3",
+      "text": "SERIAL NUMBERS ARE USING SPACE THAT BUYERS' SEARCH WORDS SHOULD GET"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "Longest example — 32 characters of an 80-character title"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "SN: (R) S2M003-1-1 (C) S1M544-1-2"
+    },
+    {
+      "t": "p",
+      "text": "Nobody searches a serial number before they know it exists. Meanwhile the words buyers do type — “industrial robot arm,” “Yaskawa” for Motoman, payload, application — are missing. The serial already sits in the nameplate photo, which is the right place for it."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Move serials to an item specific and the label photo; spend the space on search terms. The UP6 becomes Yaskawa Motoman UP6 Industrial Robot Arm w/ XRC Controller UP-6 6-Axis (70/80)."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "04"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · 14 titles, 51 all-caps"
+    },
+    {
+      "t": "h3",
+      "text": "ASTERISKS AND ALL CAPS READ AS NOISE"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "Across the 59 titles"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "**TESTED WARRANTY**"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "*REFURBISHED*"
+    },
+    {
+      "t": "p",
+      "text": "Symbols don't match any search and cost characters. “Refurbished” already exists as eBay's condition filter, so it earns its place in the title only as a plain word. Mixed case with correct model spelling (R-30iB, not R30IB) is easier to scan in a results page full of shouting titles."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Plain words (“Tested with Warranty”, “Refurbished”), brand-first, official capitalization. The linter below flags every case automatically."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "05"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev high",
+      "text": "HIGH"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · items 167252727995, 167792818349, 168588511029"
+    },
+    {
+      "t": "h3",
+      "text": "PART NUMBERS DISAGREE INSIDE THE SAME TITLE"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "Allen-Bradley PowerFlex 700 — both spellings are in one title"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "20B C 170 A 0 AYANC0"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "FANUC R-2000iB wrist — $14,249.95"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "A290-7329-T501**TESTED"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "FANUC R-2000iB/210F"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "R30iA"
+    },
+    {
+      "t": "p",
+      "text": "Part-number buyers search the exact catalog string from their nameplate. One dropped character is a missed match — and a tech comparing the title to the drive in front of them will hesitate on a $9,499.95 purchase."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Copy part numbers from the label photo, not from memory, keep a space on both sides, and run a QA check before publishing. The linter flags repeated words, glued part numbers, and spaced-vs-joined part numbers that don't match."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "06"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · item specifics"
+    },
+    {
+      "t": "h3",
+      "text": "ITEM SPECIFICS STOP AT BRAND, MPN, UPC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "ABB TPU2 teach pendant — every item specific on the listing"
+    },
+    {
+      "t": "p",
+      "text": "Item specifics drive eBay's search filters and the “compatible with” questions buyers ask. With three fields, the listing can't show up when a buyer filters by type, model, or controller."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "A specifics set per category (teach pendants, servo motors, drives, robots) filled from the label and the test record: Model, Type, Revision, Compatible Controller, Cable, Serial, Country of Manufacture, Warranty. EXAMPLE →"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "07"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · photos"
+    },
+    {
+      "t": "h3",
+      "text": "3 PHOTOS OF 24 — AND NONE OF THE PENDANT POWERED ON"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "ABB TPU2 teach pendant — photo set"
+    },
+    {
+      "t": "p",
+      "text": "For a tested electronic part, a photo of it booted on ICR's test stand is the most persuasive image in the listing — it proves the “tested” claim without a word. More angles also answer questions before buyers have to ask."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "A 12-shot standard for parts, done the same way every time. CHECKLIST →"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "08"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev low",
+      "text": "LOW"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · image editing"
+    },
+    {
+      "t": "h3",
+      "text": "THE WHITE SWEEP PHOTOGRAPHS LIGHT GRAY"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "Background sampled from photo 1 (median RGB)"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "234, 238, 238"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "236, 241, 243"
+    },
+    {
+      "t": "p",
+      "text": "Next to competitors' pure-white thumbnails, a gray, slightly cool background looks dimmer in search results. It's a two-step fix that can be batched across every photo."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "White-balance off the sweep, then set the white point — shadows kept, product untouched. Saved as a Photoshop action or a script so every set gets the same edit. BEFORE/AFTER →"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "09"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · label vs title"
+    },
+    {
+      "t": "h3",
+      "text": "THE NAMEPLATE SAYS MORE THAN THE TITLE"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "Label in photo 3 vs the title"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "/05"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "3HNE00442-1"
+    },
+    {
+      "t": "p",
+      "text": "A technician replacing a failed unit often matches the full article number including the revision, and ABB prints it with a space — so both forms get typed into search."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Title carries 3HNE00442-1/05 and 3HNE 00442-1; revision goes into item specifics too."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "10"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev opp",
+      "text": "GROWTH"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · assortment"
+    },
+    {
+      "t": "h3",
+      "text": "THE STORE IS MOSTLY WHOLE ROBOTS — PARTS ARE THE EVERYDAY BUY"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "59 active listings"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "48 complete robots"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "IN STOCK"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "not on eBay"
+    },
+    {
+      "t": "p",
+      "text": "Maintenance teams buy pendants, motors, amplifiers, boards and cables every week; whole robots sell a few times a year. A robot that isn't moving can become a dozen listings once it's pulled and disassembled — which is exactly the work this role describes."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "A part-out line for slow-moving robots, plus cross-listing in-stock refurbished parts from the webstore to eBay. PART-OUT PLANNER →"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "11"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "icrservices.com · product page"
+    },
+    {
+      "t": "h3",
+      "text": "WEBSTORE PAGES LEAD WITH THE PART NUMBER ONLY"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "/catalogue/fanuc-eo-0833-010"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "FANUC - EO-0833-010 | ICR"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "FANUC - EO-0833-010"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "Test Method · Test:"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "(blank)"
+    },
+    {
+      "t": "p",
+      "text": "Someone searching “FANUC P-155 wrist” doesn't see those words in the page title, and a typed hyphen doesn't match an en dash. The empty test field looks unfinished on a $9,000 item — the Product schema underneath is already excellent, so this is copy, not code."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Title: FANUC P-155 Wrist Assembly EO-0833-010, Refurbished | ICR. Description of ~150 characters with condition, test, warranty and same-day shipping. Fill the test method or hide the field when empty."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "12"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev low",
+      "text": "LOW"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "where",
+      "text": "eBay · store followers"
+    },
+    {
+      "t": "h3",
+      "text": "38 FOLLOWERS AFTER 2.3K SALES"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "Store header"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "38 followers"
+    },
+    {
+      "t": "p",
+      "text": "Repeat industrial buyers are the best buyers, and followers see new listings. Almost none of the people who already bought have saved the store."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "A packing-slip insert with a QR code to save the seller and a link to ICR's repair and buyback programs — cheap, and it turns one-time buyers into a channel."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "TOOL · TITLES"
+    },
+    {
+      "t": "h2",
+      "text": "A TITLE LINTER, RUN ON ALL 59 LIVE LISTINGS"
+    },
+    {
+      "t": "p",
+      "text": "I copied every active title from the store and wrote a checker for the problems in findings 2–5. It runs in your browser. The same rules sit behind the title builder, so new listings pass before they go live."
+    },
+    {
+      "t": "h4",
+      "text": "LIVE STORE TITLES · SEPT 15, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "59"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "58"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "42"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "58"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "#",
+          "TITLE",
+          "LENGTH",
+          "FLAGS"
+        ],
+        [
+          "1",
+          "ABB TPU2-EX TEACH PENDANT 3HNE00442-1 **TESTED WARRANTY**",
+          "57",
+          "SYMBOLSALL CAPS23 CHARS UNUSED"
+        ],
+        [
+          "2",
+          "ABB Robot Rectifier 3HAC14549-2/10A **TESTED WARRANTY**",
+          "55",
+          "SYMBOLS25 CHARS UNUSED"
+        ],
+        [
+          "3",
+          "ABB SERVO MOTOR 3HNP01724-1 **TESTED WARRANTY**",
+          "47",
+          "SYMBOLSALL CAPS33 CHARS UNUSED"
+        ],
+        [
+          "4",
+          "ABB Servo Elmo Motor 3HNE08539-1 **TESTED WARRANTY**",
+          "52",
+          "SYMBOLS28 CHARS UNUSED"
+        ],
+        [
+          "5",
+          "ABB Servo Motor 3HAC3403-1 **TESTED WARRANTY**",
+          "46",
+          "SYMBOLS34 CHARS UNUSED"
+        ],
+        [
+          "6",
+          "Fanuc AC Servo Motor A06B-0266-B400 **TESTED WARRANTY**",
+          "55",
+          "SYMBOLS25 CHARS UNUSED"
+        ],
+        [
+          "7",
+          "ABB IRB4600 ROBOT WITH IRC5 CONTROLLER SN: 4600-800437",
+          "54",
+          "SERIAL IN TITLEALL CAPS26 CHARS UNUSED"
+        ],
+        [
+          "8",
+          "ABB ROBOT IRB 6600 WRIST 175/225KG 3HAC8114-3 **TESTED WARRANTY**",
+          "65",
+          "SYMBOLSALL CAPS"
+        ],
+        [
+          "9",
+          "FANUC M900iA/350 ROBOT (ARM ONLY) SN: F-66880",
+          "45",
+          "SERIAL IN TITLEALL CAPS35 CHARS UNUSED"
+        ],
+        [
+          "10",
+          "ABB ROBOT IRB4600 WITH CONTROLLER IRC5 SN: 4600-104574",
+          "54",
+          "SERIAL IN TITLEALL CAPS26 CHARS UNUSED"
+        ],
+        [
+          "11",
+          "ABB ROBOT IRB 6600 FOUNDRY WRIST 3HAC16626-2 **TESTED WARRANTY**",
+          "64",
+          "SYMBOLSALL CAPS"
+        ],
+        [
+          "12",
+          "ABB IRB4600 ROBOT WITH IRC5 CONTROLLER SN: 4600-104569",
+          "54",
+          "SERIAL IN TITLEALL CAPS26 CHARS UNUSED"
+        ],
+        [
+          "13",
+          "FANUC ArcMate 120iB/10L, M16iB/10L ROBOT WITH RJ3iC (R30iA) CONTROLLER",
+          "70",
+          "CONTROLLER SPELLING"
+        ],
+        [
+          "14",
+          "MOTOMAN ROBOT ES165N WITH CONTROLLER NX100 SN: S71F10-1-2",
+          "57",
+          "SERIAL IN TITLEALL CAPSADD “YASKAWA”23 CHARS UNUSED"
+        ],
+        [
+          "15",
+          "FANUC ROBOT R-2000IC/210F W/ CONTROLLER R30IB SN: F-166063",
+          "58",
+          "SERIAL IN TITLEALL CAPSMODEL SPELLINGCONTROLLER SPELLING22 CHARS UNUSED"
+        ],
+        [
+          "16",
+          "ABB ROBOT IRB140 WITH CONTROLLER IRC5 SN: 14M-51324",
+          "51",
+          "SERIAL IN TITLEALL CAPS29 CHARS UNUSED"
+        ],
+        [
+          "17",
+          "PANASONIC ROBOT TB1400 WITH CONTROLLER WG3-U1400TB SN: 00005",
+          "60",
+          "SERIAL IN TITLEALL CAPS"
+        ],
+        [
+          "18",
+          "ABB IRB1200 ROBOT WITH IRC5 CONTROLLER SN: 1200-800668",
+          "54",
+          "SERIAL IN TITLEALL CAPS26 CHARS UNUSED"
+        ],
+        [
+          "19",
+          "FANUC ARC Mate 100i ROBOT WITH RJ3 RIA CONTROLLER MIG WELD CELL",
+          "63",
+          "ALL CAPS"
+        ],
+        [
+          "20",
+          "MOTOMAN ROBOT UP130 WITH CONTROLLER XRC SN: S0R437-1-1",
+          "54",
+          "SERIAL IN TITLEALL CAPSADD “YASKAWA”26 CHARS UNUSED"
+        ],
+        [
+          "21",
+          "MOTOMAN UP6 ROBOT WITH XRC CONTROLLER SN: (R) S2M003-1-1 (C) S1M544-1-2",
+          "71",
+          "SERIAL IN TITLEALL CAPSADD “YASKAWA”"
+        ],
+        [
+          "22",
+          "ABB ROBOT IRB2600 WITH CONTROLLER IRC5 SN: 2600-800489",
+          "54",
+          "SERIAL IN TITLEALL CAPS26 CHARS UNUSED"
+        ],
+        [
+          "23",
+          "ABB IRB4600/60 ROBOT WITH IRC5 CONTROLLER 2016 SN: 4600-104336",
+          "62",
+          "SERIAL IN TITLEALL CAPS"
+        ],
+        [
+          "24",
+          "ABB IRB1600 ROBOT WITH IRC5 CONTROLLER M2004 SN: 1600-800038",
+          "60",
+          "SERIAL IN TITLEALL CAPS"
+        ],
+        [
+          "25",
+          "FANUC ROBOT 430i 200KG WRIST A290-7321-T505 **TESTED WARRANTY**",
+          "63",
+          "SYMBOLSALL CAPS"
+        ],
+        [
+          "26",
+          "ABB ROBOT IRB2600 WITH CONTROLLER IRC5 SN: 2600-800955 *REFURBISHED*",
+          "68",
+          "SERIAL IN TITLESYMBOLSALL CAPS"
+        ],
+        [
+          "27",
+          "ABB ROBOT IRB 4600-45/2.05 WITH CONTROLLER IRC5 SN: 4600-802351",
+          "63",
+          "SERIAL IN TITLEALL CAPS"
+        ],
+        [
+          "28",
+          "FANUC ROBOT CR-35iA WITH CONTROLLER R30IB PLUS SN: F-218604",
+          "59",
+          "SERIAL IN TITLEALL CAPSCONTROLLER SPELLING21 CHARS UNUSED"
+        ],
+        [
+          "29",
+          "FANUC ROBOT R2000iC/165F SN: F-223231 *REFURBISHED*",
+          "51",
+          "SERIAL IN TITLESYMBOLSALL CAPSMODEL SPELLING29 CHARS UNUSED"
+        ],
+        [
+          "30",
+          "ABB ROBOT IRB4600 WITH CONTROLLER IRC5 SN: 4600-104340",
+          "54",
+          "SERIAL IN TITLEALL CAPS26 CHARS UNUSED"
+        ],
+        [
+          "31",
+          "FANUC ROBOT R2000iB/210F WITH CONTROLLER R30iA SN: F-154665 *REFURBISHED*",
+          "73",
+          "SERIAL IN TITLESYMBOLSALL CAPSMODEL SPELLINGCONTROLLER SPELLING"
+        ],
+        [
+          "32",
+          "KUKA ROBOT KR16 WITH CONTROLLER KR C4 SN: (R) 453653, (C) 371971",
+          "64",
+          "SERIAL IN TITLEALL CAPS"
+        ],
+        [
+          "33",
+          "KUKA ROBOT KR-150-2-2000 WITH CONTROLLER KRC2 ED05 SN: (R) 924797, (C) 90501",
+          "76",
+          "SERIAL IN TITLEALL CAPS"
+        ],
+        [
+          "34",
+          "FANUC R2000iB/165F ROBOT WITH R30iA CONTROLLER 2008",
+          "51",
+          "ALL CAPSMODEL SPELLINGCONTROLLER SPELLING29 CHARS UNUSED"
+        ],
+        [
+          "35",
+          "FANUC ArcMate 100iB ROBOT WITH RJ3iB CONTROLLER SN: F-69022",
+          "59",
+          "SERIAL IN TITLE21 CHARS UNUSED"
+        ],
+        [
+          "36",
+          "FANUC ROBOT R2000iB/210F WITH CONTROLLER R30iA SN: F-154666",
+          "59",
+          "SERIAL IN TITLEALL CAPSMODEL SPELLINGCONTROLLER SPELLING21 CHARS UNUSED"
+        ],
+        [
+          "37",
+          "ABB ROBOT IRB4600 WITH CONTROLLER IRC5 SN: 4600-800697",
+          "54",
+          "SERIAL IN TITLEALL CAPS26 CHARS UNUSED"
+        ],
+        [
+          "38",
+          "FANUC M10iA/12 ROBOT WITH R30iB CONTROLLER SN: F-180508",
+          "55",
+          "SERIAL IN TITLEALL CAPSCONTROLLER SPELLING25 CHARS UNUSED"
+        ],
+        [
+          "39",
+          "ABB ROBOT IRB4600 WITH CONTROLLER IRC5 SN: 4600-105623",
+          "54",
+          "SERIAL IN TITLEALL CAPS26 CHARS UNUSED"
+        ],
+        [
+          "40",
+          "FANUC ArcMate 100iB ROBOT WITH RJ3iB CONTROLLER",
+          "47",
+          "33 CHARS UNUSED"
+        ],
+        [
+          "41",
+          "FANUC ROBOT R2000iB/210F W/ R30iA Controller R30iA SN: F-154664",
+          "63",
+          "SERIAL IN TITLEMODEL SPELLINGCONTROLLER SPELLINGREPEATED “R30IA”"
+        ],
+        [
+          "42",
+          "FANUC ROBOT CR-35iA WITH CONTROLLER R30IB PLUS SN: F-224439",
+          "59",
+          "SERIAL IN TITLEALL CAPSCONTROLLER SPELLING21 CHARS UNUSED"
+        ],
+        [
+          "43",
+          "FANUC R2000iB/165F ROBOT WITH R30iB CONTROLLER 2014",
+          "51",
+          "ALL CAPSMODEL SPELLINGCONTROLLER SPELLING29 CHARS UNUSED"
+        ],
+        [
+          "44",
+          "FANUC ROBOT R-2000iB 165KG WRIST A290-7329-T501**TESTED WARRANTY**",
+          "66",
+          "SYMBOLSPART # GLUED TO SYMBOLSALL CAPS"
+        ],
+        [
+          "45",
+          "FANUC P250iA PAINT ROBOT WITH R30iA CONTROLLER SN: F-90981",
+          "58",
+          "SERIAL IN TITLEALL CAPSCONTROLLER SPELLING22 CHARS UNUSED"
+        ],
+        [
+          "46",
+          "PANASONIC ROBOT TB1400 WITH CONTROLLER WG3-U1400TB SN: 00006",
+          "60",
+          "SERIAL IN TITLEALL CAPS"
+        ],
+        [
+          "47",
+          "KUKA ROBOT KR150 R2700 WITH CONTROLLER KRC4 SN: 662082",
+          "54",
+          "SERIAL IN TITLEALL CAPS26 CHARS UNUSED"
+        ],
+        [
+          "48",
+          "ABB ROBOT IRB6600 WITH CONTROLLER IRC5 SN: 66-52366",
+          "51",
+          "SERIAL IN TITLEALL CAPS29 CHARS UNUSED"
+        ],
+        [
+          "49",
+          "FANUC M-20iA ROBOT WITH R30iA CONTROLLER SN: F-91734",
+          "52",
+          "SERIAL IN TITLEALL CAPSCONTROLLER SPELLING28 CHARS UNUSED"
+        ],
+        [
+          "50",
+          "ALLEN BRADLEY POWERFLEX 700 125HP 20B C 170 A 0 AYANC0 20BC170A0AYNANC0",
+          "71",
+          "ALL CAPSBRAND IS “ALLEN-BRADLEY”PART # MISMATCH"
+        ],
+        [
+          "51",
+          "ABB ROBOT IRB4600 WITH CONTROLLER IRC5 SN: 4600-800517",
+          "54",
+          "SERIAL IN TITLEALL CAPS26 CHARS UNUSED"
+        ],
+        [
+          "52",
+          "FANUC R2000IC/210F ROBOT WITH CONTROLLER R30IB+ SN: F-214944 *REFURBISHED*",
+          "74",
+          "SERIAL IN TITLESYMBOLSALL CAPSMODEL SPELLINGCONTROLLER SPELLING"
+        ],
+        [
+          "53",
+          "FANUC M710iC/70 FOUNDRY PRO ROBOT WITH R30iA CONTROLLER SN: F-154704",
+          "68",
+          "SERIAL IN TITLEALL CAPSCONTROLLER SPELLING"
+        ],
+        [
+          "54",
+          "FANUC ROBOT R2000IB/100H WITH CONTROLLER R30IA SN: F-102864",
+          "59",
+          "SERIAL IN TITLEALL CAPSMODEL SPELLINGCONTROLLER SPELLING21 CHARS UNUSED"
+        ],
+        [
+          "55",
+          "FANUC ROBOT R-2000IB/165F WITH CONTROLLER R30IB Plus SN: F-125136",
+          "65",
+          "SERIAL IN TITLEALL CAPSMODEL SPELLINGCONTROLLER SPELLING"
+        ],
+        [
+          "56",
+          "FANUC FOUNDRY PRO ROBOT R2000iB/210F W/CONTROLLER R30iA SN: F-93996",
+          "67",
+          "SERIAL IN TITLEALL CAPSMODEL SPELLINGCONTROLLER SPELLING"
+        ],
+        [
+          "57",
+          "FANUC R2000iB/125L ROBOT WITH R30iA CONTROLLER SN: F-92625",
+          "58",
+          "SERIAL IN TITLEALL CAPSMODEL SPELLINGCONTROLLER SPELLING22 CHARS UNUSED"
+        ],
+        [
+          "58",
+          "FANUC ARCMATE 120iC/10L ROBOT & R30iA CONTROLLER SN: F104416",
+          "60",
+          "SERIAL IN TITLEALL CAPSCONTROLLER SPELLING"
+        ],
+        [
+          "59",
+          "FANUC R2000iB/210F ROBOT WITH R30iA CONTROLLER",
+          "46",
+          "ALL CAPSMODEL SPELLINGCONTROLLER SPELLING34 CHARS UNUSED"
+        ]
+      ]
+    },
+    {
+      "t": "h4",
+      "text": "REWRITES — SAME ITEMS, SAME 80 CHARACTERS"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "NOW · 57"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "ABB TPU2-EX TEACH PENDANT 3HNE00442-1 **TESTED WARRANTY**"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "REWRITE · 80"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "ABB TPU2 Teach Pendant 3HNE00442-1/05 3HNE 00442-1 with Cable - Tested, Warranty"
+    },
+    {
+      "t": "p",
+      "text": "Adds the revision and the spaced article number from the nameplate. “Tested, Warranty” stays only because the new description backs it up."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "NOW · 71"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "ALLEN BRADLEY POWERFLEX 700 125HP 20B C 170 A 0 AYANC0 20BC170A0AYNANC0"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "REWRITE · 64"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "Allen-Bradley PowerFlex 700 AC Drive VFD 125 HP 20BC170A0AYNANC0"
+    },
+    {
+      "t": "p",
+      "text": "Drops the mistyped spaced copy; adds “AC Drive” and “VFD”, the words people search for."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "NOW · 46"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "ABB Servo Motor 3HAC3403-1 **TESTED WARRANTY**"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "REWRITE · 67"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "ABB Robot Servo Motor 3HAC3403-1 3HAC 3403-1 - Tested with Warranty"
+    },
+    {
+      "t": "p",
+      "text": "Uses 21 unused characters: “Robot” plus ABB's spaced label format."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "NOW · 63"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "FANUC ROBOT R2000iB/210F W/ R30iA Controller R30iA SN: F-154664"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "REWRITE · 74"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "FANUC R-2000iB/210F Industrial Robot Arm w/ R-30iA Controller R2000iB 210F"
+    },
+    {
+      "t": "p",
+      "text": "Official spellings first, no-hyphen variant last, repeated controller and serial removed."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "NOW · 73"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "FANUC ROBOT R2000iB/210F WITH CONTROLLER R30iA SN: F-154665 *REFURBISHED*"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "REWRITE · 77"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "Refurbished FANUC R-2000iB/210F Industrial Robot w/ R-30iA Controller R2000iB"
+    },
+    {
+      "t": "p",
+      "text": "“Refurbished” as a plain word up front instead of asterisks at the end."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "NOW · 71"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "MOTOMAN UP6 ROBOT WITH XRC CONTROLLER SN: (R) S2M003-1-1 (C) S1M544-1-2"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "REWRITE · 70"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "Yaskawa Motoman UP6 Industrial Robot Arm w/ XRC Controller UP-6 6-Axis"
+    },
+    {
+      "t": "p",
+      "text": "32 characters of serial numbers become Yaskawa, robot-arm and variant search terms."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "NOW · 66"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "FANUC ROBOT R-2000iB 165KG WRIST A290-7329-T501**TESTED WARRANTY**"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "REWRITE · 79"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "FANUC R-2000iB Robot Wrist Assembly 165kg A290-7329-T501 - Tested with Warranty"
+    },
+    {
+      "t": "p",
+      "text": "Puts a space back around the part number and spells out “Wrist Assembly”."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "NOW · 64"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "KUKA ROBOT KR16 WITH CONTROLLER KR C4 SN: (R) 453653, (C) 371971"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lab",
+      "text": "REWRITE · 61"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "txt",
+      "text": "KUKA KR 16 Industrial Robot Arm w/ KR C4 Controller KR16 KRC4"
+    },
+    {
+      "t": "p",
+      "text": "KUKA writes “KR 16” and “KR C4”; buyers type both ways."
+    },
+    {
+      "t": "p",
+      "text": "Model and part-number variants come from each item's own title and nameplate. Anything I couldn't confirm from the listing (payload, voltage, compatibility) is left out rather than guessed."
+    },
+    {
+      "t": "h4",
+      "text": "TITLE BUILDER"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "— none —"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Refurbished"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "New Surplus"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Used"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "FANUC"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "ABB"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "KUKA"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Yaskawa Motoman"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Allen-Bradley"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Panasonic"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Siemens"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Industrial Robot Arm"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Teach Pendant"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Servo Motor"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Servo Amplifier"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "AC Drive VFD"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Wrist Assembly"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Circuit Board"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Robot Controller"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "— none —"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Tested with Warranty"
+    },
+    {
+      "t": "text",
+      "tag": "option",
+      "cls": "",
+      "text": "Tested"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "title",
+      "text": "FANUC R-2000iB/210F Industrial Robot Arm w/ R-30iA Controller R2000iB 210F"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "num",
+      "text": "74 / 80 characters"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "flag g",
+      "text": "PASS"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "TOOL · PHOTOS"
+    },
+    {
+      "t": "h2",
+      "text": "PHOTO STANDARD + A ONE-MINUTE EDIT"
+    },
+    {
+      "t": "p",
+      "text": "Left: ICR's photo as listed. Right: my edit — white balance taken from the sweep, then the white point set so the background reads pure white. The product, the shadows, and the ICR mark are untouched. Drag to compare."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/icr-review/img/tpu2-before.jpg",
+      "alt": "ABB TPU2 teach pendant as photographed in ICR's eBay listing, light gray background",
+      "w": 1200,
+      "h": 1200,
+      "file": "73f8ce33165890aa.jpg"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/icr-review/img/tpu2-after.jpg",
+      "alt": "Same photo after white balance and white point correction, clean white background",
+      "w": 1200,
+      "h": 1200,
+      "file": "d81dd7254f089238.jpg"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lbl l",
+      "text": "AS LISTED"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lbl r",
+      "text": "EDITED"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/icr-review/img/tpu2-before.jpg",
+      "alt": "",
+      "w": 1200,
+      "h": 1200,
+      "caption": "1 · front",
+      "file": "73f8ce33165890aa.jpg"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/icr-review/img/tpu2-angle.jpg",
+      "alt": "",
+      "w": 0,
+      "h": 0,
+      "caption": "2 · angle",
+      "file": "3871d9ee61cd6471.jpg"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/icr-review/img/tpu2-label.jpg",
+      "alt": "",
+      "w": 0,
+      "h": 0,
+      "caption": "3 · nameplate",
+      "file": "e801af351731b3e6.jpg"
+    },
+    {
+      "t": "h3",
+      "text": "THE 12-SHOT STANDARD FOR PARTS"
+    },
+    {
+      "t": "p",
+      "text": "Checked items are already in the TPU2 listing. Tick the rest to see how the set fills out."
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Front, full product, centered on the sweep\nIN LISTING",
+        "Three-quarter angle\nIN LISTING",
+        "Nameplate, sharp and readable\nIN LISTING",
+        "Powered on the test stand — screen lit\nADD",
+        "Back and underside\nADD",
+        "Connector end and pins\nADD",
+        "Controls close-up (keys, joystick, E-stop)\nADD",
+        "Cable coiled next to a tape measure\nADD",
+        "Every scratch or wear mark, honestly\nADD",
+        "Mounting points and ports\nADD",
+        "Everything included, laid out\nADD",
+        "Packed for shipping\nADD"
+      ]
+    },
+    {
+      "t": "p",
+      "text": "3 of 12 shots"
+    },
+    {
+      "t": "p",
+      "text": "Same lighting, same distance, label shot first so photos never get mixed between items. Edited as a batch: white balance → white point → square crop at 1600 px → compress."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "TOOL · LISTING"
+    },
+    {
+      "t": "h2",
+      "text": "THE TPU2 PENDANT, RELISTED"
+    },
+    {
+      "t": "p",
+      "text": "Same item, rebuilt with the fixes above. Highlighted fields are the ones I'd fill from ICR's test record or a tape measure rather than guess."
+    },
+    {
+      "t": "h4",
+      "text": "TITLE · 80 / 80"
+    },
+    {
+      "t": "p",
+      "text": "ABB TPU2 Teach Pendant 3HNE00442-1/05 3HNE 00442-1 with Cable - Tested, Warranty"
+    },
+    {
+      "t": "h4",
+      "text": "ITEM SPECIFICS · 3 → 13"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "Brand",
+          "ABB"
+        ],
+        [
+          "MPN",
+          "3HNE00442-1"
+        ],
+        [
+          "Model",
+          "TPU2 (nameplate: TPU2-EX)"
+        ],
+        [
+          "Type",
+          "Teach Pendant"
+        ],
+        [
+          "Revision",
+          "/05 (from nameplate)"
+        ],
+        [
+          "Compatible Controller",
+          "from ICR test record"
+        ],
+        [
+          "Cable",
+          "Attached · length, measured"
+        ],
+        [
+          "Serial Number",
+          "301200#02280018"
+        ],
+        [
+          "Condition",
+          "Seller refurbished"
+        ],
+        [
+          "Tested",
+          "Yes · stand + date"
+        ],
+        [
+          "Warranty",
+          "ICR term"
+        ],
+        [
+          "Country of Manufacture",
+          "from nameplate"
+        ],
+        [
+          "UPC",
+          "Does not apply"
+        ]
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "ABB TPU2 Teach Pendant 3HNE00442-1/05"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Refurbished and tested by ICR Services · Warren, MI"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "TESTED ON ICR STAND"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "cf",
+      "text": "__"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SHIPS IN 24 HRS"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "30-DAY RETURNS"
+    },
+    {
+      "t": "h5",
+      "text": "CONDITION"
+    },
+    {
+      "t": "p",
+      "text": "Seller refurbished: cleaned, inspected and function-tested by ICR technicians. Light cosmetic wear on the housing and cable — every mark is shown in the photos."
+    },
+    {
+      "t": "h5",
+      "text": "TEST REPORT"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Powered up and booted on test stand",
+        "All keys, joystick, enabling device and E-stop checked",
+        "Display: result",
+        "Tested by initials on date"
+      ]
+    },
+    {
+      "t": "h5",
+      "text": "WHAT'S INCLUDED"
+    },
+    {
+      "t": "p",
+      "text": "TPU2 pendant with attached cable, as pictured. No controller, manuals or software unless shown."
+    },
+    {
+      "t": "h5",
+      "text": "SPECIFICATIONS"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "Brand",
+          "ABB"
+        ],
+        [
+          "Part number",
+          "3HNE00442-1/05"
+        ],
+        [
+          "Model",
+          "TPU2 (TPU2-EX)"
+        ],
+        [
+          "Compatible with",
+          "confirm"
+        ],
+        [
+          "Cable length",
+          "measure"
+        ],
+        [
+          "Serial",
+          "301200#02280018"
+        ]
+      ]
+    },
+    {
+      "t": "h5",
+      "text": "WARRANTY & RETURNS"
+    },
+    {
+      "t": "p",
+      "text": "__-day ICR warranty. 30-day returns; seller pays return shipping."
+    },
+    {
+      "t": "h5",
+      "text": "SHIPPING"
+    },
+    {
+      "t": "p",
+      "text": "Ships within 24 hours of payment from Warren, MI. Expedited shipping and your own UPS, FedEx or DHL account on request."
+    },
+    {
+      "t": "h5",
+      "text": "ALSO FROM ICR"
+    },
+    {
+      "t": "p",
+      "text": "Need yours repaired instead? ICR repairs industrial electronics with a 5-day mean time to repair. Questions: weekdays 8:00 a.m.–4:30 p.m. ET."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "THE JOB"
+    },
+    {
+      "t": "h2",
+      "text": "BENCH-TO-LISTING, EVERY DAY"
+    },
+    {
+      "t": "p",
+      "text": "The posting lists the work plainly: prep, clean, pull and disassemble inventory, capture and edit images, create eBay and webstore listings, keep the area organized. Here's how I'd run that as one line, so nothing gets photographed twice or listed with the wrong part number."
+    },
+    {
+      "t": "h4",
+      "text": "PULL"
+    },
+    {
+      "t": "p",
+      "text": "Pull by bin location and tag the item before anything else happens to it."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "tag: SKU · bin · date"
+    },
+    {
+      "t": "h4",
+      "text": "CLEAN"
+    },
+    {
+      "t": "p",
+      "text": "Wipe down and degrease; the nameplate stays intact and readable."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "no nameplate, no listing"
+    },
+    {
+      "t": "h4",
+      "text": "DISASSEMBLE"
+    },
+    {
+      "t": "p",
+      "text": "For part-outs, remove sub-assemblies per plan; bag and tag each with the parent SKU."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "child SKU → parent SKU"
+    },
+    {
+      "t": "h4",
+      "text": "TEST RECORD"
+    },
+    {
+      "t": "p",
+      "text": "Get the tech's result — stand, date, pass — so “tested” is a fact in the listing."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "no record → “untested”"
+    },
+    {
+      "t": "h4",
+      "text": "PHOTOGRAPH"
+    },
+    {
+      "t": "p",
+      "text": "12-shot standard, fixed lights and distance, label shot first."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "set = one folder per SKU"
+    },
+    {
+      "t": "h4",
+      "text": "EDIT"
+    },
+    {
+      "t": "p",
+      "text": "Batch: white balance, white point, square crop, compress."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "action / script, not by hand"
+    },
+    {
+      "t": "h4",
+      "text": "LIST"
+    },
+    {
+      "t": "p",
+      "text": "Title convention, category specifics, description template, sold-comps price check, webstore cross-list."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "eBay + icrservices.com"
+    },
+    {
+      "t": "h4",
+      "text": "QA & RESET"
+    },
+    {
+      "t": "p",
+      "text": "Linter pass, part number checked against the label photo, bin in the SKU field, bench cleared."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "clean area = fewer mix-ups"
+    },
+    {
+      "t": "h4",
+      "text": "PART-OUT PLANNER — ONE 6-AXIS ROBOT WITH CONTROLLER"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Teach pendant\n×",
+        "Servo motors (one per axis)\n×",
+        "Servo amplifier / drive units\n×",
+        "Main CPU and control boards\n×",
+        "I/O and interface boards\n×",
+        "Power supply unit\n×",
+        "Wrist assembly\n×",
+        "Reducers / gearboxes\n×",
+        "Robot-to-controller cables\n×",
+        "Cabinet fans, breakers, contactors\n×"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "big num",
+      "text": "16"
+    },
+    {
+      "t": "p",
+      "text": "separate listings from one robot that isn't selling whole"
+    },
+    {
+      "t": "p",
+      "text": "8 part types selected"
+    },
+    {
+      "t": "p",
+      "text": "Quantities vary by model — I'd build the real list with ICR's techs, and check sold comps before deciding a robot is worth more in parts."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "30 / 60 / 90"
+    },
+    {
+      "t": "h2",
+      "text": "WHAT THE FIRST THREE MONTHS LOOK LIKE"
+    },
+    {
+      "t": "p",
+      "text": "No invented targets — the first month is for learning ICR's line and fixing what's clearly broken; the numbers get set once I've seen real throughput."
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "days"
+    },
+    {
+      "t": "h4",
+      "text": "LEARN THE LINE, FIX THE OBVIOUS"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Learn ICR's tagging, bins, test stands and listing tools.",
+        "Own the photo station: fixed lighting, the 12-shot standard, a batch edit action.",
+        "Correct the part-number mismatches and repeated words on live listings.",
+        "Rewrite titles and specifics on the 59 live listings to the convention."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "days"
+    },
+    {
+      "t": "h4",
+      "text": "BUILD VOLUME"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Start the part-out line with the warehouse team on robots that aren't moving.",
+        "Roll out the description template with test and warranty sections.",
+        "Cross-list in-stock refurbished webstore parts to eBay.",
+        "Fix webstore page titles and descriptions in the top categories."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "days"
+    },
+    {
+      "t": "h4",
+      "text": "MEASURE AND TUNE"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Weekly scorecard: listings added, sold, watchers, buyer questions, days from bench to live.",
+        "Test eBay Promoted Listings on a small set of parts.",
+        "Packing-slip insert to grow store followers.",
+        "Write the process down so anyone can list to the same standard."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "ABOUT ME"
+    },
+    {
+      "t": "h2",
+      "text": "MOUSA BATARSEH"
+    },
+    {
+      "t": "p",
+      "text": "I like work where you can see the result. This role puts the item and the listing on the same bench, and I'd rather clean, pull, photograph and list a part myself than hand off half the job."
+    },
+    {
+      "t": "ul",
+      "items": [
+        "WHERE\nWarren, MI — a short drive from ICR.",
+        "ECOMMERCE\n7 years. Webmaster at Wild Bill's Tobacco (2023–now); Webmaster / E-Commerce Specialist at Universal Wholesale & United Textile (2019–2023).",
+        "LISTINGS\nBuilt and maintained catalogs of 14,000+ SKUs on Shopify and WooCommerce — titles, specs, pricing, inventory, imagery, bulk imports.",
+        "IMAGERY\nPhotoshop plus scripted batch editing in Python. The before/after on this page is my edit of ICR's own photo.",
+        "WAREHOUSE\nCoordinated listing and inventory updates with the warehouse team so the website matched the shelf.",
+        "SEARCH\nTook organic rankings to Google pages 1–2 within a year; report from GA4 and Search Console.",
+        "LANGUAGES\nEnglish and Arabic."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PDF · 1 page"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PDF · 1 page"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "hireme@mousabatarseh.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "(248) 810-1816"
+    }
+  ],
+  "links": [
+    {
+      "text": "SEE THE REWRITTEN LISTING →",
+      "href": "https://mousabatarseh.com/icr-review/#listing"
+    },
+    {
+      "text": "LINTER + REWRITES →",
+      "href": "https://mousabatarseh.com/icr-review/#linter"
+    },
+    {
+      "text": "EXAMPLE →",
+      "href": "https://mousabatarseh.com/icr-review/#listing"
+    },
+    {
+      "text": "CHECKLIST →",
+      "href": "https://mousabatarseh.com/icr-review/#photos"
+    },
+    {
+      "text": "BEFORE/AFTER →",
+      "href": "https://mousabatarseh.com/icr-review/#photos"
+    },
+    {
+      "text": "PART-OUT PLANNER →",
+      "href": "https://mousabatarseh.com/icr-review/#bench"
+    },
+    {
+      "text": "RÉSUMÉ\nPDF · 1 page",
+      "href": "https://mousabatarseh.com/icr-review/files/Mousa-Batarseh-Resume-ICR-Ecommerce-Specialist.pdf"
+    },
+    {
+      "text": "COVER LETTER\nPDF · 1 page",
+      "href": "https://mousabatarseh.com/icr-review/files/Mousa-Batarseh-Cover-Letter-ICR.pdf"
+    },
+    {
+      "text": "EMAIL\nhireme@mousabatarseh.com",
+      "href": "mailto:hireme@mousabatarseh.com?subject=ICR%20Ecommerce%20Specialist"
+    },
+    {
+      "text": "CALL\n(248) 810-1816",
+      "href": "tel:+12488101816"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://mousabatarseh.com/icr-review/img/tpu2-before.jpg",
+      "alt": "ABB TPU2 teach pendant as photographed in ICR's eBay listing, light gray background",
+      "w": 1200,
+      "h": 1200,
+      "file": "73f8ce33165890aa.jpg"
+    },
+    {
+      "src": "https://mousabatarseh.com/icr-review/img/tpu2-after.jpg",
+      "alt": "Same photo after white balance and white point correction, clean white background",
+      "w": 1200,
+      "h": 1200,
+      "file": "d81dd7254f089238.jpg"
+    },
+    {
+      "src": "https://mousabatarseh.com/icr-review/img/tpu2-before.jpg",
+      "alt": "",
+      "w": 1200,
+      "h": 1200,
+      "file": "73f8ce33165890aa.jpg"
+    }
+  ],
+  "status": 200
+}

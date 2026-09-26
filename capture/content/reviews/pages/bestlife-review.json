@@ -1,0 +1,132 @@
+{
+  "url": "https://mousabatarseh.com/bestlife-review/",
+  "title": "Best Life Brands — Location-Page Review",
+  "description": "Independent franchise location-page review of Best Life Brands by Mousa Batarseh — an indexed 555 template, NAP conflicts, a dead sitemap and a broken call link, with a location-health scanner. For the Sr. Digital Marketing Specialist role.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "p",
+      "text": "SEC. 01 — OVERVIEW · FOR THE SR. DIGITAL MARKETING SPECIALIST ROLE"
+    },
+    {
+      "t": "h1",
+      "text": "Nearly 800 front doors. Every one should open."
+    },
+    {
+      "t": "p",
+      "text": "This role creates and maintains the franchise location pages across six brands. So I checked them. A ComForCare page is a template — live, indexed, with a 555 phone number. A Birmingham page's schema address disagrees with its footer. Next Day Access's robots.txt points Google to a dead staging sitemap, and a Pittsburgh page's call link is an unrendered shortcode. Here's the scanner I'd run across all of them."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "1-555"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "phone number on a live, indexed template microsite"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "street addresses on one Birmingham page"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "404"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "the WP Engine sitemap Next Day Access's robots.txt names"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "brands, one QA system to keep them consistent"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker b",
+      "text": "WHY IT MATTERS"
+    },
+    {
+      "t": "h3",
+      "text": "Location pages are the leads"
+    },
+    {
+      "t": "p",
+      "text": "For a franchisor, the local page is where a family calls a home-care office. A dead tel: link or a wrong address loses that call."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker a",
+      "text": "WHAT I FOUND"
+    },
+    {
+      "t": "h3",
+      "text": "Four defect types"
+    },
+    {
+      "t": "p",
+      "text": "Indexed placeholders, NAP conflicts, a dead sitemap reference and an unrendered CTA — across three of the brands."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker c",
+      "text": "WHAT I'D BUILD"
+    },
+    {
+      "t": "h3",
+      "text": "A location-health scanner"
+    },
+    {
+      "t": "p",
+      "text": "One crawl, every location, every brand — scored on NAP, schema, tel: links, placeholders and indexability."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Scope"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Method"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Independent — not affiliated with Best Life Brands"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "next",
+      "text": "NEXT: SCANNER →"
+    }
+  ],
+  "links": [
+    {
+      "text": "NEXT: SCANNER →",
+      "href": "https://mousabatarseh.com/bestlife-review/scanner.html"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

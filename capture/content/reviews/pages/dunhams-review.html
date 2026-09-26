@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Independent SEO review of dunhamssports.com by Mousa Batarseh — 275 stores with no indexable pages, category slug collisions and no structured data, with a store-page generator prototype. Built for the SEO &amp; SEM Specialist role.">
+<meta name="robots" content="noindex">
+<title>Dunham's — SEO Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&amp;family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Spline+Sans+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="framework.css">
+</head>
+<body>
+<header class="mast"><div class="row"><a class="mark" href="index.html">MOUSA<b>·</b>BATARSEH</a><span class="tagline">Independent SEO Review · Dunham's Sports</span></div></header>
+<nav class="tabs"><div class="row">
+  <a href="index.html" aria-current="page"><span class="n">01</span>Overview</a>
+  <a href="findings.html"><span class="n">02</span>Findings</a>
+  <a href="generator.html"><span class="n">03</span>Store Pages</a>
+</div></nav>
+
+<main><div class="wrap">
+  <p class="crumb">Sec. 01 — Overview · for the SEO &amp; SEM Specialist role</p>
+  <h1>275 stores. Zero indexable store pages.</h1>
+  <p class="lede" style="margin-top:16px">The posting asks for SEO on Dunham's <b>local store pages</b>. There aren't any. The store locator is a 274-option dropdown of hashed IDs, <span class="mono">/stores/</span> returns raw JSON, no store has a URL in any sitemap, and <span class="mono">/stores/troy-mi</span> is a 404. Meanwhile the Shopware migration left category duplicates — <span class="mono">/apparel-1/</span> and <span class="mono">/apparel-2/</span> both live and indexed while <span class="mono">/apparel/</span> 404s — and no page on the site carries structured data. This is the store-page system I'd build.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">268</div><div class="l">active stores in the JSON the site already serves — none with a page</div></div>
+    <div class="stat"><div class="n">41</div><div class="l">category URLs with a “-1/-2” collision suffix</div></div>
+    <div class="stat"><div class="n">13<span style="font-size:1.3rem">/20</span></div><div class="l">sampled categories with an empty meta description</div></div>
+    <div class="stat"><div class="n dark">0</div><div class="l">pages with JSON-LD structured data, sitewide</div></div>
+  </div>
+
+  <div class="cards">
+    <div class="card"><span class="kicker b">The ask</span><h3 class="plain">SEO on local store pages</h3><p>“Identify and make recommendations to further optimize key pages, including homepage, category pages, product pages, vendor pages, content pages, <b>local store pages</b>.” Those pages don't exist yet — building them is the single biggest organic opportunity for a 275-store chain.</p></div>
+    <div class="card"><span class="kicker a">The data's ready</span><h3 class="plain">You already serve it</h3><p><span class="mono">/stores/</span> returns 268 active stores with address, city, state, zip and phone. A template turns each into an indexable page with hours, departments, a map and LocalBusiness schema — capturing “Dunham's + city” and “near me”.</p></div>
+    <div class="card"><span class="kicker c">The cleanup</span><h3 class="plain">Consolidate the catalog</h3><p>301 the 41 “-1/-2” duplicates to clean slugs, generate unique metadata for 1,764 categories, add Product schema, and give the sitemap real lastmod values instead of one bulk-stamped date.</p></div>
+  </div>
+
+  <div class="meta" style="margin-top:26px">
+    <span><b>Scope</b> dunhamssports.com stores + categories</span>
+    <span><b>Method</b> /stores JSON, sitemaps, page source, Lighthouse</span>
+    <span><b>Platform</b> Shopware 6 on Upsun</span>
+    <span><b>Independent — not affiliated with Dunham's</b></span>
+  </div>
+
+  <div class="pagenav"><span></span><a class="next" href="findings.html">Next: The findings →</a></div>
+</div></main>
+
+<footer><div class="wrap"><div class="foot">
+  <div class="who"><h3>Mousa Batarseh</h3><p>SEO &amp; e-commerce specialist in Warren, MI — a short drive from Troy. Six years of retail catalog SEO: site structure, metadata, canonicals, sitemaps and internal links; canonical &amp; sitemap cleanup across two of my own domains.</p></div>
+  <div class="links"><a href="https://mousabatarseh.com">mousabatarseh.com</a><a href="https://www.linkedin.com/in/mousabatarseh">linkedin.com/in/mousabatarseh</a><a href="mailto:hireme@mousabatarseh.com">hireme@mousabatarseh.com</a></div>
+</div>
+<p class="disc">Independent, unsolicited review. Dunham's Sports names and data are used only as evidence for the findings. Figures from public sources sampled Sep 19, 2026 and may have changed. No confidential data was used. Not affiliated with, endorsed by, or created for Dunham's Sports. Palette drawn from dunhamssports.com's own brand.</p>
+</div></footer>
+
+
+</body></html>

@@ -1,0 +1,150 @@
+{
+  "url": "https://mousabatarseh.com/biotrust-review/",
+  "title": "BioTRUST — Relaunch Review",
+  "description": "Independent pre-relaunch review of biotrust.com by Mousa Batarseh — indexable staging, split canonicals, a $36/$49 price mismatch, and a clickable go-live gate. For the Technical Ecommerce Manager role.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "p",
+      "text": "SEC. 01 — OVERVIEW · FOR THE TECHNICAL ECOMMERCE MANAGER ROLE"
+    },
+    {
+      "t": "h1",
+      "text": "Before the relaunch, the store is showing its work."
+    },
+    {
+      "t": "p",
+      "text": "The posting wants someone who has done a relaunch, not watched one — and who protects site health while it happens. So I ran the pre-flight on biotrust.com. Staging is public and indexable. robots.txt runs its rules together on one line. Every page carries two title tags and two canonicals. A homepage card prices a product at $36 that the product page sells at $49. This is the flight deck I'd hand your Head of Growth & Ecommerce in week one."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "117"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "products in a public, indexable staging store"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "2×"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "<title> and canonical tags on every page checked"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "77"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "script tags across 13 hosts on one product page"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n dark",
+      "text": "$36 / $49"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "homepage card price vs PDP price, same variant"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker b",
+      "text": "THE ASK"
+    },
+    {
+      "t": "h3",
+      "text": "Own the relaunch"
+    },
+    {
+      "t": "p",
+      "text": "“Read and edit Liquid… fix the thing rather than file a ticket.” The defects below are one theme change each — the work the role describes."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker a",
+      "text": "THE RISK"
+    },
+    {
+      "t": "h3",
+      "text": "A relaunch copies defects"
+    },
+    {
+      "t": "p",
+      "text": "Staging indexed next to production, split canonicals and invalid Product schema all carry forward unless someone gates go-live on them."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker c",
+      "text": "THE GATE"
+    },
+    {
+      "t": "h3",
+      "text": "A pre-flight you can click"
+    },
+    {
+      "t": "p",
+      "text": "Section 03 is a working readiness gate: blockers can't be waived, and the readiness score only reaches GO when they're cleared."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Scope"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Method"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Platform"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Independent — not affiliated with BioTRUST / Wellbeam"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "next",
+      "text": "NEXT: FINDINGS →"
+    }
+  ],
+  "links": [
+    {
+      "text": "NEXT: FINDINGS →",
+      "href": "https://mousabatarseh.com/biotrust-review/findings.html"
+    }
+  ],
+  "images": [],
+  "status": 200
+}
