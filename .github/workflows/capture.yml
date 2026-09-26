@@ -1,0 +1,109 @@
+# Captures real stills, layout outlines and short recordings of Mousa Batarseh's project sites,
+# probes the reference sites' behavior (no imagery stored) and checks every external link.
+# The development container's network policy cannot reach these hosts, so this runs on GitHub's runners
+# and commits the results back to this branch. Re-run by editing capture/run.json.
+name: Capture project media
+
+on:
+  push:
+    branches: ['claude/determined-lamport-4blt8a']
+    paths: ['capture/run.json', '.github/workflows/capture.yml']
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: capture-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 80
+    strategy:
+      fail-fast: false
+      matrix:
+        group: [sites, systems, reviews, archive]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install capture tools
+        run: |
+          npm install --prefix scripts/capture --no-audit --no-fund
+          npx --prefix scripts/capture playwright install --with-deps chromium
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-core fonts-noto-color-emoji >/dev/null
+      - name: Capture (${{ matrix.group }})
+        continue-on-error: true
+        env:
+          GROUP: ${{ matrix.group }}
+        run: node scripts/capture/capture.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: capture-${{ matrix.group }}
+          path: |
+            capture/raw/
+            capture/reports/
+          retention-days: 3
+          if-no-files-found: ignore
+
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install capture tools
+        run: |
+          npm install --prefix scripts/capture --no-audit --no-fund
+          npx --prefix scripts/capture playwright install --with-deps chromium
+      - name: Probe reference behavior
+        continue-on-error: true
+        run: node scripts/capture/probe.mjs
+      - name: Check external links
+        continue-on-error: true
+        run: node scripts/capture/linkcheck.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: probe-reports
+          path: capture/reports/
+          retention-days: 3
+          if-no-files-found: ignore
+
+  commit:
+    needs: [capture, probe]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Merge results
+        run: |
+          ls -R artifacts | head -50
+          for d in artifacts/capture-*; do [ -d "$d" ] && rsync -a "$d/" capture/; done
+          if [ -d artifacts/probe-reports ]; then mkdir -p capture/reports && rsync -a artifacts/probe-reports/ capture/reports/; fi
+          find capture -name '.frames-*' -type d -prune -exec rm -rf {} +
+          du -sh capture || true
+      - name: Commit
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add capture
+          if git diff --cached --quiet; then echo "Nothing new"; exit 0; fi
+          git commit -m "Capture: project media, reference probes and link report [skip ci]"
+          for i in 1 2 3 4; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

@@ -1,0 +1,642 @@
+[
+ {
+  "slug": "united-textile",
+  "project": "united-textile",
+  "url": "https://shopunitedtextile.com/",
+  "group": "sites",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "universal-wholesale",
+  "project": "universal-wholesale",
+  "url": "https://universalwholesaleonline.com/",
+  "group": "sites",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "firefly-burgers",
+  "project": "firefly-burgers",
+  "url": "https://fireflyburgersmi.com/ver2/",
+  "group": "sites",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "eat-with-samar",
+  "project": "eat-with-samar",
+  "url": "https://eatwithsamar.com/",
+  "group": "sites",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "great-lakes-cigar-festival",
+  "project": "great-lakes-cigar-festival",
+  "url": "https://greatlakescigarfest.com/home/",
+  "group": "sites",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "ptee-renewal",
+  "project": "ptee",
+  "url": "https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/",
+  "group": "sites",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "ptee-admissions",
+  "project": "ptee",
+  "url": "https://ptee.moseswebworks.com/admissions/en",
+  "group": "sites",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "btee-build",
+  "project": "ptee",
+  "url": "https://btee.moseswebworks.com/ar/",
+  "group": "sites",
+  "views": [
+   "desktop-hero",
+   "mobile-hero",
+   "mobile-full"
+  ]
+ },
+ {
+  "slug": "asas",
+  "project": "asas-studio",
+  "url": "https://asas.mousabatarseh.com/",
+  "group": "systems",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": {
+   "distance": 4.2,
+   "dur": 9000
+  }
+ },
+ {
+  "slug": "asas-studio-app",
+  "project": "asas-studio",
+  "url": "https://asas.mousabatarseh.com/studio/",
+  "group": "systems",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "changeatlas",
+  "project": "changeatlas",
+  "url": "https://mousabatarseh.com/changeatlas/",
+  "group": "systems",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "changeatlas-app",
+  "project": "changeatlas",
+  "url": "https://mousabatarseh.com/changeatlas/app/",
+  "group": "systems",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "deals-os",
+  "project": "deals-os",
+  "url": "https://mousabatarseh.com/deals-os/",
+  "group": "systems",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "csv-mapper",
+  "project": "csv-mapper",
+  "url": "https://mousabatarseh.com/csv-mapper/",
+  "group": "systems",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "dealproof",
+  "project": "deals-os",
+  "url": "https://mousabatarseh.com/dealproof/",
+  "group": "systems",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "seo-tools",
+  "project": "seo-tools",
+  "url": "https://mousabatarseh.com/SEO-Tools/",
+  "group": "systems",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "diamedical-lab",
+  "project": "diamedical-lab",
+  "url": "https://mousabatarseh.com/diamedical/",
+  "group": "systems",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero",
+   "mobile-full"
+  ],
+  "record": true
+ },
+ {
+  "slug": "diamedical-intro",
+  "project": "diamedical-lab",
+  "url": "https://mousabatarseh.com/diamedical-intro/",
+  "group": "systems",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "review-carhartt-reworked",
+  "project": "reviews",
+  "url": "https://mousabatarseh.com/reworked-review/",
+  "group": "reviews",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "review-oakwood",
+  "project": "reviews",
+  "url": "https://mousabatarseh.com/oakwood-review/",
+  "group": "reviews",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "review-vanguard",
+  "project": "reviews",
+  "url": "https://mousabatarseh.com/vanguard-review/",
+  "group": "reviews",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "review-jbtools",
+  "project": "reviews",
+  "url": "https://mousabatarseh.com/jbtools-review/",
+  "group": "reviews",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "review-hayhouse",
+  "project": "reviews",
+  "url": "https://mousabatarseh.com/hayhouse-review/",
+  "group": "reviews",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "review-biotrust",
+  "project": "reviews",
+  "url": "https://mousabatarseh.com/biotrust-review/",
+  "group": "reviews",
+  "views": [
+   "desktop-hero",
+   "desktop-full",
+   "mobile-hero"
+  ],
+  "record": true
+ },
+ {
+  "slug": "reviews-index",
+  "project": "reviews",
+  "url": "https://mousabatarseh.com/reviews/",
+  "group": "reviews",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "jabal-amman-publishers",
+  "project": "jabal-amman-publishers",
+  "url": "https://japublishers.com/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "ophir-publishers",
+  "project": "ophir-publishers",
+  "url": "https://ophir.com.jo/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "mawtini-dabke",
+  "project": "mawtini-dabke",
+  "url": "https://mawtinidabke.com/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "st-mary-berkley",
+  "project": "st-mary-berkley",
+  "url": "https://stmaryberkley.org/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "samona-hospitality",
+  "project": "samona-hospitality",
+  "url": "https://the-shg.com/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "larkspur-mobility",
+  "project": "larkspur-mobility",
+  "url": "https://mousabatarseh.com/Larkspur/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "american-hot-wheel",
+  "project": "american-hot-wheel",
+  "url": "https://interviewdemo.mousabatarseh.com/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "full-house-wholesale",
+  "project": "full-house-wholesale",
+  "url": "https://www.fullhousewholesale.com/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "ptee-org",
+  "project": "ptee-org",
+  "url": "https://ptee.org/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "ptee-online",
+  "project": "ptee-online",
+  "url": "https://ptee.online/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "ptee-courses",
+  "project": "ptee-courses",
+  "url": "https://ptee.moseswebworks.com/courses/ar",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "wildbills-fathers-day",
+  "project": "wildbills-fathers-day",
+  "url": "https://wildbillstobacco.com/fathers-day-specials/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "wildbills-christmas",
+  "project": "wildbills-christmas",
+  "url": "https://wildbillstobacco.com/christmas-sale-2024/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "wildbills-stpatrick",
+  "project": "wildbills-stpatrick",
+  "url": "https://wildbillstobacco.com/stpatrick-form/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "wildbills-wild-wednesdays",
+  "project": "wildbills-wild-wednesdays",
+  "url": "https://wildbillstobacco.com/wild-wednesdays/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "wildbills-drivethru-menu",
+  "project": "wildbills-drivethru-menu",
+  "url": "https://wildbillstobacco.com/drivethru-menu/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "wildbills-disposables-menu",
+  "project": "wildbills-disposables-menu",
+  "url": "https://wildbillstobacco.com/disposables-menu-2/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "the-lab",
+  "project": "the-lab",
+  "url": "https://lab.mousabatarseh.com/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "halden-medical",
+  "project": "halden-medical",
+  "url": "https://lab.mousabatarseh.com/halden-medical/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "northgate-retail",
+  "project": "northgate-retail",
+  "url": "https://lab.mousabatarseh.com/northgate-group/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "house-of-dank-demo",
+  "project": "house-of-dank-demo",
+  "url": "https://hod-demo.mousabatarseh.com/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "ai-academy",
+  "project": "ai-academy",
+  "url": "https://apps.moseswebworks.com/aiacademy/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "commerce-studio",
+  "project": "commerce-studio",
+  "url": "https://commerce-studio.mousabb2.chatgpt.site/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "diamedical-academy",
+  "project": "diamedical-academy",
+  "url": "https://mousabatarseh.com/diamedical/academy/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "diamedical-review",
+  "project": "diamedical-review",
+  "url": "https://mousabatarseh.com/diamedical-review/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "diamedical-workbook",
+  "project": "diamedical-workbook",
+  "url": "https://mousabatarseh.com/diamedical/v3/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "proposal-gardner-white",
+  "project": "proposal-gardner-white",
+  "url": "https://mousabatarseh.com/gardner-white-proposal/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "proposal-bran",
+  "project": "proposal-bran",
+  "url": "https://mousabatarseh.com/bran-proposal/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "proposal-rmc",
+  "project": "proposal-rmc",
+  "url": "https://mousabatarseh.com/rmc-proposal/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "changeatlas-review-demo",
+  "project": "changeatlas-review-demo",
+  "url": "https://mousabatarseh.com/changeatlas/app/",
+  "group": "archive",
+  "views": [
+   "desktop-hero",
+   "mobile-hero"
+  ]
+ },
+ {
+  "slug": "version-v1",
+  "project": "versions",
+  "url": "https://mousabatarseh.com/",
+  "group": "archive",
+  "views": [
+   "desktop-hero"
+  ],
+  "outline": false
+ },
+ {
+  "slug": "version-v2",
+  "project": "versions",
+  "url": "https://mousabatarseh.com/v2",
+  "group": "archive",
+  "views": [
+   "desktop-hero"
+  ],
+  "outline": false
+ },
+ {
+  "slug": "version-work",
+  "project": "versions",
+  "url": "https://work.mousabatarseh.com/",
+  "group": "archive",
+  "views": [
+   "desktop-hero"
+  ],
+  "outline": false
+ }
+]

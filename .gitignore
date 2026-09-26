@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.vercel/
+deploy/*.zip
+qa/
+scripts/capture/node_modules/
+capture/raw/**/.frames-*/
+.DS_Store
+*.log

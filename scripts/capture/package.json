@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-capture",
+  "private": true,
+  "type": "module",
+  "description": "Real-browser capture of Mousa Batarseh's project sites (stills, recordings, layout outlines), reference behavior probes and link checks. Runs on GitHub Actions because the development container cannot reach these hosts.",
+  "dependencies": {
+    "playwright": "1.56.1",
+    "sharp": "0.34.4"
+  }
+}
