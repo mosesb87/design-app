@@ -9,7 +9,7 @@ import { chromium, firefox, webkit } from 'playwright';
 const BASE = process.env.BASE || 'http://localhost:4321';
 const OUT = path.resolve('qa-browsers');
 fs.mkdirSync(path.join(OUT, 'shots'), { recursive: true });
-const PAGES = ['/', '/work/', '/about/', '/work/asas-studio/', '/work/united-textile/', '/work/deals-os/', '/404.html'];
+const PAGES = ['/', '/work/', '/about/', '/work/asas-studio/', '/work/united-textile/', '/work/deals-os/', '/blog/', '/blog/on-page-seo-large-product-catalog/', '/reviews/', '/reviews/oakwood/', '/reviews/hayhouse/', '/404.html'];
 const RUNS = [
   { browser: 'firefox', engine: firefox, vp: 'desk', viewport: { width: 1440, height: 900 } },
   { browser: 'firefox', engine: firefox, vp: 'mob', viewport: { width: 390, height: 844 }, hasTouch: true },
