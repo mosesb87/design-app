@@ -1,7 +1,7 @@
 {
   "slug": "wild-craft",
   "url": "https://craft.wild.as/",
-  "probedAt": "2026-09-26T15:02:55.200Z",
+  "probedAt": "2026-09-26T16:43:42.415Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://craft.wild.as/",
@@ -72,8 +72,8 @@
       "viewports": 8.5
     },
     "perf": {
-      "fcpMs": 232,
-      "domContentLoadedMs": 499,
+      "fcpMs": 236,
+      "domContentLoadedMs": 442,
       "requests": 21,
       "transferKB": 8885
     },
@@ -169,8 +169,8 @@
       "viewports": 8.5
     },
     "perf": {
-      "fcpMs": 124,
-      "domContentLoadedMs": 378,
+      "fcpMs": 120,
+      "domContentLoadedMs": 377,
       "requests": 21,
       "transferKB": 8885
     },
@@ -254,8 +254,8 @@
       "viewports": 9.7
     },
     "perf": {
-      "fcpMs": 112,
-      "domContentLoadedMs": 301,
+      "fcpMs": 104,
+      "domContentLoadedMs": 304,
       "requests": 21,
       "transferKB": 8885
     },

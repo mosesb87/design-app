@@ -1,7 +1,7 @@
 {
   "slug": "twohands",
   "url": "https://www.twohands.studio/",
-  "probedAt": "2026-09-26T15:05:32.769Z",
+  "probedAt": "2026-09-26T16:45:47.136Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://www.twohands.studio/",
@@ -69,22 +69,22 @@
       "viewports": 17.7
     },
     "perf": {
-      "fcpMs": 1120,
-      "domContentLoadedMs": 1105,
+      "fcpMs": 1284,
+      "domContentLoadedMs": 1269,
       "requests": 71,
       "transferKB": 1511
     },
     "animationsNow": 505,
     "motion": {
-      "scrollDrivenElements": 69,
+      "scrollDrivenElements": 16,
       "samples": [
         "h2",
         "div.process-questions__row.process-questions__row--1",
         "div.process-questions__row.process-questions__row--2",
         "div.process-questions__row.process-questions__row--3",
         "div.process-questions__row.process-questions__row--4",
-        "div.pricing-panel__mockup-track",
         "h2",
+        "div.pricing-panel__mockup-track",
         "h2",
         "svg",
         "div.principle-grid",
@@ -163,14 +163,14 @@
       "viewports": 17.7
     },
     "perf": {
-      "fcpMs": 296,
-      "domContentLoadedMs": 162,
+      "fcpMs": 304,
+      "domContentLoadedMs": 181,
       "requests": 71,
       "transferKB": 1511
     },
     "animationsNow": 500,
     "motion": {
-      "scrollDrivenElements": 87,
+      "scrollDrivenElements": 82,
       "samples": [
         "h2",
         "div.pricing-panel__mockup-track",
@@ -257,10 +257,10 @@
       "viewports": 21.1
     },
     "perf": {
-      "fcpMs": 284,
-      "domContentLoadedMs": 189,
-      "requests": 69,
-      "transferKB": 1510
+      "fcpMs": 280,
+      "domContentLoadedMs": 290,
+      "requests": 67,
+      "transferKB": 1467
     },
     "animationsNow": 505,
     "motion": null,

@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-09-26T15:10:34.617Z",
-  "total": 80,
+  "checkedAt": "2026-09-26T16:50:52.128Z",
+  "total": 89,
   "failing": 7,
   "results": [
     {
@@ -10,7 +10,7 @@
       "finalUrl": "https://apps.moseswebworks.com/aiacademy/",
       "redirects": 0,
       "title": "أكاديمية الآي آي — AI Academy",
-      "ms": 296
+      "ms": 287
     },
     {
       "url": "https://asas.build/",
@@ -19,7 +19,7 @@
       "finalUrl": "https://asas.build/",
       "redirects": 0,
       "title": "ASAS — Wireframe an Elementor page from 3,881 real blocks. Export native JSON.",
-      "ms": 262
+      "ms": 243
     },
     {
       "url": "https://asas.build/studio/",
@@ -28,7 +28,7 @@
       "finalUrl": "https://asas.build/studio/",
       "redirects": 0,
       "title": "ASAS Studio",
-      "ms": 377
+      "ms": 673
     },
     {
       "url": "https://btee.moseswebworks.com/ar/",
@@ -37,7 +37,7 @@
       "finalUrl": "https://btee.moseswebworks.com/ar/",
       "redirects": 0,
       "title": "PTEE | التعليم اللاهوتي بالامتداد في العالم العربي",
-      "ms": 1375
+      "ms": 996
     },
     {
       "url": "https://commerce-studio.mousabb2.chatgpt.site/",
@@ -46,7 +46,7 @@
       "finalUrl": "https://commerce-studio.mousabb2.chatgpt.site/",
       "redirects": 0,
       "title": "Commerce Studio — Spreadsheet workspace",
-      "ms": 982
+      "ms": 1086
     },
     {
       "url": "https://eatwithsamar.com/",
@@ -64,7 +64,7 @@
       "finalUrl": "https://fireflyburgersmi.com/",
       "redirects": 0,
       "title": "Firefly Burgers &#8211; MICHIGAN",
-      "ms": 590
+      "ms": 596
     },
     {
       "url": "https://fireflyburgersmi.com/ver2/",
@@ -73,7 +73,7 @@
       "finalUrl": "https://fireflyburgersmi.com/ver2/",
       "redirects": 0,
       "title": "Firefly Burgers Michigan",
-      "ms": 141
+      "ms": 155
     },
     {
       "url": "https://greatlakescigarfest.com/",
@@ -82,7 +82,7 @@
       "finalUrl": "https://greatlakescigarfest.com/",
       "redirects": 0,
       "title": "Thank You - Great Lakes Cigar Festival",
-      "ms": 209
+      "ms": 232
     },
     {
       "url": "https://greatlakescigarfest.com/home/",
@@ -91,7 +91,7 @@
       "finalUrl": "https://greatlakescigarfest.com/home/",
       "redirects": 0,
       "title": "Great Lakes Cigar Festival 2025 | Michigan's Ultimate Cigar Event",
-      "ms": 177
+      "ms": 235
     },
     {
       "url": "https://hod-demo.mousabatarseh.com/",
@@ -100,7 +100,7 @@
       "finalUrl": "https://hod-demo.mousabatarseh.com/",
       "redirects": 0,
       "title": "Marketing Ops Demo — Menu &amp; Promotion Manager | Mousa Batarseh",
-      "ms": 341
+      "ms": 391
     },
     {
       "url": "https://interviewdemo.mousabatarseh.com/",
@@ -109,7 +109,7 @@
       "finalUrl": "https://interviewdemo.mousabatarseh.com/",
       "redirects": 0,
       "title": "Just a moment...",
-      "ms": 71
+      "ms": 59
     },
     {
       "url": "https://japublishers.com/",
@@ -118,7 +118,7 @@
       "finalUrl": "https://japublishers.com/",
       "redirects": 0,
       "title": "الصفحة الرئيسية - Jabal Amman Publishers - جبل عمان ناشرون",
-      "ms": 787
+      "ms": 818
     },
     {
       "url": "https://lab.mousabatarseh.com/",
@@ -127,7 +127,7 @@
       "finalUrl": "https://lab.mousabatarseh.com/",
       "redirects": 0,
       "title": "The Lab — Mousa Batarseh",
-      "ms": 311
+      "ms": 301
     },
     {
       "url": "https://lab.mousabatarseh.com/halden-medical/",
@@ -136,7 +136,7 @@
       "finalUrl": "https://lab.mousabatarseh.com/halden-medical/",
       "redirects": 0,
       "title": "Halden Medical eCommerce case study — Mousa Batarseh (independent)",
-      "ms": 245
+      "ms": 347
     },
     {
       "url": "https://lab.mousabatarseh.com/northgate-group/",
@@ -145,7 +145,7 @@
       "finalUrl": "https://lab.mousabatarseh.com/northgate-group/",
       "redirects": 0,
       "title": "Marketing Operations Walkthrough — Mousa Batarseh | Northgate Retail Group",
-      "ms": 311
+      "ms": 286
     },
     {
       "url": "https://mawtinidabke.com/",
@@ -154,7 +154,7 @@
       "finalUrl": "https://mawtinidabke.com/",
       "redirects": 0,
       "title": "403 Forbidden",
-      "ms": 263
+      "ms": 261
     },
     {
       "url": "https://mousabatarseh.com/",
@@ -163,7 +163,7 @@
       "finalUrl": "https://mousabatarseh.com/",
       "redirects": 0,
       "title": "Mousa Batarseh — Webmaster, WordPress &amp; E-commerce Specialist",
-      "ms": 441
+      "ms": 387
     },
     {
       "url": "https://mousabatarseh.com/about/",
@@ -172,7 +172,7 @@
       "finalUrl": "https://mousabatarseh.com/about/",
       "redirects": 0,
       "title": "404 Not Found",
-      "ms": 220
+      "ms": 303
     },
     {
       "url": "https://mousabatarseh.com/biotrust-review/",
@@ -181,7 +181,7 @@
       "finalUrl": "https://mousabatarseh.com/biotrust-review/",
       "redirects": 0,
       "title": "BioTRUST — Relaunch Review",
-      "ms": 255
+      "ms": 291
     },
     {
       "url": "https://mousabatarseh.com/blog",
@@ -190,7 +190,7 @@
       "finalUrl": "https://mousabatarseh.com/blog/",
       "redirects": 1,
       "title": "Blog | Mousa Batarseh, Webmaster",
-      "ms": 228
+      "ms": 402
     },
     {
       "url": "https://mousabatarseh.com/blog/",
@@ -199,7 +199,7 @@
       "finalUrl": "https://mousabatarseh.com/blog/",
       "redirects": 0,
       "title": "Blog | Mousa Batarseh, Webmaster",
-      "ms": 276
+      "ms": 97
     },
     {
       "url": "https://mousabatarseh.com/bran-proposal/",
@@ -208,7 +208,7 @@
       "finalUrl": "https://mousabatarseh.com/bran-proposal/",
       "redirects": 0,
       "title": "Bran Marketing · Web Department Proposal by Mousa Batarseh",
-      "ms": 307
+      "ms": 85
     },
     {
       "url": "https://mousabatarseh.com/changeatlas/",
@@ -217,7 +217,7 @@
       "finalUrl": "https://mousabatarseh.com/changeatlas/",
       "redirects": 0,
       "title": "ChangeAtlas Commerce — know what an import will change before it runs",
-      "ms": 89
+      "ms": 153
     },
     {
       "url": "https://mousabatarseh.com/changeatlas/app/",
@@ -226,7 +226,7 @@
       "finalUrl": "https://mousabatarseh.com/changeatlas/app/",
       "redirects": 0,
       "title": "Demo · ChangeAtlas Commerce",
-      "ms": 85
+      "ms": 86
     },
     {
       "url": "https://mousabatarseh.com/csv-mapper/",
@@ -235,7 +235,7 @@
       "finalUrl": "https://mousabatarseh.com/csv-mapper/",
       "redirects": 0,
       "title": "CSV Mapper — Comma-Separated Values and Excel workspace",
-      "ms": 87
+      "ms": 347
     },
     {
       "url": "https://mousabatarseh.com/dealproof/",
@@ -244,7 +244,7 @@
       "finalUrl": "https://mousabatarseh.com/dealproof/",
       "redirects": 0,
       "title": "Promotion checks before launch — DealProof",
-      "ms": 83
+      "ms": 80
     },
     {
       "url": "https://mousabatarseh.com/deals-os/",
@@ -253,7 +253,7 @@
       "finalUrl": "https://mousabatarseh.com/deals-os/",
       "redirects": 0,
       "title": "Deals Operating System — Mousa Batarseh",
-      "ms": 90
+      "ms": 88
     },
     {
       "url": "https://mousabatarseh.com/diamedical-intro/",
@@ -262,7 +262,7 @@
       "finalUrl": "https://mousabatarseh.com/diamedical-intro/",
       "redirects": 0,
       "title": "How I thought it through",
-      "ms": 87
+      "ms": 85
     },
     {
       "url": "https://mousabatarseh.com/diamedical-review/",
@@ -271,7 +271,7 @@
       "finalUrl": "https://mousabatarseh.com/diamedical-review/",
       "redirects": 0,
       "title": "DiaMedical Experience Review — Mousa Batarseh",
-      "ms": 86
+      "ms": 81
     },
     {
       "url": "https://mousabatarseh.com/diamedical/",
@@ -280,7 +280,7 @@
       "finalUrl": "https://mousabatarseh.com/diamedical/",
       "redirects": 0,
       "title": "DiaMedical eCommerce case study — Mousa Batarseh (independent)",
-      "ms": 81
+      "ms": 88
     },
     {
       "url": "https://mousabatarseh.com/diamedical/academy/",
@@ -289,7 +289,7 @@
       "finalUrl": "https://mousabatarseh.com/diamedical/academy/",
       "redirects": 0,
       "title": "DiaMedical Academy",
-      "ms": 217
+      "ms": 153
     },
     {
       "url": "https://mousabatarseh.com/diamedical/v3/",
@@ -298,7 +298,7 @@
       "finalUrl": "https://mousabatarseh.com/diamedical/v3/",
       "redirects": 0,
       "title": "Workbook explorer — DiaMedical case study — Mousa Batarseh",
-      "ms": 84
+      "ms": 88
     },
     {
       "url": "https://mousabatarseh.com/gardner-white-proposal/",
@@ -307,7 +307,7 @@
       "finalUrl": "https://mousabatarseh.com/gardner-white-proposal/",
       "redirects": 0,
       "title": "Same-Day Answers · A web-orders desk for Gardner-White · Mousa Batarseh",
-      "ms": 151
+      "ms": 277
     },
     {
       "url": "https://mousabatarseh.com/hayhouse-review/",
@@ -316,7 +316,7 @@
       "finalUrl": "https://mousabatarseh.com/hayhouse-review/",
       "redirects": 0,
       "title": "Hay House Storefront Report — Mousa Batarseh",
-      "ms": 87
+      "ms": 150
     },
     {
       "url": "https://mousabatarseh.com/jbtools-review/",
@@ -325,7 +325,7 @@
       "finalUrl": "https://mousabatarseh.com/jbtools-review/",
       "redirects": 0,
       "title": "JB Tools — Product-Data Review",
-      "ms": 85
+      "ms": 87
     },
     {
       "url": "https://mousabatarseh.com/Larkspur/",
@@ -334,7 +334,7 @@
       "finalUrl": "https://mousabatarseh.com/Larkspur/",
       "redirects": 0,
       "title": "403 Forbidden",
-      "ms": 305
+      "ms": 266
     },
     {
       "url": "https://mousabatarseh.com/oakwood-review/",
@@ -343,7 +343,7 @@
       "finalUrl": "https://mousabatarseh.com/oakwood-review/",
       "redirects": 0,
       "title": "Oakwood Veneer — Species Sample Book",
-      "ms": 82
+      "ms": 91
     },
     {
       "url": "https://mousabatarseh.com/reviews/",
@@ -352,7 +352,7 @@
       "finalUrl": "https://mousabatarseh.com/reviews/",
       "redirects": 0,
       "title": "Website Reviews · Mousa Batarseh",
-      "ms": 148
+      "ms": 85
     },
     {
       "url": "https://mousabatarseh.com/reviews/reviews/",
@@ -361,7 +361,7 @@
       "finalUrl": "https://mousabatarseh.com/reviews/reviews/",
       "redirects": 0,
       "title": "All reviews · Mousa Batarseh",
-      "ms": 86
+      "ms": 93
     },
     {
       "url": "https://mousabatarseh.com/reworked-review/",
@@ -370,7 +370,7 @@
       "finalUrl": "https://mousabatarseh.com/reworked-review/",
       "redirects": 0,
       "title": "Carhartt Reworked · Recommerce Merchandising Review · Mousa Batarseh",
-      "ms": 88
+      "ms": 87
     },
     {
       "url": "https://mousabatarseh.com/rmc-proposal/",
@@ -379,7 +379,7 @@
       "finalUrl": "https://mousabatarseh.com/rmc-proposal/",
       "redirects": 0,
       "title": "Recovery Movement Consulting · Website Proposal by Mousa Batarseh",
-      "ms": 89
+      "ms": 86
     },
     {
       "url": "https://mousabatarseh.com/robots.txt",
@@ -388,7 +388,7 @@
       "finalUrl": "https://mousabatarseh.com/robots.txt",
       "redirects": 0,
       "title": null,
-      "ms": 85
+      "ms": 84
     },
     {
       "url": "https://mousabatarseh.com/SEO-Tools/",
@@ -397,7 +397,7 @@
       "finalUrl": "https://mousabatarseh.com/SEO-Tools/",
       "redirects": 0,
       "title": "Free SEO Tools in Your Browser | Mousa Batarseh",
-      "ms": 316
+      "ms": 307
     },
     {
       "url": "https://mousabatarseh.com/sitemap.xml",
@@ -406,7 +406,7 @@
       "finalUrl": "https://mousabatarseh.com/sitemap.xml",
       "redirects": 0,
       "title": null,
-      "ms": 78
+      "ms": 82
     },
     {
       "url": "https://mousabatarseh.com/v2",
@@ -415,7 +415,7 @@
       "finalUrl": "https://mousabatarseh.com/v2/",
       "redirects": 1,
       "title": "Mousa Batarseh — Webmaster, WordPress &amp; E-commerce Specialist",
-      "ms": 166
+      "ms": 169
     },
     {
       "url": "https://mousabatarseh.com/v2/",
@@ -424,7 +424,7 @@
       "finalUrl": "https://mousabatarseh.com/v2/",
       "redirects": 0,
       "title": "Mousa Batarseh — Webmaster, WordPress &amp; E-commerce Specialist",
-      "ms": 81
+      "ms": 85
     },
     {
       "url": "https://mousabatarseh.com/v2/work/",
@@ -433,7 +433,43 @@
       "finalUrl": "https://mousabatarseh.com/v2/work/",
       "redirects": 0,
       "title": "Work — every project, tool and site — Mousa Batarseh",
-      "ms": 85
+      "ms": 81
+    },
+    {
+      "url": "https://mousabatarseh.com/v2/work/changeatlas/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://mousabatarseh.com/v2/work/changeatlas/",
+      "redirects": 0,
+      "title": "ChangeAtlas Commerce — case study — Mousa Batarseh",
+      "ms": 81
+    },
+    {
+      "url": "https://mousabatarseh.com/v2/work/csv-mapper/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://mousabatarseh.com/v2/work/csv-mapper/",
+      "redirects": 0,
+      "title": "CSV Mapper — case study — Mousa Batarseh",
+      "ms": 82
+    },
+    {
+      "url": "https://mousabatarseh.com/v2/work/deals-os/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://mousabatarseh.com/v2/work/deals-os/",
+      "redirects": 0,
+      "title": "The Deals Operating System — case study — Mousa Batarseh",
+      "ms": 82
+    },
+    {
+      "url": "https://mousabatarseh.com/v2/work/diamedical-lab/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://mousabatarseh.com/v2/work/diamedical-lab/",
+      "redirects": 0,
+      "title": "DiaMedical Commerce Intelligence Lab — case study — Mousa Batarseh",
+      "ms": 83
     },
     {
       "url": "https://mousabatarseh.com/vanguard-review/",
@@ -442,7 +478,7 @@
       "finalUrl": "https://mousabatarseh.com/vanguard-review/",
       "redirects": 0,
       "title": "Vanguard — Field Review",
-      "ms": 86
+      "ms": 81
     },
     {
       "url": "https://mousabatarseh.com/work/",
@@ -451,7 +487,7 @@
       "finalUrl": "https://mousabatarseh.com/work/",
       "redirects": 0,
       "title": "404 Not Found",
-      "ms": 85
+      "ms": 84
     },
     {
       "url": "https://ophir.com.jo/",
@@ -460,7 +496,7 @@
       "finalUrl": "https://ophir.com.jo/",
       "redirects": 0,
       "title": "Homepage - Ophir",
-      "ms": 2896
+      "ms": 3413
     },
     {
       "url": "https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/",
@@ -469,7 +505,7 @@
       "finalUrl": "https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/courses/ar",
       "redirects": 1,
       "title": "PTEE | التعليم اللاهوتي بالامتداد",
-      "ms": 1639
+      "ms": 2124
     },
     {
       "url": "https://ptee.moseswebworks.com/admissions/en",
@@ -478,7 +514,7 @@
       "finalUrl": "https://ptee.online/local/ptee_admissions/index.php?lang=en",
       "redirects": 1,
       "title": "PTEE Admissions Portal | PTEE",
-      "ms": 1847
+      "ms": 991
     },
     {
       "url": "https://ptee.moseswebworks.com/courses/ar",
@@ -487,7 +523,7 @@
       "finalUrl": "https://ptee.moseswebworks.com/courses/ar",
       "redirects": 0,
       "title": "PTEE | التعليم اللاهوتي بالامتداد",
-      "ms": 1164
+      "ms": 829
     },
     {
       "url": "https://ptee.online/",
@@ -496,16 +532,16 @@
       "finalUrl": "https://ptee.online/",
       "redirects": 0,
       "title": "الصفحة الرئيسية | PTEE",
-      "ms": 1898
+      "ms": 407
     },
     {
       "url": "https://ptee.org/",
       "ok": true,
-      "status": 200,
+      "status": 202,
       "finalUrl": "https://ptee.org/",
       "redirects": 0,
-      "title": "PTEE | التعليم اللاهوتي بالامتداد في العالم العربي",
-      "ms": 115
+      "title": null,
+      "ms": 214
     },
     {
       "url": "https://shopunitedtextile.com/",
@@ -514,7 +550,7 @@
       "finalUrl": "https://shopunitedtextile.com/",
       "redirects": 0,
       "title": "United Textile Wholesale: Quality Wholesale Clothing in Detroit\n &ndash; UNITED TEXTILE WHOLESALE",
-      "ms": 277
+      "ms": 294
     },
     {
       "url": "https://stmaryberkley.org/",
@@ -523,14 +559,14 @@
       "finalUrl": "https://stmaryberkley.org/",
       "redirects": 0,
       "title": "Just a moment...",
-      "ms": 209
+      "ms": 199
     },
     {
       "url": "https://stmaryofberkley.org/",
       "ok": false,
       "error": "ENOTFOUND",
       "chain": [],
-      "ms": 248
+      "ms": 157
     },
     {
       "url": "https://the-shg.com/",
@@ -539,7 +575,7 @@
       "finalUrl": "https://the-shg.com/",
       "redirects": 0,
       "title": "SHG &#8211; Samona Hospitality Group",
-      "ms": 215
+      "ms": 238
     },
     {
       "url": "https://universalwholesaleonline.com/",
@@ -548,7 +584,7 @@
       "finalUrl": "https://universalwholesaleonline.com/",
       "redirects": 0,
       "title": "Home | U.W.I Universal Wholesalers INC.",
-      "ms": 402
+      "ms": 401
     },
     {
       "url": "https://wildbillstobacco.com/christmas-sale-2024/",
@@ -557,7 +593,7 @@
       "finalUrl": "https://wildbillstobacco.com/christmas-sale-2024/",
       "redirects": 0,
       "title": "Christmas Sale 2024 - Wild Bills Tobacco",
-      "ms": 193
+      "ms": 211
     },
     {
       "url": "https://wildbillstobacco.com/disposables-menu-2/",
@@ -566,7 +602,7 @@
       "finalUrl": "https://wildbillstobacco.com/disposables-menu-2/",
       "redirects": 0,
       "title": "Largest Selection of Mr. Vapor Disposables and Top Brands - Wild Bills Tobacco",
-      "ms": 156
+      "ms": 209
     },
     {
       "url": "https://wildbillstobacco.com/drivethru-menu/",
@@ -575,7 +611,7 @@
       "finalUrl": "https://wildbillstobacco.com/drivethru-menu/",
       "redirects": 0,
       "title": "Largest Selection of Mr. Vapor Disposables and Top Brands - Wild Bills Tobacco",
-      "ms": 128
+      "ms": 118
     },
     {
       "url": "https://wildbillstobacco.com/fathers-day-specials/",
@@ -584,7 +620,7 @@
       "finalUrl": "https://wildbillstobacco.com/fathers-day-specials/",
       "redirects": 0,
       "title": "Father&#039;s Day Specials - Wild Bills Tobacco",
-      "ms": 170
+      "ms": 145
     },
     {
       "url": "https://wildbillstobacco.com/stpatrick-form/",
@@ -593,7 +629,7 @@
       "finalUrl": "https://wildbillstobacco.com/stpatrick-form/",
       "redirects": 0,
       "title": "ST. Patrick Upload Receipt Form - Wild Bills Tobacco",
-      "ms": 206
+      "ms": 156
     },
     {
       "url": "https://wildbillstobacco.com/wild-wednesdays/",
@@ -602,7 +638,7 @@
       "finalUrl": "https://wildbillstobacco.com/wild-wednesdays/",
       "redirects": 0,
       "title": "Wild Wednesdays - Wild Bills Tobacco",
-      "ms": 176
+      "ms": 112
     },
     {
       "url": "https://work.mousabatarseh.com/",
@@ -611,7 +647,7 @@
       "finalUrl": "https://mousabatarseh.com/",
       "redirects": 1,
       "title": "Mousa Batarseh — Webmaster, WordPress &amp; E-commerce Specialist",
-      "ms": 328
+      "ms": 387
     },
     {
       "url": "https://work.mousabatarseh.com/american-hot-wheel-woocommerce-storefront/",
@@ -620,7 +656,16 @@
       "finalUrl": "https://work.mousabatarseh.com/american-hot-wheel-woocommerce-storefront/",
       "redirects": 0,
       "title": "American Hot Wheel WooCommerce Case Study | Mousa Batarseh",
-      "ms": 1101
+      "ms": 288
+    },
+    {
+      "url": "https://work.mousabatarseh.com/client-editable-restaurant-menu-wordpress/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://work.mousabatarseh.com/client-editable-restaurant-menu-wordpress/",
+      "redirects": 0,
+      "title": "WordPress Menu Page Clients Can Update Easily",
+      "ms": 1314
     },
     {
       "url": "https://work.mousabatarseh.com/core-web-vitals-elementor-wordpress/",
@@ -629,7 +674,7 @@
       "finalUrl": "https://work.mousabatarseh.com/core-web-vitals-elementor-wordpress/",
       "redirects": 0,
       "title": "Core Web Vitals for Page Builders: 4 Real Fixes",
-      "ms": 1203
+      "ms": 1240
     },
     {
       "url": "https://work.mousabatarseh.com/great-lakes-cigar-festival/",
@@ -638,7 +683,7 @@
       "finalUrl": "https://work.mousabatarseh.com/great-lakes-cigar-festival/",
       "redirects": 0,
       "title": "Great Lakes Cigar Festival Case Study | Mousa Batarseh",
-      "ms": 1111
+      "ms": 994
     },
     {
       "url": "https://work.mousabatarseh.com/on-page-seo-large-product-catalog/",
@@ -647,7 +692,7 @@
       "finalUrl": "https://work.mousabatarseh.com/on-page-seo-large-product-catalog/",
       "redirects": 0,
       "title": "On-Page SEO at Scale for Product Catalogs",
-      "ms": 1314
+      "ms": 143
     },
     {
       "url": "https://work.mousabatarseh.com/product-catalog-migration-field-mapping/",
@@ -656,7 +701,7 @@
       "finalUrl": "https://work.mousabatarseh.com/product-catalog-migration-field-mapping/",
       "redirects": 0,
       "title": "Data Field Mapping: The Core of Every Migration",
-      "ms": 1100
+      "ms": 979
     },
     {
       "url": "https://work.mousabatarseh.com/product-filters-attributes-ecommerce/",
@@ -665,7 +710,7 @@
       "finalUrl": "https://work.mousabatarseh.com/product-filters-attributes-ecommerce/",
       "redirects": 0,
       "title": "Product Filters: The Search Experience Stores Miss",
-      "ms": 1744
+      "ms": 1375
     },
     {
       "url": "https://work.mousabatarseh.com/redirect-mapping-ecommerce-migration/",
@@ -674,7 +719,25 @@
       "finalUrl": "https://work.mousabatarseh.com/redirect-mapping-ecommerce-migration/",
       "redirects": 0,
       "title": "Website Migration Redirects: Build the Essential Map",
-      "ms": 1583
+      "ms": 1094
+    },
+    {
+      "url": "https://work.mousabatarseh.com/resume/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://work.mousabatarseh.com/resume/",
+      "redirects": 0,
+      "title": "E-Commerce &amp; Website Specialist Resume | Mousa Batarseh",
+      "ms": 1148
+    },
+    {
+      "url": "https://work.mousabatarseh.com/shopify-or-woocommerce-decision/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://work.mousabatarseh.com/shopify-or-woocommerce-decision/",
+      "redirects": 0,
+      "title": "Shopify vs WooCommerce: 7 Questions to Decide",
+      "ms": 1038
     },
     {
       "url": "https://work.mousabatarseh.com/sku-structure-product-catalog/",
@@ -683,7 +746,7 @@
       "finalUrl": "https://work.mousabatarseh.com/sku-structure-product-catalog/",
       "redirects": 0,
       "title": "SKU Strategy: Build Product Codes That Scale",
-      "ms": 1487
+      "ms": 1004
     },
     {
       "url": "https://work.mousabatarseh.com/st-mary-christian-orthodox-church-website/",
@@ -692,7 +755,16 @@
       "finalUrl": "https://work.mousabatarseh.com/st-mary-christian-orthodox-church-website/",
       "redirects": 0,
       "title": "St. Mary Orthodox Church Website Case Study | Mousa Batarseh",
-      "ms": 1459
+      "ms": 352
+    },
+    {
+      "url": "https://work.mousabatarseh.com/united-textile-wholesale/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://work.mousabatarseh.com/united-textile-wholesale/",
+      "redirects": 0,
+      "title": "United Textile Shopify Case Study | Mousa Batarseh",
+      "ms": 1181
     },
     {
       "url": "https://work.mousabatarseh.com/universal-wholesale/",
@@ -701,7 +773,16 @@
       "finalUrl": "https://work.mousabatarseh.com/universal-wholesale/",
       "redirects": 0,
       "title": "Universal Wholesale WooCommerce Case Study | Mousa Batarseh",
-      "ms": 1275
+      "ms": 981
+    },
+    {
+      "url": "https://work.mousabatarseh.com/web-project-workflow-failure-points/",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://work.mousabatarseh.com/web-project-workflow-failure-points/",
+      "redirects": 0,
+      "title": "Web Project Workflow: 11 Steps and 3 Failure Points",
+      "ms": 1053
     },
     {
       "url": "https://www.fullhousewholesale.com/",
@@ -710,7 +791,7 @@
       "finalUrl": "https://www.fullhousewholesale.com/",
       "redirects": 0,
       "title": "FullHouse Wholesale |",
-      "ms": 293
+      "ms": 291
     },
     {
       "url": "https://www.linkedin.com/in/mousabatarseh",
@@ -719,7 +800,7 @@
       "finalUrl": "https://www.linkedin.com/in/mousabatarseh",
       "redirects": 0,
       "title": "Mousa Batarseh - Smart Ecom Lab | LinkedIn",
-      "ms": 705
+      "ms": 786
     }
   ]
 }

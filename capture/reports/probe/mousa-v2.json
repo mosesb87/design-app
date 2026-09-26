@@ -1,7 +1,7 @@
 {
   "slug": "mousa-v2",
   "url": "https://mousabatarseh.com/v2",
-  "probedAt": "2026-09-26T15:10:00.013Z",
+  "probedAt": "2026-09-26T16:50:17.288Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://mousabatarseh.com/v2/",
@@ -72,8 +72,8 @@
       "viewports": 17.5
     },
     "perf": {
-      "fcpMs": 832,
-      "domContentLoadedMs": 643,
+      "fcpMs": 820,
+      "domContentLoadedMs": 706,
       "requests": 7,
       "transferKB": 227
     },
@@ -178,8 +178,8 @@
       "viewports": 11.4
     },
     "perf": {
-      "fcpMs": 568,
-      "domContentLoadedMs": 583,
+      "fcpMs": 588,
+      "domContentLoadedMs": 607,
       "requests": 7,
       "transferKB": 227
     },
@@ -265,8 +265,8 @@
       "viewports": 14.3
     },
     "perf": {
-      "fcpMs": 548,
-      "domContentLoadedMs": 582,
+      "fcpMs": 544,
+      "domContentLoadedMs": 578,
       "requests": 7,
       "transferKB": 227
     },

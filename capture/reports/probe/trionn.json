@@ -1,7 +1,7 @@
 {
   "slug": "trionn",
   "url": "https://trionn.com/",
-  "probedAt": "2026-09-26T15:06:42.307Z",
+  "probedAt": "2026-09-26T16:46:56.893Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://trionn.com/",
@@ -76,17 +76,15 @@
       "viewports": 28.3
     },
     "perf": {
-      "fcpMs": 1540,
-      "domContentLoadedMs": 1483,
-      "requests": 155,
-      "transferKB": 2881
+      "fcpMs": 1640,
+      "domContentLoadedMs": 1628,
+      "requests": 139,
+      "transferKB": 2735
     },
     "animationsNow": 0,
     "motion": {
-      "scrollDrivenElements": 229,
+      "scrollDrivenElements": 227,
       "samples": [
-        "div.lines",
-        "div.words",
         "div.chars",
         "div.chars",
         "div.chars",
@@ -96,7 +94,9 @@
         "path",
         "span.title.mt-4",
         "div.words",
-        "span.title.block"
+        "span.title.block",
+        "div.words",
+        "div.words"
       ],
       "pinnedCandidates": [
         "svg",
@@ -186,14 +186,14 @@
       "viewports": 28.3
     },
     "perf": {
-      "fcpMs": 1552,
-      "domContentLoadedMs": 1494,
-      "requests": 156,
-      "transferKB": 2891
+      "fcpMs": 1764,
+      "domContentLoadedMs": 1775,
+      "requests": 148,
+      "transferKB": 2817
     },
     "animationsNow": 0,
     "motion": {
-      "scrollDrivenElements": 226,
+      "scrollDrivenElements": 230,
       "samples": [
         "div.lines",
         "div.words",
@@ -298,11 +298,11 @@
     },
     "perf": {
       "fcpMs": 1532,
-      "domContentLoadedMs": 1480,
-      "requests": 211,
-      "transferKB": 3309
+      "domContentLoadedMs": 1473,
+      "requests": 213,
+      "transferKB": 3350
     },
-    "animationsNow": 2,
+    "animationsNow": 0,
     "motion": null,
     "mobileNav": {
       "horizontalOverflowPx": 0

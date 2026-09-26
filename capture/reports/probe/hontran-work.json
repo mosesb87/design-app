@@ -1,7 +1,7 @@
 {
   "slug": "hontran-work",
   "url": "https://www.hontran.dev/work",
-  "probedAt": "2026-09-26T15:03:35.763Z",
+  "probedAt": "2026-09-26T16:44:22.836Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://www.hontran.dev/work",
@@ -69,27 +69,27 @@
       "viewports": 3.9
     },
     "perf": {
-      "fcpMs": 252,
-      "domContentLoadedMs": 143,
+      "fcpMs": 284,
+      "domContentLoadedMs": 187,
       "requests": 77,
       "transferKB": 7734
     },
     "animationsNow": 2,
     "motion": {
-      "scrollDrivenElements": 77,
+      "scrollDrivenElements": 20,
       "samples": [
         "span",
         "div.fixed.top-0",
-        "style",
-        "div.absolute.overflow-hidden",
-        "div",
-        "span",
-        "span",
-        "div",
-        "span",
-        "span",
-        "div",
-        "span"
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row"
       ],
       "pinnedCandidates": [
         "div.absolute.overflow-hidden",
@@ -167,27 +167,27 @@
       "viewports": 3.9
     },
     "perf": {
-      "fcpMs": 264,
-      "domContentLoadedMs": 232,
+      "fcpMs": 316,
+      "domContentLoadedMs": 98,
       "requests": 76,
       "transferKB": 7733
     },
     "animationsNow": 2,
     "motion": {
-      "scrollDrivenElements": 56,
+      "scrollDrivenElements": 19,
       "samples": [
         "span",
-        "div.fixed.top-0",
-        "style",
-        "div.absolute.overflow-hidden",
-        "div",
-        "span",
-        "span",
-        "div",
-        "span",
-        "span",
-        "div",
-        "span"
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row",
+        "a.WorkIndex-module-scss-module__XdKEaq__row"
       ],
       "pinnedCandidates": [
         "div.absolute.overflow-hidden",
@@ -264,8 +264,8 @@
       "viewports": 5.5
     },
     "perf": {
-      "fcpMs": 132,
-      "domContentLoadedMs": 75,
+      "fcpMs": 160,
+      "domContentLoadedMs": 134,
       "requests": 49,
       "transferKB": 7714
     },

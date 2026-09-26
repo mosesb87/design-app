@@ -1,7 +1,7 @@
 {
   "slug": "coinsetters",
   "url": "https://www.coinsetters.io/",
-  "probedAt": "2026-09-26T15:02:10.315Z",
+  "probedAt": "2026-09-26T16:42:58.344Z",
   "desktop": {
     "status": 200,
     "finalUrl": "https://www.coinsetters.io/",
@@ -90,14 +90,14 @@
       "viewports": 16.9
     },
     "perf": {
-      "fcpMs": 676,
-      "domContentLoadedMs": 1195,
+      "fcpMs": 328,
+      "domContentLoadedMs": 840,
       "requests": 136,
       "transferKB": 129
     },
     "animationsNow": 0,
     "motion": {
-      "scrollDrivenElements": 827,
+      "scrollDrivenElements": 826,
       "samples": [
         "div.div-block",
         "span.ws__span",
@@ -216,8 +216,8 @@
       "viewports": 16.9
     },
     "perf": {
-      "fcpMs": 144,
-      "domContentLoadedMs": 705,
+      "fcpMs": 136,
+      "domContentLoadedMs": 682,
       "requests": 135,
       "transferKB": 129
     },
@@ -337,13 +337,13 @@
       "text": "rgb(51, 51, 51)"
     },
     "scroll": {
-      "height": 14795,
+      "height": 14781,
       "viewports": 17.5
     },
     "perf": {
-      "fcpMs": 144,
-      "domContentLoadedMs": 655,
-      "requests": 135,
+      "fcpMs": 148,
+      "domContentLoadedMs": 634,
+      "requests": 136,
       "transferKB": 129
     },
     "animationsNow": 0,
