@@ -15,6 +15,7 @@ for (const p of parents) {
 }
 const rows = limit ? ordered.filter((e) => !e.child).slice(0, limit) : ordered;
 const catLabel = Object.fromEntries(categories.map((c) => [c.id, c.label]));
+const DOTS = ['var(--violet)', 'var(--tomato)', 'var(--blue)', 'var(--pink)', 'var(--aqua)'];
 const counts = Object.fromEntries(categories.map((c) => [c.id, all.filter((e) => e.category === c.id).length]));
 const preview = (e: Entry) => {
   const d = view(e.media, 'desktop-hero');
@@ -27,10 +28,10 @@ const thumb = (e: Entry) => {
 ---
 <div class="index" data-loupe id={id}>
   {filters && (
-    <div class="index__filters" role="group" aria-label="Filter the archive" data-filter>
+    <div class="index__filters" role="group" aria-label="Filter the archive" data-filter data-noun="entry,entries">
       <button type="button" class="chip" aria-pressed="true" data-filter-value="all">All <span class="num">{all.length}</span></button>
-      {categories.map((c) => (
-        <button type="button" class="chip" aria-pressed="false" data-filter-value={c.id}>{c.label} <span class="num">{counts[c.id]}</span></button>
+      {categories.map((c, i) => (
+        <button type="button" class="chip" aria-pressed="false" data-filter-value={c.id} style={`--dot:${DOTS[i % DOTS.length]}`}>{c.label} <span class="num">{counts[c.id]}</span></button>
       ))}
       <p class="visually-hidden" role="status" aria-live="polite" data-filter-status></p>
     </div>
@@ -47,10 +48,10 @@ const thumb = (e: Entry) => {
       </tr>
     </thead>
     <tbody data-rows-body>
-      {rows.map((e, i) => {
+      {rows.map((e) => {
         const href = e.caseStudy ? `/work/${e.caseStudy}/` : e.url;
         const internal = !!e.caseStudy;
-        const n = String(i + 1).padStart(2, '0');
+        const n = String(parents.indexOf(parents.find((p) => p.slug === e.slug)!) + 1).padStart(2, '0');
         return (
           <tr class:list={['index__row', { 'is-child': e.child, 'has-case': internal }]} data-cat={e.category} data-preview={preview(e) || undefined} data-row>
             <td class="index__c-n num slug">{e.child ? '—' : n}</td>
@@ -80,49 +81,35 @@ const thumb = (e: Entry) => {
 <style>
   .index { position: relative; }
   .index__filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: var(--s-6); }
-  .chip {
-    min-height: 44px;
-    padding: 0 14px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid var(--line);
-    font: 500 0.8125rem/1 var(--font-mono);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    transition: background-color var(--d-micro), color var(--d-micro), border-color var(--d-micro), box-shadow var(--d-small) var(--ease-register);
-  }
-  .chip .num { color: var(--fg-2); font-size: 0.72rem; }
-  .chip:hover { border-color: var(--fg); }
-  .chip[aria-pressed='true'] { background: var(--fg); color: var(--bg); border-color: var(--fg); box-shadow: -3px 3px 0 var(--sheet), 3px -3px 0 var(--register); }
-  .chip[aria-pressed='true'] .num { color: inherit; opacity: 0.7; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: var(--r-pill); background: var(--cloud); font-weight: 650; font-size: 0.9375rem; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
+  .chip::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--dot, var(--ink)); }
+  .chip .num { font-size: 0.75rem; font-weight: 750; padding: 2px 7px; border-radius: var(--r-pill); background: rgb(22 18 31 / 0.08); }
+  .chip:hover { transform: translateY(-2px); }
+  .chip[aria-pressed='true'] { background: var(--ink); color: #fff; }
+  .chip[aria-pressed='true'] .num { background: rgb(255 255 255 / 0.18); }
 
-  .index__table { width: 100%; border-top: 1px solid var(--fg); }
-  .index__table thead th { text-align: left; font: 500 var(--t-slug) / 1.4 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg-2); padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
-  .index__row td, .index__row th { padding: 16px 12px 16px 0; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; font-weight: inherit; }
-  .index__row { transition: background-color var(--d-micro); }
-  .index__c-n { width: 3.5em; color: var(--fg-2); }
-  .index__c-title a { display: inline-flex; align-items: baseline; gap: 0.35em; text-decoration: none; min-height: 32px; }
-  .index__title-text {
-    font-family: var(--font-display);
-    font-weight: 740;
-    font-stretch: 100%;
-    font-size: clamp(1.2rem, 1.8vw, 1.65rem);
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-    transition: font-stretch var(--d-small) var(--ease-register);
-  }
-  .index__arrow { color: var(--fg-2); transition: transform var(--d-small) var(--ease-register), color var(--d-micro); }
-  .index__row:hover .index__title-text, .index__row:focus-within .index__title-text { font-stretch: 112%; }
-  .index__row:hover .index__arrow, .index__row:focus-within .index__arrow { transform: translate(3px, -2px); color: var(--sheet); }
-  .index__row:hover, .index__row:focus-within { background: color-mix(in srgb, var(--paper-2) 70%, transparent); }
-  .is-child .index__title-text { font-size: clamp(1rem, 1.3vw, 1.2rem); font-weight: 620; }
+  .index__table { width: 100%; border-collapse: separate; border-spacing: 0 6px; }
+  .index__table thead th { text-align: left; font: 750 var(--t-label) / 1.4 var(--font-text); letter-spacing: 0.05em; text-transform: uppercase; color: var(--fg-2); padding: 0 14px 4px 0; }
+  .index__table thead th:first-child { padding-left: 18px; }
+  .index__row td, .index__row th { padding: 16px 14px 16px 0; vertical-align: top; text-align: left; font-weight: inherit; background: var(--cloud); transition: background-color var(--d-small); }
+  .index__row > :first-child { padding-left: 18px; border-radius: var(--r-m) 0 0 var(--r-m); }
+  .index__row > :last-child { border-radius: 0 var(--r-m) var(--r-m) 0; }
+  .index__c-n { width: 3.5em; color: var(--fg-2); font-weight: 700; }
+  .index__c-title a { display: inline; padding-block: 4px; text-decoration: none; }
+  .index__c-title a:focus-visible { outline-offset: 4px; border-radius: 4px; }
+  .index__title-text { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.35rem, 2vw, 1.875rem); line-height: 1; text-transform: uppercase; }
+  .index__arrow { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-left: 0.3em; vertical-align: middle; border-radius: 50%; background: var(--ink); color: #fff; font-size: 0.8rem; transform: translateY(-0.12em); transition: transform 0.45s var(--ease-pop), background-color var(--d-small); }
+  .index__row:hover > *, .index__row:focus-within > * { background: var(--lemon); }
+  .index__row.has-case:hover > *, .index__row.has-case:focus-within > * { background: var(--lime); }
+  .index__row:hover .index__arrow, .index__row:focus-within .index__arrow { transform: translateY(-0.12em) rotate(-45deg); }
+  .is-child .index__title-text { font-size: clamp(1.1rem, 1.4vw, 1.3rem); font-stretch: 85%; }
   .is-child .index__c-title { padding-left: 1.2em; }
-  .index__c-what { color: var(--fg-2); max-width: 46ch; font-size: var(--t-small); }
-  .index__c-plat, .index__c-status { white-space: normal; }
-  .status { display: inline-block; }
-  .status--demo, .status--adaptation, .status--independent { color: var(--register-text); }
-  .status--login, .status--unverified { color: var(--fg-2); }
+  .is-child > * { background: color-mix(in srgb, var(--cloud) 55%, #fff); }
+  .index__c-what { color: var(--ink-2); max-width: 46ch; font-size: var(--t-small); font-weight: 500; }
+  .index__c-plat { font: 650 0.8125rem / 1.45 var(--font-text); color: var(--ink-2); }
+  .status { display: inline-block; padding: 5px 10px; border-radius: var(--r-pill); background: var(--mint); color: var(--ink); font: 750 0.75rem / 1 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+  .status--demo, .status--adaptation, .status--independent { background: var(--lilac); }
+  .status--login, .status--unverified { background: var(--lemon); }
   .index__thumb { display: none; }
 
   .loupe {
@@ -134,8 +121,9 @@ const thumb = (e: Entry) => {
     pointer-events: none;
     z-index: 40;
     clip-path: circle(0% at 50% 50%);
-    background: var(--paper-2);
-    box-shadow: -6px 6px 0 var(--sheet), 6px -6px 0 var(--register);
+    background: #fff;
+    border-radius: var(--r-l);
+    box-shadow: var(--shadow-2);
     will-change: transform, clip-path;
   }
   .loupe img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
@@ -144,12 +132,16 @@ const thumb = (e: Entry) => {
   @media (max-width: 899px) {
     .index__table, .index__table tbody, .index__row, .index__row > * { display: block; }
     .index__table thead { display: none; }
-    .index__row { display: grid; grid-template-columns: 2.5em 1fr; column-gap: 8px; padding-block: 14px; border-bottom: 1px solid var(--line); }
-    .index__row td, .index__row th { padding: 0; border: 0; }
-    .index__c-n { grid-row: span 4; }
+    .index__row { display: grid; grid-template-columns: 2.4em 1fr; column-gap: 6px; padding: 16px 16px 16px 12px; margin-bottom: 8px; border-radius: var(--r-l); background: var(--cloud); }
+    .index__row.is-child { background: color-mix(in srgb, var(--cloud) 55%, #fff); }
+    .index__row > td, .index__row > th { padding: 0; border-radius: 0; background: transparent !important; }
+    .index__row:hover, .index__row:focus-within { background: var(--lemon); }
+    .index__row.has-case:hover, .index__row.has-case:focus-within { background: var(--lime); }
+    .index__row > .index__c-n { grid-row: span 4; padding-top: 6px; }
     .index__c-what { margin-top: 6px; }
-    .index__c-plat, .index__c-status { margin-top: 6px; }
-    .index__thumb { display: block; width: 100%; max-width: 360px; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; margin-top: 10px; background: var(--paper-2); }
+    .index__c-plat, .index__c-status { margin-top: 8px; }
+    .is-child .index__c-title { padding-left: 0; }
+    .index__thumb { display: block; width: 100%; max-width: 360px; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; margin-top: 12px; border-radius: var(--r-m); background: #fff; }
     .loupe { display: none; }
   }
   @media (min-width: 900px) and (max-width: 1199px) { .index__c-plat { display: none; } }
