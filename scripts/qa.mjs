@@ -82,8 +82,29 @@ for (const vpKey of vps) {
       }
       // Tap targets (touch only): interactive elements smaller than 24×24 CSS px (WCAG 2.2 AA 2.5.8)
       const smallTargets = vp.hasTouch ? await page.evaluate(() => [...document.querySelectorAll('a[href], button, [role=button], input, select')].filter((el) => { const r = el.getBoundingClientRect(); if (!r.width || !r.height) return false; if (getComputedStyle(el).display === 'inline' && el.closest('p, li, dd, td')) return false; return r.width < 24 || r.height < 24; }).slice(0, 12).map((el) => `${el.tagName.toLowerCase()} "${(el.textContent || el.getAttribute('aria-label') || '').trim().slice(0, 30)}" ${Math.round(el.getBoundingClientRect().width)}×${Math.round(el.getBoundingClientRect().height)}`)) : [];
-      // Keyboard pass: tab through the first 40 stops; every focused element must be visible and show an outline
+      // axe, twice: at the top after the full scroll (the whole page, grounds back to paper), and at the very bottom
+      // limited to what is on screen there (the chapter ground is red by then; elements far above never show on it).
       await scrollTo(0);
+      await page.waitForTimeout(600);
+      let axe = null;
+      if (runAxe && ['desk', 'mob'].includes(vpKey)) {
+        const tags = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
+        const fmt = (vs) => vs.map((v) => ({ id: v.id, impact: v.impact, help: v.help, nodes: v.nodes.length, sample: v.nodes.slice(0, 3).map((n) => n.target.join(' ')) }));
+        // Cards waiting off to the side on the rack's horizontal track are clipped by overflow: clip, which axe-core
+        // 4.13 doesn't treat as clipping; they are excluded here (the reduced-motion pass, where the rack is a vertical list in the same colours, checks them).
+        await page.evaluate(() => document.querySelectorAll('main *').forEach((e) => { const r = e.getBoundingClientRect(); if (r.width && (r.left >= innerWidth || r.right <= 0)) e.setAttribute('data-axe-offside', ''); }));
+        const top = await new AxeBuilder({ page }).withTags(tags).exclude('[data-axe-offside]').analyze().catch((e) => ({ error: String(e) }));
+        await page.evaluate(() => document.querySelectorAll('[data-axe-offside]').forEach((e) => e.removeAttribute('data-axe-offside')));
+        await scrollTo(total);
+        await page.waitForTimeout(600);
+        await page.evaluate(() => document.querySelectorAll('body *').forEach((e) => { const r = e.getBoundingClientRect(); if (r.width && r.bottom > 0 && r.top < innerHeight) e.setAttribute('data-axe-view', ''); }));
+        const bottom = await new AxeBuilder({ page }).withTags(tags).analyze().catch((e) => ({ error: String(e) }));
+        await page.evaluate(() => document.querySelectorAll('[data-axe-view]').forEach((e) => e.removeAttribute('data-axe-view')));
+        if (top.error || bottom.error) axe = top.error ? top : bottom;
+        else axe = [...fmt(top.violations).map((v) => ({ ...v, state: 'top' })), ...fmt(bottom.violations.map((v) => ({ ...v, nodes: v.nodes.filter((n) => n.html.includes('data-axe-view')) })).filter((v) => v.nodes.length)).map((v) => ({ ...v, state: 'bottom, on screen' }))];
+        await scrollTo(0);
+      }
+      // Keyboard pass: tab through the first 40 stops; every focused element must be visible and show an outline
       const focusIssues = [];
       if (mode === 'motion' && ['desk', 'mob'].includes(vpKey)) {
         await page.keyboard.press('Tab');
@@ -103,11 +124,6 @@ for (const vpKey of vps) {
         }
       }
       const metrics = await page.evaluate(() => ({ cls: +window.__cls.toFixed(4), shifts: window.__shifts.slice(0, 6), lcpAfterScroll: Math.round(window.__lcp), title: document.title, h1: document.querySelectorAll('h1').length, lang: document.documentElement.lang, desc: document.querySelector('meta[name=description]')?.content?.length || 0, canonical: document.querySelector('link[rel=canonical]')?.href || null, imgsNoAlt: [...document.images].filter((i) => !i.hasAttribute('alt')).length }));
-      let axe = null;
-      if (runAxe && mode === 'motion' && ['desk', 'mob'].includes(vpKey)) {
-        const a = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze().catch((e) => ({ error: String(e) }));
-        axe = a.error ? a : a.violations.map((v) => ({ id: v.id, impact: v.impact, help: v.help, nodes: v.nodes.length, sample: v.nodes.slice(0, 3).map((n) => n.target.join(' ')) }));
-      }
       const r = { page: p, viewport: vpKey, mode, lcp: lcpAtLoad, clsAtLoad, status: res?.status?.() ?? null, loadMs: Date.now() - t0, scrollHeight: total, overflowAt, hiddenOnReverse, smallTargets, focusIssues: focusIssues.slice(0, 10), logs, failed: [...new Set(failed)].slice(0, 10), ...metrics, axe };
       report.results.push(r);
       const flags = [r.overflowAt.length && 'OVERFLOW', r.logs.length && 'CONSOLE', r.failed.length && 'FAILED-REQ', r.hiddenOnReverse.length && 'HIDDEN-REVERSE', r.smallTargets.length && 'SMALL-TARGETS', r.focusIssues.length && 'FOCUS', r.cls > 0.05 && 'CLS', axe && axe.length && `AXE(${axe.length})`].filter(Boolean);

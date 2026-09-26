@@ -73,11 +73,10 @@ const items = siteCases();
     transition: font-stretch var(--d-small) var(--ease-register);
   }
   .feat__summary { color: var(--fg-2); }
-  .feat__cta { color: var(--fg); display: inline-flex; gap: 8px; text-decoration: none; justify-self: start; }
+  .feat__cta { color: var(--fg); display: inline-flex; align-items: center; gap: 8px; min-height: 32px; text-decoration: none; justify-self: start; }
   .feat__cta::after { content: ''; position: absolute; inset: 0; z-index: 2; }
   .feat__link:hover .feat__title, .feat__link:focus-within .feat__title { font-stretch: 112%; }
-  .feat__cta:focus-visible { outline: none; }
-  .feat__cta:focus-visible::after { outline: 2px solid var(--focus); outline-offset: 12px; }
+  .feat__cta:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
 
   @media (min-width: 1024px) {
     .featured__head { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
