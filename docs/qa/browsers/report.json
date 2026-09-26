@@ -1,6 +1,6 @@
 {
   "base": "http://localhost:4321",
-  "ranAt": "2026-09-26T16:18:01.864Z",
+  "ranAt": "2026-09-26T16:41:27.387Z",
   "versions": {
     "firefox": "142.0.1",
     "webkit": "26.0"
@@ -11,7 +11,7 @@
       "vp": "desk",
       "page": "/",
       "status": 200,
-      "ms": 8253,
+      "ms": 8310,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -25,7 +25,7 @@
       "vp": "desk",
       "page": "/work/",
       "status": 200,
-      "ms": 5263,
+      "ms": 5246,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -39,7 +39,7 @@
       "vp": "desk",
       "page": "/about/",
       "status": 200,
-      "ms": 4997,
+      "ms": 4973,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -53,7 +53,7 @@
       "vp": "desk",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5435,
+      "ms": 5407,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -67,7 +67,7 @@
       "vp": "desk",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5531,
+      "ms": 5790,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -81,7 +81,7 @@
       "vp": "desk",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5600,
+      "ms": 5548,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -95,7 +95,7 @@
       "vp": "desk",
       "page": "/404.html",
       "status": 200,
-      "ms": 3175,
+      "ms": 3158,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -109,7 +109,7 @@
       "vp": "mob",
       "page": "/",
       "status": 200,
-      "ms": 8988,
+      "ms": 9051,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -123,7 +123,7 @@
       "vp": "mob",
       "page": "/work/",
       "status": 200,
-      "ms": 8983,
+      "ms": 8976,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -137,7 +137,7 @@
       "vp": "mob",
       "page": "/about/",
       "status": 200,
-      "ms": 5658,
+      "ms": 5672,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -165,7 +165,7 @@
       "vp": "mob",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5199,
+      "ms": 5607,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -179,7 +179,7 @@
       "vp": "mob",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5468,
+      "ms": 5608,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -193,7 +193,7 @@
       "vp": "mob",
       "page": "/404.html",
       "status": 200,
-      "ms": 3250,
+      "ms": 3253,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -207,7 +207,7 @@
       "vp": "desk",
       "page": "/",
       "status": 200,
-      "ms": 12143,
+      "ms": 12679,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -223,7 +223,7 @@
       "vp": "desk",
       "page": "/work/",
       "status": 200,
-      "ms": 6193,
+      "ms": 6255,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -239,7 +239,7 @@
       "vp": "desk",
       "page": "/about/",
       "status": 200,
-      "ms": 5728,
+      "ms": 5753,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -255,7 +255,7 @@
       "vp": "desk",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 6387,
+      "ms": 6403,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -263,7 +263,9 @@
         "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
         "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
-      "failed": [],
+      "failed": [
+        "http://localhost:4321/media/asas/interact.mp4 Load request cancelled"
+      ],
       "viewTransitions": true
     },
     {
@@ -271,7 +273,7 @@
       "vp": "desk",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 6468,
+      "ms": 6731,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -287,7 +289,7 @@
       "vp": "desk",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 6476,
+      "ms": 6439,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -303,7 +305,7 @@
       "vp": "desk",
       "page": "/404.html",
       "status": 200,
-      "ms": 3729,
+      "ms": 3791,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -319,7 +321,7 @@
       "vp": "mob",
       "page": "/",
       "status": 200,
-      "ms": 10434,
+      "ms": 10516,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -335,7 +337,7 @@
       "vp": "mob",
       "page": "/work/",
       "status": 200,
-      "ms": 9959,
+      "ms": 9918,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -351,7 +353,7 @@
       "vp": "mob",
       "page": "/about/",
       "status": 200,
-      "ms": 6383,
+      "ms": 6290,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -367,7 +369,7 @@
       "vp": "mob",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 6235,
+      "ms": 6363,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -383,7 +385,7 @@
       "vp": "mob",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 6190,
+      "ms": 6564,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -399,7 +401,7 @@
       "vp": "mob",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 6429,
+      "ms": 6581,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -415,7 +417,7 @@
       "vp": "mob",
       "page": "/404.html",
       "status": 200,
-      "ms": 3887,
+      "ms": 3869,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -431,7 +433,7 @@
       "vp": "mob-reduced",
       "page": "/",
       "status": 200,
-      "ms": 10604,
+      "ms": 10563,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -447,13 +449,12 @@
       "vp": "mob-reduced",
       "page": "/work/",
       "status": 200,
-      "ms": 9601,
+      "ms": 9538,
       "overflow": 0,
       "hidden": [],
       "logs": [
         "warning: The resource http://localhost:4321/_assets/hubot-sans-display.CVe9ZyrX.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
-        "warning: The resource http://localhost:4321/_assets/azeret-mono.DHNnXo2L.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
+        "warning: The resource http://localhost:4321/_assets/mona-sans-text.I9Ofhy8E.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing."
       ],
       "failed": [],
       "viewTransitions": true
@@ -463,7 +464,7 @@
       "vp": "mob-reduced",
       "page": "/about/",
       "status": 200,
-      "ms": 6109,
+      "ms": 6063,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -479,7 +480,7 @@
       "vp": "mob-reduced",
       "page": "/work/asas-studio/",
       "status": 200,
-      "ms": 5529,
+      "ms": 5565,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -495,7 +496,7 @@
       "vp": "mob-reduced",
       "page": "/work/united-textile/",
       "status": 200,
-      "ms": 5443,
+      "ms": 5866,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -511,7 +512,7 @@
       "vp": "mob-reduced",
       "page": "/work/deals-os/",
       "status": 200,
-      "ms": 5721,
+      "ms": 5847,
       "overflow": 0,
       "hidden": [],
       "logs": [
@@ -527,7 +528,7 @@
       "vp": "mob-reduced",
       "page": "/404.html",
       "status": 200,
-      "ms": 3550,
+      "ms": 3598,
       "overflow": 0,
       "hidden": [],
       "logs": [
