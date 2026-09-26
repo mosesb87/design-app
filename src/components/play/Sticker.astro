@@ -1,0 +1,193 @@
+---
+// Die-cut "stickers": glossy objects drawn in SVG, each from Mousa's own world (a price tag, a check,
+// a cursor, a spreadsheet cell, a lens, blocks, a barcode, a percent coin, a pin, a sparkle).
+// Decorative only — always aria-hidden. Size comes from CSS (width); the SVG keeps its aspect ratio.
+import type { StickerName } from './types';
+interface Props { name: StickerName; class?: string; style?: string; depth?: number; tilt?: number; label?: string }
+const { name, class: cls = '', style = '', depth = 0.4, tilt = 0, label } = Astro.props;
+const u = `s${Math.random().toString(36).slice(2, 8)}`;
+const id = (k: string) => `${u}-${k}`;
+const url = (k: string) => `url(#${u}-${k})`;
+// A scalloped badge outline for the check.
+const scallop = (() => {
+  const n = 14, R = 74, r = 64, cx = 100, cy = 100;
+  let d = '';
+  for (let i = 0; i < n * 2; i++) {
+    const a = (Math.PI * i) / n - Math.PI / 2;
+    const rad = i % 2 ? r : R;
+    d += `${i ? 'L' : 'M'}${(cx + rad * Math.cos(a)).toFixed(1)} ${(cy + rad * Math.sin(a)).toFixed(1)} `;
+  }
+  return d + 'Z';
+})();
+const iso = (cx: number, cy: number, a: number) => {
+  const w = a * 0.866;
+  return {
+    top: `${cx},${cy - a / 2} ${cx + w},${cy} ${cx},${cy + a / 2} ${cx - w},${cy}`,
+    left: `${cx - w},${cy} ${cx},${cy + a / 2} ${cx},${cy + a * 1.5} ${cx - w},${cy + a}`,
+    right: `${cx},${cy + a / 2} ${cx + w},${cy} ${cx + w},${cy + a} ${cx},${cy + a * 1.5}`,
+  };
+};
+const cubes = [
+  { ...iso(100, 118, 44), c: ['#e7ffd0', '#c5f03a', '#8fbf13'] },
+  { ...iso(62, 96, 44), c: ['#d6fff9', '#19c7b8', '#0e8f84'] },
+  { ...iso(138, 96, 44), c: ['#ece6ff', '#8f78ff', '#5b3df5'] },
+  { ...iso(100, 74, 44), c: ['#ffe3ee', '#ff4fa3', '#d4287a'] },
+];
+---
+<span class:list={['sticker', `sticker--${name}`, cls]} style={`--depth:${depth};--tilt:${tilt}deg;${style}`} data-sticker aria-hidden="true" title={label}>
+  <svg viewBox="0 0 200 200" focusable="false">
+    {name === 'tag' && (
+      <g>
+        <defs>
+          <linearGradient id={id('g')} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a5c" /><stop offset="0.55" stop-color="#ff5a36" /><stop offset="1" stop-color="#ff4fa3" /></linearGradient>
+        </defs>
+        <g transform="rotate(-12 100 100)">
+          <path d="M34 62 H128 L170 100 L128 138 H34 Q20 138 20 124 V76 Q20 62 34 62 Z" fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round" />
+          <path d="M34 62 H128 L170 100 L128 138 H34 Q20 138 20 124 V76 Q20 62 34 62 Z" fill={url('g')} />
+          <path d="M34 66 H126 L150 88 Q90 80 26 98 V78 Q26 66 34 66 Z" fill="#fff" opacity="0.28" />
+          <circle cx="142" cy="100" r="8" fill="#fff" />
+          <text x="82" y="112" text-anchor="middle" font-family="Hubot, 'Arial Narrow', sans-serif" font-weight="900" font-size="38" style="font-stretch:75%" fill="#16121f">$19.20</text>
+        </g>
+      </g>
+    )}
+    {name === 'check' && (
+      <g>
+        <defs>
+          <linearGradient id={id('g')} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2ff7a" /><stop offset="0.5" stop-color="#c5f03a" /><stop offset="1" stop-color="#19c7b8" /></linearGradient>
+        </defs>
+        <path d={scallop} fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round" />
+        <path d={scallop} fill={url('g')} />
+        <circle cx="100" cy="100" r="48" fill="none" stroke="#fff" stroke-opacity="0.55" stroke-width="3" />
+        <path d="M74 102 L93 121 L128 82" fill="none" stroke="#16121f" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M58 70 Q80 44 116 44" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="7" stroke-linecap="round" />
+      </g>
+    )}
+    {name === 'cursor' && (
+      <g>
+        <defs>
+          <linearGradient id={id('g')} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6f9bff" /><stop offset="0.6" stop-color="#2e6bff" /><stop offset="1" stop-color="#5b3df5" /></linearGradient>
+        </defs>
+        <g transform="rotate(-8 100 100)">
+          <path d="M62 28 L62 158 L94 128 L116 176 L142 164 L120 118 L164 116 Z" fill="#fff" stroke="#fff" stroke-width="18" stroke-linejoin="round" />
+          <path d="M62 28 L62 158 L94 128 L116 176 L142 164 L120 118 L164 116 Z" fill={url('g')} />
+          <path d="M70 46 L70 120 L86 104" fill="none" stroke="#fff" stroke-opacity="0.55" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+      </g>
+    )}
+    {name === 'cell' && (
+      <g>
+        <g transform="rotate(7 100 100)">
+          <rect x="26" y="44" width="148" height="112" rx="16" fill="#fff" stroke="#fff" stroke-width="14" />
+          <rect x="26" y="44" width="148" height="112" rx="16" fill="#fff" />
+          <rect x="26" y="44" width="148" height="26" rx="12" fill="#ece6ff" />
+          <rect x="26" y="58" width="148" height="12" fill="#ece6ff" />
+          {[0, 1, 2, 3].map((r) => [0, 1, 2].map((c) => <rect x={34 + c * 47} y={78 + r * 19} width="41" height="13" rx="3" fill={r === 1 && c === 1 ? '#ffc933' : r === 2 && c === 2 ? '#c5f03a' : '#f4f3f8'} />))}
+          <text x="104" y="95" text-anchor="middle" font-family="Hubot, sans-serif" font-weight="900" font-size="12" fill="#16121f">$25.60</text>
+          <path d="M140 116 l5 5 l9 -10" fill="none" stroke="#16121f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="40" cy="57" r="4" fill="#ff5a36" /><circle cx="52" cy="57" r="4" fill="#ffc933" /><circle cx="64" cy="57" r="4" fill="#19c7b8" />
+        </g>
+      </g>
+    )}
+    {name === 'lens' && (
+      <g>
+        <defs>
+          <radialGradient id={id('glass')} cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#ffffff" /><stop offset="1" stop-color="#dcebff" /></radialGradient>
+          <linearGradient id={id('ring')} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a15cff" /><stop offset="1" stop-color="#5b3df5" /></linearGradient>
+        </defs>
+        <line x1="120" y1="120" x2="166" y2="166" stroke="#fff" stroke-width="40" stroke-linecap="round" />
+        <circle cx="86" cy="86" r="60" fill="#fff" />
+        <line x1="122" y1="122" x2="164" y2="164" stroke="#16121f" stroke-width="24" stroke-linecap="round" />
+        <circle cx="86" cy="86" r="46" fill={url('glass')} stroke={url('ring')} stroke-width="16" />
+        <path d="M62 70 Q70 54 90 50" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" />
+      </g>
+    )}
+    {name === 'blocks' && (
+      <g>
+        {cubes.map((k) => (
+          <g fill="#fff" stroke="#fff" stroke-width="10" stroke-linejoin="round"><polygon points={k.top} /><polygon points={k.left} /><polygon points={k.right} /></g>
+        ))}
+        {cubes.map((k) => (
+          <g><polygon points={k.left} fill={k.c[1]} /><polygon points={k.right} fill={k.c[2]} /><polygon points={k.top} fill={k.c[0]} /></g>
+        ))}
+      </g>
+    )}
+    {name === 'barcode' && (
+      <g>
+        <g transform="rotate(-6 100 100)">
+          <rect x="30" y="56" width="140" height="88" rx="14" fill="#fff" stroke="#fff" stroke-width="12" />
+          <rect x="30" y="56" width="140" height="88" rx="14" fill="#fff" />
+          {[0, 5, 8, 14, 17, 20, 27, 30, 36, 39, 44, 50, 53, 56, 62, 67, 70, 76, 79, 84, 90, 93, 96, 102, 105, 110].map((x, i) => <rect x={44 + x} y="70" width={i % 3 === 0 ? 3.5 : 2} height="46" fill="#16121f" />)}
+          <text x="100" y="134" text-anchor="middle" font-family="Azeret, monospace" font-size="11" fill="#16121f" letter-spacing="2">0 12345 67890 5</text>
+          <rect x="30" y="56" width="140" height="10" rx="5" fill="#ff4fa3" opacity="0.9" />
+        </g>
+      </g>
+    )}
+    {name === 'percent' && (
+      <g>
+        <defs>
+          <radialGradient id={id('g')} cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#fff0a8" /><stop offset="0.6" stop-color="#ffc933" /><stop offset="1" stop-color="#ff9f1c" /></radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="72" fill="#fff" />
+        <circle cx="100" cy="100" r="64" fill={url('g')} />
+        <circle cx="100" cy="100" r="52" fill="none" stroke="#16121f" stroke-opacity="0.12" stroke-width="4" />
+        <text x="100" y="124" text-anchor="middle" font-family="Hubot, sans-serif" font-weight="900" font-size="70" style="font-stretch:75%" fill="#16121f">%</text>
+        <path d="M60 74 Q72 50 100 44" fill="none" stroke="#fff" stroke-opacity="0.8" stroke-width="7" stroke-linecap="round" />
+      </g>
+    )}
+    {name === 'pin' && (
+      <g>
+        <defs>
+          <linearGradient id={id('g')} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a5c" /><stop offset="1" stop-color="#ff4fa3" /></linearGradient>
+        </defs>
+        <path d="M100 176 C80 142 44 118 44 80 A56 56 0 0 1 156 80 C156 118 120 142 100 176 Z" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round" />
+        <path d="M100 176 C80 142 44 118 44 80 A56 56 0 0 1 156 80 C156 118 120 142 100 176 Z" fill={url('g')} />
+        <circle cx="100" cy="80" r="20" fill="#fff" />
+        <path d="M66 62 Q76 40 102 36" fill="none" stroke="#fff" stroke-opacity="0.55" stroke-width="7" stroke-linecap="round" />
+      </g>
+    )}
+    {name === 'spark' && (
+      <g>
+        <defs>
+          <linearGradient id={id('g')} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc933" /><stop offset="1" stop-color="#ff4fa3" /></linearGradient>
+        </defs>
+        <path d="M100 18 C108 70 130 92 182 100 C130 108 108 130 100 182 C92 130 70 108 18 100 C70 92 92 70 100 18 Z" fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round" />
+        <path d="M100 18 C108 70 130 92 182 100 C130 108 108 130 100 182 C92 130 70 108 18 100 C70 92 92 70 100 18 Z" fill={url('g')} />
+        <path d="M100 44 C104 72 112 84 128 92" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="6" stroke-linecap="round" />
+      </g>
+    )}
+    {name === 'bolt' && (
+      <g>
+        <defs>
+          <linearGradient id={id('g')} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2ff7a" /><stop offset="1" stop-color="#19c7b8" /></linearGradient>
+        </defs>
+        <path d="M112 20 L50 112 H96 L84 180 L152 84 H104 Z" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round" />
+        <path d="M112 20 L50 112 H96 L84 180 L152 84 H104 Z" fill={url('g')} stroke="#16121f" stroke-opacity="0.12" stroke-width="2" />
+        <path d="M104 40 L70 100" stroke="#fff" stroke-opacity="0.6" stroke-width="6" stroke-linecap="round" />
+      </g>
+    )}
+    {name === 'heart' && (
+      <g>
+        <defs>
+          <linearGradient id={id('g')} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8ac4" /><stop offset="1" stop-color="#ff4fa3" /></linearGradient>
+        </defs>
+        <path d="M100 170 C40 128 22 96 22 70 A38 38 0 0 1 100 56 A38 38 0 0 1 178 70 C178 96 160 128 100 170 Z" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round" />
+        <path d="M100 170 C40 128 22 96 22 70 A38 38 0 0 1 100 56 A38 38 0 0 1 178 70 C178 96 160 128 100 170 Z" fill={url('g')} />
+        <path d="M44 66 Q50 44 74 42" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="7" stroke-linecap="round" />
+      </g>
+    )}
+  </svg>
+</span>
+
+<style>
+  .sticker {
+    --size: 120px;
+    display: inline-block;
+    width: var(--size);
+    aspect-ratio: 1;
+    pointer-events: none;
+    transform: rotate(var(--tilt));
+    filter: drop-shadow(0 2px 0 rgb(22 18 31 / 0.06)) drop-shadow(0 18px 18px rgb(22 18 31 / 0.22));
+    will-change: transform;
+  }
+  .sticker svg { width: 100%; height: 100%; overflow: visible; }
+</style>

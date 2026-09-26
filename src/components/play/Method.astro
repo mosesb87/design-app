@@ -1,0 +1,95 @@
+---
+// "Start with the business goal. End with the measurement." — the four-step method as cards that stack as you
+// scroll (CSS sticky, no scripting), then the six services as pills.
+import Sticker from './Sticker.astro';
+import type { StickerName } from './types';
+import { method, services } from '../../data/site';
+const looks: { bg: string; fg: string; s: StickerName }[] = [
+  { bg: 'var(--sky)', fg: 'var(--ink)', s: 'lens' },
+  { bg: 'var(--lemon)', fg: 'var(--ink)', s: 'pin' },
+  { bg: 'var(--blush)', fg: 'var(--ink)', s: 'blocks' },
+  { bg: 'var(--mint)', fg: 'var(--ink)', s: 'check' },
+];
+const pills = ['var(--tomato)', 'var(--lime)', 'var(--sky)', 'var(--sun)', 'var(--pink)', 'var(--aqua)'];
+---
+<section class="meth section" aria-labelledby="meth-title">
+  <div class="wrap">
+    <header class="meth__head">
+      <p class="kicker" style="--kicker-dot: var(--lime)">How I work</p>
+      <h2 class="h2" id="meth-title">Start with the business goal. End with the measurement.</h2>
+    </header>
+    <ol class="meth__stack" role="list">
+      {method.map((m, i) => (
+        <li class="step" style={`--bg:${looks[i].bg};--i:${i}`}>
+          <span class="step__n">{m.n}</span>
+          <div class="step__text">
+            <h3 class="step__title">{m.title}</h3>
+            <p class="step__body">{m.text}</p>
+          </div>
+          <span class="step__sticker" aria-hidden="true"><Sticker name={looks[i].s} /></span>
+        </li>
+      ))}
+    </ol>
+    <div class="meth__services">
+      <h3 class="meth__services-title">What I can take off your plate</h3>
+      <ul class="pills" role="list">
+        {services.map((s, i) => (
+          <li class="pill" style={`--bg:${pills[i % pills.length]}`}>
+            <span class="pill__t">{s.title}</span>
+            <span class="pill__d">{s.text}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .meth__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-8); }
+  .meth__head .h2 { max-width: 15ch; }
+  .meth__stack { display: grid; gap: var(--s-5); }
+  .step {
+    position: sticky;
+    top: calc(var(--nav-h) + 16px + var(--i) * 18px);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--s-5);
+    align-items: center;
+    min-height: clamp(200px, 22vw, 300px);
+    padding: clamp(22px, 3vw, 48px);
+    border-radius: var(--r-xl);
+    background: var(--bg);
+    color: var(--ink);
+    box-shadow: 0 -12px 30px -18px rgb(22 18 31 / 0.35);
+    overflow: hidden;
+  }
+  .step__n { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(4rem, 10vw, 10rem); line-height: 0.8; }
+  .step__text { display: grid; gap: var(--s-3); max-width: 40ch; }
+  .step__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2rem, 3.8vw, 4rem); line-height: 0.9; text-transform: uppercase; }
+  .step__body { font-size: var(--t-lead); line-height: 1.3; font-weight: 500; }
+  .step__sticker { position: absolute; right: clamp(-20px, 1vw, 24px); bottom: -14px; width: clamp(90px, 12vw, 180px); opacity: 0.95; }
+  .step__sticker :global(.sticker) { --size: 100%; width: 100%; }
+  .meth__services { margin-top: var(--s-10); display: grid; gap: var(--s-6); }
+  .meth__services-title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h3); text-transform: uppercase; }
+  .pills { display: flex; flex-wrap: wrap; gap: 12px; }
+  .pill {
+    display: grid;
+    gap: 6px;
+    max-width: 30rem;
+    padding: 16px 22px;
+    border-radius: var(--r-l);
+    background: var(--bg);
+    color: var(--ink);
+    transition: transform 0.5s var(--ease-pop);
+  }
+  .pill:nth-child(odd) { transform: rotate(-1.2deg); }
+  .pill:nth-child(even) { transform: rotate(1deg); }
+  .pill:hover { transform: rotate(0) scale(1.03); }
+  .pill__t { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.5rem, 2vw, 2rem); line-height: 1; text-transform: uppercase; }
+  .pill__d { font-size: var(--t-small); font-weight: 500; line-height: 1.4; }
+  @media (max-width: 699px) {
+    .step { grid-template-columns: 1fr; align-items: start; top: calc(var(--nav-h) + 8px + var(--i) * 12px); }
+    .step__sticker { width: 64px; top: 14px; right: 12px; bottom: auto; }
+  }
+  :global(.motion-reduced) .step { position: relative; top: auto; }
+</style>

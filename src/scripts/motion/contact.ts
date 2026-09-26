@@ -1,7 +1,6 @@
-// S10 — Contact finale: copy-to-clipboard snaps the email's plates into register and stamps the result.
+// Contact finale: copy-to-clipboard gives the email a happy bounce and stamps the result.
 import { gsap } from 'gsap';
 import type { Env } from './runtime';
-import { registerType } from './reveals';
 
 export default function contact([section]: HTMLElement[], env: Env) {
   const btn = section.querySelector<HTMLButtonElement>('[data-copy]');
@@ -23,7 +22,7 @@ export default function contact([section]: HTMLElement[], env: Env) {
     status.textContent = ok ? '✓ Copied — checked' : 'Select the address above to copy it';
     label.textContent = ok ? 'Copied' : 'Copy email';
     if (!env.reduced) {
-      if (email && ok) registerType(email, { from: 0.18, duration: 0.7 });
+      if (email && ok) gsap.fromTo(email, { scale: 0.94, rotation: -1.5 }, { scale: 1, rotation: 0, duration: 0.8, ease: 'elastic.out(1, 0.4)', transformOrigin: 'left center' });
       gsap.fromTo(status, { scale: 1.35, rotate: -9, autoAlpha: 0 }, { scale: 1, rotate: -3, autoAlpha: 1, duration: 0.45, ease: 'back.out(2)' });
     }
     setTimeout(() => { label.textContent = 'Copy email'; }, 2600);

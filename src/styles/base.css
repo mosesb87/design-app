@@ -40,16 +40,16 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul, ol { margin: 0; }
 ul[role='list'], ol[role='list'] { list-style: none; padding: 0; }
 table { border-collapse: collapse; width: 100%; }
-::selection { background: var(--register); color: var(--paper); }
+::selection { background: var(--lime); color: var(--ink); }
 
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { text-decoration-thickness: 2px; }
 
 :focus { outline: none; }
 :focus-visible {
-  outline: 2px solid var(--focus);
+  outline: 3px solid var(--focus);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 6px;
 }
 
 .skip-link {
@@ -57,10 +57,11 @@ a:hover { text-decoration-thickness: 2px; }
   left: var(--margin);
   top: 12px;
   z-index: 1000;
-  padding: 10px 14px;
+  padding: 12px 18px;
+  border-radius: var(--r-pill);
   background: var(--ink);
-  color: var(--paper);
-  font: 500 var(--t-small) / 1 var(--font-mono);
+  color: var(--white);
+  font: 600 var(--t-small) / 1 var(--font-text);
   text-decoration: none;
   transform: translateY(-160%);
   transition: transform var(--d-small) var(--ease-register);
@@ -93,15 +94,15 @@ a:hover { text-decoration-thickness: 2px; }
 /* Type primitives ───────────────────────────────────────────── */
 .display {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-stretch: 112%;
-  letter-spacing: -0.035em;
-  line-height: 0.9;
+  font-weight: 900;
+  font-stretch: 75%;
+  letter-spacing: -0.01em;
+  line-height: 0.86;
   font-variant-numeric: lining-nums;
 }
-.h1 { font-family: var(--font-display); font-size: var(--t-h1); font-weight: 800; font-stretch: 108%; line-height: 0.9; letter-spacing: -0.035em; text-wrap: balance; }
-.h2 { font-family: var(--font-display); font-size: var(--t-h2); font-weight: 760; font-stretch: 106%; line-height: 0.95; letter-spacing: -0.03em; text-wrap: balance; }
-.h3 { font-family: var(--font-display); font-size: var(--t-h3); font-weight: 700; font-stretch: 104%; line-height: 1.08; letter-spacing: -0.015em; text-wrap: balance; }
+.h1 { font-family: var(--font-display); font-size: var(--t-h1); font-weight: 900; font-stretch: 75%; line-height: 0.86; letter-spacing: -0.01em; text-wrap: balance; }
+.h2 { font-family: var(--font-display); font-size: var(--t-h2); font-weight: 880; font-stretch: 75%; line-height: 0.88; letter-spacing: -0.005em; text-wrap: balance; }
+.h3 { font-family: var(--font-display); font-size: var(--t-h3); font-weight: 800; font-stretch: 85%; line-height: 1.02; letter-spacing: 0; text-wrap: balance; }
 .lead { font-size: var(--t-lead); line-height: 1.35; font-weight: 450; letter-spacing: -0.01em; text-wrap: pretty; max-width: 34ch; }
 .prose { max-width: 64ch; text-wrap: pretty; }
 .prose > * + * { margin-top: 1em; }
@@ -109,13 +110,13 @@ a:hover { text-decoration-thickness: 2px; }
 .muted { color: var(--fg-2); }
 .num { font-variant-numeric: tabular-nums lining-nums; }
 
-/* The slug: monospaced provenance line (plate · url · platform · date) */
+/* The slug: small provenance line (source · date · platform) */
 .slug {
-  font-family: var(--font-mono);
+  font-family: var(--font-text);
   font-size: var(--t-slug);
-  font-weight: 450;
+  font-weight: 600;
   line-height: 1.5;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--fg-2);
   font-variant-numeric: tabular-nums;
@@ -126,25 +127,27 @@ a:hover { text-decoration-thickness: 2px; }
 .slug-list > * + *::before { content: '·'; margin-right: 1.1em; opacity: 0.6; }
 
 .kicker {
-  font-family: var(--font-mono);
-  font-size: var(--t-slug);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 500;
+  font-family: var(--font-text);
+  font-size: var(--t-label);
+  letter-spacing: 0.02em;
+  font-weight: 650;
   color: var(--fg);
   display: inline-flex;
   align-items: center;
-  gap: 0.75em;
+  gap: 0.6em;
+  padding: 0.5em 0.95em 0.5em 0.7em;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--fg) 7%, transparent);
+  justify-self: start;
+  align-self: start;
 }
 .kicker::before {
   content: '';
-  width: 0.9em;
-  height: 0.9em;
+  width: 0.7em;
+  height: 0.7em;
   border-radius: 50%;
-  background:
-    linear-gradient(var(--fg), var(--fg)) center / 100% 1px no-repeat,
-    linear-gradient(var(--fg), var(--fg)) center / 1px 100% no-repeat;
-  box-shadow: inset 0 0 0 1px var(--fg);
+  background: var(--kicker-dot, var(--tomato));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--kicker-dot, var(--tomato)) 25%, transparent);
 }
 
 /* Registration type: three plates of the same text.
@@ -175,23 +178,39 @@ a:hover { text-decoration-thickness: 2px; }
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.7em;
-  min-height: 48px;
-  padding: 0 1.25em;
-  font: 500 var(--t-small) / 1 var(--font-mono);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  gap: 0.6em;
+  min-height: 52px;
+  padding: 0 1.5em;
+  border-radius: var(--r-pill);
+  font: 650 1rem / 1 var(--font-text);
+  letter-spacing: 0;
   text-decoration: none;
   color: var(--btn-fg);
   background: var(--btn-bg);
-  border: 1px solid var(--btn-bg);
-  transition: background-color var(--d-small) var(--ease-register), color var(--d-small) var(--ease-register), box-shadow var(--d-small) var(--ease-register);
+  border: 2px solid var(--btn-bg);
+  isolation: isolate;
+  transition: transform var(--d-small) var(--ease-pop), background-color var(--d-small) var(--ease-register), color var(--d-small) var(--ease-register), box-shadow var(--d-small) var(--ease-register);
 }
-.btn:hover { box-shadow: -4px 4px 0 0 var(--plate-a), 4px -4px 0 0 var(--plate-b); }
+.btn::before {
+  /* the spectrum halo */
+  content: '';
+  position: absolute;
+  inset: -4px;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--spectrum);
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity var(--d-small) var(--ease-register);
+}
+.btn:hover { transform: translateY(-2px) scale(1.02); }
+.btn:hover::before { opacity: 0.75; }
+.btn:active { transform: translateY(0) scale(0.98); }
 .btn--line { --btn-bg: transparent; --btn-fg: var(--fg); border-color: currentColor; }
 .btn--line:hover { background: var(--fg); color: var(--bg); }
-.btn .arrow { transition: transform var(--d-small) var(--ease-register); }
-.btn:hover .arrow { transform: translate(3px, -3px); }
+.btn--bright { --btn-bg: var(--lime); --btn-fg: var(--ink); }
+.btn .arrow { transition: transform var(--d-small) var(--ease-pop); }
+.btn:hover .arrow { transform: translateX(4px); }
 
 .link-arrow {
   display: inline-flex;
@@ -208,8 +227,9 @@ a:hover { text-decoration-thickness: 2px; }
 /* Hairline rule that can be drawn */
 .rule { height: 1px; background: var(--line); transform-origin: left center; }
 
-/* Crop marks around a framed element */
+/* Framed element (the old crop marks are retired in this design; frames are rounded instead) */
 .crop { position: relative; }
+.crop::before, .crop::after, .crop > .crop__b::before, .crop > .crop__b::after { display: none; }
 .crop::before,
 .crop::after,
 .crop > .crop__b::before,

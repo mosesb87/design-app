@@ -1,0 +1,153 @@
+---
+// "A request is trusted by default." — Mousa's own worked example, played with three cards:
+// the sheet (what was asked), the register (what the system holds), the shelf (what the customer sees).
+// Desktop: pinned and scrubbed. Phones/tablets: plays once in view. Reduced motion: the final state.
+import Sticker from './Sticker.astro';
+import { person } from '../../data/site';
+---
+<section class="chk" id="how" aria-labelledby="chk-title" data-check>
+  <div class="chk__track" data-check-track>
+    <div class="chk__sticky">
+      <div class="wrap chk__inner">
+        <header class="chk__head">
+          <p class="kicker" style="--kicker-dot: var(--pink)">How I think</p>
+          <h2 class="h2 chk__title" id="chk-title">A request is trusted by default. Almost every error begins there.</h2>
+        </header>
+        <div class="chk__stage" data-check-stage>
+          <article class="chk__card chk__card--sheet" data-card>
+            <p class="chk__tag"><b>01</b> The sheet</p>
+            <h3 class="chk__h">What was asked</h3>
+            <dl class="chk__rows">
+              <div><dt>Promo</dt><dd class="chk__stale" data-stale>$19.20</dd></div>
+              <div><dt>Reg. price</dt><dd>$24.00</dd></div>
+              <div><dt>Offer</dt><dd>20% off</dd></div>
+            </dl>
+            <p class="chk__note">20% of $24.00 is $19.20. Looks right.</p>
+          </article>
+          <article class="chk__card chk__card--register" data-card>
+            <p class="chk__tag"><b>02</b> The register</p>
+            <h3 class="chk__h">What the system holds</h3>
+            <dl class="chk__rows">
+              <div><dt>Reg. price</dt><dd>$25.60</dd></div>
+              <div><dt>Vendor cap</dt><dd>20%</dd></div>
+              <div><dt>Margin floor</dt><dd>32%</dd></div>
+            </dl>
+            <p class="chk__fail" data-fail><span aria-hidden="true">✕</span> Check 04 fails: the sheet price is stale</p>
+          </article>
+          <article class="chk__card chk__card--shelf" data-card>
+            <p class="chk__tag"><b>03</b> The shelf</p>
+            <h3 class="chk__h">What the customer sees</h3>
+            <div class="chk__flip" data-flip>
+              <div class="chk__face chk__face--front">
+                <span class="chk__badge">20% off</span>
+                <span class="chk__price">$19.20</span>
+                <span class="chk__prod">Promotion tile</span>
+              </div>
+              <div class="chk__face chk__face--back">
+                <span class="chk__blocked">Blocked before a menu</span>
+                <span class="chk__owner">Owner: pricing team · reason written in plain words</span>
+              </div>
+            </div>
+          </article>
+          <span class="chk__lens" data-lens><Sticker name="lens" /></span>
+          <p class="chk__verdict" data-verdict><span class="chk__vs" aria-hidden="true"><Sticker name="check" /></span>Nothing wrong reached the shelf</p>
+        </div>
+        <p class="chk__close">{person.thesis.close}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .chk { position: relative; }
+  .chk__sticky { padding-block: var(--section); }
+  .chk__inner { display: grid; gap: var(--s-7); }
+  .chk__head { display: grid; gap: var(--s-4); }
+  .chk__title { max-width: 16ch; }
+  .chk__stage { position: relative; display: grid; gap: var(--s-5); }
+  .chk__card {
+    position: relative;
+    display: grid;
+    gap: var(--s-4);
+    align-content: start;
+    padding: clamp(20px, 2.2vw, 32px);
+    border-radius: var(--r-xl);
+    color: var(--ink);
+    box-shadow: var(--shadow-2);
+  }
+  .chk__card--sheet { background: var(--peach); }
+  .chk__card--register { background: var(--lilac); }
+  .chk__card--shelf { background: var(--mint); }
+  .chk__tag { display: inline-flex; gap: 8px; align-items: center; font: 700 var(--t-label) / 1 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
+  .chk__tag b { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 0.75rem; }
+  .chk__h { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2rem, 3vw, 2.75rem); line-height: 0.92; text-transform: uppercase; }
+  .chk__rows { display: grid; gap: 6px; }
+  .chk__rows div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 14px; border-radius: var(--r-s); background: rgb(255 255 255 / 0.7); }
+  .chk__rows dt { font-weight: 550; }
+  .chk__rows dd { margin: 0; font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: 1.5rem; line-height: 1; }
+  .chk__stale { position: relative; }
+  .chk__stale::after { content: ''; position: absolute; left: -4px; right: -4px; top: 52%; height: 4px; border-radius: 4px; background: var(--tomato); transform: scaleX(1); transform-origin: left; transition: transform 0.4s var(--ease-register); }
+  .chk__note { font-weight: 550; }
+  .chk__fail { justify-self: start; padding: 10px 14px; border-radius: var(--r-pill); background: var(--tomato); color: var(--ink); font-weight: 750; font-size: 0.9375rem; }
+  .chk__flip { position: relative; min-height: 200px; perspective: 900px; }
+  .chk__face {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 6px;
+    padding: 18px;
+    border-radius: var(--r-l);
+    background: #fff;
+    text-align: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  /* Without motion the card simply shows its final face; with motion it starts on the promotion and flips. */
+  .chk__face--front { display: none; }
+  .chk__face--back { background: var(--ink); color: #fff; }
+  :global(.motion-ok) .chk__face--front { display: grid; }
+  :global(.motion-ok) .chk__face--back { transform: rotateY(180deg); }
+  .chk__badge { padding: 6px 12px; border-radius: var(--r-pill); background: var(--pink); color: var(--ink); font: 800 0.875rem/1 var(--font-text); text-transform: uppercase; }
+  .chk__price { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: 4rem; line-height: 0.9; }
+  .chk__prod { font-weight: 600; color: var(--ink-2); }
+  .chk__blocked { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: 2.25rem; line-height: 0.95; text-transform: uppercase; color: var(--lime); }
+  .chk__owner { font-weight: 550; color: var(--night-ink-2); max-width: 24ch; }
+  .chk__lens { position: absolute; z-index: 5; width: clamp(90px, 9vw, 150px); left: 0; top: 30%; pointer-events: none; display: none; }
+  .chk__lens :global(.sticker), .chk__vs :global(.sticker) { --size: 100%; width: 100%; }
+  .chk__verdict {
+    justify-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px 12px 12px;
+    border-radius: var(--r-pill);
+    background: var(--ink);
+    color: #fff;
+    font: 750 clamp(1rem, 1.3vw, 1.25rem) / 1.1 var(--font-text);
+    box-shadow: var(--shadow-sticker);
+  }
+  .chk__vs { width: 52px; display: block; }
+  .chk__close { max-width: 60ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.35; }
+
+  @media (min-width: 1024px) {
+    .chk__stage { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gutter); align-items: stretch; padding-bottom: 72px; }
+    .chk__verdict { position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%) rotate(-2deg); white-space: nowrap; }
+    .chk__lens { display: block; }
+    /* Pinned scene: the track is tall, the stage sticks */
+    :global(.motion-ok) .chk__track { height: 320vh; }
+    :global(.motion-ok) .chk__sticky { position: sticky; top: 0; height: 100svh; display: flex; align-items: center; padding-block: calc(var(--nav-h) + 8px) 24px; overflow: hidden; }
+    :global(.motion-ok) .chk__sticky > .wrap { width: 100%; }
+    :global(.motion-ok) .chk__inner { gap: var(--s-6); }
+    :global(.motion-ok) .chk__title { font-size: clamp(2.5rem, 4.4vw, 5rem); max-width: 22ch; }
+    :global(.motion-ok) .chk__close { display: none; }
+  }
+  @media (min-width: 1024px) and (max-height: 820px) {
+    :global(.motion-ok) .chk__head .kicker { display: none; }
+    :global(.motion-ok) .chk__flip { min-height: 150px; }
+    :global(.motion-ok) .chk__rows div { padding-block: 6px; }
+  }
+  /* Before the check runs (motion only): the price isn't struck, the failure and verdict are hidden */
+  :global(.motion-ok) .chk__stale:not(.is-struck)::after { transform: scaleX(0); }
+</style>

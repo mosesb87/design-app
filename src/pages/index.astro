@@ -1,44 +1,34 @@
 ---
+// Home — the /v2 story, bright and playful: hero · every part in its place · counted, not claimed ·
+// a request is trusted by default · built to fix something real · then I make them work better ·
+// reviews · how I work · the blog · put yours in place.
 import Base from '../layouts/Base.astro';
-import Hero from '../components/home/Hero.astro';
-import Thesis from '../components/home/Thesis.astro';
-import Calm from '../components/home/Calm.astro';
-import FeaturedWork from '../components/home/FeaturedWork.astro';
-import Rack from '../components/home/Rack.astro';
-import Reviews from '../components/home/Reviews.astro';
-import Services from '../components/home/Services.astro';
-import Notes from '../components/home/Notes.astro';
-import IndexTable from '../components/IndexTable.astro';
+import PlayHero from '../components/play/PlayHero.astro';
+import Marquee from '../components/play/Marquee.astro';
+import Parts from '../components/play/Parts.astro';
+import Numbers from '../components/play/Numbers.astro';
+import Check from '../components/play/Check.astro';
+import Tools from '../components/play/Tools.astro';
+import Sites from '../components/play/Sites.astro';
+import ReviewsPlay from '../components/play/ReviewsPlay.astro';
+import Method from '../components/play/Method.astro';
+import NotesPlay from '../components/play/NotesPlay.astro';
 import { person } from '../data/site';
-import { entryCount } from '../data/work';
 
 const title = `${person.name} — WordPress, e-commerce, product data & SEO · Warren, Michigan`;
 const description = 'Mousa Batarseh builds and runs WordPress websites and e-commerce stores — and the checks that keep them honest: catalogs, promotions, product data and SEO. Seven years, English and Arabic, Warren, Michigan.';
+const band = ['WordPress', 'WooCommerce', 'Shopify', 'Elementor', 'Divi', 'Product data', 'Catalog migrations', 'Promotions QA', 'SEO', 'GA4', 'English + Arabic'];
 ---
 <Base title={title} description={description} path="/" og="home">
-  <Hero />
-  <Thesis />
-  <Calm />
-  <FeaturedWork />
-  <Rack />
-  <Reviews />
-  <section class="teaser section" aria-labelledby="teaser-title">
-    <div class="wrap">
-      <header class="teaser__head">
-        <p class="kicker">The archive</p>
-        <h2 class="teaser__title h2 reg" id="teaser-title" data-text="All the work." data-register>All the work.</h2>
-        <p class="teaser__sub"><span class="num">{entryCount}</span> entries — tools, systems, case studies, websites, stores, reviews and proposals. Every row opens the case study or the live thing.</p>
-      </header>
-      <IndexTable limit={8} id="index-teaser" />
-      <p class="teaser__more"><a class="btn" href="/work/">See all {entryCount} entries <span class="arrow" aria-hidden="true">→</span></a></p>
-    </div>
-  </section>
-  <Services />
-  <Notes />
+  <PlayHero />
+  <Marquee items={band} />
+  <Parts />
+  <Numbers />
+  <Check />
+  <Tools />
+  <Sites />
+  <Marquee items={['Counted, not claimed', 'Every finding dated', 'Public pages only', 'A working fix, every time']} tone="pink" tilt={1.5} reverse label="How the reviews work" />
+  <ReviewsPlay />
+  <Method />
+  <NotesPlay />
 </Base>
-
-<style>
-  .teaser__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
-  .teaser__sub { color: var(--fg-2); max-width: 52ch; }
-  .teaser__more { margin-top: var(--s-6); }
-</style>

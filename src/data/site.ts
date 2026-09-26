@@ -206,11 +206,12 @@ export const posts = [
 ] as const;
 export const blogUrl = 'https://mousabatarseh.com/blog';
 
+// Everything lives on this site: the blog and the reviews are sections of it, not links to other sites.
 export const nav = [
   { label: 'Work', href: '/work/' },
+  { label: 'Reviews', href: '/reviews/' },
+  { label: 'Blog', href: '/blog/' },
   { label: 'About', href: '/about/' },
-  { label: 'Reviews', href: 'https://mousabatarseh.com/reviews/', external: true },
-  { label: 'Notes', href: 'https://mousabatarseh.com/blog', external: true },
 ] as const;
 
 export function formatDate(iso: string, style: 'short' | 'long' = 'short') {

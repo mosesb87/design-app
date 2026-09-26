@@ -10,6 +10,11 @@ reveals([], env);
 // Scenes that change layout (sticky spacers, pinned tracks) must be in place before anything measures,
 // so every trigger is recomputed once all scenes have mounted, and again when fonts and images settle.
 Promise.all([
+  mount('[data-play-hero]', () => import('./motion/play-hero')),
+  mount('[data-parts]', () => import('./motion/parts')),
+  mount('[data-check]', () => import('./motion/check')),
+  mount('[data-pop-grid]', () => import('./motion/pop')),
+  mount('[data-tilt]', () => import('./motion/tilt')),
   mount('[data-opening]', () => import('./motion/opening')),
   mount('[data-hero-press]', () => import('./motion/hero')),
   mount('[data-thesis]', () => import('./motion/thesis')),

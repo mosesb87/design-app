@@ -1,0 +1,101 @@
+---
+// "Then I make them work better." — six sites and stores as bright cards: the real desktop capture, the phone
+// capture tucked in front, and one line. The whole card is one link (its CTA, stretched). Cards tilt towards
+// the pointer on desktop (scripts/motion/tilt.ts).
+import Picture from '../Picture.astro';
+import { siteCases } from '../../data/cases';
+import { view } from '../../lib/media';
+const items = siteCases();
+const tones = ['var(--sky)', 'var(--peach)', 'var(--lemon)', 'var(--mint)', 'var(--blush)', 'var(--lilac)'];
+---
+<section class="sites section" id="work" aria-labelledby="sites-title">
+  <div class="wrap">
+    <header class="sites__head">
+      <p class="kicker" style="--kicker-dot: var(--blue)">Sites & stores</p>
+      <h2 class="h2" id="sites-title">Then I make them<br />work better.</h2>
+      <p class="sites__sub">Storefronts and sites I built or ran — WooCommerce, Shopify and WordPress, in English and Arabic.</p>
+    </header>
+    <ul class="sites__grid" role="list">
+      {items.map((c, i) => {
+        const mob = view(c.media.mobile || c.media.hero, 'mobile-hero');
+        return (
+          <li class="site" style={`--tone:${tones[i % tones.length]}`} data-tilt data-vt-host>
+            <div class="site__media">
+              <div class="site__desk" data-vt-target><Picture slug={c.media.hero} alt={`${c.title} — the live site on desktop`} sizes="(min-width: 1024px) 44vw, 90vw" eager={i < 2} /></div>
+              {mob && <div class="site__phone" aria-hidden="true"><Picture data={mob} alt="" sizes="(min-width: 1024px) 10vw, 24vw" /></div>}
+            </div>
+            <div class="site__text">
+              <p class="site__kicker">{c.kicker}</p>
+              <h3 class="site__title">{c.title}</h3>
+              <p class="site__summary">{c.summary}</p>
+              <a class="site__cta" href={`/work/${c.slug}/`} data-vt-plate>Case study<span class="visually-hidden">: {c.title}</span> <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+    <p class="sites__more"><a class="btn" href="/work/">See all the work <span class="arrow" aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<style>
+  .sites__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-8); }
+  .sites__sub { max-width: 44ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.3; }
+  .sites__grid { display: grid; gap: clamp(16px, 2vw, 32px); }
+  .site {
+    position: relative;
+    display: grid;
+    gap: var(--s-5);
+    padding: clamp(16px, 1.8vw, 28px);
+    border-radius: var(--r-xl);
+    background: var(--tone);
+    color: var(--ink);
+    transform-style: preserve-3d;
+    transition: box-shadow var(--d-small) var(--ease-register);
+  }
+  .site:hover { box-shadow: var(--shadow-2); }
+  .site__media { position: relative; padding-right: 14%; padding-bottom: 6%; }
+  .site__desk { border-radius: var(--r-l); overflow: hidden; box-shadow: var(--shadow-1); background: #fff; aspect-ratio: 16 / 10; transform: translateZ(20px); }
+  .site__desk :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .site__phone {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 24%;
+    aspect-ratio: 390 / 844;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: var(--shadow-sticker);
+    transform: translateZ(50px) rotate(4deg);
+    background: #fff;
+  }
+  .site__phone :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .site__text { display: grid; gap: 8px; }
+  .site__kicker { font: 750 var(--t-label) / 1.2 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
+  .site__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.25rem, 3.6vw, 3.75rem); line-height: 0.9; text-transform: uppercase; }
+  .site__summary { max-width: 46ch; font-weight: 500; }
+  .site__cta {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 6px;
+    padding: 0 18px;
+    border-radius: var(--r-pill);
+    background: var(--ink);
+    color: #fff;
+    font-weight: 650;
+    text-decoration: none;
+  }
+  .site__cta::after { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 3; }
+  .site__cta:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; }
+  .site__cta .arrow { transition: transform var(--d-small) var(--ease-pop); }
+  .site:hover .site__cta .arrow { transform: translateX(4px); }
+  .sites__more { margin-top: var(--s-8); display: flex; justify-content: center; }
+  @media (min-width: 900px) {
+    .sites__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .site:nth-child(even) { margin-top: var(--s-9); }
+  }
+</style>

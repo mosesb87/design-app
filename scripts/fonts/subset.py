@@ -16,7 +16,7 @@ UNICODES = (
 )
 JOBS = [
     # (package, source file, output name, axis limits)
-    ('hubot-sans', 'hubot-sans-latin-wdth-normal.woff2', 'hubot-sans-display.woff2', {'wght': (500, 900), 'wdth': (88, 125)}),
+    ('hubot-sans', 'hubot-sans-latin-wdth-normal.woff2', 'hubot-sans-display.woff2', {'wght': (500, 900), 'wdth': (75, 110)}),
     ('mona-sans', 'mona-sans-latin-wght-normal.woff2', 'mona-sans-text.woff2', {'wght': (380, 700)}),
     ('mona-sans', 'mona-sans-latin-wght-italic.woff2', 'mona-sans-text-italic.woff2', {'wght': (380, 600)}),
     ('azeret-mono', 'azeret-mono-latin-wght-normal.woff2', 'azeret-mono.woff2', {'wght': (400, 600)}),
