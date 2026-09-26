@@ -301,7 +301,7 @@
   "categories": [
    "Product Data"
   ],
-  "excerpt": "A product CSV is not a transport format, it is the deliverable — and spreadsheets damage it in ways that stay invisible until import. Here is the prep sequence I run on supplier data, the validation column that replaces manual checking, and the point where a s",
+  "excerpt": "A product CSV is not a transport format, it is the deliverable — and spreadsheets damage it in ways that stay invisible until import. Here is the prep sequence I run on supplier data, the validation column that replaces manual checking, and the point where a spreadsheet stops being the right tool.",
   "minutes": 6,
   "words": 1411,
   "image": {

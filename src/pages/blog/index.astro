@@ -1,8 +1,8 @@
 ---
 // The blog, on this site: the latest post big, then every post as a bright card, filterable by topic.
 import Base from '../../layouts/Base.astro';
-import Sticker from '../../components/play/Sticker.astro';
-import { blogPosts, categories, catKey, toneOf, dotOf, countIn } from '../../data/blog';
+import PageHead from '../../components/play/PageHead.astro';
+import { blogPosts, blogSummaries, categories, catKey, toneOf, dotOf, countIn } from '../../data/blog';
 import { formatDate, SITE_URL } from '../../data/site';
 const title = 'Blog';
 const description = `${blogPosts.length} notes on WordPress, e-commerce operations, product data and SEO — written from the work of running real stores.`;
@@ -18,13 +18,7 @@ const jsonLd = [
 ];
 ---
 <Base title={title} description={description} path="/blog/" og="default" jsonLd={jsonLd}>
-  <section class="bh wrap" aria-labelledby="blog-title">
-    <p class="kicker" style="--kicker-dot: var(--tomato)">Blog · {blogPosts.length} posts</p>
-    <h1 class="bh__title" id="blog-title">Notes from<br />running stores.</h1>
-    <p class="bh__sub">Field notes on WordPress, e-commerce operations, product data and SEO — the things that break, and what I do about them.</p>
-    <span class="bh__s bh__s--1" aria-hidden="true"><Sticker name="cell" tilt={8} /></span>
-    <span class="bh__s bh__s--2" aria-hidden="true"><Sticker name="spark" tilt={-10} /></span>
-  </section>
+  <PageHead title="Notes from running stores." kicker={`Blog · ${blogPosts.length} articles`} lead="Field notes on WordPress, e-commerce operations, product data and SEO — the things that break, and what I do about them." stickers={['cell', 'spark', 'lens']} id="blog-title" />
 
   <section class="wrap blog-list" aria-labelledby="all-title">
     <h2 class="visually-hidden" id="all-title">All posts</h2>
@@ -47,19 +41,35 @@ const jsonLd = [
       ))}
     </ul>
   </section>
+
+  {blogSummaries.length > 0 && (
+    <section class="wrap sums" aria-labelledby="sums-title">
+      <header class="sums__head">
+        <p class="kicker" style="--kicker-dot: var(--sun)">{blogSummaries.length} more, in summary</p>
+        <h2 class="h2" id="sums-title">Summaries for now.</h2>
+        <p class="sums__note">These are listed on my blog, but their full articles aren’t published yet. Each one gets its own page here as soon as it is.</p>
+      </header>
+      <ul class="sums__grid" role="list">
+        {blogSummaries.map((p) => (
+          <li class="sum">
+            {p.image && <div class="sum__img"><img src={p.image.small} width="800" height={Math.round((p.image.h / p.image.w) * 800)} alt="" loading="lazy" decoding="async" /></div>}
+            <div class="sum__text">
+              <p class="post-meta"><span>{p.categories.join(' · ')}</span><span>{formatDate(p.date)}</span></p>
+              <h3 class="sum__title">{p.title}</h3>
+              <p class="sum__ex">{p.excerpt}</p>
+              <p class="sum__tag">Summary · full article not published yet</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
 </Base>
 
 <style>
-  .bh { position: relative; display: grid; gap: var(--s-5); padding-top: calc(var(--nav-h) + var(--s-8)); padding-bottom: var(--s-8); }
-  .bh__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(4rem, 13vw, 13rem); line-height: 0.82; text-transform: uppercase; max-width: 9ch; }
-  .bh__sub { font-size: var(--t-lead); line-height: 1.3; max-width: 40ch; color: var(--fg-2); }
-  .bh__s { position: absolute; pointer-events: none; }
-  .bh__s :global(.sticker) { --size: 100%; width: 100%; }
-  .bh__s--1 { width: clamp(90px, 14vw, 220px); right: var(--margin); top: calc(var(--nav-h) + 40px); }
-  .bh__s--2 { width: clamp(46px, 6vw, 90px); right: calc(var(--margin) + clamp(90px, 16vw, 250px)); top: calc(var(--nav-h) + 20px); }
   .post-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font: 700 var(--t-slug) / 1.4 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; }
   .tag { padding: 5px 10px; border-radius: var(--r-pill); background: var(--ink); color: #fff; }
-  .blog-list { padding-block: var(--s-9) var(--s-8); display: grid; gap: var(--s-6); }
+  .blog-list { padding-block: var(--s-7) var(--s-8); display: grid; gap: var(--s-6); }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; }
   .chip { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: var(--r-pill); background: var(--cloud); font-weight: 650; font-size: 0.9375rem; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
   .chip::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--dot, var(--ink)); }
@@ -92,4 +102,17 @@ const jsonLd = [
     .card--lead .card__ex { grid-row: 4; font-size: var(--t-lead); line-height: 1.35; -webkit-line-clamp: 5; line-clamp: 5; }
     .card--lead .card__foot { grid-row: 5; margin-top: var(--s-2); }
   }
+  .sums { padding-block: var(--s-8) var(--s-6); display: grid; gap: var(--s-6); }
+  .sums__head { display: grid; gap: var(--s-4); }
+  .sums__note { max-width: 52ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.32; }
+  .sums__grid { display: grid; gap: 12px; }
+  .sum { display: grid; grid-template-columns: 1fr; gap: 14px; padding: 14px; border-radius: var(--r-l); background: var(--cloud); }
+  .sum__img { border-radius: var(--r-m); overflow: hidden; aspect-ratio: 16 / 9; background: #fff; }
+  .sum__img img { width: 100%; height: 100%; object-fit: cover; }
+  .sum__text { display: grid; gap: 8px; align-content: start; }
+  .sum__title { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: clamp(1.4rem, 1.8vw, 1.75rem); line-height: 1; text-transform: uppercase; text-wrap: balance; }
+  .sum__ex { font-weight: 500; color: var(--ink-2); font-size: var(--t-small); }
+  .sum__tag { justify-self: start; padding: 5px 10px; border-radius: var(--r-pill); background: var(--lemon); font: 750 0.75rem / 1.2 var(--font-text); }
+  @media (min-width: 700px) { .sums__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sum { grid-template-columns: 160px 1fr; } .sum__img { aspect-ratio: 1; } }
+  @media (min-width: 1200px) { .sums__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 </style>

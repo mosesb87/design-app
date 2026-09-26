@@ -18,18 +18,21 @@ const decode = (s = '') => parse(`<i>${s}</i>`).text.replace(/\s+/g, ' ').trim()
 const slugOf = (u) => { try { return new URL(u).pathname.replace(/^\/|\/$/g, ''); } catch { return ''; } };
 const MONTHS = { JAN: 0, FEB: 1, MAR: 2, APR: 3, MAY: 4, JUN: 5, JUL: 6, AUG: 7, SEP: 8, OCT: 9, NOV: 10, DEC: 11 };
 
-// The blog index is the canonical list (order, categories, dates) — every post it shows becomes a page here.
-const listed = index.links
-  .filter((l) => /^https:\/\/(work\.)?mousabatarseh\.com\/[^/]+\/?$/.test(l.href) && !/\/(blog|reviews|v2|work|about)\/?$/.test(l.href))
-  .map((l) => {
-    const lines = l.text.split('\n').map((x) => x.trim()).filter(Boolean);
-    const cats = (lines[0] || '').split('·').map((c) => c.trim()).filter(Boolean);
-    const m = (lines[1] || '').match(/^([A-Z]{3}) (\d{1,2}), (\d{4})$/);
-    const date = m ? new Date(Date.UTC(+m[3], MONTHS[m[1]], +m[2])).toISOString().slice(0, 10) : '';
-    return { slug: slugOf(l.href), url: l.href, cats, date, title: lines[2] || '' };
-  });
+// The blog index is the canonical list (order, categories, dates, excerpts, covers) — read from its cards.
+const indexHtml = fs.existsSync(path.join(SRC, 'blog/blog-index.html')) ? fs.readFileSync(path.join(SRC, 'blog/blog-index.html'), 'utf8') : '';
+const listed = parse(indexHtml).querySelectorAll('a.blog-item[href]').map((a) => ({
+  slug: slugOf(a.getAttribute('href')),
+  url: a.getAttribute('href'),
+  cats: decode(a.querySelector('.project-item-line-1 span')?.innerHTML || '').split('·').map((c) => c.trim()).filter(Boolean),
+  date: a.querySelector('time')?.getAttribute('datetime') || '',
+  title: decode(a.querySelector('.blog-title')?.innerHTML || ''),
+  excerpt: decode(a.querySelector('.blog-excerpt')?.innerHTML || ''),
+  cover: a.querySelector('img')?.getAttribute('src') || '',
+})).filter((l) => l.slug);
 const bySlug = new Map(api.map((p) => [p.slug, p]));
+const isReal = (p) => p?.content && !/class="projects-hero"/.test(p.content);
 const slugs = new Set([...listed.map((l) => l.slug), ...api.map((p) => p.slug)]);
+const fullSlugs = new Set(api.filter(isReal).map((p) => p.slug));
 
 const titleCase = (c) => c.toLowerCase().replace(/(^|[\s&/-])([a-z])/g, (m, a, b) => a + b.toUpperCase()).replace(/\bSeo\b/g, 'SEO').replace(/\bWordpress\b/g, 'WordPress').replace(/\bWoocommerce\b/g, 'WooCommerce').replace(/\bE-Commerce\b/g, 'E-commerce');
 
@@ -56,7 +59,8 @@ const internal = (href) => {
     const u = new URL(href, 'https://mousabatarseh.com/');
     if (!/^(work\.)?mousabatarseh\.com$/.test(u.hostname)) return null;
     const s = u.pathname.replace(/^\/|\/$/g, '');
-    if (slugs.has(s)) return `/blog/${s}/`;
+    if (fullSlugs.has(s)) return `/blog/${s}/`;
+    if (slugs.has(s)) return '/blog/';
     if (s === 'blog') return '/blog/';
     const r = s.match(/^reviews\/reviews\/([^/]+)/);
     if (r) return `/reviews/${r[1]}/`;
@@ -118,7 +122,8 @@ const posts = [];
 for (const slug of slugs) {
   const l = listed.find((x) => x.slug === slug);
   const p = bySlug.get(slug);
-  if (!p?.content) { console.warn(`no content yet: ${slug}`); continue; }
+  // A post "fetched from its page" that is really the blog index (the link falls back to it) is not content.
+  if (!isReal(p)) continue;
   const { html, images, text } = await clean(p.content);
   const words = text.split(/\s+/).filter(Boolean).length;
   const image = p.featured ? await localImage(p.featured, decode(p.featuredAlt || '')) : images[0] || null;
@@ -129,7 +134,7 @@ for (const slug of slugs) {
     date: l?.date || (p.date || '').slice(0, 10),
     modified: (p.modified || '').slice(0, 10) || null,
     categories: cats,
-    excerpt: decode(p.excerpt).replace(/\s*\[…\]\s*$|\s*Read more.*$/i, '').slice(0, 260),
+    excerpt: l?.excerpt || decode(p.excerpt).replace(/\s*\[…\]\s*$|\s*Read more.*$/i, '').slice(0, 260),
     minutes: Math.max(1, Math.round(words / 230)),
     words,
     image,
@@ -139,5 +144,13 @@ for (const slug of slugs) {
 }
 posts.sort((a, b) => (a.date < b.date ? 1 : -1));
 fs.writeFileSync(path.join(root, 'src/data/blog.json'), JSON.stringify(posts, null, 1));
-const missing = listed.filter((l) => !posts.find((p) => p.slug === l.slug)).map((l) => l.slug);
-console.log(`${posts.length} posts written (${listed.length} listed on /blog/); missing content: ${missing.length ? missing.join(', ') : 'none'}`);
+
+// Posts the index lists whose full text isn't published anywhere (their links open the blog index): kept as
+// summaries — title, date, topics, excerpt and cover exactly as the index shows them. Nothing is written for them.
+const summaries = [];
+for (const l of listed.filter((x) => !posts.find((p) => p.slug === x.slug))) {
+  summaries.push({ slug: l.slug, title: l.title, date: l.date, categories: l.cats.map(titleCase), excerpt: l.excerpt, image: l.cover ? await localImage(l.cover, '') : null });
+}
+summaries.sort((a, b) => (a.date < b.date ? 1 : -1));
+fs.writeFileSync(path.join(root, 'src/data/blog-summaries.json'), JSON.stringify(summaries, null, 1));
+console.log(`${posts.length} full posts, ${summaries.length} summary-only (${listed.length} listed on the blog index)`);
