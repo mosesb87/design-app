@@ -6,28 +6,28 @@
 
 @font-face {
   font-family: 'Hubot';
-  src: url('../fonts/hubot-sans-display.woff2') format('woff2-variations');
+  src: url('../fonts/hubot-sans-display.woff2') format('woff2');
   font-weight: 500 900;
   font-stretch: 88% 125%;
   font-display: swap;
 }
 @font-face {
   font-family: 'Mona';
-  src: url('../fonts/mona-sans-text.woff2') format('woff2-variations');
+  src: url('../fonts/mona-sans-text.woff2') format('woff2');
   font-weight: 380 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Mona';
-  src: url('../fonts/mona-sans-text-italic.woff2') format('woff2-variations');
+  src: url('../fonts/mona-sans-text-italic.woff2') format('woff2');
   font-weight: 380 600;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Azeret';
-  src: url('../fonts/azeret-mono.woff2') format('woff2-variations');
+  src: url('../fonts/azeret-mono.woff2') format('woff2');
   font-weight: 400 600;
   font-display: swap;
 }
