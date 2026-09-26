@@ -16,7 +16,7 @@ export type CaseStudy = {
   urlLabel?: string;
   platform: string[];
   languages: string[];
-  media: { hero: string; mobile?: string; full?: string; video?: string; more?: { slug: string; label: string }[] };
+  media: { hero: string; mobile?: string; full?: string; video?: string; shows?: string; more?: { slug: string; label: string }[] };
   intro: string[];
   role?: { text: string; source: string };
   features?: { title: string; text: string }[];
@@ -47,7 +47,7 @@ export const cases: CaseStudy[] = [
     urlLabel: 'asas.build',
     platform: ['WordPress', 'Elementor'],
     languages: ['English', 'Arabic'],
-    media: { hero: 'asas', video: 'asas', more: [{ slug: 'asas-studio-app', label: 'The studio: ready-made pages, filtered and previewed' }] },
+    media: { hero: 'asas', video: 'asas', shows: 'Applying colour kits to the live page', more: [{ slug: 'asas-studio-app', label: 'The studio: ready-made pages, filtered and previewed' }] },
     intro: [
       'I designed and built ASAS to turn thousands of reusable Elementor blocks into complete, editable pages. Users can search in English or Arabic, stack sections into a live page, apply one shared colour system, and export the finished layout as a native Elementor JSON template.',
       'The blocks are drawn in grey on purpose, so a page’s structure is judged before anyone argues about colour.',
@@ -119,6 +119,7 @@ export const cases: CaseStudy[] = [
     media: {
       hero: 'deals-os',
       video: 'deals-os',
+      shows: 'Fixing D-1009, the blocked deal, in the live demo',
       more: [
         { slug: 'dealproof', label: 'DealProof — the launch checker' },
         { slug: 'northgate-retail', label: 'Northgate Retail Group — a fictional-company adaptation' },
@@ -163,7 +164,7 @@ export const cases: CaseStudy[] = [
     url: `${M}/csv-mapper/`,
     platform: ['Browser tool'],
     languages: ['English'],
-    media: { hero: 'csv-mapper', video: 'csv-mapper', more: [{ slug: 'commerce-studio', label: 'Commerce Studio — the published edition' }] },
+    media: { hero: 'csv-mapper', video: 'csv-mapper', shows: 'Loading a sample sheet and mapping its columns', more: [{ slug: 'commerce-studio', label: 'Commerce Studio — the published edition' }] },
     intro: [
       'Supplier spreadsheets never match a store’s import format. CSV Mapper maps the columns, checks the result in layers, and keeps a record of every decision a reviewer makes — so the file that reaches the store is one somebody actually looked at.',
     ],

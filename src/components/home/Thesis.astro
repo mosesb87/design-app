@@ -201,9 +201,7 @@ import { person, layers } from '../../data/site';
     :global(.motion-ok) .thesis__steps { gap: 0; }
     :global(.motion-ok) .thesis__step { padding-block: 10px; }
     :global(.motion-ok) .thesis__step-title { font-size: clamp(1.1rem, 1.5vw, 1.4rem); }
-    :global(.motion-ok) .thesis__step-text { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--d-small) var(--ease-register); overflow: hidden; margin-top: 0; }
-    :global(.motion-ok) .thesis__step-text > span { min-height: 0; overflow: hidden; }
-    :global(.motion-ok) .thesis__step.is-active .thesis__step-text { grid-template-rows: 1fr; margin-top: 6px; }
+    :global(.motion-ok) .thesis__step-text { font-size: 0.875rem; line-height: 1.45; margin-top: 4px; }
   }
   @media (min-width: 1024px) and (max-height: 820px) {
     :global(.motion-ok) .thesis__body { display: none; }

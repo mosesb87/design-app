@@ -62,7 +62,7 @@ a:hover { text-decoration-thickness: 2px; }
   transform: translateY(-160%);
   transition: transform var(--d-small) var(--ease-register);
 }
-.skip-link:focus-visible { transform: translateY(0); }
+.skip-link:focus-visible { transform: none; transition: none; }
 
 .visually-hidden {
   position: absolute !important;

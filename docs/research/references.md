@@ -186,3 +186,34 @@
 - **monolayer:** no third-party source reports its motion or who built it; its motion is inferred only from the Awwwards element names.
 - **Twohands and S25:** no Awwwards or Codrops breakdowns found; their styling comes from A1 tags and page structure.
 - **Fonts:** the Aino and Driftime font listings may not match the exact pages in scope, as noted in their sections.
+
+## PROBED — measured in a real browser (GitHub Actions, Chromium, 2026-09-26)
+
+Objective measurements from `scripts/capture/probe.mjs` (no imagery stored). Heuristics, stated plainly: *scroll-driven elements* counts elements whose transform, opacity or clip-path differs between two scroll positions ¼ viewport apart at six points down the page — marquees and looping animations also count, so treat it as an indicator, not a census. *Pinned candidates* are tall, non-fixed elements whose position did not move while scrolling. Transfer size is what loaded before the probe finished (lazy media may add more).
+
+| Site | Libraries detected | Fonts loaded | Scroll-driven (normal → reduced motion) | Pinned candidates | Canvas / video | Custom cursor | View Transitions | Transfer | FCP |
+|---|---|---|---|---|---|---|---|---|---|
+| Aino / Samsøe Samsøe | — | abc, abcplus | 0 → 0 | 0 | 0 / 3 | no | no | 1380 KB | 120 ms |
+| Coinsetters | gsap, scrollTrigger, lenis, webflow | Tungstennarrow, Inter | 827 → 826 | 4 | 0 / 2 | yes | no | 129 KB | 676 ms |
+| DDDx Palermo | lenis | DM Mono, neue-haas-grotesk-display, neue-haas-grotesk-text | 188 → 128 | 1 | 1 / 0 | no | no | 2230 KB | 3280 ms |
+| Driftime 2025 | lenis, nextjs | Koulen, Instrument Serif | 2 → 0 | 8 | 2 / 0 | yes | yes | 1467 KB | 240 ms |
+| Hon Tran /work | lenis, nextjs | JetBrains Mono, f37Judge | 77 → 56 | 3 | 4 / 0 | no | no | 7734 KB | 252 ms |
+| monolayer.dev | gsap, scrollTrigger, lenis, barba, webflow | PPFrama | 90 → 142 | 5 | 1 / 0 | no | no | 141 KB | 516 ms |
+| mousabatarseh.com (v1) | three | Manrope | 157 → 1 | 1 | 2 / 0 | no | no | 790 KB | 396 ms |
+| mousabatarseh.com/v2 | — | Archivo, JetBrains Mono | 142 → 2 | 8 | 0 / 0 | no | no | 227 KB | 832 ms |
+| S25 home | scrollTrigger, nextjs | S25Diatype-Light, S25Diatype-Bold, S25DiatypeSemi-Mono-Regular | 124 → 119 | 0 | 0 / 0 | no | no | 1386 KB | 184 ms |
+| S25 / Séance | nextjs | S25Diatype-Light, S25Diatype-Bold, S25DiatypeSemi-Mono-Regular | 22 → 19 | 0 | 0 / 0 | no | no | 2038 KB | 224 ms |
+| Trionn | scrollTrigger, lenis, swiper, nextjs | neueHaas, martianMono, familjen | 229 → 226 | 8 | 3 / 6 | yes | no | 2881 KB | 1540 ms |
+| Twohands | nextjs | — | 69 → 87 | 0 | 15 / 2 | no | no | 1511 KB | 1120 ms |
+| Wild — craft | — | Sneak | 15 → 1 | 0 | 6 / 10 | no | no | 8885 KB | 232 ms |
+
+**What the measurements add to the written analysis**
+
+- **Reduced motion is often not honoured.** Coinsetters (827 → 826), Trionn (229 → 226), S25 (124 → 119) and Twohands (69 → 87) keep essentially all scroll-driven motion when the visitor asks for less. Mousa's own v1 (157 → 1) and v2 (142 → 2) do honour it — the new site must too, and does (reduced motion renders static compositions).
+- **Weight ranges 60×.** monolayer (141 KB) and Coinsetters (129 KB) load light; Wild (8.9 MB), Hon Tran (7.7 MB) and Trionn (2.9 MB) are heavy before any interaction. For an SEO and performance specialist the light end is the credible one; the new site publishes its own weight in the footer.
+- **GSAP + ScrollTrigger + Lenis is the common stack** (monolayer, Coinsetters, Trionn; Lenis alone on DDDx, Driftime, Hon Tran). The new site uses the same proven tools — the distinction has to come from the concept, not the library.
+- **Mono faces are the 2026 default for metadata** (DM Mono, JetBrains Mono, Martian Mono on Trionn — confirmed). The new site uses Azeret Mono, which none of the references load.
+- **Custom cursors appear on 4 of 11** (Coinsetters, Driftime, Trionn, plus class-name matches). The new site keeps the native cursor and only adds a registration target over plates — no hidden cursor.
+- **Only Driftime uses View Transitions.** Cross-document View Transitions remain a real differentiator for the plate-to-case-study morph.
+
+Limits: the probe measures, it does not see. Visual judgements in this document still rest on page text, published write-ups and professional inference, tagged as such above.

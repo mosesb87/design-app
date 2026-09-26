@@ -106,21 +106,24 @@ for (const slug of slugs) {
     const r = await processView(slug, view, src, dir);
     if (r) m.views[view] = r;
   }
-  const mp4 = path.join(srcDir, 'scroll.mp4');
-  if (fs.existsSync(mp4)) {
-    const out = path.join(dir, 'scroll.mp4');
+  for (const name of ['scroll', 'interact']) {
+    const mp4 = path.join(srcDir, `${name}.mp4`);
+    if (!fs.existsSync(mp4)) continue;
+    const out = path.join(dir, `${name}.mp4`);
     // Re-encode for the web: 1280w, no audio, fast start. Keep it small.
     if (newer(mp4, out)) execFileSync(FFMPEG, ['-y', '-loglevel', 'error', '-i', mp4, '-vf', 'scale=1280:-2', '-c:v', 'libx264', '-preset', 'slow', '-crf', '26', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-an', out]);
-    const poster = path.join(srcDir, 'scroll-poster.webp');
-    const posterOut = path.join(dir, 'scroll-poster.webp');
+    const poster = path.join(srcDir, `${name}-poster.webp`);
+    const posterOut = path.join(dir, `${name}-poster.webp`);
     if (fs.existsSync(poster) && newer(poster, posterOut)) await sharp(poster).resize(1280).webp({ quality: 80 }).toFile(posterOut);
     const pm = fs.existsSync(posterOut) ? await sharp(posterOut).metadata() : { width: 1280, height: 800 };
-    m.video = { src: rel(out), poster: fs.existsSync(posterOut) ? rel(posterOut) : null, w: pm.width, h: pm.height, seconds: log.recording?.seconds || null, bytes: fs.statSync(out).size };
+    const info = name === 'scroll' ? log.recording : log.interaction;
+    const v = { src: rel(out), poster: fs.existsSync(posterOut) ? rel(posterOut) : null, w: pm.width, h: pm.height, seconds: info?.seconds || null, bytes: fs.statSync(out).size };
+    if (name === 'scroll') m.video = v; else m.interaction = v;
   }
   const outline = path.join(srcDir, 'outline-desktop.json');
   if (fs.existsSync(outline)) m.outline = readJSON(outline, null);
-  if (Object.keys(m.views).length || m.video) manifest[slug] = m;
-  console.log(`✓ ${slug}: ${Object.keys(m.views).join(', ')}${m.video ? ' + video' : ''}`);
+  if (Object.keys(m.views).length || m.video || m.interaction) manifest[slug] = m;
+  console.log(`✓ ${slug}: ${Object.keys(m.views).join(', ')}${m.video ? ' + video' : ''}${m.interaction ? ' + interaction' : ''}`);
 }
 
 // Art-directed detail crops: { slug, from: view, rect: [x, y, w, h] (source px), name, label }

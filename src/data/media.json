@@ -1,6 +1,6 @@
 {
  "ai-academy": {
-  "title": "أكاديمية الآي آي — AI Academy",
+  "title": "\u0623\u0643\u0627\u062f\u064a\u0645\u064a\u0629 \u0627\u0644\u0622\u064a \u0622\u064a \u2014 AI Academy",
   "url": "https://apps.moseswebworks.com/aiacademy/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -511,9 +511,9 @@
   }
  },
  "asas": {
-  "title": "ASAS — Wireframe an Elementor page from 3,881 real blocks. Export native JSON.",
-  "url": "https://asas.mousabatarseh.com/",
-  "capturedAt": "2026-09-26T14:14:18.227Z",
+  "title": "ASAS \u2014 Wireframe an Elementor page from 3,881 real blocks. Export native JSON.",
+  "url": "https://asas.build/",
+  "capturedAt": "2026-09-26T15:00:47.878Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -562,7 +562,7 @@
       "src": "/media/asas/desktop-hero-2560.avif"
      }
     ],
-    "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAW9ydNlKgQZRgAAD+7U3B0CjeYWqRbasu9ld7OwxNOjpbQBlxAZH9ABjQiny+tHM9APoee3izJ9MyR5YT8QkihqpJyiBL7gD30AA=",
+    "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAW9wKF+xmq/EAAP7tTcHQKN5hapFtqy72V3s7C2jc9VxE8mDIIJx+JrgAgULtLKGk6xXfJN6uJi0DIpQ//vbHRpQ4FaIuKekhBAAAAA==",
     "color": "rgb(248 248 232)",
     "ghostA": "/media/asas/desktop-hero-ghost-a.webp",
     "ghostB": "/media/asas/desktop-hero-ghost-b.webp"
@@ -581,7 +581,7 @@
      }
     ],
     "avif": [],
-    "lqip": "data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAADwBgCdASoYAJYAPu1wrlOppiOipnQKATAdiWkAAC9o8YSuY7NCjt09wI6wlL5lswbx6BHZrhMsHc259LSqtFlAAP7vx9uQg+JZpGWxc1D5Y6DRjtpBoHnMTFqG1Ipe+Ui2ObI7/0YsRlnJeeXx8gbXyHTTPMoRDHek/EchzvRD+I/4RZJozlY2on7x9xfkiZIqvgK2l+2cpeG9/1+mlVuPt5mI9T8uvrv8Vnp2ormgy5i1ddfLz7Hy5CoKZF4RW86r2bJFjOb035jbStnF6Rj4ngsQfgLSNiEYpQSln7ga+Pds5gS4+QyFeP0S+IcswE4Fp3SxlaAML/T4AWpWkIAA",
+    "lqip": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBgCdASoYAJYAPu12sFMpp6SipNqp4TAdiWkAABJli4Y4hRVn19KSSNsmo1Zd3qb8QqBzPygQyUDSbKgo6AD+7U3B0CjeYWqRbasu9gGUjRHAdIJzJi1DgcK0czxAyTKIZiZxyy4PI3BlHCNefAoOwoPYYJW8LlunfFHf+f8IpZxahkQCujSweh3fMQm5ilYx9l6sJEr++F3/X6aVW4+3Sh6cL6DyXESa2syJLNilBmRj+ZkeiUEDaxDSJRI02EAAAA==",
     "color": "rgb(248 248 232)"
    },
    "mobile-hero": {
@@ -617,6 +617,23 @@
     ],
     "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAwBQCdASoYADQAPu1oqE6ppiOiLAsxMB2JaQAARviLpHPer9FUR7/DGXZP5VL3uTyFwAD+6qcDAtKQBPkczmroIneZdk9Yx80BUIzpu6aQ0of0u4VC74yCGGAjTJol+0vrhUvbmnrrlZm0uWVgJkccyLMlBYzNsWAacRaaqq5e41Pm/ZjTZPcmFVHG/yE5NrgctCtEE+UcqLaUC1rhI5TBnO1RaHdo50BAAA==",
     "color": "rgb(248 248 232)"
+   },
+   "mobile-full": {
+    "w": 780,
+    "h": 16000,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/asas/mobile-full-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/asas/mobile-full-780.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRggDAABXRUJQVlA4IPwCAABwFgCdASoYAOwBPu1srlIppaQip9RLOTAdiWkA1uiOztpmig/+6f7ZcDMhkvMphBLdXUBL4ueo7SJnhZZOey9AgKOhM6oEQo1wIFNaR7vOAxuFyc9fblat+QdrVA3q0aN7zjzKEEVAkGAhXv0Fudco+C3MpbuGdUovUO+5L8nfyjzTGVIZl7YmFEtbxW27zh7iZqjVu1TKrIc/ynNf0e4FLRk6JKSB6BGa3eSNwQyyL0+2UPjY4xBi5QRw4AD+7X3M0d45JM2QsY58Q0q3yxtC9E7k7PTDnn5ESPsfZEiBx3VF+s07qfkn8mr1dLlW4Gdouy6O987bn/Zn7Tdf3qnSU6/0QWdFmxiwPEP/G3rerqs4elL0gnerrOwtab/G8bqas9hFZjN/NfJBdiPt0t+w66CZlmEhQGqfBbWJdur0hyiygRvAKJs50NQiBmiBii191X1iwcNwoI7CtVCC7qT4RHAYVhgdTkBarT4QFVzoQnwKw1UyAWCKmEl/muZbpaQVU0k9pznD5xv3obS4n7jTa3UmQr6ufr/GTeA3YcbvlEKfKN+skN84udtMWzAQw23bAmgWpvryRmbLZXOHMxZHMDg/iReHlFqlz5glW6gU6ahuKRLHfRMD9Tt5yzNqYY50zKeqH8ygOsNUK6V1IpHV1Vvc5imWFH4Ny7IcC4W74UFif1GKIBeQLFK4ImWnDL5IHM/eWhUJ7MgnduAsCh1EyKgfEDnDdcXDclPdaZUsT8LJXO5LY2NaXVciYU6CCZ7YJOM62UX0Kdo/GO937YtXJy5pAiS8mE9aysZBu/kG3zUZbq2PCXn1HMhE2Jp2dCrH4sUR2WDhwO0LdbcBf16oBc+XzxQgJ/VgkntmLnRuIa7xLUQVdTUliKluDKF7rWn54FjjRm9JOThHPLCHX/fZiFqO5qgjcUaQbQAdWNqTGArlKqPd0GujF5MQxTqGPvaI9oxLNfFbRg8W1FwGcF4kQqjsIwvgPThqKWOGylUqphqgm1loyjqyaYIAAA==",
+    "color": "rgb(248 248 232)"
    }
   },
   "video": {
@@ -624,8 +641,16 @@
    "poster": "/media/asas/scroll-poster.webp",
    "w": 1280,
    "h": 800,
-   "seconds": 11.28,
-   "bytes": 503338
+   "seconds": 11.01,
+   "bytes": 503419
+  },
+  "interaction": {
+   "src": "/media/asas/interact.mp4",
+   "poster": "/media/asas/interact-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "seconds": 10.18,
+   "bytes": 309886
   },
   "outline": {
    "viewport": {
@@ -846,8 +871,8 @@
  },
  "asas-studio-app": {
   "title": "ASAS Studio",
-  "url": "https://asas.mousabatarseh.com/studio/",
-  "capturedAt": "2026-09-26T14:14:18.227Z",
+  "url": "https://asas.build/studio/",
+  "capturedAt": "2026-09-26T15:00:47.878Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -1205,9 +1230,9 @@
   }
  },
  "btee-build": {
-  "title": "PTEE | التعليم اللاهوتي بالامتداد في العالم العربي",
+  "title": "PTEE | \u0627\u0644\u062a\u0639\u0644\u064a\u0645 \u0627\u0644\u0644\u0627\u0647\u0648\u062a\u064a \u0628\u0627\u0644\u0627\u0645\u062a\u062f\u0627\u062f \u0641\u064a \u0627\u0644\u0639\u0627\u0644\u0645 \u0627\u0644\u0639\u0631\u0628\u064a",
   "url": "https://btee.moseswebworks.com/ar/",
-  "capturedAt": "2026-09-26T14:14:29.214Z",
+  "capturedAt": "2026-09-26T15:00:53.647Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -1293,6 +1318,23 @@
      }
     ],
     "lqip": "data:image/webp;base64,UklGRj4BAABXRUJQVlA4IDIBAABwBwCdASoYADQAPu1srlEppiQirBqoATAdiWMAuzP8TnqRe4NM0suu1+E7fcyLJD9RvTh3EosnlpaEkeqd6P41y7fg0AD+8DnG0XUrtEoYul+8MoxaBWvbcdpooIv9OJfxTm2mz7q7yXdxb98uUHh129kctyOdK4thcMalbdPJoSKuad9x90ZYWMANcte8Pt+ydpwJafIqhWzkN720+DcqSb3RfwJbbdVpKH1uaEvcK730gNeXY6GcXFKmcRHXhTNjvJvrM+Y3u2/stZsBdMZCKwgJO+Ni8upbPZcl73xPhwmjJ4cF+tQTcG37tQp3/J8RKI9xLt665DFCDETtIGJfVMLRUa5BUqQslYWdiEh2/RQIIZ0JugXPtwRT6VXjtc3eehXkkci3FxH4WUEw4iDFgAA=",
+    "color": "rgb(248 248 248)"
+   },
+   "mobile-full": {
+    "w": 780,
+    "h": 16000,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/btee-build/mobile-full-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/btee-build/mobile-full-780.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,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",
     "color": "rgb(248 248 248)"
    }
   },
@@ -1555,9 +1597,9 @@
   }
  },
  "changeatlas": {
-  "title": "ChangeAtlas Commerce — know what an import will change before it runs",
+  "title": "ChangeAtlas Commerce \u2014 know what an import will change before it runs",
   "url": "https://mousabatarseh.com/changeatlas/",
-  "capturedAt": "2026-09-26T14:14:18.227Z",
+  "capturedAt": "2026-09-26T15:00:47.878Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -1606,7 +1648,7 @@
       "src": "/media/changeatlas/desktop-hero-2560.avif"
      }
     ],
-    "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAW+uUIRkutXalHdwAAP7vjVrHX1CUJNykTMjHJgXgSXAaDjOJoG0lKTlKqjc7GzJF7vKp9nyRYEXJrc1KBGi43mSIjweerIMVG6tTw47QwQXWOAAA",
+    "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAW+uUIRkutXalHdwAAP7vjVrHX1CUJNykTMjHJgXgSXAaDjOJoG0lKTlKqjc7GzJF7vKp9nyRYEXJrc1KBGi43mSIjweerIMVG6tTw47QwQXWOAAA",
     "color": "rgb(8 8 8)",
     "ghostA": "/media/changeatlas/desktop-hero-ghost-a.webp",
     "ghostB": "/media/changeatlas/desktop-hero-ghost-b.webp"
@@ -1625,7 +1667,7 @@
      }
     ],
     "avif": [],
-    "lqip": "data:image/webp;base64,UklGRngBAABXRUJQVlA4IGwBAADwCQCdASoYAGQAPu1gq04ppSQiK3zMcTAdiWkAE+KpWAzq/rcaf0881p47XX+SNDM/riQc8xvoGub51PgOTc93pQP7VSHfm21Xg9jtyg6z/9Fn7u5qQOoAAP7vjHvtFVy6ZhHwcNpqMGWnA7QcZxiGz5SSupk5tNHu1BaN+VT5KHUlZ/R5AePo8OFB3yTEs+QXgNRPYPCeBeSgXW+LCQ2pg/XV/mLLutvKPKsoOv4XUk21AMwUlmM4NjPGmFLcm2cKaJ3+/+fOEj2TBBBB4rvmZ/sTLXGZ8qtSD+si+EfKVhUoCxMWAlI89CRAAwQq40sAfQaRur0gQgNQZjSr38sBjTA8bDORye1cY+QO1NYgfWYROc0MhuIfmOlcRFhjdLcMlhzI6gVbzDNF3FVNy99BX0rrwyHB2Qi7SyLsFfEoU4harNFC2E3/YMvP2bmTp3uGqRUPBGghj76jOmNSbnCyIpH5b8obeuQoFAAA",
+    "lqip": "data:image/webp;base64,UklGRnwBAABXRUJQVlA4IHABAADwCQCdASoYAGQAPu1gq04ppSQiK3zMcTAdiWkACB5CL6c3NwYSdmAXqkuMGVNMAOCorYgF9Z6+odpRSh4s6rnKahqrbynaTQjgdX96pgznw+R/0EEDKBtAAP7vjHBD5vzGqOwkMG9YjPoSgi8WrXxoTDZjfqw+1Vtlsch8/iK97JFgauvmXRsNnRlpRBXbCYCgaOUXZa+Z/VNLL0ncxqfWznmLLutvKPU3j/m2lhd4NYY5IxG5yIE1UDpnCcHm38xDEHuIA+MjlAdaGSzJ6MeKOQzaOFa8L26uhs2SYBPTgjnO92bxbq7a5Bf3x9YaId67IjFrUuHacfDtRhGnKsVyzC4GcHEyMEul6SbV11VnSVlHfmAvjT61Ezch7hkeqbPNd3YfbslrExb+4yRTqMj7TRzyEjM/y+A7IJUZhVk6nkerSrh7Kk/cuX0Z0+J8OHPYgjz6ykHYLRELuZkWBW9J/vrwM0S3eetf1T5UjgAAAA==",
     "color": "rgb(248 248 248)"
    },
    "mobile-hero": {
@@ -1661,6 +1703,23 @@
     ],
     "lqip": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAACwBgCdASoYADQAPu1gqE2ppaOiLBquYTAdiWkAA+UQ7Q6h8LmhdSwGtbioTU9zam5ww2eomCHyH9dKhMr4AAD+8rS5aY8YzH2hi1j7iVZCxCKQGLymjYNr5Q/XIMz754OvOjTu+s280dtutsgdHDC9/uJ4hyckQqUsVWT/M7verreDXNSvShkB8F94/hVf9uXxivJ7zepkt/E7VkxbI5C7JeNNwZsam24d7Ss5rYCsDIh0iPXKbxp3o9FPfVuVH4XnldybAs0V6yIYmMDwUSbz8AL+91rp2XfSxh1b5NkIUAW1jf5r6JlxD75f21jYuMC7ZahYBenQAAAA",
     "color": "rgb(8 8 8)"
+   },
+   "mobile-full": {
+    "w": 780,
+    "h": 16000,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/changeatlas/mobile-full-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/changeatlas/mobile-full-780.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,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",
+    "color": "rgb(248 248 248)"
    }
   },
   "video": {
@@ -1668,8 +1727,8 @@
    "poster": "/media/changeatlas/scroll-poster.webp",
    "w": 1280,
    "h": 800,
-   "seconds": 8.5,
-   "bytes": 476849
+   "seconds": 8.73,
+   "bytes": 555380
   },
   "outline": {
    "viewport": {
@@ -1741,9 +1800,9 @@
   }
  },
  "changeatlas-app": {
-  "title": "Demo · ChangeAtlas Commerce",
+  "title": "Demo \u00b7 ChangeAtlas Commerce",
   "url": "https://mousabatarseh.com/changeatlas/app/",
-  "capturedAt": "2026-09-26T14:14:18.227Z",
+  "capturedAt": "2026-09-26T15:00:47.878Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -1792,8 +1851,8 @@
       "src": "/media/changeatlas-app/desktop-hero-2560.avif"
      }
     ],
-    "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAW7Sn4us7Hy+1gAD+eSqVbIBc3WDtnpGXnGD65mXTg7XeB/j6hk6mGnJl9Lzwqb1Go/At9AAA",
-    "color": "rgb(120 120 120)",
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQAwCdASoYAA8APu1mqk2ppaQiMAgBMB2JaQAAXfBZRyojq+eAAP7VF8qs3l51CRVHbLbx96lGYJkV++cgAYQXnM6v37D/F7wjE/6iIpClj/XD6AAAAA==",
+    "color": "rgb(248 248 248)",
     "ghostA": "/media/changeatlas-app/desktop-hero-ghost-a.webp",
     "ghostB": "/media/changeatlas-app/desktop-hero-ghost-b.webp"
    },
@@ -1811,8 +1870,8 @@
      }
     ],
     "avif": [],
-    "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoYABwAPu1qr1CppaQiqAqpMB2JaQAALlo46YMvfhzKzCmCJ/KAAP55KpVsgFzdYO2ekZecYPrmZdODtd4H75OlzanNMJv8p1+dEERsIu5LC/TvqQj0wvyUPg1VKl0BBv8y58vsua88RF420MI+JyyfvYbhgAAA",
-    "color": "rgb(120 120 120)"
+    "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoYABwAPu1mrE6ppaQiKA1RMB2JaUwAABVYWBfE59Ju4MmOgAD+1RfKrN5edQkVR2y28fv+eP+aWykoIJztXR9ECClRps/TJg8qwrwu6rtEgsL20gwWMOHP+GNNwG9Yv4lHBhReRWCBGhG6HGbShAAA",
+    "color": "rgb(248 248 248)"
    },
    "mobile-hero": {
     "w": 1170,
@@ -1845,8 +1904,8 @@
       "src": "/media/changeatlas-app/mobile-hero-1170.avif"
      }
     ],
-    "lqip": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACwBQCdASoYADQAPu1mq08ppSOiLBVcyTAdiWkAAF+NIlIKYFYIrgEpUBjJogBkMFhzA2cA6EAA/vEgzeRBGcD1RUz7txeiCsHZwnl9QKDJDA9dcsHsd1Y1bDJGovNVIZzWae+p9RmwvfHZF/k3klGfHYYns2+DikNnJzfaCFk/DQWQc833saP14zRWUfnxAAA=",
-    "color": "rgb(120 120 120)"
+    "lqip": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAwBQCdASoYADQAPu1mqE+ppSOiLBVeYTAdiWdlBQAKUD472m8yGtNE4APdkQsg2/IAAAD+o3L1mGwN3AyAh5R/3nCGJ6Wr7kbAB/RWGHUCersu8cL4caX5X2ymUEV0ljWyDo09F5QPqPweOVb9Dp23WsjDQ6c5bAnEDZBt+B6PfEW+IUXsqQQViLhddMCwrypE8O6eQbiRVX2j7K17xfUoDD7v1vp3+RL5qsMYr27emPHRMza2Y++1NmLjzn0fgg5mvkXgAAA=",
+    "color": "rgb(248 248 248)"
    }
   },
   "video": {
@@ -1854,8 +1913,8 @@
    "poster": "/media/changeatlas-app/scroll-poster.webp",
    "w": 1280,
    "h": 800,
-   "seconds": 7.56,
-   "bytes": 312132
+   "seconds": 7.55,
+   "bytes": 450422
   },
   "outline": {
    "viewport": {
@@ -2356,42 +2415,14 @@
      "y": 0.888,
      "w": 0.0372,
      "h": 0.0356
-    },
-    {
-     "k": "heading",
-     "x": 0.3868,
-     "y": 0.4179,
-     "w": 0.2264,
-     "h": 0.0258
-    },
-    {
-     "k": "text",
-     "x": 0.3868,
-     "y": 0.4504,
-     "w": 0.2264,
-     "h": 0.1083
-    },
-    {
-     "k": "button",
-     "x": 0.3868,
-     "y": 0.5721,
-     "w": 0.0528,
-     "h": 0.0356
-    },
-    {
-     "k": "button",
-     "x": 0.5799,
-     "y": 0.5721,
-     "w": 0.0333,
-     "h": 0.0356
     }
    ]
   }
  },
  "changeatlas-review-demo": {
-  "title": "Demo · ChangeAtlas Commerce",
+  "title": "Demo \u00b7 ChangeAtlas Commerce",
   "url": "https://mousabatarseh.com/changeatlas/app/",
-  "capturedAt": "2026-09-26T14:14:25.275Z",
+  "capturedAt": "2026-09-26T15:00:54.355Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -2956,7 +2987,7 @@
   }
  },
  "commerce-studio": {
-  "title": "Commerce Studio — Spreadsheet workspace",
+  "title": "Commerce Studio \u2014 Spreadsheet workspace",
   "url": "https://commerce-studio.mousabb2.chatgpt.site/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -3106,9 +3137,9 @@
   }
  },
  "csv-mapper": {
-  "title": "CSV Mapper — Comma-Separated Values and Excel workspace",
+  "title": "CSV Mapper \u2014 Comma-Separated Values and Excel workspace",
   "url": "https://mousabatarseh.com/csv-mapper/",
-  "capturedAt": "2026-09-26T14:14:18.227Z",
+  "capturedAt": "2026-09-26T15:00:47.878Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -3237,7 +3268,15 @@
    "w": 1280,
    "h": 800,
    "seconds": 8.06,
-   "bytes": 950755
+   "bytes": 993083
+  },
+  "interaction": {
+   "src": "/media/csv-mapper/interact.mp4",
+   "poster": "/media/csv-mapper/interact-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "seconds": 9.85,
+   "bytes": 912012
   },
   "outline": {
    "viewport": {
@@ -3382,9 +3421,9 @@
   }
  },
  "dealproof": {
-  "title": "Promotion checks before launch — DealProof",
+  "title": "Promotion checks before launch \u2014 DealProof",
   "url": "https://mousabatarseh.com/dealproof/",
-  "capturedAt": "2026-09-26T14:14:18.227Z",
+  "capturedAt": "2026-09-26T15:00:47.878Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -3496,7 +3535,7 @@
    "w": 1280,
    "h": 800,
    "seconds": 8.79,
-   "bytes": 341996
+   "bytes": 286518
   },
   "outline": {
    "viewport": {
@@ -3639,9 +3678,9 @@
   }
  },
  "deals-os": {
-  "title": "Deals Operating System — Mousa Batarseh",
+  "title": "Deals Operating System \u2014 Mousa Batarseh",
   "url": "https://mousabatarseh.com/deals-os/",
-  "capturedAt": "2026-09-26T14:14:18.227Z",
+  "capturedAt": "2026-09-26T15:00:47.878Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -3769,8 +3808,16 @@
    "poster": "/media/deals-os/scroll-poster.webp",
    "w": 1280,
    "h": 800,
-   "seconds": 8.32,
-   "bytes": 918815
+   "seconds": 8.34,
+   "bytes": 890519
+  },
+  "interaction": {
+   "src": "/media/deals-os/interact.mp4",
+   "poster": "/media/deals-os/interact-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "seconds": 7.82,
+   "bytes": 677003
   },
   "outline": {
    "viewport": {
@@ -4177,9 +4224,9 @@
   }
  },
  "diamedical-lab": {
-  "title": "DiaMedical eCommerce case study — Mousa Batarseh (independent)",
+  "title": "DiaMedical eCommerce case study \u2014 Mousa Batarseh (independent)",
   "url": "https://mousabatarseh.com/diamedical/",
-  "capturedAt": "2026-09-26T14:14:18.227Z",
+  "capturedAt": "2026-09-26T15:00:47.878Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -4283,6 +4330,23 @@
     ],
     "lqip": "data:image/webp;base64,UklGRiwBAABXRUJQVlA4ICABAABwBwCdASoYADQAPu1oqFAppiOirBqrMTAdiWUAvkyRGZBd1WFb511+up4hjP+RM+rNRuODJXu/P/k5m4+Y3RS9A8HbAAD+3/+5EMYm7KzFEk1o6Q/tLaQPHkA3Ai3KUiRos0IqFwBpp3kZn7qqnskwNr09iXicV6usm0QjY1gtb/OPnfoOVAUm3Od3ab4Dp0lczkNBimWJdlDjTVZ9waS5mV67VdQ8rDQ7Bepp8CR+pUg5EXEeMcmCMOPgxENQ1q3TJs9pxC/zimnX/KFqUZHs2FakXIfI+6x2E6Y+gsYDZhI+YFm1f92k24WQkZNxAQKxClSQtZHBov916+5RkuonV+lWc3wHemfoLzPAL138B2K3RwtXdSBNRRunDryAAAA=",
     "color": "rgb(8 40 56)"
+   },
+   "mobile-full": {
+    "w": 780,
+    "h": 16000,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/diamedical-lab/mobile-full-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/diamedical-lab/mobile-full-780.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRvoEAABXRUJQVlA4IO4EAACwIACdASoYAOwBPu1srFIppaQiqFQMKTAdiWknABV6xaPOOURb//2veP7hnWh4buJr8iqr+2qAyBBh0VUG4BgYzJabAk/K1Q+8z0C2GKaWlLaQTQ+sEN7BNnIDwsAYXFA9qqrTSpVX7A6bfywlcOYoGnqs1cMG7kNsVPOM6e0+ML24IZOrB0qzYtw7HcjY8ptEAmb8UyMVh+MxlLcx8HEB1Nn5Cvz5aFaSvbHQ2yduQwgdT5D5WuJtIugUBA6y1ErHzjL/2ojXmL0BDyQgrfmy3+nPgz8Ubd3yloDxsKGK1JaUwjWgGwD2u+M23D7nxVw0IfS29/L6ob1PnWeZCoIUwgwD7C7FfVdpKcEfwggA/uDoPhu9DCG7b0Dm76h5uA5D7yxhIWrp1Wuc4CtNffUbDvd6rN9xvPxDPgssenanAdyBzwzDUR4rtR+9PklFNXVYRIat86YTHT9eM9AzU5NvQGBcY8RRGExNRC+KK6+8E3u+skfG+21z9esprFbk16poIz5Oueld417YUV9srJNdq93Hm561vUSlYHds8M8n5IMtHVs9ajrw6MHB5iS6CLb7Wx6u9r4np4jr1rz/jP/jzgWKiMWCo7cjv1UrfJO0ppDP+hmio4pJR/grSJGMpBB4jWu+o/Dilri9QjhQuICPRe7ojhz1g1X2qIGPjZcMQjaBCiKQNQ9cZyRzzCfERKqOc+07k2oXaHrkaCj7C6uATxyi29qkEaZiRdx61YKC9UdXs2WTpXpaZnzkWati8LBT90KIKW+a3E6XK1kaqCAZPrE+vYkmxJdRQ/D3BqAJfEeD6nQ+vn+qUXGfyvZuMTUIrhMyW+BAWrdFWWVz8CIPZ/JUSDOPSa13sGHqvXXZrvGGkCp27gAi14gjViVOcpcRg5Y3d73CXsI6TcR14BTl40jJbCg6D8ATyEWbUxAaKPssQj/J1WU8LM95G+QEAUCrZAupcrT4fCpJRUzihwyHLI14TDDQX7DosphUKRqhCMOPSile8tG24sszgX8QNcdI/wFgkg+dDl1nQX5j587SeJYLPKPYkGPe4jcucfO+2Ql4Il3oczCVf6rT97OxlBch2PLQTX2BSnGrDHeDqFP8xyHs4oFF1raOpSi5g+icNuc9Qpb8g3VHqb5G3um1saN89RjnVWfBjrXXtweEXXxCGy8vYmMm+nVTtZCLA4djch/fyAdva6zNYBbg6/CVXjTI1vgxf4hNKCMItHHIWZ3BMlEWnZy3DYjtofvZJd5nMp90GUT85XFr6RLtopZQ5j1r2BeGQVs21nfmsMBdGF+VW25BCQ9qKBA1O4+gbK8karYrYCE09UTcZHlVJWI+zyueavKhefjZvlJq6RCH8Oqk/ws5bq0ZlK0aaQnQCHgZGV50Hd3uOhWcoDqCtzH2tKzbY7AQfdXS33V6B8kpRdst7k11kCS1OSAt3/jpUVKLVt2hWqZEsGWxJXbar0QxiZY51DTJDZ7QC/9iE/A4ZGdzNBtdxQPayHaLBiQC8Nu+VWn7h0C+w7L168EFQGOIWg97BubdH2jD4DqbD9ktZS5RKOKHpGjWv3J9+6QkCrHiSgSawPZkXl39uBk06z8C4/UFmohuW7oiZatnT9g6SbebpUS2Gx/o1YFnff2ur5Kb0m+lZV9eaqKcg/hKDrjpa/BOykrevYeXtkf2lIAAAA==",
+    "color": "rgb(248 248 248)"
    }
   },
   "video": {
@@ -4290,8 +4354,8 @@
    "poster": "/media/diamedical-lab/scroll-poster.webp",
    "w": 1280,
    "h": 800,
-   "seconds": 7.65,
-   "bytes": 1340669
+   "seconds": 7.67,
+   "bytes": 1273003
   },
   "outline": {
    "viewport": {
@@ -4447,7 +4511,7 @@
   }
  },
  "diamedical-review": {
-  "title": "Start — DiaMedical Experience Review",
+  "title": "Start \u2014 DiaMedical Experience Review",
   "url": "https://mousabatarseh.com/diamedical-review/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -4571,7 +4635,7 @@
   }
  },
  "diamedical-workbook": {
-  "title": "Workbook explorer — DiaMedical case study — Mousa Batarseh",
+  "title": "Workbook explorer \u2014 DiaMedical case study \u2014 Mousa Batarseh",
   "url": "https://mousabatarseh.com/diamedical/v3/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -4955,9 +5019,9 @@
   }
  },
  "eat-with-samar": {
-  "title": "Eat With Samar — Bilingual Dietitian in Metro Detroit | Arabic & English",
+  "title": "Eat With Samar \u2014 Bilingual Dietitian in Metro Detroit | Arabic & English",
   "url": "https://eatwithsamar.com/",
-  "capturedAt": "2026-09-26T14:14:29.214Z",
+  "capturedAt": "2026-09-26T15:00:53.647Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -5061,6 +5125,23 @@
     ],
     "lqip": "data:image/webp;base64,UklGRv4AAABXRUJQVlA4IPIAAABwBgCdASoYADQAPu1oqk4ppiOjLAsxMB2JYwDM0BkBi/AY91cM55mojNFfC0WNjgbhMbsWS00euCcs8wAA/uCP9dS+R+8AoWfsCpKSXxasLC3l8wkNFZIiMGnViKl3d/qevmglNWSvwPFU2zyTZ7VxvvdbVxnfVECsUqOizqQ1EiQUIV/yothi/The25SNtymgB61/8Wq66/DoyV1CIOgJn4raAF/qQ5o47eHbC3ZAnk1gpmVeekHpJDyYDwhfb8f+acqtVQhnlDpjzpBphdCOWU6GN7AX6dGMUaS1DrLcAypIIHahfoxPRJ289rXEhgAAAA==",
     "color": "rgb(8 24 40)"
+   },
+   "mobile-full": {
+    "w": 780,
+    "h": 16000,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/eat-with-samar/mobile-full-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/eat-with-samar/mobile-full-780.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,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",
+    "color": "rgb(248 248 248)"
    }
   },
   "video": {
@@ -5166,12 +5247,46 @@
      "h": 0.0249
     }
    ]
-  }
+  },
+  "details": [
+   {
+    "name": "method",
+    "label": "Her method, explained in three moves",
+    "w": 1100,
+    "h": 900,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/eat-with-samar/detail-method-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/eat-with-samar/detail-method-960.webp"
+     }
+    ]
+   },
+   {
+    "name": "services",
+    "label": "Four ways families work with her",
+    "w": 1100,
+    "h": 720,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/eat-with-samar/detail-services-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/eat-with-samar/detail-services-960.webp"
+     }
+    ]
+   }
+  ]
  },
  "firefly-burgers": {
   "title": "Firefly Burgers Michigan",
   "url": "https://fireflyburgersmi.com/ver2/",
-  "capturedAt": "2026-09-26T14:14:29.214Z",
+  "capturedAt": "2026-09-26T15:00:53.647Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -5275,6 +5390,23 @@
     ],
     "lqip": "data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAAAwBwCdASoYADQAPu1mqlAppSOirBVcyTAdiWYAwCAXBsjQArf/v39aDsEtzuwHnDqV31e1AEgN5ZDypHdIuTwHsegA/vS09T2yWmN58zp2aSyVyG+rv8gIjgIxsaN7iQ6pWDxoBivYI34F26UPx7WQVb4Av6gSifP/FudIsPWpqHuOCONOZx1OHAK176IfBrY/Q7fkrCA4JRx+sGUKhKveKjpL8E6ex48rhcaCurUj5RxOaHTvP+QnRoYry/1gz0gaCFFGiPlE5n7bxGxjurNX1ll88LMw7l7EPN1yVc38TaGBQQ3/rZsjd8Aw77bkV4m0nmtMi3VBPY6i7dZBAiAA",
     "color": "rgb(8 8 8)"
+   },
+   "mobile-full": {
+    "w": 780,
+    "h": 16000,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/firefly-burgers/mobile-full-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/firefly-burgers/mobile-full-780.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,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",
+    "color": "rgb(8 8 8)"
    }
   },
   "video": {
@@ -5282,7 +5414,7 @@
    "poster": "/media/firefly-burgers/scroll-poster.webp",
    "w": 1280,
    "h": 800,
-   "seconds": 7.67,
+   "seconds": 7.66,
    "bytes": 687329
   },
   "outline": {
@@ -5365,7 +5497,61 @@
      "h": 0.0622
     }
    ]
-  }
+  },
+  "details": [
+   {
+    "name": "menu",
+    "label": "The signature menu, readable at a glance",
+    "w": 1100,
+    "h": 700,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/firefly-burgers/detail-menu-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/firefly-burgers/detail-menu-960.webp"
+     }
+    ]
+   },
+   {
+    "name": "cheese",
+    "label": "Each signature feature gets its own section",
+    "w": 1140,
+    "h": 580,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/firefly-burgers/detail-cheese-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/firefly-burgers/detail-cheese-960.webp"
+     }
+    ]
+   },
+   {
+    "name": "location",
+    "label": "Address and directions, one tap away",
+    "w": 1440,
+    "h": 520,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/firefly-burgers/detail-location-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/firefly-burgers/detail-location-960.webp"
+     },
+     {
+      "w": 1440,
+      "src": "/media/firefly-burgers/detail-location-1440.webp"
+     }
+    ]
+   }
+  ]
  },
  "full-house-wholesale": {
   "title": "FullHouse Wholesale |",
@@ -5482,7 +5668,7 @@
  "great-lakes-cigar-festival": {
   "title": "Great Lakes Cigar Festival 2025 | Michigan's Ultimate Cigar Event",
   "url": "https://greatlakescigarfest.com/home/",
-  "capturedAt": "2026-09-26T14:14:29.214Z",
+  "capturedAt": "2026-09-26T15:00:53.647Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -5586,6 +5772,23 @@
     ],
     "lqip": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAADQBgCdASoYADQAPu1iqU2ppaQiMBgMATAdiUAYmzvLby/dRwBCZS5h3843/SuV7PzRW2kMYvYeefN4QlZNNBgA/vNjJRGscamg7+GFKEP9C8BXYXwdTIudykC2lBmQJ9zX4rgaTilqlMyJbyb62sr3sNwYP18DpnKgWe5QuEzb8RAj8Pk1QljtIRFmDgNczCrhssEKMhewfoEq06ek9mAOJFTASNTfcSynSXE3ZVgoC9nZZGi9LOS4dnxyCPdoAlU0wT+cD4cqqoiyL7F+ylMcI/e+1MTIY9Ov3Xbal5UjULcV2JIV0prQDlJ7GbSXfLgcmAEebPhxJHnM/XFSNwf41bFQh+Z2PSkMAAAA",
     "color": "rgb(104 104 88)"
+   },
+   "mobile-full": {
+    "w": 780,
+    "h": 16000,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/great-lakes-cigar-festival/mobile-full-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/great-lakes-cigar-festival/mobile-full-780.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRrgFAABXRUJQVlA4IKwFAAAQIQCdASoYAOwBPu1ysVGppySipLOb6TAdiUAZsEy/2bZFuucwkVt73yJs0HR08wHms/3fUR/QA/gHTcP+1zl2fzLogAjPmlPAs+AKFw43nZPXH98WbjHynpnq8MDPlmQTUknxrF8saWwDIXrmzvC21OFD/4HWJqJJEzEtGLDWdwA24PARlJUUC2/TKut16wQu28Gr08KTEzqK5lS/ZpsL7DxX/y7NhFmS8fRcbaLPKNGr7HK5Xr/e9dSCAz/wvxsixGcTLkdKux08uFNoLNk8e7izJv1ppeHHu5zsC6Jx/8sggkCX+mp23XeVW2EB1zJE3RKXXq5ypY2Kri26kYiRo+DJ37d22LfOGCuwqKUrSIAA/vNjJPH7qaeWDYtz/RPBNjF8yGxdzplMt2cppO/4QQN+t0C8hnD2kQ+44JgVFwATj/KbfbRGg95QQ+5QmZ36ZTQanFwM6Bhhk8PUQ/iNj7csgEwdeI2c5PTcxJlqG3VzAI/kSK/YoET6zXTkrlp4Mw62vVjE9JJjs6pcBdMbGklAqvbbWRldnNNV4L4NWVji1iCVdD1OoiYLKjxfO8q7Te5gBuHz/07fTfQXLGeTLlPqJ8K4ftGKxZGFc5OC0deeg/oR2d3HLop/DfTY6DNd4oG+blz1X4O8oEyU0ISAusb2kRBL9v02489fSprrWS1TMXH5EOOIWeRVhf4G6F2mFjPpR/qYZdUabjKYmQcEd9ah7E3AhIVj4581zAqd1cE9S/Vtmd32ZtV8qRsEd+b59SfCg4YfjPleWsO4j21pH9FGeDyW/uFnHrpQF+Ibd5DyeRBTNAcREHhTTL3Fhns1yqxnff04bOyjHgSqkLsyH9AxE/efwT+VRip0QZjErstIPDgQH5Y2Fyu4y5tVnAYj1NJIbtxsCtKvxiBuEGUuGzSxas2OgdwELG/JRijJDbnzJOCDwTjpBa+sYpIv1UkgAsdPt6t/y9Kp0A4jgpfSQv4o+EiAg2vptwX8acg0tIaRNsj3z/5yhguuHoXkGqkX6vIorn6zjiTFYUNnVYdM/gqTx6wKMdKTvfximhHHbTmN5zXnHJce4teLaysKhxuCYmv8fLnDZYAEmfUQ02xSJdX4A6D1ZJVB8wWyFEFdsvZJO2KakcOyMRbrpWBpcQ3XgvXZKwPvMQzj9j4+20SrxRqnHz7Eg3pGcrbTAEGJTEJKB2oysQ1nwjbMh27FK52fQh7yjTV9c5jAWBFq27HyqnpWYaIocRdlwXuvHmhm5d0zfoyNMLGmKqeVx9uQUlLGS8tOKUXr8radREbhT4YRxfVEAQ/244ZKSbpL6wMnWnLGcXZJPXU2T549gYYyJe/POeHcd+8rpJFmRwqysgpAYRIKoN9i4ISySZTRybrRb38k6kPj14mb8RRD+CyyWY10tpgzlnaMKGLj3OF0davLynyc/0VvurZ07zcC9gQcxvhyu5LWDWj44LzfQqxwrB7MFi77VD5jJ56zWT6DFc4ABkq8fjwG2/P/GdGvHMjLsQNt+A2pWLTJBjDie/YbBg7JqIUtGFL02Oq6+rW8D7shPcNXkKixIGUC6cbQOYWGphxp4s8s9dbH+M7wRGFysR+RGyyVnrk2o9LUYTgTY8DSNqpH2m82h2eBwYIr5HYLW0djwe1vLWZWL6N1NazpLjjlc3jXc7l3vTRC3bCkWb3sLUvbz4ixodQpfEG806BZ3/7s66bSGvB4NROiVNw7DTZfCeYQBdunaNOaeHsOD2aeZF7P54cOCyh/LO7u5A34fnSDGp162awn8BAi8tSRMtahuLwg6NwVEwU4Em48+g8+TZ1jFsk6lAHQZaVNgkHtLBW22OROatVXCey5DR+YtETlG0r5svSmLjt63NqZy7kDtB9TlkRXeREOo2S5EYSrJJe6SQPxN0shRffNHc2C+EvcV4v6uwfPlzjlgAA=",
+    "color": "rgb(248 248 248)"
    }
   },
   "video": {
@@ -5789,10 +5992,28 @@
      "h": 0.0586
     }
    ]
-  }
+  },
+  "details": [
+   {
+    "name": "tickets",
+    "label": "Four ticket tiers, priced and compared",
+    "w": 1160,
+    "h": 1000,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/great-lakes-cigar-festival/detail-tickets-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/great-lakes-cigar-festival/detail-tickets-960.webp"
+     }
+    ]
+   }
+  ]
  },
  "halden-medical": {
-  "title": "Halden Medical eCommerce case study — Mousa Batarseh (independent)",
+  "title": "Halden Medical eCommerce case study \u2014 Mousa Batarseh (independent)",
   "url": "https://lab.mousabatarseh.com/halden-medical/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -5960,7 +6181,7 @@
   }
  },
  "house-of-dank-demo": {
-  "title": "Marketing Ops Demo — Menu & Promotion Manager | Mousa Batarseh",
+  "title": "Marketing Ops Demo \u2014 Menu & Promotion Manager | Mousa Batarseh",
   "url": "https://hod-demo.mousabatarseh.com/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -6082,7 +6303,7 @@
   }
  },
  "jabal-amman-publishers": {
-  "title": "الصفحة الرئيسية - Jabal Amman Publishers - جبل عمان ناشرون",
+  "title": "\u0627\u0644\u0635\u0641\u062d\u0629 \u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629 - Jabal Amman Publishers - \u062c\u0628\u0644 \u0639\u0645\u0627\u0646 \u0646\u0627\u0634\u0631\u0648\u0646",
   "url": "https://japublishers.com/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -6289,7 +6510,7 @@
   }
  },
  "northgate-retail": {
-  "title": "Marketing Operations Walkthrough — Mousa Batarseh | Northgate Retail Group",
+  "title": "Marketing Operations Walkthrough \u2014 Mousa Batarseh | Northgate Retail Group",
   "url": "https://lab.mousabatarseh.com/northgate-group/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -6583,7 +6804,7 @@
   }
  },
  "proposal-bran": {
-  "title": "Bran Marketing · Web Department Proposal by Mousa Batarseh",
+  "title": "Bran Marketing \u00b7 Web Department Proposal by Mousa Batarseh",
   "url": "https://mousabatarseh.com/bran-proposal/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -6688,7 +6909,7 @@
   }
  },
  "proposal-gardner-white": {
-  "title": "Same-Day Answers · A web-orders desk for Gardner-White · Mousa Batarseh",
+  "title": "Same-Day Answers \u00b7 A web-orders desk for Gardner-White \u00b7 Mousa Batarseh",
   "url": "https://mousabatarseh.com/gardner-white-proposal/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -6785,7 +7006,7 @@
   }
  },
  "proposal-rmc": {
-  "title": "Recovery Movement Consulting · Website Proposal by Mousa Batarseh",
+  "title": "Recovery Movement Consulting \u00b7 Website Proposal by Mousa Batarseh",
   "url": "https://mousabatarseh.com/rmc-proposal/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -7179,7 +7400,7 @@
   }
  },
  "ptee-courses": {
-  "title": "PTEE | التعليم اللاهوتي بالامتداد",
+  "title": "PTEE | \u0627\u0644\u062a\u0639\u0644\u064a\u0645 \u0627\u0644\u0644\u0627\u0647\u0648\u062a\u064a \u0628\u0627\u0644\u0627\u0645\u062a\u062f\u0627\u062f",
   "url": "https://ptee.moseswebworks.com/courses/ar",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -7305,9 +7526,9 @@
   }
  },
  "ptee-online": {
-  "title": "الصفحة الرئيسية | PTEE",
+  "title": "\u0627\u0644\u0635\u0641\u062d\u0629 \u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629 | PTEE",
   "url": "https://ptee.online/",
-  "capturedAt": "2026-09-26T14:14:25.275Z",
+  "capturedAt": "2026-09-26T15:00:54.355Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -7582,9 +7803,9 @@
   }
  },
  "ptee-renewal": {
-  "title": "PTEE | التعليم اللاهوتي بالامتداد",
+  "title": "PTEE | \u0627\u0644\u062a\u0639\u0644\u064a\u0645 \u0627\u0644\u0644\u0627\u0647\u0648\u062a\u064a \u0628\u0627\u0644\u0627\u0645\u062a\u062f\u0627\u062f",
   "url": "https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/",
-  "capturedAt": "2026-09-26T14:14:29.214Z",
+  "capturedAt": "2026-09-26T15:00:53.647Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -7688,6 +7909,23 @@
     ],
     "lqip": "data:image/webp;base64,UklGRjIBAABXRUJQVlA4ICYBAAAwBwCdASoYADQAPu1kq0+ppSOiMBgIATAdiWUAv7APQwnJbv4DtDtEokrYuoP74C1FcBtMQDVscs7DpsFAIN4L6UAA/vA5xtF1K7RKGL093hlGL+kO9tx2migiohB05FkZcDAAzTMR8qhkL3XECT6Afc/nFjW9Mkwodp/4wdK+agLXFc1RDCK2KC54cSV0E9Yh7M+mnx+cByIQS8z7062gvad6pSptY4osC6VStP0h0fQOX5IfcbahB+DK459dlkTpowSyIf1/00kNrN+rT1FduR+ZBz2N2p8ST6g21zXeOtwkJDfIqaRu4geQON+OPe6gOUUZpsJY/4X49o1DCe6is6kvvA8iScHCYN4YRzsnOl3DTyx0bd64j/h+RRp0mPvaWEAAAAA=",
     "color": "rgb(248 248 248)"
+   },
+   "mobile-full": {
+    "w": 780,
+    "h": 16000,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/ptee-renewal/mobile-full-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/ptee-renewal/mobile-full-780.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRkoHAABXRUJQVlA4ID4HAAAQIwCdASoYAOwBPu1qrlMppSQipTM8cTAdiWVsD4tUrHyMWVnw/uAi/mrRVkLuphwfxjmBYNeDmk4aT/ugQ+97euGn38MAacN87hPYeqJwn9GFMLn03HusMxxV+GYGcQmJA+K6Z6gHjuAx3rSx6aBVcQaJuCkJXtwWwhbbZeRN/m07a+ufir1ZfTw+PiWdPQ4J1THwc5mMCOFAOHLIeVeJq9kjEGCnvV3LwGMEWa+8So2tMGQEc+wBXPsUBMqS54YThmSLbOfoQI2ujZVuxwwBoQMpFm5Qb+OisRsNsB2IyJXSB8MWjCQI4mIFg587fX210dFZw77L/AdUF9xjsQB/zt3HBLVBE52fvJXoDq8nMlCoQNP/IoBW1rkKbfBwLYrAAP7yIjRzZ1ssJlP2bA9Jy9qgmvw8XUomEa51kpHvgrqLVuJL/5wDcV4wFttEz97vXW7jKICpNq/9GDsyVvt9S32ITnPr7BkHK7V83TNq7YF2R+78uBBzFK84aqr/ta9zz5LaAoqiXw1dczyi4rX6D8e+EFTSwVnC4e+VNP7lMaFiOeh0t8o5Rrgp5gTH7cmHcsYeQ7+tGMoQ1U1s1WCorcMcWuGXNTal67dVcR04ygOXzMkOuOQz7MQ7ZnqFpu82IRJHiIMzpjgceCvfLv4UpNnIzDcaupXvU+6+jJ3NsoyDuXO12DNOxI3c2t/WRBaJ7P1QCIpg/u6AIDg8F9+N5KWRNdzO5PDX7xjTp7177xDa/x8muG0KhtzGGtl9l7XSMCd1PQIxNw2Z3ul/2KPM6+httZ/AXnwklrBDTQ//xBUEQTDLualoCY2n1Yvp9tEhKrPFLxtIQtwjNklz4lYNYOTb3wzW9sfkrbE90TuI/thzldN7NbXdkIRMzm6TmbOWPhFhqcyJ1pJHqMEPSOCJv8h0jzZh7bjq0pKnrvBNOed54HqPMYoC2k1GW0lh10phFCZtsACK8N09Y0poRy+jYGELP3lTGwLQp++Y2p7FcHO6VsYWv5kfk4bx4AFR/PIZukvV5MosX1gFLjmK0skh03q2Dl7M5SavWs+rq0n+uHWPkkYg6xGu1Ff7qqbd4cN2COhyIukNf3vUehO0em1NUt5zoOwDYLWTt+9f/TDu8zTrb1FG/vCOORu25ve3wvu5YX8adST88l/iaqXPOqaeEYxcP0stBDZi6nrBnzuSAbddYqTD8i8WHGC6RLPBC/h4Q6F8CdfayJhRvqel6uyylPvbOM2yiLgAmRjFuBC5ZllqgirCIXAIP49t+eRdvo7ZYr7QnoYFJmbC3CHQxHCg4dm46h4CUEL5WoFayR5G5lDvgfrx6BTJFOQD+QUkMiD9uSAaY3XesRPucJl97KF0+Xi0nTkS4ycV9jRXudmFCc8sW5u5y9qHv95mL2hQc4O8OvjR5G0O7sT/ezs/kWFG75ujP/M8nOczF3j3bCov2sdFOmk5zYA7d98GVfM4e9BDDkTqzoP3BeNSvz2XlkHgiH+qilMton+4vCtSGfhgC+6vnKReZPnNxLfVkxX5TY9fqydB8xm4pTuXndrhYFHGbgxCwOtymv3Y04E+FZZxn5W6ScBDXT1C8gTn8Y0dt7/FoZAzF1ZXh4zoO43I11c9M4P164K/HuniGdOgtpFkrGSIKxyNjNKxy76MON9VhkKryL4Myq3AiycJMBkwwwSuQj5qHt6EE5D0W4EenB3k5up+3xVVjyzxorDkK/nW5aOVMy8xRuS1H0j9TPwvgGk6i4bKe/XdxSWYbIbUqxo7ZeUnMckaZ2T7Y9Olvdt/3VR/x9evGdfxEIfBlAj5FNeIm7Mc5s0YVilvDNejpxMhDyGXLAkgoeoOmvjh4eqTPBRl9j6Y5M3ntZX343+mKMkJBBpR0cMwOLBriuJQFTcUFiyYxZX2JGEmrH2puZw2aWOUg9Zg8alwxhkfoIEsbNY8U32JwQXvoEfr6HWCNpbpRH8vh/meHKGUgSrV50xUua68R5CZpcztYDGg5CR2ojGyYeRRSlmaciSf7QKCeEl+XKnvLI1fEn8LokHShluAfuMAUJ+yc6r94wzxYBEOJE7+ZLq3iPtp7gZJf6xrD0gGgJ47rYlSy4PL9WlJ92O5o7hTUjDChJr3WEgC4JtAiWDiVDeRf0MVD1IrmP8AwcRJQ6RAdBwFrzc4m0yyt4nMEmkzbMJvFw96l3MdUB2Y59Inpik2G0YFwaMnJlpcrBRst866XuvSHmaJb4RP4lmZTL3ZzactNzyIxNh5O59R3NX5UqpN9cLa4bL/oel+G0t6xwJqRd8qN3G3SvbOYK/65RKEahlFOJ9CbglVXaksH104zved1vnwL3IpoT3e9QcrGBc2I4KpzCELwRtL/ebikt/t0x9ZucsS6ila+rQkUX1oBMiK7+lQZxGWDKextQ3rP/c/CUXsuxFdRy83aE7P+C3fZ1LcugJRqz3GjtOSaqD8sGkHxjRBZsw1gS0U4AA=",
+    "color": "rgb(248 248 248)"
    }
   },
   "video": {
@@ -7695,7 +7933,7 @@
    "poster": "/media/ptee-renewal/scroll-poster.webp",
    "w": 1280,
    "h": 800,
-   "seconds": 8.33,
+   "seconds": 8.32,
    "bytes": 785903
   },
   "outline": {
@@ -7786,12 +8024,34 @@
      "h": 0.4194
     }
    ]
-  }
+  },
+  "details": [
+   {
+    "name": "tiers",
+    "label": "Programme tiers in Arabic",
+    "w": 1440,
+    "h": 520,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/ptee-renewal/detail-tiers-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/ptee-renewal/detail-tiers-960.webp"
+     },
+     {
+      "w": 1440,
+      "src": "/media/ptee-renewal/detail-tiers-1440.webp"
+     }
+    ]
+   }
+  ]
  },
  "review-biotrust": {
-  "title": "BioTRUST — Relaunch Review",
+  "title": "BioTRUST \u2014 Relaunch Review",
   "url": "https://mousabatarseh.com/biotrust-review/",
-  "capturedAt": "2026-09-26T14:14:21.459Z",
+  "capturedAt": "2026-09-26T15:00:36.222Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -7996,9 +8256,9 @@
   }
  },
  "review-carhartt-reworked": {
-  "title": "Carhartt Reworked · Recommerce Merchandising Review · Mousa Batarseh",
+  "title": "Carhartt Reworked \u00b7 Recommerce Merchandising Review \u00b7 Mousa Batarseh",
   "url": "https://mousabatarseh.com/reworked-review/",
-  "capturedAt": "2026-09-26T14:14:21.459Z",
+  "capturedAt": "2026-09-26T15:00:36.222Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -8112,6 +8372,14 @@
    "seconds": 8.79,
    "bytes": 637741
   },
+  "interaction": {
+   "src": "/media/review-carhartt-reworked/interact.mp4",
+   "poster": "/media/review-carhartt-reworked/interact-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "seconds": 14.31,
+   "bytes": 1509588
+  },
   "outline": {
    "viewport": {
     "w": 1440,
@@ -8182,9 +8450,9 @@
   }
  },
  "review-hayhouse": {
-  "title": "Hay House Storefront Report — Mousa Batarseh",
+  "title": "Hay House Storefront Report \u2014 Mousa Batarseh",
   "url": "https://mousabatarseh.com/hayhouse-review/",
-  "capturedAt": "2026-09-26T14:14:21.459Z",
+  "capturedAt": "2026-09-26T15:00:36.222Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -8396,9 +8664,9 @@
   }
  },
  "review-jbtools": {
-  "title": "JB Tools — Product-Data Review",
+  "title": "JB Tools \u2014 Product-Data Review",
   "url": "https://mousabatarseh.com/jbtools-review/",
-  "capturedAt": "2026-09-26T14:14:21.459Z",
+  "capturedAt": "2026-09-26T15:00:36.222Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -8509,7 +8777,7 @@
    "poster": "/media/review-jbtools/scroll-poster.webp",
    "w": 1280,
    "h": 800,
-   "seconds": 7.61,
+   "seconds": 7.62,
    "bytes": 719606
   },
   "outline": {
@@ -8604,9 +8872,9 @@
   }
  },
  "review-oakwood": {
-  "title": "Oakwood Veneer — Species Sample Book",
+  "title": "Oakwood Veneer \u2014 Species Sample Book",
   "url": "https://mousabatarseh.com/oakwood-review/",
-  "capturedAt": "2026-09-26T14:14:21.459Z",
+  "capturedAt": "2026-09-26T15:00:36.222Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -8717,7 +8985,7 @@
    "poster": "/media/review-oakwood/scroll-poster.webp",
    "w": 1280,
    "h": 800,
-   "seconds": 7.56,
+   "seconds": 7.57,
    "bytes": 535982
   },
   "outline": {
@@ -8776,9 +9044,9 @@
   }
  },
  "review-vanguard": {
-  "title": "Vanguard — Field Review",
+  "title": "Vanguard \u2014 Field Review",
   "url": "https://mousabatarseh.com/vanguard-review/",
-  "capturedAt": "2026-09-26T14:14:21.459Z",
+  "capturedAt": "2026-09-26T15:00:36.222Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -8948,7 +9216,7 @@
   }
  },
  "reviews-index": {
-  "title": "Website Reviews · Mousa Batarseh",
+  "title": "Website Reviews \u00b7 Mousa Batarseh",
   "url": "https://mousabatarseh.com/reviews/",
   "capturedAt": "2026-09-26T14:14:21.459Z",
   "views": {
@@ -9123,7 +9391,7 @@
   }
  },
  "samona-hospitality": {
-  "title": "SHG – Samona Hospitality Group",
+  "title": "SHG \u2013 Samona Hospitality Group",
   "url": "https://the-shg.com/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -9250,7 +9518,7 @@
  "seo-tools": {
   "title": "Free SEO Tools in Your Browser | Mousa Batarseh",
   "url": "https://mousabatarseh.com/SEO-Tools/",
-  "capturedAt": "2026-09-26T14:14:18.227Z",
+  "capturedAt": "2026-09-26T15:00:47.878Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -9362,7 +9630,15 @@
    "w": 1280,
    "h": 800,
    "seconds": 7.54,
-   "bytes": 353736
+   "bytes": 352759
+  },
+  "interaction": {
+   "src": "/media/seo-tools/interact.mp4",
+   "poster": "/media/seo-tools/interact-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "seconds": 11.36,
+   "bytes": 365861
   },
   "outline": {
    "viewport": {
@@ -9502,7 +9778,7 @@
   }
  },
  "the-lab": {
-  "title": "The Lab — Mousa Batarseh",
+  "title": "The Lab \u2014 Mousa Batarseh",
   "url": "https://lab.mousabatarseh.com/",
   "capturedAt": "2026-09-26T14:14:25.275Z",
   "views": {
@@ -9592,9 +9868,9 @@
   }
  },
  "united-textile": {
-  "title": "United Textile Wholesale: Quality Wholesale Clothing in Detroit – UNITED TEXTILE WHOLESALE",
+  "title": "United Textile Wholesale: Quality Wholesale Clothing in Detroit \u2013 UNITED TEXTILE WHOLESALE",
   "url": "https://shopunitedtextile.com/",
-  "capturedAt": "2026-09-26T14:14:29.214Z",
+  "capturedAt": "2026-09-26T15:00:53.647Z",
   "views": {
    "desktop-hero": {
     "w": 2880,
@@ -9647,6 +9923,23 @@
     "color": "rgb(248 248 248)",
     "ghostA": "/media/united-textile/desktop-hero-ghost-a.webp",
     "ghostB": "/media/united-textile/desktop-hero-ghost-b.webp"
+   },
+   "desktop-full": {
+    "w": 1440,
+    "h": 4230,
+    "webp": [
+     {
+      "w": 720,
+      "src": "/media/united-textile/desktop-full-720.webp"
+     },
+     {
+      "w": 1440,
+      "src": "/media/united-textile/desktop-full-1440.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRhoCAABXRUJQVlA4IA4CAABQCQCdASoYAEYAPu1iqU6ppSOiLNv8ATAdiUAYMoHLs2TWVe7eMTn4fvSb9UHT6G4TseSYvBSaxZqxBORbWiIOtYdXFxowp6yNLvXIy+E/XV/kwAD+7cohlRGdz6RdchR5pwNCONH0hTUWemvm+yYkJ2a04di/Rf7vl3y4fdC2Rw8hDEnERVOEnt2esFUNBZKcaQFzjOzIprUV9VorgLGit86OWjOnuo+2O3X97jeL0h6vLsIklGOyqOL1gcSr7K6pmUoag6VlLeUTZJfOeZPPocU9eV2EitH2aZIYHeFRxSulwFdN99MRUN00bcHkmHtON7Kw1GDkG/EsRhxDejTLvcn7RWMxCzjDPcviwN01747fJB7mEbeN3Gd6IsfDSHVbeurZAH0EQ7YkB/H9/H3b7cojqygs9MuuPjmfcXy2C3Mbs9M08oPdv+CfMAVyZV8e3e3AvvXvnPN3MdqTNvptqLOJjv7wYQTAG0abth1lpYnB6qfNUOJqCNRylexvGt1P4nL/b1KfBRjqfnz1LHZ1UpKUQ8DcMHoeOU+P+z6RLUbpt65FdjAZMx9W1zC/vqPyC8iwombx/ALzjLQPwPKVqPw2yL1R5TCuI4spuEa073oC+ZdkOhpYZyxOKc4Brxghk4bUqExXSBXbCd5zL91TTXf2Ln7ecv3XudDZ9X7WX6RsEBFu9gl/vpuHUQAA",
+    "color": "rgb(248 248 248)"
    },
    "mobile-hero": {
     "w": 1170,
@@ -9705,7 +9998,7 @@
    "poster": "/media/united-textile/scroll-poster.webp",
    "w": 1280,
    "h": 800,
-   "seconds": 8.33,
+   "seconds": 8.31,
    "bytes": 911165
   },
   "outline": {
@@ -9976,7 +10269,37 @@
      "h": 0.0222
     }
    ]
-  }
+  },
+  "details": [
+   {
+    "name": "case-price",
+    "label": "Case price shown with the unit price on every card",
+    "w": 700,
+    "h": 640,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/united-textile/detail-case-price-480.webp"
+     }
+    ]
+   },
+   {
+    "name": "collections",
+    "label": "Collections organised the way retailers restock",
+    "w": 1320,
+    "h": 350,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/united-textile/detail-collections-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/united-textile/detail-collections-960.webp"
+     }
+    ]
+   }
+  ]
  },
  "universal-wholesale": {
   "title": "Home | U.W.I Universal Wholesalers INC.",
@@ -10354,7 +10677,25 @@
      "h": 0.0284
     }
    ]
-  }
+  },
+  "details": [
+   {
+    "name": "policy",
+    "label": "Order minimums and pickup rules, stated up front",
+    "w": 1160,
+    "h": 520,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/universal-wholesale/detail-policy-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/universal-wholesale/detail-policy-960.webp"
+     }
+    ]
+   }
+  ]
  },
  "wildbills-christmas": {
   "title": "Christmas Sale 2024 - Wild Bills Tobacco",

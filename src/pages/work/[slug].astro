@@ -6,7 +6,7 @@ import VideoPlate from '../../components/VideoPlate.astro';
 import StructurePlate from '../../components/StructurePlate.astro';
 import Mark from '../../components/Mark.astro';
 import { orderedCases, type CaseStudy } from '../../data/cases';
-import { media, view, capturedDate, domain } from '../../lib/media';
+import { media, view, capturedDate, domain, srcset } from '../../lib/media';
 import { SITE_URL, person } from '../../data/site';
 
 export function getStaticPaths() {
@@ -21,8 +21,10 @@ const date = capturedDate(c.media.hero);
 const full = view(c.media.full || '', 'desktop-full');
 const mobFull = view(c.media.mobile || '', 'mobile-full') || view(c.media.mobile || '', 'mobile-hero');
 const mobHero = view(c.media.mobile || c.media.hero, 'mobile-hero');
-const video = c.media.video ? media(c.media.video)?.video : undefined;
+const recs = c.media.video ? media(c.media.video) : undefined;
+const video = recs?.video || recs?.interaction;
 const hasOutline = !!m?.outline;
+const details = [c.media.hero, ...(c.media.more || []).map((x) => x.slug)].flatMap((sl) => media(sl)?.details || []);
 const nextHero = view(next.media.hero, 'desktop-hero');
 const group = c.group === 'systems' ? 'Systems' : 'Sites & stores';
 const description = c.summary;
@@ -149,6 +151,26 @@ const jsonLd = [
       </section>
     )}
 
+    <!-- C4b · Details: the work at reading distance -->
+    {details.length > 0 && (
+      <section class="case__details section wrap" aria-labelledby="details-title">
+        <h2 class="slug case__label" id="details-title">Details, at reading distance</h2>
+        <ol class="details" role="list">
+          {details.map((d, n) => (
+            <li class:list={['detail', { 'detail--wide': d.w / d.h > 2.2 }]}>
+              <figure>
+                <div class="detail__frame crop" style={`aspect-ratio: ${d.w} / ${d.h}`} data-plate data-part-host>
+                  <img class="plate__img" srcset={srcset(d.webp)} src={d.webp[d.webp.length - 1].src} sizes="(min-width: 1024px) 45vw, 92vw" alt={`${c.title} — detail: ${d.label}`} width={d.w} height={d.h} loading="lazy" decoding="async" />
+                  <span class="crop__b" aria-hidden="true"></span>
+                </div>
+                <figcaption class="detail__cap"><span class="slug num">{String(n + 1).padStart(2, '0')}</span><span>{d.label}</span></figcaption>
+              </figure>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
     <!-- C5 · The whole page, read top to bottom -->
     {(full || mobFull) && (
       <section class="case__read section" aria-labelledby="read-title">
@@ -182,8 +204,11 @@ const jsonLd = [
     <!-- C6 · A real session -->
     {video && c.media.video && (
       <section class="case__rec section section--tight wrap" aria-labelledby="rec-title">
-        <h2 class="slug case__label" id="rec-title">A real session</h2>
-        <VideoPlate slug={c.media.video} label={`Screen recording of ${c.title} being scrolled in a real browser`} />
+        <h2 class="slug case__label" id="rec-title">{recs?.interaction ? 'In use' : 'A real session'}</h2>
+        <div class:list={['recs', { 'recs--two': recs?.interaction && recs?.video }]}>
+          {recs?.interaction && <VideoPlate slug={c.media.video} kind="interact" label={`Screen recording of ${c.title} in use: ${c.media.shows || 'a real interaction'}`} caption={c.media.shows} />}
+          {recs?.video && <VideoPlate slug={c.media.video} kind="scroll" label={`Screen recording of ${c.title} being scrolled in a real browser`} />}
+        </div>
       </section>
     )}
 
@@ -250,7 +275,7 @@ const jsonLd = [
 
 <style>
   .case__hero { padding-top: calc(var(--nav-h) + var(--s-8)); display: grid; gap: var(--s-5); }
-  .case__crumbs a { border: 0; text-decoration: underline; text-underline-offset: 3px; }
+  .case__crumbs a { border: 0; text-decoration: underline; text-underline-offset: 3px; display: inline-flex; align-items: center; min-height: 32px; min-width: 32px; }
   .case__title {
     font-family: var(--font-display);
     font-size: clamp(3rem, 9.5vw, 10rem);
@@ -318,6 +343,17 @@ const jsonLd = [
   .feature__title { font-family: var(--font-display); font-weight: 760; font-stretch: 106%; font-size: var(--t-h3); line-height: 1.1; }
   .feature__text { color: var(--fg-2); max-width: 40ch; }
 
+  .details { display: grid; gap: var(--s-8) var(--gutter); }
+  .detail__frame { position: relative; overflow: visible; background: var(--paper-2); }
+  .detail__frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .detail__cap { display: flex; gap: var(--s-3); align-items: baseline; margin-top: var(--s-4); max-width: 44ch; font-weight: 520; }
+  .detail__cap .slug { color: var(--sheet-text); }
+  @media (min-width: 1024px) {
+    .details { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .detail { grid-column: span 6; }
+    .detail--wide { grid-column: 2 / span 10; }
+    .detail:nth-child(odd):not(.detail--wide) { margin-top: var(--s-8); }
+  }
   .case__read-grid { display: grid; gap: var(--s-6); align-items: start; }
   .case__read-note { color: var(--fg-2); max-width: 36ch; }
   .sframe { position: relative; height: min(78vh, 760px); overflow-y: auto; overflow-x: hidden; background: var(--paper-2); overscroll-behavior: contain; }
@@ -326,6 +362,8 @@ const jsonLd = [
   .sframe__inner :global(img) { width: 100%; height: auto; }
   .sframe-fig figcaption { margin-top: var(--s-3); }
 
+  .recs { display: grid; gap: var(--s-7) var(--gutter); }
+  @media (min-width: 1024px) { .recs--two { grid-template-columns: 1.35fr 1fr; align-items: start; } }
   .receipts { display: grid; gap: var(--s-6) var(--gutter); margin-block: var(--s-7); }
   .receipt { border-top: 1px solid var(--fg); padding-top: var(--s-4); }
   .receipt__num { font-family: var(--font-display); font-weight: 840; font-size: clamp(3rem, 7vw, 6.5rem); line-height: 1; letter-spacing: -0.04em; font-stretch: 96%; white-space: nowrap; }

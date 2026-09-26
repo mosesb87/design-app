@@ -26,6 +26,7 @@ export type MediaEntry = {
   capturedAt: string | null;
   views: Partial<Record<'desktop-hero' | 'desktop-full' | 'mobile-hero' | 'mobile-full' | 'tablet-hero', View>>;
   video?: { src: string; poster: string | null; w: number; h: number; seconds: number | null; bytes: number };
+  interaction?: { src: string; poster: string | null; w: number; h: number; seconds: number | null; bytes: number };
   outline?: Outline;
   details?: Detail[];
 };

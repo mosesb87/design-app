@@ -31,6 +31,16 @@ export default function rack([section]: HTMLElement[], env: Env) {
     });
     // Promises widen as their card centres.
     const promises = cards.map((c) => c.querySelector<HTMLElement>('[data-promise]')!);
+    // Reserve each promise's height at its widest setting, so re-wrapping never moves the text below it.
+    const reserve = () => promises.forEach((p) => {
+      p.style.minHeight = '';
+      const prev = p.style.fontStretch;
+      p.style.fontStretch = '112%';
+      p.style.minHeight = `${p.offsetHeight}px`;
+      p.style.fontStretch = prev;
+    });
+    reserve();
+    addEventListener('resize', reserve);
     const centre = () => {
       const mid = innerWidth / 2;
       cards.forEach((c, i) => {

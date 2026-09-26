@@ -7,6 +7,7 @@ import Footer from '../components/Footer.astro';
 import ContactFinale from '../components/ContactFinale.astro';
 import hubotUrl from '../fonts/hubot-sans-display.woff2?url';
 import monaUrl from '../fonts/mona-sans-text.woff2?url';
+import azeretUrl from '../fonts/azeret-mono.woff2?url';
 import { person, SITE_URL } from '../data/site';
 import { entryCount } from '../data/work';
 
@@ -66,6 +67,7 @@ const graph = {
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preload" href={hubotUrl} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={monaUrl} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={azeretUrl} as="font" type="font/woff2" crossorigin />
 
     <meta property="og:type" content={type} />
     <meta property="og:site_name" content={person.name} />

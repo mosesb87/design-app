@@ -1,1 +1,122 @@
-[]
+[
+ {
+  "slug": "united-textile",
+  "from": "desktop-full",
+  "name": "case-price",
+  "rect": [
+   60,
+   1540,
+   700,
+   640
+  ],
+  "label": "Case price shown with the unit price on every card"
+ },
+ {
+  "slug": "united-textile",
+  "from": "desktop-full",
+  "name": "collections",
+  "rect": [
+   60,
+   1060,
+   1320,
+   350
+  ],
+  "label": "Collections organised the way retailers restock"
+ },
+ {
+  "slug": "firefly-burgers",
+  "from": "desktop-full",
+  "name": "menu",
+  "rect": [
+   170,
+   950,
+   1100,
+   700
+  ],
+  "label": "The signature menu, readable at a glance"
+ },
+ {
+  "slug": "firefly-burgers",
+  "from": "desktop-full",
+  "name": "cheese",
+  "rect": [
+   140,
+   1760,
+   1140,
+   580
+  ],
+  "label": "Each signature feature gets its own section"
+ },
+ {
+  "slug": "firefly-burgers",
+  "from": "desktop-full",
+  "name": "location",
+  "rect": [
+   0,
+   5110,
+   1440,
+   520
+  ],
+  "label": "Address and directions, one tap away"
+ },
+ {
+  "slug": "eat-with-samar",
+  "from": "desktop-full",
+  "name": "method",
+  "rect": [
+   170,
+   1800,
+   1100,
+   900
+  ],
+  "label": "Her method, explained in three moves"
+ },
+ {
+  "slug": "eat-with-samar",
+  "from": "desktop-full",
+  "name": "services",
+  "rect": [
+   170,
+   2830,
+   1100,
+   720
+  ],
+  "label": "Four ways families work with her"
+ },
+ {
+  "slug": "great-lakes-cigar-festival",
+  "from": "desktop-full",
+  "name": "tickets",
+  "rect": [
+   140,
+   1900,
+   1160,
+   1000
+  ],
+  "label": "Four ticket tiers, priced and compared"
+ },
+ {
+  "slug": "ptee-renewal",
+  "from": "desktop-full",
+  "name": "tiers",
+  "rect": [
+   0,
+   2150,
+   1440,
+   520
+  ],
+  "label": "Programme tiers in Arabic"
+ },
+ {
+  "slug": "universal-wholesale",
+  "from": "desktop-full",
+  "name": "policy",
+  "rect": [
+   140,
+   640,
+   1160,
+   520
+  ],
+  "label": "Order minimums and pickup rules, stated up front"
+ }
+]

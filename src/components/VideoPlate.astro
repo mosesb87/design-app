@@ -1,10 +1,11 @@
 ---
 // A real recording in crop marks. Plays only while it is the most visible video; posters + a control otherwise.
 import { media } from '../lib/media';
-interface Props { slug: string; label: string; caption?: string; class?: string }
-const { slug, label, caption, class: cls = '' } = Astro.props;
+interface Props { slug: string; label: string; caption?: string; class?: string; kind?: 'scroll' | 'interact' | 'best' }
+const { slug, label, caption, class: cls = '', kind = 'best' } = Astro.props;
 const m = media(slug);
-const v = m?.video;
+const v = kind === 'scroll' ? m?.video : kind === 'interact' ? m?.interaction : m?.interaction || m?.video;
+const isInteraction = !!v && v === m?.interaction;
 const secs = v?.seconds ? `${Math.round(v.seconds)} s` : null;
 ---
 {v && (
@@ -30,7 +31,7 @@ const secs = v?.seconds ? `${Math.round(v.seconds)} s` : null;
     <figcaption class="slug slug-list vplate__cap">
       <span>Recorded {m?.capturedAt?.slice(0, 10)}</span>
       {secs && <span>{secs}</span>}
-      <span>Real session, muted</span>
+      <span>{isInteraction ? 'Real interaction, muted' : 'Real session, scrolled, muted'}</span>
       {caption && <span>{caption}</span>}
     </figcaption>
   </figure>

@@ -1,6 +1,8 @@
 ---
 // S6 — Counted, not claimed. Six reviews, each led by its number (true value in the HTML).
 import Plate from '../Plate.astro';
+import VideoPlate from '../VideoPlate.astro';
+import { media } from '../../lib/media';
 import { reviews, reviewsIndexUrl, formatDate } from '../../data/site';
 ---
 <section class="counted section" id="reviews" aria-labelledby="counted-title">
@@ -26,7 +28,11 @@ import { reviews, reviewsIndexUrl, formatDate } from '../../data/site';
             <a class="link-arrow review__link" href={r.url} rel="noopener">Read the review <span class="visually-hidden">of {r.title}</span><span class="arrow" aria-hidden="true">↗</span></a>
           </div>
           <div class="review__plate">
-            <Plate slug={r.media} alt={`The ${r.title} review page`} title={r.title} url={r.url} caption={false} sizes="(min-width: 1024px) 22vw, 90vw" aspect="16 / 10" />
+            {media(r.media)?.interaction ? (
+              <VideoPlate slug={r.media} kind="interact" label={`Screen recording of the fix built for the ${r.title} review`} caption="The fix, in use" />
+            ) : (
+              <Plate slug={r.media} alt={`The ${r.title} review page`} title={r.title} url={r.url} caption={false} sizes="(min-width: 1024px) 22vw, 90vw" aspect="16 / 10" />
+            )}
           </div>
         </li>
       ))}

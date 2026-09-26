@@ -38,25 +38,34 @@ export default function reveals(_: HTMLElement[], env: Env) {
   if (env.reduced) return;
 
   // 1 · Lines rise through masks (once), then the split is reverted so the DOM is clean text again.
-  document.querySelectorAll<HTMLElement>('[data-reveal="lines"]').forEach((el) => {
-    SplitText.create(el, {
-      type: 'lines',
-      mask: 'lines',
-      aria: 'auto',
-      autoSplit: true,
-      linesClass: 'split-line',
-      onSplit(self) {
-        return gsap.from(self.lines, {
-          yPercent: 108,
-          duration: dur.line,
-          ease: ease.register,
-          stagger: stagger.lines,
-          scrollTrigger: { trigger: el, start: revealStart, once: true },
-          onComplete: () => self.revert(),
-        });
-      },
+  // Split only once the web fonts are in, so line breaks (and the block's height) match the final text.
+  const splitLines = () => document.querySelectorAll<HTMLElement>('[data-reveal="lines"]').forEach((host) => {
+    // Lock the block's height while its lines are split, so the reveal can never move the layout (CLS 0).
+    const targets = host.children.length && [...host.children].every((c) => c.tagName === 'P') ? ([...host.children] as HTMLElement[]) : [host];
+    const lock = () => { host.style.height = `${host.offsetHeight}px`; };
+    const unlock = () => { host.style.height = ''; };
+    lock();
+    let pending = targets.length;
+    targets.forEach((el) => {
+      SplitText.create(el, {
+        type: 'lines',
+        mask: 'lines',
+        aria: 'auto',
+        linesClass: 'split-line',
+        onSplit(self) {
+          return gsap.from(self.lines, {
+            yPercent: 108,
+            duration: dur.line,
+            ease: ease.register,
+            stagger: stagger.lines,
+            scrollTrigger: { trigger: host, start: revealStart, once: true },
+            onComplete: () => { self.revert(); if (--pending === 0) unlock(); },
+          });
+        },
+      });
     });
   });
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(splitLines);
 
   // 2 · Registration type on headings.
   document.querySelectorAll<HTMLElement>('.reg[data-register]').forEach((el) => {

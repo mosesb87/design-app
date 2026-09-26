@@ -28,8 +28,8 @@ import { media } from '../../lib/media';
             </p>
           </div>
           <div class="tool__media">
-            {media(t.media)?.video ? (
-              <VideoPlate slug={t.media} label={`Recording of ${t.name} in use`} />
+            {media(t.media)?.video || media(t.media)?.interaction ? (
+              <VideoPlate slug={t.media} label={`Recording of ${t.name} in use${t.shows ? ': ' + t.shows : ''}`} caption={media(t.media)?.interaction ? t.shows : undefined} />
             ) : (
               <Plate slug={t.media} alt={`${t.name} — screenshot`} title={t.name} url={t.live} sizes="(min-width: 1024px) 40vw, 86vw" />
             )}
@@ -42,7 +42,6 @@ import { media } from '../../lib/media';
 
 <style>
   .rack { background: var(--bg); color: var(--fg); padding-block: var(--section) calc(var(--section) * 0.8); overflow: clip; }
-  :global(.grounds-js) .rack { background: transparent; }
   .rack__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-8); }
   .rack__title { max-width: 16ch; }
   .rack__sub { color: var(--fg-2); max-width: 44ch; font-size: var(--t-lead); line-height: 1.35; }
