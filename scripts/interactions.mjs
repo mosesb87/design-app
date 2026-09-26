@@ -110,12 +110,15 @@ async function ctx(opts) {
   await tog.scrollIntoViewIfNeeded();
   await p.waitForTimeout(900);
   const h264 = await p.evaluate(() => document.createElement('video').canPlayType('video/mp4; codecs="avc1.42E01E"'));
+  const vstate = () => p.evaluate(() => { const v = document.querySelector('[data-video] video'); return v ? `paused=${v.paused} t=${v.currentTime.toFixed(1)} ready=${v.readyState}` : 'none'; });
   const before = await tog.getAttribute('aria-pressed');
+  const vBefore = await vstate();
   await tog.click();
   await p.waitForTimeout(1200);
   const after = await tog.getAttribute('aria-pressed');
+  const vAfter = await vstate();
   const src = await p.evaluate(() => document.querySelector('[data-video] video')?.currentSrc || document.querySelector('[data-video] video')?.src || '');
-  if (h264) check('Recording toggle flips play/pause state', before !== after, `${before} → ${after}`);
+  if (h264) check('Recording toggle flips play/pause state', before !== after, `${before} → ${after} (video ${vBefore} → ${vAfter})`);
   else check('Recording toggle loads the recording (this Chromium build has no H.264, so playback itself is checked in WebKit on Actions)', /\.mp4$/.test(src) && after === 'false', `src ${src.split('/').slice(-2).join('/')}, aria-pressed stays ${after}`);
 
   // Contact: mailto, tel, and copy to clipboard.

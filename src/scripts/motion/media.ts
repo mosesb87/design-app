@@ -27,7 +27,8 @@ export default function media(els: HTMLElement[], env: Env) {
     x.v.addEventListener('pause', () => setState(x, false));
     x.btn?.addEventListener('click', () => {
       loadSrc(x.v);
-      if (x.v.paused) {
+      // Decide from what the control shows, not video.paused (WebKit can report paused while an autoplay starts).
+      if (!x.wrap.classList.contains('is-playing')) {
         userPaused.delete(x.v);
         vids.forEach((o) => o.v !== x.v && o.v.pause());
         current = x.v;
@@ -36,6 +37,7 @@ export default function media(els: HTMLElement[], env: Env) {
         // A pause someone chose sticks until the recording has left the screen.
         userPaused.add(x.v);
         x.v.pause();
+        setState(x, false);
       }
     });
   });
