@@ -1,0 +1,45 @@
+firefox 142.0.1 — http://localhost:4321
+PASS  Skip link is the first Tab stop and becomes visible — {"text":"Skip to content","visible":true}
+PASS  Skip link moves focus to <main>
+PASS  Nav has links — Mousa Batarseh→/, Work 52→/work/, About→/about/, Reviews ↗→https://mousabatarseh.com/reviews/, Notes ↗→https://mousabatarseh.com/blog, Contact→#contact
+PASS  Nav "Mousa Batarseh" opens / — /
+PASS  Nav "Work 52" opens /work/ — /work/
+PASS  Nav "About" opens /about/ — /about/
+PASS  Nav "Reviews ↗" is an external link with rel=noopener — https://mousabatarseh.com/reviews/
+PASS  Nav "Notes ↗" is an external link with rel=noopener — https://mousabatarseh.com/blog
+PASS  Nav "Contact" scrolls to #contact
+PASS  Six featured case-study links on the home page — /work/united-textile/ /work/universal-wholesale/ /work/firefly-burgers/ /work/eat-with-samar/ /work/great-lakes-cigar-festival/ /work/ptee/
+PASS  Clicking a featured card image opens its case study (stretched link) — /work/united-textile/
+PASS  Filter "all" shows 52 rows — visible 52, aria-pressed true, status "52 entries shown"
+PASS  Filter "systems" shows 12 rows — visible 12, aria-pressed true, status "12 entries shown"
+PASS  Filter "case-studies" shows 6 rows — visible 6, aria-pressed true, status "6 entries shown"
+PASS  Filter "sites" shows 25 rows — visible 25, aria-pressed true, status "25 entries shown"
+PASS  Filter "reviews" shows 6 rows — visible 6, aria-pressed true, status "6 entries shown"
+PASS  Filter "proposals" shows 3 rows — visible 3, aria-pressed true, status "3 entries shown"
+PASS  All 11 internal links on /work/ return 200
+PASS  External links on /work/ carry rel=noopener
+PASS  Archive loupe opens on row hover — {"opacity":"1","visibility":"visible","clip":"none"}
+PASS  Case /work/asas-studio/: one h1, next → /work/changeatlas/
+PASS  Case /work/changeatlas/: one h1, next → /work/deals-os/
+PASS  Case /work/deals-os/: one h1, next → /work/csv-mapper/
+PASS  Case /work/csv-mapper/: one h1, next → /work/diamedical-lab/
+PASS  Case /work/diamedical-lab/: one h1, next → /work/united-textile/
+PASS  Case /work/united-textile/: one h1, next → /work/universal-wholesale/
+PASS  Case /work/universal-wholesale/: one h1, next → /work/firefly-burgers/
+PASS  Case /work/firefly-burgers/: one h1, next → /work/eat-with-samar/
+PASS  Case /work/eat-with-samar/: one h1, next → /work/great-lakes-cigar-festival/
+PASS  Case /work/great-lakes-cigar-festival/: one h1, next → /work/ptee/
+PASS  Case /work/ptee/: one h1, next → /work/asas-studio/
+PASS  Recording toggle flips play/pause state — true → false
+PASS  mailto link is the real address — mailto:hireme@mousabatarseh.com
+PASS  tel link present — tel:+12488101816
+PASS  Copy email answers (copied, or tells you to select the address) — "✓ Copied — checked"
+PASS  No page errors or console errors during the desktop run
+PASS  Unknown URL serves the designed 404 with status 404 — 404 "Out of register — Mousa Batarseh"
+PASS  Menu toggle is visible on a phone
+PASS  Menu opens (aria-expanded, visible, focus moves inside) — {"expanded":"true","hidden":false,"focusIn":true}
+PASS  Escape closes the menu and returns focus to the toggle — {"expanded":"false","focusOnToggle":true}
+PASS  Menu link "Work" navigates on tap — /work/
+PASS  Menu is closed on the new page
+
+42/42 passed
