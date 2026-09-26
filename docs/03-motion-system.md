@@ -1,5 +1,7 @@
 # Motion system
 
+> **Superseded on 2026-09-26** with the first direction. The current motion is described in [04-bright-and-playful.md](04-bright-and-playful.md#motion).
+
 One verb — **register** (offset → aligned) — and a small set of tokens. No one-off timings: every tween in `src/scripts/motion/` reads from `src/scripts/motion/tokens.ts`, which mirrors the CSS custom properties in `src/styles/tokens.css`.
 
 ## Tokens

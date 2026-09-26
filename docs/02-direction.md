@@ -1,5 +1,7 @@
 # Creative direction — "In Register"
 
+> **Superseded on 2026-09-26.** Mousa reviewed this direction on the preview and asked for something brighter, more playful and less like a document. The site now follows [04-bright-and-playful.md](04-bright-and-playful.md); this file is kept as the record of the first direction.
+
 ## The idea in one paragraph
 
 In print, a sharp image exists only when separate plates line up exactly. In commerce, a trustworthy store exists only when three layers line up: **the sheet** (what was asked — the brief, the supplier export, the deal sheet), **the register** (what the system holds — the catalog, the live price, the rules) and **the shelf** (what the customer sees — the page, the menu, the search result, the answer an AI engine quotes back). Mousa's work, in every discipline he practises, is keeping those three in register. The site is built from three plates and one verb: **align**.
