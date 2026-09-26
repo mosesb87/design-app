@@ -104,7 +104,7 @@
  {
   "slug": "asas",
   "project": "asas-studio",
-  "url": "https://asas.mousabatarseh.com/",
+  "url": "https://asas.build/",
   "group": "systems",
   "views": [
    "desktop-hero",
@@ -115,18 +115,20 @@
   "record": {
    "distance": 4.2,
    "dur": 9000
-  }
+  },
+  "dump": true
  },
  {
   "slug": "asas-studio-app",
   "project": "asas-studio",
-  "url": "https://asas.mousabatarseh.com/studio/",
+  "url": "https://asas.build/studio/",
   "group": "systems",
   "views": [
    "desktop-hero",
    "mobile-hero"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "changeatlas",
@@ -151,7 +153,12 @@
    "desktop-full",
    "mobile-hero"
   ],
-  "record": true
+  "record": true,
+  "keys": [
+   "Escape"
+  ],
+  "css": "[role=dialog], [aria-modal=true], div.fixed.inset-0 { display: none !important; }",
+  "dump": true
  },
  {
   "slug": "deals-os",
@@ -164,7 +171,8 @@
    "mobile-hero",
    "mobile-full"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "csv-mapper",
@@ -177,7 +185,8 @@
    "mobile-hero",
    "mobile-full"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "dealproof",
@@ -189,7 +198,8 @@
    "desktop-full",
    "mobile-hero"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "seo-tools",
@@ -201,7 +211,8 @@
    "desktop-full",
    "mobile-hero"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "diamedical-lab",
@@ -214,7 +225,8 @@
    "mobile-hero",
    "mobile-full"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "diamedical-intro",
@@ -237,7 +249,8 @@
    "desktop-full",
    "mobile-hero"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "review-oakwood",
@@ -249,7 +262,8 @@
    "desktop-full",
    "mobile-hero"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "review-vanguard",
@@ -261,7 +275,8 @@
    "desktop-full",
    "mobile-hero"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "review-jbtools",
@@ -273,7 +288,8 @@
    "desktop-full",
    "mobile-hero"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "review-hayhouse",
@@ -285,7 +301,8 @@
    "desktop-full",
    "mobile-hero"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "review-biotrust",
@@ -297,7 +314,8 @@
    "desktop-full",
    "mobile-hero"
   ],
-  "record": true
+  "record": true,
+  "dump": true
  },
  {
   "slug": "reviews-index",
@@ -383,16 +401,6 @@
   "slug": "full-house-wholesale",
   "project": "full-house-wholesale",
   "url": "https://www.fullhousewholesale.com/",
-  "group": "archive",
-  "views": [
-   "desktop-hero",
-   "mobile-hero"
-  ]
- },
- {
-  "slug": "ptee-org",
-  "project": "ptee-org",
-  "url": "https://ptee.org/",
   "group": "archive",
   "views": [
    "desktop-hero",
@@ -607,7 +615,11 @@
   "views": [
    "desktop-hero",
    "mobile-hero"
-  ]
+  ],
+  "keys": [
+   "Escape"
+  ],
+  "css": "[role=dialog], [aria-modal=true], div.fixed.inset-0 { display: none !important; }"
  },
  {
   "slug": "version-v1",

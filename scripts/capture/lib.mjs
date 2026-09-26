@@ -8,7 +8,7 @@ export const VIEWS = {
   'desktop-hero': { width: 1440, height: 900, dsf: 2, full: false, mobile: false },
   'desktop-full': { width: 1440, height: 900, dsf: 1, full: true, cap: 9000, mobile: false },
   'mobile-hero': { width: 390, height: 844, dsf: 3, full: false, mobile: true },
-  'mobile-full': { width: 390, height: 844, dsf: 2, full: true, cap: 12000, mobile: true },
+  'mobile-full': { width: 390, height: 844, dsf: 2, full: true, cap: 8000, mobile: true }, // 16,000px < WebP's 16,383 limit
   'tablet-hero': { width: 834, height: 1112, dsf: 2, full: false, mobile: true },
   record: { width: 1440, height: 900, dsf: 1, full: false, mobile: false },
 };
@@ -146,3 +146,37 @@ export async function outline(page) {
     };
   });
 }
+
+// Interactive controls and section headings with document coordinates — used to script interaction recordings.
+export async function controls(page) {
+  return page.evaluate(() => {
+    const vis = (el) => { const r = el.getBoundingClientRect(); const cs = getComputedStyle(el); return r.width > 4 && r.height > 4 && cs.visibility !== 'hidden' && cs.display !== 'none'; };
+    const sel = (el) => {
+      if (el.id) return '#' + CSS.escape(el.id);
+      const parts = [];
+      for (let n = el; n && n.nodeType === 1 && parts.length < 4; n = n.parentElement) {
+        let p = n.tagName.toLowerCase();
+        if (n.id) { parts.unshift('#' + CSS.escape(n.id)); break; }
+        const cls = [...n.classList].filter((c) => !/^(is-|has-|active|open|js-)/.test(c)).slice(0, 2);
+        if (cls.length) p += '.' + cls.map((c) => CSS.escape(c)).join('.');
+        const sib = n.parentElement ? [...n.parentElement.children].filter((c) => c.tagName === n.tagName) : [];
+        if (sib.length > 1) p += `:nth-of-type(${sib.indexOf(n) + 1})`;
+        parts.unshift(p);
+      }
+      return parts.join(' > ');
+    };
+    const items = [...document.querySelectorAll('button, a[href], [role=button], [role=tab], [role=switch], input, select, summary, label[for]')]
+      .filter(vis).slice(0, 500).map((el) => {
+        const r = el.getBoundingClientRect();
+        return {
+          tag: el.tagName.toLowerCase(), text: (el.innerText || el.value || '').trim().replace(/\s+/g, ' ').slice(0, 70),
+          aria: el.getAttribute('aria-label'), role: el.getAttribute('role'), type: el.getAttribute('type'),
+          href: el.tagName === 'A' ? el.getAttribute('href') : null, sel: sel(el),
+          x: Math.round(r.left), y: Math.round(r.top + scrollY), w: Math.round(r.width), h: Math.round(r.height),
+        };
+      });
+    const heads = [...document.querySelectorAll('h1, h2, h3')].filter(vis).slice(0, 80).map((h) => ({ tag: h.tagName.toLowerCase(), text: h.innerText.trim().replace(/\s+/g, ' ').slice(0, 90), y: Math.round(h.getBoundingClientRect().top + scrollY), sel: sel(h) }));
+    return { url: location.href, height: document.documentElement.scrollHeight, heads, items };
+  });
+}
+

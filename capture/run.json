@@ -1,6 +1,37 @@
 {
- "nonce": 1,
- "only": [],
- "skipExisting": false,
- "note": "Edit nonce (or only[]) and push to re-run the capture workflow."
+ "nonce": 2,
+ "only": [
+  "united-textile",
+  "firefly-burgers",
+  "eat-with-samar",
+  "great-lakes-cigar-festival",
+  "ptee-renewal",
+  "btee-build",
+  "asas",
+  "asas-studio-app",
+  "changeatlas",
+  "changeatlas-app",
+  "changeatlas-review-demo",
+  "deals-os",
+  "csv-mapper",
+  "dealproof",
+  "seo-tools",
+  "diamedical-lab",
+  "review-oakwood",
+  "review-vanguard",
+  "review-biotrust",
+  "review-carhartt-reworked",
+  "review-jbtools",
+  "review-hayhouse",
+  "ptee-online"
+ ],
+ "force": [
+  "asas",
+  "asas-studio-app",
+  "changeatlas-app",
+  "changeatlas-review-demo",
+  "ptee-online"
+ ],
+ "skipExisting": true,
+ "note": "Edit nonce (or only[]/force[]) and push to re-run the capture workflow."
 }

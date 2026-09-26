@@ -6,7 +6,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { chromium, devices } from 'playwright';
 import sharp from 'sharp';
-import { VIEWS, readJSON, writeJSON, sleep, launchArgs, settle, primeLazy, clearGates, outline } from './lib.mjs';
+import { VIEWS, readJSON, writeJSON, sleep, launchArgs, settle, primeLazy, clearGates, outline, controls } from './lib.mjs';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../..');
 const targetsFile = process.argv[2] || path.join(root, 'capture/targets.json');
@@ -16,7 +16,8 @@ const logFile = path.join(root, `capture/reports/capture-log${GROUP ? '-' + GROU
 const FFMPEG = process.env.FFMPEG || 'ffmpeg';
 const run = readJSON(path.join(root, 'capture/run.json'), {});
 const only = (process.env.ONLY || (run.only || []).join(',')).split(',').map((s) => s.trim()).filter(Boolean);
-const skipExisting = process.env.SKIP_EXISTING === '1' || run.skipExisting === true;
+const skipExistingAll = process.env.SKIP_EXISTING === '1' || run.skipExisting === true;
+const force = new Set(run.force || []);
 
 const targets = readJSON(targetsFile, []).filter((t) => (!only.length || only.includes(t.slug)) && (!GROUP || t.group === GROUP));
 const log = readJSON(logFile, {});
@@ -142,6 +143,7 @@ async function record(page, spec, dir) {
 }
 
 for (const t of targets) {
+  const skipExisting = skipExistingAll && !force.has(t.slug);
   const dir = path.join(outRoot, t.slug);
   fs.mkdirSync(dir, { recursive: true });
   const entry = { slug: t.slug, project: t.project, url: t.url, capturedAt: stamp, views: {}, notes: [] };
@@ -154,6 +156,7 @@ for (const t of targets) {
     try {
       const o = await open(page, t.url);
       if (!o.ok) { entry.views[view] = { ok: false, ...o }; console.log(`  ✗ ${view}: ${o.error || o.status}`); continue; }
+      for (const k of t.keys || []) { await page.keyboard.press(k).catch(() => {}); await sleep(500); }
       if (t.css) await page.addStyleTag({ content: t.css }).catch(() => {});
       if (v.full) await primeLazy(page, (v.cap || 12000) + 2000);
       if (t.scrollTo && !v.full) { await page.evaluate((y) => window.scrollTo(0, y), t.scrollTo); await settle(page, 900); }
@@ -179,6 +182,7 @@ for (const t of targets) {
     try {
       const o = await open(page, t.url);
       if (o.ok) {
+        for (const k of t.keys || []) { await page.keyboard.press(k).catch(() => {}); await sleep(500); }
         if (t.css) await page.addStyleTag({ content: t.css }).catch(() => {});
         entry.recording = await record(page, typeof t.record === 'object' ? t.record : {}, dir);
         console.log(`  ${entry.recording.ok ? '✓' : '✗'} recording ${JSON.stringify(entry.recording)}`);
@@ -188,6 +192,19 @@ for (const t of targets) {
     } finally {
       await context.close();
     }
+  }
+  if (t.dump && !(skipExisting && fs.existsSync(path.join(dir, 'controls.json')))) {
+    const { context, page } = await newPage('record');
+    try {
+      const o = await open(page, t.url);
+      if (o.ok) {
+        for (const k of t.keys || []) { await page.keyboard.press(k).catch(() => {}); await sleep(400); }
+        await primeLazy(page, 20000);
+        writeJSON(path.join(dir, 'controls.json'), await controls(page));
+        console.log('  ✓ controls dumped');
+      }
+    } catch (e) { console.log('  ✗ controls: ' + String(e.message || e).split('\n')[0]); }
+    finally { await context.close(); }
   }
   log[t.slug] = entry;
   writeJSON(logFile, log);
