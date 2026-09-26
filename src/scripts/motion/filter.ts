@@ -16,12 +16,13 @@ export default function filter([group]: HTMLElement[], env: Env) {
     const state = animate && !env.reduced ? Flip.getState(rows) : null;
     let shown = 0;
     rows.forEach((r) => {
-      const on = value === 'all' || r.dataset.cat === value;
+      const on = value === 'all' || (r.dataset.cat || '').split(' ').includes(value);
       r.hidden = !on;
       if (on) shown++;
     });
     buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filterValue === value)));
-    if (status) status.textContent = `${shown} ${shown === 1 ? 'entry' : 'entries'} shown`;
+    const [one, many] = (group.dataset.noun || 'entry,entries').split(',');
+    if (status) status.textContent = `${shown} ${shown === 1 ? one : many} shown`;
     if (state) Flip.from(state, { duration: 0.5, ease: ease.register, stagger: 0.012, onEnter: (els) => gsap.fromTo(els, { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: ease.register, stagger: 0.015 }), onLeave: (els) => gsap.to(els, { autoAlpha: 0, duration: 0.2 }), onComplete: () => ScrollTrigger.refresh() });
     else ScrollTrigger.refresh();
     const url = new URL(location.href);

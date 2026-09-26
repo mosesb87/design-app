@@ -1,0 +1,126 @@
+---
+// A blog post on this site: bright header, readable article, related posts. The article HTML was cleaned from
+// the original post by scripts/content/blog.mjs (safe tags only, local images, internal links).
+import Base from '../../layouts/Base.astro';
+import Sticker from '../../components/play/Sticker.astro';
+import { blogPosts, related, toneOf, dotOf, catKey, type Post } from '../../data/blog';
+import { formatDate, person, SITE_URL } from '../../data/site';
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+const { post } = Astro.props as { post: Post };
+const i = blogPosts.findIndex((p) => p.slug === post.slug);
+const newer = blogPosts[i - 1];
+const older = blogPosts[i + 1];
+const more = related(post);
+const tone = toneOf(post.categories[0]);
+const jsonLd = [
+  {
+    '@type': 'BlogPosting',
+    '@id': `${SITE_URL}/blog/${post.slug}/#post`,
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    ...(post.modified ? { dateModified: post.modified } : {}),
+    author: { '@id': `${SITE_URL}/#person` },
+    publisher: { '@id': `${SITE_URL}/#person` },
+    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}/`,
+    wordCount: post.words,
+    articleSection: post.categories,
+    ...(post.image ? { image: `${SITE_URL}${post.image.src}` } : {}),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog/` },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `${SITE_URL}/blog/${post.slug}/` },
+    ],
+  },
+];
+---
+<Base title={post.title} description={post.excerpt} path={`/blog/${post.slug}/`} og="default" type="article" jsonLd={jsonLd}>
+  <article class="post">
+    <header class="post__head" style={`--bg:${tone}`}>
+      <div class="wrap post__head-inner">
+        <nav class="post__crumbs" aria-label="Breadcrumb"><a href="/blog/">← All posts</a></nav>
+        <p class="post__cats">
+          {post.categories.map((c) => <a class="post__cat" href={`/blog/?filter=${catKey(c)}`} style={`--dot:${dotOf(c)}`}>{c}</a>)}
+        </p>
+        <h1 class="post__title">{post.title}</h1>
+        <p class="post__meta"><span>By {person.name}</span><span><time datetime={post.date}>{formatDate(post.date, 'long')}</time></span><span>{post.minutes} min read</span></p>
+        <span class="post__s" aria-hidden="true"><Sticker name={['lens', 'cell', 'tag', 'check', 'blocks', 'percent'][i % 6] as any} tilt={i % 2 ? 10 : -8} /></span>
+      </div>
+    </header>
+    {post.image && (
+      <figure class="wrap post__hero">
+        <img src={post.image.src} srcset={`${post.image.small} 800w, ${post.image.src} ${post.image.w}w`} sizes="(min-width: 1100px) 1000px, 92vw" width={post.image.w} height={post.image.h} alt={post.image.alt} fetchpriority="high" />
+      </figure>
+    )}
+    <div class="wrap">
+      <div class="post__body prose-play" set:html={post.html} />
+      <footer class="post__foot">
+        <div class="post__author">
+          <span class="post__avatar" aria-hidden="true"><i></i></span>
+          <p><strong>{person.name}</strong> builds and runs WordPress websites and e-commerce stores in {person.location}. <a href="/about/">More about me</a></p>
+        </div>
+        <nav class="post__pn" aria-label="More posts">
+          {older && <a class="pn pn--older" href={`/blog/${older.slug}/`}><span>← Older</span><b>{older.title}</b></a>}
+          {newer && <a class="pn pn--newer" href={`/blog/${newer.slug}/`}><span>Newer →</span><b>{newer.title}</b></a>}
+        </nav>
+      </footer>
+    </div>
+  </article>
+
+  {more.length > 0 && (
+    <section class="wrap post__more" aria-labelledby="more-title">
+      <h2 class="h2" id="more-title">Read next</h2>
+      <ul class="more" role="list">
+        {more.map((p) => (
+          <li class="more__card" style={`--bg:${toneOf(p.categories[0])}`}>
+            <p class="more__meta">{p.categories.join(' · ')} · {formatDate(p.date)}</p>
+            <h3 class="more__title"><a href={`/blog/${p.slug}/`}>{p.title}</a></h3>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+</Base>
+
+<style>
+  .post__head { background: var(--bg); color: var(--ink); padding-top: calc(var(--nav-h) + var(--s-8)); padding-bottom: var(--s-8); border-radius: 0 0 var(--r-xl) var(--r-xl); margin-inline: clamp(8px, 1.4vw, 24px); }
+  .post__head-inner { position: relative; display: grid; gap: var(--s-5); }
+  .post__crumbs a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.7); font-weight: 650; text-decoration: none; }
+  .post__cats { display: flex; flex-wrap: wrap; gap: 8px; }
+  .post__cat { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 12px; border-radius: var(--r-pill); background: #fff; font: 700 var(--t-label) / 1 var(--font-text); text-decoration: none; }
+  .post__cat::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--dot); }
+  .post__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(3rem, 7.2vw, 7.5rem); line-height: 0.88; text-wrap: balance; max-width: 16ch; }
+  .post__meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-weight: 600; }
+  .post__s { position: absolute; right: 0; top: -10px; width: clamp(80px, 12vw, 190px); pointer-events: none; }
+  .post__s :global(.sticker) { --size: 100%; width: 100%; }
+  .post__hero { margin-top: var(--s-7); }
+  .post__hero img { width: 100%; max-width: 1100px; margin-inline: auto; border-radius: var(--r-xl); box-shadow: var(--shadow-2); }
+  .post__body { margin: var(--s-8) auto 0; max-width: 68ch; }
+  .post__foot { max-width: 68ch; margin: var(--s-8) auto 0; display: grid; gap: var(--s-6); }
+  .post__author { display: flex; gap: var(--s-4); align-items: center; padding: 20px; border-radius: var(--r-l); background: var(--cloud); }
+  .post__author p { font-weight: 500; }
+  .post__avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; background: conic-gradient(from 200deg, #ff5a36, #ff4fa3, #a15cff, #5b3df5, #2e6bff, #19c7b8, #c5f03a, #ffc933, #ff5a36); display: grid; place-items: center; }
+  .post__avatar i { width: 20px; height: 20px; border-radius: 50%; background: #fff; }
+  .post__pn { display: grid; gap: 12px; }
+  .pn { display: grid; gap: 6px; padding: 18px 20px; border-radius: var(--r-l); background: var(--cloud); text-decoration: none; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
+  .pn:hover { background: var(--lime); transform: translateY(-3px); }
+  .pn span { font: 700 var(--t-slug) / 1 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); }
+  .pn b { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: 1.375rem; line-height: 1; text-transform: uppercase; }
+  .pn--newer { text-align: right; }
+  @media (min-width: 700px) { .post__pn { grid-template-columns: 1fr 1fr; } .pn--newer:only-child { grid-column: 2; } }
+  .post__more { padding-block: var(--s-10) var(--s-6); display: grid; gap: var(--s-6); }
+  .more { display: grid; gap: clamp(14px, 1.6vw, 24px); }
+  .more__card { position: relative; display: grid; gap: var(--s-4); padding: clamp(20px, 2.2vw, 30px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); min-height: 200px; align-content: space-between; transition: transform 0.5s var(--ease-pop); }
+  .more__card:hover { transform: translateY(-6px) rotate(-0.8deg); }
+  .more__meta { font: 700 var(--t-slug) / 1.4 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; }
+  .more__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.75rem, 2.4vw, 2.5rem); line-height: 0.95; text-transform: uppercase; }
+  .more__title a { text-decoration: none; }
+  .more__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  @media (min-width: 900px) { .more { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>

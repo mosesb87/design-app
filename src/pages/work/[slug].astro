@@ -256,7 +256,7 @@ const jsonLd = [
 
     <section class="case__links section section--tight wrap" aria-label="Links">
       <a class="btn" href={c.url} rel="noopener">Open the live {c.group === 'systems' ? 'tool' : 'site'} <span class="arrow" aria-hidden="true">↗</span></a>
-      {c.related?.map((r) => <a class="link-arrow" href={r.url} rel="noopener">Read: {r.title} <span class="arrow" aria-hidden="true">↗</span></a>)}
+      {c.related?.map((r) => <a class="link-arrow" href={r.url}>Read: {r.title} <span class="arrow" aria-hidden="true">→</span></a>)}
     </section>
 
     <!-- C9 · Next -->

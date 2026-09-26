@@ -1,9 +1,8 @@
 ---
 // "Fresh from the blog" — the latest posts, each opening its page on this site.
-import { posts, formatDate } from '../../data/site';
-const latest = posts.slice(0, 3);
-const slugOf = (url: string) => new URL(url).pathname.replace(/^\/|\/$/g, '');
-const tones = ['var(--lemon)', 'var(--sky)', 'var(--blush)'];
+import { formatDate } from '../../data/site';
+import { blogPosts, toneOf } from '../../data/blog';
+const latest = blogPosts.slice(0, 3);
 ---
 <section class="notes section" aria-labelledby="notes-title">
   <div class="wrap">
@@ -12,10 +11,10 @@ const tones = ['var(--lemon)', 'var(--sky)', 'var(--blush)'];
       <h2 class="h2" id="notes-title">Notes from<br />running stores.</h2>
     </header>
     <ul class="notes__grid" role="list">
-      {latest.map((p, i) => (
-        <li class="note" style={`--bg:${tones[i]}`}>
-          <p class="note__meta"><span>{p.topic}</span><span>{formatDate(p.date)}</span></p>
-          <h3 class="note__title"><a href={`/blog/${slugOf(p.url)}/`}>{p.title}</a></h3>
+      {latest.map((p) => (
+        <li class="note" style={`--bg:${toneOf(p.categories[0])}`}>
+          <p class="note__meta"><span>{p.categories.join(' · ')}</span><span>{formatDate(p.date)}</span><span>{p.minutes} min read</span></p>
+          <h3 class="note__title"><a href={`/blog/${p.slug}/`}>{p.title}</a></h3>
           <span class="note__arrow" aria-hidden="true">→</span>
         </li>
       ))}

@@ -266,7 +266,7 @@ export const cases: CaseStudy[] = [
       { label: 'Pricing', value: 'Case price with unit price' },
     ],
     metrics: [{ value: '~1,000', label: 'products migrated from an offline inventory system', source: `${WORKSITE}/resume/` }],
-    related: [{ title: 'Shopify or WooCommerce: The Questions That Actually Decide It', url: `${WORKSITE}/shopify-or-woocommerce-decision/` }],
+    related: [{ title: 'Shopify or WooCommerce: The Questions That Actually Decide It', url: '/blog/shopify-or-woocommerce-decision/' }],
   },
   {
     slug: 'universal-wholesale',
@@ -300,8 +300,8 @@ export const cases: CaseStudy[] = [
       { value: '11,000+', label: 'active items in the catalog', source: `${WORKSITE}/universal-wholesale/` },
     ],
     related: [
-      { title: 'Field Mapping Is the Whole Migration', url: `${WORKSITE}/product-catalog-migration-field-mapping/` },
-      { title: 'The SKU Is a Decision, Not a Label', url: `${WORKSITE}/sku-structure-product-catalog/` },
+      { title: 'Field Mapping Is the Whole Migration', url: '/blog/product-catalog-migration-field-mapping/' },
+      { title: 'The SKU Is a Decision, Not a Label', url: '/blog/sku-structure-product-catalog/' },
     ],
   },
   {
@@ -326,7 +326,7 @@ export const cases: CaseStudy[] = [
       { label: 'Priority', value: 'Mobile first' },
       { label: 'Location', value: 'Sterling Heights, Michigan' },
     ],
-    related: [{ title: 'Building a Menu Page the Client Can Actually Update', url: `${WORKSITE}/client-editable-restaurant-menu-wordpress/` }],
+    related: [{ title: 'Building a Menu Page the Client Can Actually Update', url: '/blog/client-editable-restaurant-menu-wordpress/' }],
   },
   {
     slug: 'eat-with-samar',
@@ -375,7 +375,7 @@ export const cases: CaseStudy[] = [
       { value: '287', label: 'users in GA4, July 4–31, 2025', source: V1, note: 'Date corrected to 2025 with Mousa' },
       { value: '1,954', label: 'events in GA4, July 4–31, 2025', source: V1, note: 'Date corrected to 2025 with Mousa' },
     ],
-    related: [{ title: 'Eleven Steps, and the Three Where Projects Actually Fail', url: `${WORKSITE}/web-project-workflow-failure-points/` }],
+    related: [{ title: 'Eleven Steps, and the Three Where Projects Actually Fail', url: '/blog/web-project-workflow-failure-points/' }],
   },
   {
     slug: 'ptee',
