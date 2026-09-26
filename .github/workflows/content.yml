@@ -1,0 +1,49 @@
+name: Fetch blog and review content
+
+on:
+  push:
+    branches: ['claude/determined-lamport-4blt8a']
+    paths: ['capture/content-run.json', '.github/workflows/content.yml', 'scripts/capture/content.mjs']
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: content-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install
+        run: |
+          npm install --prefix scripts/capture --no-audit --no-fund
+          npx --prefix scripts/capture playwright install --with-deps chromium
+          sudo apt-get install -y -qq fonts-noto-core fonts-noto-color-emoji >/dev/null
+      - name: Fetch
+        continue-on-error: true
+        run: node scripts/capture/content.mjs
+      - name: Commit
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          du -sh capture/content || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add capture/content
+          if git diff --cached --quiet; then echo "Nothing new"; exit 0; fi
+          git commit -m "Content: blog posts and reviews fetched for rebuilding as site pages [skip ci]"
+          for i in 1 2 3 4; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
