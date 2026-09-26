@@ -86,13 +86,14 @@ const { heading = person.contactLine } = Astro.props;
   }
   .finale__ledger {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-    gap: var(--s-5) var(--gutter);
+    /* Wide enough for the full email address and the LinkedIn handle without touching the next column. */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
+    gap: var(--s-5) max(var(--gutter), 24px);
     margin-top: var(--s-7);
   }
   .finale__ledger div { border-top: 1px solid var(--line); padding-top: var(--s-3); }
   .finale__ledger dt { color: var(--fg-2); margin-bottom: 6px; }
-  .finale__ledger dd { margin: 0; font-weight: 500; }
+  .finale__ledger dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
   .finale__ledger a { text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
   .finale__inner :global(.finale__mark) { position: absolute; right: var(--margin); top: 0; color: var(--fg); }
 </style>

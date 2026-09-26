@@ -222,6 +222,10 @@ import { person, layers } from '../../data/site';
     .card--sheet { transform: translateZ(200px); }
     .card--register { transform: translateZ(100px); }
   }
+  @media (min-width: 700px) and (max-width: 1023px) {
+    /* Tablets have room: a larger stage, so the scene isn't a small card in a big field. */
+    .stage { --w: min(62vw, 500px, 38svh * 1.6); }
+  }
   @media (max-width: 1023px) and (max-height: 820px) {
     /* Short phones: the raised plates would reach the title — sit the stack lower in its row. */
     :global(.motion-ok) .thesis__stage { translate: 0 min(40px, 5svh); }
