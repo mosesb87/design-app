@@ -1,0 +1,21 @@
+<div class="wrap">
+
+  <p class="crumb">Sec. 03 — The prototype</p>
+  <div class="sec-h"><span class="tag">INTERACTIVE</span><h2>The ten-day countdown</h2></div>
+  <p class="sec-sub">Owners and dependencies, day by day — the plan I'd run into launch and hand off cleanly while the Director of Operations is on leave. Mark a milestone done; anything whose dependencies aren't cleared stays locked.</p>
+  <div class="board">
+    <div class="board-top"><span class="title">Go-live</span><span class="lamp"><span class="cnt" id="done">0</span>&nbsp;/ 6 milestones cleared</span><div class="progline"><span id="state">Store closed</span><div class="progbar"><i id="bar" style="width: 0%;"></i></div></div></div>
+    <div class="days">
+<button class="day" aria-pressed="false" data-id="D-10" data-deps=""><div class="d">D-10</div><h3>Domain + SSL</h3><p>Connect aeditmedshop.com to Shopify, issue SSL</p><span class="own">Ops + DNS</span></button>
+<button class="day" aria-pressed="false" data-id="D-9" data-deps="D-10" disabled=""><div class="d">D-9</div><h3>Tracking in</h3><p>GA4 + GTM; Klaviyo welcome, abandonment, post-purchase flows</p><span class="own">Ops + Marketing</span><span class="lock" data-lock="">needs D-10</span></button>
+<button class="day" aria-pressed="false" data-id="D-7" data-deps=""><div class="d">D-7</div><h3>Catalog &amp; nav QA</h3><p>Listings, variants, collections, navigation, policies, shipping/tax</p><span class="own">Ops + Merch</span></button>
+<button class="day" aria-pressed="false" data-id="D-4" data-deps="D-9,D-7" disabled=""><div class="d">D-4</div><h3>Checkout rehearsal</h3><p>Test orders end to end; transactional emails; refund path</p><span class="own">Ops + Finance</span><span class="lock" data-lock="">needs D-9 + D-7</span></button>
+<button class="day" aria-pressed="false" data-id="D-2" data-deps="D-10,D-4" disabled=""><div class="d">D-2</div><h3>Repoint aedit.com</h3><p>Replace every myshopify link; redirect map; remove “coming soon”</p><span class="own">Ops + Web</span><span class="lock" data-lock="">needs D-10 + D-4</span></button>
+<button class="day" aria-pressed="false" data-id="D-0" data-deps="D-2" disabled=""><div class="d">D-0</div><h3>Launch + watch</h3><p>Open store, launch-day comms, first-day KPI watch</p><span class="own">All</span><span class="lock" data-lock="">needs D-2</span></button>
+    </div>
+  </div>
+  <p class="hint">Prototype — six milestones of the full runbook. Real timing depends on DNS propagation and internal approvals.</p>
+
+
+<div class="pagenav"><a href="https://mousabatarseh.com/aedit-review/cutover.html">← Cutover</a><a class="next" href="https://mousabatarseh.com/aedit-review/kpis.html">Next: Reporting →</a></div>
+</div>

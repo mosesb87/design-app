@@ -1,0 +1,58 @@
+<div class="wrap">
+
+  <p class="crumb">Sec. 02 — Findings</p>
+  <div class="sec-h"><span class="tag">HEAD TAGS</span><h2>Two fixes, as diffs</h2></div>
+  <p class="sec-sub">The two head-tag defects are one theme change each.</p>
+  <div class="code2">
+<pre class="was"><span class="cap">robots.txt.liquid — now</span>User-agent: *
+Disallow: /admin<b class="del">Disallow: /cart</b>
+Disallow: /account<b class="del">Disallow: /apple-app-site-association</b>
+Disallow: /checkout
+Sitemap: <b class="del">/sitemap.xml</b>
+<b class="del">Host:</b></pre>
+<pre class="now"><span class="cap">Patched</span>User-agent: *
+Disallow: /admin
+<b class="add">Disallow: /cart</b>
+Disallow: /account
+<b class="add">Disallow: /apple-app-site-association</b>
+Disallow: /checkout
+Sitemap: <b class="add">https://www.biotrust.com/sitemap.xml</b></pre>
+  </div>
+  <div class="code2" style="margin-top:16px">
+<pre class="was"><span class="cap">theme.liquid &lt;head&gt; — now</span>&lt;title&gt;{{ page_title }}&lt;/title&gt;
+<b class="del">&lt;title&gt;{{ page_title }}&lt;/title&gt;</b>
+&lt;link rel="canonical" href="{{ canonical_url }}"&gt;
+<b class="del">&lt;link rel="canonical" href="{{ canonical_url }}"&gt;</b>
+/* app + theme both inject one */</pre>
+<pre class="now"><span class="cap">Patched — single source</span>&lt;title&gt;{{ page_title }}&lt;/title&gt;
+&lt;link rel="canonical" href="{{ canonical_url }}"&gt;
+<b class="add">{% comment %} app-injected head tag removed;
+theme owns title + canonical {% endcomment %}</b></pre>
+  </div>
+  <p style="margin-top:14px"><span class="ev">Evidence: biotrust.com/robots.txt; duplicate title/canonical in homepage, /collections/featured-offers and PDP source, Sep 19, 2026</span></p>
+
+  <div class="sec-h" style="margin-top:48px"><span class="tag">CATALOG</span><h2>What the data says</h2></div>
+  <p class="sec-sub">From <span class="mono">/products.json</span> and the product page source.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Finding</th><th>Where</th><th>Impact</th><th>Severity</th></tr></thead>
+    <tbody>
+      <tr><td>Staging store live with <span class="mono">index, follow</span>, self-canonical</td><td class="num">staging.biotrust.com</td><td>117 duplicate products Google can index</td><td><span class="badge b">Blocker</span></td></tr>
+      <tr><td>Card shows $36.00 for variant 39263364251744</td><td class="num">homepage vs PDP</td><td>PDP and products.json say $49.00 — trust &amp; refund risk</td><td><span class="badge b">Blocker</span></td></tr>
+      <tr><td>Product JSON-LD fails strict parsing (raw newline)</td><td class="num">/products/…multi-collagen…</td><td>4.8 ★ / 3,869 reviews can't earn a rich result</td><td><span class="badge a">High</span></td></tr>
+      <tr><td>42 of 110 products at $0.00 (38 ebooks); five “copy-of” handles published</td><td class="num">/products.json</td><td>Thin, duplicate URLs in the index</td><td><span class="badge c">Medium</span></td></tr>
+      <tr><td>507 / 507 product images without alt text</td><td class="num">/products.json</td><td>Image search and accessibility</td><td><span class="badge c">Medium</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="sec-h" style="margin-top:48px"><span class="tag">APP STACK</span><h2>77 scripts, 13 hosts</h2></div>
+  <p class="sec-sub">One product page loads 77 script tags from 13 hosts — the most reliable lever on 8,560 ms of mobile blocking time. Keep/remove calls from a first pass:</p>
+  <div class="cards">
+    <div class="card"><span class="kicker a">Keep</span><h3>Core revenue</h3><p>Recharge (subscriptions) · Klaviyo (email/SMS) · Intelligems (testing) · NoFraud (fraud)</p></div>
+    <div class="card"><span class="kicker b">Consolidate</span><h3>Doing the same job twice</h3><p>Yotpo + Okendo (two review apps) · Triple Whale + Northbeam (two attribution tools)</p></div>
+    <div class="card"><span class="kicker c">Audit</span><h3>Check before keeping</h3><p>Gorgias ×2 loaders · Aftersell post-purchase — measure transfer + blocking time per script</p></div>
+  </div>
+  <p style="margin-top:14px"><span class="ev">Evidence: /products/biotrust-ageless-multi-collagen-protein-powder source + Lighthouse mobile, Sep 19, 2026</span></p>
+
+
+<div class="pagenav"><a href="https://mousabatarseh.com/biotrust-review/index.html">← Overview</a><a class="next" href="https://mousabatarseh.com/biotrust-review/preflight.html">Next: Pre-flight →</a></div>
+</div>

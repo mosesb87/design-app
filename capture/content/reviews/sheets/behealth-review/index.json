@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/behealth-review/",
+    "status": 200,
+    "title": "BeHealth Digital — Technical SEO Review",
+    "h1": "Your own site tells Google it lives somewhere else.",
+    "description": "Independent technical-SEO review of behealthdigital.com by Mousa Batarseh — every canonical points to a 404 staging host, no case studies, and a client audit. For the SEO Specialist role.",
+    "height": 1456
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/behealth-review/canonical.html",
+    "status": 200,
+    "title": "BeHealth Digital — The Canonical Bug",
+    "h1": "",
+    "description": "Interactive walk-through of where behealthdigital.com's canonical signals point, now vs fixed.",
+    "height": 1407
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/behealth-review/audit.html",
+    "status": 200,
+    "title": "BeHealth Digital — Horizon Recovery Audit",
+    "h1": "",
+    "description": "An interactive on-page audit of horizonrecovery.com — six of forty checks with fixes.",
+    "height": 1492
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/behealth-review/plan.html",
+    "status": 200,
+    "title": "BeHealth Digital — Proof Gap & 30 Days",
+    "h1": "",
+    "description": "The case-study proof gap and first-30-days plan for BeHealth Digital's SEO Specialist role.",
+    "height": 1726
+  }
+]

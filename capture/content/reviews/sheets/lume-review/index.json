@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/lume-review/",
+    "status": 200,
+    "title": "Lume — Promotion rollout review",
+    "h1": "What the deal says, and what the rule does",
+    "description": "Independent review of lume.com promotions: overlapping bundles priced above singles, a 20% deal configured at 25%, hero prices that don't match landing pages, and store hours that disagree across three sources.",
+    "height": 3099
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/lume-review/bundles.html",
+    "status": 200,
+    "title": "Lume — Bundle check",
+    "h1": "Is the deal a deal?",
+    "description": "A working check on lume.com deal data: is the bundle's per-unit price below the single price? Six live deals, computed from the page's own numbers.",
+    "height": 1956
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/lume-review/rollout.html",
+    "status": 200,
+    "title": "Lume — Rollout card",
+    "h1": "The card a store manager gets",
+    "description": "A store-execution card generated from one deal-sheet row, with the promotion checks that decide whether it prints.",
+    "height": 1927
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/lume-review/plan.html",
+    "status": 200,
+    "title": "Lume — 30-day plan",
+    "h1": "Truth, format, report",
+    "description": "Thirty days to a checked promotion rollout at Lume: truth, rollout format, weekly report.",
+    "height": 1251
+  }
+]

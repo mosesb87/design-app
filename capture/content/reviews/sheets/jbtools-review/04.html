@@ -1,0 +1,36 @@
+<div class="wrap">
+  <p class="crumb">Sec. 04 — Plan &amp; method</p>
+  <div class="sec-h"><span class="tag">SOLD-OUT</span><h2>Handling out-of-stock</h2></div>
+  <p class="sec-sub">A third of a flagship category is out of stock and still ranking. Discontinued products should leave the catalog; temporarily-out products should stay discoverable but stop occupying the top of search.</p>
+  <div class="cards">
+    <div class="card"><span class="kicker stock">Rank</span><h3>Demote, don't hide</h3><p>Out-of-stock items drop below in-stock in Searchspring relevance so no sold-out product ranks #3 for a head term. They stay indexable for the long tail.</p></div>
+    <div class="card"><span class="kicker stock">Recover</span><h3>“Notify me” by default</h3><p>Every out-of-stock PDP defaults to the In-Stock-Notify app already installed, turning a dead end into a captured email + a Klaviyo back-in-stock flow.</p></div>
+    <div class="card"><span class="kicker schema">Retire</span><h3>Discontinued = deactivate + 301</h3><p>Supplier-discontinued SKUs are deactivated and 301'd to the closest live equivalent or the parent category, so the gap analysis against supplier files actually closes.</p></div>
+  </div>
+
+  <div class="sec-h" style="margin-top:44px"><span class="tag">SOP</span><h2>Supplier price-change intake</h2></div>
+  <p class="sec-sub">The job is “process supplier price changes” and “gap analysis between supplier catalogs and products listed on our stores.” Here's the intake I'd stand up — Excel + AI-assisted, as the posting asks.</p>
+  <div class="plan">
+    <div class="phase"><span class="w">Step 1 · Normalize</span><h3>Ingest</h3><ul><li>Supplier file → fixed column map (UPC, cost, MSRP, MAP, status)</li><li>AI-assisted cleanup of units, encoding and stray characters before anything touches the store</li><li>Rows keyed on UPC/MPN, not name</li></ul></div>
+    <div class="phase"><span class="w">Step 2 · Reconcile</span><h3>Gap analysis</h3><ul><li>Diff supplier list against the live Searchspring index</li><li>Flag: new items, discontinued, price deltas beyond a threshold, MAP violations</li><li>Nothing auto-publishes — the diff is reviewed first</li></ul></div>
+    <div class="phase"><span class="w">Step 3 · Publish</span><h3>Validated import</h3><ul><li>BigCommerce CSV import with a pre-flight validation pass (my Commerce Change Atlas pattern)</li><li>Post-import spot-check on price, availability and schema</li><li>Every change logged for rollback</li></ul></div>
+  </div>
+  <p style="margin-top:16px" class="ev">I built this before: Commerce Change Atlas diffs supplier files against live listings before they load — lab.mousabatarseh.com. At Universal Wholesale I ran the same motion on 14,000+ SKUs by CSV.</p>
+
+  <div class="sec-h" style="margin-top:44px"><span class="tag">90 DAYS</span><h2>First 90 days</h2></div>
+  <div class="plan">
+    <div class="phase"><span class="w">Days 1–30</span><h3>Census</h3><ul><li>Full-catalog defect run (all 104k, not a sample)</li><li>Ship the schema patch (gtin, decoded description, mpn, rolling date)</li><li>Fix the visible mojibake in the highest-traffic categories first</li></ul></div>
+    <div class="phase"><span class="w">Days 31–60</span><h3>Systematize</h3><ul><li>Attribute-casing normalization + part-number convention pass</li><li>Sold-out demotion + “notify me” default live</li><li>Supplier price-change SOP running weekly</li></ul></div>
+    <div class="phase"><span class="w">Days 61–90</span><h3>Prevent</h3><ul><li>Facets that match the category (drive size, torque range, type)</li><li>Discontinued-item retirement + 301 loop closing the supplier gap</li><li>A weekly data-health report so defects are caught, not discovered</li></ul></div>
+  </div>
+
+  <div class="method" style="margin-top:44px">
+    <h3>Method &amp; scope</h3>
+    <p style="color:var(--ink-2)">Every number here comes from public data pulled on Sep 19, 2026: the Searchspring search API that powers jbtools.com search and category grids (a 799-product sample, <span class="mono">siteId 77jpy6</span>), individual product-page source (JSON-LD, H1, displayed UPC), the <span class="mono">/torque-wrenches/</span> facet counts, and a Lighthouse mobile audit. Sampled percentages describe the sample, not the full 104,348-product catalog — the first deliverable is the full run. I'm not affiliated with JB Tools; this is an independent review to show how I'd approach the eCommerce Database Manager role, and I'd validate every finding against the actual product feed and admin, which expose fields (weights, dimensions, cost) the public catalog doesn't.</p>
+  </div>
+
+  <div class="pagenav">
+    <a href="https://mousabatarseh.com/jbtools-review/triage.html">← Triage board</a>
+    <a class="next" href="https://mousabatarseh.com/jbtools-review/index.html">Back to overview →</a>
+  </div>
+</div>

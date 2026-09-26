@@ -1,0 +1,347 @@
+
+<section class="block" id="works"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">What works</div><h2>Start from what's already right</h2>
+    <p class="intro">The store has the hard things in place: trust, a clean photo look, and real part numbers. The fixes below are about getting more buyers to find and believe each listing.</p></div>
+  <div class="works">
+    <div class="work"><h4>Trust</h4><p>100% positive feedback across 2.3K items sold, 30-day returns with the seller paying return shipping, and 24-hour handling.</p></div>
+    <div class="work"><h4>A consistent photo look</h4><p>White sweep, the ICR mark in the corner, and a close-up of the nameplate — the label shot is exactly what a technician checks first.</p></div>
+    <div class="work"><h4>Real identifiers</h4><p>Titles lead with brand and model and carry the controller; parts carry the manufacturer part number and an MPN item specific.</p></div>
+    <div class="work"><h4>Webstore structured data</h4><p>Product pages publish Product schema with MPN, price, stock, <span class="mono">RefurbishedCondition</span>, and a 30-day return policy — a solid SEO foundation.</p></div>
+    <div class="work"><h4>Local fulfillment</h4><p>Listings ship from Warren (the pendant I checked quoted 2–4 day delivery), and the webstore offers same-day shipping on in-stock parts ordered by 1 PM.</p></div>
+  </div>
+</div></section>
+
+<section class="block" id="findings"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">12 findings</div><h2>What I'd fix first</h2>
+    <p class="intro">Everything below was captured from the live eBay store and icrservices.com on September 15, 2026. Each finding has the evidence, why it costs sales, and the fix. Fixes marked with a tool link are built further down this page.</p></div>
+  <div class="filters" role="group" aria-label="Filter findings">
+    <button class="chip" data-f="all" aria-pressed="true">All 12</button>
+    <button class="chip" data-f="high" aria-pressed="false">High impact</button>
+    <button class="chip" data-f="ebay" aria-pressed="false">eBay</button>
+    <button class="chip" data-f="web" aria-pressed="false">Webstore</button>
+    <button class="chip" data-f="opp" aria-pressed="false">Growth</button>
+  </div>
+
+  <article class="finding" data-tags="high ebay">
+    <div class="meta"><div class="fid">01</div><span class="sev high">High</span><div class="where">eBay · item 132708949075</div></div>
+    <div>
+      <h3>“Tested, warranty” is in the title but nowhere in the listing</h3>
+      <div class="ev"><span class="src">ABB TPU2 teach pendant — US $3,499.95 or Best Offer</span>
+Title: <q>ABB TPU2-EX TEACH PENDANT 3HNE00442-1 <mark>**TESTED WARRANTY**</mark></q>
+Condition: <q>Seller refurbished</q>
+Description: weight, box size, payment and shipping terms — <mark>no test details, no warranty term</mark>, and <q>all items are sold as used unless otherwise stated</q></div>
+      <p class="why">A buyer spending $3,500 on a pendant wants proof it works and to know what the warranty covers. When the title, the condition, and the description say three different things, the buyer either messages and waits, or buys elsewhere — and a sale made on a mismatch can come back as “not as described.”</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>One description template for every tested item: what was tested and on which stand, the warranty length, and what's in the box — with the condition wording matching the title. <a class="jump" href="https://mousabatarseh.com/icr-review/#listing">See the rewritten listing →</a></p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="high ebay">
+    <div class="meta"><div class="fid">02</div><span class="sev high">High</span><div class="where">eBay · FANUC titles</div></div>
+    <div>
+      <h3>One robot family, seven spellings</h3>
+      <div class="ev"><span class="src">R-2000 family across the 59 live titles</span><mark>R2000IB</mark> · <mark>R2000iB</mark> · <mark>R-2000IB</mark> · <mark>R-2000IC</mark> · <mark>R2000IC</mark> · <mark>R2000iC</mark> · and once, FANUC's own <q>R-2000iB</q> (on a wrist listing)
+Controllers: <q>R30IA</q> · <q>R30iA</q> · <q>R30IB</q> · <q>R30IB+</q> · <q>R30IB Plus</q> · <q>R30IB PLUS</q> — FANUC's own <q>R-30iA</q> / <q>R-30iB Plus</q> never appears</div>
+      <p class="why">Technicians search the way the nameplate or the manual reads, and plenty type it without the hyphen. A listing shouldn't depend on the search engine guessing that “R-2000iB” and “R2000iB” are the same robot. Inconsistent naming also makes the store look like it was listed by five different people.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>A naming convention: Brand + official model + type + official controller, then the no-hyphen variant where space allows (e.g. <span class="mono">FANUC R-2000iB/210F Industrial Robot Arm w/ R-30iA Controller R2000iB 210F</span>). <a class="jump" href="https://mousabatarseh.com/icr-review/#linter">Linter + rewrites →</a></p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="ebay">
+    <div class="meta"><div class="fid">03</div><span class="sev med">Medium</span><div class="where">eBay · 42 of 59 titles</div></div>
+    <div>
+      <h3>Serial numbers are using space that buyers' search words should get</h3>
+      <div class="ev"><span class="src">Longest example — 32 characters of an 80-character title</span><q>MOTOMAN UP6 ROBOT WITH XRC CONTROLLER <mark>SN: (R) S2M003-1-1 (C) S1M544-1-2</mark></q></div>
+      <p class="why">Nobody searches a serial number before they know it exists. Meanwhile the words buyers do type — “industrial robot arm,” “Yaskawa” for Motoman, payload, application — are missing. The serial already sits in the nameplate photo, which is the right place for it.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>Move serials to an item specific and the label photo; spend the space on search terms. The UP6 becomes <span class="mono">Yaskawa Motoman UP6 Industrial Robot Arm w/ XRC Controller UP-6 6-Axis</span> (70/80).</p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="ebay">
+    <div class="meta"><div class="fid">04</div><span class="sev med">Medium</span><div class="where">eBay · 14 titles, 51 all-caps</div></div>
+    <div>
+      <h3>Asterisks and all caps read as noise</h3>
+      <div class="ev"><span class="src">Across the 59 titles</span><mark>**TESTED WARRANTY**</mark> ×10 · <mark>*REFURBISHED*</mark> ×4 · 51 of 59 titles written almost entirely in capitals</div>
+      <p class="why">Symbols don't match any search and cost characters. “Refurbished” already exists as eBay's condition filter, so it earns its place in the title only as a plain word. Mixed case with correct model spelling (R-30iB, not R30IB) is easier to scan in a results page full of shouting titles.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>Plain words (“Tested with Warranty”, “Refurbished”), brand-first, official capitalization. The linter below flags every case automatically.</p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="high ebay">
+    <div class="meta"><div class="fid">05</div><span class="sev high">High</span><div class="where">eBay · items 167252727995, 167792818349, 168588511029</div></div>
+    <div>
+      <h3>Part numbers disagree inside the same title</h3>
+      <div class="ev"><span class="src">Allen-Bradley PowerFlex 700 — both spellings are in one title</span><q>ALLEN BRADLEY POWERFLEX 700 125HP <mark>20B C 170 A 0 AYANC0</mark> 20BC170A0AYNANC0</q>
+spaced version joined: 20BC170A0AY<mark>_</mark>ANC0  ≠  20BC170A0AY<mark>N</mark>ANC0   (one “N” missing)
+<span class="src">FANUC R-2000iB wrist — $14,249.95</span><q>… WRIST <mark>A290-7329-T501**TESTED</mark> WARRANTY**</q>   (no space: the part number runs into the asterisks)
+<span class="src">FANUC R-2000iB/210F</span><q>… W/ R30iA Controller <mark>R30iA</mark> SN: F-154664</q>   (controller repeated)</div>
+      <p class="why">Part-number buyers search the exact catalog string from their nameplate. One dropped character is a missed match — and a tech comparing the title to the drive in front of them will hesitate on a $9,499.95 purchase.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>Copy part numbers from the label photo, not from memory, keep a space on both sides, and run a QA check before publishing. The linter flags repeated words, glued part numbers, and spaced-vs-joined part numbers that don't match.</p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="ebay">
+    <div class="meta"><div class="fid">06</div><span class="sev med">Medium</span><div class="where">eBay · item specifics</div></div>
+    <div>
+      <h3>Item specifics stop at Brand, MPN, UPC</h3>
+      <div class="ev"><span class="src">ABB TPU2 teach pendant — every item specific on the listing</span>Brand: ABB · MPN: 3HNE00442-1 · UPC: Does not apply</div>
+      <p class="why">Item specifics drive eBay's search filters and the “compatible with” questions buyers ask. With three fields, the listing can't show up when a buyer filters by type, model, or controller.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>A specifics set per category (teach pendants, servo motors, drives, robots) filled from the label and the test record: Model, Type, Revision, Compatible Controller, Cable, Serial, Country of Manufacture, Warranty. <a class="jump" href="https://mousabatarseh.com/icr-review/#listing">Example →</a></p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="ebay">
+    <div class="meta"><div class="fid">07</div><span class="sev med">Medium</span><div class="where">eBay · photos</div></div>
+    <div>
+      <h3>3 photos of 24 — and none of the pendant powered on</h3>
+      <div class="ev"><span class="src">ABB TPU2 teach pendant — photo set</span>1. front on sweep (display has glare)   2. three-quarter angle   3. nameplate
+missing: powered-on screen on the test stand · back · connector end · cable length · keypad/joystick close-ups · wear</div>
+      <p class="why">For a tested electronic part, a photo of it booted on ICR's test stand is the most persuasive image in the listing — it proves the “tested” claim without a word. More angles also answer questions before buyers have to ask.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>A 12-shot standard for parts, done the same way every time. <a class="jump" href="https://mousabatarseh.com/icr-review/#photos">Checklist →</a></p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="ebay">
+    <div class="meta"><div class="fid">08</div><span class="sev low">Low</span><div class="where">eBay · image editing</div></div>
+    <div>
+      <h3>The white sweep photographs light gray</h3>
+      <div class="ev"><span class="src">Background sampled from photo 1 (median RGB)</span>bottom-right <mark>234, 238, 238</mark> · bottom-left <mark>236, 241, 243</mark> · target 255, 255, 255</div>
+      <p class="why">Next to competitors' pure-white thumbnails, a gray, slightly cool background looks dimmer in search results. It's a two-step fix that can be batched across every photo.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>White-balance off the sweep, then set the white point — shadows kept, product untouched. Saved as a Photoshop action or a script so every set gets the same edit. <a class="jump" href="https://mousabatarseh.com/icr-review/#photos">Before/after →</a></p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="ebay">
+    <div class="meta"><div class="fid">09</div><span class="sev med">Medium</span><div class="where">eBay · label vs title</div></div>
+    <div>
+      <h3>The nameplate says more than the title</h3>
+      <div class="ev"><span class="src">Label in photo 3 vs the title</span>Label: <q>TPU2-EX · Art.no: 3HNE 00442-1<mark>/05</mark></q>
+Title: <q>3HNE00442-1</q>   (revision dropped; label's spaced form not included)</div>
+      <p class="why">A technician replacing a failed unit often matches the full article number including the revision, and ABB prints it with a space — so both forms get typed into search.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>Title carries <span class="mono">3HNE00442-1/05</span> and <span class="mono">3HNE 00442-1</span>; revision goes into item specifics too.</p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="high opp ebay">
+    <div class="meta"><div class="fid">10</div><span class="sev opp">Growth</span><div class="where">eBay · assortment</div></div>
+    <div>
+      <h3>The store is mostly whole robots — parts are the everyday buy</h3>
+      <div class="ev"><span class="src">59 active listings</span><mark>48 complete robots</mark> ($6,999.95 – $36,080.95)
+11 parts: 4 servo motors · 4 wrists · 1 teach pendant · 1 rectifier · 1 drive
+icrservices.com lists a refurbished FANUC P-155 wrist (EO-0833-010) <q>IN STOCK</q> at $8,995.95 — <mark>not on eBay</mark>; the ICR homepage cites 20,000 SKUs in its equipment catalogue</div>
+      <p class="why">Maintenance teams buy pendants, motors, amplifiers, boards and cables every week; whole robots sell a few times a year. A robot that isn't moving can become a dozen listings once it's pulled and disassembled — which is exactly the work this role describes.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>A part-out line for slow-moving robots, plus cross-listing in-stock refurbished parts from the webstore to eBay. <a class="jump" href="https://mousabatarseh.com/icr-review/#bench">Part-out planner →</a></p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="web">
+    <div class="meta"><div class="fid">11</div><span class="sev med">Medium</span><div class="where">icrservices.com · product page</div></div>
+    <div>
+      <h3>Webstore pages lead with the part number only</h3>
+      <div class="ev"><span class="src">/catalogue/fanuc-eo-0833-010</span>&lt;title&gt; <q>FANUC - EO-0833-010 | ICR</q>   (no product name)
+H1: <q>FANUC - EO-0833-010</q>
+Meta description: <q>P<mark>–</mark>155 Wrist Assembly</q>   (en dash; the Series field says P-155)
+Buy panel: <q>Test Method · Test:</q> <mark>(blank)</mark> · 1 product photo</div>
+      <p class="why">Someone searching “FANUC P-155 wrist” doesn't see those words in the page title, and a typed hyphen doesn't match an en dash. The empty test field looks unfinished on a $9,000 item — the Product schema underneath is already excellent, so this is copy, not code.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>Title: <span class="mono">FANUC P-155 Wrist Assembly EO-0833-010, Refurbished | ICR</span>. Description of ~150 characters with condition, test, warranty and same-day shipping. Fill the test method or hide the field when empty.</p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding" data-tags="opp ebay">
+    <div class="meta"><div class="fid">12</div><span class="sev low">Low</span><div class="where">eBay · store followers</div></div>
+    <div>
+      <h3>38 followers after 2.3K sales</h3>
+      <div class="ev"><span class="src">Store header</span>100% positive · 2.3K items sold · <mark>38 followers</mark></div>
+      <p class="why">Repeat industrial buyers are the best buyers, and followers see new listings. Almost none of the people who already bought have saved the store.</p>
+      <dl class="fix"><dt>Fix</dt><dd><p>A packing-slip insert with a QR code to save the seller and a link to ICR's repair and buyback programs — cheap, and it turns one-time buyers into a channel.</p></dd></dl>
+    </div>
+  </article>
+</div></section>
+
+<section class="block" id="linter"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Tool · Titles</div><h2>A title linter, run on all 59 live listings</h2>
+    <p class="intro">I copied every active title from the store and wrote a checker for the problems in findings 2–5. It runs in your browser. The same rules sit behind the title builder, so new listings pass before they go live.</p></div>
+
+  <div class="panel">
+    <div class="panel-head"><h4>Live store titles · Sept 15, 2026</h4>
+      <div class="seg" role="group" aria-label="Filter titles"><button data-lf="all" aria-pressed="true">All</button><button data-lf="flag" aria-pressed="false">Flagged</button><button data-lf="parts" aria-pressed="false">Parts only</button></div></div>
+    <div class="summary-row" id="lsum"><span><b>59</b>titles checked</span><span><b>58</b>with at least one fix</span><span><b>42</b>carry a serial</span><span><b>58</b>avg characters of 80</span></div>
+    <div class="tablewrap" style="max-height:520px"><table><thead><tr><th>#</th><th>Title</th><th>Length</th><th>Flags</th></tr></thead><tbody id="ltable"><tr><td class="num muted">1</td><td class="t">ABB TPU2-EX TEACH PENDANT 3HNE00442-1 **TESTED WARRANTY**</td><td class="num">57<div class="meter"><i style="width:71.25%"></i></div></td><td><span class="flag r">Symbols</span><span class="flag y">All caps</span><span class="flag b">23 chars unused</span></td></tr><tr><td class="num muted">2</td><td class="t">ABB Robot Rectifier 3HAC14549-2/10A **TESTED WARRANTY**</td><td class="num">55<div class="meter"><i style="width:68.75%"></i></div></td><td><span class="flag r">Symbols</span><span class="flag b">25 chars unused</span></td></tr><tr><td class="num muted">3</td><td class="t">ABB SERVO MOTOR 3HNP01724-1 **TESTED WARRANTY**</td><td class="num">47<div class="meter"><i style="width:58.75%"></i></div></td><td><span class="flag r">Symbols</span><span class="flag y">All caps</span><span class="flag b">33 chars unused</span></td></tr><tr><td class="num muted">4</td><td class="t">ABB Servo Elmo Motor 3HNE08539-1 **TESTED WARRANTY**</td><td class="num">52<div class="meter"><i style="width:65%"></i></div></td><td><span class="flag r">Symbols</span><span class="flag b">28 chars unused</span></td></tr><tr><td class="num muted">5</td><td class="t">ABB Servo Motor 3HAC3403-1 **TESTED WARRANTY**</td><td class="num">46<div class="meter"><i style="width:57.49999999999999%"></i></div></td><td><span class="flag r">Symbols</span><span class="flag b">34 chars unused</span></td></tr><tr><td class="num muted">6</td><td class="t">Fanuc AC Servo Motor A06B-0266-B400 **TESTED WARRANTY**</td><td class="num">55<div class="meter"><i style="width:68.75%"></i></div></td><td><span class="flag r">Symbols</span><span class="flag b">25 chars unused</span></td></tr><tr><td class="num muted">7</td><td class="t">ABB IRB4600 ROBOT WITH IRC5 CONTROLLER SN: 4600-800437</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">8</td><td class="t">ABB ROBOT IRB 6600 WRIST 175/225KG 3HAC8114-3 **TESTED WARRANTY**</td><td class="num">65<div class="meter"><i style="width:81.25%"></i></div></td><td><span class="flag r">Symbols</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">9</td><td class="t">FANUC M900iA/350 ROBOT (ARM ONLY) SN: F-66880</td><td class="num">45<div class="meter"><i style="width:56.25%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">35 chars unused</span></td></tr><tr><td class="num muted">10</td><td class="t">ABB ROBOT IRB4600 WITH CONTROLLER IRC5 SN: 4600-104574</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">11</td><td class="t">ABB ROBOT IRB 6600 FOUNDRY WRIST 3HAC16626-2 **TESTED WARRANTY**</td><td class="num">64<div class="meter"><i style="width:80%"></i></div></td><td><span class="flag r">Symbols</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">12</td><td class="t">ABB IRB4600 ROBOT WITH IRC5 CONTROLLER SN: 4600-104569</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">13</td><td class="t">FANUC ArcMate 120iB/10L, M16iB/10L ROBOT WITH RJ3iC (R30iA) CONTROLLER</td><td class="num">70<div class="meter"><i style="width:87.5%"></i></div></td><td><span class="flag y">Controller spelling</span></td></tr><tr><td class="num muted">14</td><td class="t">MOTOMAN ROBOT ES165N WITH CONTROLLER NX100 SN: S71F10-1-2</td><td class="num">57<div class="meter"><i style="width:71.25%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">Add “Yaskawa”</span><span class="flag b">23 chars unused</span></td></tr><tr><td class="num muted">15</td><td class="t">FANUC ROBOT R-2000IC/210F W/ CONTROLLER R30IB SN: F-166063</td><td class="num">58<div class="meter"><i style="width:72.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span><span class="flag b">22 chars unused</span></td></tr><tr><td class="num muted">16</td><td class="t">ABB ROBOT IRB140 WITH CONTROLLER IRC5 SN: 14M-51324</td><td class="num">51<div class="meter"><i style="width:63.74999999999999%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">29 chars unused</span></td></tr><tr><td class="num muted">17</td><td class="t">PANASONIC ROBOT TB1400 WITH CONTROLLER WG3-U1400TB SN: 00005</td><td class="num">60<div class="meter"><i style="width:75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">18</td><td class="t">ABB IRB1200 ROBOT WITH IRC5 CONTROLLER SN: 1200-800668</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">19</td><td class="t">FANUC ARC Mate 100i ROBOT WITH RJ3 RIA CONTROLLER MIG WELD CELL</td><td class="num">63<div class="meter"><i style="width:78.75%"></i></div></td><td><span class="flag y">All caps</span></td></tr><tr><td class="num muted">20</td><td class="t">MOTOMAN ROBOT UP130 WITH CONTROLLER XRC SN: S0R437-1-1</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">Add “Yaskawa”</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">21</td><td class="t">MOTOMAN UP6 ROBOT WITH XRC CONTROLLER SN: (R) S2M003-1-1 (C) S1M544-1-2</td><td class="num">71<div class="meter"><i style="width:88.75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">Add “Yaskawa”</span></td></tr><tr><td class="num muted">22</td><td class="t">ABB ROBOT IRB2600 WITH CONTROLLER IRC5 SN: 2600-800489</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">23</td><td class="t">ABB IRB4600/60 ROBOT WITH IRC5 CONTROLLER 2016 SN: 4600-104336</td><td class="num">62<div class="meter"><i style="width:77.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">24</td><td class="t">ABB IRB1600 ROBOT WITH IRC5 CONTROLLER M2004 SN: 1600-800038</td><td class="num">60<div class="meter"><i style="width:75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">25</td><td class="t">FANUC ROBOT 430i 200KG WRIST A290-7321-T505 **TESTED WARRANTY**</td><td class="num">63<div class="meter"><i style="width:78.75%"></i></div></td><td><span class="flag r">Symbols</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">26</td><td class="t">ABB ROBOT IRB2600 WITH CONTROLLER IRC5 SN: 2600-800955 *REFURBISHED*</td><td class="num">68<div class="meter"><i style="width:85%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag r">Symbols</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">27</td><td class="t">ABB ROBOT IRB 4600-45/2.05 WITH CONTROLLER IRC5 SN: 4600-802351</td><td class="num">63<div class="meter"><i style="width:78.75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">28</td><td class="t">FANUC ROBOT CR-35iA WITH CONTROLLER R30IB PLUS SN: F-218604</td><td class="num">59<div class="meter"><i style="width:73.75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag y">Controller spelling</span><span class="flag b">21 chars unused</span></td></tr><tr><td class="num muted">29</td><td class="t">FANUC ROBOT R2000iC/165F SN: F-223231 *REFURBISHED*</td><td class="num">51<div class="meter"><i style="width:63.74999999999999%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag r">Symbols</span><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag b">29 chars unused</span></td></tr><tr><td class="num muted">30</td><td class="t">ABB ROBOT IRB4600 WITH CONTROLLER IRC5 SN: 4600-104340</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">31</td><td class="t">FANUC ROBOT R2000iB/210F WITH CONTROLLER R30iA SN: F-154665 *REFURBISHED*</td><td class="num">73<div class="meter"><i style="width:91.25%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag r">Symbols</span><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span></td></tr><tr><td class="num muted">32</td><td class="t">KUKA ROBOT KR16 WITH CONTROLLER KR C4 SN: (R) 453653, (C) 371971</td><td class="num">64<div class="meter"><i style="width:80%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">33</td><td class="t">KUKA ROBOT KR-150-2-2000 WITH CONTROLLER KRC2 ED05 SN: (R) 924797, (C) 90501</td><td class="num">76<div class="meter"><i style="width:95%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">34</td><td class="t">FANUC R2000iB/165F ROBOT WITH R30iA CONTROLLER 2008</td><td class="num">51<div class="meter"><i style="width:63.74999999999999%"></i></div></td><td><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span><span class="flag b">29 chars unused</span></td></tr><tr><td class="num muted">35</td><td class="t">FANUC ArcMate 100iB ROBOT WITH RJ3iB CONTROLLER SN: F-69022</td><td class="num">59<div class="meter"><i style="width:73.75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag b">21 chars unused</span></td></tr><tr><td class="num muted">36</td><td class="t">FANUC ROBOT R2000iB/210F WITH CONTROLLER R30iA SN: F-154666</td><td class="num">59<div class="meter"><i style="width:73.75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span><span class="flag b">21 chars unused</span></td></tr><tr><td class="num muted">37</td><td class="t">ABB ROBOT IRB4600 WITH CONTROLLER IRC5 SN: 4600-800697</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">38</td><td class="t">FANUC M10iA/12 ROBOT WITH R30iB CONTROLLER SN: F-180508</td><td class="num">55<div class="meter"><i style="width:68.75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag y">Controller spelling</span><span class="flag b">25 chars unused</span></td></tr><tr><td class="num muted">39</td><td class="t">ABB ROBOT IRB4600 WITH CONTROLLER IRC5 SN: 4600-105623</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">40</td><td class="t">FANUC ArcMate 100iB ROBOT WITH RJ3iB CONTROLLER</td><td class="num">47<div class="meter"><i style="width:58.75%"></i></div></td><td><span class="flag b">33 chars unused</span></td></tr><tr><td class="num muted">41</td><td class="t">FANUC ROBOT R2000iB/210F W/ R30iA Controller R30iA SN: F-154664</td><td class="num">63<div class="meter"><i style="width:78.75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span><span class="flag r">Repeated “R30IA”</span></td></tr><tr><td class="num muted">42</td><td class="t">FANUC ROBOT CR-35iA WITH CONTROLLER R30IB PLUS SN: F-224439</td><td class="num">59<div class="meter"><i style="width:73.75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag y">Controller spelling</span><span class="flag b">21 chars unused</span></td></tr><tr><td class="num muted">43</td><td class="t">FANUC R2000iB/165F ROBOT WITH R30iB CONTROLLER 2014</td><td class="num">51<div class="meter"><i style="width:63.74999999999999%"></i></div></td><td><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span><span class="flag b">29 chars unused</span></td></tr><tr><td class="num muted">44</td><td class="t">FANUC ROBOT R-2000iB 165KG WRIST A290-7329-T501**TESTED WARRANTY**</td><td class="num">66<div class="meter"><i style="width:82.5%"></i></div></td><td><span class="flag r">Symbols</span><span class="flag r">Part # glued to symbols</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">45</td><td class="t">FANUC P250iA PAINT ROBOT WITH R30iA CONTROLLER SN: F-90981</td><td class="num">58<div class="meter"><i style="width:72.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag y">Controller spelling</span><span class="flag b">22 chars unused</span></td></tr><tr><td class="num muted">46</td><td class="t">PANASONIC ROBOT TB1400 WITH CONTROLLER WG3-U1400TB SN: 00006</td><td class="num">60<div class="meter"><i style="width:75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span></td></tr><tr><td class="num muted">47</td><td class="t">KUKA ROBOT KR150 R2700 WITH CONTROLLER KRC4 SN: 662082</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">48</td><td class="t">ABB ROBOT IRB6600 WITH CONTROLLER IRC5 SN: 66-52366</td><td class="num">51<div class="meter"><i style="width:63.74999999999999%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">29 chars unused</span></td></tr><tr><td class="num muted">49</td><td class="t">FANUC M-20iA ROBOT WITH R30iA CONTROLLER SN: F-91734</td><td class="num">52<div class="meter"><i style="width:65%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag y">Controller spelling</span><span class="flag b">28 chars unused</span></td></tr><tr><td class="num muted">50</td><td class="t">ALLEN BRADLEY POWERFLEX 700 125HP 20B C 170 A 0 AYANC0 20BC170A0AYNANC0</td><td class="num">71<div class="meter"><i style="width:88.75%"></i></div></td><td><span class="flag y">All caps</span><span class="flag y">Brand is “Allen-Bradley”</span><span class="flag r">Part # mismatch</span></td></tr><tr><td class="num muted">51</td><td class="t">ABB ROBOT IRB4600 WITH CONTROLLER IRC5 SN: 4600-800517</td><td class="num">54<div class="meter"><i style="width:67.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag b">26 chars unused</span></td></tr><tr><td class="num muted">52</td><td class="t">FANUC R2000IC/210F ROBOT WITH CONTROLLER R30IB+ SN: F-214944 *REFURBISHED*</td><td class="num">74<div class="meter"><i style="width:92.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag r">Symbols</span><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span></td></tr><tr><td class="num muted">53</td><td class="t">FANUC M710iC/70 FOUNDRY PRO ROBOT WITH R30iA CONTROLLER SN: F-154704</td><td class="num">68<div class="meter"><i style="width:85%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag y">Controller spelling</span></td></tr><tr><td class="num muted">54</td><td class="t">FANUC ROBOT R2000IB/100H WITH CONTROLLER R30IA SN: F-102864</td><td class="num">59<div class="meter"><i style="width:73.75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span><span class="flag b">21 chars unused</span></td></tr><tr><td class="num muted">55</td><td class="t">FANUC ROBOT R-2000IB/165F WITH CONTROLLER R30IB Plus SN: F-125136</td><td class="num">65<div class="meter"><i style="width:81.25%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span></td></tr><tr><td class="num muted">56</td><td class="t">FANUC FOUNDRY PRO ROBOT R2000iB/210F W/CONTROLLER R30iA SN: F-93996</td><td class="num">67<div class="meter"><i style="width:83.75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span></td></tr><tr><td class="num muted">57</td><td class="t">FANUC R2000iB/125L ROBOT WITH R30iA CONTROLLER SN: F-92625</td><td class="num">58<div class="meter"><i style="width:72.5%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span><span class="flag b">22 chars unused</span></td></tr><tr><td class="num muted">58</td><td class="t">FANUC ARCMATE 120iC/10L ROBOT &amp; R30iA CONTROLLER SN: F104416</td><td class="num">60<div class="meter"><i style="width:75%"></i></div></td><td><span class="flag y">Serial in title</span><span class="flag y">All caps</span><span class="flag y">Controller spelling</span></td></tr><tr><td class="num muted">59</td><td class="t">FANUC R2000iB/210F ROBOT WITH R30iA CONTROLLER</td><td class="num">46<div class="meter"><i style="width:57.49999999999999%"></i></div></td><td><span class="flag y">All caps</span><span class="flag r">Model spelling</span><span class="flag y">Controller spelling</span><span class="flag b">34 chars unused</span></td></tr></tbody></table></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><h4>Rewrites — same items, same 80 characters</h4></div>
+    <div id="rewrites"><div class="rw"><div class="old"><div class="lab">Now · 57</div><div class="txt">ABB TPU2-EX TEACH PENDANT 3HNE00442-1 **TESTED WARRANTY**</div></div><div class="new"><div class="lab">Rewrite · 80</div><div class="txt">ABB TPU2 Teach Pendant 3HNE00442-1/05 3HNE 00442-1 with Cable - Tested, Warranty</div></div><p class="note">Adds the revision and the spaced article number from the nameplate. “Tested, Warranty” stays only because the new description backs it up.</p></div><div class="rw"><div class="old"><div class="lab">Now · 71</div><div class="txt">ALLEN BRADLEY POWERFLEX 700 125HP 20B C 170 A 0 AYANC0 20BC170A0AYNANC0</div></div><div class="new"><div class="lab">Rewrite · 64</div><div class="txt">Allen-Bradley PowerFlex 700 AC Drive VFD 125 HP 20BC170A0AYNANC0</div></div><p class="note">Drops the mistyped spaced copy; adds “AC Drive” and “VFD”, the words people search for.</p></div><div class="rw"><div class="old"><div class="lab">Now · 46</div><div class="txt">ABB Servo Motor 3HAC3403-1 **TESTED WARRANTY**</div></div><div class="new"><div class="lab">Rewrite · 67</div><div class="txt">ABB Robot Servo Motor 3HAC3403-1 3HAC 3403-1 - Tested with Warranty</div></div><p class="note">Uses 21 unused characters: “Robot” plus ABB's spaced label format.</p></div><div class="rw"><div class="old"><div class="lab">Now · 63</div><div class="txt">FANUC ROBOT R2000iB/210F W/ R30iA Controller R30iA SN: F-154664</div></div><div class="new"><div class="lab">Rewrite · 74</div><div class="txt">FANUC R-2000iB/210F Industrial Robot Arm w/ R-30iA Controller R2000iB 210F</div></div><p class="note">Official spellings first, no-hyphen variant last, repeated controller and serial removed.</p></div><div class="rw"><div class="old"><div class="lab">Now · 73</div><div class="txt">FANUC ROBOT R2000iB/210F WITH CONTROLLER R30iA SN: F-154665 *REFURBISHED*</div></div><div class="new"><div class="lab">Rewrite · 77</div><div class="txt">Refurbished FANUC R-2000iB/210F Industrial Robot w/ R-30iA Controller R2000iB</div></div><p class="note">“Refurbished” as a plain word up front instead of asterisks at the end.</p></div><div class="rw"><div class="old"><div class="lab">Now · 71</div><div class="txt">MOTOMAN UP6 ROBOT WITH XRC CONTROLLER SN: (R) S2M003-1-1 (C) S1M544-1-2</div></div><div class="new"><div class="lab">Rewrite · 70</div><div class="txt">Yaskawa Motoman UP6 Industrial Robot Arm w/ XRC Controller UP-6 6-Axis</div></div><p class="note">32 characters of serial numbers become Yaskawa, robot-arm and variant search terms.</p></div><div class="rw"><div class="old"><div class="lab">Now · 66</div><div class="txt">FANUC ROBOT R-2000iB 165KG WRIST A290-7329-T501**TESTED WARRANTY**</div></div><div class="new"><div class="lab">Rewrite · 79</div><div class="txt">FANUC R-2000iB Robot Wrist Assembly 165kg A290-7329-T501 - Tested with Warranty</div></div><p class="note">Puts a space back around the part number and spells out “Wrist Assembly”.</p></div><div class="rw"><div class="old"><div class="lab">Now · 64</div><div class="txt">KUKA ROBOT KR16 WITH CONTROLLER KR C4 SN: (R) 453653, (C) 371971</div></div><div class="new"><div class="lab">Rewrite · 61</div><div class="txt">KUKA KR 16 Industrial Robot Arm w/ KR C4 Controller KR16 KRC4</div></div><p class="note">KUKA writes “KR 16” and “KR C4”; buyers type both ways.</p></div></div>
+    <p class="muted" style="font-size:13px;margin:10px 0 0">Model and part-number variants come from each item's own title and nameplate. Anything I couldn't confirm from the listing (payload, voltage, compatibility) is left out rather than guessed.</p>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><h4>Title builder</h4><button class="btn" id="copyT" type="button" style="padding:8px 12px;font-size:13px">Copy title</button></div>
+    <div class="builder">
+      <label>Condition word<select id="bCond"><option value="">— none —</option><option>Refurbished</option><option>New Surplus</option><option>Used</option></select></label>
+      <label>Brand<select id="bBrand"><option>FANUC</option><option>ABB</option><option>KUKA</option><option>Yaskawa Motoman</option><option>Allen-Bradley</option><option>Panasonic</option><option>Siemens</option></select></label>
+      <label>Model (official spelling)<input id="bModel" value="R-2000iB/210F" autocomplete="off"></label>
+      <label>Item type<select id="bType"><option>Industrial Robot Arm</option><option>Teach Pendant</option><option>Servo Motor</option><option>Servo Amplifier</option><option>AC Drive VFD</option><option>Wrist Assembly</option><option>Circuit Board</option><option>Robot Controller</option></select></label>
+      <label>Controller / compatible with<input id="bCtrl" value="w/ R-30iA Controller" autocomplete="off"></label>
+      <label>Variants buyers type<input id="bAlt" value="R2000iB 210F" autocomplete="off"></label>
+      <label>Proof words<select id="bProof"><option value="">— none —</option><option>Tested with Warranty</option><option>Tested</option></select></label>
+      <label>Extra keyword<input id="bExtra" value="" placeholder="e.g. Foundry, Spot Weld, 6-Axis" autocomplete="off"></label>
+      <div class="out" aria-live="polite"><div class="title" id="bOut">FANUC R-2000iB/210F Industrial Robot Arm w/ R-30iA Controller R2000iB 210F</div>
+        <div class="row"><span id="bLen" class="num">74 / 80 characters</span><div class="meter"><i id="bBar" class="full" style="width: 92.5%;"></i></div></div>
+        <div class="flags" id="bFlags"><span class="flag g">Pass</span></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="block" id="photos"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Tool · Photos</div><h2>Photo standard + a one-minute edit</h2>
+    <p class="intro">Left: ICR's photo as listed. Right: my edit — white balance taken from the sweep, then the white point set so the background reads pure white. The product, the shadows, and the ICR mark are untouched. Drag to compare.</p></div>
+  <div class="photo-grid">
+    <div>
+      <div class="ba" id="ba" style="--pos:50%">
+        <img src="https://mousabatarseh.com/icr-review/img/tpu2-before.jpg" alt="ABB TPU2 teach pendant as photographed in ICR's eBay listing, light gray background" width="1200" height="1200">
+        <img class="after" src="https://mousabatarseh.com/icr-review/img/tpu2-after.jpg" alt="Same photo after white balance and white point correction, clean white background" width="1200" height="1200">
+        <div class="handle"></div><span class="lbl l">As listed</span><span class="lbl r">Edited</span>
+        <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+      </div>
+      <div class="swatches"><span><i style="background:rgb(234,238,238)"></i>before 234·238·238</span><span><i style="background:rgb(254,255,252)"></i>after 254·255·252</span></div>
+      <div class="thumbs">
+        <figure><img src="https://mousabatarseh.com/icr-review/img/tpu2-before.jpg" alt="" loading="lazy" width="600" height="600"><figcaption>1 · front</figcaption></figure>
+        <figure><img src="https://mousabatarseh.com/icr-review/img/tpu2-angle.jpg" alt="" loading="lazy" width="600" height="600"><figcaption>2 · angle</figcaption></figure>
+        <figure><img src="https://mousabatarseh.com/icr-review/img/tpu2-label.jpg" alt="" loading="lazy" width="600" height="600"><figcaption>3 · nameplate</figcaption></figure>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin-bottom:10px">The 12-shot standard for parts</h3>
+      <p class="muted" style="font-size:14.5px">Checked items are already in the TPU2 listing. Tick the rest to see how the set fills out.</p>
+      <ul class="shots" id="shots">
+        <li><label><input type="checkbox" checked="" disabled=""> Front, full product, centered on the sweep <span class="have">In listing</span></label></li>
+        <li><label><input type="checkbox" checked="" disabled=""> Three-quarter angle <span class="have">In listing</span></label></li>
+        <li><label><input type="checkbox" checked="" disabled=""> Nameplate, sharp and readable <span class="have">In listing</span></label></li>
+        <li><label><input type="checkbox"> Powered on the test stand — screen lit <span class="miss">Add</span></label></li>
+        <li><label><input type="checkbox"> Back and underside <span class="miss">Add</span></label></li>
+        <li><label><input type="checkbox"> Connector end and pins <span class="miss">Add</span></label></li>
+        <li><label><input type="checkbox"> Controls close-up (keys, joystick, E-stop) <span class="miss">Add</span></label></li>
+        <li><label><input type="checkbox"> Cable coiled next to a tape measure <span class="miss">Add</span></label></li>
+        <li><label><input type="checkbox"> Every scratch or wear mark, honestly <span class="miss">Add</span></label></li>
+        <li><label><input type="checkbox"> Mounting points and ports <span class="miss">Add</span></label></li>
+        <li><label><input type="checkbox"> Everything included, laid out <span class="miss">Add</span></label></li>
+        <li><label><input type="checkbox"> Packed for shipping <span class="miss">Add</span></label></li>
+      </ul>
+      <p class="shotcount" id="shotcount">3 of 12 shots</p>
+      <p class="muted" style="font-size:14px">Same lighting, same distance, label shot first so photos never get mixed between items. Edited as a batch: white balance → white point → square crop at 1600 px → compress.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="block" id="listing"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Tool · Listing</div><h2>The TPU2 pendant, relisted</h2>
+    <p class="intro">Same item, rebuilt with the fixes above. Highlighted fields are the ones I'd fill from ICR's test record or a tape measure rather than guess.</p></div>
+  <div class="listing">
+    <div>
+      <div class="panel" style="margin-top:0">
+        <h4 style="margin-bottom:8px">Title <span class="muted num" style="font-family:var(--body);text-transform:none;letter-spacing:0;font-weight:400">· 80 / 80</span></h4>
+        <p class="mono" style="font-size:14.5px;color:var(--ink);margin:0">ABB TPU2 Teach Pendant 3HNE00442-1/05 3HNE 00442-1 with Cable - Tested, Warranty</p>
+      </div>
+      <div class="panel">
+        <h4 style="margin-bottom:8px">Item specifics <span class="muted" style="font-family:var(--body);text-transform:none;letter-spacing:0;font-weight:400">· 3 → 13</span></h4>
+        <table class="spec"><tbody>
+          <tr><th>Brand</th><td>ABB</td></tr>
+          <tr><th>MPN</th><td>3HNE00442-1</td></tr>
+          <tr><th>Model</th><td>TPU2 (nameplate: TPU2-EX)</td></tr>
+          <tr><th>Type</th><td>Teach Pendant</td></tr>
+          <tr><th>Revision</th><td>/05 (from nameplate)</td></tr>
+          <tr><th>Compatible Controller</th><td><span class="confirm">from ICR test record</span></td></tr>
+          <tr><th>Cable</th><td>Attached · <span class="confirm">length, measured</span></td></tr>
+          <tr><th>Serial Number</th><td class="mono">301200#02280018</td></tr>
+          <tr><th>Condition</th><td>Seller refurbished</td></tr>
+          <tr><th>Tested</th><td>Yes · <span class="confirm">stand + date</span></td></tr>
+          <tr><th>Warranty</th><td><span class="confirm">ICR term</span></td></tr>
+          <tr><th>Country of Manufacture</th><td><span class="confirm">from nameplate</span></td></tr>
+          <tr><th>UPC</th><td>Does not apply</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div>
+      <div class="phone" aria-label="Mobile preview of the rewritten description"><div class="scr">
+        <div class="d-hd"><b>ABB TPU2 Teach Pendant 3HNE00442-1/05</b><span>Refurbished and tested by ICR Services · Warren, MI</span></div>
+        <div class="d-badges"><span>Tested on ICR stand</span><span><span class="cf">__</span>-day warranty</span><span>Ships in 24 hrs</span><span>30-day returns</span></div>
+        <div class="d-sec"><h5>Condition</h5><p>Seller refurbished: cleaned, inspected and function-tested by ICR technicians. Light cosmetic wear on the housing and cable — every mark is shown in the photos.</p></div>
+        <div class="d-sec"><h5>Test report</h5><ul><li>Powered up and booted on <span class="cf">test stand</span></li><li>All keys, joystick, enabling device and E-stop checked</li><li>Display: <span class="cf">result</span></li><li>Tested by <span class="cf">initials</span> on <span class="cf">date</span></li></ul></div>
+        <div class="d-sec"><h5>What's included</h5><p>TPU2 pendant with attached cable, as pictured. No controller, manuals or software unless shown.</p></div>
+        <div class="d-sec"><h5>Specifications</h5><table><tbody><tr><td>Brand</td><td>ABB</td></tr><tr><td>Part number</td><td>3HNE00442-1/05</td></tr><tr><td>Model</td><td>TPU2 (TPU2-EX)</td></tr><tr><td>Compatible with</td><td><span class="cf">confirm</span></td></tr><tr><td>Cable length</td><td><span class="cf">measure</span></td></tr><tr><td>Serial</td><td>301200#02280018</td></tr></tbody></table></div>
+        <div class="d-sec"><h5>Warranty &amp; returns</h5><p><span class="cf">__</span>-day ICR warranty. 30-day returns; seller pays return shipping.</p></div>
+        <div class="d-sec"><h5>Shipping</h5><p>Ships within 24 hours of payment from Warren, MI. Expedited shipping and your own UPS, FedEx or DHL account on request.</p></div>
+        <div class="d-sec" style="border-bottom:0"><h5>Also from ICR</h5><p>Need yours repaired instead? ICR repairs industrial electronics with a 5-day mean time to repair. Questions: weekdays 8:00 a.m.–4:30 p.m. ET.</p></div>
+      </div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="block" id="bench"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">The job</div><h2>Bench-to-listing, every day</h2>
+    <p class="intro">The posting lists the work plainly: prep, clean, pull and disassemble inventory, capture and edit images, create eBay and webstore listings, keep the area organized. Here's how I'd run that as one line, so nothing gets photographed twice or listed with the wrong part number.</p></div>
+  <div class="flow">
+    <div class="step"><h4>Pull</h4><p>Pull by bin location and tag the item before anything else happens to it.</p><span class="mono">tag: SKU · bin · date</span></div>
+    <div class="step"><h4>Clean</h4><p>Wipe down and degrease; the nameplate stays intact and readable.</p><span class="mono">no nameplate, no listing</span></div>
+    <div class="step"><h4>Disassemble</h4><p>For part-outs, remove sub-assemblies per plan; bag and tag each with the parent SKU.</p><span class="mono">child SKU → parent SKU</span></div>
+    <div class="step"><h4>Test record</h4><p>Get the tech's result — stand, date, pass — so “tested” is a fact in the listing.</p><span class="mono">no record → “untested”</span></div>
+    <div class="step"><h4>Photograph</h4><p>12-shot standard, fixed lights and distance, label shot first.</p><span class="mono">set = one folder per SKU</span></div>
+    <div class="step"><h4>Edit</h4><p>Batch: white balance, white point, square crop, compress.</p><span class="mono">action / script, not by hand</span></div>
+    <div class="step"><h4>List</h4><p>Title convention, category specifics, description template, sold-comps price check, webstore cross-list.</p><span class="mono">eBay + icrservices.com</span></div>
+    <div class="step"><h4>QA &amp; reset</h4><p>Linter pass, part number checked against the label photo, bin in the SKU field, bench cleared.</p><span class="mono">clean area = fewer mix-ups</span></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><h4>Part-out planner — one 6-axis robot with controller</h4></div>
+    <div class="partout">
+      <ul class="parts" id="parts"><li><label><input type="checkbox" data-i="0" checked=""> Teach pendant<span class="q">×<input type="number" min="1" max="20" value="1" data-q="0" aria-label="Quantity: Teach pendant"></span></label></li><li><label><input type="checkbox" data-i="1" checked=""> Servo motors (one per axis)<span class="q">×<input type="number" min="1" max="20" value="6" data-q="1" aria-label="Quantity: Servo motors (one per axis)"></span></label></li><li><label><input type="checkbox" data-i="2" checked=""> Servo amplifier / drive units<span class="q">×<input type="number" min="1" max="20" value="1" data-q="2" aria-label="Quantity: Servo amplifier / drive units"></span></label></li><li><label><input type="checkbox" data-i="3" checked=""> Main CPU and control boards<span class="q">×<input type="number" min="1" max="20" value="2" data-q="3" aria-label="Quantity: Main CPU and control boards"></span></label></li><li><label><input type="checkbox" data-i="4" checked=""> I/O and interface boards<span class="q">×<input type="number" min="1" max="20" value="2" data-q="4" aria-label="Quantity: I/O and interface boards"></span></label></li><li><label><input type="checkbox" data-i="5" checked=""> Power supply unit<span class="q">×<input type="number" min="1" max="20" value="1" data-q="5" aria-label="Quantity: Power supply unit"></span></label></li><li><label><input type="checkbox" data-i="6" checked=""> Wrist assembly<span class="q">×<input type="number" min="1" max="20" value="1" data-q="6" aria-label="Quantity: Wrist assembly"></span></label></li><li><label><input type="checkbox" data-i="7"> Reducers / gearboxes<span class="q">×<input type="number" min="1" max="20" value="3" data-q="7" aria-label="Quantity: Reducers / gearboxes"></span></label></li><li><label><input type="checkbox" data-i="8" checked=""> Robot-to-controller cables<span class="q">×<input type="number" min="1" max="20" value="2" data-q="8" aria-label="Quantity: Robot-to-controller cables"></span></label></li><li><label><input type="checkbox" data-i="9"> Cabinet fans, breakers, contactors<span class="q">×<input type="number" min="1" max="20" value="4" data-q="9" aria-label="Quantity: Cabinet fans, breakers, contactors"></span></label></li></ul>
+      <div class="tally" aria-live="polite"><div class="big num" id="pcount">16</div><p>separate listings from one robot that isn't selling whole</p><p id="pnote" style="color:var(--steel-ink)">8 part types selected</p><p>Quantities vary by model — I'd build the real list with ICR's techs, and check sold comps before deciding a robot is worth more in parts.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="block" id="plan"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">30 / 60 / 90</div><h2>What the first three months look like</h2>
+    <p class="intro">No invented targets — the first month is for learning ICR's line and fixing what's clearly broken; the numbers get set once I've seen real throughput.</p></div>
+  <div class="plan">
+    <div class="phase"><div class="d">30<small>days</small></div><h4>Learn the line, fix the obvious</h4><ul>
+      <li>Learn ICR's tagging, bins, test stands and listing tools.</li>
+      <li>Own the photo station: fixed lighting, the 12-shot standard, a batch edit action.</li>
+      <li>Correct the part-number mismatches and repeated words on live listings.</li>
+      <li>Rewrite titles and specifics on the 59 live listings to the convention.</li></ul></div>
+    <div class="phase"><div class="d">60<small>days</small></div><h4>Build volume</h4><ul>
+      <li>Start the part-out line with the warehouse team on robots that aren't moving.</li>
+      <li>Roll out the description template with test and warranty sections.</li>
+      <li>Cross-list in-stock refurbished webstore parts to eBay.</li>
+      <li>Fix webstore page titles and descriptions in the top categories.</li></ul></div>
+    <div class="phase"><div class="d">90<small>days</small></div><h4>Measure and tune</h4><ul>
+      <li>Weekly scorecard: listings added, sold, watchers, buyer questions, days from bench to live.</li>
+      <li>Test eBay Promoted Listings on a small set of parts.</li>
+      <li>Packing-slip insert to grow store followers.</li>
+      <li>Write the process down so anyone can list to the same standard.</li></ul></div>
+  </div>
+</div></section>
+
+<section class="block" id="me"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">About me</div><h2>Mousa Batarseh</h2>
+    <p class="intro">I like work where you can see the result. This role puts the item and the listing on the same bench, and I'd rather clean, pull, photograph and list a part myself than hand off half the job.</p></div>
+  <div class="about">
+    <ul class="facts">
+      <li><b>Where</b><span>Warren, MI — a short drive from ICR.</span></li>
+      <li><b>Ecommerce</b><span>7 years. Webmaster at Wild Bill's Tobacco (2023–now); Webmaster / E-Commerce Specialist at Universal Wholesale &amp; United Textile (2019–2023).</span></li>
+      <li><b>Listings</b><span>Built and maintained catalogs of 14,000+ SKUs on Shopify and WooCommerce — titles, specs, pricing, inventory, imagery, bulk imports.</span></li>
+      <li><b>Imagery</b><span>Photoshop plus scripted batch editing in Python. The before/after on this page is my edit of ICR's own photo.</span></li>
+      <li><b>Warehouse</b><span>Coordinated listing and inventory updates with the warehouse team so the website matched the shelf.</span></li>
+      <li><b>Search</b><span>Took organic rankings to Google pages 1–2 within a year; report from GA4 and Search Console.</span></li>
+      <li><b>Languages</b><span>English and Arabic.</span></li>
+    </ul>
+    <div>
+      <div class="dl">
+        <a href="https://mousabatarseh.com/icr-review/files/Mousa-Batarseh-Resume-ICR-Ecommerce-Specialist.pdf">Résumé <span>PDF · 1 page</span></a>
+        <a href="https://mousabatarseh.com/icr-review/files/Mousa-Batarseh-Cover-Letter-ICR.pdf">Cover letter <span>PDF · 1 page</span></a>
+        <a href="mailto:hireme@mousabatarseh.com?subject=ICR%20Ecommerce%20Specialist">Email <span>hireme@mousabatarseh.com</span></a>
+        <a href="tel:+12488101816">Call <span>(248) 810-1816</span></a>
+      </div>
+    </div>
+  </div>
+</div></section>

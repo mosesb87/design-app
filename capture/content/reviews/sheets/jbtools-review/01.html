@@ -1,0 +1,30 @@
+<div class="wrap">
+  <p class="crumb">Sec. 01 — Overview · for the eCommerce Database Manager role</p>
+  <h1>A 104,000-product catalog is only as good as its worst record.</h1>
+  <p class="lede" style="margin-top:16px">I sampled JB Tools' live search feed and product pages. In a 799-item slice I found <b>double-encoded characters in product names</b> that carry through to titles and JSON-LD, <b>UPCs printed on the page but missing from the schema</b>, percent-encoded schema descriptions, inconsistent attribute casing, and a torque-wrench category that is <b>a third out of stock</b> while sold-out items still rank in search. This is a four-page walkthrough of the defects, a working triage board, and the supplier-price SOP I'd run as your Database Manager.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">104,348</div><div class="l">products in the live Searchspring index (the About page still says “beyond 60,000”)</div></div>
+    <div class="stat"><div class="n">8<span style="font-size:1.3rem">/799</span></div><div class="l">sampled names with encoding artifacts — in H1, title <em>and</em> JSON-LD</div></div>
+    <div class="stat"><div class="n">122<span style="font-size:1.3rem">/358</span></div><div class="l">torque wrenches out of stock (34%); a sold-out item ranks #3 in search</div></div>
+    <div class="stat"><div class="n">0</div><div class="l">gtin in Product schema, though UPCs are shown on the page</div></div>
+  </div>
+
+  <div class="cards" style="margin-top:6px">
+    <div class="card"><span class="kicker data">The job</span><h3>What this role owns</h3><p>“Manage and maintain our catalog of tens of thousands of products across hundreds of suppliers… pricing, UPCs, SKUs, weights, dimensions, descriptions, images, specifications… supplier spreadsheets and large datasets… Excel/Google Sheets and AI tools.”</p><p style="color:var(--muted);font-size:.86rem">That is the job I've done: 14,000+ SKUs migrated and maintained by CSV, attribute mapping and QA.</p></div>
+    <div class="card"><span class="kicker schema">Why it matters</span><h3>Defects reach the shopper &amp; the feed</h3><p>Encoding artifacts show up in SERP titles. A missing <span class="mono">gtin</span> blocks clean Google Merchant Center matching. A sold-out item at #3 in search is a dead end at the top of results — the kind of thing behind the BBB complaint mix (Product 15 of 50).</p></div>
+    <div class="card"><span class="kicker stock">The approach</span><h3>Census → fix → prevent</h3><p>A full-catalog defect census, a fix-priority board weighted by price and stock, a schema patch that reaches every product at once, a sold-out policy, and a supplier price-change intake so a price file becomes a validated import — not a manual afternoon.</p></div>
+  </div>
+
+  <div class="meta" style="margin-top:26px">
+    <span><b>Scope</b> jbtools.com public catalog</span>
+    <span><b>Method</b> Searchspring API sample (799 items) + PDP source + Lighthouse</span>
+    <span><b>Platform</b> BigCommerce Stencil · Searchspring · Yotpo · Klaviyo</span>
+    <span><b>Independent — not affiliated with JB Tools</b></span>
+  </div>
+
+  <div class="pagenav">
+    <span></span>
+    <a class="next" href="https://mousabatarseh.com/jbtools-review/findings.html">Next: The defect census →</a>
+  </div>
+</div>

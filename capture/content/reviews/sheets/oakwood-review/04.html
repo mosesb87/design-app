@@ -1,0 +1,51 @@
+
+<div class="book">
+<article class="page">
+  <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="head"><span class="who"><b>Mousa Batarseh</b> · catalog &amp; UX review · Oakwood Veneer</span><span class="plate">Plate IV of IV</span></div>
+
+  <div class="eyebrow">Plate IV · The mobile patch</div>
+  <h1>Four edits, <em>four failed audits</em></h1>
+  <p class="lede">A great catalog can't sell itself on a phone that takes 6.6 seconds to render and won't zoom. Four changes clear four failed Lighthouse audits and go straight at the LCP.</p>
+  <div class="gauge">
+    <div class="gv"><div class="v">32</div><div class="k">Performance</div></div>
+    <div class="gv"><div class="v">6.6s</div><div class="k">LCP</div></div>
+    <div class="gv"><div class="v">4,020</div><div class="k">Blocking ms</div></div>
+    <div class="gv"><div class="v">5,743</div><div class="k">Page KiB</div></div>
+    <div class="gv"><div class="v">Off</div><div class="k">Pinch-zoom</div></div>
+  </div>
+  <div class="edits">
+    <div class="ed"><span class="i">1</span><div><b>Drop maximum-scale=1</b> from the viewport meta</div><span class="r">zoom restored</span></div>
+    <div class="ed"><span class="i">2</span><div><b>Defer jQuery 1.7.2</b> (2012) and render-blocking scripts</div><span class="r">unblock render</span></div>
+    <div class="ed"><span class="i">3</span><div><b>Lazy-load the 9 YouTube iframes</b> behind click-to-play facades</div><span class="r">less weight</span></div>
+    <div class="ed"><span class="i">4</span><div><b>Compress and size the hero</b>; alt text on the 39 images</div><span class="r">LCP + a11y</span></div>
+  </div>
+  <p class="ev">Evidence: Lighthouse 13 mobile, homepage, Sep 19, 2026 (failed: meta-viewport, image-alt, render-blocking resources). Klaviyo is present only as a DNS-prefetch; the footer signup posts to BigCommerce's native /subscribe.php.</p>
+  <div class="sec">
+    <div class="eyebrow">First 30 days</div>
+    <h2>Speed, then facets, then the content engine</h2>
+    <div class="weeks">
+      <div class="wk"><div class="top"><small>Week 1</small>Speed &amp; trust</div><ul><li>Ship the four-edit mobile patch</li><li>Restore pinch-zoom, add alt text</li><li>Wire Klaviyo to the footer signup + a sample-order flow</li></ul></div>
+      <div class="wk"><div class="top"><small>Weeks 2–3</small>Facets &amp; pages</div><ul><li>Species, Cut, Size, Backer, Thickness facets on /veneer-sheets/</li><li>Category intro copy</li><li>Species landing pages (Walnut, White Oak, Maple) with Product + FAQ schema</li></ul></div>
+      <div class="wk"><div class="top"><small>Week 4</small>Content engine</div><ul><li>30-day calendar feeding the already-fresh blog into species pages</li><li>Sample-order follow-up sequence</li><li>Search Console watch on species long-tail queries</li></ul></div>
+    </div>
+  </div>
+  <div class="method"><div class="eyebrow">Method &amp; scope</div><p style="margin-top:8px">Public data pulled Sep 19, 2026: the /veneer-sheets/ and /edgebanding/ category source (facets, intro copy, pagination), homepage source (five H1s, 39/54 empty-alt images, render-blocking jQuery 1.7.2, nine YouTube iframes, maximum-scale=1), and a Lighthouse mobile audit. The Species Atlas is a design prototype with twelve representative species and illustrative swatches; the production build runs against the live catalog on BigCommerce Stencil.</p></div>
+
+  <div class="turn"><a href="https://mousabatarseh.com/oakwood-review/index.html">Back to the cover →</a></div>
+  <div class="colophon">
+    <div><h3>Mousa Batarseh</h3><p>E-commerce &amp; website operations specialist in Warren, MI — eight miles from Troy. Six years running Shopify, WooCommerce and WordPress catalogs; SEO, GA4/Search Console, Mailchimp/Klaviyo-ready.</p></div>
+    <div class="ln"><a href="https://mousabatarseh.com/">mousabatarseh.com</a><a href="https://www.linkedin.com/in/mousabatarseh">linkedin.com/in/mousabatarseh</a><a href="mailto:hireme@mousabatarseh.com">hireme@mousabatarseh.com</a></div>
+    <p class="disc">Independent, unsolicited review. Species names and any Oakwood references are used only as evidence for the findings; the Species Atlas swatches are illustrative CSS, not Oakwood product imagery. Figures are from public sources sampled Sep 19, 2026 and may have changed. No confidential data was used. Not affiliated with, endorsed by, or created for Oakwood Veneer Company. Palette drawn from oakwoodveneer.com.</p>
+  </div>
+</article>
+<nav class="tabs" aria-label="Plates">
+<a href="https://mousabatarseh.com/oakwood-review/index.html"><span class="n">I</span>Cover</a>
+<a href="https://mousabatarseh.com/oakwood-review/gap.html"><span class="n">II</span>The gap</a>
+<a href="https://mousabatarseh.com/oakwood-review/atlas.html"><span class="n">III</span>Species Atlas</a>
+<a href="https://mousabatarseh.com/oakwood-review/mobile.html" aria-current="page"><span class="n">IV</span>Mobile &amp; plan</a>
+</nav>
+</div>
+
+
+

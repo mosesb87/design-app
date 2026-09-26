@@ -1,0 +1,31 @@
+<div class="wrap">
+  <p class="crumb">Sec. 03 — The prototype</p>
+  <div class="sec-h"><span class="tag">INTERACTIVE</span><h2>The Catalog Triage Board</h2></div>
+  <p class="sec-sub">This is how I'd run the fixes: pick a defect class, see a real example become its fixed form, and clear the class. The board is live — select a class on the left. It's a prototype of the workflow, built on the examples in the findings.</p>
+
+  <div class="board">
+    <div class="board-top">
+      <span class="title">Triage</span>
+      <span class="lamp"><span class="sq data"></span> Data</span>
+      <span class="lamp"><span class="sq stock"></span> Stock</span>
+      <span class="lamp"><span class="sq schema"></span> Schema</span>
+      <span class="progline"><span id="progtxt">1 of 5 cleared</span><span class="progbar"><i id="progbar" style="width: 20%;"></i></span></span>
+    </div>
+    <div class="board-grid">
+      <div class="rail" role="tablist" aria-label="Defect classes">
+        <button class="chip" data-k="mojibake" role="tab" aria-selected="true"><span>Mojibake names</span><span class="c">8 / 799 sampled</span></button>
+        <button class="chip" data-k="gtin" role="tab" aria-selected="false"><span>Missing gtin</span><span class="c">UPC shown, not in schema</span></button>
+        <button class="chip" data-k="casing" role="tab" aria-selected="false"><span>Attribute casing</span><span class="c">US / us / blank</span></button>
+        <button class="chip" data-k="soldout" role="tab" aria-selected="false"><span>Sold-out ranking</span><span class="c">122 / 358 in category</span></button>
+        <button class="chip" data-k="naming" role="tab" aria-selected="false"><span>Part-# convention</span><span class="c">133 / 799 off-pattern</span></button>
+      </div>
+      <div class="stage" id="stage" aria-live="polite"><h3>Mojibake in product names</h3><div class="rule">Class: encoding · propagates to H1, <title data-hidden="">, JSON-LD name&lt;/div&gt;&lt;div class="diff"&gt;&lt;div class="r bad"&gt;&lt;div class="sign"&gt;−&lt;/div&gt;&lt;div class="txt"&gt;Nano Flex Ratcheting Attachment Set 14â€“19mm (NORA150XL)&lt;/div&gt;&lt;/div&gt;&lt;div class="r good"&gt;&lt;div class="sign"&gt;+&lt;/div&gt;&lt;div class="txt"&gt;Nano Flex Ratcheting Attachment Set 14–19mm (NORA150XL)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="count"&gt;8 of 799 sampled names affected&lt;/span&gt;&lt;div class="hint"&gt;Reviewing this class marks it cleared on the board above.&lt;/div&gt;</title></div></div>
+    </div>
+  </div>
+  <p class="hint">Prototype — the diffs and counts are from the audit sample; the full-catalog run is deliverable #1.</p>
+
+  <div class="pagenav">
+    <a href="https://mousabatarseh.com/jbtools-review/findings.html">← Findings</a>
+    <a class="next" href="https://mousabatarseh.com/jbtools-review/plan.html">Next: Plan &amp; method →</a>
+  </div>
+</div>

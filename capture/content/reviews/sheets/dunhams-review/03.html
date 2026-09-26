@@ -1,0 +1,36 @@
+<div class="wrap">
+  <p class="crumb">Sec. 03 — The prototype</p>
+  <div class="sec-h"><span class="tag">INTERACTIVE</span><h2>The store-page generator</h2></div>
+  <p class="sec-sub">You already serve the data as JSON. This prototype turns a store into the indexable page it should have: unique H1 and title, hours, departments, and LocalBusiness schema. Pick a store.</p>
+  <div class="gen">
+    <div class="picker" id="storelist"><button class="pbtn" aria-pressed="true">Troy, MI</button><button class="pbtn" aria-pressed="false">Warren, MI</button><button class="pbtn" aria-pressed="false">Flint, MI</button></div>
+    <div class="out">
+      <div class="url" id="genurl">dunhamssports.com/stores/troy-mi/</div>
+      <div class="pm" id="genpage"><div class="pm-head"><div class="h1">Dunham's Sports — Troy, MI</div><div class="addr">1234 Rochester Rd, Troy, MI 48083 · (248) 555-0142</div></div><div class="pm-body"><div class="col"><div class="k">Store hours</div><div class="hours">Mon–Sat 9a–9p<br>Sun 10a–7p</div></div><div class="col"><div class="k">Departments</div><div class="depts"><span>Hunting</span><span>Fishing</span><span>Team Sports</span><span>Footwear</span><span>Fitness</span><span>Apparel</span></div></div></div></div>
+      <div class="schema" id="genschema"><b>&lt;script type="application/ld+json"&gt;</b>
+{
+  "@type": "<b>SportingGoodsStore</b>",
+  "name": "Dunham's Sports — Troy",
+  "address": { "streetAddress": "1234 Rochester Rd", "addressLocality": "Troy", "addressRegion": "MI", "postalCode": "48083" },
+  "telephone": "(248) 555-0142",
+  "openingHours": "Mo-Sa 09:00-21:00"
+}
+<b>&lt;/script&gt;</b></div>
+    </div>
+  </div>
+  <p class="hint">Prototype — three sample Michigan stores; the generator runs against all 268 active stores in <span class="mono">/stores/</span>. Hours/departments are representative placeholders the real build pulls from store data.</p>
+
+  <div class="sec-h" style="margin-top:44px"><span class="tag">90 DAYS</span><h2>The plan</h2></div>
+  <div class="plan">
+    <div class="phase"><span class="w">Days 1–30</span><h3>Stores</h3><ul><li>Store-page template + Troy prototype live</li><li>Generate 268 pages from /stores JSON with LocalBusiness schema</li><li>Add them to the sitemap, submit in Search Console</li></ul></div>
+    <div class="phase"><span class="w">Days 31–60</span><h3>Categories</h3><ul><li>301 the 41 “-1/-2” duplicates to clean slugs</li><li>Metadata generator: unique title + description + intro copy</li><li>Product/Offer JSON-LD on PDPs</li></ul></div>
+    <div class="phase"><span class="w">Days 61–90</span><h3>Signals</h3><ul><li>Real lastmod values in the sitemap</li><li>Scrub Demandware rules from robots.txt</li><li>GSC watch: “dunham's + city”, “near me”, brand queries</li></ul></div>
+  </div>
+
+  <div class="method" style="margin-top:44px">
+    <h3>Method &amp; scope</h3>
+    <p style="color:var(--ink-2)">Findings are from public data pulled Sep 19, 2026: the <span class="mono">/store-locator</span> page and <span class="mono">/stores/</span> JSON, the category sitemaps and sampled category/PDP source, robots.txt, and a Lighthouse mobile audit. The generator is a design prototype; hours and departments shown are representative placeholders — the production build reads them from store data and any Google Business Profile the store already has. I'm not affiliated with Dunham's; this is an independent review to show how I'd approach the SEO &amp; SEM Specialist role, on-site in Troy. SEM I know from Google certification and coupon-tracked campaigns; your SEM partner keeps the media, I keep the strategy honest.</p>
+  </div>
+
+  <div class="pagenav"><a href="https://mousabatarseh.com/dunhams-review/findings.html">← Findings</a><a class="next" href="https://mousabatarseh.com/dunhams-review/index.html">Back to overview →</a></div>
+</div>

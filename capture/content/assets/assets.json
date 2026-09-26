@@ -1357,5 +1357,89 @@
     "type": "image/png",
     "w": 1430,
     "h": 894
+  },
+  "https://mousabatarseh.com/dehanche-review/img/bx/koru-black-gold.webp": {
+    "file": "12572e9a00c6c5bf.webp",
+    "bytes": 10486,
+    "type": "image/webp",
+    "w": 320,
+    "h": 320
+  },
+  "https://mousabatarseh.com/dehanche-review/img/bx/koru-choker-gold.webp": {
+    "file": "eae0a01630b15c1f.webp",
+    "bytes": 8840,
+    "type": "image/webp",
+    "w": 320,
+    "h": 320
+  },
+  "https://mousabatarseh.com/dehanche-review/img/bx/koru-dangle-earrings-gold.webp": {
+    "file": "d141e065ddecc7ae.webp",
+    "bytes": 11010,
+    "type": "image/webp",
+    "w": 320,
+    "h": 320
+  },
+  "https://mousabatarseh.com/diamedical-review/evidence/home-desktop.png": {
+    "file": "0524485b665cdb2b.png",
+    "bytes": 1130093,
+    "type": "image/png",
+    "w": 1430,
+    "h": 894
+  },
+  "https://mousabatarseh.com/diamedical-review/evidence/home-mobile.png": {
+    "file": "34e456ad131e04a1.png",
+    "bytes": 323727,
+    "type": "image/png",
+    "w": 380,
+    "h": 822
+  },
+  "https://mousabatarseh.com/diamedical-review/evidence/beds-desktop.png": {
+    "file": "e3940ef828bf9999.png",
+    "bytes": 95830,
+    "type": "image/png",
+    "w": 1430,
+    "h": 894
+  },
+  "https://www.diamedicalusa.com/ProductImages/BS029901_media_01.jpg?resizeid=12&resizeh=300&resizew=300": {
+    "file": "2cf993fc33a9fb97.jpg",
+    "bytes": 12971,
+    "type": "image/jpeg",
+    "w": 300,
+    "h": 300
+  },
+  "https://www.diamedicalusa.com/ProductImages/BS130116-Scale_media_01.jpg?resizeid=13&resizeh=600&resizew=600": {
+    "file": "16232b1ee46167ba.jpg",
+    "bytes": 62720,
+    "type": "image/jpeg",
+    "w": 600,
+    "h": 600
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ai-cover.webp": {
+    "file": "021ae06241b69eb9.webp",
+    "bytes": 17848,
+    "type": "image/webp",
+    "w": 252,
+    "h": 390
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/ai-interior.webp": {
+    "file": "d393d376c5fd6e89.webp",
+    "bytes": 7174,
+    "type": "image/webp",
+    "w": 251,
+    "h": 390
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/sets/ask-and-it-is-given.webp": {
+    "file": "4286312a34ee6760.webp",
+    "bytes": 13822,
+    "type": "image/webp",
+    "w": 240,
+    "h": 359
+  },
+  "https://mousabatarseh.com/hayhouse-review/img/sets/ask-and-it-is-given-cards.webp": {
+    "file": "98d60f294172018a.webp",
+    "bytes": 15266,
+    "type": "image/webp",
+    "w": 240,
+    "h": 336
   }
 }

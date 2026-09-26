@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/aedit-review/",
+    "status": 200,
+    "title": "AEDIT — Medshop Launch Review",
+    "h1": "The launch is stuck at the plumbing.",
+    "description": "Independent launch review of AEDIT Medshop by Mousa Batarseh — a parked domain, sitewide links to a password page, no analytics, and a ten-day go-live countdown. For the Business Operations & Ecommerce Manager role.",
+    "height": 1469
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/aedit-review/cutover.html",
+    "status": 200,
+    "title": "AEDIT — Blockers & Domain Cutover",
+    "h1": "",
+    "description": "The domain cutover and link repointing that unblock AEDIT Medshop's public launch.",
+    "height": 1624
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/aedit-review/countdown.html",
+    "status": 200,
+    "title": "AEDIT — Ten-Day Countdown",
+    "h1": "",
+    "description": "An interactive ten-day go-live countdown with owners and dependencies for AEDIT Medshop.",
+    "height": 1362
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/aedit-review/kpis.html",
+    "status": 200,
+    "title": "AEDIT — Weekly Reporting & 90 Days",
+    "h1": "",
+    "description": "The weekly leadership report and first-90-days plan for AEDIT Medshop.",
+    "height": 1731
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/dunhams-review/",
+    "status": 200,
+    "title": "Dunham's — SEO Review",
+    "h1": "275 STORES. ZERO INDEXABLE STORE PAGES.",
+    "description": "Independent SEO review of dunhamssports.com by Mousa Batarseh — 275 stores with no indexable pages, category slug collisions and no structured data, with a store-page generator prototype. Built for the SEO & SEM Specialist role.",
+    "height": 1516
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/dunhams-review/findings.html",
+    "status": 200,
+    "title": "Dunham's — Findings",
+    "h1": "",
+    "description": "Findings — no indexable store pages, category slug collisions, and no structured data on dunhamssports.com.",
+    "height": 1564
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/dunhams-review/generator.html",
+    "status": 200,
+    "title": "Dunham's — Store-Page Generator",
+    "h1": "",
+    "description": "The store-page generator — a working prototype that turns Dunham's store JSON into an indexable page with LocalBusiness schema. Plus the 90-day plan.",
+    "height": 1900
+  }
+]

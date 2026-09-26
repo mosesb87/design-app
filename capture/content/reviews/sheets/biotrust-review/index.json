@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/biotrust-review/",
+    "status": 200,
+    "title": "BioTRUST — Relaunch Review",
+    "h1": "Before the relaunch, the store is showing its work.",
+    "description": "Independent pre-relaunch review of biotrust.com by Mousa Batarseh — indexable staging, split canonicals, a $36/$49 price mismatch, and a clickable go-live gate. For the Technical Ecommerce Manager role.",
+    "height": 1518
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/biotrust-review/findings.html",
+    "status": 200,
+    "title": "BioTRUST — Findings",
+    "h1": "",
+    "description": "Findings — robots.txt, duplicate head tags, catalog data and a 77-script app stack on biotrust.com.",
+    "height": 2178
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/biotrust-review/preflight.html",
+    "status": 200,
+    "title": "BioTRUST — Relaunch Pre-flight",
+    "h1": "",
+    "description": "A working relaunch readiness gate for biotrust.com — blockers must clear before GO.",
+    "height": 1897
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/biotrust-review/plan.html",
+    "status": 200,
+    "title": "BioTRUST — Request Queue & 30 Days",
+    "h1": "",
+    "description": "The request queue and first-30-days plan for BioTRUST's Technical Ecommerce Manager role.",
+    "height": 1855
+  }
+]
