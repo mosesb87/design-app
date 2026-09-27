@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-09-27T01:06:02.561Z",
+  "fetched": "2026-09-27T01:26:22.760Z",
   "note": "Portfolio capture for mousabatarseh.com (owner-run)",
   "pages": [
     {
@@ -620,6 +620,38 @@
       "url": "https://mousabatarseh.com/favicon.ico",
       "from": "direct",
       "status": 404
+    }
+  ],
+  "paths": [
+    {
+      "path": "/tools/",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/tools",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/Tools/",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/work/",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/about/",
+      "status": 404,
+      "location": null,
+      "title": null
     }
   ]
 }
