@@ -1,4 +1,4 @@
-// Site chrome: navigation behaviour, the mobile menu, the colour-bar progress and chapter grounds.
+// Site chrome: navigation behaviour, the mobile menu, the color-bar progress and chapter grounds.
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import type { Env } from './runtime';
@@ -27,7 +27,7 @@ export default function chrome(_: HTMLElement[], env: Env) {
     onScroll();
   }
 
-  // Colour-control bar: how far through the proof you are.
+  // Color-control bar: how far through the proof you are.
   if (bar) {
     const fill = bar.querySelector<HTMLElement>('[data-progress-fill]');
     if (fill) {

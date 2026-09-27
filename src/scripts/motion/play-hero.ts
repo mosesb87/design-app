@@ -32,7 +32,11 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
       duration: 1.2 * k, ease: 'expo.out', stagger: { each: 0.03 * k, from: 'random' },
     }, 0);
   }
-  if (stickers.length) tl.from(stickers, { scale: 0.7, opacity: 0, y: 16, duration: 0.9 * k, stagger: 0.08 * k }, 0.35 * k);
+  // The icon tiles start scattered around the photo — each thrown its own way — and come into place.
+  if (stickers.length) tl.from(stickers, {
+    x: () => rnd(-reach, reach), y: () => rnd(-120, 120), rotation: () => rnd(-40, 40), scale: 0.6, opacity: 0,
+    duration: 1.1 * k, ease: 'expo.out', stagger: { each: 0.07 * k, from: 'random' },
+  }, 0.3 * k);
   if (fades.length) tl.from(fades, { y: 16, opacity: 0, duration: 0.7 * k, ease: 'power3.out', stagger: 0.08 }, 0.3 * k);
   // The photo rises without fading: it is the page's largest paint, and a fade would hold that paint back.
   if (me) tl.from(me, { y: 40, duration: 1.1 * k }, 0.15 * k);
@@ -48,18 +52,33 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
     h.addEventListener('pointerdown', () => gsap.fromTo(h, { scale: 0.94 }, { scale: 1, duration: 0.5, ease: 'power3.out' }));
   });
 
-  // Letters: a short hop and an accent flash when touched (on yPercent, so it never fights the scatter's x/y).
+  // Letters: a short hop and a red flash when touched (on yPercent, so it never fights the scatter's x/y).
   letters.forEach((l) => {
     const hop = () => {
       if (gsap.isTweening(l)) return;
       gsap.fromTo(l, { yPercent: 0 }, { yPercent: -8, duration: 0.2, ease: 'power2.out', yoyo: true, repeat: 1 });
       l.classList.add('is-hot');
-      l.style.color = 'var(--accent)';
+      l.style.color = 'var(--red)';
       setTimeout(() => { l.style.color = ''; l.classList.remove('is-hot'); }, 600);
     };
     l.addEventListener('pointerenter', hop);
     l.addEventListener('pointerdown', hop);
   });
+
+  // Pointing at the photo: the tiles scatter a little and settle back into place (x and rotation only — the
+  // float owns y). Fine pointers only; touch has the press.
+  if (me && env.fine) {
+    let busy = false;
+    me.addEventListener('pointerenter', () => {
+      if (busy) return;
+      busy = true;
+      stickers.forEach((s) => {
+        gsap.timeline({ onComplete: () => { busy = false; } })
+          .to(s, { x: rnd(-34, 34), rotation: rnd(-18, 18), scale: rnd(0.9, 1.08), duration: 0.32, ease: 'power2.out' })
+          .to(s, { x: 0, rotation: 0, scale: 1, duration: 1, ease: 'elastic.out(1, 0.55)' });
+      });
+    });
+  }
 
   // Pointer parallax (desktop): tiles lean towards the pointer by their depth; the photo leans a little.
   if (env.fine) {
@@ -98,9 +117,14 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
     }, 0);
   }
 
-  // Scroll: tiles drift up at their own speeds as the hero leaves; the photo sinks slowly into its panel.
+  // Scroll: as the hero leaves, the tiles scatter away — each its own way, the deeper ones further — and scrolling
+  // back up brings them into place again (scrubbed). The photo sinks slowly into its panel.
   holders.forEach((h) => {
-    gsap.to(h, { yPercent: -60 * Number(h.dataset.depth || 0.5), ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.6 } });
+    const d = Number(h.dataset.depth || 0.5);
+    gsap.fromTo(h, { xPercent: 0, yPercent: 0, rotation: 0 }, {
+      xPercent: () => rnd(-90, 90) * d, yPercent: () => -rnd(60, 160) * d, rotation: () => rnd(-30, 30),
+      ease: 'power1.in', immediateRender: false, scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.6, invalidateOnRefresh: true },
+    });
   });
   if (photo) gsap.to(photo, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.6 } });
 }

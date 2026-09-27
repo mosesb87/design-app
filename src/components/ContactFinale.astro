@@ -1,7 +1,8 @@
 ---
 // The contact finale on every page: "Put yours in place." — a plain black room whose title letters fly in from
-// every direction and settle as it comes up the screen (and scatter again when scrolled back), coloured icon
-// tiles that float, lean towards the pointer and wiggle when touched, Mousa standing in a cobalt panel that
+// every direction and settle as it comes up the screen (scatter again when scrolled back, and scatter a little
+// when pointed at), colored icon tiles that scatter in with the scroll, float, lean towards the pointer and
+// scatter a little when the photo is pointed at, Mousa standing in a cobalt panel that
 // shrinks and extends with scroll (desktop), the email big enough to tap, one-click copy, and the other ways to
 // reach him. (Motion: scripts/motion/fly.ts, tiles.ts, photoflex.ts; copy behaviour: contact.ts.)
 import Sticker from './play/Sticker.astro';
@@ -88,9 +89,9 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
   .finale__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h2); line-height: 0.86; text-transform: uppercase; max-width: 12ch; user-select: none; }
   .finale__line { display: block; }
   .finale__w { display: inline-block; white-space: nowrap; }
-  /* Each letter hops and turns green when touched (the CSS translate adds to the scroll's transform). */
-  .finale__l { display: inline-block; transition: translate 0.35s var(--ease-register), color 0.35s; }
-  .finale__l:hover { translate: 0 -0.08em; color: var(--leaf); transition-duration: 0.12s; }
+  /* The letters only move, never change color: a pointer over the heading scatters them a little and they
+     settle back (motion/fly.ts + base.css). */
+  .finale__l { display: inline-block; }
   .finale__sub { font-size: var(--t-lead); line-height: 1.3; max-width: 36ch; color: var(--night-ink-2); font-weight: 500; }
   .finale__email-row { container-type: inline-size; display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-4) var(--s-5); margin-top: var(--s-4); }
   .finale__email {
@@ -152,7 +153,7 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     .finale__me { display: block; }
   }
 
-  /* Coloured icon tiles on the black room. Each floats on its own rhythm (the CSS translate, so the pointer lean
+  /* Colored icon tiles on the black room. Each floats on its own rhythm (the CSS translate, so the pointer lean
      from tiles.ts adds to it) and wiggles when touched (hover.css). */
   .finale__s { position: absolute; z-index: 3; pointer-events: none; animation: finale-bob 3.4s ease-in-out infinite alternate; }
   .finale__s :global(.sticker) { --size: 100%; width: 100%; }

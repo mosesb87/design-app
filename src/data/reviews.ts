@@ -32,7 +32,7 @@ export const focusAreas = [...new Set(allReviews.flatMap((r) => r.focus))].sort(
 export const focusKey = (f: string) => f.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 export const statText = (r: FullReview) => (r.stat.of ? `${r.stat.value} / ${r.stat.of}` : r.stat.value);
 
-// Bright tones cycle through the list; the text colour follows the ground.
+// Bright tones cycle through the list; the text color follows the ground.
 export const REVIEW_TONES = [
   { bg: 'var(--pink)', fg: 'var(--ink)' },
   { bg: 'var(--lime)', fg: 'var(--ink)' },

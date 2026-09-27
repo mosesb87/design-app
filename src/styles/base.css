@@ -348,3 +348,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3 { text-transform: uppercase; }
 .prose-review ul.rv-frags { display: flex; flex-wrap: wrap; gap: 6px; }
 .prose-review ul.rv-frags > li { padding: 5px 10px; border-radius: var(--r-pill); background: var(--cloud); font-size: 0.8125rem; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
 .prose-review ul.rv-frags > li::before { display: none; }
+
+/* Flying headings ([data-fly]): a pointer over the heading scatters its letters a little (motion/fly.ts sets
+   --sx/--sy/--sr per letter), and they settle back with a soft overshoot. Individual properties, so it adds to
+   the scroll animation's transform. */
+[data-fly] [data-fl] { translate: 0 0 !important; rotate: 0deg !important; transition: translate 0.9s cubic-bezier(0.22, 1.4, 0.36, 1), rotate 0.9s cubic-bezier(0.22, 1.4, 0.36, 1); }
+/* !important: GSAP writes `translate: none; rotate: none` inline beside the transform it animates. */
+[data-fly] [data-fl].is-scat { translate: var(--sx, 0) var(--sy, 0) !important; rotate: var(--sr, 0deg) !important; transition-duration: 0.26s; transition-timing-function: ease-out; }

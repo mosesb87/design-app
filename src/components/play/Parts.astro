@@ -1,11 +1,11 @@
 ---
 // "Every part in its place." — the about, beside a board of labelled slots. Scrolling down, the scattered
-// coloured parts fly into their slots and the board is stamped; scrolling on, they fly back out; scrolling up
+// colored parts fly into their slots and the board is stamped; scrolling on, they fly back out; scrolling up
 // replays it in reverse. Reduced motion: already in place.
 import Sticker from './Sticker.astro';
 import type { StickerName } from './types';
 import { person } from '../../data/site';
-// Each piece is a coloured tile — cobalt, sky, night, deep cobalt, the logo's green, violet — spread so no two
+// Each piece is a colored tile — cobalt, sky, night, deep cobalt, the logo's green, violet — spread so no two
 // neighbours match.
 const parts: { name: StickerName; label: string; tile: 'blue' | 'sky' | 'night' | 'deep' | 'leaf' | 'iris' }[] = [
   { name: 'blocks', label: 'Pages', tile: 'blue' },

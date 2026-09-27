@@ -48,16 +48,16 @@ export const cases: CaseStudy[] = [
     urlLabel: 'asas.build',
     platform: ['WordPress', 'Elementor'],
     languages: ['English', 'Arabic'],
-    media: { hero: 'asas', video: 'asas', shows: 'Applying colour kits to the live page', more: [{ slug: 'asas-studio-app', label: 'The studio: ready-made pages, filtered and previewed' }] },
+    media: { hero: 'asas', video: 'asas', shows: 'Applying color kits to the live page', more: [{ slug: 'asas-studio-app', label: 'The studio: ready-made pages, filtered and previewed' }] },
     intro: [
-      'I designed and built ASAS to turn thousands of reusable Elementor blocks into complete, editable pages. Users can search in English or Arabic, stack sections into a live page, apply one shared colour system, and export the finished layout as a native Elementor JSON template.',
-      'The blocks are drawn in grey on purpose, so a page’s structure is judged before anyone argues about colour.',
+      'I designed and built ASAS to turn thousands of reusable Elementor blocks into complete, editable pages. Users can search in English or Arabic, stack sections into a live page, apply one shared color system, and export the finished layout as a native Elementor JSON template.',
+      'The blocks are drawn in grey on purpose, so a page’s structure is judged before anyone argues about color.',
     ],
     role: { text: 'I designed and built ASAS', source: V1 },
     features: [
       { title: 'Find', text: 'Search thousands of real blocks in English or Arabic.' },
       { title: 'Build', text: 'Stack sections into a live page and reorder them.' },
-      { title: 'Preview', text: 'Apply one shared colour system across the whole page.' },
+      { title: 'Preview', text: 'Apply one shared color system across the whole page.' },
       { title: 'Export', text: 'Download the finished layout as a native Elementor JSON template.' },
     ],
     spec: [
@@ -71,7 +71,7 @@ export const cases: CaseStudy[] = [
       { value: '3,881', label: 'real Elementor blocks in the library', source: 'https://asas.build/' },
       { value: '143', label: 'ready-made pages', source: 'https://asas.build/' },
       { value: '29', label: 'categories', source: 'https://asas.build/' },
-      { value: '12', label: 'colour kits that repaint the page live', source: 'https://asas.build/' },
+      { value: '12', label: 'color kits that repaint the page live', source: 'https://asas.build/' },
     ],
     quote: { text: 'Structure first. Style without limits.', source: V1 },
     disclaimer: 'An independent tool. Elementor Ltd. is not involved.',
@@ -239,7 +239,7 @@ export const cases: CaseStudy[] = [
   // ─────────────────────────────── Sites & stores
   {
     slug: 'united-textile',
-    order: 1,
+    order: 2,
     group: 'sites',
     title: 'United Textile',
     kicker: 'Shopify B2B wholesale store',
@@ -250,12 +250,12 @@ export const cases: CaseStudy[] = [
     languages: ['English'],
     media: { hero: 'united-textile', mobile: 'united-textile', full: 'united-textile', video: 'united-textile' },
     intro: [
-      'A retail theme doesn’t explain case packs or wholesale pricing. United Textile is a Shopify storefront built for buyers who reorder rather than browse: collections organised around how retailers restock, case pricing shown alongside the unit price, and product details written for someone buying by the case.',
+      'A retail theme doesn’t explain case packs or wholesale pricing. United Textile is a Shopify storefront built for buyers who reorder rather than browse: collections organized around how retailers restock, case pricing shown alongside the unit price, and product details written for someone buying by the case.',
       'Retailers don’t browse a wholesale site the way consumers browse a gift shop — so the navigation, the collections and the delivery and payment terms are written for the person placing the reorder.',
     ],
     role: { text: 'UX, catalog, merchandising & SEO', source: `${WORKSITE}/united-textile-wholesale/` },
     features: [
-      { title: 'Wholesale-first navigation', text: 'Collections organised around how retailers restock.' },
+      { title: 'Wholesale-first navigation', text: 'Collections organized around how retailers restock.' },
       { title: 'Case-pack pricing', text: 'The case price with its unit price, worked out from the pack size.' },
       { title: 'Delivery and payment terms', text: 'Free next-day local delivery over $1,000 and payment on delivery, said up front.' },
       { title: 'Search-focused product content', text: 'Product pages written to be found, not only browsed.' },
@@ -270,7 +270,7 @@ export const cases: CaseStudy[] = [
   },
   {
     slug: 'universal-wholesale',
-    order: 2,
+    order: 1,
     group: 'sites',
     title: 'Universal Wholesale',
     kicker: '14,000-item catalog migration',
@@ -383,7 +383,7 @@ export const cases: CaseStudy[] = [
     group: 'sites',
     title: 'PTEE',
     kicker: 'Bilingual education platform',
-    summary: 'A modern bilingual experience in Arabic and English for a theological education programme: a courses website and a separate admissions platform.',
+    summary: 'A modern bilingual experience in Arabic and English for a theological education program: a courses website and a separate admissions platform.',
     url: 'https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/',
     urlLabel: 'PTEE courses & admissions',
     platform: ['Courses website', 'Admissions portal'],

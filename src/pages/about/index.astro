@@ -4,7 +4,7 @@ import PageHead from '../../components/play/PageHead.astro';
 import { person, method, workflow, services, skills, toolGroups, courses, degree, CHECKED, formatDate } from '../../data/site';
 import Sticker from '../../components/play/Sticker.astro';
 import type { StickerName } from '../../components/play/types';
-// The spec sheet: skills, then tools, each group a coloured card with its own icon.
+// The spec sheet: skills, then tools, each group a colored card with its own icon.
 const specLook: { tone: string; icon: StickerName }[] = [
   { tone: 'blue', icon: 'cell' }, { tone: 'white', icon: 'lens' }, { tone: 'night', icon: 'bag' }, { tone: 'leaf', icon: 'fx' }, { tone: 'sky', icon: 'check' },
   { tone: 'night', icon: 'code' }, { tone: 'iris', icon: 'chart' }, { tone: 'white', icon: 'heart' }, { tone: 'blue', icon: 'blocks' }, { tone: 'red', icon: 'bolt' },
@@ -230,7 +230,7 @@ const accentFrom = 9; // "work better." — the last two of the eleven words
   .skills__icon :global(.sticker) { --size: 100%; width: 100%; }
   .skills__count { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.5rem, 3.6vw, 3.5rem); line-height: 0.8; opacity: 0.18; transition: opacity 0.4s, scale 0.5s var(--ease-pop); transform-origin: 100% 0; }
   .skills__group:hover .skills__count { opacity: 0.5; scale: 1.1; }
-  /* Tones: each card its own colour, with a tile and chips that read on it. */
+  /* Tones: each card its own color, with a tile and chips that read on it. */
   .skills__group--blue { background: var(--accent); color: #fff; }
   .skills__group--white { background: #fff; box-shadow: var(--shadow-1); }
   .skills__group--night { background: var(--night); color: #fff; }

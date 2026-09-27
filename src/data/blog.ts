@@ -39,7 +39,7 @@ export const blogSummaries = (rawSummaries as Summary[])
   .map((p) => ({ ...p, image: redraw(p.image, D.summaries[p.slug]) }))
   .sort((a, b) => (a.date < b.date ? 1 : -1));
 
-// One tone per category, so a post's colour is the same on every page.
+// One tone per category, so a post's color is the same on every page.
 const TONES = ['var(--sky)', 'var(--peach)', 'var(--lemon)', 'var(--mint)', 'var(--blush)', 'var(--lilac)'];
 const DOTS = ['var(--accent)', 'var(--accent-deep)', 'var(--ink)', 'var(--accent)', 'var(--accent-deep)', 'var(--ink)'];
 export const categories = [...new Set(blogPosts.flatMap((p) => p.categories))].sort();

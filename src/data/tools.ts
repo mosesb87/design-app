@@ -127,12 +127,12 @@ export const toolPages: ToolDetail[] = [
     slug: 'asas-studio',
     name: 'ASAS Studio',
     promise: 'Build the page before you style it.',
-    what: 'A free library of real Elementor blocks drawn in grey: stack them into a page, colour it with a kit and export native Elementor JSON. English and Arabic, right-to-left native.',
-    problem: 'A styled template makes you judge the colour. A grey one makes you judge the page: does the hierarchy hold, does the proof sit next to the claim, does the call to action arrive when the reader is ready?',
+    what: 'A free library of real Elementor blocks drawn in grey: stack them into a page, color it with a kit and export native Elementor JSON. English and Arabic, right-to-left native.',
+    problem: 'A styled template makes you judge the color. A grey one makes you judge the page: does the hierarchy hold, does the proof sit next to the claim, does the call to action arrive when the reader is ready?',
     how: [
       { title: 'Browse', text: 'Filter by room (hero, pricing, FAQ), by behaviour (static, carousel, accordion, tabs, split) or by ASAS name.' },
       { title: 'Stack', text: 'Build the page in grey, so the first thing you judge is the structure.' },
-      { title: 'Colour', text: 'Twelve kits set ink, paper, lines and accent across every block at once.' },
+      { title: 'Color', text: 'Twelve kits set ink, paper, lines and accent across every block at once.' },
       { title: 'Export', text: 'The same JSON format Elementor uses for its own library. Arabic pages export right-to-left.' },
     ],
     inside: ['Every block has an Arabic name with English beside it', 'The Studio names any block that needs Elementor Pro before you download', 'Elementor core widgets only: 37 widget types, no third-party add-on', 'Placeholder images are copied into the media library on import'],
@@ -146,7 +146,7 @@ export const toolPages: ToolDetail[] = [
     liveLabel: 'asas.build',
     caseStudy: 'asas-studio',
     media: 'asas',
-    shows: 'Applying colour kits to the live page',
+    shows: 'Applying color kits to the live page',
   },
   {
     slug: 'seo-tools',
@@ -203,7 +203,7 @@ export const toolPages: ToolDetail[] = [
 
 // The home rack: seven tools, each linking to its section on /tools/.
 export type Tool = { n: string; name: string; promise: string; what: string; href: string; live: string; media: string; caseStudy?: boolean; shows?: string };
-const rackOrder = ['asas-studio', 'changeatlas', 'deals-os', 'csv-mapper', 'dealproof', 'seo-tools', 'diamedical-lab'];
+const rackOrder = ['changeatlas', 'deals-os', 'csv-mapper', 'diamedical-lab', 'asas-studio', 'dealproof', 'seo-tools'];
 export const tools: Tool[] = rackOrder.map((slug, i) => {
   const t = toolPages.find((x) => x.slug === slug)!;
   return { n: String(i + 1).padStart(2, '0'), name: t.name, promise: t.promise ?? t.what, what: t.what, href: `/tools/#${t.slug}`, live: t.live, media: t.media, caseStudy: !!t.caseStudy, shows: t.shows };

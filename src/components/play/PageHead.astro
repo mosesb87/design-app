@@ -1,9 +1,9 @@
 ---
 // Inner-page header in the home page's language: a condensed title, one size on every page, whose letters fly in
-// from scattered spots and settle (and hop when touched), and colourful icon tiles that float, sway, lean towards
+// from scattered spots and settle (and hop when touched), and colorful icon tiles that float, sway, lean towards
 // the pointer and wiggle when touched — the page's own three, plus three more on desktop (unless an aside takes
 // the right side). The same motion module as the home hero (play-hero.ts). Optional tone turns the header into a
-// coloured room.
+// colored room.
 import Sticker from './Sticker.astro';
 import type { StickerName } from './types';
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
   kicker?: string;
   dot?: string;
   lead?: string;
-  tone?: string; // a colour token, e.g. 'var(--lilac)'
+  tone?: string; // a color token, e.g. 'var(--lilac)'
   stickers?: StickerName[];
   size?: 'xl' | 'l' | 'm' | 's';
   id?: string;
@@ -92,7 +92,7 @@ const tiles = [...own, ...extras];
   .phd__stickers { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
   .phd__s { position: absolute; display: block; pointer-events: auto; cursor: grab; }
   .phd__s :global(.sticker) { --size: 100%; width: 100%; }
-  /* Coloured tiles with a light-to-deep gradient: cobalt, the logo's green, deep cobalt into night. */
+  /* Colored tiles with a light-to-deep gradient: cobalt, the logo's green, deep cobalt into night. */
   .phd .phd__s--1 :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); background: linear-gradient(150deg, #4d6bff, var(--accent) 45%, var(--accent-deep)); box-shadow: 0 22px 40px -22px rgb(28 51 168 / 0.75); }
   .phd .phd__s--2 :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--leaf-soft), var(--leaf) 60%); box-shadow: 0 18px 32px -18px rgb(90 160 0 / 0.55); }
   .phd .phd__s--3 :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); background: linear-gradient(150deg, var(--accent-deep), var(--night) 70%); box-shadow: 0 20px 36px -20px rgb(13 16 21 / 0.7); }

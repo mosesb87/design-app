@@ -1,4 +1,4 @@
-// "Every part in its place": scrolling down, the scattered coloured parts fly into their slots, the letters of
+// "Every part in its place": scrolling down, the scattered colored parts fly into their slots, the letters of
 // the title fly in from all over and settle into the words, and the board is stamped; scrolling on, parts and
 // letters fly back out the other way; scrolling up replays it in reverse (scrubbed over the board's whole pass
 // through the screen). Desktop: title and board share one timeline. Phones: the title runs on its own pass,

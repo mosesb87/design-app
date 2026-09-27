@@ -1,8 +1,8 @@
 ---
 // Hero: the name, huge and condensed, beside Mousa's photo standing in a cobalt panel (his head breaks the
 // panel's top edge). Letters fly in from scattered spots and hop when touched; the photo leans with the
-// pointer, turns from black-and-white to colour and extends on hover, and shrinks and extends with scroll;
-// colourful icon tiles float, sway and lean around it. (Motion: scripts/motion/play-hero.ts, photoflex.ts.)
+// pointer, turns from black-and-white to color and extends on hover, and shrinks and extends with scroll;
+// colorful icon tiles float, sway and lean around it. (Motion: scripts/motion/play-hero.ts, photoflex.ts.)
 import Sticker from './Sticker.astro';
 import { person } from '../../data/site';
 const rows = [person.first.toUpperCase(), person.last.toUpperCase()];
@@ -19,7 +19,7 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
 <section class="ph" data-play-hero aria-labelledby="hero-title">
   <div class="ph__inner wrap">
     <div class="ph__text">
-      <p class="kicker ph__kicker" data-ph-fade>{person.location} · {person.availability.toLowerCase()}</p>
+      <p class="kicker ph__kicker" data-ph-fade>{person.title} · {person.location} · {person.availability.toLowerCase()}</p>
       <h1 class="ph__name" id="hero-title">
         <span class="visually-hidden">{person.name}</span>
         {rows.map((w, r) => (
@@ -136,7 +136,7 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
   .ph__stickers { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
   .ph__s { position: absolute; display: block; pointer-events: auto; }
   .ph__s :global(.sticker) { --size: 100%; width: 100%; }
-  /* Coloured tiles around the photo: sky, green, night and violet. */
+  /* Colored tiles around the photo: sky, green, night and violet. */
   .ph .s-tag :global(.sticker) { --tile: var(--blue-soft); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: 0 20px 36px -18px rgb(43 77 224 / 0.55); }
   .ph .s-check :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); }
   .ph .s-cursor :global(.sticker) { --tile: var(--iris); --stroke: var(--ink); --acc: var(--accent-deep); }

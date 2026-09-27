@@ -8,6 +8,7 @@ export const person = {
   name: 'Mousa Batarseh',
   first: 'Mousa',
   last: 'Batarseh',
+  title: 'Webmaster & e-commerce specialist',
   roles: ['Webmaster', 'WordPress & e-commerce', 'Product data', 'SEO'],
   location: 'Warren, Michigan',
   region: 'Metro Detroit',
@@ -24,7 +25,7 @@ export const person = {
   // /v2 hero
   intro:
     'I build and run WordPress websites and e-commerce stores — and the checks that keep them honest. Catalogs, promotions, SEO, and the Friday jobs nobody should do by hand.',
-  availability: 'Available for the next problem',
+  availability: 'Available now',
   // /v2 about (years updated to seven, confirmed)
   about: [
     'I’m Mousa — the person you call when the website looks fine but nothing quite works. Seven years building and running sites on WordPress, Elementor and Divi have taught me that a good website is equal parts design, data and discipline: pages that load fast and read well, catalogs that stay clean whether they live in WooCommerce or Shopify, and SEO that’s built into the structure rather than bolted on afterwards.',
@@ -40,6 +41,13 @@ export const person = {
   contactLine: 'Send the site, the store or the spreadsheet that isn’t behaving.',
   contactSub: 'I’ll tell you what I see, with dates.',
 } as const;
+
+// Where he has worked — as on his résumé and LinkedIn (confirmed by Mousa).
+export const employers = [
+  { name: 'Wild Bill’s Tobacco', role: 'Webmaster', years: '2024–2025', note: 'Multi-location retailer, Michigan · corporate sites, the wholesale B2B store, seasonal campaign pages' },
+  { name: 'Universal Wholesale', role: 'Webmaster / E-Commerce Specialist', years: '2019–2024', note: 'Southfield, MI · the Universal Wholesale and United Textile stores, a 14,000-item catalog' },
+  { name: 'Freelance', role: 'Web developer', years: '2024–present', note: 'K-WAV (now Total LED), PTEE, Eat With Samar and other WordPress, Wix and Shopify builds' },
+] as const;
 
 // The three layers, with Mousa's own worked example (/v2).
 export const layers = [

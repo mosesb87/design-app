@@ -1,6 +1,6 @@
 ---
 // "Start with the business goal. End with the measurement." — the four-step method as cards that stack as you
-// scroll (CSS sticky, no scripting), then the six services as cards that fly in from scattered spots (scripts/motion/pop.ts).
+// scroll (CSS sticky, no scripting), then four services as cards that fly in from scattered spots (scripts/motion/pop.ts).
 import Sticker from './Sticker.astro';
 import type { StickerName } from './types';
 import { method, services } from '../../data/site';
@@ -35,7 +35,7 @@ import Ghost from '../Ghost.astro';
     <div class="meth__services">
       <h3 class="meth__services-title">What I can take off your plate</h3>
       <ul class="pills" role="list" data-pop-grid>
-        {services.map((s, i) => (
+        {services.slice(0, 4).map((s, i) => (
           <li class="pill" data-glow data-pop>
             <span class="pill__n num">{String(i + 1).padStart(2, '0')}</span>
             <span class="pill__t">{s.title}</span>
@@ -77,7 +77,7 @@ import Ghost from '../Ghost.astro';
   /* The icon sits inside the card, clear of its bottom and right edges. */
   .step__sticker { position: absolute; right: clamp(16px, 2.4vw, 40px); bottom: clamp(16px, 2.4vw, 40px); width: clamp(72px, 8vw, 128px); opacity: 0.95; }
   .step__sticker :global(.sticker) { --size: 100%; width: 100%; }
-  /* Coloured tiles that contrast with each card: cobalt on grey, green on white, violet on night, night on cobalt. */
+  /* Colored tiles that contrast with each card: cobalt on grey, green on white, violet on night, night on cobalt. */
   .meth .step--grey .step__sticker :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); }
   .meth .step--white .step__sticker :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); }
   .meth .step--night .step__sticker :global(.sticker) { --tile: var(--iris); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: none; }

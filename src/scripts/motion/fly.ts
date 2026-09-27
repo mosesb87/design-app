@@ -15,6 +15,22 @@ export default function fly(heads: HTMLElement[], env: Env) {
   heads.forEach((h) => {
     const letters = [...h.querySelectorAll<HTMLElement>('[data-fl]')];
     if (!letters.length) return;
+    // Pointing at the heading: the letters scatter a little, then settle back into the words. This rides on the
+    // CSS `translate`/`rotate` (see base.css, [data-fl].is-scat), so it adds to the scroll's transform instead of
+    // fighting it. Fine pointers only.
+    if (env.fine) {
+      let busy = 0;
+      h.addEventListener('pointerenter', () => {
+        if (busy) return;
+        letters.forEach((l) => {
+          l.style.setProperty('--sx', `${rnd(-0.35, 0.35).toFixed(2)}em`);
+          l.style.setProperty('--sy', `${rnd(-0.3, 0.3).toFixed(2)}em`);
+          l.style.setProperty('--sr', `${rnd(-16, 16).toFixed(0)}deg`);
+          l.classList.add('is-scat');
+        });
+        busy = window.setTimeout(() => { letters.forEach((l) => l.classList.remove('is-scat')); busy = 0; }, 260);
+      });
+    }
     const reach = Math.min(innerWidth * 0.22, 280);
     const spread = (lift: number, turn: number) => letters.map((_, i) => {
       const a = i * 2.39996 + turn + rnd(-0.4, 0.4);

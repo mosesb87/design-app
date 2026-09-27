@@ -17,7 +17,7 @@
   /* Headings, card titles and intro lines: a band of light passes through the letters, left to right.
      The text stays real text; only its fill is painted from a moving gradient while hovered. */
   html :is(.h2:not(.parts__title), .h3, .chk__h, .step__title, .pill__t, .meth__services-title, .tools__title, .tool__name,
-    .finale__title, .asas__promise, .tl__name, .tl__promise, .tl__quote, .tl__step-title, .find__title, .feature__title,
+    .asas__promise, .tl__name, .tl__promise, .tl__quote, .tl__step-title, .find__title, .feature__title,
     .svc__t, .method__title, .courses__t, .sheet__title, .next__title, .more__title, .family__title, .workflow__t,
     .skills__title, .check__t, .lead, .phd__lead, .ph__intro, .parts__lead, .tools__sub, .chk__close, .revs__lead, .finale__sub):hover,
   html :is(.note, .site, .rcard, .case-card, .card, .sum, .pill, .step, .more__card, .tl__how li, .feature, .find):hover
