@@ -1,19 +1,36 @@
-# QA report — the bright and playful site
+# QA report
 
-Covers the redesign (direction 2, [04-bright-and-playful.md](04-bright-and-playful.md)) and the two new sections, the blog and the reviews ([content-sections.md](content-sections.md)). The first direction's four rounds are summarised at the end.
+The current design is direction 3, calm and precise ([05-calm-and-precise.md](05-calm-and-precise.md)); its checks come first. The bright-and-playful rounds (direction 2) follow, with the method, which is unchanged, and the first direction's rounds at the end.
 
-## Summary
+## Direction 3 — calm and precise (current)
+
+Latest round: Mousa's third set of notes (hover on everything, scattered cards, the black contact and footer), commit 266e7dc and later.
 
 | Check | Result |
 |---|---|
-| Pages | 55: home, /work/, 11 case studies, /blog/ + 16 posts, /reviews/ + 22 reviews, /about/, 404 |
-| All-pages sweep (every page, phone + desktop, axe) | 110 runs. Findings fixed below; re-checked clean |
-| Six viewports × motion and reduced motion | 120 runs (10 representative pages × 6 viewports × 2 modes): **0 findings** — no overflow, disappearing content, axe violations, small targets, focus problems, console errors or failed requests; CLS 0 on every run; LCP at load ≤ 476 ms locally |
-| Interactions (Chromium) | 60/60 after fixes |
-| Firefox 142 / WebKit 26 (Actions) | 60 page runs (12 pages; Firefox and WebKit at desktop and phone, WebKit with reduced motion): **0 findings**. Interactions **60/60 in both** (after the fixes below) |
-| Lighthouse 12 (9 pages × mobile + desktop) | Accessibility, best practices and SEO **100** on all 18 runs; performance 100 on desktop, 97–99 on mobile, except the home page (92–95, see *Known limitations*) |
-| Internal links and assets | 3,098 references, 0 missing; in-page anchors checked too |
-| Type check | `astro check`: 0 errors |
+| Pages | 56: home, /work/, 11 case studies, /tools/, /blog/ + 16 posts, /reviews/ + 22 reviews, /about/, 404 |
+| Type check / build | `astro check`: 0 errors; build clean |
+| All-pages sweep (every page, phone 430 + desktop 1440, full motion, axe) | **112 runs, 0 findings**: no overflow, disappearing text, console errors, failed requests, axe violations or layout shift |
+| Interactions (Chromium) | **66/66** |
+| Firefox 142 / WebKit 26 (Actions) | 65 page runs, **0 findings** (Firefox's only message is its advisory about scroll-linked effects). Interactions: **Firefox 65/65, WebKit 66/66**. Headless Firefox reports no mouse, so the index check there confirms the inline thumbnails instead of the hover window |
+| Lighthouse 12.8 (home, /work/, /reviews/, /tools/ × mobile + desktop) | Accessibility, best practices and SEO **100** on every run; performance **100 on desktop**; mobile: /tools/ 98–99, /reviews/ 97, /work/ 96, home 92 (see below); CLS 0.000–0.003 |
+| Internal links and assets | 3,507 references, 0 missing |
+
+### What the direction-3 rounds found, and the fixes
+
+| Found | Fix |
+|---|---|
+| The first all-pages sweep took minutes a page: the dot-grid background redrew about 3,000 dots 30 times a second | The grid was drawn as one pattern and only near the pointer; it was later replaced altogether by three scroll-driven colour washes (transforms only) |
+| Ghost words behind sections failed colour contrast (their faint fill counted as text) | Outline only |
+| Firefox: the index preview never opened — headless Firefox reports no fine pointer | Screens without a mouse from 900 px up show each project's screenshot inline in its row (also better on an iPad); the test checks whichever case applies |
+| /reviews/, desktop: CLS 0.106 at load — pinning the header for the checks added its spacing after first paint and pushed the list down | The hold is a sticky header in a wrapper whose extra scroll is reserved in CSS from the first paint, and the motion class is set before first paint: CLS 0 |
+| /reviews/: two "GSAP target not found" warnings — the header animation ran on an empty icon list | Empty lists are skipped |
+| Axe contrast: check numbers in orange-soft on cobalt; the ASAS chips and number cards while half-transparent in their scatter | Numbers in pale orange (5.2:1); cards fly in solid, moving only (no fading) |
+| The check scene's new "Check 04" chip lost its icon (flex item squeezed to 0 px inside a zero-width line) and at first shared a class name with the section heading | `flex: none`; renamed |
+| /work/ header counts sat half-scattered when the page opened | Cards on the first screen start in place and only scatter away |
+| Lighthouse mobile: home 87 (TBT 204 ms), /tools/ 92 (TBT 311 ms). Setting up every card's scroll animation at start-up (one trigger per card, 50+ on /tools/) made five long tasks; the hero photo, the page's largest paint, also faded in from transparent | Card grids are set up only as they near the screen, measuring all cards before animating any; the photo rises without fading. Home 92 (TBT 28–46 ms), /tools/ 98–99 (TBT 0–1 ms) |
+
+The home page on mobile stays at 92: its largest paint is the photo, which arrives in about 0.5 s but is painted after the page's start-up work under Lighthouse's 4× CPU slowdown (3.3 s simulated; 0.23–0.28 s measured locally without throttling). Desktop is 100.
 
 ## Method
 
@@ -26,7 +43,22 @@ Covers the redesign (direction 2, [04-bright-and-playful.md](04-bright-and-playf
 - **Lighthouse 12:** mobile and desktop presets against the production build served with production headers (`scripts/serve.json`).
 - **Links** (`scripts/linkcrawl.mjs`): every `href`, `src`, `srcset`, `poster`, `data-src` and `url()` in the build must resolve; `#anchors` must exist on their page. HTML is parsed, so code samples in review text are never mistaken for links.
 
-## What the rounds found, and the fixes
+## Direction 2 — bright and playful: summary
+
+Kept for the record.
+
+| Check | Result |
+|---|---|
+| Pages | 55: home, /work/, 11 case studies, /blog/ + 16 posts, /reviews/ + 22 reviews, /about/, 404 |
+| All-pages sweep (every page, phone + desktop, axe) | 110 runs. Findings fixed below; re-checked clean |
+| Six viewports × motion and reduced motion | 120 runs (10 representative pages × 6 viewports × 2 modes): **0 findings** — no overflow, disappearing content, axe violations, small targets, focus problems, console errors or failed requests; CLS 0 on every run; LCP at load ≤ 476 ms locally |
+| Interactions (Chromium) | 60/60 after fixes |
+| Firefox 142 / WebKit 26 (Actions) | 60 page runs (12 pages; Firefox and WebKit at desktop and phone, WebKit with reduced motion): **0 findings**. Interactions **60/60 in both** (after the fixes below) |
+| Lighthouse 12 (9 pages × mobile + desktop) | Accessibility, best practices and SEO **100** on all 18 runs; performance 100 on desktop, 97–99 on mobile, except the home page (92–95, see *Known limitations*) |
+| Internal links and assets | 3,098 references, 0 missing; in-page anchors checked too |
+| Type check | `astro check`: 0 errors |
+
+## What the direction-2 rounds found, and the fixes
 
 ### Round 1 — all 55 pages, phone and desktop (110 runs)
 
