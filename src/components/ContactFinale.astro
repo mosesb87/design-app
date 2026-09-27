@@ -67,7 +67,7 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
         </picture>
       </figure>
     </div>
-    <div class="finale__cluster" aria-hidden="true">
+    <div class="finale__cluster" aria-hidden="true" data-tile-cluster>
       {tiles.map((t, i) => (
         <span class:list={['finale__s', `finale__s--${i + 1}`]} data-tile data-depth={t.depth}><Sticker name={t.name} tilt={t.tilt} /></span>
       ))}
@@ -149,7 +149,7 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     .finale__me:hover .finale__photo { scale: 1.08; }
   }
   @media (min-width: 1024px) {
-    .finale__inner { grid-template-columns: minmax(0, 1fr) clamp(230px, 22vw, 330px); column-gap: clamp(40px, 5vw, 96px); align-items: end; }
+    .finale__inner { grid-template-columns: minmax(0, 1fr) clamp(280px, 25vw, 380px); column-gap: clamp(32px, 4vw, 80px); align-items: end; }
     .finale__me { display: block; }
   }
 
@@ -175,13 +175,14 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     .finale__s--7 { display: block; width: clamp(38px, 4vw, 56px); right: 30%; top: 16%; animation-delay: -0.4s; animation-duration: 3.8s; }
   }
   /* Desktop: the tiles come together as a tidy grid — four across, two rows, all one size — in the open space
-     beside Mousa's head, between the text and the photo (they scatter in from there: motion/tiles.ts, and
-     pointing at any of them scatters them again). */
+     beside Mousa's head: its top edge level with the top of his head and its right edge just off the photo
+     (motion/tiles.ts measures and places it; the values here are the fallback). They scatter in from there,
+     and pointing at any of them scatters them again. */
   @media (min-width: 1024px) {
     .finale__cluster {
       --tile: clamp(52px, 4.6vw, 68px);
       inset: auto;
-      right: 29%;
+      right: 34%;
       top: 26%;
       display: grid;
       grid-template-columns: repeat(4, var(--tile));

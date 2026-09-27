@@ -52,13 +52,13 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
     h.addEventListener('pointerdown', () => gsap.fromTo(h, { scale: 0.94 }, { scale: 1, duration: 0.5, ease: 'power3.out' }));
   });
 
-  // Letters: a short hop and an accent flash when touched (the one red letter stays red: CSS) (on yPercent, so it never fights the scatter's x/y).
+  // Letters: a short hop and a flash when touched — blue, except the one letter marked data-hot="red", which flashes red (on yPercent, so it never fights the scatter's x/y).
   letters.forEach((l) => {
     const hop = () => {
       if (gsap.isTweening(l)) return;
       gsap.fromTo(l, { yPercent: 0 }, { yPercent: -8, duration: 0.2, ease: 'power2.out', yoyo: true, repeat: 1 });
       l.classList.add('is-hot');
-      l.style.color = 'var(--accent)';
+      l.style.color = l.dataset.hot === 'red' ? 'var(--red)' : 'var(--accent)';
       setTimeout(() => { l.style.color = ''; l.classList.remove('is-hot'); }, 600);
     };
     l.addEventListener('pointerenter', hop);

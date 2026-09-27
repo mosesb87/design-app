@@ -15,6 +15,7 @@ export default function tiles(roots: HTMLElement[], env: Env) {
     const holders = [...root.querySelectorAll<HTMLElement>('[data-tile]')];
     if (!holders.length) return;
     const inner = holders.map((h) => h.querySelector<HTMLElement>('[data-sticker]') || h);
+    placeCluster(root);
 
     // Scroll: thrown out from their places (golden-angle steps, so neighbours never share a direction) and back
     // into place by the time the room is 45% up the screen.
@@ -60,4 +61,28 @@ export default function tiles(roots: HTMLElement[], env: Env) {
     });
     root.addEventListener('pointerleave', () => items.forEach((m) => { m.x(0); m.y(0); m.r(0); }));
   });
+}
+
+// The contact room's grid of tiles ([data-tile-cluster]) sits with its top edge level with the top of Mousa's head
+// and its right edge 24px off the photo, whatever the screen width: measured from the layout (untransformed
+// offsets, so the photo's scroll and hover scaling don't move it), and again when the page resizes or its fonts
+// settle. Below the desktop layout the CSS positions rule.
+function placeCluster(root: HTMLElement) {
+  const cluster = root.querySelector<HTMLElement>('[data-tile-cluster]');
+  const fig = root.querySelector<HTMLElement>('[data-photo-flex]');
+  const img = fig?.querySelector<HTMLImageElement>('img');
+  if (!cluster || !fig || !img) return;
+  const place = () => {
+    if (!matchMedia('(min-width: 1024px)').matches) { cluster.style.top = ''; cluster.style.right = ''; return; }
+    let top = 0, left = 0;
+    for (let el: HTMLElement | null = fig; el && el !== root; el = el.offsetParent as HTMLElement | null) { top += el.offsetTop; left += el.offsetLeft; }
+    const headTop = top + fig.offsetHeight - img.offsetHeight;
+    cluster.style.top = `${Math.round(headTop)}px`;
+    cluster.style.right = `${Math.round(root.clientWidth - left + 24)}px`;
+  };
+  place();
+  if (!img.complete) img.addEventListener('load', place, { once: true });
+  document.fonts?.ready.then(place);
+  addEventListener('load', place);
+  addEventListener('resize', place);
 }
