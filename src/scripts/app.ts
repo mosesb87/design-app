@@ -24,7 +24,6 @@ Promise.all([
   mount('[data-contact]', () => import('./motion/contact')),
   mount('[data-filter]', () => import('./motion/filter')),
   mount('[data-scrollframe]', () => import('./motion/scrollframe')),
-  mount('[data-aura]', () => import('./motion/aura')),
   mount('[data-checks]', () => import('./motion/checks')),
   mount('[data-cert-open]', () => import('./motion/certs')),
   mount('[data-glow]', () => import('./motion/glow')),

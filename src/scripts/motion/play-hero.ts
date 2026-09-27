@@ -1,4 +1,5 @@
-// Hero (home and inner pages): letters rise in and hop when touched; icon tiles settle in, float gently, lean
+// Hero (home and inner pages): the title's letters fly in from scattered spots, hop when touched and scatter
+// away as the header scrolls off; icon tiles settle in, float gently, lean
 // towards the pointer (fine pointers) and drift with scroll; on the home page the photo leans with the pointer
 // and rises slower than the page. Reduced motion: everything is simply there.
 import { gsap } from 'gsap';
@@ -20,7 +21,15 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
   try { sessionStorage.setItem('mb-hero', '1'); } catch {}
   const k = seen ? 0.6 : 1;
   const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
-  if (letters.length) tl.from(letters, { yPercent: 105, opacity: 0, duration: 1 * k, stagger: 0.035 * k }, 0);
+  // The title's letters fly in from scattered spots, each from its own direction, and settle into the words.
+  const rnd = gsap.utils.random;
+  const reach = Math.min(innerWidth * 0.35, 460);
+  if (letters.length) {
+    tl.from(letters, {
+      x: () => rnd(-reach, reach), y: () => rnd(-220, 220), rotation: () => rnd(-80, 80), scale: () => rnd(0.4, 1.5), opacity: 0,
+      duration: 1.2 * k, ease: 'expo.out', stagger: { each: 0.03 * k, from: 'random' },
+    }, 0);
+  }
   if (stickers.length) tl.from(stickers, { scale: 0.7, opacity: 0, y: 16, duration: 0.9 * k, stagger: 0.08 * k }, 0.35 * k);
   if (fades.length) tl.from(fades, { y: 16, opacity: 0, duration: 0.7 * k, ease: 'power3.out', stagger: 0.08 }, 0.3 * k);
   // The photo rises without fading: it is the page's largest paint, and a fade would hold that paint back.
@@ -37,11 +46,11 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
     h.addEventListener('pointerdown', () => gsap.fromTo(h, { scale: 0.94 }, { scale: 1, duration: 0.5, ease: 'power3.out' }));
   });
 
-  // Letters: a short hop and an accent flash when touched.
+  // Letters: a short hop and an accent flash when touched (on yPercent, so it never fights the scatter's x/y).
   letters.forEach((l) => {
     const hop = () => {
       if (gsap.isTweening(l)) return;
-      gsap.fromTo(l, { y: 0 }, { y: -0.08 * l.offsetHeight, duration: 0.2, ease: 'power2.out', yoyo: true, repeat: 1 });
+      gsap.fromTo(l, { yPercent: 0 }, { yPercent: -8, duration: 0.2, ease: 'power2.out', yoyo: true, repeat: 1 });
       l.classList.add('is-hot');
       l.style.color = 'var(--accent)';
       setTimeout(() => { l.style.color = ''; l.classList.remove('is-hot'); }, 600);
@@ -64,6 +73,16 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
       pr?.(nx * 1.2);
     });
     hero.addEventListener('pointerleave', () => { movers.forEach((m) => { m.x(0); m.y(0); }); px?.(0); pr?.(0); });
+  }
+
+  // Scroll: as the header leaves, its letters scatter away again, each its own way; scrolling back up brings
+  // them home (scrubbed).
+  if (letters.length) {
+    const out = gsap.timeline({ scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.8 } });
+    out.fromTo(letters, { x: 0, y: 0, rotation: 0, scale: 1 }, {
+      x: () => rnd(-reach, reach), y: () => rnd(-260, 60), rotation: () => rnd(-70, 70), scale: () => rnd(0.5, 1.3),
+      ease: 'power2.in', duration: 1, stagger: { each: 0.01, from: 'random' }, immediateRender: false,
+    }, 0);
   }
 
   // Scroll: tiles drift up at their own speeds as the hero leaves; the photo sinks slowly into its panel.

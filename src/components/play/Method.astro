@@ -66,21 +66,22 @@ import Ghost from '../Ghost.astro';
     box-shadow: 0 -12px 30px -18px rgb(14 17 22 / 0.3);
     overflow: hidden;
   }
-  .step--white { background: #fff; box-shadow: 0 0 0 1px var(--line-soft), 0 -12px 30px -18px rgb(14 17 22 / 0.3); }
+  .step--white { background: #fff; box-shadow: 0 -12px 30px -18px rgb(14 17 22 / 0.3); }
   .step--night { background: var(--night); color: var(--night-ink); }
   .step--accent { background: var(--accent); color: #fff; }
   .step--night .step__n, .step--accent .step__n { opacity: 0.9; }
   .step__n { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(4rem, 10vw, 10rem); line-height: 0.8; }
   .step__text { display: grid; gap: var(--s-3); max-width: 40ch; }
-  .step__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2rem, 3.8vw, 4rem); line-height: 0.9; text-transform: uppercase; }
+  .step__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h3); line-height: 0.9; text-transform: uppercase; }
   .step__body { font-size: var(--t-lead); line-height: 1.3; font-weight: 500; }
-  .step__sticker { position: absolute; right: clamp(-20px, 1vw, 24px); bottom: -14px; width: clamp(90px, 12vw, 180px); opacity: 0.95; }
+  /* The icon sits inside the card, clear of its bottom and right edges. */
+  .step__sticker { position: absolute; right: clamp(16px, 2.4vw, 40px); bottom: clamp(16px, 2.4vw, 40px); width: clamp(72px, 8vw, 128px); opacity: 0.95; }
   .step__sticker :global(.sticker) { --size: 100%; width: 100%; }
-  /* Coloured tiles that contrast with each card: cobalt on grey, orange on white, orange on night, night on cobalt. */
-  .meth .step--grey .step__sticker :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--orange-soft); }
-  .meth .step--white .step__sticker :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: #fff; }
-  .meth .step--night .step__sticker :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: none; }
-  .meth .step--accent .step__sticker :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--orange); box-shadow: none; }
+  /* Coloured tiles that contrast with each card: cobalt on grey, green on white, violet on night, night on cobalt. */
+  .meth .step--grey .step__sticker :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); }
+  .meth .step--white .step__sticker :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); }
+  .meth .step--night .step__sticker :global(.sticker) { --tile: var(--iris); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: none; }
+  .meth .step--accent .step__sticker :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); box-shadow: none; }
   .meth__services { margin-top: var(--s-10); display: grid; gap: var(--s-6); }
   .meth__services-title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h3); text-transform: uppercase; }
   .pills { display: grid; gap: 12px; }
@@ -103,7 +104,7 @@ import Ghost from '../Ghost.astro';
   .pill__d { font-size: var(--t-small); font-weight: 500; line-height: 1.45; color: var(--ink-2); }
   @media (max-width: 699px) {
     .step { grid-template-columns: 1fr; align-items: start; top: calc(var(--nav-h) + 8px + var(--i) * 12px); }
-    .step__sticker { width: 64px; top: 14px; right: 12px; bottom: auto; }
+    .step__sticker { width: 56px; top: 16px; right: 16px; bottom: auto; }
   }
   :global(.motion-reduced) .step { position: relative; top: auto; }
 </style>

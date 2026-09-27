@@ -1,7 +1,7 @@
 // ASAS Studio spotlight on /work/:
 // - the title squeezes and stretches as the section passes (wide as it arrives, narrow in the middle, wide
 //   again as it leaves), letter by letter so the change runs through the word like a wave;
-// - under the pointer, the letters nearest it widen and turn orange;
+// - under the pointer, the letters nearest it widen and turn pale cobalt;
 // - the studio capture swings in beside the recording and keeps drifting; the recording rises slightly slower
 //   than the page; the glow wanders.
 // The move chips and number cards scatter into place through pop.ts. Scrubbed, so scrolling up reverses it.
@@ -25,7 +25,7 @@ export default function asas([section]: HTMLElement[], env: Env) {
       .to(letters, { '--wd': 118, ease: 'power2.in', duration: 0.3, stagger: { each: 0.012, from: 'end' } }, 0.62);
   }
 
-  // Width under the pointer: letters within reach widen (up to +50) and warm to orange; they ease back on leave.
+  // Width under the pointer: letters within reach widen (up to +50) and turn pale cobalt; they ease back on leave.
   if (title && letters.length && env.fine) {
     const to = letters.map((l) => gsap.quickTo(l, '--hw', { duration: 0.45, ease: 'power3.out' }));
     const move = (e: PointerEvent) => {

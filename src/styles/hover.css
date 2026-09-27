@@ -6,15 +6,17 @@
 @keyframes hv-sweep { from { background-position: 100% 0; } to { background-position: 0 0; } }
 @keyframes hv-dot { 0%, 100% { scale: 1; } 50% { scale: 1.9; } }
 @keyframes hv-blink { 50% { opacity: 0.35; } }
+@keyframes hv-wiggle { 0% { rotate: 0deg; } 30% { rotate: -9deg; } 60% { rotate: 5deg; } 100% { rotate: 0deg; } }
 
 @media (hover: hover) and (pointer: fine) {
-  :root { --sweep: var(--orange); }
+  :root { --sweep: var(--accent); }
   :is([data-ground='night'], .on-dark, .finale, .footer) { --sweep: var(--accent-soft); }
-  :is(.check--orange, .mq--light, .asas__nums li:first-child, .parts__piece--orange, .nums__tile--light) { --sweep: var(--accent); }
+  :is(.check--blue, .step--accent, .nums__tile--accent, .tool, .asas__nums li:nth-child(2)) { --sweep: #fff; }
+  :is(.check--sky, .check--leaf, .check--iris, .mq--light, .nums__tile--light) { --sweep: var(--accent-deep); }
 
   /* Headings, card titles and intro lines: a band of light passes through the letters, left to right.
      The text stays real text; only its fill is painted from a moving gradient while hovered. */
-  html :is(.h2:not(.parts__title), .h3, .chk__h, .step__title, .pill__t, .meth__services-title, .tools__title, .tool__promise,
+  html :is(.h2:not(.parts__title), .h3, .chk__h, .step__title, .pill__t, .meth__services-title, .tools__title, .tool__name,
     .finale__title, .asas__promise, .tl__name, .tl__promise, .tl__quote, .tl__step-title, .find__title, .feature__title,
     .svc__t, .method__title, .courses__t, .sheet__title, .next__title, .more__title, .family__title, .workflow__t,
     .skills__title, .check__t, .lead, .phd__lead, .ph__intro, .parts__lead, .tools__sub, .chk__close, .revs__lead, .finale__sub):hover,
@@ -32,9 +34,11 @@
 
   /* Icon tiles: the drawing turns and grows inside its tile. Tiles take the pointer even inside decorative
      layers, so every icon answers. */
-  html .sticker.sticker { pointer-events: auto; }
+  html .sticker.sticker { pointer-events: auto; transition: translate 0.55s var(--ease-pop), scale 0.55s var(--ease-pop), box-shadow 0.4s; }
   html .sticker.sticker svg { transition: rotate 0.6s var(--ease-pop), scale 0.6s var(--ease-pop); }
+  html .sticker.sticker:hover { translate: 0 -6px; scale: 1.08; animation: hv-wiggle 0.7s var(--ease-pop); box-shadow: 0 26px 44px -18px rgb(28 51 168 / 0.6); }
   html .sticker.sticker:hover svg { rotate: -12deg; scale: 1.14; }
+  html .sticker.sticker .ic__a { transition: stroke 0.3s, fill 0.3s; }
 
   /* Kickers: the dot pulses and the label warms. */
   html .kicker { transition: background-color var(--d-small), color var(--d-small); }
@@ -72,7 +76,7 @@
     translate: 4px 0;
     background-color: color-mix(in srgb, var(--accent) 10%, var(--bg, #fff));
   }
-  html .check:hover { box-shadow: 0 0 0 2px var(--accent), 0 16px 30px -16px rgb(14 17 22 / 0.45); }
+  html .check:hover { box-shadow: 0 22px 34px -16px rgb(14 17 22 / 0.5); }
 
   /* Cards that had no hover of their own: they lift. */
   html :is(.chk__card, .step, .tl__how li, .feature, .find, .receipt, .method li, .svc li, .count, .cert__card, .sheet, .tl__problem, .more-card, .sum) {
@@ -83,13 +87,12 @@
     box-shadow: 0 26px 48px -24px rgb(14 17 22 / 0.45);
   }
   /* The method cards are stuck while they stack, so they answer with their icon and number instead of moving. */
-  html .step:hover { box-shadow: 0 -12px 30px -18px rgb(14 17 22 / 0.3), 0 0 0 2px color-mix(in srgb, var(--accent) 55%, transparent) inset; }
   html .step__sticker { transition: rotate 0.6s var(--ease-pop), translate 0.6s var(--ease-pop); }
   html .step:hover .step__sticker { rotate: -10deg; translate: -6px -8px; }
 
-  /* The parts board: a slot's outline turns solid cobalt and its label steps up. */
-  html .parts__slot { transition: outline-color var(--d-small), background-color var(--d-small); }
-  html .parts__slot:hover { outline: 2px solid var(--accent); background: var(--accent-tint); }
+  /* The parts board: a slot tints cobalt and its label steps up. */
+  html .parts__slot { transition: background-color var(--d-small); }
+  html .parts__slot:hover { background: var(--accent-tint-2); }
   html .parts__label { transition: translate 0.4s var(--ease-register), color var(--d-small); }
   html .parts__slot:hover .parts__label { translate: 0 -4px; color: var(--accent); }
 

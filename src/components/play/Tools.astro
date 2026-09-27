@@ -22,8 +22,8 @@ const tones = ['var(--cloud)', '#ffffff', 'var(--accent-tint)'];
       {tools.map((t, i) => (
         <li class="tool" data-tool style={`--tone:${tones[i % tones.length]}`} data-glow>
           <div class="tool__text">
-            <p class="tool__n"><span>{t.n}</span> {t.name}</p>
-            <p class="tool__promise" data-promise>{t.promise}</p>
+            <p class="tool__n"><span>{t.n}</span> {t.caseStudy ? 'Tool · case study' : 'Tool'}</p>
+            <h3 class="tool__name" data-promise>{t.name}</h3>
             <p class="tool__what">{t.what}</p>
             <p class="tool__links">
               <a class="btn tool__btn" href={t.href}>How it works<span class="visually-hidden">: {t.name}</span> <span class="arrow" aria-hidden="true">→</span></a>
@@ -76,7 +76,7 @@ const tones = ['var(--cloud)', '#ffffff', 'var(--accent-tint)'];
   .tools__bolt { position: absolute; right: var(--margin); top: -10px; width: clamp(80px, 10vw, 150px); animation: bolt-float 4.2s var(--ease-drift) infinite alternate; }
   @keyframes bolt-float { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(-14px) rotate(-5deg); } }
   .tools__bolt :global(.sticker) { --size: 100%; width: 100%; }
-  .tools .tools__bolt :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--orange-soft); box-shadow: 0 22px 44px -20px rgb(43 77 224 / 0.8); }
+  .tools .tools__bolt :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); box-shadow: 0 22px 44px -20px rgb(43 77 224 / 0.8); }
   .tools__viewport { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-inline: var(--margin); scroll-padding-inline: var(--margin); }
   .tools__viewport::-webkit-scrollbar { display: none; }
   .tools__track { display: flex; gap: clamp(14px, 1.6vw, 24px); width: max-content; padding-block: 8px 24px; }
@@ -99,7 +99,8 @@ const tones = ['var(--cloud)', '#ffffff', 'var(--accent-tint)'];
   .tool__text { display: grid; gap: var(--s-4); align-content: start; }
   .tool__n { display: inline-flex; align-items: center; gap: 10px; font: 750 var(--t-label) / 1 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
   .tool__n span { display: inline-grid; place-items: center; min-width: 34px; height: 34px; padding-inline: 6px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font-size: 0.75rem; }
-  .tool__promise { font-family: var(--font-display); font-weight: 900; font-stretch: 86%; font-size: clamp(2.25rem, 4vw, 4.25rem); line-height: 0.9; text-transform: uppercase; text-wrap: balance; }
+  /* The tool's name is the card's title; the screenshot beside it carries the tool's own headline, so it isn't repeated. */
+  .tool__name { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: var(--t-h2); line-height: 0.9; text-transform: uppercase; text-wrap: balance; }
   .tool__what { max-width: 44ch; font-weight: 500; }
   .tool__links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-4); margin-top: var(--s-2); }
   .tool__btn { --btn-bg: var(--ink); --btn-fg: #fff; }

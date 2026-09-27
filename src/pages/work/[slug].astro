@@ -58,7 +58,7 @@ const jsonLd = [
 ---
 <Base title={c.title} description={description} path={`/work/${c.slug}/`} og={`work-${c.slug}`} type="article" jsonLd={jsonLd}>
   <article class="case">
-    <PageHead title={c.title} kicker={`${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')} · ${c.kicker}`} tone={tint} size={c.title.length > 22 ? 'm' : 'l'} stickers={c.group === 'systems' ? ['blocks', 'bolt', 'check'] : ['tag', 'cursor', 'spark']}>
+    <PageHead title={c.title} kicker={`${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')} · ${c.kicker}`} tone={tint} size={c.title.length > 22 ? 'm' : 'l'} stickers={c.group === 'systems' ? ['code', 'fx', 'check'] : ['bag', 'cursor', 'chart']}>
       <nav class="case__crumbs" slot="top" aria-label="Breadcrumb"><a href="/work/">← All the work</a><span>{group}</span></nav>
       {c.promise && <p class="case__promise" data-ph-fade>{c.promise}</p>}
       <p class="case__summary" data-ph-fade>{c.summary}</p>
@@ -337,7 +337,7 @@ const jsonLd = [
   .exploded__n { grid-row: span 2; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; font: 750 0.75rem / 1 var(--font-text); }
   .exploded__stage { display: grid; place-items: center; min-height: 440px; }
   .stack { --w: min(80vw, 440px); position: relative; width: var(--w); aspect-ratio: 16 / 10; transform-style: preserve-3d; transform: perspective(1600px) rotateX(54deg) rotateZ(-28deg); }
-  .layer { position: absolute; inset: 0; overflow: hidden; border-radius: 18px; background: #fff; box-shadow: 0 30px 50px -26px rgb(40 20 90 / 0.45); backface-visibility: hidden; }
+  .layer { position: absolute; inset: 0; overflow: hidden; border-radius: 10px; background: #fff; box-shadow: 0 30px 50px -26px rgb(40 20 90 / 0.45); backface-visibility: hidden; }
   .layer--data { transform: translateZ(0); background: var(--mint); padding: 6% 7%; }
   .layer--structure { transform: translateZ(90px); background: var(--lilac); }
   .layer--surface { transform: translateZ(180px); }
@@ -359,7 +359,7 @@ const jsonLd = [
   .features { display: grid; gap: clamp(14px, 1.6vw, 24px); }
   .feature { display: grid; gap: 10px; align-content: start; padding: clamp(20px, 2.2vw, 28px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
   .feature__n { justify-self: start; padding: 5px 10px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 750 0.75rem / 1 var(--font-text); }
-  .feature__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.5rem, 2vw, 2rem); line-height: 0.98; text-transform: uppercase; }
+  .feature__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: var(--t-h3); line-height: 0.98; text-transform: uppercase; }
   .feature__text { font-weight: 500; color: var(--ink-2); }
 
   .details { display: grid; gap: var(--s-7) var(--gutter); }
@@ -378,7 +378,7 @@ const jsonLd = [
   .case__read-head { display: grid; gap: var(--s-4); }
   .case__read-note { color: var(--fg-2); max-width: 36ch; }
   .sframe { position: relative; height: min(78vh, 760px); overflow-y: auto; overflow-x: hidden; border-radius: var(--r-l); background: var(--cloud); box-shadow: var(--shadow-2); overscroll-behavior: contain; border: 6px solid #fff; }
-  .sframe--mob { height: min(78vh, 760px); max-width: 360px; border-radius: 34px; border-width: 8px; border-color: var(--ink); }
+  .sframe--mob { height: min(78vh, 760px); max-width: 360px; border-radius: 24px; border-width: 8px; border-color: var(--ink); }
   :global(.is-driven).sframe { overflow: hidden; }
   .sframe__inner :global(img) { width: 100%; height: auto; }
   .sframe-fig figcaption { margin-top: 12px; font-size: 0.875rem; font-weight: 550; color: var(--fg-2); }
@@ -409,7 +409,7 @@ const jsonLd = [
   .family { display: grid; gap: 8px; }
   .family a { display: grid; grid-template-columns: 1fr auto; gap: 4px var(--s-4); align-items: center; padding: 16px 20px; border-radius: var(--r-l); background: var(--cloud); text-decoration: none; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
   .family a:hover { background: var(--lime); transform: translateX(4px); }
-  .family__title { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: 1.5rem; line-height: 1; text-transform: uppercase; }
+  .family__title { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: var(--t-h3); line-height: 1; text-transform: uppercase; }
   .family__note { grid-column: 1; color: var(--ink-2); font-size: var(--t-small); font-weight: 500; }
   .family__arrow { grid-row: 1 / span 2; grid-column: 2; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: #fff; }
   .case__links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }

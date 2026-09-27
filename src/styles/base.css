@@ -40,7 +40,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul, ol { margin: 0; }
 ul[role='list'], ol[role='list'] { list-style: none; padding: 0; }
 table { border-collapse: collapse; width: 100%; }
-::selection { background: var(--orange-tint-2); color: var(--ink); }
+::selection { background: var(--accent-tint-2); color: var(--ink); }
 
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { text-decoration-thickness: 2px; }
@@ -76,14 +76,6 @@ a:hover { text-decoration-thickness: 2px; }
   white-space: nowrap; border: 0;
 }
 
-/* The background (scripts/motion/aura.ts): soft cobalt and orange washes fixed behind everything, under the
-   page's own rooms; they wander as the page scrolls. Radial gradients, no blur filter, so they are cheap. */
-.aura { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; opacity: 0; transition: opacity 1.4s var(--ease-register); }
-.aura.is-on, .no-js .aura { opacity: 1; }
-.aura i { position: absolute; width: 72vmax; height: 72vmax; border-radius: 50%; will-change: transform; }
-.aura__a { left: -26vmax; top: -24vmax; background: radial-gradient(closest-side, rgb(43 77 224 / 0.13), rgb(43 77 224 / 0.05) 55%, transparent); }
-.aura__b { right: -30vmax; top: 18vh; background: radial-gradient(closest-side, rgb(255 122 26 / 0.12), rgb(255 122 26 / 0.04) 55%, transparent); }
-.aura__c { left: 10vw; top: 70vh; background: radial-gradient(closest-side, rgb(142 162 255 / 0.12), transparent); }
 
 /* Cursor light on cards (scripts/motion/glow.ts). The card must be positioned; --glow tints it per ground. */
 [data-glow] { --glow: rgb(43 77 224 / 0.11); }
@@ -128,7 +120,6 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .h1 { font-family: var(--font-display); font-size: var(--t-h1); font-weight: 900; font-stretch: 75%; line-height: 0.86; letter-spacing: -0.01em; text-wrap: balance; }
 .h2 { font-family: var(--font-display); font-size: var(--t-h2); font-weight: 880; font-stretch: 75%; line-height: 0.88; letter-spacing: -0.005em; text-wrap: balance; }
-.h2--long { font-size: clamp(2.5rem, 4.9vw, 5.25rem); }
 .h3 { font-family: var(--font-display); font-size: var(--t-h3); font-weight: 800; font-stretch: 85%; line-height: 1.02; letter-spacing: 0; text-wrap: balance; }
 .lead { font-size: var(--t-lead); line-height: 1.35; font-weight: 450; letter-spacing: -0.01em; text-wrap: pretty; max-width: 34ch; }
 .prose { max-width: 64ch; text-wrap: pretty; }

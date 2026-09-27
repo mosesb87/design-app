@@ -41,7 +41,7 @@ export const blogSummaries = (rawSummaries as Summary[])
 
 // One tone per category, so a post's colour is the same on every page.
 const TONES = ['var(--sky)', 'var(--peach)', 'var(--lemon)', 'var(--mint)', 'var(--blush)', 'var(--lilac)'];
-const DOTS = ['var(--accent)', 'var(--orange)', 'var(--ink)', 'var(--accent)', 'var(--orange)', 'var(--ink)'];
+const DOTS = ['var(--accent)', 'var(--accent-deep)', 'var(--ink)', 'var(--accent)', 'var(--accent-deep)', 'var(--ink)'];
 export const categories = [...new Set(blogPosts.flatMap((p) => p.categories))].sort();
 export const catKey = (c: string) => c.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 export const toneOf = (c?: string) => TONES[Math.max(0, categories.indexOf(c || '')) % TONES.length];

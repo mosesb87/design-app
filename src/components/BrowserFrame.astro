@@ -14,13 +14,13 @@ const host = url ? url.replace(/^https?:\/\//, '').replace(/\/$/, '') : '';
 </div>
 
 <style>
-  .bf { position: relative; border-radius: 14px; overflow: hidden; background: var(--night); padding: 0 5px 5px; box-shadow: 0 1px 2px rgb(14 17 22 / 0.2), 0 24px 44px -22px rgb(14 17 22 / 0.55); isolation: isolate; }
+  .bf { position: relative; border-radius: 8px; overflow: hidden; background: var(--night); padding: 0; box-shadow: 0 1px 2px rgb(14 17 22 / 0.2), 0 24px 44px -22px rgb(14 17 22 / 0.55); isolation: isolate; }
   .bf__bar { display: flex; align-items: center; gap: 10px; height: 30px; padding: 0 6px; }
   .bf__dots { display: inline-flex; gap: 5px; flex: none; }
   .bf__dots i { width: 8px; height: 8px; border-radius: 50%; background: #3a414e; }
-  .bf__dots i:first-child { background: var(--orange); }
+  .bf__dots i:first-child { background: var(--accent); }
   .bf__dots i:nth-child(2) { background: var(--accent-soft); }
   .bf__url { flex: 1; min-width: 0; max-width: 60%; margin-inline: auto; padding: 3px 10px; border-radius: 6px; background: #1c212a; font: 500 0.6875rem / 1.2 var(--font-text); color: var(--night-ink-2); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .bf__view { position: relative; overflow: hidden; border-radius: 9px; background: var(--night-2); }
-  :global([data-ground='night']) .bf, :global(.on-dark) .bf { box-shadow: 0 0 0 1px rgb(255 255 255 / 0.14), 0 24px 48px -24px rgb(0 0 0 / 0.7); }
+  .bf__view { position: relative; overflow: hidden; background: var(--night-2); }
+  :global([data-ground='night']) .bf, :global(.on-dark) .bf { box-shadow: 0 24px 48px -24px rgb(0 0 0 / 0.7); }
 </style>

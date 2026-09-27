@@ -52,7 +52,7 @@ const Heading = level;
   .rcard__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; line-height: 0.85; white-space: nowrap; font-size: min(5.5rem, calc(100cqi / (var(--chars) * 0.44))); transition: color var(--d-small); }
   .rcard:hover .rcard__num { color: var(--accent); }
   .rcard__label { font-size: 1.0625rem; font-weight: 600; line-height: 1.25; max-width: 28ch; }
-  .rcard__title { margin-top: 4px; font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.4rem, 1.9vw, 1.8rem); line-height: 0.95; text-transform: uppercase; }
+  .rcard__title { margin-top: 4px; font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: var(--t-h3); line-height: 0.95; text-transform: uppercase; }
   .rcard__kind { font-family: var(--font-text); font-stretch: 100%; font-weight: 600; font-size: 0.875rem; text-transform: none; color: var(--ink-2); }
   .rcard__title a { text-decoration: none; }
   .rcard__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 2; }
@@ -60,7 +60,7 @@ const Heading = level;
   .rcard__blurb { font-size: var(--t-small); line-height: 1.45; color: var(--ink-2); }
   .rcard__meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 700 var(--t-slug) / 1.4 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-2); }
   .rcard__focus { display: flex; flex-wrap: wrap; gap: 6px; }
-  .rcard__focus span { padding: 5px 10px; border-radius: var(--r-pill); background: #fff; box-shadow: 0 0 0 1px var(--line-soft); font: 650 0.75rem / 1 var(--font-text); }
+  .rcard__focus span { padding: 5px 10px; border-radius: var(--r-pill); background: #fff; box-shadow: none; font: 650 0.75rem / 1 var(--font-text); }
   .rcard__arrow { position: absolute; right: 18px; bottom: 18px; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--ink); color: #fff; transition: transform 0.5s var(--ease-register), background-color var(--d-small); }
   .rcard:hover .rcard__arrow { transform: rotate(-45deg); background: var(--accent); }
 </style>

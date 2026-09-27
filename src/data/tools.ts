@@ -199,17 +199,6 @@ export const toolPages: ToolDetail[] = [
     live: 'https://apps.moseswebworks.com/aiacademy/',
     media: 'ai-academy',
   },
-  {
-    slug: 'the-lab',
-    name: 'The Lab',
-    what: 'The hub for working demos and modeled-company adaptations, each labelled as a modeled company.',
-    inside: ['Public data only', 'Runs in the browser', 'A plain-English reason and a named owner for every verdict', 'Where money is involved, two independent implementations must agree', 'A guide ships with every build'],
-    status: 'Live',
-    live: 'https://lab.mousabatarseh.com/',
-    liveLabel: 'lab.mousabatarseh.com',
-    media: 'the-lab',
-    made: 'How every build is made',
-  },
 ];
 
 // The home rack: seven tools, each linking to its section on /tools/.

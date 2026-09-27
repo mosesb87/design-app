@@ -1,5 +1,6 @@
-// The archive preview: hovering (or focusing) a row opens a small browser window beside the pointer, showing that
-// project. Where a full-page capture exists, the page scrolls inside the window — down, a pause, back up — on a
+// The archive preview: hovering (or focusing) an entry opens a browser window near the pointer, showing that
+// project, with a caption (what it is, platform, status). In the index's wall of names the window sits below the
+// name (above it in the lower half of the screen), centred on the pointer, so it never covers what is being read. Where a full-page capture exists, the page scrolls inside the window — down, a pause, back up — on a
 // loop, like a screen recording; otherwise its first screen drifts in slowly. The window follows the pointer with
 // lerp 0.15; keyboard focus anchors it beside the row. Reduced motion: a still first screen, no following.
 import { gsap } from 'gsap';
@@ -11,6 +12,12 @@ export default function loupe(els: HTMLElement[], env: Env) {
     const lens = root.querySelector<HTMLElement>('[data-loupe-lens]');
     const img = root.querySelector<HTMLImageElement>('[data-loupe-img]');
     const url = root.querySelector<HTMLElement>('[data-loupe-url]');
+    const cap = {
+      title: root.querySelector<HTMLElement>('[data-loupe-title]'),
+      what: root.querySelector<HTMLElement>('[data-loupe-what]'),
+      meta: root.querySelector<HTMLElement>('[data-loupe-meta]'),
+    };
+    const wall = root.dataset.loupeMode === 'wall';
     const view = img?.parentElement;
     if (!lens || !img || !view) return;
     const rows = [...root.querySelectorAll<HTMLElement>('[data-row][data-preview]')];
@@ -31,11 +38,18 @@ export default function loupe(els: HTMLElement[], env: Env) {
       raf = open || Math.abs(target.x - pos.x) > 0.5 || Math.abs(target.y - pos.y) > 0.5 ? requestAnimationFrame(loop) : 0;
     };
     const place = (x: number, y: number, row?: HTMLElement) => {
-      // Keep the window on screen and clear of the project's name: to the right of the title cell (or of the
-      // pointer, whichever is further), so it never covers the row being read.
-      const title = row?.querySelector('th')?.getBoundingClientRect();
-      const lx = Math.min(innerWidth - w() - 16, Math.max(16, x + 32, title ? title.right - 40 : 0));
-      const ly = Math.min(innerHeight - h() - 16, Math.max(16, y - h() / 2));
+      // Keep the window on screen and clear of the entry being read.
+      let lx: number, ly: number;
+      if (wall && row) {
+        const r = (row.querySelector('.ix__link') || row).getBoundingClientRect();
+        lx = Math.min(innerWidth - w() - 16, Math.max(16, x - w() / 2));
+        ly = r.top + r.height / 2 < innerHeight * 0.5 ? r.bottom + 14 : r.top - h() - 14;
+        ly = Math.min(innerHeight - h() - 8, Math.max(8, ly));
+      } else {
+        const title = row?.querySelector('th')?.getBoundingClientRect();
+        lx = Math.min(innerWidth - w() - 16, Math.max(16, x + 32, title ? title.right - 40 : 0));
+        ly = Math.min(innerHeight - h() - 16, Math.max(16, y - h() / 2));
+      }
       target.x = lx; target.y = ly;
       if (!raf) raf = requestAnimationFrame(loop);
     };
@@ -62,6 +76,9 @@ export default function loupe(els: HTMLElement[], env: Env) {
         current = row;
         const src = row.dataset.full || row.dataset.preview!;
         if (url) url.textContent = row.dataset.host || '';
+        if (cap.title) cap.title.textContent = row.dataset.title || '';
+        if (cap.what) cap.what.textContent = row.dataset.what || '';
+        if (cap.meta) cap.meta.textContent = row.dataset.meta || '';
         run?.kill();
         gsap.set(img, { y: 0, scale: 1 });
         // Show the first screen at once; swap to the full page when it has loaded, then start the scroll.
@@ -92,7 +109,7 @@ export default function loupe(els: HTMLElement[], env: Env) {
       row.addEventListener('pointerleave', hide);
       row.addEventListener('focusin', () => {
         const r = row.getBoundingClientRect();
-        place(Math.min(r.left + r.width * 0.55, innerWidth - w() - 40), r.top + r.height / 2);
+        place(Math.min(r.left + r.width * 0.55, innerWidth - w() - 40), r.top + r.height / 2, wall ? row : undefined);
         show(row);
       });
       row.addEventListener('focusout', hide);

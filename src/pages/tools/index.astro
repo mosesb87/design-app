@@ -30,7 +30,7 @@ const jsonLd = [
 ];
 ---
 <Base title="Tools" description={`${toolPages.length} working tools built by Mousa Batarseh — DealProof, ChangeAtlas Commerce, the Deals Operating System, CSV Mapper, ASAS Studio, SEO Tools and more: what each one checks, how it works and where to open it.`} path="/tools/" og="tools" jsonLd={jsonLd}>
-  <PageHead title="Tools I built." kicker={`Tools · ${toolPages.length} working builds`} lead="Working tools, running live. Each one makes the check run before the mistake does." stickers={['bolt', 'cell', 'check']}>
+  <PageHead title="Tools I built." kicker={`Tools · ${toolPages.length} working builds`} lead="Working tools, running live. Each one makes the check run before the mistake does." stickers={['code', 'fx', 'bolt']}>
     <nav class="tjump" aria-label="Tools on this page">
       <ol role="list">
         {toolPages.map((t, i) => (
@@ -158,7 +158,7 @@ const jsonLd = [
   .tl--dark .tl__n .num { background: #fff; color: var(--ink); }
   .tl__status { padding: 7px 11px; border-radius: var(--r-pill); background: var(--accent-tint); color: var(--accent-deep); }
   .tl--dark .tl__status { background: rgb(142 162 255 / 0.16); color: var(--accent-soft); }
-  .tl__name { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.75rem, 5.4vw, 5.5rem); line-height: 0.88; text-transform: uppercase; text-wrap: balance; }
+  .tl__name { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h2); line-height: 0.88; text-transform: uppercase; text-wrap: balance; }
   .tl__promise { font-size: var(--t-lead); line-height: 1.25; font-weight: 650; letter-spacing: -0.01em; max-width: 26ch; }
   .tl__what { color: var(--fg-2); max-width: 46ch; }
   .tl__facts { display: grid; gap: 10px; margin-top: 4px; }
@@ -169,16 +169,16 @@ const jsonLd = [
   .tl--dark .tl__open { --btn-bg: #fff; --btn-fg: var(--ink); }
 
   .tl__main { display: grid; gap: var(--s-6); min-width: 0; }
-  .tl__media :global(.bf) { border-radius: 16px; }
+  .tl__media :global(.bf) { border-radius: 10px; }
   .tl__media :global(.vplate__frame) { border-radius: 0; }
   .tl__media :global(.vplate__cap) { padding: 10px 14px; background: #1c212a; color: var(--night-ink-2); }
   .tl__media :global(picture img) { width: 100%; height: auto; }
   .tl__block { display: grid; gap: var(--s-4); }
   .tl__label, .tl__h3 { font: 750 var(--t-label) / 1.2 var(--font-text); letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg-2); }
-  .tl__problem { position: relative; padding: clamp(20px, 2.4vw, 32px); border-radius: var(--r-l); background: var(--orange-tint); color: var(--ink); }
-  .tl__problem .tl__label { color: var(--orange-deep); }
+  .tl__problem { position: relative; padding: clamp(20px, 2.4vw, 32px); border-radius: var(--r-l); background: var(--grey-1); color: var(--ink); }
+  .tl__problem .tl__label { color: var(--accent-deep); }
   .tl--room .tl__problem { background: #fff; }
-  .tl--dark .tl__problem { background: var(--orange); }
+  .tl--dark .tl__problem { background: var(--blue-soft); }
   .tl--dark .tl__problem .tl__label { color: var(--ink); }
   .tl__problem-text { font-size: var(--t-lead); line-height: 1.32; font-weight: 550; letter-spacing: -0.01em; }
   .tl__how { display: grid; gap: 10px; }
@@ -190,7 +190,7 @@ const jsonLd = [
   .tl__step-text { font-size: var(--t-small); line-height: 1.45; color: var(--fg-2); }
   .tl__inside { display: grid; gap: 6px; }
   .tl__inside li { position: relative; padding: 11px 16px 11px 38px; border-radius: var(--r-m); background: var(--cloud); line-height: 1.4; }
-  .tl__inside li::before { content: ''; position: absolute; left: 16px; top: 1.05em; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+  .tl__inside li::before { content: ''; position: absolute; left: 16px; top: 1.05em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
   .tl--room .tl__inside li { background: #fff; }
   .tl--dark .tl__inside li { background: #fff; color: var(--ink); }
   .tl__nums { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px; }
@@ -209,7 +209,7 @@ const jsonLd = [
   .tl--room .tl__family a { background: #fff; }
   .tl--dark .tl__family a { background: #fff; color: var(--ink); --fg-2: var(--ink-2); }
   .tl__family a:hover { background: var(--accent-tint-2); transform: translateX(4px); }
-  .tl--dark .tl__family a:hover { background: var(--orange-tint-2); }
+  .tl--dark .tl__family a:hover { background: var(--blue-pale); }
   .tl__fam-name { font-weight: 700; }
   .tl__fam-note { font-size: var(--t-small); color: var(--fg-2); line-height: 1.4; }
   .tl__src { color: var(--fg-2); }

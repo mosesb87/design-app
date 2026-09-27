@@ -44,7 +44,7 @@ import Ghost from '../Ghost.astro';
 <style>
   .sites__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-8); }
   .sites__sub { max-width: 44ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.3; }
-  .sites__grid { display: grid; gap: clamp(16px, 2vw, 32px); }
+  .sites__grid { display: grid; gap: clamp(72px, 7vw, 112px) clamp(16px, 2vw, 32px); }
   .site {
     position: relative;
     display: grid;
@@ -70,7 +70,7 @@ import Ghost from '../Ghost.astro';
     bottom: 0;
     width: 22%;
     aspect-ratio: 390 / 844;
-    border-radius: 18px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 0 0 4px var(--night), var(--shadow-2);
     transform: translateZ(50px);
@@ -79,7 +79,7 @@ import Ghost from '../Ghost.astro';
   .site__phone :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
   .site__text { display: grid; gap: 8px; }
   .site__kicker { font: 750 var(--t-label) / 1.2 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
-  .site__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.25rem, 3.6vw, 3.75rem); line-height: 0.9; text-transform: uppercase; }
+  .site__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h3); line-height: 0.9; text-transform: uppercase; }
   .site__summary { max-width: 46ch; font-weight: 500; }
   .site__cta {
     justify-self: start;
@@ -102,6 +102,6 @@ import Ghost from '../Ghost.astro';
   .sites__more { margin-top: var(--s-8); display: flex; justify-content: center; }
   @media (min-width: 900px) {
     .sites__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .sites__grid { row-gap: clamp(56px, 5vw, 80px); }
+    .sites__grid { row-gap: clamp(88px, 8vw, 128px); }
   }
 </style>

@@ -1,6 +1,6 @@
 // S5 — The register rack. Desktop + fine pointer + motion: the track is pinned in a sticky viewport and
 // scroll moves it sideways (no hijack — vertical scroll distance simply equals the track's overflow).
-// As each card reaches the centre its promise stretches to full width and its screenshot grows with it; away
+// As each card reaches the centre its name stretches to full width and its screenshot grows with it; away
 // from the centre both squeeze together. It is a transform, so the text keeps its line breaks.
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

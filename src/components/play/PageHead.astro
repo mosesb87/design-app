@@ -1,6 +1,6 @@
 ---
-// Inner-page header in the home page's language: a huge condensed title whose letters pop in (and hop when
-// touched), a few stickers that float, lean towards the pointer and spin when clicked. The same motion module
+// Inner-page header in the home page's language: a condensed title, one size on every page, whose letters fly in
+// from scattered spots and settle (and hop when touched), a few stickers that float, lean towards the pointer and spin when clicked. The same motion module
 // as the home hero (play-hero.ts). Optional tone turns the header into a coloured room.
 import Sticker from './Sticker.astro';
 import type { StickerName } from './types';
@@ -22,7 +22,6 @@ const hasAside = Astro.slots.has('aside');
 const depths = [0.9, 0.6, 1.2];
 ---
 <header class:list={['phd', `phd--${size}`, { 'phd--room': !!tone, 'phd--aside': hasAside, 'phd--lines': !!breakAfter }]} style={tone ? `--bg:${tone}` : undefined} data-play-hero>
-  {!tone && <div class="phd__glow" aria-hidden="true"></div>}
   <div class="wrap phd__inner">
     <slot name="top" />
     {kicker && <p class="kicker phd__kicker" data-ph-fade>{kicker}</p>}
@@ -52,7 +51,7 @@ const depths = [0.9, 0.6, 1.2];
 </header>
 
 <style>
-  .phd { position: relative; overflow: clip; padding-top: calc(var(--nav-h) + var(--s-8)); padding-bottom: var(--s-8); }
+  .phd { position: relative; overflow: clip; padding-top: calc(var(--nav-h) + var(--s-8)); padding-bottom: var(--s-6); }
   .phd--room {
     background: var(--bg);
     color: var(--ink);
@@ -61,21 +60,6 @@ const depths = [0.9, 0.6, 1.2];
     --fg: var(--ink);
     --fg-2: var(--ink-2);
   }
-  .phd__glow {
-    position: absolute;
-    left: -10%;
-    right: -10%;
-    top: 30%;
-    height: 50%;
-    background: var(--spectrum);
-    background-size: 200% 100%;
-    filter: blur(100px);
-    opacity: 0.2;
-    border-radius: 50%;
-    animation: phd-drift 16s linear infinite;
-    pointer-events: none;
-  }
-  @keyframes phd-drift { to { background-position: 200% 0; } }
   .phd__inner { position: relative; z-index: 1; display: grid; gap: var(--s-5); }
   .phd__kicker { justify-self: start; }
   .phd--room .phd__kicker { background: rgb(255 255 255 / 0.72); }
@@ -89,10 +73,9 @@ const depths = [0.9, 0.6, 1.2];
     max-width: 11ch;
     user-select: none;
   }
-  .phd--xl .phd__title { font-size: clamp(4rem, 13.5vw, 13.5rem); }
-  .phd--l .phd__title { font-size: clamp(3.25rem, 10vw, 10rem); max-width: 13ch; }
-  .phd--m .phd__title { font-size: clamp(2.75rem, 7vw, 7.25rem); max-width: 16ch; line-height: 0.88; }
-  .phd--s .phd__title { font-size: clamp(2.4rem, 5.2vw, 5.25rem); max-width: 20ch; line-height: 0.9; }
+  /* One size for every page title (the same as a blog post's); long titles simply take more lines. */
+  .phd__title { font-size: clamp(3rem, 7.2vw, 7.5rem); max-width: 16ch; line-height: 0.88; }
+  .phd--s .phd__title { max-width: 20ch; }
   .phd__w { display: inline-block; white-space: nowrap; }
   .phd__br { display: none; }
   @media (min-width: 700px) { .phd--lines .phd__title { max-width: none; } .phd__br { display: inline; } }
@@ -102,10 +85,10 @@ const depths = [0.9, 0.6, 1.2];
   .phd__stickers { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
   .phd__s { position: absolute; display: block; pointer-events: auto; cursor: grab; }
   .phd__s :global(.sticker) { --size: 100%; width: 100%; }
-  /* Coloured tiles: cobalt, orange, night. */
-  .phd .phd__s--1 :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--orange-soft); box-shadow: 0 22px 40px -22px rgb(28 51 168 / 0.75); }
-  .phd .phd__s--2 :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: #fff; box-shadow: 0 18px 32px -18px rgb(194 65 12 / 0.65); }
-  .phd .phd__s--3 :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--orange); }
+  /* Coloured tiles with a light-to-deep gradient: cobalt, the logo's green, deep cobalt into night. */
+  .phd .phd__s--1 :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); background: linear-gradient(150deg, #4d6bff, var(--accent) 45%, var(--accent-deep)); box-shadow: 0 22px 40px -22px rgb(28 51 168 / 0.75); }
+  .phd .phd__s--2 :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--leaf-soft), var(--leaf) 60%); box-shadow: 0 18px 32px -18px rgb(90 160 0 / 0.55); }
+  .phd .phd__s--3 :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); background: linear-gradient(150deg, var(--accent-deep), var(--night) 70%); box-shadow: 0 20px 36px -20px rgb(13 16 21 / 0.7); }
   .phd__s--1 { width: clamp(84px, 13vw, 210px); right: var(--margin); top: calc(var(--nav-h) + 28px); }
   .phd__s--2 { width: clamp(44px, 5.5vw, 88px); right: calc(var(--margin) + clamp(96px, 15vw, 250px)); top: calc(var(--nav-h) + 12px); }
   .phd__s--3 { display: none; }
@@ -124,5 +107,4 @@ const depths = [0.9, 0.6, 1.2];
     .phd--aside .phd__inner > :not(.phd__aside) { grid-column: 1; }
     .phd--aside .phd__aside { grid-column: 2; grid-row: 1 / span 6; margin-top: 0; }
   }
-  @media (prefers-reduced-motion: reduce) { .phd__glow { animation: none; } }
 </style>

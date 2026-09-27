@@ -93,6 +93,7 @@ const graph = {
       document.documentElement.classList.replace('no-js', 'js');
       // Motion class before first paint, so space that scroll scenes reserve in CSS never shifts the page.
       document.documentElement.classList.add(matchMedia('(prefers-reduced-motion: reduce)').matches ? 'motion-reduced' : 'motion-ok');
+      document.documentElement.classList.add(matchMedia('(hover: hover) and (pointer: fine)').matches ? 'pointer-fine' : 'pointer-coarse');
       // View-transition naming must be registered before first render.
       (function () {
         var NAME = 'project-plate';
@@ -119,7 +120,6 @@ const graph = {
     </script>
   </head>
   <body class={bodyClass} id="top">
-    <div class="aura" aria-hidden="true" data-aura><i class="aura__a"></i><i class="aura__b"></i><i class="aura__c"></i></div>
     <a class="skip-link" href="#main">Skip to content</a>
     <Nav current={path} count={entryCount} contact={contact} />
     <main id="main" tabindex="-1">

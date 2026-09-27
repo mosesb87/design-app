@@ -1,12 +1,21 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PageHead from '../../components/play/PageHead.astro';
-import { person, method, workflow, services, skills, toolGroups, courses, CHECKED, formatDate } from '../../data/site';
+import { person, method, workflow, services, skills, toolGroups, courses, degree, CHECKED, formatDate } from '../../data/site';
+import Sticker from '../../components/play/Sticker.astro';
+import type { StickerName } from '../../components/play/types';
+// The spec sheet: skills, then tools, each group a coloured card with its own icon.
+const specLook: { tone: string; icon: StickerName }[] = [
+  { tone: 'blue', icon: 'cell' }, { tone: 'white', icon: 'lens' }, { tone: 'night', icon: 'bag' }, { tone: 'leaf', icon: 'fx' }, { tone: 'sky', icon: 'check' },
+  { tone: 'night', icon: 'code' }, { tone: 'iris', icon: 'chart' }, { tone: 'white', icon: 'heart' }, { tone: 'blue', icon: 'blocks' }, { tone: 'leaf', icon: 'bolt' },
+];
+const specGroups = [...skills.map((g) => ({ title: g.title, items: [...g.items] })), ...toolGroups.map((g) => ({ title: `Tools · ${g.title}`, items: [...g.items] }))]
+  .map((g, i) => ({ ...g, ...specLook[i % specLook.length] }));
 import { SITE_URL } from '../../data/site';
 const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url: `${SITE_URL}/about/`, mainEntity: { '@id': `${SITE_URL}/#person` } }];
 ---
 <Base title="About" description={`About ${person.name}: seven years building and running WordPress sites and e-commerce stores — product data, SEO, operations and the tools that check them. Warren, Michigan.`} path="/about/" og="about" type="profile" jsonLd={jsonLd}>
-  <PageHead title="From fragile to boring." kicker="About · Warren, Michigan" lead="In the best way." stickers={['heart', 'cursor', 'cell']} />
+  <PageHead title="Sites that just work." kicker="About · Warren, Michigan" lead="Reliable, predictable and quietly doing their job: that is what I build and look after." stickers={['heart', 'bag', 'chart']} />
 
   <section class="about__intro section wrap" aria-labelledby="intro-title">
     <h2 class="visually-hidden" id="intro-title">Who I am</h2>
@@ -78,28 +87,34 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
       <p class="kicker">Skills & tools</p>
       <h2 class="h2" id="skills-title">The spec sheet.</h2>
     </header>
-    <div class="skills">
-      {skills.map((g) => (
-        <div class="skills__group">
+    <div class="skills" data-pop-grid>
+      {specGroups.map((g, i) => (
+        <article class:list={['skills__group', `skills__group--${g.tone}`]} data-pop data-glow>
+          <header class="skills__head">
+            <span class="skills__icon" aria-hidden="true"><Sticker name={g.icon} /></span>
+            <span class="skills__count num" aria-hidden="true">{String(g.items.length).padStart(2, '0')}</span>
+          </header>
           <h3 class="skills__title">{g.title}</h3>
-          <ul role="list">{g.items.map((it) => <li>{it}</li>)}</ul>
-        </div>
-      ))}
-      {toolGroups.map((g) => (
-        <div class="skills__group">
-          <h3 class="skills__title">Tools · {g.title}</h3>
-          <ul role="list">{g.items.map((it) => <li>{it}</li>)}</ul>
-        </div>
+          <ul role="list">{g.items.map((it, k) => <li style={`--k:${k}`}>{it}</li>)}</ul>
+        </article>
       ))}
     </div>
   </section>
 
   <section class="about__courses section wrap" aria-labelledby="courses-title">
     <header class="about__head">
-      <p class="kicker">Learning</p>
-      <h2 class="h2" id="courses-title">Courses & certifications.</h2>
-      <p class="about__note">Titles, issuers and dates as printed on the certificates shown; the others as listed on my previous portfolio.</p>
+      <p class="kicker">Education</p>
+      <h2 class="h2" id="courses-title">Degree & certificates.</h2>
+      <p class="about__note">Titles, issuers and dates as printed on each certificate. Every card opens its certificate full size.</p>
     </header>
+    <div class="degree" data-glow>
+      <span class="degree__icon" aria-hidden="true"><Sticker name="check" /></span>
+      <div class="degree__text">
+        <p class="degree__kicker">Degree · {degree.years}</p>
+        <h3 class="degree__title">{degree.title} · {degree.field}</h3>
+        <p class="degree__school">{degree.school} · {degree.place}</p>
+      </div>
+    </div>
     <ul class="courses" role="list" data-pop-grid>
       {courses.map((c) => (
         <li class:list={['cert', { 'has-cert': !!c.cert }]} data-pop>
@@ -150,7 +165,7 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
   .method li.is-dark { background: var(--accent); color: #fff; --glow: rgb(255 255 255 / 0.12); }
   .method li.is-dark .method__n { background: #fff; color: var(--ink); }
   .method__n { justify-self: start; padding: 5px 10px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 750 0.8125rem / 1 var(--font-text); }
-  .method__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(1.9rem, 2.6vw, 2.6rem); line-height: 0.92; text-transform: uppercase; }
+  .method__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h3); line-height: 0.92; text-transform: uppercase; }
   .method__text { font-weight: 500; }
   .workflow { display: grid; gap: 8px; }
   .workflow li { display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; align-items: baseline; padding: 14px 18px; border-radius: var(--r-m); background: var(--cloud); }
@@ -160,37 +175,75 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
   .svc { display: grid; gap: 12px; }
   .svc li { display: grid; gap: 8px; padding: clamp(20px, 2.2vw, 30px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
   .svc__n { justify-self: start; font: 750 0.8125rem / 1 var(--font-text); padding: 5px 10px; border-radius: var(--r-pill); background: #fff; }
-  .svc__t { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.75rem, 2.4vw, 2.4rem); line-height: 0.95; text-transform: uppercase; }
+  .svc__t { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: var(--t-h3); line-height: 0.95; text-transform: uppercase; }
   .svc__d { max-width: 56ch; font-weight: 500; }
   .svc__tools { display: flex; flex-wrap: wrap; gap: 6px; }
   .svc__tools span { padding: 5px 10px; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.7); font: 650 0.8125rem / 1.2 var(--font-text); }
-  .skills { display: grid; gap: 12px; }
-  .skills__group { padding: 20px 22px; border-radius: var(--r-l); background: var(--cloud); }
-  .skills__title { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: 1.4rem; line-height: 1; text-transform: uppercase; margin-bottom: 14px; }
+  .skills { display: grid; gap: 12px; align-items: start; }
+  .skills__group { position: relative; display: grid; gap: 12px; padding: 20px 22px 22px; border-radius: var(--r-l); background: var(--cloud); color: var(--ink); overflow: hidden; transition: translate 0.5s var(--ease-register), box-shadow 0.4s; }
+  .skills__group:hover { translate: 0 -5px; box-shadow: 0 26px 48px -24px rgb(14 17 22 / 0.45); }
+  .skills__head { display: flex; align-items: flex-start; justify-content: space-between; }
+  .skills__icon { width: 56px; }
+  .skills__icon :global(.sticker) { --size: 100%; width: 100%; }
+  .skills__count { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.5rem, 3.6vw, 3.5rem); line-height: 0.8; opacity: 0.18; transition: opacity 0.4s, scale 0.5s var(--ease-pop); transform-origin: 100% 0; }
+  .skills__group:hover .skills__count { opacity: 0.5; scale: 1.1; }
+  /* Tones: each card its own colour, with a tile and chips that read on it. */
+  .skills__group--blue { background: var(--accent); color: #fff; }
+  .skills__group--white { background: #fff; box-shadow: var(--shadow-1); }
+  .skills__group--night { background: var(--night); color: #fff; }
+  .skills__group--leaf { background: var(--leaf-soft); }
+  .skills__group--sky { background: var(--accent-tint-2); }
+  .skills__group--iris { background: var(--iris); }
+  .about__skills .skills__group--blue .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--accent); }
+  .about__skills .skills__group--white .skills__icon :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); }
+  .about__skills .skills__group--night .skills__icon :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); }
+  .about__skills .skills__group--leaf .skills__icon :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--leaf); }
+  .about__skills .skills__group--sky .skills__icon :global(.sticker) { --tile: var(--iris-deep); --stroke: #fff; --acc: var(--blue-pale); }
+  .about__skills .skills__group--iris .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--iris-deep); }
+  .skills__title { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: var(--t-h3); line-height: 1; text-transform: uppercase; margin-bottom: 14px; }
   .skills__group ul { display: flex; flex-wrap: wrap; gap: 6px; }
-  .skills__group li { padding: 6px 11px; border-radius: var(--r-pill); background: #fff; font-size: 0.875rem; font-weight: 600; }
+  .skills__group li { padding: 6px 11px; border-radius: var(--r-pill); background: #fff; color: var(--ink); font-size: 0.875rem; font-weight: 600; transition: background-color var(--d-small), color var(--d-small), translate 0.4s var(--ease-pop); }
+  .skills__group--white li { background: var(--cloud); }
+  .skills__group--blue li, .skills__group--night li { background: rgb(255 255 255 / 0.12); color: #fff; }
+  .skills__group li:hover { background: var(--ink); color: #fff; translate: 0 -2px; }
+  .skills__group--night li:hover, .skills__group--blue li:hover { background: #fff; color: var(--ink); }
+  /* Pointing at a card sends a ripple through its chips. */
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .skills__group:hover li { animation: chip-wave 0.6s var(--ease-pop) both; animation-delay: calc(var(--k) * 35ms); }
+  }
+  @keyframes chip-wave { 40% { translate: 0 -5px; } 100% { translate: 0 0; } }
   .courses { display: grid; gap: 12px; }
   .cert { position: relative; }
   .cert__card { position: relative; height: 100%; overflow: hidden; display: grid; gap: 6px; align-content: start; padding: 20px 22px; border-radius: var(--r-l); background: var(--cloud); }
-  .has-cert .cert__card { padding-right: 40%; min-height: 190px; }
+  .has-cert .cert__card { padding-right: 34%; min-height: 200px; }
   .courses__date { font: 650 0.8125rem / 1.3 var(--font-text); color: var(--ink-2); }
   /* A quarter of the certificate peeks out of the card's corner; hovering shows the whole of it. */
-  .cert__peek { position: absolute; right: -16%; bottom: -24%; width: 50%; padding: 0; border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px rgb(14 17 22 / 0.08), var(--shadow-2); transform: rotate(-8deg); transition: transform 0.6s var(--ease-register); cursor: zoom-in; }
+  .cert__peek { position: absolute; right: -16%; bottom: -24%; width: 50%; padding: 0; border-radius: 6px; overflow: hidden; background: #fff; box-shadow: var(--shadow-2); transform: rotate(-8deg); transition: transform 0.6s var(--ease-register); cursor: zoom-in; }
   .cert__peek img { width: 100%; height: auto; }
   .cert:hover .cert__peek, .cert__peek:focus-visible { transform: rotate(-3deg) translate(-8%, -10%); }
   .cert__peek:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-  .cert__full { position: absolute; z-index: 30; right: 8px; bottom: calc(100% - 24px); width: min(460px, 86vw); padding: 6px; border-radius: 14px; background: var(--night); box-shadow: var(--shadow-2); opacity: 0; visibility: hidden; transform: translateY(12px) scale(0.96); transform-origin: 80% 100%; transition: opacity 0.35s var(--ease-register), transform 0.5s var(--ease-register), visibility 0s 0.35s; pointer-events: none; }
-  .cert__full img { width: 100%; height: auto; border-radius: 9px; }
+  .cert__full { position: absolute; z-index: 30; right: 8px; bottom: calc(100% - 24px); width: min(460px, 86vw); padding: 6px; border-radius: 8px; background: var(--night); box-shadow: var(--shadow-2); opacity: 0; visibility: hidden; transform: translateY(12px) scale(0.96); transform-origin: 80% 100%; transition: opacity 0.35s var(--ease-register), transform 0.5s var(--ease-register), visibility 0s 0.35s; pointer-events: none; }
+  .cert__full img { width: 100%; height: auto; border-radius: 5px; }
   @media (hover: hover) and (pointer: fine) {
     .cert:hover .cert__full { opacity: 1; visibility: visible; transform: none; transition-delay: 0.08s, 0.08s, 0s; }
   }
-  .certdlg { width: min(1100px, 94vw); max-height: 92vh; padding: 8px; border: 0; border-radius: 16px; background: var(--night); color: #fff; }
+  .certdlg { width: min(1100px, 94vw); max-height: 92vh; padding: 8px; border: 0; border-radius: 10px; background: var(--night); color: #fff; }
   .certdlg::backdrop { background: rgb(13 16 21 / 0.72); backdrop-filter: blur(4px); }
   .certdlg__bar { display: flex; justify-content: flex-end; padding: 2px 2px 8px; }
   .certdlg__close { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: var(--r-pill); background: #fff; color: var(--ink); font-weight: 700; }
   .certdlg__img { width: 100%; height: auto; max-height: calc(92vh - 70px); object-fit: contain; border-radius: 10px; background: #fff; }
-  .courses__t { font-family: var(--font-display); font-weight: 900; font-stretch: 82%; font-size: 1.35rem; line-height: 1.05; text-transform: uppercase; }
-  .courses__i { justify-self: start; padding: 4px 9px; border-radius: var(--r-pill); background: var(--orange-tint); color: var(--orange-deep); font: 700 0.75rem / 1.2 var(--font-text); }
+  /* The degree: one wide dark card above the certificates. */
+  .degree { position: relative; display: flex; align-items: center; gap: clamp(16px, 2.4vw, 32px); margin-bottom: 14px; padding: clamp(20px, 2.6vw, 36px); border-radius: var(--r-l); background: var(--night); color: #fff; overflow: hidden; transition: translate 0.5s var(--ease-register), box-shadow 0.4s; }
+  .degree:hover { translate: 0 -4px; box-shadow: 0 28px 50px -26px rgb(14 17 22 / 0.6); }
+  .degree__icon { flex: none; width: clamp(56px, 6vw, 84px); }
+  .degree__icon :global(.sticker) { --size: 100%; width: 100%; }
+  .about__courses .degree__icon :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); }
+  .degree__text { display: grid; gap: 6px; }
+  .degree__kicker { font: 750 var(--t-label) / 1 var(--font-text); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-soft); }
+  .degree__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: var(--t-h3); line-height: 1; text-transform: uppercase; }
+  .degree__school { color: var(--night-ink-2); font-weight: 550; }
+  .courses__t { font-family: var(--font-display); font-weight: 900; font-stretch: 82%; font-size: var(--t-h3); line-height: 1.05; text-transform: uppercase; }
+  .courses__i { justify-self: start; padding: 4px 9px; border-radius: var(--r-pill); background: var(--grey-1); color: var(--accent-deep); font: 700 0.75rem / 1.2 var(--font-text); }
   .courses__d { color: var(--ink-2); font-size: var(--t-small); }
   .about__checked { margin-top: var(--s-6); font-size: 0.875rem; font-weight: 600; color: var(--fg-2); }
   @media (min-width: 700px) {
@@ -211,6 +264,6 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
     .svc__d { grid-column: 3; }
     .svc__tools { grid-column: 4; align-content: start; }
     .skills { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .courses { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .courses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 </style>

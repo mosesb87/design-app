@@ -28,7 +28,7 @@ export const person = {
   // /v2 about (years updated to seven, confirmed)
   about: [
     'I’m Mousa — the person you call when the website looks fine but nothing quite works. Seven years building and running sites on WordPress, Elementor and Divi have taught me that a good website is equal parts design, data and discipline: pages that load fast and read well, catalogs that stay clean whether they live in WooCommerce or Shopify, and SEO that’s built into the structure rather than bolted on afterwards.',
-    'I turn “someone does this by hand every Friday” into systems that run themselves, and I’m happiest when a site goes from fragile to boring — in the best way.',
+    'I turn “someone does this by hand every Friday” into systems that run themselves, and I’m happiest when a site simply works, every day, without anyone having to rescue it.',
   ],
   // /v2 thesis
   thesis: {
@@ -161,18 +161,24 @@ export const toolGroups = [
   { title: 'Writing & AI', items: ['Grammarly', 'ChatGPT', 'Copilot', 'Gemini', 'Claude', 'Human review before anything is published'] },
 ] as const;
 
-// Courses & certifications as published on v1 (issuer as stated; described there as coursework/training)
-// Titles, issuers and dates are as printed on the certificate where Mousa's site publishes one (cert = its image
-// in public/media/certificates/); the others are as listed on his previous portfolio.
+// Courses & certifications: all eleven certificates Mousa's site publishes (portfolio-home/img/, fetched
+// 2026-09-27 into capture/certs/). Titles, issuers and dates as printed on each certificate; newest first.
 export const courses: { title: string; issuer: string; text: string; cert?: { img: string; date: string; w: number; h: number } }[] = [
-  { title: 'Wharton Advanced Digital Marketing and Growth Strategies', issuer: 'The Wharton School · Aresty Institute of Executive Education', text: 'Digital strategy, customer acquisition and growth frameworks.', cert: { img: 'wharton-advanced-marketing', date: '2023-11-22', w: 1402, h: 1122 } },
+  { title: 'From Likes to Leads: Interact with Customers Online', issuer: 'Google, via Coursera', text: 'Social media and online channels for engaging customers.', cert: { img: 'from-likes-to-leads', date: '2024-07-18', w: 1649, h: 1275 } },
+  { title: 'Think Outside the Inbox: Email Marketing', issuer: 'Google, via Coursera', text: 'Email strategy, campaign planning and audience engagement.', cert: { img: 'think-outside-inbox', date: '2024-07-16', w: 1536, h: 1024 } },
   { title: 'Foundations of Digital Marketing and E-commerce', issuer: 'Google, via Coursera', text: 'Digital marketing fundamentals and online customer engagement.', cert: { img: 'foundations-digital-marketing', date: '2024-05-21', w: 2112, h: 1638 } },
-  { title: 'Think Outside the Inbox', issuer: 'Google', text: 'Email strategy, campaign planning and audience engagement.' },
   { title: 'Attract and Engage Customers with Digital Marketing', issuer: 'Google, via Coursera', text: 'Search, digital campaigns and customer engagement.', cert: { img: 'attract-engage-customers', date: '2024-01-06', w: 1535, h: 1024 } },
-  { title: 'Shopify Complete Training', issuer: 'Udemy', text: 'Shopify setup, catalog management, pricing, inventory and store operations.' },
-  { title: 'WordPress Complete Training', issuer: 'Udemy', text: 'WordPress setup, themes, plugins, page builders and content management.' },
-  { title: 'Web Development Fundamentals', issuer: 'NuCamp', text: 'HTML, CSS, responsive layouts and front-end fundamentals.' },
+  { title: 'Wharton Advanced Digital Marketing and Growth Strategies', issuer: 'The Wharton School · Aresty Institute of Executive Education', text: 'Digital strategy, customer acquisition and growth frameworks.', cert: { img: 'wharton-advanced-marketing', date: '2023-11-22', w: 1402, h: 1122 } },
+  { title: 'Prompt Engineering: How to Talk to the AIs', issuer: 'LinkedIn Learning', text: 'Writing prompts for large language models and generative AI.', cert: { img: 'linkedin-prompt-engineering', date: '2023-05-20', w: 1650, h: 1275 } },
+  { title: 'Generative AI for Business Leaders', issuer: 'LinkedIn Learning', text: 'AI for business, and generative AI for management.', cert: { img: 'linkedin-generative-ai-business-leaders', date: '2023-05-08', w: 1650, h: 1275 } },
+  { title: 'How To Become A Shopify Expert (From Zero To Hero!)', issuer: 'Udemy', text: 'Shopify setup, catalog management, pricing, inventory and store operations.', cert: { img: 'shopify-zero-hero', date: '2023-05-05', w: 1494, h: 1122 } },
+  { title: 'Learn Elementor – WordPress Front-End Development Course', issuer: 'Udemy', text: 'Front-end WordPress development with the Elementor page builder.', cert: { img: 'learn-elementor', date: '2022-01-18', w: 1502, h: 1120 } },
+  { title: 'NLP – Neuro Linguistic Programming – The Complete NLP Course', issuer: 'Udemy', text: 'Communication and rapport techniques.', cert: { img: 'neuro-linguistic-programming', date: '2022-01-18', w: 1600, h: 1190 } },
+  { title: 'Web Development Fundamentals Bootcamp', issuer: 'Nucamp', text: 'HTML, CSS, responsive layouts and front-end fundamentals.', cert: { img: 'nucamp-web-development', date: '2021-11-07', w: 1122, h: 1402 } },
 ];
+
+// The degree, as Mousa's home page states it (place from his résumé page).
+export const degree = { title: 'Bachelor of Arts (B.A.)', field: 'Accounting Information Systems', school: 'Al-Balqa Applied University', place: 'Amman, Jordan', years: '2006–2010' };
 
 // Six curated reviews (the full set of 22 stays on the live /reviews/ index)
 export type Review = {

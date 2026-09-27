@@ -130,7 +130,7 @@ async function ctx(opts) {
     const open = [...document.querySelectorAll('.tl__open')].map((a) => ({ href: a.getAttribute('href'), rel: a.rel }));
     return { ids, jumps, open, h1: document.querySelectorAll('h1').length };
   });
-  check(`/tools/: ${tl.ids.length} tool sections, one h1`, tl.ids.length >= 9 && tl.h1 === 1);
+  check(`/tools/: ${tl.ids.length} tool sections, one h1`, tl.ids.length >= 8 && tl.h1 === 1 && tl.ids.length === tl.jumps.length);
   check('/tools/: every jump link has its section', tl.jumps.every((h) => tl.ids.includes(h.slice(1))), tl.jumps.filter((h) => !tl.ids.includes(h.slice(1))).join(' '));
   check('/tools/: every tool opens its live page with rel=noopener', tl.open.length === tl.ids.length && tl.open.every((o) => /^https:/.test(o.href) && /noopener/.test(o.rel)));
   await p.goto(BASE + '/work/', { waitUntil: 'networkidle' });

@@ -1,6 +1,6 @@
-// Card grids: each card flies in from a scattered spot (off to one side, below, turned) and settles into its
-// place as it comes up the screen, one after another; near the top it scatters away again, and scrolling up
-// plays it all backwards. Each card is scrubbed over its own pass through the screen, so long grids work the
+// Card grids: each card flies in from its own direction (round the compass, turned) and settles into its place
+// as it comes up the screen, one after another; near the top it scatters away again the other way, and
+// scrolling up plays it all backwards. Cards on the page's first screen fly in once when the page opens. Each card is scrubbed over its own pass through the screen, so long grids work the
 // same as short ones, and a card is in place by the time it is most of the way up the screen.
 // Cards in the same row are offset a little by column, so a row arrives left to right.
 // The card is its own trigger, so its transform is reverted while positions are measured (invalidateOnRefresh).
@@ -27,18 +27,25 @@ export default function pop(grids: HTMLElement[], env: Env) {
       const lefts = items.map((el) => Math.round(el.offsetLeft));
       const cols = [...new Set(lefts)].sort((a, b) => a - b);
       const firstScreen = items.map((el) => el.getBoundingClientRect().top + scrollY < innerHeight * 0.92);
+      let first = 0;
       items.forEach((el, i) => {
         const col = Math.max(0, cols.indexOf(lefts[i]));
-        const side = (col + i) % 2 ? 1 : -1;
         const d = col * 0.06;
-        const from = { x: side * rnd(90, 220) * reach, y: rnd(120, 220) * (wide ? 1 : 0.7), rotation: side * rnd(8, 20), scale: rnd(0.82, 0.92) };
-        const to = { x: -side * rnd(60, 180) * reach, y: -rnd(60, 150), rotation: -side * rnd(6, 16), scale: rnd(0.86, 0.94) };
-        // Cards already on the first screen when the page opens start in place; they only scatter away.
-        const onFirstScreen = firstScreen[i];
+        // Every card has its own direction: angles step round the compass by the golden angle (so neighbours
+        // never share one), with a little randomness; each leaves roughly the opposite way it came.
+        const a = (i * 2.39996 + rnd(-0.35, 0.35)) % (Math.PI * 2);
+        const r = rnd(170, 300) * reach, r2 = rnd(130, 240) * reach;
+        const b = a + Math.PI + rnd(-0.7, 0.7);
+        const from = { x: Math.cos(a) * r, y: Math.sin(a) * r * 0.8 + 40, rotation: rnd(-22, 22), scale: rnd(0.8, 0.92) };
+        const to = { x: Math.cos(b) * r2, y: Math.sin(b) * r2 * 0.7 - 50, rotation: rnd(-18, 18), scale: rnd(0.84, 0.94) };
         const placed = { x: 0, y: 0, rotation: 0, scale: 1 };
         const tl = gsap.timeline({ scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: 0.9, invalidateOnRefresh: true } });
-        if (onFirstScreen) tl.fromTo(el, placed, { ...to, ease: 'power2.in', duration: 0.24 }, 0.78 + d / 3);
-        else {
+        // Cards already on the first screen when the page opens fly in once, one after another, then scroll
+        // only scatters them away.
+        if (firstScreen[i]) {
+          tl.fromTo(el, placed, { ...to, ease: 'power2.in', duration: 0.24 }, 0.78 + d / 3);
+          gsap.from(el, { ...from, duration: 1.1, ease: 'expo.out', delay: 0.25 + first++ * 0.08 });
+        } else {
           tl.fromTo(el, from, { ...placed, ease: 'power3.out', duration: 0.34 - d / 2 }, d)
             .to(el, { ...to, ease: 'power2.in', duration: 0.24 }, 0.78 + d / 3);
         }

@@ -1,5 +1,6 @@
-// "A request is trusted by default": the three cards are dealt, the lens reads across them, the stale price is
-// struck, check 04 fails, the shelf card flips to "blocked" and the verdict lands.
+// "A request is trusted by default": the three cards are dealt, their rows fly in from scattered spots, the scan
+// line reads across them, the stale price is struck, check 04 fails, the shelf card flips to "blocked" and the
+// verdict lands.
 // Desktop: scrubbed while the section is pinned (CSS sticky). Smaller screens: plays once when in view.
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -15,6 +16,10 @@ export default function check([section]: HTMLElement[], env: Env) {
   const stale = section.querySelector<HTMLElement>('[data-stale]');
   const flip = section.querySelector<HTMLElement>('[data-flip]');
   const faces = q<HTMLElement>('.chk__face');
+  // The rows on the sheet and the register (and the sheet's note) arrive scattered, each from its own direction.
+  const bits = q<HTMLElement>('.chk__card--sheet .chk__rows > div, .chk__card--sheet .chk__note, .chk__card--register .chk__rows > div');
+  const rnd = gsap.utils.random;
+  const scattered = bits.map((_, i) => { const a = i * 2.39996; return { x: Math.cos(a) * rnd(120, 220), y: Math.sin(a) * rnd(90, 170), rotation: rnd(-24, 24), scale: rnd(0.8, 0.92) }; });
   const verdict = section.querySelector<HTMLElement>('[data-verdict]');
   const track = section.querySelector<HTMLElement>('[data-check-track]');
   const stage = section.querySelector<HTMLElement>('[data-check-stage]');
@@ -33,6 +38,8 @@ export default function check([section]: HTMLElement[], env: Env) {
     // Scrubbed (desktop), the cards are dealt as the section arrives — see deal() — so the stage is never empty
     // while it scrolls into view; the scrub then drives the check itself.
     if (!scrubbed) tl.fromTo(cards, dealFrom, { ...dealTo, duration: 0.22 * D, stagger: 0.05 }, 0);
+    // Rows fly into place before the scan starts.
+    bits.forEach((el, i) => tl.fromTo(el, scattered[i], { x: 0, y: 0, rotation: 0, scale: 1, duration: 0.16, ease: 'power3.out' }, (scrubbed ? 0.02 : 0.12) + i * 0.012));
     // The scan line reads across the cards: over the sheet, onto the register (where the stale price shows),
     // then the shelf, and fades once the verdict lands.
     if (lens && scrubbed) {
@@ -62,13 +69,13 @@ export default function check([section]: HTMLElement[], env: Env) {
     const dealt = deal();
     const tl = build(true);
     const st = ScrollTrigger.create({ trigger: track, start: 'top top', end: 'bottom bottom', scrub: 0.6, animation: tl, invalidateOnRefresh: true });
-    return () => { dealt.kill(); st.kill(); tl.kill(); head?.classList.remove('is-fail'); gsap.set([...cards, fail, verdict, flip, lens].filter(Boolean), { clearProps: 'all' }); };
+    return () => { dealt.kill(); st.kill(); tl.kill(); head?.classList.remove('is-fail'); gsap.set([...cards, ...bits, fail, verdict, flip, lens].filter(Boolean), { clearProps: 'all' }); };
   });
   mm.add('(max-width: 1023px)', () => {
     const tl = build(false);
     tl.timeScale(0.28); // ~3.5 s in real time
     const st = ScrollTrigger.create({ trigger: stage, start: 'top 72%', once: true, onEnter: () => tl.play() });
-    return () => { st.kill(); tl.kill(); gsap.set([...cards, fail, verdict, flip].filter(Boolean), { clearProps: 'all' }); };
+    return () => { st.kill(); tl.kill(); gsap.set([...cards, ...bits, fail, verdict, flip].filter(Boolean), { clearProps: 'all' }); };
   });
   void faces;
 }

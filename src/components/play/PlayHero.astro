@@ -14,7 +14,6 @@ const stickers = [
 const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
 ---
 <section class="ph" data-play-hero aria-labelledby="hero-title">
-  <div class="ph__glow" aria-hidden="true"></div>
   <div class="ph__inner wrap">
     <div class="ph__text">
       <p class="kicker ph__kicker" data-ph-fade>{person.location} · {person.availability.toLowerCase()}</p>
@@ -61,21 +60,6 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     overflow: clip;
     display: flex;
   }
-  .ph__glow {
-    position: absolute;
-    left: 30%;
-    right: -20%;
-    top: 20%;
-    height: 60%;
-    background: var(--spectrum);
-    background-size: 200% 100%;
-    filter: blur(110px);
-    opacity: 0.16;
-    border-radius: 50%;
-    animation: ph-drift 16s linear infinite;
-    pointer-events: none;
-  }
-  @keyframes ph-drift { to { background-position: 200% 0; } }
   .ph__inner { position: relative; display: grid; gap: var(--s-7); width: 100%; align-content: end; }
   .ph__text { position: relative; z-index: 2; display: flex; flex-direction: column; gap: clamp(28px, 3.4vw, 56px); container-type: inline-size; min-width: 0; }
   .ph__kicker { position: relative; z-index: 2; }
@@ -145,10 +129,11 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
   .ph__stickers { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
   .ph__s { position: absolute; display: block; pointer-events: auto; }
   .ph__s :global(.sticker) { --size: 100%; width: 100%; }
-  /* Coloured tiles around the photo; the spreadsheet stays white so it reads against the cobalt panel. */
-  .ph .s-tag :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: #fff; box-shadow: 0 20px 36px -18px rgb(194 65 12 / 0.65); }
-  .ph .s-check :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--orange); }
-  .ph .s-cursor :global(.sticker) { --tile: var(--orange-soft); --stroke: var(--ink); --acc: var(--accent-deep); }
+  /* Coloured tiles around the photo: sky, green, night and violet. */
+  .ph .s-tag :global(.sticker) { --tile: var(--blue-soft); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: 0 20px 36px -18px rgb(43 77 224 / 0.55); }
+  .ph .s-check :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); }
+  .ph .s-cursor :global(.sticker) { --tile: var(--iris); --stroke: var(--ink); --acc: var(--accent-deep); }
+  .ph .s-cell :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); }
   /* Tiles sit on the panel's right edge and over the photo's lower corners, never over the name.
      Phones: two tiles; more from tablet up. */
   .s-tag { width: 88px; top: 6%; right: -3%; }
@@ -170,8 +155,5 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
   }
   @media (min-width: 1280px) {
     .ph__bottom { grid-template-columns: 1fr auto; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .ph__glow { animation: none; }
   }
 </style>

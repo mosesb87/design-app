@@ -31,7 +31,7 @@ import Ghost from '../Ghost.astro';
   .note { position: relative; display: grid; gap: var(--s-5); align-content: space-between; min-height: 240px; padding: clamp(22px, 2.4vw, 34px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); transition: translate 0.5s var(--ease-register); }
   .note:hover { translate: 0 -6px; }
   .note__meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 700 var(--t-slug) / 1.4 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; }
-  .note__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.75rem, 2.6vw, 2.75rem); line-height: 0.95; text-transform: uppercase; }
+  .note__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: var(--t-h3); line-height: 0.95; text-transform: uppercase; }
   .note__title a { text-decoration: none; }
   .note__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
   .note__arrow { justify-self: end; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--ink); color: #fff; font-weight: 700; transition: transform 0.5s var(--ease-pop); }

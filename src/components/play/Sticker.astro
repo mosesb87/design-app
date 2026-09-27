@@ -1,8 +1,9 @@
 ---
 // Icon tiles: thin-line icons from Mousa's world (a price tag, a check, a cursor, a spreadsheet cell, a lens,
-// layout blocks, a barcode, a percent, a pin, a sparkline, a console, a heart), each on a tile with one accent
-// detail. The tile is white by default; sections colour it through --tile, --stroke and --acc (cobalt, orange,
-// night, sky, peach). Decorative only — always aria-hidden. Size comes from CSS (width); tiles are square.
+// layout blocks, a barcode, a percent, a pin, a sparkline, a console, a heart, an analytics chart, a shopping
+// bag, a function, code), each on a tile with one accent
+// detail. The tile is white by default; sections colour it through --tile, --stroke and --acc (cobalt, deep
+// cobalt, sky, night, grey). Decorative only — always aria-hidden. Size comes from CSS (width); tiles are square.
 // Strokes don't scale with the tile, so a 60px tile and a 220px tile share the same line weight.
 import type { StickerName } from './types';
 interface Props { name: StickerName; class?: string; style?: string; depth?: number; tilt?: number; label?: string }
@@ -97,6 +98,36 @@ const bars = [0, 6, 9, 15, 18, 24, 30, 33, 39, 42, 48, 54, 57, 63, 66, 72, 78];
           <path class="ic__a" d="M66 84 Q68 70 82 68" />
         </g>
       )}
+      {name === 'chart' && (
+        <g>
+          <path d="M44 152 H158" class="ic__faint" />
+          <rect x="54" y="108" width="20" height="40" rx="4" />
+          <rect x="88" y="84" width="20" height="64" rx="4" />
+          <rect class="ic__a ic__tint" x="122" y="56" width="20" height="92" rx="4" />
+          <path class="ic__a" d="M52 92 L96 64 L132 40" />
+          <circle class="ic__a ic__fill" cx="132" cy="40" r="5" />
+        </g>
+      )}
+      {name === 'bag' && (
+        <g>
+          <path d="M52 76 H148 L140 156 H60 Z" />
+          <path d="M78 76 V66 A22 22 0 0 1 122 66 V76" />
+          <path class="ic__a ic__bold" d="M82 112 L96 126 L120 100" />
+        </g>
+      )}
+      {name === 'fx' && (
+        <g>
+          <rect x="36" y="48" width="128" height="104" rx="14" />
+          <path class="ic__a ic__bold" d="M92 78 Q80 76 78 90 L70 128 Q68 140 56 138 M62 102 H90" />
+          <path d="M106 100 L136 132 M136 100 L106 132" />
+        </g>
+      )}
+      {name === 'code' && (
+        <g>
+          <path class="ic__a ic__bold" d="M78 72 L46 100 L78 128 M122 72 L154 100 L122 128" />
+          <path d="M110 58 L90 142" />
+        </g>
+      )}
     </g>
   </svg>
 </span>
@@ -113,14 +144,12 @@ const bars = [0, 6, 9, 15, 18, 24, 30, 33, 39, 42, 48, 54, 57, 63, 66, 72, 78];
     aspect-ratio: 1;
     pointer-events: none;
     transform: rotate(var(--tilt));
-    border-radius: 24%;
+    border-radius: 16%;
     background: var(--tile);
-    box-shadow: 0 0 0 1px rgb(14 17 22 / 0.07), 0 1px 2px rgb(14 17 22 / 0.05), 0 16px 32px -18px rgb(14 17 22 / 0.35);
+    box-shadow: 0 1px 2px rgb(14 17 22 / 0.05), 0 16px 32px -18px rgb(14 17 22 / 0.35);
     will-change: transform;
   }
   .sticker svg { width: 100%; height: 100%; overflow: visible; }
-  /* Two colours: the money and place icons take orange, the checking icons take cobalt. */
-  .sticker--tag, .sticker--percent, .sticker--pin, .sticker--heart, .sticker--spark, .sticker--barcode { --acc: var(--orange); }
   .ic, .ic :global(*) { vector-effect: non-scaling-stroke; }
   .ic { stroke: var(--stroke); stroke-width: var(--sw); }
   .ic__bold { stroke-width: calc(var(--sw) * 1.6); }
@@ -136,5 +165,5 @@ const bars = [0, 6, 9, 15, 18, 24, 30, 33, 39, 42, 48, 54, 57, 63, 66, 72, 78];
   @keyframes ic-nudge { 50% { transform: translateX(5px); } }
   @keyframes ic-blink { 50% { opacity: 0; } }
   .ic__t { fill: var(--stroke); stroke: none; font: 500 20px var(--font-mono); letter-spacing: -0.02em; }
-  :global([data-ground='night']) .sticker, :global(.on-dark) .sticker { --tile: var(--night-2); --stroke: var(--night-ink); --acc: var(--accent-soft); box-shadow: 0 0 0 1px rgb(255 255 255 / 0.09), 0 18px 36px -18px rgb(0 0 0 / 0.7); }
+  :global([data-ground='night']) .sticker, :global(.on-dark) .sticker { --tile: var(--night-2); --stroke: var(--night-ink); --acc: var(--accent-soft); box-shadow: 0 18px 36px -18px rgb(0 0 0 / 0.7); }
 </style>

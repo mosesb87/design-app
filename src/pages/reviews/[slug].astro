@@ -170,7 +170,7 @@ const jsonLd = [
   .finds { display: grid; gap: clamp(14px, 1.6vw, 24px); }
   .find { display: grid; gap: 10px; align-content: start; padding: clamp(20px, 2.2vw, 30px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
   .find__n { justify-self: start; padding: 6px 11px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 750 0.8125rem / 1 var(--font-text); }
-  .find__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.6rem, 2.2vw, 2.25rem); line-height: 0.95; text-transform: uppercase; }
+  .find__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: var(--t-h3); line-height: 0.95; text-transform: uppercase; }
   .find p { font-weight: 500; }
   @media (min-width: 900px) { .finds { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
@@ -184,7 +184,7 @@ const jsonLd = [
   .sheet + .sheet::before { content: ''; position: absolute; top: 0; left: 0; width: 72px; height: 6px; border-radius: 3px; background: var(--spectrum); }
   .sheet__head { display: grid; gap: 10px; max-width: 72ch; margin-inline: auto; }
   .sheet__kicker { justify-self: start; padding: 6px 12px; border-radius: var(--r-pill); background: var(--lemon); font: 750 0.8125rem / 1.2 var(--font-text); }
-  .sheet__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.25rem, 4.6vw, 4.5rem); line-height: 0.9; text-transform: uppercase; text-wrap: balance; }
+  .sheet__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h2); line-height: 0.9; text-transform: uppercase; text-wrap: balance; }
   .sheet__shot { margin: var(--s-6) 0; }
   .sheet__shot img { width: 100%; height: auto; border-radius: var(--r-l); box-shadow: var(--shadow-2); background: var(--cloud); }
   .sheet__shot figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--fg-2); text-align: center; }
@@ -206,7 +206,7 @@ const jsonLd = [
   .more__card:hover { translate: 0 -6px; }
   .more__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(3rem, 5vw, 4.5rem); line-height: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .more__label { font-weight: 600; }
-  .more__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.6rem, 2.2vw, 2.2rem); line-height: 0.95; text-transform: uppercase; }
+  .more__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: var(--t-h3); line-height: 0.95; text-transform: uppercase; }
   .more__title a { text-decoration: none; }
   .more__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
   .more__title a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 4px; }
