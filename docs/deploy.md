@@ -15,7 +15,7 @@ Nothing here has been done. The live site at mousabatarseh.com is untouched; the
 | Path | Effect |
 |---|---|
 | `index.html`, icons, `llms.txt` | **Replaced** by the new home page and icons. |
-| `/index/` | New: the index of every build. Not checked against the live domain yet — step 2.3 checks for a clash. |
+| `/index/` | New: the index of every build. `/index/` and `/index` return 404 on the live domain today (checked 2026-09-27, `capture/brand/brand.json`), so nothing is shadowed. |
 | `/work/`, `/about/`, `/tools/` | New. All three return 404 on the live domain today (`/tools/`, `/Tools/` and `/tools` checked 2026-09-27), so nothing is shadowed. The existing tool folders (`/dealproof/`, `/changeatlas/`, `/SEO-Tools/` …) are untouched; the Tools page links to them. |
 | `/blog/` | **`index.html` replaced**; a folder per post added (`/blog/<post>/`). |
 | `/reviews/` | **`index.html` replaced**; a folder per review added (`/reviews/<review>/`). The old `/reviews/reviews/`, `/builds/`, `/method/`, `/img/` and `/assets/` folders stay on the server; nothing in the new site links to them. |
