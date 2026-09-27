@@ -84,6 +84,11 @@ Made by \`scripts/content/blog.mjs\` and \`scripts/content/reviews.mjs\` from pa
 - **Blog:** ${posts.length} posts with pages (${posts.reduce((n: number, p: any) => n + (p.image ? 1 : 0) + imgCount(p.html), 0)} images) and ${sums.length} summary cards with their published covers — ${(dirSize(path.join(root, 'public/media/blog')) / 1024 / 1024).toFixed(1)} MB.
 - **Reviews:** ${revs.length} reviews, ${revs.reduce((n: number, r: any) => n + r.sheets.length, 0)} sheets, each sheet's first screen as published plus the images inside the sheets — ${(dirSize(path.join(root, 'public/media/reviews')) / 1024 / 1024).toFixed(1)} MB. The first sheet's first screen is also the screenshot on every review card (home and /reviews/).
 
+## Redrawn blog graphics and certificates
+
+- **Redrawn blog graphics** (\`public/media/blog/drawn/\`): the site's own renderings (\`scripts/blog-graphics.mjs\`) of Mousa's published blog graphics — 16 covers and 3 in-article diagrams re-set from a faithful transcription of each original (\`src/data/blog-graphics.json\`), and 20 summary covers drawn from their titles. Same content, this site's type and colours. The originals remain in \`public/media/blog/\` and are no longer shown.
+- **Certificates** (\`public/media/certificates/\`): three certificate images published on mousabatarseh.com (\`portfolio-home/img/\`, fetched 2026-09-27 into \`capture/brand/\`): Wharton Advanced Digital Marketing and Growth Strategies, Foundations of Digital Marketing and E-commerce, Attract and Engage Customers with Digital Marketing. Re-encoded to WebP at 480 and 1400 wide. The other four courses have no published certificate image.
+
 ## Portrait and logo
 
 - **Portrait** (\`public/media/me/\`): a photo Mousa sent for the site on 2026-09-27 (black vest, arms crossed), chosen from the ones he sent because it has the plainest background, the sharpest detail and eye contact. The background was removed on the development machine (rembg, u2net_human_seg and isnet-general-use masks intersected, edges eroded 1 px and feathered); the photo was not sent to any outside service. Responsive AVIF/WebP at 480, 800 and 1200 wide, plus a 96/192 px head-and-shoulders avatar for blog posts. Used on the home hero, /about/ and the blog author line. Licensing: Mousa's own photo, supplied by him. The original photos are not stored in this repository.
