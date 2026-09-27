@@ -4,7 +4,21 @@ The current design is direction 3, calm and precise ([05-calm-and-precise.md](05
 
 ## Direction 3 — calm and precise (current)
 
-Latest round: Mousa's fourth set of notes (white background, no orange, the compact index, one heading size per level, all certificates and the degree), commit 6474bf5. Every check below was re-run on that build.
+Latest round: Mousa's fifth set of notes (the contact title flies in, colourful moving tiles, stronger photo flex, black transition cover and dark rooms, phones turning on their own, calmer title letters, the /reviews/ cards no longer cut, equal spacing on the /work/ case cards), commits 2b39dd9 and 814077b:
+
+| Check | Result |
+|---|---|
+| Type check / build | `astro check`: 0 errors; build clean |
+| Changed pages (/, /reviews/, /work/, /about/, 404) × phone + desktop × full + reduced motion, axe | **20 runs, 0 findings**; CLS 0 everywhere except /work/ on a phone at 0.0023 |
+| Interactions (Chromium) | **66/66** |
+| /work/ case cards: gap between screenshot and label, all 11 | 16.9–17.2 px on every card (before, a shared 3D vanishing point pushed the lower cards' screenshots onto their labels) |
+| Upload package (`npm run package:root`, and again on Actions) | 56 pages checked: indexable, canonical on mousabatarseh.com, no preview host |
+
+Found and fixed in this round: the contact title's letters sat scattered at the end of the page on phones and short screens (their scatter-away started once the heading passed the top quarter, which it does at the page's end there) — the contact heading now only flies in, and its arrival ends by the page's end at the latest; the navy glows in the home page's tools section and the /work/ ASAS section were removed (Mousa: black).
+
+Round 4 (below) was the last full sweep of all 56 pages; round 5 changed shared components (page header, contact block), re-checked on the pages above.
+
+Round 4: Mousa's fourth set of notes (white background, no orange, the compact index, one heading size per level, all certificates and the degree), commit 6474bf5. Every check below was re-run on that build.
 
 | Check | Result |
 |---|---|
