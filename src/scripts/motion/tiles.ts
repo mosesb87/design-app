@@ -30,18 +30,20 @@ export default function tiles(roots: HTMLElement[], env: Env) {
 
     if (!env.fine) return;
 
-    // Hover on the photo: a small scatter, then back into place.
+    // Pointing at any tile (or the photo): they all scatter, then come back into place.
     const photo = root.querySelector<HTMLElement>('[data-photo-flex]');
     let busy = false;
-    photo?.addEventListener('pointerenter', () => {
+    const scatter = () => {
       if (busy || tl.progress() < 1) return;
       busy = true;
       inner.forEach((s) => {
         gsap.timeline({ onComplete: () => { busy = false; } })
-          .to(s, { x: rnd(-36, 36), y: rnd(-24, 24), rotation: rnd(-18, 18), duration: 0.32, ease: 'power2.out' })
+          .to(s, { x: rnd(-70, 70), y: rnd(-50, 50), rotation: rnd(-28, 28), duration: 0.32, ease: 'power2.out' })
           .to(s, { ...placed, duration: 1, ease: 'elastic.out(1, 0.55)' });
       });
-    });
+    };
+    holders.forEach((h) => h.addEventListener('pointerenter', scatter));
+    photo?.addEventListener('pointerenter', scatter);
 
     // Lean towards the pointer.
     const items = holders.map((el) => ({

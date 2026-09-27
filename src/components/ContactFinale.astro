@@ -173,16 +173,18 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     .finale__s--5 { display: block; width: clamp(48px, 5vw, 72px); right: 9%; top: 30%; animation-delay: -1.8s; animation-duration: 4s; }
     .finale__s--7 { display: block; width: clamp(38px, 4vw, 56px); right: 30%; top: 16%; animation-delay: -0.4s; animation-duration: 3.8s; }
   }
-  /* Desktop: the tiles gather around Mousa and in the space beside the title, never over the words. */
+  /* Desktop: the tiles gather in the open space beside Mousa's head — between the text and the photo, never over
+     the words — and scatter in from there (motion/tiles.ts). Pointing at any of them scatters them again. */
   @media (min-width: 1024px) {
-    .finale__s--1 { right: 3%; top: 10%; }
-    .finale__s--2 { right: 34%; top: 12%; }
-    .finale__s--3 { display: block; width: clamp(50px, 4.4vw, 66px); right: 25%; bottom: 24%; animation-delay: -2s; }
-    .finale__s--4 { display: block; width: clamp(44px, 4vw, 60px); right: 2%; bottom: 12%; animation-delay: -0.6s; }
-    .finale__s--5 { right: 44%; top: 32%; }
-    .finale__s--6 { right: 27%; top: 25%; }
-    .finale__s--7 { right: 50%; top: 5%; }
-    .finale__s--8 { display: block; width: clamp(38px, 3.6vw, 52px); right: 18%; top: 6%; animation-delay: -3s; animation-duration: 4.2s; }
+    .finale__s { pointer-events: auto; }
+    .finale__s--1 { width: clamp(56px, 5.4vw, 84px); right: 30%; top: 20%; }
+    .finale__s--2 { right: 41%; top: 30%; }
+    .finale__s--3 { display: block; width: clamp(50px, 4.4vw, 66px); right: 34%; top: 40%; animation-delay: -2s; }
+    .finale__s--4 { display: block; width: clamp(44px, 4vw, 60px); right: 29%; top: 55%; animation-delay: -0.6s; }
+    .finale__s--5 { right: 46%; top: 46%; }
+    .finale__s--6 { right: 37%; top: 55%; }
+    .finale__s--7 { right: 48%; top: 16%; }
+    .finale__s--8 { display: block; width: clamp(38px, 3.6vw, 52px); right: 40%; top: 8%; animation-delay: -3s; animation-duration: 4.2s; }
   }
   @keyframes finale-bob { from { translate: 0 0; } to { translate: 0 -12px; } }
   @media (prefers-reduced-motion: reduce) { .finale__s { animation: none; } }
