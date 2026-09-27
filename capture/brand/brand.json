@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-09-27T01:26:22.760Z",
+  "fetched": "2026-09-27T12:34:10.876Z",
   "note": "Portfolio capture for mousabatarseh.com (owner-run)",
   "pages": [
     {
@@ -649,6 +649,18 @@
     },
     {
       "path": "/about/",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/index/",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/index",
       "status": 404,
       "location": null,
       "title": null
