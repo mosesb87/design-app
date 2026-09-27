@@ -1,4 +1,4 @@
-mousabatarseh-root.zip — built 2026-09-27T19:05:27.027Z
+mousabatarseh-root.zip — built 2026-09-27T23:42:21.609Z
 Unzip into the domain's document root (public_html). Top-level entries:
 
 404.html                    0.0 MB   new file; only used if you add the optional ErrorDocument line
@@ -11,7 +11,7 @@ favicon.svg                 0.0 MB   new or replaces
 index/                      0.1 MB   new folder — the index of every build; /index/ returns 404 on the live domain today (checked 2026-09-27)
 index.html                  0.1 MB   REPLACES the current home page — download the existing index.html first (step 2 of docs/deploy.md)
 llms.txt                    0.0 MB   new or replaces — check whether the root already has one
-media/                     78.9 MB   new folder — captures and recordings
+media/                     79.2 MB   new folder — captures and recordings
 og/                         3.4 MB   new folder — social sharing images
 reviews/                    1.4 MB   REPLACES /reviews/index.html and adds /reviews/<review>/ folders; the old /reviews/reviews/, /reviews/builds/, /reviews/method/, /reviews/img/ and /reviews/assets/ stay on the server — download the whole existing reviews folder first
 sitemap-portfolio.xml       0.0 MB   new file; the existing sitemap.xml is untouched
