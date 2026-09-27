@@ -1,13 +1,14 @@
 firefox 142.0.1 — http://localhost:4321
 PASS  Skip link is the first Tab stop and becomes visible — {"text":"Skip to content","visible":true}
 PASS  Skip link moves focus to <main>
-PASS  Nav has links — Mousa Batarseh→/, Work 68→/work/, Reviews→/reviews/, Blog→/blog/, About→/about/, Let’s talk→#contact
+PASS  Nav has links — Mousa Batarseh→/, Work 68→/work/, Tools→/tools/, Reviews→/reviews/, Blog→/blog/, About→/about/, Let’s talk→#contact
 PASS  Nav "Mousa Batarseh" opens / — /
 PASS  Nav "Work 68" opens /work/ — /work/
+PASS  Nav "Tools" opens /tools/ — /tools/
 PASS  Nav "Reviews" opens /reviews/ — /reviews/
 PASS  Nav "Blog" opens /blog/ — /blog/
 PASS  Nav "About" opens /about/ — /about/
-PASS  Nav "Let’s talk" scrolls to #contact — on screen after 324 ms (scrollY 15288, target at 16012)
+PASS  Nav "Let’s talk" scrolls to #contact — on screen after 467 ms (scrollY 16285, target at 16570)
 PASS  Six featured case-study links on the home page — /work/united-textile/ /work/universal-wholesale/ /work/firefly-burgers/ /work/eat-with-samar/ /work/great-lakes-cigar-festival/ /work/ptee/
 PASS  Clicking a featured card image opens its case study (stretched link) — /work/united-textile/
 PASS  /blog/ filter "all" shows 16 rows — visible 16, aria-pressed true, status "16 posts shown"
@@ -32,7 +33,11 @@ PASS  /work/ filter "reviews" shows 22 rows — visible 22, aria-pressed true, s
 PASS  /work/ filter "proposals" shows 3 rows — visible 3, aria-pressed true, status "3 entries shown"
 PASS  All 33 internal links on /work/ return 200
 PASS  External links on /work/ carry rel=noopener
-PASS  Archive loupe opens on row hover — {"opacity":"1","visibility":"visible","clip":"none"}
+FAIL  Archive preview window opens on row hover — {"opacity":"0","visibility":"hidden","url":""}
+FAIL  The project scrolls inside the preview window — translateY 0px
+PASS  /tools/: 9 tool sections, one h1
+PASS  /tools/: every jump link has its section
+PASS  /tools/: every tool opens its live page with rel=noopener
 PASS  Case /work/asas-studio/: one h1, next → /work/changeatlas/
 PASS  Case /work/changeatlas/: one h1, next → /work/deals-os/
 PASS  Case /work/deals-os/: one h1, next → /work/csv-mapper/
@@ -60,4 +65,4 @@ PASS  Escape closes the menu and returns focus to the toggle — {"expanded":"fa
 PASS  Menu link "Work" navigates on tap — /work/
 PASS  Menu is closed on the new page
 
-60/60 passed
+63/65 passed
