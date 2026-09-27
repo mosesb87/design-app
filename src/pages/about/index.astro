@@ -30,9 +30,9 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
       <div style="--bg: var(--sky)" data-pop><dt>Languages</dt><dd>{person.languages.join(' · ')}</dd></div>
     </dl>
     </div>
-    <figure class="about__me">
-      <div class="about__panel" aria-hidden="true"></div>
-      <picture class="about__photo">
+    <figure class="about__me" data-photo-flex>
+      <div class="about__panel" aria-hidden="true" data-flex-panel></div>
+      <picture class="about__photo" data-flex-photo>
         <source type="image/avif" srcset="/media/me/mousa-480.avif 480w, /media/me/mousa-800.avif 800w, /media/me/mousa-1200.avif 1200w" sizes="(min-width: 1024px) 32vw, 88vw" />
         <source type="image/webp" srcset="/media/me/mousa-480.webp 480w, /media/me/mousa-800.webp 800w, /media/me/mousa-1200.webp 1200w" sizes="(min-width: 1024px) 32vw, 88vw" />
         <img src="/media/me/mousa-800.webp" width="1200" height="1219" alt="Mousa Batarseh, smiling, arms crossed" loading="lazy" decoding="async" />
@@ -150,7 +150,13 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
   .about__panel::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgb(255 255 255 / 0.14) 1px, transparent 1.4px); background-size: 22px 22px; mask-image: radial-gradient(80% 70% at 50% 30%, #000 10%, transparent 80%); }
   .about__photo { position: absolute; left: 0; right: 0; bottom: 0; clip-path: inset(-60% 0 0 0 round var(--r-xl)); }
   .about__photo img { width: 100%; height: auto; transition: filter 0.9s var(--ease-register); }
-  @media (hover: hover) and (pointer: fine) { .about__photo img { filter: grayscale(1) contrast(1.06); } .about__me:hover .about__photo img { filter: none; } }
+  @media (hover: hover) and (pointer: fine) {
+    .about__photo img { filter: grayscale(1) contrast(1.06); }
+    .about__me:hover .about__photo img { filter: none; }
+    .about__panel, .about__photo { transition: scale 0.8s var(--ease-register); }
+    .about__me:hover .about__panel { scale: 1.05; }
+    .about__me:hover .about__photo { scale: 1.07; }
+  }
   .about__cap { position: absolute; left: 14px; bottom: 14px; display: grid; gap: 2px; padding: 10px 14px; border-radius: var(--r-m); background: rgb(255 255 255 / 0.92); box-shadow: var(--shadow-1); font: 650 0.8125rem / 1.25 var(--font-text); }
   .about__cap span + span { font-weight: 500; color: var(--ink-2); }
   .about__prose { display: grid; gap: 1em; font-size: var(--t-lead); line-height: 1.45; max-width: 44ch; font-weight: 450; }

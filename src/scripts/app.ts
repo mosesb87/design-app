@@ -29,6 +29,7 @@ Promise.all([
   mount('[data-glow]', () => import('./motion/glow')),
   mount('[data-ghost]', () => import('./motion/ghost')),
   mount('[data-asas]', () => import('./motion/asas')),
+  mount('[data-photo-flex]', () => import('./motion/photoflex')),
 ]).then(refreshSoon);
 
 document.fonts?.ready.then(refreshSoon);

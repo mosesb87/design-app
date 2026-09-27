@@ -1,7 +1,8 @@
 ---
 // Hero: the name, huge and condensed, beside Mousa's photo standing in a cobalt panel (his head breaks the
-// panel's top edge). Letters rise in and hop when touched; the photo leans with the pointer and turns from
-// black-and-white to colour on hover; a few icon tiles float around it. (Motion: scripts/motion/play-hero.ts.)
+// panel's top edge). Letters fly in from scattered spots and hop when touched; the photo leans with the
+// pointer, turns from black-and-white to colour and extends on hover, and shrinks and extends with scroll;
+// a few icon tiles float around it. (Motion: scripts/motion/play-hero.ts, photoflex.ts.)
 import Sticker from './Sticker.astro';
 import { person } from '../../data/site';
 const rows = [person.first.toUpperCase(), person.last.toUpperCase()];
@@ -33,9 +34,9 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
         </div>
       </div>
     </div>
-    <figure class="ph__me" data-ph-me>
-      <div class="ph__panel" aria-hidden="true"><span class="ph__grid"></span></div>
-      <picture class="ph__photo" data-ph-photo>
+    <figure class="ph__me" data-ph-me data-photo-flex="hero">
+      <div class="ph__panel" aria-hidden="true" data-flex-panel><span class="ph__grid"></span></div>
+      <picture class="ph__photo" data-ph-photo data-flex-photo>
         <source type="image/avif" srcset={`${src(480, 'avif')} 480w, ${src(800, 'avif')} 800w, ${src(1200, 'avif')} 1200w`} sizes="(min-width: 1024px) 34vw, (min-width: 700px) 56vw, 88vw" />
         <source type="image/webp" srcset={`${src(480, 'webp')} 480w, ${src(800, 'webp')} 800w, ${src(1200, 'webp')} 1200w`} sizes="(min-width: 1024px) 34vw, (min-width: 700px) 56vw, 88vw" />
         <img src={src(800, 'webp')} width="1200" height="1219" alt="Mousa Batarseh, smiling, arms crossed" fetchpriority="high" decoding="async" />
@@ -109,6 +110,10 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
   @media (hover: hover) and (pointer: fine) {
     .ph__photo img { filter: grayscale(1) contrast(1.06); }
     .ph__me:hover .ph__photo img { filter: none; }
+    /* Pointing at the photo extends it: the panel and the cut-out grow a little (on top of the scroll's size). */
+    .ph__panel, .ph__photo { transition: scale 0.8s var(--ease-register); }
+    .ph__me:hover .ph__panel { scale: 1.05; }
+    .ph__me:hover .ph__photo { scale: 1.07; }
   }
   .ph__cap {
     position: absolute;
