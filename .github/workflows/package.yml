@@ -1,0 +1,36 @@
+name: Build the mousabatarseh.com upload package
+
+# Builds the same package as `npm run package:root` (production build, indexable, canonical on
+# mousabatarseh.com) and offers it as a download on the run's page. Nothing is uploaded to the live site:
+# Mousa uploads it himself, after approving, following docs/deploy.md.
+on:
+  push:
+    branches: ['claude/determined-lamport-4blt8a']
+    paths: ['.github/workflows/package.yml', 'deploy/package-request.txt']
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run package:root
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mousabatarseh-root-package-${{ github.sha }}
+          retention-days: 30
+          compression-level: 0
+          path: |
+            deploy/mousabatarseh-root.zip
+            deploy/MANIFEST.txt
+            deploy/redirects.htaccess
+            docs/deploy.md
