@@ -6,10 +6,11 @@ import { SITE_URL } from '../../data/site';
 const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url: `${SITE_URL}/about/`, mainEntity: { '@id': `${SITE_URL}/#person` } }];
 ---
 <Base title="About" description={`About ${person.name}: seven years building and running WordPress sites and e-commerce stores — product data, SEO, operations and the tools that check them. Warren, Michigan.`} path="/about/" og="about" type="profile" jsonLd={jsonLd}>
-  <PageHead title="From fragile to boring." kicker="About · Warren, Michigan" dot="var(--lime)" lead="In the best way." stickers={['heart', 'cursor', 'cell']} />
+  <PageHead title="From fragile to boring." kicker="About · Warren, Michigan" lead="In the best way." stickers={['heart', 'cursor', 'cell']} />
 
   <section class="about__intro section wrap" aria-labelledby="intro-title">
     <h2 class="visually-hidden" id="intro-title">Who I am</h2>
+    <div class="about__text">
     <div class="about__prose">
       {person.about.map((p) => <p>{p}</p>)}
     </div>
@@ -19,23 +20,33 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
       <div style="--bg: var(--mint)" data-pop><dt>Platforms</dt><dd>{[...person.platforms, ...person.builders].join(' · ')}</dd></div>
       <div style="--bg: var(--sky)" data-pop><dt>Languages</dt><dd>{person.languages.join(' · ')}</dd></div>
     </dl>
+    </div>
+    <figure class="about__me">
+      <div class="about__panel" aria-hidden="true"></div>
+      <picture class="about__photo">
+        <source type="image/avif" srcset="/media/me/mousa-480.avif 480w, /media/me/mousa-800.avif 800w, /media/me/mousa-1200.avif 1200w" sizes="(min-width: 1024px) 32vw, 88vw" />
+        <source type="image/webp" srcset="/media/me/mousa-480.webp 480w, /media/me/mousa-800.webp 800w, /media/me/mousa-1200.webp 1200w" sizes="(min-width: 1024px) 32vw, 88vw" />
+        <img src="/media/me/mousa-800.webp" width="1200" height="1219" alt="Mousa Batarseh, smiling, arms crossed" loading="lazy" decoding="async" />
+      </picture>
+      <figcaption class="about__cap"><span>{person.name}</span><span>{person.location}</span></figcaption>
+    </figure>
   </section>
 
   <section class="about__method section wrap" aria-labelledby="method-title">
     <header class="about__head">
-      <p class="kicker" style="--kicker-dot: var(--violet)">Method</p>
+      <p class="kicker">Method</p>
       <h2 class="h2" id="method-title">Four steps, every single time.</h2>
     </header>
     <ol class="method" role="list" data-pop-grid>
       {method.map((m, i) => (
-        <li style={`--bg:${['var(--pink)', 'var(--lime)', 'var(--sun)', 'var(--aqua)'][i % 4]}`} data-pop><span class="method__n num">{m.n}</span><h3 class="method__title">{m.title}</h3><p class="method__text">{m.text}</p></li>
+        <li class:list={[{ 'is-dark': i === 3 }]} data-pop data-glow><span class="method__n num">{m.n}</span><h3 class="method__title">{m.title}</h3><p class="method__text">{m.text}</p></li>
       ))}
     </ol>
   </section>
 
   <section class="about__workflow section section--tight wrap" aria-labelledby="workflow-title">
     <header class="about__head">
-      <p class="kicker" style="--kicker-dot: var(--aqua)">Workflow</p>
+      <p class="kicker">Workflow</p>
       <h2 class="h2" id="workflow-title">Eleven steps, goal to measurement.</h2>
     </header>
     <ol class="workflow" role="list">
@@ -47,7 +58,7 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
 
   <section class="about__services section wrap" aria-labelledby="services-title">
     <header class="about__head">
-      <p class="kicker" style="--kicker-dot: var(--tomato)">Services</p>
+      <p class="kicker">Services</p>
       <h2 class="h2" id="services-title">What I do.</h2>
     </header>
     <ol class="svc" role="list">
@@ -64,7 +75,7 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
 
   <section class="about__skills section wrap" aria-labelledby="skills-title">
     <header class="about__head">
-      <p class="kicker" style="--kicker-dot: var(--sun)">Skills & tools</p>
+      <p class="kicker">Skills & tools</p>
       <h2 class="h2" id="skills-title">The spec sheet.</h2>
     </header>
     <div class="skills">
@@ -85,7 +96,7 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
 
   <section class="about__courses section wrap" aria-labelledby="courses-title">
     <header class="about__head">
-      <p class="kicker" style="--kicker-dot: var(--pink)">Learning</p>
+      <p class="kicker">Learning</p>
       <h2 class="h2" id="courses-title">Courses & certifications.</h2>
       <p class="about__note">As listed on my previous portfolio; issuer as stated there.</p>
     </header>
@@ -99,7 +110,16 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
 </Base>
 
 <style>
-  .about__intro { display: grid; gap: var(--s-7); }
+  .about__intro { display: grid; gap: var(--s-8); }
+  .about__text { display: grid; gap: var(--s-7); align-content: start; }
+  .about__me { position: relative; margin: 0; width: min(88vw, 460px); aspect-ratio: 1 / 1.12; justify-self: center; }
+  .about__panel { position: absolute; inset: 16% 0 0 0; border-radius: var(--r-xl); background: radial-gradient(110% 90% at 70% 0%, #242b3a 0%, var(--night) 60%); box-shadow: var(--shadow-2); overflow: hidden; }
+  .about__panel::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgb(255 255 255 / 0.14) 1px, transparent 1.4px); background-size: 22px 22px; mask-image: radial-gradient(80% 70% at 50% 30%, #000 10%, transparent 80%); }
+  .about__photo { position: absolute; left: 0; right: 0; bottom: 0; clip-path: inset(-60% 0 0 0 round var(--r-xl)); }
+  .about__photo img { width: 100%; height: auto; transition: filter 0.9s var(--ease-register); }
+  @media (hover: hover) and (pointer: fine) { .about__photo img { filter: grayscale(1) contrast(1.06); } .about__me:hover .about__photo img { filter: none; } }
+  .about__cap { position: absolute; left: 14px; bottom: 14px; display: grid; gap: 2px; padding: 10px 14px; border-radius: var(--r-m); background: rgb(255 255 255 / 0.92); box-shadow: var(--shadow-1); font: 650 0.8125rem / 1.25 var(--font-text); }
+  .about__cap span + span { font-weight: 500; color: var(--ink-2); }
   .about__prose { display: grid; gap: 1em; font-size: var(--t-lead); line-height: 1.45; max-width: 44ch; font-weight: 450; }
   .about__ledger { display: grid; gap: 10px; align-content: start; }
   .about__ledger div { padding: 16px 18px; border-radius: var(--r-l); background: var(--bg); color: var(--ink); }
@@ -108,7 +128,9 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
   .about__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
   .about__note { color: var(--fg-2); }
   .method { display: grid; gap: clamp(14px, 1.6vw, 24px); }
-  .method li { display: grid; gap: 10px; align-content: start; padding: clamp(22px, 2.4vw, 32px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
+  .method li { position: relative; display: grid; gap: 10px; align-content: start; padding: clamp(22px, 2.4vw, 32px); border-radius: var(--r-xl); background: var(--cloud); color: var(--ink); }
+  .method li.is-dark { background: var(--accent); color: #fff; --glow: rgb(255 255 255 / 0.12); }
+  .method li.is-dark .method__n { background: #fff; color: var(--ink); }
   .method__n { justify-self: start; padding: 5px 10px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 750 0.8125rem / 1 var(--font-text); }
   .method__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(1.9rem, 2.6vw, 2.6rem); line-height: 0.92; text-transform: uppercase; }
   .method__text { font-weight: 500; }
@@ -132,7 +154,7 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
   .courses { display: grid; gap: 12px; }
   .courses li { display: grid; gap: 6px; align-content: start; padding: 20px 22px; border-radius: var(--r-l); background: var(--cloud); }
   .courses__t { font-family: var(--font-display); font-weight: 900; font-stretch: 82%; font-size: 1.35rem; line-height: 1.05; text-transform: uppercase; }
-  .courses__i { justify-self: start; padding: 4px 9px; border-radius: var(--r-pill); background: var(--lemon); font: 700 0.75rem / 1.2 var(--font-text); }
+  .courses__i { justify-self: start; padding: 4px 9px; border-radius: var(--r-pill); background: var(--accent-tint); color: var(--accent-deep); font: 700 0.75rem / 1.2 var(--font-text); }
   .courses__d { color: var(--ink-2); font-size: var(--t-small); }
   .about__checked { margin-top: var(--s-6); font-size: 0.875rem; font-weight: 600; color: var(--fg-2); }
   @media (min-width: 700px) {
@@ -143,8 +165,9 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
   }
   @media (min-width: 1024px) {
     .about__intro { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
-    .about__prose { grid-column: 1 / span 7; }
-    .about__ledger { grid-column: 9 / span 4; }
+    .about__text { grid-column: 1 / span 7; }
+    .about__me { grid-column: 9 / span 4; width: 100%; align-self: start; }
+    .about__ledger { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .method { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .svc li { grid-template-columns: auto minmax(0, 1.1fr) minmax(0, 1.2fr) minmax(0, 1fr); column-gap: var(--gutter); align-items: start; }
     .svc__n { grid-column: 1; }

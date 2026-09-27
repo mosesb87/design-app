@@ -1,7 +1,7 @@
 ---
-// A tilted band of what Mousa works with, running across the page. The list is read once by screen readers.
-interface Props { items: string[]; tone?: 'lime' | 'pink' | 'sun' | 'violet'; tilt?: number; reverse?: boolean; label?: string }
-const { items, tone = 'lime', tilt = -2, reverse = false, label = 'What I work with' } = Astro.props;
+// A band of what Mousa works with, running across the page. The list is read once by screen readers.
+interface Props { items: string[]; tone?: 'ink' | 'light' | 'accent'; tilt?: number; reverse?: boolean; label?: string }
+const { items, tone = 'ink', tilt = 0, reverse = false, label = 'What I work with' } = Astro.props;
 const run = [...items, ...items];
 ---
 <div class:list={['mq', `mq--${tone}`, { 'mq--rev': reverse }]} style={`--tilt:${tilt}deg`} data-marquee>
@@ -9,7 +9,7 @@ const run = [...items, ...items];
   <div class="mq__track" aria-hidden="true">
     {[0, 1].map(() => (
       <div class="mq__run">
-        {run.map((t) => (<span class="mq__item">{t}<i class="mq__star">✦</i></span>))}
+        {run.map((t) => (<span class="mq__item">{t}<i class="mq__star"></i></span>))}
       </div>
     ))}
   </div>
@@ -19,16 +19,15 @@ const run = [...items, ...items];
   .mq {
     position: relative;
     z-index: 4;
-    margin-inline: -2vw;
+    margin-inline: 0;
     padding-block: clamp(14px, 1.6vw, 22px);
     transform: rotate(var(--tilt));
     overflow: hidden;
     box-shadow: var(--shadow-1);
   }
-  .mq--lime { background: var(--lime); color: var(--ink); }
-  .mq--pink { background: var(--pink); color: var(--ink); }
-  .mq--sun { background: var(--sun); color: var(--ink); }
-  .mq--violet { background: var(--violet); color: #fff; }
+  .mq--ink { background: var(--night); color: var(--night-ink); }
+  .mq--light { background: var(--cloud); color: var(--ink); box-shadow: none; border-block: 1px solid var(--line-soft); }
+  .mq--accent { background: var(--accent); color: #fff; }
   .mq__track { display: flex; width: max-content; animation: mq 38s linear infinite; }
   .mq--rev .mq__track { animation-direction: reverse; }
   .mq__run { display: flex; flex: none; }
@@ -45,11 +44,12 @@ const run = [...items, ...items];
     text-transform: uppercase;
     white-space: nowrap;
   }
-  .mq__star { font-style: normal; font-size: 0.6em; display: inline-block; animation: mq-spin 6s linear infinite; }
+  .mq__star { display: inline-block; width: 0.22em; height: 0.22em; border-radius: 50%; background: var(--accent-soft); }
+  .mq--light .mq__star { background: var(--accent); }
+  .mq--accent .mq__star { background: #fff; }
   @keyframes mq { to { transform: translateX(-50%); } }
-  @keyframes mq-spin { to { transform: rotate(360deg); } }
   .mq:hover .mq__track { animation-play-state: paused; }
   @media (prefers-reduced-motion: reduce) {
-    .mq__track, .mq__star { animation: none; }
+    .mq__track { animation: none; }
   }
 </style>

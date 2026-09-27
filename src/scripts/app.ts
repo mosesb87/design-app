@@ -24,6 +24,9 @@ Promise.all([
   mount('[data-contact]', () => import('./motion/contact')),
   mount('[data-filter]', () => import('./motion/filter')),
   mount('[data-scrollframe]', () => import('./motion/scrollframe')),
+  mount('[data-field]', () => import('./motion/field')),
+  mount('[data-glow]', () => import('./motion/glow')),
+  mount('[data-ghost]', () => import('./motion/ghost')),
 ]).then(refreshSoon);
 
 document.fonts?.ready.then(refreshSoon);

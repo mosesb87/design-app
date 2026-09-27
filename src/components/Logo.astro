@@ -1,0 +1,14 @@
+---
+// Mousa's own logo, exactly as published on mousabatarseh.com (portfolio-home/favicon.svg): the blue, red and
+// green bars. The artwork is the original file, inlined unchanged; only sizing and aria-hidden are added here.
+import raw from '../assets/mousa-logo.svg?raw';
+interface Props { size?: number | string; class?: string }
+const { size = 28, class: cls = '' } = Astro.props;
+const svg = raw.replace('<svg ', `<svg aria-hidden="true" focusable="false" width="${size}" height="${size}" `);
+---
+<span class:list={['logo', cls]} set:html={svg} />
+
+<style>
+  .logo { display: inline-grid; place-items: center; flex: none; line-height: 0; }
+  .logo :global(svg) { display: block; }
+</style>

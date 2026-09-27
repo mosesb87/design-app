@@ -80,7 +80,7 @@ const jsonLd = [
 
     <section class="case__brief section wrap" aria-labelledby="brief-title">
       <header class="case__head">
-        <p class="kicker" style="--kicker-dot: var(--tomato)">The work</p>
+        <p class="kicker">The work</p>
         <h2 class="visually-hidden" id="brief-title">The work</h2>
       </header>
       <div class="case__prose">
@@ -109,7 +109,7 @@ const jsonLd = [
           <div class="exploded__sticky">
             <div class="wrap exploded__grid">
               <div class="exploded__legend">
-                <p class="kicker" style="--kicker-dot: var(--violet)">Three layers, one page</p>
+                <p class="kicker">Three layers, one page</p>
                 <h2 class="exploded__title h2" id="plates-title">What sits under the surface.</h2>
                 <ol class="exploded__labels" role="list">
                   <li data-layer-label><span class="exploded__n">01</span><b>Surface</b> The live page, captured {date}.</li>
@@ -145,7 +145,7 @@ const jsonLd = [
     {c.features && c.features.length > 0 && (
       <section class="case__features section wrap" aria-labelledby="features-title">
         <header class="case__head">
-          <p class="kicker" style="--kicker-dot: var(--aqua)">How it works</p>
+          <p class="kicker">How it works</p>
           <h2 class="h2" id="features-title">The moving parts.</h2>
         </header>
         <ol class="features" role="list" data-pop-grid>
@@ -163,7 +163,7 @@ const jsonLd = [
     {details.length > 0 && (
       <section class="case__details section wrap" aria-labelledby="details-title">
         <header class="case__head">
-          <p class="kicker" style="--kicker-dot: var(--pink)">Up close</p>
+          <p class="kicker">Up close</p>
           <h2 class="h2" id="details-title">Details, at reading distance.</h2>
         </header>
         <ol class="details" role="list">
@@ -185,7 +185,7 @@ const jsonLd = [
       <section class="case__read section" aria-labelledby="read-title">
         <div class="wrap case__read-grid">
           <header class="case__read-head">
-            <p class="kicker" style="--kicker-dot: var(--blue)">Top to bottom</p>
+            <p class="kicker">Top to bottom</p>
             <h2 class="h2" id="read-title">The live page, all of it.</h2>
             <p class="case__read-note">Scroll past the frames and the page inside scrolls with you. Captured {date} in a real browser.</p>
           </header>
@@ -212,7 +212,7 @@ const jsonLd = [
     {video && c.media.video && (
       <section class="case__rec section section--tight wrap" aria-labelledby="rec-title">
         <header class="case__head">
-          <p class="kicker" style="--kicker-dot: var(--lime)">Recorded</p>
+          <p class="kicker">Recorded</p>
           <h2 class="h2" id="rec-title">{recs?.interaction ? 'In use.' : 'A real session.'}</h2>
         </header>
         <div class:list={['recs', { 'recs--two': recs?.interaction && recs?.video }]}>
@@ -225,7 +225,7 @@ const jsonLd = [
     {(c.metrics?.length || c.spec.length) && (
       <section class="case__receipts section wrap" aria-labelledby="receipts-title">
         <header class="case__head">
-          <p class="kicker" style="--kicker-dot: var(--sun)">Counted, not claimed</p>
+          <p class="kicker">Counted, not claimed</p>
           <h2 class="h2" id="receipts-title">{c.metrics?.length ? 'Receipts.' : 'The spec.'}</h2>
         </header>
         {c.metrics && c.metrics.length > 0 && (
@@ -248,7 +248,7 @@ const jsonLd = [
     {c.media.more && c.media.more.length > 0 && (
       <section class="case__more section wrap" aria-labelledby="more-title">
         <header class="case__head">
-          <p class="kicker" style="--kicker-dot: var(--tomato)">Also part of this work</p>
+          <p class="kicker">Also part of this work</p>
           <h2 class="h2" id="more-title">More from the same build.</h2>
         </header>
         <ul class="more-grid" role="list">
@@ -268,7 +268,7 @@ const jsonLd = [
     {c.family && c.family.length > 0 && (
       <section class="case__family section section--tight wrap" aria-labelledby="family-title">
         <header class="case__head">
-          <p class="kicker" style="--kicker-dot: var(--violet)">The family</p>
+          <p class="kicker">The family</p>
           <h2 class="h2" id="family-title">Related builds.</h2>
         </header>
         <ul class="family" role="list">

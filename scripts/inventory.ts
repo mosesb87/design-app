@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { entries, statusLabel, categories } from '../src/data/work';
 import { cases } from '../src/data/cases';
-import { tools } from '../src/data/tools';
+import { tools, toolPages } from '../src/data/tools';
 import { reviews } from '../src/data/site';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -34,8 +34,9 @@ for (const c of cases) {
   if (c.group === 'sites') place(c.media.hero, 'home: featured plate');
 }
 tools.forEach((t) => place(t.media, 'home: tools rack'));
+toolPages.forEach((t) => place(t.media, `/tools/#${t.slug} recording or still`));
 reviews.forEach((r) => place(r.media, 'home: counted reviews'));
-entries.forEach((e) => place(e.media, '/work/ archive loupe + thumbnail'));
+entries.forEach((e) => place(e.media, '/work/ archive preview window + thumbnail'));
 
 const rows: string[] = [];
 let total = 0;
@@ -81,7 +82,12 @@ const contentDoc = `
 Made by \`scripts/content/blog.mjs\` and \`scripts/content/reviews.mjs\` from pages fetched on GitHub Actions (\`capture/content/\`). Images are Mousa's own (post covers and figures he published; screenshots of his own review pages); re-encoded to WebP at two widths. Nothing was bought or generated.
 
 - **Blog:** ${posts.length} posts with pages (${posts.reduce((n: number, p: any) => n + (p.image ? 1 : 0) + imgCount(p.html), 0)} images) and ${sums.length} summary cards with their published covers — ${(dirSize(path.join(root, 'public/media/blog')) / 1024 / 1024).toFixed(1)} MB.
-- **Reviews:** ${revs.length} reviews, ${revs.reduce((n: number, r: any) => n + r.sheets.length, 0)} sheets, each sheet's first screen as published plus the images inside the sheets — ${(dirSize(path.join(root, 'public/media/reviews')) / 1024 / 1024).toFixed(1)} MB.
+- **Reviews:** ${revs.length} reviews, ${revs.reduce((n: number, r: any) => n + r.sheets.length, 0)} sheets, each sheet's first screen as published plus the images inside the sheets — ${(dirSize(path.join(root, 'public/media/reviews')) / 1024 / 1024).toFixed(1)} MB. The first sheet's first screen is also the screenshot on every review card (home and /reviews/).
+
+## Portrait and logo
+
+- **Portrait** (\`public/media/me/\`): a photo Mousa sent for the site on 2026-09-27 (black vest, arms crossed), chosen from the ones he sent because it has the plainest background, the sharpest detail and eye contact. The background was removed on the development machine (rembg, u2net_human_seg and isnet-general-use masks intersected, edges eroded 1 px and feathered); the photo was not sent to any outside service. Responsive AVIF/WebP at 480, 800 and 1200 wide, plus a 96/192 px head-and-shoulders avatar for blog posts. Used on the home hero, /about/ and the blog author line. Licensing: Mousa's own photo, supplied by him. The original photos are not stored in this repository.
+- **Logo** (\`src/assets/mousa-logo.svg\`, \`public/favicon.svg\`): Mousa's own mark, byte-for-byte the file published at mousabatarseh.com/portfolio-home/favicon.svg (fetched 2026-09-27 by \`scripts/capture/brand.mjs\`, \`capture/brand/\`). Inlined unchanged in the nav, footer and share images; \`favicon.ico\` and \`apple-touch-icon.png\` are raster copies of the same file (the touch icon on white, because iOS fills transparency with black).
 
 | Review | Site reviewed | Observed | Sheets | Images in text | Source |
 |---|---|---|---|---|---|

@@ -14,7 +14,7 @@ const OUT = path.resolve('qa');
 const shots = !args.includes('--no-shots');
 const runAxe = args.includes('--axe');
 // The representative set: every template, plus the longest and the most interactive instances of each.
-const ALL_PAGES = ['/', '/work/', '/about/', '/work/asas-studio/', '/work/changeatlas/', '/work/deals-os/', '/work/csv-mapper/', '/work/diamedical-lab/', '/work/united-textile/', '/work/universal-wholesale/', '/work/firefly-burgers/', '/work/eat-with-samar/', '/work/great-lakes-cigar-festival/', '/work/ptee/', '/blog/', '/blog/on-page-seo-large-product-catalog/', '/blog/cleaning-product-data-csv/', '/reviews/', '/reviews/vanguard/', '/reviews/oakwood/', '/reviews/hayhouse/', '/reviews/diamedical/', '/404.html'];
+const ALL_PAGES = ['/', '/work/', '/tools/', '/about/', '/work/asas-studio/', '/work/changeatlas/', '/work/deals-os/', '/work/csv-mapper/', '/work/diamedical-lab/', '/work/united-textile/', '/work/universal-wholesale/', '/work/firefly-burgers/', '/work/eat-with-samar/', '/work/great-lakes-cigar-festival/', '/work/ptee/', '/blog/', '/blog/on-page-seo-large-product-catalog/', '/blog/cleaning-product-data-csv/', '/reviews/', '/reviews/vanguard/', '/reviews/oakwood/', '/reviews/hayhouse/', '/reviews/diamedical/', '/404.html'];
 // --pages=all: every page in the build.
 const everyPage = () => {
   const out = [];

@@ -71,7 +71,7 @@ const jsonLd = [
     {r.findings.length > 0 && (
       <section class="wrap rv__finds section--tight" aria-labelledby="finds-title">
         <header class="rv__head">
-          <p class="kicker" style="--kicker-dot: var(--pink)">Findings</p>
+          <p class="kicker">Findings</p>
           <h2 class="h2" id="finds-title">What the review found.</h2>
         </header>
         <ol class="finds" role="list" data-pop-grid>
@@ -90,7 +90,7 @@ const jsonLd = [
       <section class="rv__full" aria-labelledby="full-title">
         <div class="wrap">
           <header class="rv__head">
-            <p class="kicker" style="--kicker-dot: var(--aqua)">The full review · {r.minutes} min read</p>
+            <p class="kicker">The full review · {r.minutes} min read</p>
             <h2 class="h2" id="full-title">Read it all.</h2>
             {sheets.length > 1 && (
               <nav class="sheets-nav" aria-label="Sheets in this review">
@@ -202,7 +202,7 @@ const jsonLd = [
   .rv__more { padding-block: var(--s-10) var(--s-6); display: grid; gap: var(--s-6); }
   .more { display: grid; gap: clamp(14px, 1.6vw, 24px); }
   .more__card { container-type: inline-size; position: relative; display: grid; gap: 10px; padding: clamp(20px, 2.2vw, 30px); border-radius: var(--r-xl); background: var(--bg); color: var(--on); transition: transform 0.5s var(--ease-pop); }
-  .more__card:hover { transform: translateY(-6px) rotate(-0.8deg); }
+  .more__card:hover { transform: translateY(-6px); }
   .more__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(3rem, 5vw, 4.5rem); line-height: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .more__label { font-weight: 600; }
   .more__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.6rem, 2.2vw, 2.2rem); line-height: 0.95; text-transform: uppercase; }

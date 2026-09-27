@@ -1,26 +1,28 @@
 ---
 // "Start with the business goal. End with the measurement." — the four-step method as cards that stack as you
-// scroll (CSS sticky, no scripting), then the six services as pills.
+// scroll (CSS sticky, no scripting), then the six services as a calm grid.
 import Sticker from './Sticker.astro';
 import type { StickerName } from './types';
 import { method, services } from '../../data/site';
-const looks: { bg: string; fg: string; s: StickerName }[] = [
-  { bg: 'var(--sky)', fg: 'var(--ink)', s: 'lens' },
-  { bg: 'var(--lemon)', fg: 'var(--ink)', s: 'pin' },
-  { bg: 'var(--blush)', fg: 'var(--ink)', s: 'blocks' },
-  { bg: 'var(--mint)', fg: 'var(--ink)', s: 'check' },
+// Four cards, darkening as they stack: grey, white, night, cobalt.
+const looks: { tone: string; s: StickerName }[] = [
+  { tone: 'grey', s: 'lens' },
+  { tone: 'white', s: 'pin' },
+  { tone: 'night', s: 'blocks' },
+  { tone: 'accent', s: 'check' },
 ];
-const pills = ['var(--tomato)', 'var(--lime)', 'var(--sky)', 'var(--sun)', 'var(--pink)', 'var(--aqua)'];
+import Ghost from '../Ghost.astro';
 ---
-<section class="meth section" aria-labelledby="meth-title">
+<section class="meth section has-ghost" aria-labelledby="meth-title">
+  <Ghost text="Method" align="right" top="1%" />
   <div class="wrap">
     <header class="meth__head">
-      <p class="kicker" style="--kicker-dot: var(--lime)">How I work</p>
+      <p class="kicker">How I work</p>
       <h2 class="h2" id="meth-title">Start with the business goal. End with the measurement.</h2>
     </header>
     <ol class="meth__stack" role="list">
       {method.map((m, i) => (
-        <li class="step" style={`--bg:${looks[i].bg};--i:${i}`}>
+        <li class:list={['step', `step--${looks[i].tone}`, { 'on-dark': i > 1 }]} style={`--i:${i}`} data-glow>
           <span class="step__n">{m.n}</span>
           <div class="step__text">
             <h3 class="step__title">{m.title}</h3>
@@ -34,7 +36,8 @@ const pills = ['var(--tomato)', 'var(--lime)', 'var(--sky)', 'var(--sun)', 'var(
       <h3 class="meth__services-title">What I can take off your plate</h3>
       <ul class="pills" role="list">
         {services.map((s, i) => (
-          <li class="pill" style={`--bg:${pills[i % pills.length]}`}>
+          <li class="pill" data-glow>
+            <span class="pill__n num">{String(i + 1).padStart(2, '0')}</span>
             <span class="pill__t">{s.title}</span>
             <span class="pill__d">{s.text}</span>
           </li>
@@ -58,11 +61,15 @@ const pills = ['var(--tomato)', 'var(--lime)', 'var(--sky)', 'var(--sun)', 'var(
     min-height: clamp(200px, 22vw, 300px);
     padding: clamp(22px, 3vw, 48px);
     border-radius: var(--r-xl);
-    background: var(--bg);
+    background: var(--cloud);
     color: var(--ink);
-    box-shadow: 0 -12px 30px -18px rgb(22 18 31 / 0.35);
+    box-shadow: 0 -12px 30px -18px rgb(14 17 22 / 0.3);
     overflow: hidden;
   }
+  .step--white { background: #fff; box-shadow: 0 0 0 1px var(--line-soft), 0 -12px 30px -18px rgb(14 17 22 / 0.3); }
+  .step--night { background: var(--night); color: var(--night-ink); }
+  .step--accent { background: var(--accent); color: #fff; }
+  .step--night .step__n, .step--accent .step__n { opacity: 0.9; }
   .step__n { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(4rem, 10vw, 10rem); line-height: 0.8; }
   .step__text { display: grid; gap: var(--s-3); max-width: 40ch; }
   .step__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2rem, 3.8vw, 4rem); line-height: 0.9; text-transform: uppercase; }
@@ -71,22 +78,24 @@ const pills = ['var(--tomato)', 'var(--lime)', 'var(--sky)', 'var(--sun)', 'var(
   .step__sticker :global(.sticker) { --size: 100%; width: 100%; }
   .meth__services { margin-top: var(--s-10); display: grid; gap: var(--s-6); }
   .meth__services-title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h3); text-transform: uppercase; }
-  .pills { display: flex; flex-wrap: wrap; gap: 12px; }
+  .pills { display: grid; gap: 12px; }
   .pill {
+    position: relative;
     display: grid;
-    gap: 6px;
-    max-width: 30rem;
-    padding: 16px 22px;
+    gap: 8px;
+    align-content: start;
+    padding: 22px 24px 24px;
     border-radius: var(--r-l);
-    background: var(--bg);
+    background: var(--cloud);
     color: var(--ink);
-    transition: transform 0.5s var(--ease-pop);
+    transition: transform 0.5s var(--ease-register), background-color var(--d-small), box-shadow var(--d-small);
   }
-  .pill:nth-child(odd) { transform: rotate(-1.2deg); }
-  .pill:nth-child(even) { transform: rotate(1deg); }
-  .pill:hover { transform: rotate(0) scale(1.03); }
+  .pill:hover { transform: translateY(-3px); background: #fff; box-shadow: var(--shadow-1); }
+  .pill__n { font: 700 0.75rem / 1 var(--font-text); letter-spacing: 0.06em; color: var(--accent); }
+  @media (min-width: 700px) { .pills { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .pills { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   .pill__t { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.5rem, 2vw, 2rem); line-height: 1; text-transform: uppercase; }
-  .pill__d { font-size: var(--t-small); font-weight: 500; line-height: 1.4; }
+  .pill__d { font-size: var(--t-small); font-weight: 500; line-height: 1.45; color: var(--ink-2); }
   @media (max-width: 699px) {
     .step { grid-template-columns: 1fr; align-items: start; top: calc(var(--nav-h) + 8px + var(--i) * 12px); }
     .step__sticker { width: 64px; top: 14px; right: 12px; bottom: auto; }

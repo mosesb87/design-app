@@ -4,6 +4,7 @@
 
 ## Pages
 - [Home](https://mousabatarseh.com/): who he is, how he thinks (sheet / register / shelf), selected sites and stores, the tools he built, independent reviews.
+- [Tools](https://mousabatarseh.com/tools/): the tools he built — DealProof, ChangeAtlas Commerce, the Deals Operating System, CSV Mapper, ASAS Studio, SEO Tools, the DiaMedical lab, AI Academy and The Lab — what each checks, how it works, and a link to open it.
 - [All the work](https://mousabatarseh.com/work/): the complete archive — tools, case studies, websites, stores, reviews and proposals, each linked to its case study or live site.
 - [About](https://mousabatarseh.com/about/): method, services, skills, tools, courses.
 - [Reviews](https://mousabatarseh.com/reviews/): 22 independent reviews of live stores and websites, each on its own page — the headline number, three findings, and the full review; every finding dated, public pages only.

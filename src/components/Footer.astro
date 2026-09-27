@@ -1,5 +1,6 @@
 ---
 import { person, nav } from '../data/site';
+import Logo from './Logo.astro';
 const built = new Date().toISOString().slice(0, 10);
 const year = new Date().getFullYear();
 ---
@@ -11,7 +12,7 @@ const year = new Date().getFullYear();
       <a href="#top" class="footer__top">Back to top <span aria-hidden="true">↑</span></a>
     </nav>
     <p class="footer__meta">
-      <span>© {year} {person.name}</span>
+      <span class="footer__brand"><Logo size={18} />© {year} {person.name}</span>
       <span>{person.location}</span>
       <span>Built {built}</span>
       <!-- Replaced after the build with this page's measured weight (scripts/postbuild.mjs). -->
@@ -26,7 +27,8 @@ const year = new Date().getFullYear();
   .footer__inner { display: grid; gap: var(--s-5); }
   .footer__nav { display: flex; flex-wrap: wrap; gap: 8px; }
   .footer__nav a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 18px; border-radius: var(--r-pill); background: var(--cloud); color: var(--ink); font-weight: 650; text-decoration: none; transition: background-color var(--d-small); }
-  .footer__nav a:hover { background: var(--lime); }
+  .footer__nav a:hover { background: var(--accent-tint-2); }
   .footer__top { margin-left: auto; }
-  .footer__meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: var(--t-small); color: var(--ink-2); }
+  .footer__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; font-size: var(--t-small); color: var(--ink-2); }
+  .footer__brand { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-weight: 600; }
 </style>

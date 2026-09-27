@@ -1,25 +1,27 @@
 ---
-// "Counted, not claimed." — big numbers on bright tiles, each with its source. The true value is in the HTML;
+// "Counted, not claimed." — big numbers on calm tiles (one dark, one accent), each with its source. The true value is in the HTML;
 // the digits roll only as decoration.
 import { entryCount } from '../../data/work';
 const tiles = [
-  { value: '7', unit: 'years', label: 'building and running WordPress sites', source: 'WordPress since 2019', bg: 'var(--tomato)' },
-  { value: '14,000', unit: 'items', label: 'in one catalog, prepared for migration', source: 'Universal Wholesale', bg: 'var(--lilac)' },
-  { value: '3,881', unit: 'blocks', label: 'real Elementor blocks in ASAS Studio', source: 'asas.build', bg: 'var(--lime)' },
-  { value: '16', unit: 'checks', label: 'every promotion passes before a menu', source: 'The Deals Operating System', bg: 'var(--sky)' },
-  { value: String(entryCount), unit: 'entries', label: 'tools, sites, reviews and proposals in the archive', source: 'This site’s archive', bg: 'var(--sun)' },
-  { value: '2', unit: 'languages', label: 'English and Arabic, right-to-left included', source: 'Bilingual builds', bg: 'var(--pink)' },
+  { value: '7', unit: 'years', label: 'building and running WordPress sites', source: 'WordPress since 2019', tone: 'dark' },
+  { value: '14,000', unit: 'items', label: 'in one catalog, prepared for migration', source: 'Universal Wholesale', tone: 'light' },
+  { value: '3,881', unit: 'blocks', label: 'real Elementor blocks in ASAS Studio', source: 'asas.build', tone: 'light' },
+  { value: '16', unit: 'checks', label: 'every promotion passes before a menu', source: 'The Deals Operating System', tone: 'accent' },
+  { value: String(entryCount), unit: 'entries', label: 'tools, sites, reviews and proposals in the archive', source: 'This site’s archive', tone: 'light' },
+  { value: '2', unit: 'languages', label: 'English and Arabic, right-to-left included', source: 'Bilingual builds', tone: 'light' },
 ];
+import Ghost from '../Ghost.astro';
 ---
-<section class="nums section" aria-labelledby="nums-title">
+<section class="nums section has-ghost" aria-labelledby="nums-title">
+  <Ghost text="Counted" align="left" top="2%" />
   <div class="wrap">
     <header class="nums__head">
-      <p class="kicker" style="--kicker-dot: var(--sun)">By the numbers</p>
+      <p class="kicker">By the numbers</p>
       <h2 class="h2" id="nums-title">Counted,<br />not claimed.</h2>
     </header>
     <ul class="nums__grid" role="list" data-pop-grid>
-      {tiles.map((t, i) => (
-        <li class="nums__tile" style={`--bg:${t.bg};--r:${[-2.5, 1.5, -1, 2, -1.8, 1.2][i]}deg`} data-pop data-count-host>
+      {tiles.map((t) => (
+        <li class:list={['nums__tile', `nums__tile--${t.tone}`]} data-pop data-count-host data-glow>
           <p class="nums__value"><span class="num" data-count>{t.value}</span><span class="nums__unit">{t.unit}</span></p>
           <p class="nums__label">{t.label}</p>
           <p class="nums__src">{t.source}</p>
@@ -33,6 +35,7 @@ const tiles = [
   .nums__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-8); }
   .nums__grid { display: grid; gap: clamp(14px, 1.6vw, 24px); }
   .nums__tile {
+    container-type: inline-size;
     position: relative;
     display: grid;
     align-content: space-between;
@@ -40,14 +43,17 @@ const tiles = [
     min-height: clamp(220px, 24vw, 340px);
     padding: clamp(22px, 2.4vw, 36px);
     border-radius: var(--r-xl);
-    background: var(--bg);
+    background: var(--cloud);
     color: var(--ink);
-    transform: rotate(var(--r));
-    transition: transform 0.6s var(--ease-pop);
+    transition: transform 0.6s var(--ease-register), box-shadow var(--d-small);
   }
-  .nums__tile:hover { transform: rotate(0deg) scale(1.02); }
+  .nums__tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
+  .nums__tile--dark { background: var(--night); color: var(--night-ink); }
+  .nums__tile--accent { background: var(--accent); color: #fff; }
+  .nums__tile--dark .nums__src, .nums__tile--accent .nums__src { opacity: 0.8; }
+  .nums__tile--dark, .nums__tile--accent { --glow: rgb(255 255 255 / 0.12); }
   .nums__value { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.12em; font-family: var(--font-display); font-weight: 900; font-stretch: 75%; line-height: 0.82; }
-  .nums__value .num { font-size: var(--t-number); letter-spacing: -0.01em; white-space: nowrap; }
+  .nums__value .num { font-size: min(var(--t-number), 29cqi); letter-spacing: -0.01em; white-space: nowrap; }
   .nums__value :global(.odo) { display: inline-block; height: 0.82em; overflow: hidden; vertical-align: top; }
   .nums__value :global(.odo__strip) { display: block; }
   .nums__value :global(.odo__strip > span) { display: block; height: 0.82em; line-height: 0.82; }

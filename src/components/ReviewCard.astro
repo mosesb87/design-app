@@ -1,0 +1,64 @@
+---
+// One review as a card: the review's first screen in a browser frame, the number that explains the rest, what
+// it counts, the brand and the date. The whole card opens the review's page on this site.
+import BrowserFrame from './BrowserFrame.astro';
+import { allReviews, statText } from '../data/reviews';
+import { formatDate } from '../data/site';
+interface Props { slug: string; number?: string; label?: string; level?: 'h3' | 'h4'; showBlurb?: boolean; showFocus?: boolean; eager?: boolean }
+const { slug, number, label, level = 'h3', showBlurb = false, showFocus = false, eager = false } = Astro.props;
+const r = allReviews.find((x) => x.slug === slug)!;
+const shot = r.sheets.find((s) => s.shot)?.shot ?? r.hero ?? r.thumb;
+const num = number ?? statText(r);
+const Heading = level;
+---
+<article class="rcard" data-glow>
+  {shot && (
+    <BrowserFrame url={r.site} class="rcard__frame">
+      <img class="rcard__shot" src={shot.small} srcset={`${shot.small} ${shot.sw}w, ${shot.src} ${shot.w}w`} sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw" width={shot.w} height={shot.h} alt={`${r.title} review, first screen`} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+    </BrowserFrame>
+  )}
+  <div class="rcard__body">
+    <p class="rcard__num num" style={`--chars:${Math.max(3, num.length)}`}>{num}</p>
+    <p class="rcard__label">{label ?? r.stat.label}</p>
+    <Heading class="rcard__title"><a href={`/reviews/${r.slug}/`}>{r.brand}<span class="rcard__kind"> · {r.kind}</span></a></Heading>
+    {showBlurb && <p class="rcard__blurb">{r.blurb}</p>}
+    <p class="rcard__meta"><span>{r.site}</span><span><time datetime={r.date}>{formatDate(r.date)}</time></span></p>
+    {showFocus && <p class="rcard__focus">{r.focus.map((f) => <span>{f}</span>)}</p>}
+  </div>
+  <span class="rcard__arrow" aria-hidden="true">→</span>
+</article>
+
+<style>
+  .rcard {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: var(--s-4);
+    padding: 12px 12px 72px;
+    border-radius: var(--r-xl);
+    background: var(--cloud);
+    color: var(--ink);
+    transition: transform 0.6s var(--ease-register), box-shadow var(--d-small), background-color var(--d-small);
+  }
+  .rcard:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); background: #fff; }
+  .rcard :global(.rcard__frame) { border-radius: calc(var(--r-xl) - 10px); }
+  .rcard :global(.bf__view) { aspect-ratio: 16 / 10; }
+  .rcard__shot { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 1.2s var(--ease-register); transform-origin: 50% 0; }
+  .rcard:hover .rcard__shot { transform: scale(1.05); }
+  .rcard__body { container-type: inline-size; display: grid; gap: 10px; align-content: start; padding: 8px clamp(10px, 1.4vw, 20px) 0; }
+  .rcard__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; line-height: 0.85; white-space: nowrap; font-size: min(5.5rem, calc(100cqi / (var(--chars) * 0.44))); transition: color var(--d-small); }
+  .rcard:hover .rcard__num { color: var(--accent); }
+  .rcard__label { font-size: 1.0625rem; font-weight: 600; line-height: 1.25; max-width: 28ch; }
+  .rcard__title { margin-top: 4px; font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.4rem, 1.9vw, 1.8rem); line-height: 0.95; text-transform: uppercase; }
+  .rcard__kind { font-family: var(--font-text); font-stretch: 100%; font-weight: 600; font-size: 0.875rem; text-transform: none; color: var(--ink-2); }
+  .rcard__title a { text-decoration: none; }
+  .rcard__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 2; }
+  .rcard__title a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+  .rcard__blurb { font-size: var(--t-small); line-height: 1.45; color: var(--ink-2); }
+  .rcard__meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 700 var(--t-slug) / 1.4 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-2); }
+  .rcard__focus { display: flex; flex-wrap: wrap; gap: 6px; }
+  .rcard__focus span { padding: 5px 10px; border-radius: var(--r-pill); background: #fff; box-shadow: 0 0 0 1px var(--line-soft); font: 650 0.75rem / 1 var(--font-text); }
+  .rcard__arrow { position: absolute; right: 18px; bottom: 18px; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--ink); color: #fff; transition: transform 0.5s var(--ease-register), background-color var(--d-small); }
+  .rcard:hover .rcard__arrow { transform: rotate(-45deg); background: var(--accent); }
+</style>

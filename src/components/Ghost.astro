@@ -1,0 +1,27 @@
+---
+// A large outlined word behind a section, sliding as the section passes (scripts/motion/ghost.ts).
+// Decorative only. The host section needs `isolation: isolate` so the word sits above its background.
+interface Props { text: string; align?: 'left' | 'right'; top?: string }
+const { text, align = 'left', top = '0' } = Astro.props;
+---
+<div class:list={['ghost', `ghost--${align}`]} style={`--top:${top}`} aria-hidden="true"><span data-ghost>{text}</span></div>
+
+<style>
+  .ghost { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+  .ghost span {
+    position: absolute;
+    top: var(--top);
+    left: -2vw;
+    white-space: nowrap;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-stretch: 75%;
+    font-size: clamp(8rem, 24vw, 30rem);
+    line-height: 0.8;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1.5px color-mix(in srgb, var(--fg) 7%, transparent);
+    user-select: none;
+  }
+  .ghost--right span { left: auto; right: -2vw; }
+</style>

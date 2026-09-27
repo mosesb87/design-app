@@ -19,15 +19,15 @@ export default function check([section]: HTMLElement[], env: Env) {
   const stage = section.querySelector<HTMLElement>('[data-check-stage]');
   if (!cards.length || !flip || !stage || !track) return;
 
-  const dealFrom = { y: 140, opacity: 0, rotation: (i: number) => [-12, 7, -6][i] ?? 0, scale: 0.88 };
-  const dealTo = { y: 0, opacity: 1, rotation: (i: number) => [-2, 1.5, -1][i] ?? 0, scale: 1, ease: 'back.out(1.6)' };
+  const dealFrom = { y: 120, opacity: 0, rotation: (i: number) => [-4, 3, -2][i] ?? 0, scale: 0.94 };
+  const dealTo = { y: 0, opacity: 1, rotation: 0, scale: 1, ease: 'expo.out' };
   const deal = () => {
     gsap.set(cards, dealFrom);
     return ScrollTrigger.create({ trigger: track, start: 'top 80%', once: true, onEnter: () => gsap.to(cards, { ...dealTo, duration: 0.9, stagger: 0.1 }) });
   };
 
   const build = (scrubbed: boolean) => {
-    const tl = gsap.timeline({ paused: true, defaults: { ease: scrubbed ? 'none' : 'back.out(1.5)' } });
+    const tl = gsap.timeline({ paused: true, defaults: { ease: scrubbed ? 'none' : 'expo.out' } });
     const D = scrubbed ? 1 : 1; // same shape; the scrubbed version is mapped onto scroll
     // Scrubbed (desktop), the cards are dealt as the section arrives — see deal() — so the stage is never empty
     // while it scrolls into view; the scrub then drives the check itself.
@@ -38,10 +38,10 @@ export default function check([section]: HTMLElement[], env: Env) {
     }
     // The strike follows the playhead in both directions (a callback would only fire one way reliably).
     tl.eventCallback('onUpdate', () => stale?.classList.toggle('is-struck', tl.time() >= 0.5));
-    tl.fromTo(fail, { scale: 0.4, opacity: 0, rotation: -8 }, { scale: 1, opacity: 1, rotation: -2, duration: 0.07, ease: 'back.out(2.4)' }, 0.52)
+    tl.fromTo(fail, { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.07, ease: 'power3.out' }, 0.52)
       .fromTo(cards[1], { x: 0 }, { keyframes: { x: [-10, 10, -6, 6, 0] }, duration: 0.06, ease: 'none' }, 0.52)
-      .to(flip, { rotationY: 180, duration: 0.14, ease: scrubbed ? 'power2.inOut' : 'back.out(1.2)' }, 0.6)
-      .fromTo(verdict, { scale: 0.3, opacity: 0, rotation: -12 }, { scale: 1, opacity: 1, rotation: -2, duration: 0.08, ease: 'back.out(2.2)' }, 0.8);
+      .to(flip, { rotationY: 180, duration: 0.14, ease: scrubbed ? 'power2.inOut' : 'power3.out' }, 0.6)
+      .fromTo(verdict, { scale: 0.7, opacity: 0, y: 12 }, { scale: 1, opacity: 1, y: 0, duration: 0.08, ease: 'power3.out' }, 0.8);
     if (lens && scrubbed) tl.to(lens, { x: () => stage.offsetWidth * 0.84 - lens.offsetWidth / 2, y: 30, rotation: 18, duration: 0.14, ease: 'power1.inOut' }, 0.6).to(lens, { opacity: 0, scale: 0.6, duration: 0.06 }, 0.78);
     tl.to({}, { duration: 0.1 }, 0.9);
     // The flip needs the faces to stack in 3D.

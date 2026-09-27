@@ -40,14 +40,14 @@ const jsonLd = [
 
   <section class="cases section wrap" aria-labelledby="cases-title">
     <header class="cases__head">
-      <p class="kicker" style="--kicker-dot: var(--violet)">{featured.length} case studies</p>
+      <p class="kicker">{featured.length} case studies</p>
       <h2 class="h2" id="cases-title">The long versions.</h2>
     </header>
     <ol class="cases__grid" role="list" data-pop-grid>
       {featured.map((c, i) => {
         const hero = view(c.media.hero, 'desktop-hero');
         return (
-          <li class="case-card" style={`--bg:${cardTones[i % cardTones.length]}`} data-pop data-tilt data-vt-host>
+          <li class="case-card" style={`--bg:${cardTones[i % cardTones.length]}`} data-pop data-tilt data-vt-host data-glow>
             <div class="case-card__img" data-vt-target>
               {hero ? <Picture data={hero} alt={`${c.title} — the live site`} sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 90vw" eager={i < 3} /> : <span class="case-card__blank">{c.title}</span>}
             </div>
@@ -63,7 +63,7 @@ const jsonLd = [
 
   <section class="archive section wrap" aria-labelledby="index-title">
     <header class="archive__head">
-      <p class="kicker" style="--kicker-dot: var(--aqua)">Every entry</p>
+      <p class="kicker">Every entry</p>
       <h2 class="h2" id="index-title">The index.</h2>
       <p class="archive__note">Grouped work sits under its parent. Statuses are honest: demos, fictional-company adaptations and independent studies are labelled as such.</p>
     </header>

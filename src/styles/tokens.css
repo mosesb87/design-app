@@ -1,9 +1,10 @@
 /* ─────────────────────────────────────────────────────────────
-   Design tokens — bright & playful.
-   A clean white base, candy-bright colour "rooms", one animated
-   spectrum as the signature, condensed heavy display type.
-   Contrast rules (checked): ink text on tomato / pink / aqua / lime / sun and every tint;
-   white text only on violet, deep blue, ink and night.
+   Design tokens — calm and precise, still animated.
+   White and near-black with cool greys, one cobalt accent, dark "night" rooms for weight.
+   The old bright names (tomato, pink, aqua, lime, sun and the tints) are kept as aliases so
+   every component follows the new palette; they now resolve to greys and pale cobalt.
+   Contrast rules (checked): ink text on every light surface; white text on accent, accent-deep
+   and night. Accent as text on white is 6.5:1.
    Mirrors src/scripts/motion/tokens.ts — change both together.
    ───────────────────────────────────────────────────────────── */
 
@@ -53,64 +54,78 @@
 :root {
   /* Ink & base */
   --white: #ffffff;
-  --ink: #16121f;
-  --ink-2: #4b4658; /* 9.1:1 on white */
-  --ink-3: #8a8597; /* non-text only */
-  --cloud: #f4f3f8;
-  --line-soft: #e6e3ee;
+  --ink: #0e1116;
+  --ink-2: #4a505c; /* 8:1 on white */
+  --ink-3: #8b919c; /* non-text only */
+  --cloud: #f3f4f6;
+  --line-soft: #e3e5e9;
 
-  /* Brights (text on them is ink) */
-  --tomato: #ff5a36;
-  --pink: #ff4fa3;
-  --aqua: #19c7b8;
-  --lime: #c5f03a;
-  --sun: #ffc933;
-  /* Deeps (text on them is white) */
-  --violet: #5b3df5;
-  --blue: #2458e6;
-  --night: #1a1430;
-  --night-2: #251d42;
-  --night-rule: #3b3160;
-  --night-ink: #f7f5ff;
-  --night-ink-2: #c9c2e6;
+  /* The one accent */
+  --accent: #2b4de0; /* white text on it 6.5:1 */
+  --accent-deep: #1c33a8;
+  --accent-soft: #8ea2ff; /* accent on night */
+  --accent-tint: #eef1fc;
+  --accent-tint-2: #d9e0fb;
+  --accent-fg: var(--accent); /* accent as text/marks on the current ground */
+
+  /* Signals, used small: a failed check and a passed one */
+  --fail: #c8321f;
+  --fail-tint: #fbe6e1;
+  --pass: #17784a;
+  --pass-tint: #e0f2e8;
+
+  /* Former brights (ink text on them) — now greys and pale cobalt */
+  --tomato: #d9e0fb;
+  --pink: #e4e6eb;
+  --aqua: #dde3ea;
+  --lime: #dfe5fd;
+  --sun: #eae8e2;
+  /* Deeps (white text on them) */
+  --violet: var(--accent);
+  --blue: var(--accent-deep);
+  --night: #0d1015;
+  --night-2: #161a21;
+  --night-rule: #2b313c;
+  --night-ink: #f2f3f5;
+  --night-ink-2: #aab1bd;
   /* Tints — the "rooms" */
-  --blush: #ffe3ee;
-  --lilac: #ece6ff;
-  --sky: #dcebff;
-  --mint: #d4f6ea;
-  --lemon: #fff3b8;
-  --peach: #ffe1d4;
+  --blush: #f3f4f6;
+  --lilac: #eef1fc;
+  --sky: #eef1f5;
+  --mint: #f1f3f3;
+  --lemon: #f4f3ef;
+  --peach: #f3f2f0;
 
-  /* The signature */
-  --spectrum: linear-gradient(90deg, #ff5a36 0%, #ff4fa3 20%, #a15cff 40%, #5b3df5 55%, #2e6bff 70%, #19c7b8 85%, #c5f03a 100%);
-  --spectrum-soft: linear-gradient(90deg, #ffd7cc, #ffd0e6, #e3d6ff, #d4e2ff, #cff5ee, #eefbc4);
+  /* The signature: one cobalt sweep */
+  --spectrum: linear-gradient(90deg, #0d1015 0%, #1c33a8 35%, #2b4de0 62%, #8ea2ff 100%);
+  --spectrum-soft: linear-gradient(90deg, #eef1fc, #f3f4f6, #e3e8fb);
 
-  /* Legacy names (pages not yet redrawn keep working in the new palette) */
+  /* Legacy names */
   --paper: var(--white);
   --paper-2: var(--cloud);
   --paper-3: var(--line-soft);
   --rule: var(--line-soft);
-  --sheet: var(--tomato);
-  --sheet-text: #d63a17; /* 4.7:1 on white */
-  --sheet-ground: var(--violet);
-  --sheet-light: #ff9a80;
-  --register: var(--blue);
-  --register-light: #9db8ff;
-  --check: #0f7a4a;
-  --register-text: var(--blue);
-  --check-text: var(--check);
+  --sheet: var(--fail);
+  --sheet-text: var(--fail);
+  --sheet-ground: var(--accent);
+  --sheet-light: #f08a78;
+  --register: var(--accent);
+  --register-light: var(--accent-soft);
+  --check: var(--pass);
+  --register-text: var(--accent);
+  --check-text: var(--pass);
 
   /* Current ground (overridden by [data-ground]) */
   --bg: var(--white);
   --fg: var(--ink);
   --fg-2: var(--ink-2);
   --line: var(--line-soft);
-  --plate-a: var(--pink);
-  --plate-b: var(--aqua);
+  --plate-a: var(--accent);
+  --plate-b: var(--ink-3);
   --plate-blend: multiply;
-  --focus: var(--violet);
+  --focus: var(--accent);
 
-  /* Type families */
+/* Type families */
   --font-display: 'Hubot', 'Hubot Fallback', 'Arial Narrow', system-ui, sans-serif;
   --font-text: 'Mona', 'Mona Fallback', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
   --font-mono: 'Azeret', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
@@ -148,9 +163,9 @@
   --r-l: 32px;
   --r-xl: clamp(28px, 3.5vw, 56px);
   --r-pill: 999px;
-  --shadow-1: 0 1px 2px rgb(22 18 31 / 0.06), 0 10px 28px -12px rgb(22 18 31 / 0.22);
-  --shadow-2: 0 2px 4px rgb(22 18 31 / 0.06), 0 26px 48px -18px rgb(22 18 31 / 0.35);
-  --shadow-sticker: 0 2px 0 rgb(22 18 31 / 0.08), 0 22px 34px -14px rgb(22 18 31 / 0.4);
+  --shadow-1: 0 1px 2px rgb(14 17 22 / 0.05), 0 10px 28px -14px rgb(14 17 22 / 0.2);
+  --shadow-2: 0 2px 4px rgb(14 17 22 / 0.05), 0 26px 48px -20px rgb(14 17 22 / 0.3);
+  --shadow-sticker: 0 0 0 1px rgb(14 17 22 / 0.06), 0 22px 34px -18px rgb(14 17 22 / 0.35);
 
   /* Grid */
   --margin: clamp(16px, 4vw, 64px);
@@ -162,7 +177,7 @@
   /* Motion (mirrors tokens.ts) */
   --ease-register: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-settle: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --ease-pop: cubic-bezier(0.34, 1.8, 0.5, 1);
+  --ease-pop: cubic-bezier(0.22, 1.2, 0.36, 1);
   --ease-drift: cubic-bezier(0.37, 0, 0.63, 1);
   --ease-exit: cubic-bezier(0.55, 0, 1, 0.45);
   --ease-sweep: cubic-bezier(0.65, 0, 0.35, 1);
@@ -191,24 +206,26 @@
   --fg: var(--night-ink);
   --fg-2: var(--night-ink-2);
   --line: var(--night-rule);
-  --plate-a: var(--pink);
-  --plate-b: var(--aqua);
+  --plate-a: var(--accent-soft);
+  --plate-b: var(--night-ink-2);
   --plate-blend: screen;
-  --focus: var(--lime);
-  --sheet-text: #ff9a80;
-  --register-text: var(--register-light);
+  --focus: var(--accent-soft);
+  --accent-fg: var(--accent-soft);
+  --sheet-text: #f08a78;
+  --register-text: var(--accent-soft);
   --check-text: #6fd6a0;
 }
 [data-ground='red'] {
-  --bg: var(--violet);
+  --bg: var(--accent);
   --fg: #ffffff;
-  --fg-2: #e9e3ff;
+  --fg-2: #e3e8ff;
   --line: rgb(255 255 255 / 0.3);
-  --plate-a: var(--pink);
-  --plate-b: var(--lime);
+  --plate-a: #ffffff;
+  --plate-b: var(--accent-soft);
   --plate-blend: normal;
-  --focus: var(--lime);
-  --sheet-text: #ffe1d4;
+  --focus: #ffffff;
+  --accent-fg: #ffffff;
+  --sheet-text: #ffe1d8;
   --register-text: #ffffff;
   --check-text: #ffffff;
 }

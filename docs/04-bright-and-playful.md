@@ -1,5 +1,7 @@
 # Direction 2 — bright and playful
 
+> **Superseded in part (2026-09-27):** the palette, icons and motion easing were calmed at Mousa's request — see `docs/05-calm-and-precise.md`. Structure, type and pages below still apply.
+
 ## Why it changed
 
 Mousa's verdict on the first direction ("In Register": paper, proof red and register blue, crop marks, a calm document-like base): *not impressive enough; the look and the colours; too much like a document.* Asked which way to go, he chose **bright and playful**, pointed at **the content of mousabatarseh.com/v2** and at **coinsetters.io**, and asked for the blog and the reviews to become sections of this site in the same design, with no hopping between separate sites.

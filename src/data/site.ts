@@ -209,6 +209,7 @@ export const blogUrl = 'https://mousabatarseh.com/blog';
 // Everything lives on this site: the blog and the reviews are sections of it, not links to other sites.
 export const nav = [
   { label: 'Work', href: '/work/' },
+  { label: 'Tools', href: '/tools/' },
   { label: 'Reviews', href: '/reviews/' },
   { label: 'Blog', href: '/blog/' },
   { label: 'About', href: '/about/' },

@@ -10,7 +10,7 @@ import { person } from '../../data/site';
     <div class="chk__sticky">
       <div class="wrap chk__inner">
         <header class="chk__head">
-          <p class="kicker" style="--kicker-dot: var(--pink)">How I think</p>
+          <p class="kicker">How I think</p>
           <h2 class="h2 chk__title" id="chk-title">A request is trusted by default. Almost every error begins there.</h2>
         </header>
         <div class="chk__stage" data-check-stage>
@@ -75,20 +75,20 @@ import { person } from '../../data/site';
     color: var(--ink);
     box-shadow: var(--shadow-2);
   }
-  .chk__card--sheet { background: var(--peach); }
-  .chk__card--register { background: var(--lilac); }
-  .chk__card--shelf { background: var(--mint); }
+  .chk__card--sheet { background: var(--cloud); }
+  .chk__card--register { background: var(--accent-tint); }
+  .chk__card--shelf { background: #fff; box-shadow: 0 0 0 1px var(--line-soft), var(--shadow-2); }
   .chk__tag { display: inline-flex; gap: 8px; align-items: center; font: 700 var(--t-label) / 1 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
   .chk__tag b { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 0.75rem; }
   .chk__h { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2rem, 3vw, 2.75rem); line-height: 0.92; text-transform: uppercase; }
   .chk__rows { display: grid; gap: 6px; }
-  .chk__rows div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 14px; border-radius: var(--r-s); background: rgb(255 255 255 / 0.7); }
+  .chk__rows div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 14px; border-radius: var(--r-s); background: rgb(255 255 255 / 0.8); box-shadow: 0 0 0 1px rgb(14 17 22 / 0.04); }
   .chk__rows dt { font-weight: 550; }
   .chk__rows dd { margin: 0; font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: 1.5rem; line-height: 1; }
   .chk__stale { position: relative; }
-  .chk__stale::after { content: ''; position: absolute; left: -4px; right: -4px; top: 52%; height: 4px; border-radius: 4px; background: var(--tomato); transform: scaleX(1); transform-origin: left; transition: transform 0.4s var(--ease-register); }
+  .chk__stale::after { content: ''; position: absolute; left: -4px; right: -4px; top: 52%; height: 3px; border-radius: 3px; background: var(--fail); transform: scaleX(1); transform-origin: left; transition: transform 0.4s var(--ease-register); }
   .chk__note { font-weight: 550; }
-  .chk__fail { justify-self: start; padding: 10px 14px; border-radius: var(--r-pill); background: var(--tomato); color: var(--ink); font-weight: 750; font-size: 0.9375rem; }
+  .chk__fail { justify-self: start; padding: 10px 14px; border-radius: var(--r-pill); background: var(--fail-tint); color: #9e2413; font-weight: 750; font-size: 0.9375rem; }
   .chk__flip { position: relative; min-height: 200px; perspective: 900px; }
   .chk__face {
     position: absolute;
@@ -109,10 +109,10 @@ import { person } from '../../data/site';
   .chk__face--back { background: var(--ink); color: #fff; }
   :global(.motion-ok) .chk__face--front { display: grid; }
   :global(.motion-ok) .chk__face--back { transform: rotateY(180deg); }
-  .chk__badge { padding: 6px 12px; border-radius: var(--r-pill); background: var(--pink); color: var(--ink); font: 800 0.875rem/1 var(--font-text); text-transform: uppercase; }
+  .chk__badge { padding: 6px 12px; border-radius: var(--r-pill); background: var(--accent-tint-2); color: var(--accent-deep); font: 800 0.875rem/1 var(--font-text); text-transform: uppercase; }
   .chk__price { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: 4rem; line-height: 0.9; }
   .chk__prod { font-weight: 600; color: var(--ink-2); }
-  .chk__blocked { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: 2.25rem; line-height: 0.95; text-transform: uppercase; color: var(--lime); }
+  .chk__blocked { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: 2.25rem; line-height: 0.95; text-transform: uppercase; color: var(--accent-soft); }
   .chk__owner { font-weight: 550; color: var(--night-ink-2); max-width: 24ch; }
   .chk__lens { position: absolute; z-index: 5; width: clamp(90px, 9vw, 150px); left: 0; top: 30%; pointer-events: none; display: none; }
   .chk__lens :global(.sticker), .chk__vs :global(.sticker) { --size: 100%; width: 100%; }
@@ -133,7 +133,7 @@ import { person } from '../../data/site';
 
   @media (min-width: 1024px) {
     .chk__stage { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gutter); align-items: stretch; padding-bottom: 72px; }
-    .chk__verdict { position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%) rotate(-2deg); white-space: nowrap; }
+    .chk__verdict { position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%); white-space: nowrap; }
     .chk__lens { display: block; }
     /* Pinned scene: the track is tall, the stage sticks */
     :global(.motion-ok) .chk__track { height: 320vh; }

@@ -1,22 +1,22 @@
 ---
 import { nav, person } from '../data/site';
+import Logo from './Logo.astro';
 interface Props { current?: string; count?: number; contact?: boolean }
 const { current = '', count, contact = true } = Astro.props;
 const talk = contact ? '#contact' : '/#contact';
 const isCurrent = (href: string) => (href === '/' ? current === '/' : current.startsWith(href));
-const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
 ---
 <header class="nav" data-nav>
   <div class="nav__bar">
     <a class="nav__home" href="/" aria-label={`${person.name} — home`}>
-      <span class="nav__logo" aria-hidden="true"><i></i></span>
+      <Logo class="nav__logo" size={30} />
       <span class="nav__name">{person.name}</span>
     </a>
     <nav class="nav__links" aria-label="Primary">
       <ul role="list">
         {nav.map((item, i) => (
           <li>
-            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined} style={`--dot:${dots[i % dots.length]}`}>
+            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
               <span>{item.label}</span>
               {item.label === 'Work' && count ? <sup class="nav__count num">{count}</sup> : null}
             </a>
@@ -77,22 +77,12 @@ const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
     backdrop-filter: blur(14px) saturate(1.4);
     -webkit-backdrop-filter: blur(14px) saturate(1.4);
     color: var(--ink);
-    box-shadow: 0 0 0 1px rgb(22 18 31 / 0.06), var(--shadow-1);
+    box-shadow: 0 0 0 1px rgb(14 17 22 / 0.06), var(--shadow-1);
     overflow: hidden;
   }
   .nav__home { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; min-height: 44px; }
-  .nav__logo {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: conic-gradient(from 200deg, #ff5a36, #ff4fa3, #a15cff, #5b3df5, #2e6bff, #19c7b8, #c5f03a, #ffc933, #ff5a36);
-    display: grid;
-    place-items: center;
-    flex: none;
-    transition: transform 0.8s var(--ease-pop);
-  }
-  .nav__logo i { width: 12px; height: 12px; border-radius: 50%; background: #fff; }
-  .nav__home:hover .nav__logo { transform: rotate(180deg) scale(1.08); }
+  .nav__home :global(.nav__logo) { transition: transform 0.5s var(--ease-register); }
+  .nav__home:hover :global(.nav__logo) { transform: scale(1.08); }
   .nav__name { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: 1.375rem; letter-spacing: 0; text-transform: uppercase; line-height: 1; }
   .nav__links ul { display: none; gap: 2px; }
   .nav__links a {
@@ -113,7 +103,7 @@ const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
     height: 8px;
     margin-right: 6px;
     border-radius: 50%;
-    background: var(--dot);
+    background: var(--accent);
     transform: scale(0);
     transition: transform var(--d-small) var(--ease-pop);
   }
@@ -132,7 +122,7 @@ const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
     text-decoration: none;
     transition: transform var(--d-small) var(--ease-pop), background-color var(--d-small);
   }
-  .nav__cta:hover { transform: scale(1.04); background: var(--violet); }
+  .nav__cta:hover { transform: translateY(-1px); background: var(--accent); }
   .nav__toggle { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 650 0.9375rem/1 var(--font-text); }
   .nav__toggle-mark { width: 16px; height: 10px; position: relative; }
   .nav__toggle-mark::before, .nav__toggle-mark::after { content: ''; position: absolute; left: 0; right: 0; height: 2px; border-radius: 2px; background: currentColor; transition: transform var(--d-small) var(--ease-register); }
@@ -152,7 +142,7 @@ const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
     position: fixed;
     inset: 0;
     z-index: 45;
-    background: var(--violet);
+    background: var(--night);
     color: #fff;
     padding-top: calc(var(--nav-h) + var(--s-6));
     overflow-y: auto;
@@ -171,7 +161,7 @@ const dots = ['var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--violet)'];
     text-transform: uppercase;
     text-decoration: none;
   }
-  .menu__list a:hover { color: var(--lime); }
+  .menu__list a:hover { color: var(--accent-soft); }
   .menu__foot { display: flex; flex-direction: column; gap: 8px; margin-top: var(--s-7); font-weight: 600; }
   .menu__foot a { color: #fff; }
   @media (min-width: 900px) { .menu { display: none !important; } }

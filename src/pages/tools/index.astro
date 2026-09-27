@@ -1,0 +1,216 @@
+---
+// The tools, in detail: one section per tool. The name, promise and links stay pinned on the left while the
+// right column runs through the recording, the problem, how it works, what's inside and the numbers.
+// Every line comes from Mousa's own pages (src/data/tools.ts).
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/play/PageHead.astro';
+import BrowserFrame from '../../components/BrowserFrame.astro';
+import VideoPlate from '../../components/VideoPlate.astro';
+import Picture from '../../components/Picture.astro';
+import { toolPages } from '../../data/tools';
+import { media } from '../../lib/media';
+import { SITE_URL } from '../../data/site';
+
+const pad = (i: number) => String(i + 1).padStart(2, '0');
+const host = (u: string) => u.replace(/^https?:\/\//, '').replace(/\/$/, '');
+const dark = (i: number) => i % 3 === 2;
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/tools/#page`,
+    name: 'Tools — Mousa Batarseh',
+    url: `${SITE_URL}/tools/`,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: toolPages.length,
+      itemListElement: toolPages.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, url: t.live })),
+    },
+  },
+];
+---
+<Base title="Tools" description={`${toolPages.length} working tools built by Mousa Batarseh — DealProof, ChangeAtlas Commerce, the Deals Operating System, CSV Mapper, ASAS Studio, SEO Tools and more: what each one checks, how it works and where to open it.`} path="/tools/" og="tools" jsonLd={jsonLd}>
+  <PageHead title="Tools I built." kicker={`Tools · ${toolPages.length} working builds`} lead="Working tools, running live. Each one makes the check run before the mistake does." stickers={['bolt', 'cell', 'check']}>
+    <nav class="tjump" aria-label="Tools on this page">
+      <ol role="list">
+        {toolPages.map((t, i) => (
+          <li><a href={`#${t.slug}`}><span class="num">{pad(i)}</span>{t.name}</a></li>
+        ))}
+      </ol>
+    </nav>
+  </PageHead>
+
+  {toolPages.map((t, i) => {
+    const m = media(t.media);
+    const hasVideo = !!(m?.interaction || m?.video);
+    return (
+      <section class:list={['tl', { 'tl--dark': dark(i) }]} id={t.slug} aria-labelledby={`${t.slug}-title`} data-ground={dark(i) ? 'night' : undefined}>
+        <div class="wrap tl__grid">
+          <div class="tl__side">
+            <p class="tl__n"><span class="num">{pad(i)}</span><span class="tl__status">{t.status}</span></p>
+            <h2 class="tl__name" id={`${t.slug}-title`}>{t.name}</h2>
+            {t.promise && <p class="tl__promise">{t.promise}</p>}
+            <p class="tl__what">{t.what}</p>
+            {(t.role || t.languages) && (
+              <dl class="tl__facts">
+                {t.role && <div><dt>My role</dt><dd>{t.role}</dd></div>}
+                {t.languages && <div><dt>Languages</dt><dd>{t.languages}</dd></div>}
+              </dl>
+            )}
+            <p class="tl__cta">
+              <a class="btn tl__open" href={t.live} rel="noopener">Open {t.liveLabel ?? 'the tool'}<span class="visually-hidden">: {t.name}</span> <span class="arrow" aria-hidden="true">↗</span></a>
+              {t.caseStudy && <a class="btn btn--line" href={`/work/${t.caseStudy}/`}>Case study<span class="visually-hidden">: {t.name}</span> <span class="arrow" aria-hidden="true">→</span></a>}
+            </p>
+          </div>
+
+          <div class="tl__main">
+            <div class="tl__media" data-tl-media>
+              <BrowserFrame url={t.live} dark={dark(i)}>
+                {hasVideo ? (
+                  <VideoPlate slug={t.media} label={`Recording of ${t.name} in use${t.shows ? ': ' + t.shows : ''}`} caption={m?.interaction ? t.shows : undefined} />
+                ) : (
+                  <Picture slug={t.media} alt={`${t.name} — the live page`} sizes="(min-width: 1024px) 56vw, 92vw" />
+                )}
+              </BrowserFrame>
+            </div>
+
+            {t.problem && (
+              <div class="tl__block tl__problem" data-glow>
+                <p class="tl__label">The problem</p>
+                <p class="tl__problem-text">{t.problem}</p>
+              </div>
+            )}
+
+            {t.how && (
+              <div class="tl__block">
+                <h3 class="tl__h3">How it works</h3>
+                <ol class="tl__how" role="list" data-pop-grid>
+                  {t.how.map((s, k) => (
+                    <li data-pop data-glow>
+                      <span class="tl__step num">{pad(k)}</span>
+                      <span class="tl__step-title">{s.title}</span>
+                      {s.text && <span class="tl__step-text">{s.text}</span>}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+
+            {t.inside && (
+              <div class="tl__block">
+                <h3 class="tl__h3">{t.made ?? 'What’s inside'}</h3>
+                <ul class="tl__inside" role="list">
+                  {t.inside.map((x) => <li>{x}</li>)}
+                </ul>
+              </div>
+            )}
+
+            {t.numbers && (
+              <ul class="tl__nums" role="list" aria-label={`${t.name} in numbers`} data-pop-grid>
+                {t.numbers.map((n) => (
+                  <li data-pop data-count-host><span class="tl__num num" data-count>{n.v}</span><span class="tl__num-l">{n.l}</span></li>
+                ))}
+              </ul>
+            )}
+
+            {t.quote && <p class="tl__quote">“{t.quote}”</p>}
+            {t.note && <p class="tl__note">{t.note}</p>}
+
+            {t.family && (
+              <div class="tl__block">
+                <h3 class="tl__h3">Related</h3>
+                <ul class="tl__family" role="list">
+                  {t.family.map((f) => (
+                    <li>
+                      <a href={f.url} rel={f.url.startsWith('http') ? 'noopener' : undefined}>
+                        <span class="tl__fam-name">{f.name} <span aria-hidden="true">{f.url.startsWith('http') ? '↗' : '→'}</span></span>
+                        <span class="tl__fam-note">{f.note}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <p class="tl__src slug">Source: {host(t.live)} · checked Sep 26, 2026</p>
+          </div>
+        </div>
+      </section>
+    );
+  })}
+</Base>
+
+<style>
+  .tjump { margin-top: var(--s-6); max-width: 1100px; }
+  .tjump ol { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tjump a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px 0 8px; border-radius: var(--r-pill); background: var(--cloud); font-weight: 650; font-size: 0.9375rem; text-decoration: none; transition: background-color var(--d-small), transform 0.4s var(--ease-register); }
+  .tjump a .num { display: inline-grid; place-items: center; min-width: 30px; height: 30px; border-radius: var(--r-pill); background: #fff; font-size: 0.75rem; font-weight: 750; }
+  .tjump a:hover { background: var(--accent-tint-2); transform: translateY(-2px); }
+
+  .tl { position: relative; padding-block: clamp(72px, 9vw, 150px); scroll-margin-top: calc(var(--nav-h) + 8px); }
+  .tl + .tl:not(.tl--dark)::before { content: ''; position: absolute; top: 0; left: var(--margin); right: var(--margin); height: 1px; background: var(--line-soft); }
+  .tl--dark { margin-inline: clamp(8px, 1.4vw, 24px); border-radius: var(--r-xl); background: var(--night); color: var(--night-ink); }
+  .tl--dark + .tl::before { display: none; }
+  .tl__grid { display: grid; gap: var(--s-7); }
+  .tl__side { display: grid; gap: var(--s-4); align-content: start; }
+  .tl__n { display: flex; align-items: center; gap: 12px; font: 750 var(--t-label) / 1 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; }
+  .tl__n .num { display: inline-grid; place-items: center; min-width: 38px; height: 38px; border-radius: var(--r-pill); background: var(--ink); color: #fff; }
+  .tl--dark .tl__n .num { background: #fff; color: var(--ink); }
+  .tl__status { padding: 7px 11px; border-radius: var(--r-pill); background: var(--accent-tint); color: var(--accent-deep); }
+  .tl--dark .tl__status { background: rgb(142 162 255 / 0.16); color: var(--accent-soft); }
+  .tl__name { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.75rem, 5.4vw, 5.5rem); line-height: 0.88; text-transform: uppercase; text-wrap: balance; }
+  .tl__promise { font-size: var(--t-lead); line-height: 1.25; font-weight: 650; letter-spacing: -0.01em; max-width: 26ch; }
+  .tl__what { color: var(--fg-2); max-width: 46ch; }
+  .tl__facts { display: grid; gap: 10px; margin-top: 4px; }
+  .tl__facts div { display: grid; gap: 2px; }
+  .tl__facts dt { font: 750 var(--t-slug) / 1.3 var(--font-text); letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg-2); }
+  .tl__facts dd { margin: 0; font-weight: 600; }
+  .tl__cta { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-3); }
+  .tl--dark .tl__open { --btn-bg: #fff; --btn-fg: var(--ink); }
+
+  .tl__main { display: grid; gap: var(--s-6); min-width: 0; }
+  .tl__media :global(.bf) { border-radius: 16px; }
+  .tl__media :global(.vplate__frame) { border-radius: 0; }
+  .tl__media :global(.vplate__cap) { padding: 10px 14px; background: #f6f7f9; border-top: 1px solid var(--line-soft); color: var(--ink-2); }
+  .tl--dark .tl__media :global(.vplate__cap) { background: #1c212a; border-top-color: var(--night-rule); color: var(--night-ink-2); }
+  .tl__media :global(picture img) { width: 100%; height: auto; }
+  .tl__block { display: grid; gap: var(--s-4); }
+  .tl__label, .tl__h3 { font: 750 var(--t-label) / 1.2 var(--font-text); letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg-2); }
+  .tl__problem { position: relative; padding: clamp(20px, 2.4vw, 32px); border-radius: var(--r-l); background: var(--cloud); border-left: 3px solid var(--accent-fg); }
+  .tl--dark .tl__problem { background: var(--night-2); }
+  .tl__problem-text { font-size: var(--t-lead); line-height: 1.32; font-weight: 550; letter-spacing: -0.01em; }
+  .tl__how { display: grid; gap: 10px; }
+  .tl__how li { position: relative; display: grid; gap: 6px; align-content: start; padding: 18px 20px; border-radius: var(--r-l); background: var(--cloud); }
+  .tl--dark .tl__how li { background: var(--night-2); }
+  .tl__step { font: 750 0.75rem / 1 var(--font-text); letter-spacing: 0.06em; color: var(--accent-fg); }
+  .tl__step-title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: 1.5rem; line-height: 1; text-transform: uppercase; }
+  .tl__step-text { font-size: var(--t-small); line-height: 1.45; color: var(--fg-2); }
+  .tl__inside { display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .tl__inside li { position: relative; padding: 12px 0 12px 28px; border-bottom: 1px solid var(--line); line-height: 1.4; }
+  .tl__inside li::before { content: ''; position: absolute; left: 4px; top: 1.1em; width: 10px; height: 2px; background: var(--accent-fg); }
+  .tl__nums { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px; }
+  .tl__nums li { container-type: inline-size; display: grid; gap: 6px; padding: 18px 20px; border-radius: var(--r-l); background: var(--ink); color: #fff; }
+  .tl--dark .tl__nums li { background: #fff; color: var(--ink); }
+  .tl__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: min(4rem, 34cqi); line-height: 0.85; }
+  .tl__num :global(.odo) { display: inline-block; height: 0.85em; overflow: hidden; vertical-align: top; }
+  .tl__num :global(.odo__strip) { display: block; }
+  .tl__num :global(.odo__strip > span) { display: block; height: 0.85em; line-height: 0.85; }
+  .tl__num-l { font: 650 var(--t-small) / 1.25 var(--font-text); opacity: 0.85; }
+  .tl__quote { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.75rem, 3vw, 2.75rem); line-height: 0.95; text-transform: uppercase; text-wrap: balance; }
+  .tl__note { padding: 12px 16px; border-radius: var(--r-m); background: var(--accent-tint); color: var(--accent-deep); font-weight: 600; font-size: var(--t-small); line-height: 1.45; }
+  .tl--dark .tl__note { background: rgb(142 162 255 / 0.12); color: #dfe5ff; }
+  .tl__family { display: grid; gap: 8px; }
+  .tl__family a { display: grid; gap: 4px; padding: 14px 18px; border-radius: var(--r-l); background: var(--cloud); text-decoration: none; transition: background-color var(--d-small), transform 0.4s var(--ease-register); }
+  .tl--dark .tl__family a { background: var(--night-2); }
+  .tl__family a:hover { background: var(--accent-tint-2); transform: translateX(4px); }
+  .tl--dark .tl__family a:hover { background: #222938; }
+  .tl__fam-name { font-weight: 700; }
+  .tl__fam-note { font-size: var(--t-small); color: var(--fg-2); line-height: 1.4; }
+  .tl__src { color: var(--fg-2); }
+
+  @media (min-width: 700px) {
+    .tl__how { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1024px) {
+    .tl__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: clamp(32px, 4vw, 80px); align-items: start; }
+    .tl__side { position: sticky; top: calc(var(--nav-h) + 24px); }
+  }
+</style>

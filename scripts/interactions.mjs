@@ -100,13 +100,32 @@ async function ctx(opts) {
   const extNoRel = await p.$$eval('main a[href^="http"]', (as) => as.filter((a) => !/noopener/.test(a.rel)).map((a) => a.href));
   check('External links on /work/ carry rel=noopener', extNoRel.length === 0, extNoRel.slice(0, 5).join(' '));
 
-  // Loupe: hovering a row with a preview shows it.
-  const row = p.locator('[data-row][data-preview]').first();
+  // Preview: hovering a row opens the browser window, and a project with a full-page capture scrolls inside it.
+  const row = p.locator('[data-row][data-full]').first();
   await row.scrollIntoViewIfNeeded();
+  await p.waitForTimeout(400);
   await row.hover();
-  await p.waitForTimeout(600);
-  const loupe = await p.evaluate(() => { const l = document.querySelector('[data-loupe]'); if (!l) return null; const cs = getComputedStyle(l); return { opacity: cs.opacity, visibility: cs.visibility, clip: cs.clipPath }; });
-  check('Archive loupe opens on row hover', !!loupe && loupe.visibility !== 'hidden' && Number(loupe.opacity) > 0.5, JSON.stringify(loupe));
+  await p.waitForTimeout(700);
+  const lens = await p.evaluate(() => { const l = document.querySelector('[data-loupe-lens]'); if (!l) return null; const cs = getComputedStyle(l); return { opacity: cs.opacity, visibility: cs.visibility, url: l.querySelector('[data-loupe-url]')?.textContent }; });
+  check('Archive preview window opens on row hover', !!lens && lens.visibility !== 'hidden' && Number(lens.opacity) > 0.5, JSON.stringify(lens));
+  const box = await row.boundingBox();
+  if (box) await p.mouse.move(box.x + box.width * 0.3, box.y + box.height / 2);
+  await p.waitForTimeout(3200);
+  const y = await p.evaluate(() => { const m = getComputedStyle(document.querySelector('[data-loupe-img]')).transform; return m === 'none' ? 0 : new DOMMatrix(m).m42; });
+  check('The project scrolls inside the preview window', y < -20, `translateY ${Math.round(y)}px`);
+
+  // Tools: every tool has its section, the jump links resolve, and each opens its live tool.
+  await p.goto(BASE + '/tools/', { waitUntil: 'networkidle' });
+  const tl = await p.evaluate(() => {
+    const ids = [...document.querySelectorAll('section.tl')].map((s) => s.id);
+    const jumps = [...document.querySelectorAll('.tjump a')].map((a) => a.getAttribute('href'));
+    const open = [...document.querySelectorAll('.tl__open')].map((a) => ({ href: a.getAttribute('href'), rel: a.rel }));
+    return { ids, jumps, open, h1: document.querySelectorAll('h1').length };
+  });
+  check(`/tools/: ${tl.ids.length} tool sections, one h1`, tl.ids.length >= 9 && tl.h1 === 1);
+  check('/tools/: every jump link has its section', tl.jumps.every((h) => tl.ids.includes(h.slice(1))), tl.jumps.filter((h) => !tl.ids.includes(h.slice(1))).join(' '));
+  check('/tools/: every tool opens its live page with rel=noopener', tl.open.length === tl.ids.length && tl.open.every((o) => /^https:/.test(o.href) && /noopener/.test(o.rel)));
+  await p.goto(BASE + '/work/', { waitUntil: 'networkidle' });
 
   // Case studies: each loads, has one h1, and its "next" link leads to another case.
   const cases = internal.filter((h) => /^\/work\/[^/]+\/$/.test(h));
@@ -117,7 +136,7 @@ async function ctx(opts) {
   }
 
   // Blog and reviews: every card opens a page on this site with one h1 and its article; sheet anchors resolve.
-  for (const [where, sel, body] of [['/blog/', '.card__title a', '.post__body'], ['/reviews/', '.rc__title a', '.sheet']]) {
+  for (const [where, sel, body] of [['/blog/', '.card__title a', '.post__body'], ['/reviews/', '.rcard__title a', '.sheet']]) {
     await p.goto(BASE + where, { waitUntil: 'networkidle' });
     const hrefs = await p.$$eval(sel, (as) => as.map((a) => a.getAttribute('href')));
     const off = hrefs.filter((h) => !h.startsWith(where));

@@ -62,7 +62,7 @@ const jsonLd = [
       <div class="post__body prose-play" set:html={post.html} />
       <footer class="post__foot">
         <div class="post__author">
-          <span class="post__avatar" aria-hidden="true"><i></i></span>
+          <img class="post__avatar" src="/media/me/avatar-96.webp" srcset="/media/me/avatar-96.webp 1x, /media/me/avatar-192.webp 2x" width="52" height="52" alt="" loading="lazy" decoding="async" />
           <p><strong>{person.name}</strong> builds and runs WordPress websites and e-commerce stores in {person.location}. <a href="/about/">More about me</a></p>
         </div>
         <nav class="post__pn" aria-label="More posts">
@@ -105,8 +105,7 @@ const jsonLd = [
   .post__foot { max-width: 68ch; margin: var(--s-8) auto 0; display: grid; gap: var(--s-6); }
   .post__author { display: flex; gap: var(--s-4); align-items: center; padding: 20px; border-radius: var(--r-l); background: var(--cloud); }
   .post__author p { font-weight: 500; }
-  .post__avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; background: conic-gradient(from 200deg, #ff5a36, #ff4fa3, #a15cff, #5b3df5, #2e6bff, #19c7b8, #c5f03a, #ffc933, #ff5a36); display: grid; place-items: center; }
-  .post__avatar i { width: 20px; height: 20px; border-radius: 50%; background: #fff; }
+  .post__avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--line-soft); }
   .post__pn { display: grid; gap: 12px; }
   .pn { display: grid; gap: 6px; padding: 18px 20px; border-radius: var(--r-l); background: var(--cloud); text-decoration: none; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
   .pn:hover { background: var(--lime); transform: translateY(-3px); }
@@ -117,7 +116,7 @@ const jsonLd = [
   .post__more { padding-block: var(--s-10) var(--s-6); display: grid; gap: var(--s-6); }
   .more { display: grid; gap: clamp(14px, 1.6vw, 24px); }
   .more__card { position: relative; display: grid; gap: var(--s-4); padding: clamp(20px, 2.2vw, 30px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); min-height: 200px; align-content: space-between; transition: transform 0.5s var(--ease-pop); }
-  .more__card:hover { transform: translateY(-6px) rotate(-0.8deg); }
+  .more__card:hover { transform: translateY(-6px); }
   .more__meta { font: 700 var(--t-slug) / 1.4 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; }
   .more__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.75rem, 2.4vw, 2.5rem); line-height: 0.95; text-transform: uppercase; }
   .more__title a { text-decoration: none; }

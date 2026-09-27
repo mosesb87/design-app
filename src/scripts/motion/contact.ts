@@ -22,8 +22,8 @@ export default function contact([section]: HTMLElement[], env: Env) {
     status.textContent = ok ? '✓ Copied — checked' : 'Select the address above to copy it';
     label.textContent = ok ? 'Copied' : 'Copy email';
     if (!env.reduced) {
-      if (email && ok) gsap.fromTo(email, { scale: 0.94, rotation: -1.5 }, { scale: 1, rotation: 0, duration: 0.8, ease: 'elastic.out(1, 0.4)', transformOrigin: 'left center' });
-      gsap.fromTo(status, { scale: 1.35, rotate: -9, autoAlpha: 0 }, { scale: 1, rotate: -3, autoAlpha: 1, duration: 0.45, ease: 'back.out(2)' });
+      if (email && ok) gsap.fromTo(email, { scale: 0.97 }, { scale: 1, duration: 0.6, ease: 'expo.out', transformOrigin: 'left center' });
+      gsap.fromTo(status, { y: 8, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.45, ease: 'expo.out' });
     }
     setTimeout(() => { label.textContent = 'Copy email'; }, 2600);
   });

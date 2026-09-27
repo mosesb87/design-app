@@ -15,7 +15,7 @@ Nothing here has been done. The live site at mousabatarseh.com is untouched; the
 | Path | Effect |
 |---|---|
 | `index.html`, icons, `llms.txt` | **Replaced** by the new home page and icons. |
-| `/work/`, `/about/` | New. Both return 404 on the live domain today, so nothing is shadowed. |
+| `/work/`, `/about/`, `/tools/` | New. All three return 404 on the live domain today (`/tools/`, `/Tools/` and `/tools` checked 2026-09-27), so nothing is shadowed. The existing tool folders (`/dealproof/`, `/changeatlas/`, `/SEO-Tools/` …) are untouched; the Tools page links to them. |
 | `/blog/` | **`index.html` replaced**; a folder per post added (`/blog/<post>/`). |
 | `/reviews/` | **`index.html` replaced**; a folder per review added (`/reviews/<review>/`). The old `/reviews/reviews/`, `/builds/`, `/method/`, `/img/` and `/assets/` folders stay on the server; nothing in the new site links to them. |
 | `/_assets/`, `/media/`, `/og/` | New: CSS/JS/fonts, captures and recordings, share images. |
@@ -65,12 +65,12 @@ Optional, for the designed 404 page: add `ErrorDocument 404 /404.html` — only 
 
 ## 5. Verify (fresh private window, desktop and phone)
 
-- `/`, `/work/`, `/about/`, `/blog/`, `/reviews/`, one case study, one post and one review load with styles, fonts, images and recordings.
+- `/`, `/work/`, `/tools/`, `/about/`, `/blog/`, `/reviews/`, one case study, one post and one review load with styles, fonts, images and recordings.
 - The footer shows "This page: … KB" and the build date.
 - `/v2/`, `/changeatlas/`, `/csv-mapper/`, `/deals-os/`, `/dealproof/`, `/SEO-Tools/`, `/diamedical/`, one full review (for example `/vanguard-review/`) and one proposal still load exactly as before.
 - `view-source:` of the home page has no `noindex` and has `<link rel="canonical" href="https://mousabatarseh.com/">`.
 - `https://mousabatarseh.com/sitemap-portfolio.xml` and `https://mousabatarseh.com/robots.txt` load.
-- Google Search Console → *Sitemaps* → submit `sitemap-portfolio.xml`; *URL Inspection* → request indexing for `/`, `/work/`, `/blog/` and `/reviews/`.
+- Google Search Console → *Sitemaps* → submit `sitemap-portfolio.xml`; *URL Inspection* → request indexing for `/`, `/work/`, `/tools/`, `/blog/` and `/reviews/`.
 
 ## Rollback (about five minutes)
 

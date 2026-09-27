@@ -1,46 +1,55 @@
 ---
-// Hero: the name, huge and condensed, with stickers from Mousa's world floating around it.
-// Letters pop in and bounce when touched; stickers pop, float, follow the pointer and spin when clicked.
+// Hero: the name, huge and condensed, beside Mousa's photo standing in a cobalt panel (his head breaks the
+// panel's top edge). Letters rise in and hop when touched; the photo leans with the pointer and turns from
+// black-and-white to colour on hover; a few icon tiles float around it. (Motion: scripts/motion/play-hero.ts.)
 import Sticker from './Sticker.astro';
 import { person } from '../../data/site';
 const rows = [person.first.toUpperCase(), person.last.toUpperCase()];
 const stickers = [
-  { name: 'spark', cls: 's-spark', depth: 0.9, tilt: -10 },
-  { name: 'tag', cls: 's-tag', depth: 0.6, tilt: -8 },
-  { name: 'percent', cls: 's-percent', depth: 1.1, tilt: 12 },
+  { name: 'tag', cls: 's-tag', depth: 0.9, tilt: -8 },
+  { name: 'cell', cls: 's-cell', depth: 0.6, tilt: 6 },
+  { name: 'check', cls: 's-check', depth: 1.1, tilt: 8 },
   { name: 'cursor', cls: 's-cursor', depth: 0.8, tilt: 0 },
-  { name: 'check', cls: 's-check', depth: 0.5, tilt: 8 },
-  { name: 'cell', cls: 's-cell', depth: 0.7, tilt: -4 },
-  { name: 'blocks', cls: 's-blocks', depth: 1, tilt: 0 },
-  { name: 'pin', cls: 's-pin', depth: 1.2, tilt: 14 },
 ] as const;
+const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
 ---
 <section class="ph" data-play-hero aria-labelledby="hero-title">
   <div class="ph__glow" aria-hidden="true"></div>
   <div class="ph__inner wrap">
-    <p class="kicker ph__kicker" data-ph-fade>{person.location} · {person.availability.toLowerCase()}</p>
-    <h1 class="ph__name" id="hero-title">
-      <span class="visually-hidden">{person.name}</span>
-      {rows.map((w, r) => (
-        <span class:list={['ph__row', `ph__row--${r + 1}`]} aria-hidden="true">
-          {[...w].map((ch) => <span class="ph__l" data-l>{ch}</span>)}
-        </span>
-      ))}
-    </h1>
-    <div class="ph__bottom">
-      <p class="ph__intro" data-ph-fade>I build and run <strong>WordPress websites</strong> and <strong>e-commerce stores</strong> — and the checks that keep them honest.</p>
-      <div class="ph__cta" data-ph-fade>
-        <a class="btn" href="#work">See the work <span class="arrow" aria-hidden="true">→</span></a>
-        <a class="btn btn--line" href="#contact">Say hello</a>
+    <div class="ph__text">
+      <p class="kicker ph__kicker" data-ph-fade>{person.location} · {person.availability.toLowerCase()}</p>
+      <h1 class="ph__name" id="hero-title">
+        <span class="visually-hidden">{person.name}</span>
+        {rows.map((w, r) => (
+          <span class:list={['ph__row', `ph__row--${r + 1}`]} aria-hidden="true">
+            {[...w].map((ch) => <span class="ph__l" data-l>{ch}</span>)}
+          </span>
+        ))}
+      </h1>
+      <div class="ph__bottom">
+        <p class="ph__intro" data-ph-fade>I build and run <strong>WordPress websites</strong> and <strong>e-commerce stores</strong> — and the checks that keep them honest.</p>
+        <div class="ph__cta" data-ph-fade>
+          <a class="btn" href="#work">See the work <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--line" href="#contact">Say hello</a>
+        </div>
       </div>
     </div>
-    <div class="ph__stickers">
-      {stickers.map((s) => (
-        <span class:list={['ph__s', s.cls]} data-ph-sticker data-depth={s.depth}>
-          <Sticker name={s.name} tilt={s.tilt} depth={s.depth} />
-        </span>
-      ))}
-    </div>
+    <figure class="ph__me" data-ph-me>
+      <div class="ph__panel" aria-hidden="true"><span class="ph__grid"></span></div>
+      <picture class="ph__photo" data-ph-photo>
+        <source type="image/avif" srcset={`${src(480, 'avif')} 480w, ${src(800, 'avif')} 800w, ${src(1200, 'avif')} 1200w`} sizes="(min-width: 1024px) 34vw, (min-width: 700px) 56vw, 88vw" />
+        <source type="image/webp" srcset={`${src(480, 'webp')} 480w, ${src(800, 'webp')} 800w, ${src(1200, 'webp')} 1200w`} sizes="(min-width: 1024px) 34vw, (min-width: 700px) 56vw, 88vw" />
+        <img src={src(800, 'webp')} width="1200" height="1219" alt="Mousa Batarseh, smiling, arms crossed" fetchpriority="high" decoding="async" />
+      </picture>
+      <figcaption class="ph__cap" data-ph-fade><span>Mousa Batarseh</span><span>Webmaster · WordPress & e-commerce</span></figcaption>
+      <div class="ph__stickers" aria-hidden="true">
+        {stickers.map((s) => (
+          <span class:list={['ph__s', s.cls]} data-ph-sticker data-depth={s.depth}>
+            <Sticker name={s.name} tilt={s.tilt} depth={s.depth} />
+          </span>
+        ))}
+      </div>
+    </figure>
   </div>
 </section>
 
@@ -55,21 +64,22 @@ const stickers = [
   }
   .ph__glow {
     position: absolute;
-    left: -15%;
-    right: -15%;
-    top: 38%;
-    height: 42%;
+    left: 30%;
+    right: -20%;
+    top: 20%;
+    height: 60%;
     background: var(--spectrum);
     background-size: 200% 100%;
-    filter: blur(90px);
-    opacity: 0.32;
+    filter: blur(110px);
+    opacity: 0.16;
     border-radius: 50%;
-    animation: ph-drift 14s linear infinite;
+    animation: ph-drift 16s linear infinite;
     pointer-events: none;
   }
   @keyframes ph-drift { to { background-position: 200% 0; } }
-  .ph__inner { position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: var(--s-6); width: 100%; }
-  .ph__kicker { --kicker-dot: var(--lime); position: relative; z-index: 2; }
+  .ph__inner { position: relative; display: grid; gap: var(--s-7); width: 100%; align-content: end; }
+  .ph__text { position: relative; z-index: 2; display: flex; flex-direction: column; gap: var(--s-6); container-type: inline-size; min-width: 0; }
+  .ph__kicker { position: relative; z-index: 2; }
   .ph__name {
     position: relative;
     z-index: 1;
@@ -78,9 +88,9 @@ const stickers = [
     font-stretch: 75%;
     line-height: 0.8;
     letter-spacing: -0.012em;
-    /* BATARSEH fills the column (it measures ~3.6em at this width and weight), without pushing the intro
+    /* BATARSEH fills its column (it measures ~3.6em at this width and weight), without pushing the intro
        below the fold on short screens. */
-    font-size: min(calc((100vw - 2 * var(--margin)) / 3.62), calc((100svh - 300px) / 1.62), 27rem);
+    font-size: min(calc(100cqi / 3.62), calc((100svh - 300px) / 1.62), 27rem);
     margin-top: auto;
     user-select: none;
   }
@@ -90,36 +100,74 @@ const stickers = [
   .ph__l.is-hot { transition-duration: 0.05s; }
   .ph__bottom { position: relative; z-index: 2; display: grid; gap: var(--s-5); align-items: end; }
   .ph__intro { font-size: var(--t-lead); line-height: 1.3; max-width: 30ch; font-weight: 450; letter-spacing: -0.01em; }
-  .ph__intro strong { font-weight: 650; background: linear-gradient(transparent 62%, color-mix(in srgb, var(--lime) 80%, transparent) 0); }
+  .ph__intro strong { font-weight: 650; background: linear-gradient(transparent 64%, var(--accent-tint-2) 0); }
   .ph__cta { display: flex; flex-wrap: wrap; gap: var(--s-3); }
-  .ph__stickers { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
-  .ph__s { position: absolute; display: block; pointer-events: auto; cursor: grab; }
+
+  /* The photo: a cobalt panel with a fine grid; the cut-out stands on its bottom edge and breaks its top. */
+  .ph__me { position: relative; margin: 0; width: min(88vw, 440px); justify-self: end; aspect-ratio: 1 / 1.08; }
+  .ph__panel {
+    position: absolute;
+    inset: 16% 0 0 0;
+    border-radius: var(--r-xl);
+    background: radial-gradient(120% 90% at 30% 10%, #3f5ff0 0%, var(--accent) 38%, var(--accent-deep) 100%);
+    overflow: hidden;
+    box-shadow: var(--shadow-2);
+  }
+  .ph__grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgb(255 255 255 / 0.1) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 0.1) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(90% 80% at 50% 30%, #000 20%, transparent 85%);
+  }
+  .ph__photo { position: absolute; left: 0; right: 0; bottom: 0; display: block; }
+  /* The panel's shape clips the photo at the sides and bottom; above the panel the head is free. */
+  .ph__photo { clip-path: inset(-60% 0 0 0 round var(--r-xl)); }
+  .ph__photo img { width: 100%; height: auto; transition: filter 0.9s var(--ease-register); }
+  @media (hover: hover) and (pointer: fine) {
+    .ph__photo img { filter: grayscale(1) contrast(1.06); }
+    .ph__me:hover .ph__photo img { filter: none; }
+  }
+  .ph__cap {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    z-index: 3;
+    display: grid;
+    gap: 2px;
+    padding: 10px 14px;
+    border-radius: var(--r-m);
+    background: rgb(255 255 255 / 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-1);
+    font: 650 0.8125rem / 1.25 var(--font-text);
+  }
+  .ph__cap span + span { font-weight: 500; color: var(--ink-2); }
+  .ph__stickers { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
+  .ph__s { position: absolute; display: block; pointer-events: auto; }
   .ph__s :global(.sticker) { --size: 100%; width: 100%; }
-  /* Positions: stickers live in the open space (right of MOUSA, around the edges) and only overlap the name at
-     its corners. Phones first (four stickers), more from tablet up. */
-  .s-spark { width: 54px; top: 14%; left: 44%; }
-  .s-tag { width: 124px; top: 20%; right: 2%; }
-  .s-cursor { width: 64px; top: 38%; right: 30%; }
-  .s-check { width: 84px; top: 31%; left: 3%; }
-  .s-percent, .s-cell, .s-blocks, .s-pin { display: none; }
+  /* Tiles sit on the panel's right edge and over the photo's lower corners, never over the name.
+     Phones: two tiles; more from tablet up. */
+  .s-tag { width: 88px; top: 6%; right: -3%; }
+  .s-check { width: 56px; bottom: 30%; left: 4%; }
+  .s-cell, .s-cursor { display: none; }
   @media (min-width: 700px) {
     .ph__bottom { grid-template-columns: 1fr auto; }
-    .s-spark { width: 76px; top: 16%; left: 70%; right: auto; }
-    .s-tag { width: 190px; top: 15%; right: 5%; }
-    .s-cursor { width: 104px; top: 37%; left: 80%; right: auto; }
-    .s-check { width: 128px; top: auto; bottom: 25%; left: auto; right: -1%; }
-    .s-percent { display: block; width: 88px; top: 36%; left: 70%; }
-    .s-cell { display: none; }
+    .ph__me { width: min(56vw, 460px); margin-top: calc(var(--s-7) * -1); }
+    .s-cell { display: block; width: 104px; top: 48%; right: -8%; }
   }
   @media (min-width: 1024px) {
-    .s-blocks { display: block; width: 116px; top: 24%; left: 0; }
-    .s-pin { display: block; width: 66px; top: 12%; left: 31%; }
-    .s-spark { width: 84px; top: 17%; left: 70%; }
-    .s-tag { width: 230px; top: 15%; right: 10%; }
-    .s-cursor { width: 116px; top: 38%; left: 79%; }
-    .s-percent { width: 96px; top: 36%; left: 70%; }
-    .s-cell { display: block; width: 196px; top: 30%; right: -1%; }
-    .s-check { width: 146px; bottom: 23%; right: -1.5%; }
+    .ph__inner { grid-template-columns: minmax(0, 1.72fr) minmax(0, 1fr); column-gap: clamp(24px, 3vw, 56px); align-items: end; }
+    .ph__bottom { grid-template-columns: 1fr; }
+    .ph__me { width: 100%; max-width: 520px; margin-top: 0; aspect-ratio: 1 / 1.12; }
+    .s-tag { width: 118px; top: 8%; right: -7%; }
+    .s-cell { width: 120px; top: 46%; right: -9%; }
+    .s-check { width: 64px; bottom: 34%; left: 5%; }
+    .s-cursor { display: block; width: 58px; bottom: 7%; right: 6%; }
+  }
+  @media (min-width: 1280px) {
+    .ph__bottom { grid-template-columns: 1fr auto; }
   }
   @media (prefers-reduced-motion: reduce) {
     .ph__glow { animation: none; }

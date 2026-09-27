@@ -1,0 +1,27 @@
+---
+// A plain browser window: three dots and the address, then the content. Used for review screenshots, tool
+// captures and the index preview. Decorative chrome; the content slot carries the meaning.
+interface Props { url?: string; class?: string; dark?: boolean }
+const { url, class: cls = '', dark = false } = Astro.props;
+const host = url ? url.replace(/^https?:\/\//, '').replace(/\/$/, '') : '';
+---
+<div class:list={['bf', cls, { 'bf--dark': dark }]}>
+  <div class="bf__bar" aria-hidden="true">
+    <span class="bf__dots"><i></i><i></i><i></i></span>
+    {host && <span class="bf__url">{host}</span>}
+  </div>
+  <div class="bf__view"><slot /></div>
+</div>
+
+<style>
+  .bf { position: relative; border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px rgb(14 17 22 / 0.08), 0 18px 40px -24px rgb(14 17 22 / 0.45); isolation: isolate; }
+  .bf__bar { display: flex; align-items: center; gap: 10px; height: 28px; padding: 0 10px; background: #f6f7f9; border-bottom: 1px solid var(--line-soft); }
+  .bf__dots { display: inline-flex; gap: 5px; flex: none; }
+  .bf__dots i { width: 7px; height: 7px; border-radius: 50%; background: #d4d7dd; }
+  .bf__url { flex: 1; min-width: 0; max-width: 60%; margin-inline: auto; padding: 3px 10px; border-radius: 6px; background: #fff; box-shadow: 0 0 0 1px var(--line-soft); font: 500 0.6875rem / 1.2 var(--font-text); color: var(--ink-2); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bf__view { position: relative; overflow: hidden; background: var(--cloud); }
+  .bf--dark { background: var(--night-2); box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 24px 48px -24px rgb(0 0 0 / 0.7); }
+  .bf--dark .bf__bar { background: #1c212a; border-bottom-color: var(--night-rule); }
+  .bf--dark .bf__dots i { background: #3a414e; }
+  .bf--dark .bf__url { background: var(--night-2); box-shadow: 0 0 0 1px var(--night-rule); color: var(--night-ink-2); }
+</style>

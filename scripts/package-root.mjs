@@ -66,6 +66,7 @@ const effect = {
   blog: 'REPLACES /blog/index.html and adds /blog/<post>/ folders — download the whole existing blog folder first',
   reviews: 'REPLACES /reviews/index.html and adds /reviews/<review>/ folders; the old /reviews/reviews/, /reviews/builds/, /reviews/method/, /reviews/img/ and /reviews/assets/ stay on the server — download the whole existing reviews folder first',
   about: 'new folder — /about/ returns 404 on the live domain today (checked 2026-09-26)',
+  tools: 'new folder — /tools/ returns 404 on the live domain today (checked 2026-09-27)',
   _assets: 'new folder — CSS, JavaScript and fonts',
   media: 'new folder — captures and recordings',
   og: 'new folder — social sharing images',
