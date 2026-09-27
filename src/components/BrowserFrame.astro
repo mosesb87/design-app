@@ -1,5 +1,5 @@
 ---
-// A plain browser window: three dots and the address, then the content. Used for review screenshots, tool
+// A black browser window: three dots and the address, then the content. Used for review screenshots, tool
 // captures and the index preview. Decorative chrome; the content slot carries the meaning.
 interface Props { url?: string; class?: string; dark?: boolean }
 const { url, class: cls = '', dark = false } = Astro.props;
@@ -14,14 +14,13 @@ const host = url ? url.replace(/^https?:\/\//, '').replace(/\/$/, '') : '';
 </div>
 
 <style>
-  .bf { position: relative; border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px rgb(14 17 22 / 0.08), 0 18px 40px -24px rgb(14 17 22 / 0.45); isolation: isolate; }
-  .bf__bar { display: flex; align-items: center; gap: 10px; height: 28px; padding: 0 10px; background: #f6f7f9; border-bottom: 1px solid var(--line-soft); }
+  .bf { position: relative; border-radius: 14px; overflow: hidden; background: var(--night); padding: 0 5px 5px; box-shadow: 0 1px 2px rgb(14 17 22 / 0.2), 0 24px 44px -22px rgb(14 17 22 / 0.55); isolation: isolate; }
+  .bf__bar { display: flex; align-items: center; gap: 10px; height: 30px; padding: 0 6px; }
   .bf__dots { display: inline-flex; gap: 5px; flex: none; }
-  .bf__dots i { width: 7px; height: 7px; border-radius: 50%; background: #d4d7dd; }
-  .bf__url { flex: 1; min-width: 0; max-width: 60%; margin-inline: auto; padding: 3px 10px; border-radius: 6px; background: #fff; box-shadow: 0 0 0 1px var(--line-soft); font: 500 0.6875rem / 1.2 var(--font-text); color: var(--ink-2); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .bf__view { position: relative; overflow: hidden; background: var(--cloud); }
-  .bf--dark { background: var(--night-2); box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 24px 48px -24px rgb(0 0 0 / 0.7); }
-  .bf--dark .bf__bar { background: #1c212a; border-bottom-color: var(--night-rule); }
-  .bf--dark .bf__dots i { background: #3a414e; }
-  .bf--dark .bf__url { background: var(--night-2); box-shadow: 0 0 0 1px var(--night-rule); color: var(--night-ink-2); }
+  .bf__dots i { width: 8px; height: 8px; border-radius: 50%; background: #3a414e; }
+  .bf__dots i:first-child { background: var(--orange); }
+  .bf__dots i:nth-child(2) { background: var(--accent-soft); }
+  .bf__url { flex: 1; min-width: 0; max-width: 60%; margin-inline: auto; padding: 3px 10px; border-radius: 6px; background: #1c212a; font: 500 0.6875rem / 1.2 var(--font-text); color: var(--night-ink-2); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bf__view { position: relative; overflow: hidden; border-radius: 9px; background: var(--night-2); }
+  :global([data-ground='night']) .bf, :global(.on-dark) .bf { box-shadow: 0 0 0 1px rgb(255 255 255 / 0.14), 0 24px 48px -24px rgb(0 0 0 / 0.7); }
 </style>

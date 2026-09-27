@@ -1,0 +1,92 @@
+---
+// ASAS Studio, given its own section on /work/: the promise, what it is, its four moves, the numbers from the
+// live site, the real recording and the studio capture, and the links. Content from src/data/tools.ts (Mousa's
+// own published wording).
+import BrowserFrame from './BrowserFrame.astro';
+import VideoPlate from './VideoPlate.astro';
+import Picture from './Picture.astro';
+import { toolPages } from '../data/tools';
+const t = toolPages.find((x) => x.slug === 'asas-studio')!;
+---
+<section class="asas" id="asas" aria-labelledby="asas-title" data-ground="night">
+  <div class="asas__glow" aria-hidden="true"></div>
+  <div class="wrap asas__grid">
+    <div class="asas__text">
+      <p class="kicker asas__kicker">Spotlight · my own product</p>
+      <h2 class="asas__title" id="asas-title">{t.name}</h2>
+      <p class="asas__promise">{t.promise}</p>
+      <p class="asas__what">{t.what}</p>
+      {t.how && (
+        <ol class="asas__moves" role="list" aria-label="Four moves">
+          {t.how.map((m, i) => <li><span class="num">{String(i + 1).padStart(2, '0')}</span>{m.title}</li>)}
+        </ol>
+      )}
+      <p class="asas__cta">
+        <a class="btn asas__case" href="/work/asas-studio/">Read the case study <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--line asas__live" href={t.live} rel="noopener">Open {t.liveLabel} <span class="arrow" aria-hidden="true">↗</span></a>
+      </p>
+    </div>
+    <div class="asas__media">
+      <BrowserFrame url={t.live}>
+        <VideoPlate slug="asas" label={`Recording of ${t.name}: ${t.shows}`} caption={t.shows} />
+      </BrowserFrame>
+      <div class="asas__studio" aria-hidden="true">
+        <BrowserFrame url="asas.build/studio"><Picture slug="asas-studio-app" alt="" sizes="(min-width: 1024px) 18vw, 40vw" /></BrowserFrame>
+      </div>
+    </div>
+    {t.numbers && (
+      <ul class="asas__nums" role="list" aria-label={`${t.name} in numbers`} data-pop-grid>
+        {t.numbers.map((n) => (
+          <li data-pop data-count-host><span class="asas__num num" data-count>{n.v}</span><span class="asas__num-l">{n.l}</span></li>
+        ))}
+      </ul>
+    )}
+    {t.note && <p class="asas__note">{t.note}</p>}
+  </div>
+</section>
+
+<style>
+  .asas {
+    position: relative;
+    overflow: clip;
+    isolation: isolate;
+    margin: var(--s-8) clamp(8px, 1.4vw, 24px) 0;
+    padding-block: clamp(64px, 8vw, 128px);
+    border-radius: var(--r-xl);
+    background: var(--night);
+    color: var(--night-ink);
+  }
+  .asas__glow { position: absolute; inset: -30% -10% auto 30%; height: 90%; z-index: -1; background: radial-gradient(45% 50% at 30% 50%, rgb(43 77 224 / 0.5), transparent 70%), radial-gradient(35% 40% at 75% 60%, rgb(255 122 26 / 0.35), transparent 70%); pointer-events: none; }
+  .asas__grid { display: grid; gap: var(--s-7); }
+  .asas__text { display: grid; gap: var(--s-4); align-content: start; }
+  .asas__kicker { background: rgb(255 255 255 / 0.1); color: #fff; }
+  .asas__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(3.5rem, 8vw, 8rem); line-height: 0.84; text-transform: uppercase; color: #fff; }
+  .asas__promise { font-size: var(--t-lead); font-weight: 650; line-height: 1.25; color: var(--orange-soft); max-width: 26ch; }
+  .asas__what { max-width: 48ch; color: var(--night-ink-2); }
+  .asas__moves { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .asas__moves li { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px 0 6px; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.08); font-weight: 650; }
+  .asas__moves .num { display: inline-grid; place-items: center; min-width: 28px; height: 28px; border-radius: var(--r-pill); background: var(--orange); color: var(--ink); font: 750 0.6875rem / 1 var(--font-text); }
+  .asas__cta { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-3); }
+  .asas__case { --btn-bg: #fff; --btn-fg: var(--ink); }
+  .asas__live { --btn-fg: #fff; }
+  .asas__media { position: relative; padding-bottom: 12%; }
+  .asas__media :global(.vplate__cap) { padding: 10px 12px; color: var(--night-ink-2); }
+  .asas__studio { position: absolute; right: -2%; bottom: 0; width: 42%; transform: rotate(0deg); }
+  .asas__studio :global(.bf__view) { aspect-ratio: 16 / 10; }
+  .asas__studio :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .asas__nums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .asas__nums li { container-type: inline-size; display: grid; gap: 6px; padding: 18px 20px; border-radius: var(--r-l); background: #fff; color: var(--ink); }
+  .asas__nums li:first-child { background: var(--orange); }
+  .asas__nums li:nth-child(2) { background: var(--accent); color: #fff; }
+  .asas__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: min(4.5rem, 32cqi); line-height: 0.85; }
+  .asas__num :global(.odo) { display: inline-block; height: 0.85em; overflow: hidden; vertical-align: top; }
+  .asas__num :global(.odo__strip) { display: block; }
+  .asas__num :global(.odo__strip > span) { display: block; height: 0.85em; line-height: 0.85; }
+  .asas__num-l { font: 650 var(--t-small) / 1.25 var(--font-text); opacity: 0.85; }
+  .asas__note { font-size: var(--t-small); color: var(--night-ink-2); }
+  @media (min-width: 700px) { .asas__nums { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (min-width: 1024px) {
+    .asas__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: clamp(32px, 4vw, 72px); align-items: center; }
+    .asas__nums, .asas__note { grid-column: 1 / -1; }
+  }
+</style>

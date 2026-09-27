@@ -1,0 +1,242 @@
+{
+  "covers": {
+    "core-web-vitals-elementor-wordpress": {
+      "src": "/media/blog/drawn/core-web-vitals-elementor-wordpress-cover-1600.webp",
+      "small": "/media/blog/drawn/core-web-vitals-elementor-wordpress-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "writing-product-descriptions-at-scale": {
+      "src": "/media/blog/drawn/writing-product-descriptions-at-scale-cover-1600.webp",
+      "small": "/media/blog/drawn/writing-product-descriptions-at-scale-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "ga4-small-store-measurement": {
+      "src": "/media/blog/drawn/ga4-small-store-measurement-cover-1600.webp",
+      "small": "/media/blog/drawn/ga4-small-store-measurement-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "inventory-price-sync-drift": {
+      "src": "/media/blog/drawn/inventory-price-sync-drift-cover-1600.webp",
+      "small": "/media/blog/drawn/inventory-price-sync-drift-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "product-images-at-catalog-scale": {
+      "src": "/media/blog/drawn/product-images-at-catalog-scale-cover-1600.webp",
+      "small": "/media/blog/drawn/product-images-at-catalog-scale-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "product-filters-attributes-ecommerce": {
+      "src": "/media/blog/drawn/product-filters-attributes-ecommerce-cover-1600.webp",
+      "small": "/media/blog/drawn/product-filters-attributes-ecommerce-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "category-structure-large-catalog": {
+      "src": "/media/blog/drawn/category-structure-large-catalog-cover-1600.webp",
+      "small": "/media/blog/drawn/category-structure-large-catalog-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "shopify-or-woocommerce-decision": {
+      "src": "/media/blog/drawn/shopify-or-woocommerce-decision-cover-1600.webp",
+      "small": "/media/blog/drawn/shopify-or-woocommerce-decision-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "redirect-mapping-ecommerce-migration": {
+      "src": "/media/blog/drawn/redirect-mapping-ecommerce-migration-cover-1600.webp",
+      "small": "/media/blog/drawn/redirect-mapping-ecommerce-migration-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "sku-structure-product-catalog": {
+      "src": "/media/blog/drawn/sku-structure-product-catalog-cover-1600.webp",
+      "small": "/media/blog/drawn/sku-structure-product-catalog-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "web-project-workflow-failure-points": {
+      "src": "/media/blog/drawn/web-project-workflow-failure-points-cover-1600.webp",
+      "small": "/media/blog/drawn/web-project-workflow-failure-points-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "on-page-seo-large-product-catalog": {
+      "src": "/media/blog/drawn/on-page-seo-large-product-catalog-cover-1600.webp",
+      "small": "/media/blog/drawn/on-page-seo-large-product-catalog-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "elementor-client-handoff": {
+      "src": "/media/blog/drawn/elementor-client-handoff-cover-1600.webp",
+      "small": "/media/blog/drawn/elementor-client-handoff-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "client-editable-restaurant-menu-wordpress": {
+      "src": "/media/blog/drawn/client-editable-restaurant-menu-wordpress-cover-1600.webp",
+      "small": "/media/blog/drawn/client-editable-restaurant-menu-wordpress-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "cleaning-product-data-csv": {
+      "src": "/media/blog/drawn/cleaning-product-data-csv-cover-1600.webp",
+      "small": "/media/blog/drawn/cleaning-product-data-csv-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "product-catalog-migration-field-mapping": {
+      "src": "/media/blog/drawn/product-catalog-migration-field-mapping-cover-1600.webp",
+      "small": "/media/blog/drawn/product-catalog-migration-field-mapping-cover-800.webp",
+      "w": 1600,
+      "h": 840
+    }
+  },
+  "figures": {
+    "/media/blog/ceb8ec43adf57496-1600.webp": {
+      "src": "/media/blog/drawn/writing-product-descriptions-at-scale-figure-ceb8ec43adf57496-1600.webp",
+      "small": "/media/blog/drawn/writing-product-descriptions-at-scale-figure-ceb8ec43adf57496-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "/media/blog/04ace0e713a979c0-1600.webp": {
+      "src": "/media/blog/drawn/shopify-or-woocommerce-decision-figure-04ace0e713a979c0-1600.webp",
+      "small": "/media/blog/drawn/shopify-or-woocommerce-decision-figure-04ace0e713a979c0-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "/media/blog/ccd5ac9f62a572f3-1600.webp": {
+      "src": "/media/blog/drawn/redirect-mapping-ecommerce-migration-figure-ccd5ac9f62a572f3-1600.webp",
+      "small": "/media/blog/drawn/redirect-mapping-ecommerce-migration-figure-ccd5ac9f62a572f3-800.webp",
+      "w": 1600,
+      "h": 840
+    }
+  },
+  "summaries": {
+    "wordpress-event-website-tickets-vendors-analytics": {
+      "src": "/media/blog/drawn/wordpress-event-website-tickets-vendors-analytics-summary-1600.webp",
+      "small": "/media/blog/drawn/wordpress-event-website-tickets-vendors-analytics-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "what-managing-metro-detroit-small-business-sites-taught-me": {
+      "src": "/media/blog/drawn/what-managing-metro-detroit-small-business-sites-taught-me-summary-1600.webp",
+      "small": "/media/blog/drawn/what-managing-metro-detroit-small-business-sites-taught-me-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "the-backup-habit-that-saved-a-clients-store": {
+      "src": "/media/blog/drawn/the-backup-habit-that-saved-a-clients-store-summary-1600.webp",
+      "small": "/media/blog/drawn/the-backup-habit-that-saved-a-clients-store-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "restaurant-websites-that-work-on-a-phone": {
+      "src": "/media/blog/drawn/restaurant-websites-that-work-on-a-phone-summary-1600.webp",
+      "small": "/media/blog/drawn/restaurant-websites-that-work-on-a-phone-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "product-photos-without-a-studio": {
+      "src": "/media/blog/drawn/product-photos-without-a-studio-summary-1600.webp",
+      "small": "/media/blog/drawn/product-photos-without-a-studio-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "contact-forms-that-actually-reach-the-inbox": {
+      "src": "/media/blog/drawn/contact-forms-that-actually-reach-the-inbox-summary-1600.webp",
+      "small": "/media/blog/drawn/contact-forms-that-actually-reach-the-inbox-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "making-a-slow-wordpress-site-faster-without-a-rebuild": {
+      "src": "/media/blog/drawn/making-a-slow-wordpress-site-faster-without-a-rebuild-summary-1600.webp",
+      "small": "/media/blog/drawn/making-a-slow-wordpress-site-faster-without-a-rebuild-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "keeping-store-inventory-in-sync-with-the-warehouse": {
+      "src": "/media/blog/drawn/keeping-store-inventory-in-sync-with-the-warehouse-summary-1600.webp",
+      "small": "/media/blog/drawn/keeping-store-inventory-in-sync-with-the-warehouse-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "b2b-collections-that-match-how-retailers-shop": {
+      "src": "/media/blog/drawn/b2b-collections-that-match-how-retailers-shop-summary-1600.webp",
+      "small": "/media/blog/drawn/b2b-collections-that-match-how-retailers-shop-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "my-rules-before-installing-any-wordpress-plugin": {
+      "src": "/media/blog/drawn/my-rules-before-installing-any-wordpress-plugin-summary-1600.webp",
+      "small": "/media/blog/drawn/my-rules-before-installing-any-wordpress-plugin-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "cleaning-up-404s-and-redirects-after-a-site-migration": {
+      "src": "/media/blog/drawn/cleaning-up-404s-and-redirects-after-a-site-migration-summary-1600.webp",
+      "small": "/media/blog/drawn/cleaning-up-404s-and-redirects-after-a-site-migration-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "shopify-wholesale-store-case-packs-and-buyer-accounts": {
+      "src": "/media/blog/drawn/shopify-wholesale-store-case-packs-and-buyer-accounts-summary-1600.webp",
+      "small": "/media/blog/drawn/shopify-wholesale-store-case-packs-and-buyer-accounts-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "writing-product-descriptions-when-the-supplier-gives-you-nothing": {
+      "src": "/media/blog/drawn/writing-product-descriptions-when-the-supplier-gives-you-nothing-summary-1600.webp",
+      "small": "/media/blog/drawn/writing-product-descriptions-when-the-supplier-gives-you-nothing-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "three-search-console-reports-i-actually-open": {
+      "src": "/media/blog/drawn/three-search-console-reports-i-actually-open-summary-1600.webp",
+      "small": "/media/blog/drawn/three-search-console-reports-i-actually-open-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "what-a-webmaster-actually-does-all-week": {
+      "src": "/media/blog/drawn/what-a-webmaster-actually-does-all-week-summary-1600.webp",
+      "small": "/media/blog/drawn/what-a-webmaster-actually-does-all-week-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "updating-hundreds-of-prices-without-breaking-the-store": {
+      "src": "/media/blog/drawn/updating-hundreds-of-prices-without-breaking-the-store-summary-1600.webp",
+      "small": "/media/blog/drawn/updating-hundreds-of-prices-without-breaking-the-store-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "woocommerce-csv-import-checklist-before-it-goes-live": {
+      "src": "/media/blog/drawn/woocommerce-csv-import-checklist-before-it-goes-live-summary-1600.webp",
+      "small": "/media/blog/drawn/woocommerce-csv-import-checklist-before-it-goes-live-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "first-90-minutes-with-a-new-woocommerce-store": {
+      "src": "/media/blog/drawn/first-90-minutes-with-a-new-woocommerce-store-summary-1600.webp",
+      "small": "/media/blog/drawn/first-90-minutes-with-a-new-woocommerce-store-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "skus-variants-and-attributes-messy-product-data": {
+      "src": "/media/blog/drawn/skus-variants-and-attributes-messy-product-data-summary-1600.webp",
+      "small": "/media/blog/drawn/skus-variants-and-attributes-messy-product-data-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    },
+    "why-i-still-do-the-spreadsheet-work-myself": {
+      "src": "/media/blog/drawn/why-i-still-do-the-spreadsheet-work-myself-summary-1600.webp",
+      "small": "/media/blog/drawn/why-i-still-do-the-spreadsheet-work-myself-summary-800.webp",
+      "w": 1600,
+      "h": 840
+    }
+  }
+}

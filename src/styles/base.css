@@ -40,7 +40,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul, ol { margin: 0; }
 ul[role='list'], ol[role='list'] { list-style: none; padding: 0; }
 table { border-collapse: collapse; width: 100%; }
-::selection { background: var(--accent-tint-2); color: var(--ink); }
+::selection { background: var(--orange-tint-2); color: var(--ink); }
 
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { text-decoration-thickness: 2px; }
@@ -76,9 +76,14 @@ a:hover { text-decoration-thickness: 2px; }
   white-space: nowrap; border: 0;
 }
 
-/* The background field (scripts/motion/field.ts): fixed behind everything, under the page's own rooms. */
-.bgfield { position: fixed; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; opacity: 0; transition: opacity 1.2s var(--ease-register); }
-.bgfield.is-on { opacity: 1; }
+/* The background (scripts/motion/aura.ts): soft cobalt and orange washes fixed behind everything, under the
+   page's own rooms; they wander as the page scrolls. Radial gradients, no blur filter, so they are cheap. */
+.aura { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; opacity: 0; transition: opacity 1.4s var(--ease-register); }
+.aura.is-on, .no-js .aura { opacity: 1; }
+.aura i { position: absolute; width: 72vmax; height: 72vmax; border-radius: 50%; will-change: transform; }
+.aura__a { left: -26vmax; top: -24vmax; background: radial-gradient(closest-side, rgb(43 77 224 / 0.13), rgb(43 77 224 / 0.05) 55%, transparent); }
+.aura__b { right: -30vmax; top: 18vh; background: radial-gradient(closest-side, rgb(255 122 26 / 0.12), rgb(255 122 26 / 0.04) 55%, transparent); }
+.aura__c { left: 10vw; top: 70vh; background: radial-gradient(closest-side, rgb(142 162 255 / 0.12), transparent); }
 
 /* Cursor light on cards (scripts/motion/glow.ts). The card must be positioned; --glow tints it per ground. */
 [data-glow] { --glow: rgb(43 77 224 / 0.11); }
@@ -123,12 +128,16 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .h1 { font-family: var(--font-display); font-size: var(--t-h1); font-weight: 900; font-stretch: 75%; line-height: 0.86; letter-spacing: -0.01em; text-wrap: balance; }
 .h2 { font-family: var(--font-display); font-size: var(--t-h2); font-weight: 880; font-stretch: 75%; line-height: 0.88; letter-spacing: -0.005em; text-wrap: balance; }
+.h2--long { font-size: clamp(2.5rem, 4.9vw, 5.25rem); }
 .h3 { font-family: var(--font-display); font-size: var(--t-h3); font-weight: 800; font-stretch: 85%; line-height: 1.02; letter-spacing: 0; text-wrap: balance; }
 .lead { font-size: var(--t-lead); line-height: 1.35; font-weight: 450; letter-spacing: -0.01em; text-wrap: pretty; max-width: 34ch; }
 .prose { max-width: 64ch; text-wrap: pretty; }
 .prose > * + * { margin-top: 1em; }
 .prose a { text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
 .muted { color: var(--fg-2); }
+/* A line break that only applies on wide screens (headings set on two lines there, free to wrap on phones). */
+.br-wide { display: none; }
+@media (min-width: 1024px) { .br-wide { display: inline; } }
 .num { font-variant-numeric: tabular-nums lining-nums; }
 
 /* The slug: small provenance line (source · date · platform) */
@@ -142,8 +151,8 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--fg-2);
   font-variant-numeric: tabular-nums;
 }
-.slug a { text-decoration: none; border-bottom: 1px solid color-mix(in srgb, currentColor 40%, transparent); }
-.slug a:hover { color: var(--fg); border-bottom-color: currentColor; }
+.slug a { text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); text-underline-offset: 3px; }
+.slug a:hover { color: var(--fg); text-decoration-color: currentColor; }
 .slug-list { display: flex; flex-wrap: wrap; gap: 0 1.1em; }
 .slug-list > * + *::before { content: '·'; margin-right: 1.1em; opacity: 0.6; }
 
@@ -216,9 +225,8 @@ a:hover { text-decoration-thickness: 2px; }
   display: inline-flex;
   align-items: baseline;
   gap: 0.4em;
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
   font-weight: 500;
 }
 .link-arrow .arrow { transition: transform var(--d-small) var(--ease-register); display: inline-block; }
@@ -302,7 +310,7 @@ a:hover { text-decoration-thickness: 2px; }
 .prose-play ol { counter-reset: li; }
 .prose-play ol > li { counter-increment: li; }
 .prose-play ol > li::before { content: counter(li); position: absolute; left: 0; top: 0.2em; display: grid; place-items: center; width: 1.35em; height: 1.35em; border-radius: 50%; background: var(--ink); color: #fff; font: 750 0.8em / 1 var(--font-text); }
-.prose-play blockquote { padding: clamp(18px, 2vw, 28px); border-radius: var(--r-l); background: var(--cloud); border-left: 3px solid var(--accent); font-size: 1.1em; font-weight: 550; }
+.prose-play blockquote { padding: clamp(18px, 2vw, 28px); border-radius: var(--r-l); background: var(--accent-tint); font-size: 1.1em; font-weight: 550; }
 .prose-play figure { margin-block: 2em; }
 .prose-play img { width: 100%; height: auto; border-radius: var(--r-l); box-shadow: var(--shadow-1); background: var(--cloud); }
 .prose-play figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--fg-2); }
@@ -313,7 +321,8 @@ a:hover { text-decoration-thickness: 2px; }
 .prose-play hr { border: 0; height: 2px; border-radius: 1px; background: var(--spectrum); margin-block: 2.5em; }
 .prose-play .table-scroll { overflow-x: auto; border-radius: var(--r-m); }
 .prose-play table { width: 100%; min-width: 520px; border-collapse: separate; border-spacing: 0; font-size: 0.9375rem; }
-.prose-play th, .prose-play td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line-soft); }
+.prose-play th, .prose-play td { padding: 10px 12px; text-align: left; vertical-align: top; }
+.prose-play tbody tr:nth-child(even) td { background: var(--cloud); }
 .prose-play th { background: var(--cloud); font-weight: 720; }
 
 /* Full reviews: the review's own structure (labels, stat lines, severities, fact lists) in this site's type */

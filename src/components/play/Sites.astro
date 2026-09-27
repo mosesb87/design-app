@@ -1,8 +1,9 @@
 ---
-// "Then I make them work better." — six sites and stores as bright cards: the real desktop capture, the phone
-// capture tucked in front, and one line. The whole card is one link (its CTA, stretched). Cards tilt towards
+// "Then I make them work better." — six sites and stores as equal cards: the real desktop capture in a black
+// browser window that breaks out of the card's top edge, the phone capture tucked in front, and one line. The whole card is one link (its CTA, stretched). Cards tilt towards
 // the pointer on desktop (scripts/motion/tilt.ts).
 import Picture from '../Picture.astro';
+import BrowserFrame from '../BrowserFrame.astro';
 import { siteCases } from '../../data/cases';
 import { view } from '../../lib/media';
 const items = siteCases();
@@ -23,7 +24,7 @@ import Ghost from '../Ghost.astro';
         return (
           <li class="site" style={`--tone:${tones[i % tones.length]}`} data-tilt data-vt-host data-glow>
             <div class="site__media">
-              <div class="site__desk" data-vt-target><Picture slug={c.media.hero} alt={`${c.title} — the live site on desktop`} sizes="(min-width: 1024px) 44vw, 90vw" eager={i < 2} /></div>
+              <div class="site__desk" data-vt-target><BrowserFrame url={c.url}><Picture slug={c.media.hero} alt={`${c.title} — the live site on desktop`} sizes="(min-width: 1024px) 44vw, 90vw" eager={i < 2} /></BrowserFrame></div>
               {mob && <div class="site__phone" aria-hidden="true"><Picture data={mob} alt="" sizes="(min-width: 1024px) 10vw, 24vw" /></div>}
             </div>
             <div class="site__text">
@@ -48,7 +49,8 @@ import Ghost from '../Ghost.astro';
     position: relative;
     display: grid;
     gap: var(--s-5);
-    padding: clamp(16px, 1.8vw, 28px);
+    margin-top: 44px;
+    padding: 0 clamp(16px, 1.8vw, 28px) clamp(20px, 2vw, 30px);
     border-radius: var(--r-xl);
     background: var(--tone);
     color: var(--ink);
@@ -57,21 +59,22 @@ import Ghost from '../Ghost.astro';
   }
   .site:hover { box-shadow: var(--shadow-2); }
   /* The lifted captures sit in front of the stretched link in 3D; let clicks fall through to it. */
-  .site__media { position: relative; padding-right: 14%; padding-bottom: 6%; pointer-events: none; }
-  .site__desk { border-radius: var(--r-l); overflow: hidden; box-shadow: var(--shadow-1); background: #fff; aspect-ratio: 16 / 10; transform: translateZ(20px); }
-  .site__desk :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  /* The screenshot breaks out of the card's top edge by 44px, centred with equal margins. */
+  .site__media { position: relative; margin-top: -44px; padding-bottom: 6%; pointer-events: none; }
+  .site__desk { width: 100%; transform: translateZ(20px); }
+  .site__desk :global(.bf__view) { aspect-ratio: 16 / 11; }
+  .site__desk :global(picture), .site__desk :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
   .site__phone {
     position: absolute;
-    right: 0;
+    right: 4%;
     bottom: 0;
-    width: 24%;
+    width: 22%;
     aspect-ratio: 390 / 844;
     border-radius: 18px;
     overflow: hidden;
-    border: 4px solid #fff;
-    box-shadow: var(--shadow-sticker);
-    transform: translateZ(50px) rotate(4deg);
-    background: #fff;
+    box-shadow: 0 0 0 4px var(--night), var(--shadow-2);
+    transform: translateZ(50px);
+    background: var(--night);
   }
   .site__phone :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
   .site__text { display: grid; gap: 8px; }
@@ -93,12 +96,12 @@ import Ghost from '../Ghost.astro';
     text-decoration: none;
   }
   .site__cta::after { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 3; }
-  .site__cta:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; }
+  .site__cta:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
   .site__cta .arrow { transition: transform var(--d-small) var(--ease-pop); }
   .site:hover .site__cta .arrow { transform: translateX(4px); }
   .sites__more { margin-top: var(--s-8); display: flex; justify-content: center; }
   @media (min-width: 900px) {
     .sites__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .site:nth-child(even) { margin-top: var(--s-9); }
+    .sites__grid { row-gap: clamp(56px, 5vw, 80px); }
   }
 </style>

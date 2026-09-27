@@ -1,5 +1,6 @@
 ---
-// One review as a card: the review's first screen in a browser frame, the number that explains the rest, what
+// One review as a card: the review's first screen in a black browser window that breaks out of the card's top
+// edge, the number that explains the rest, what
 // it counts, the brand and the date. The whole card opens the review's page on this site.
 import BrowserFrame from './BrowserFrame.astro';
 import { allReviews, statText } from '../data/reviews';
@@ -35,15 +36,16 @@ const Heading = level;
     display: grid;
     grid-template-rows: auto 1fr;
     gap: var(--s-4);
-    padding: 12px 12px 72px;
+    margin-top: 36px;
+    padding: 0 12px 72px;
     border-radius: var(--r-xl);
     background: var(--cloud);
     color: var(--ink);
     transition: transform 0.6s var(--ease-register), box-shadow var(--d-small), background-color var(--d-small);
   }
-  .rcard:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); background: #fff; }
-  .rcard :global(.rcard__frame) { border-radius: calc(var(--r-xl) - 10px); }
-  .rcard :global(.bf__view) { aspect-ratio: 16 / 10; }
+  .rcard:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); }
+  .rcard :global(.rcard__frame) { margin-top: -36px; }
+  .rcard :global(.bf__view) { aspect-ratio: 16 / 11; }
   .rcard__shot { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 1.2s var(--ease-register); transform-origin: 50% 0; }
   .rcard:hover .rcard__shot { transform: scale(1.05); }
   .rcard__body { container-type: inline-size; display: grid; gap: 10px; align-content: start; padding: 8px clamp(10px, 1.4vw, 20px) 0; }

@@ -1,6 +1,7 @@
 // S5 — The register rack. Desktop + fine pointer + motion: the track is pinned in a sticky viewport and
 // scroll moves it sideways (no hijack — vertical scroll distance simply equals the track's overflow).
-// Each promise widens (75% → 92% font width) as its card reaches the centre (one progress value per card).
+// As each card reaches the centre its promise stretches to full width and its screenshot grows with it; away
+// from the centre both squeeze together. It is a transform, so the text keeps its line breaks.
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import type { Env } from './runtime';
@@ -29,29 +30,27 @@ export default function rack([section]: HTMLElement[], env: Env) {
       ease: 'none',
       scrollTrigger: { trigger: spacer, start: 'top top+=' + Math.max(0, innerHeight / 2 - track.offsetHeight / 2), end: () => `+=${distance()}`, scrub: 0.6, invalidateOnRefresh: true, onRefreshInit: setSize },
     });
-    // Promises widen as their card centres.
+    // Promise and screenshot squeeze and stretch together as their card nears the centre.
     const promises = cards.map((c) => c.querySelector<HTMLElement>('[data-promise]')!);
-    // Reserve each promise's height at its widest setting, so re-wrapping never moves the text below it.
-    const reserve = () => promises.forEach((p) => {
-      p.style.minHeight = '';
-      const prev = p.style.fontStretch;
-      p.style.fontStretch = '92%';
-      p.style.minHeight = `${p.offsetHeight}px`;
-      p.style.fontStretch = prev;
-    });
-    reserve();
-    addEventListener('resize', reserve);
+    const shots = cards.map((c) => c.querySelector<HTMLElement>('.tool__media'));
+    promises.forEach((p) => { p.style.transformOrigin = '0% 50%'; p.style.willChange = 'transform'; });
+    shots.forEach((m) => { if (m) { m.style.transformOrigin = '50% 50%'; m.style.willChange = 'transform'; } });
     const centre = () => {
       const mid = innerWidth / 2;
       cards.forEach((c, i) => {
         const r = c.getBoundingClientRect();
         const d = Math.min(1, Math.abs(r.left + Math.min(r.width, innerWidth * 0.45) / 2 - mid) / (innerWidth * 0.6));
-        promises[i].style.fontStretch = `${(92 - d * 17).toFixed(1)}%`;
+        const k = 1 - d;
+        promises[i].style.transform = `scaleX(${(0.8 + 0.2 * k).toFixed(3)})`;
+        const m = shots[i];
+        if (m) m.style.transform = `scale(${(0.86 + 0.14 * k).toFixed(3)})`;
       });
     };
     ScrollTrigger.create({ trigger: spacer, start: 'top bottom', end: 'bottom top', onUpdate: centre });
     centre();
     return () => {
+      promises.forEach((p) => p.removeAttribute('style'));
+      shots.forEach((m) => m?.removeAttribute('style'));
       tween.scrollTrigger?.kill();
       tween.kill();
       spacer.parentNode!.insertBefore(viewport, spacer);

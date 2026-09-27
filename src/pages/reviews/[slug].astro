@@ -44,7 +44,7 @@ const jsonLd = [
 ---
 <Base title={`${r.brand} review — ${r.headline}`} description={r.blurb} path={`/reviews/${r.slug}/`} og={`review-${r.slug}`} type="article" jsonLd={jsonLd}>
   <article class="rv">
-    <PageHead title={r.headline} kicker={r.title} dot={tone.bg} tone={tintFor(r.slug)} size={r.headline.length > 44 ? 's' : 'm'} stickers={['lens', 'check', 'percent']}>
+    <PageHead title={r.headline} kicker={r.title} tone={tintFor(r.slug)} size={r.headline.length > 44 ? 's' : 'm'} stickers={['lens', 'check', 'percent']}>
       <nav class="rv__crumbs" slot="top" aria-label="Breadcrumb"><a href="/reviews/">← All reviews</a></nav>
       {r.lede && r.lede !== r.headline && <p class="rv__lede" data-ph-fade>{r.lede}</p>}
       <p class="rv__focus" data-ph-fade>{r.focus.map((f) => <span>{f}</span>)}</p>
@@ -180,7 +180,8 @@ const jsonLd = [
   .sheets-nav a:hover { background: var(--lime); }
   .sheets-nav .num { display: grid; place-items: center; min-width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 0.75rem; font-weight: 750; }
   .sheet { max-width: 1000px; margin: var(--s-8) auto 0; scroll-margin-top: calc(var(--nav-h) + 24px); }
-  .sheet + .sheet { padding-top: var(--s-8); border-top: 6px solid transparent; border-image: var(--spectrum) 1; }
+  .sheet + .sheet { position: relative; padding-top: var(--s-8); }
+  .sheet + .sheet::before { content: ''; position: absolute; top: 0; left: 0; width: 72px; height: 6px; border-radius: 3px; background: var(--spectrum); }
   .sheet__head { display: grid; gap: 10px; max-width: 72ch; margin-inline: auto; }
   .sheet__kicker { justify-self: start; padding: 6px 12px; border-radius: var(--r-pill); background: var(--lemon); font: 750 0.8125rem / 1.2 var(--font-text); }
   .sheet__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.25rem, 4.6vw, 4.5rem); line-height: 0.9; text-transform: uppercase; text-wrap: balance; }

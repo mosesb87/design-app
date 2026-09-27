@@ -1,0 +1,65 @@
+---
+// What Mousa checks in a review, as cards beside the /reviews/ title. Each check is taken from the findings of
+// his own reviews, and names the reviews it came from. Scrolling moves them from scattered, into order, and
+// scattered again (scripts/motion/checks.ts). Reduced motion or no script: they simply sit in order.
+import { allReviews } from '../data/reviews';
+const brand = (slug: string) => allReviews.find((r) => r.slug === slug)?.brand ?? slug;
+const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'orange' | 'night' }[] = [
+  { title: 'Prices & promotions', from: ['highprofile', 'jars', 'lume', 'hayhouse'], tone: 'orange' },
+  { title: 'Structured data', from: ['petsafe', 'salt', 'bran', 'reworked'], tone: 'white' },
+  { title: 'Sitemaps, robots & llms.txt', from: ['petsafe', 'salt'], tone: 'blue' },
+  { title: 'Stock & availability', from: ['reworked', 'dehanche', 'jbtools'], tone: 'white' },
+  { title: 'Product names & spellings', from: ['dutchie', 'icr', 'jbtools'], tone: 'night' },
+  { title: 'Filters & facets', from: ['carhartt', 'oakwood', 'diamedical'], tone: 'white' },
+  { title: 'Titles & meta', from: ['bran', 'icr'], tone: 'blue' },
+  { title: 'Canonicals & indexing', from: ['behealth', 'moment'], tone: 'white' },
+  { title: 'Local store pages', from: ['dunhams', 'bestlife'], tone: 'orange' },
+  { title: 'Launch readiness', from: ['biotrust', 'aedit'], tone: 'night' },
+  { title: 'Reviews & claims', from: ['moment', 'behealth'], tone: 'white' },
+  { title: 'Help content for AI answers', from: ['dutchie'], tone: 'blue' },
+];
+---
+<div class="checks" data-checks>
+  <p class="visually-hidden">What I check in a review:</p>
+  <ul class="checks__list" role="list">
+    {checks.map((c, i) => (
+      <li class:list={['check', `check--${c.tone}`]} data-check>
+        <span class="check__n num">{String(i + 1).padStart(2, '0')}</span>
+        <span class="check__t">{c.title}</span>
+        <span class="check__f">{c.from.map(brand).join(' · ')}</span>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .checks { position: relative; z-index: 0; }
+  .checks__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .check {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    align-items: baseline;
+    padding: 12px 14px;
+    border-radius: var(--r-m);
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 0 0 1px rgb(14 17 22 / 0.06), 0 12px 24px -16px rgb(14 17 22 / 0.35);
+    will-change: transform;
+  }
+  .check__n { grid-row: span 2; font: 750 0.6875rem / 1 var(--font-text); letter-spacing: 0.06em; color: var(--accent); }
+  .check__t { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: clamp(1rem, 1.25vw, 1.2rem); line-height: 1; text-transform: uppercase; }
+  .check__f { margin-top: 4px; font: 600 0.75rem / 1.3 var(--font-text); color: var(--ink-2); }
+  .check--blue { background: var(--accent); color: #fff; }
+  .check--blue .check__n { color: var(--orange-soft); }
+  .check--blue .check__f { color: #dfe5ff; }
+  .check--orange { background: var(--orange); }
+  .check--orange .check__n { color: var(--ink); }
+  .check--orange .check__f { color: var(--ink); }
+  .check--night { background: var(--night); color: #fff; }
+  .check--night .check__n { color: var(--orange); }
+  .check--night .check__f { color: var(--night-ink-2); }
+  @media (min-width: 1024px) {
+    .checks__list { gap: 10px; }
+  }
+</style>

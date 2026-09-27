@@ -19,8 +19,8 @@ const { text, align = 'left', top = '0' } = Astro.props;
     font-size: clamp(8rem, 24vw, 30rem);
     line-height: 0.8;
     text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1.5px color-mix(in srgb, var(--fg) 7%, transparent);
+    color: color-mix(in srgb, var(--fg) 2.5%, transparent);
+    -webkit-text-stroke: 1.5px color-mix(in srgb, var(--fg) 14%, transparent);
     user-select: none;
   }
   .ghost--right span { left: auto; right: -2vw; }

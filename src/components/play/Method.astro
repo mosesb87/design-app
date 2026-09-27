@@ -18,7 +18,7 @@ import Ghost from '../Ghost.astro';
   <div class="wrap">
     <header class="meth__head">
       <p class="kicker">How I work</p>
-      <h2 class="h2" id="meth-title">Start with the business goal. End with the measurement.</h2>
+      <h2 class="h2 h2--long" id="meth-title">Start with the business goal.<br class="br-wide" /> End with the measurement.</h2>
     </header>
     <ol class="meth__stack" role="list">
       {method.map((m, i) => (
@@ -49,7 +49,7 @@ import Ghost from '../Ghost.astro';
 
 <style>
   .meth__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-8); }
-  .meth__head .h2 { max-width: 15ch; }
+  .meth__head .h2 { max-width: 26ch; }
   .meth__stack { display: grid; gap: var(--s-5); }
   .step {
     position: sticky;

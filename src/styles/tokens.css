@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────
    Design tokens — calm and precise, still animated.
-   White and near-black with cool greys, one cobalt accent, dark "night" rooms for weight.
+   White and near-black with cool greys, cobalt and orange as the two colours, dark "night" rooms for weight.
    The old bright names (tomato, pink, aqua, lime, sun and the tints) are kept as aliases so
    every component follows the new palette; they now resolve to greys and pale cobalt.
    Contrast rules (checked): ink text on every light surface; white text on accent, accent-deep
@@ -68,18 +68,25 @@
   --accent-tint-2: #d9e0fb;
   --accent-fg: var(--accent); /* accent as text/marks on the current ground */
 
+  /* The second colour: orange. Ink text on it (7.2:1); as text on white use --orange-deep (5.2:1). */
+  --orange: #ff7a1a;
+  --orange-deep: #c2410c;
+  --orange-soft: #ffb07a;
+  --orange-tint: #fff0e5;
+  --orange-tint-2: #ffdcc2;
+
   /* Signals, used small: a failed check and a passed one */
   --fail: #c8321f;
   --fail-tint: #fbe6e1;
   --pass: #17784a;
   --pass-tint: #e0f2e8;
 
-  /* Former brights (ink text on them) — now greys and pale cobalt */
-  --tomato: #d9e0fb;
+  /* Former brights (ink text on them) — now pale orange, pale cobalt and greys */
+  --tomato: var(--orange-tint-2);
   --pink: #e4e6eb;
   --aqua: #dde3ea;
   --lime: #dfe5fd;
-  --sun: #eae8e2;
+  --sun: #ffe6d3;
   /* Deeps (white text on them) */
   --violet: var(--accent);
   --blue: var(--accent-deep);
@@ -93,12 +100,12 @@
   --lilac: #eef1fc;
   --sky: #eef1f5;
   --mint: #f1f3f3;
-  --lemon: #f4f3ef;
-  --peach: #f3f2f0;
+  --lemon: #fff4ec;
+  --peach: var(--orange-tint);
 
   /* The signature: one cobalt sweep */
-  --spectrum: linear-gradient(90deg, #0d1015 0%, #1c33a8 35%, #2b4de0 62%, #8ea2ff 100%);
-  --spectrum-soft: linear-gradient(90deg, #eef1fc, #f3f4f6, #e3e8fb);
+  --spectrum: linear-gradient(90deg, #1c33a8 0%, #2b4de0 45%, #ff7a1a 100%);
+  --spectrum-soft: linear-gradient(90deg, #eef1fc, #f3f4f6, #fff0e5);
 
   /* Legacy names */
   --paper: var(--white);

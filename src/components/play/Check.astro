@@ -116,6 +116,9 @@ import { person } from '../../data/site';
   .chk__owner { font-weight: 550; color: var(--night-ink-2); max-width: 24ch; }
   .chk__lens { position: absolute; z-index: 5; width: clamp(90px, 9vw, 150px); left: 0; top: 30%; pointer-events: none; display: none; }
   .chk__lens :global(.sticker), .chk__vs :global(.sticker) { --size: 100%; width: 100%; }
+  /* The lens is the one coloured tile in the scene, so it reads against the white cards it passes over. */
+  .chk__lens :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: #fff; box-shadow: 0 0 0 1px rgb(194 65 12 / 0.25), 0 20px 36px -18px rgb(194 65 12 / 0.65); }
+  .chk__vs :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: #fff; }
   .chk__verdict {
     justify-self: center;
     display: inline-flex;

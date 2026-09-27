@@ -162,15 +162,17 @@ export const toolGroups = [
 ] as const;
 
 // Courses & certifications as published on v1 (issuer as stated; described there as coursework/training)
-export const courses = [
-  { title: 'Advanced Digital Marketing & Growth Strategies', issuer: 'Wharton School, via Coursera', text: 'Digital strategy, customer acquisition and growth frameworks.' },
-  { title: 'Foundations of Digital Marketing', issuer: 'Google', text: 'Digital marketing fundamentals and online customer engagement.' },
+// Titles, issuers and dates are as printed on the certificate where Mousa's site publishes one (cert = its image
+// in public/media/certificates/); the others are as listed on his previous portfolio.
+export const courses: { title: string; issuer: string; text: string; cert?: { img: string; date: string; w: number; h: number } }[] = [
+  { title: 'Wharton Advanced Digital Marketing and Growth Strategies', issuer: 'The Wharton School · Aresty Institute of Executive Education', text: 'Digital strategy, customer acquisition and growth frameworks.', cert: { img: 'wharton-advanced-marketing', date: '2023-11-22', w: 1402, h: 1122 } },
+  { title: 'Foundations of Digital Marketing and E-commerce', issuer: 'Google, via Coursera', text: 'Digital marketing fundamentals and online customer engagement.', cert: { img: 'foundations-digital-marketing', date: '2024-05-21', w: 2112, h: 1638 } },
   { title: 'Think Outside the Inbox', issuer: 'Google', text: 'Email strategy, campaign planning and audience engagement.' },
-  { title: 'Attract and Engage Customers', issuer: 'Google', text: 'Search, digital campaigns and customer engagement.' },
+  { title: 'Attract and Engage Customers with Digital Marketing', issuer: 'Google, via Coursera', text: 'Search, digital campaigns and customer engagement.', cert: { img: 'attract-engage-customers', date: '2024-01-06', w: 1535, h: 1024 } },
   { title: 'Shopify Complete Training', issuer: 'Udemy', text: 'Shopify setup, catalog management, pricing, inventory and store operations.' },
   { title: 'WordPress Complete Training', issuer: 'Udemy', text: 'WordPress setup, themes, plugins, page builders and content management.' },
   { title: 'Web Development Fundamentals', issuer: 'NuCamp', text: 'HTML, CSS, responsive layouts and front-end fundamentals.' },
-] as const;
+];
 
 // Six curated reviews (the full set of 22 stays on the live /reviews/ index)
 export type Review = {
@@ -208,6 +210,7 @@ export const blogUrl = 'https://mousabatarseh.com/blog';
 
 // Everything lives on this site: the blog and the reviews are sections of it, not links to other sites.
 export const nav = [
+  { label: 'Home', href: '/' },
   { label: 'Work', href: '/work/' },
   { label: 'Tools', href: '/tools/' },
   { label: 'Reviews', href: '/reviews/' },

@@ -13,29 +13,32 @@ interface Props {
   stickers?: StickerName[];
   size?: 'xl' | 'l' | 'm' | 's';
   id?: string;
+  breakAfter?: number; // set the title on two lines from tablet up: break after this many words
 }
-const { title, kicker, dot = 'var(--tomato)', lead, tone, stickers = [], size = 'xl', id = 'page-title' } = Astro.props;
+const { title, kicker, lead, tone, stickers = [], size = 'xl', id = 'page-title', breakAfter } = Astro.props;
 const words = title.toUpperCase().split(/\s+/);
 const tilts = [-9, 11, -5];
+const hasAside = Astro.slots.has('aside');
 const depths = [0.9, 0.6, 1.2];
 ---
-<header class:list={['phd', `phd--${size}`, { 'phd--room': !!tone }]} style={tone ? `--bg:${tone}` : undefined} data-play-hero>
+<header class:list={['phd', `phd--${size}`, { 'phd--room': !!tone, 'phd--aside': hasAside, 'phd--lines': !!breakAfter }]} style={tone ? `--bg:${tone}` : undefined} data-play-hero>
   {!tone && <div class="phd__glow" aria-hidden="true"></div>}
   <div class="wrap phd__inner">
     <slot name="top" />
-    {kicker && <p class="kicker phd__kicker" style={`--kicker-dot:${dot}`} data-ph-fade>{kicker}</p>}
+    {kicker && <p class="kicker phd__kicker" data-ph-fade>{kicker}</p>}
     <h1 class="phd__title" id={id}>
       <span class="visually-hidden">{title}</span>
       <span aria-hidden="true">
         {words.map((w, i) => (
           <>
-            <span class="phd__w">{[...w].map((ch) => <span class="phd__l" data-l>{ch}</span>)}</span>{i < words.length - 1 && ' '}
+            <span class="phd__w">{[...w].map((ch) => <span class="phd__l" data-l>{ch}</span>)}</span>{i < words.length - 1 && (breakAfter === i + 1 ? <><br class="phd__br" /> </> : ' ')}
           </>
         ))}
       </span>
     </h1>
     {lead && <p class="phd__lead" data-ph-fade>{lead}</p>}
     <slot />
+    {hasAside && <div class="phd__aside"><slot name="aside" /></div>}
   </div>
   {stickers.length > 0 && (
     <div class="phd__stickers" aria-hidden="true">
@@ -91,6 +94,8 @@ const depths = [0.9, 0.6, 1.2];
   .phd--m .phd__title { font-size: clamp(2.75rem, 7vw, 7.25rem); max-width: 16ch; line-height: 0.88; }
   .phd--s .phd__title { font-size: clamp(2.4rem, 5.2vw, 5.25rem); max-width: 20ch; line-height: 0.9; }
   .phd__w { display: inline-block; white-space: nowrap; }
+  .phd__br { display: none; }
+  @media (min-width: 700px) { .phd--lines .phd__title { max-width: none; } .phd__br { display: inline; } }
   .phd__l { display: inline-block; transition: color 0.4s var(--ease-register); }
   .phd__l.is-hot { transition-duration: 0.05s; }
   .phd__lead { font-size: var(--t-lead); line-height: 1.32; max-width: 40ch; color: var(--fg-2); font-weight: 450; text-wrap: pretty; }
@@ -106,6 +111,14 @@ const depths = [0.9, 0.6, 1.2];
   @media (max-width: 699px) {
     .phd__s--1 { top: calc(var(--nav-h) + 8px); }
     .phd__s--2 { top: calc(var(--nav-h) + 4px); }
+  }
+  /* With an aside (e.g. the review checks): title and lead on the left, the aside on the right from desktop up. */
+  .phd__aside { position: relative; z-index: 0; margin-top: var(--s-5); }
+  .phd--aside .phd__title, .phd--aside .phd__lead, .phd--aside .phd__kicker { position: relative; z-index: 2; }
+  @media (min-width: 1024px) {
+    .phd--aside .phd__inner { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); column-gap: clamp(32px, 4vw, 72px); align-items: center; }
+    .phd--aside .phd__inner > :not(.phd__aside) { grid-column: 1; }
+    .phd--aside .phd__aside { grid-column: 2; grid-row: 1 / span 6; margin-top: 0; }
   }
   @media (prefers-reduced-motion: reduce) { .phd__glow { animation: none; } }
 </style>

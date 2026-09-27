@@ -56,9 +56,8 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
 <style>
   .ph {
     position: relative;
-    min-height: 100svh;
-    padding-top: calc(var(--nav-h) + var(--s-6));
-    padding-bottom: var(--s-7);
+    padding-top: calc(var(--nav-h) + var(--s-5));
+    padding-bottom: var(--s-8);
     overflow: clip;
     display: flex;
   }
@@ -91,7 +90,6 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     /* BATARSEH fills its column (it measures ~3.6em at this width and weight), without pushing the intro
        below the fold on short screens. */
     font-size: min(calc(100cqi / 3.62), calc((100svh - 300px) / 1.62), 27rem);
-    margin-top: auto;
     user-select: none;
   }
   .ph__row { display: block; white-space: nowrap; }

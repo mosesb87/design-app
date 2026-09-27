@@ -2,6 +2,8 @@
 // scripts/content/blog.mjs from the fetched posts (capture/content/blog/).
 import raw from './blog.json';
 import rawSummaries from './blog-summaries.json';
+// The blog's graphics redrawn in this site's style with the same content (scripts/blog-graphics.mjs).
+import drawn from './blog-drawn.json';
 
 export type BlogImage = { src: string; small: string; alt: string; w: number; h: number };
 export type Post = {
@@ -18,15 +20,28 @@ export type Post = {
   html: string;
 };
 
-export const blogPosts = (raw as Post[]).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
+type Drawn = { src: string; small: string; w: number; h: number };
+const D = drawn as { covers: Record<string, Drawn>; figures: Record<string, Drawn>; summaries: Record<string, Drawn> };
+const redraw = (image: BlogImage | null, d?: Drawn): BlogImage | null => (image && d ? { ...image, ...d } : image);
+// In-article figures: swap the original image (src, srcset and size) for its redrawn version.
+const redrawFigures = (html: string) => html.replace(/<img src="([^"]+)" srcset="[^"]*"([^>]*?) width="\d+" height="\d+"/g, (m, src, mid) => {
+  const d = D.figures[src];
+  return d ? `<img src="${d.src}" srcset="${d.small} 800w, ${d.src} ${d.w}w"${mid} width="${d.w}" height="${d.h}"` : m;
+});
+
+export const blogPosts = (raw as Post[])
+  .map((p) => ({ ...p, image: redraw(p.image, D.covers[p.slug]), html: redrawFigures(p.html) }))
+  .sort((a, b) => (a.date < b.date ? 1 : -1));
 
 // Listed on the old blog index, but the full article isn't published anywhere (its link opens the index).
 export type Summary = { slug: string; title: string; date: string; categories: string[]; excerpt: string; image: BlogImage | null };
-export const blogSummaries = (rawSummaries as Summary[]).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
+export const blogSummaries = (rawSummaries as Summary[])
+  .map((p) => ({ ...p, image: redraw(p.image, D.summaries[p.slug]) }))
+  .sort((a, b) => (a.date < b.date ? 1 : -1));
 
-// One bright tone per category, so a post's colour is the same on every page.
+// One tone per category, so a post's colour is the same on every page.
 const TONES = ['var(--sky)', 'var(--peach)', 'var(--lemon)', 'var(--mint)', 'var(--blush)', 'var(--lilac)'];
-const DOTS = ['var(--blue)', 'var(--tomato)', 'var(--sun)', 'var(--aqua)', 'var(--pink)', 'var(--violet)'];
+const DOTS = ['var(--accent)', 'var(--orange)', 'var(--ink)', 'var(--accent)', 'var(--orange)', 'var(--ink)'];
 export const categories = [...new Set(blogPosts.flatMap((p) => p.categories))].sort();
 export const catKey = (c: string) => c.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 export const toneOf = (c?: string) => TONES[Math.max(0, categories.indexOf(c || '')) % TONES.length];

@@ -1,5 +1,6 @@
-// "Every part in its place": scattered parts fly into their slots as the board scrolls into view (scrubbed),
-// and the board is stamped when the last one lands. Reduced motion: the board is simply complete.
+// "Every part in its place": scrolling down, the scattered coloured parts fly into their slots and the board is
+// stamped; scrolling on, they fly back out the other way; scrolling up replays it in reverse (scrubbed over the
+// board's whole pass through the screen). Reduced motion: the board is simply complete.
 import { gsap } from 'gsap';
 import type { Env } from './runtime';
 
@@ -11,27 +12,39 @@ export default function parts(sections: HTMLElement[], env: Env) {
     const stamp = section.querySelector<HTMLElement>('[data-parts-stamp]');
     if (!board || !pieces.length) return;
     const rnd = gsap.utils.random;
-    pieces.forEach((p, i) => {
+    // Thrown outwards from the board's centre (further for the corners), in from below and out towards the top.
+    const out = (lift: number) => pieces.map((_, i) => {
       const col = i % 3, row = Math.floor(i / 3);
-      // Thrown outwards from the board's centre, a little further for the corners.
-      gsap.set(p, { xPercent: (col - 1) * rnd(90, 170) + rnd(-40, 40), yPercent: (row - 1) * rnd(90, 160) + rnd(-50, 50) - 60, rotation: rnd(-18, 18), scale: rnd(0.85, 1) });
+      return {
+        xPercent: (col - 1) * rnd(110, 190) + rnd(-50, 50),
+        yPercent: (row - 1) * rnd(90, 160) + rnd(-40, 40) + lift,
+        rotation: rnd(-40, 40),
+        scale: rnd(0.7, 0.95),
+        opacity: 0.35,
+      };
     });
+    const before = out(90);
+    const after = out(-120);
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: board,
-        start: 'top 90%',
-        end: 'center 55%',
+        start: 'top bottom',
+        end: 'bottom top',
         scrub: 0.8,
         onUpdate: (self) => {
           if (!stamp) return;
-          const on = self.progress > 0.97;
+          const on = self.progress > 0.44 && self.progress < 0.62;
           if (on !== stamp.classList.contains('is-on')) {
             stamp.classList.toggle('is-on', on);
-            gsap.to(stamp, on ? { opacity: 1, scale: 1, duration: 0.6, ease: 'expo.out' } : { opacity: 0, scale: 0.6, duration: 0.2 });
+            gsap.to(stamp, on ? { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'expo.out' } : { opacity: 0, scale: 0.8, y: 8, duration: 0.25 });
           }
         },
       },
     });
-    tl.to(pieces, { xPercent: 0, yPercent: 0, rotation: 0, scale: 1, ease: 'expo.out', stagger: { each: 0.06, from: 'random' }, duration: 1 });
+    pieces.forEach((p, i) => {
+      const d = i * 0.012;
+      tl.fromTo(p, before[i], { xPercent: 0, yPercent: 0, rotation: 0, scale: 1, opacity: 1, ease: 'power3.out', duration: 0.4 }, d);
+      tl.to(p, { ...after[i], ease: 'power2.in', duration: 0.36 }, 0.62 + d);
+    });
   });
 }

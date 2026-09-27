@@ -129,22 +129,25 @@ const host = (e: Entry) => (e.url ? (e.url.startsWith('/') ? `mousabatarseh.com$
     position: fixed;
     left: 0;
     top: 0;
-    width: min(36vw, 500px);
+    width: min(46vw, 660px);
     pointer-events: none;
     z-index: 40;
-    border-radius: 14px;
+    border-radius: 16px;
     overflow: hidden;
-    background: #fff;
-    box-shadow: 0 0 0 1px rgb(14 17 22 / 0.08), 0 30px 60px -24px rgb(14 17 22 / 0.45);
+    padding: 0 6px 6px;
+    background: var(--night);
+    box-shadow: 0 2px 4px rgb(14 17 22 / 0.2), 0 34px 64px -24px rgb(14 17 22 / 0.6);
     opacity: 0;
     visibility: hidden;
     will-change: transform, opacity;
   }
-  .loupe__bar { display: flex; align-items: center; gap: 10px; height: 28px; padding: 0 10px; background: #f6f7f9; border-bottom: 1px solid var(--line-soft); }
+  .loupe__bar { display: flex; align-items: center; gap: 10px; height: 32px; padding: 0 6px; }
   .loupe__dots { display: inline-flex; gap: 5px; }
-  .loupe__dots i { width: 7px; height: 7px; border-radius: 50%; background: #d4d7dd; }
-  .loupe__url { flex: 1; min-width: 0; margin-inline: auto; max-width: 70%; padding: 3px 10px; border-radius: 6px; background: #fff; box-shadow: 0 0 0 1px var(--line-soft); font: 500 0.6875rem / 1.2 var(--font-text); color: var(--ink-2); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .loupe__view { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--cloud); }
+  .loupe__dots i { width: 8px; height: 8px; border-radius: 50%; background: #3a414e; }
+  .loupe__dots i:first-child { background: var(--orange); }
+  .loupe__dots i:nth-child(2) { background: var(--accent-soft); }
+  .loupe__url { flex: 1; min-width: 0; margin-inline: auto; max-width: 70%; padding: 3px 10px; border-radius: 6px; background: #1c212a; font: 500 0.75rem / 1.2 var(--font-text); color: var(--night-ink-2); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .loupe__view { position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 10px; background: var(--night-2); }
   .loupe__view img { position: absolute; left: 0; top: 0; width: 100%; height: auto; min-height: 100%; object-fit: cover; object-position: top center; will-change: transform; }
 
   /* Narrow screens: rows become cards with inline thumbnails (no hover on touch). */

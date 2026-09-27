@@ -1,0 +1,1228 @@
+[
+ {
+  "slug": "core-web-vitals-elementor-wordpress",
+  "kind": "cover",
+  "src": "/media/blog/a80d3ff1ab1808f0-1600.webp",
+  "series": "16",
+  "category": "WORDPRESS & WEB",
+  "headline": [
+   {
+    "text": "The builder ",
+    "hl": false
+   },
+   {
+    "text": "is not",
+    "hl": true
+   },
+   {
+    "text": " the problem",
+    "hl": false
+   }
+  ],
+  "sub": "It just makes five specific mistakes easy and never warns you about any of them.",
+  "panel": {
+   "label": "WHERE THE SCORE ACTUALLY GOES",
+   "type": "bars",
+   "items": [
+    {
+     "label": "Hero image · LCP",
+     "value": "4.1s",
+     "level": 0.88,
+     "hl": true
+    },
+    {
+     "label": "Layout shift · CLS",
+     "value": "0.21",
+     "level": 0.62,
+     "hl": true
+    },
+    {
+     "label": "Addon CSS & JS",
+     "value": "6 packs",
+     "level": 0.55,
+     "hl": false
+    },
+    {
+     "label": "Page cache",
+     "value": "on",
+     "level": 0.15,
+     "hl": false
+    }
+   ]
+  },
+  "tagline": "FIX THE IMAGE FIRST. IT IS USUALLY THE WHOLE SCORE.",
+  "footnote": "Then test logged out, on a phone, with field data — not a lab number.",
+  "uncertain": []
+ },
+ {
+  "slug": "writing-product-descriptions-at-scale",
+  "kind": "cover",
+  "src": "/media/blog/e40c78b594afe7e1-1600.webp",
+  "series": "15",
+  "category": "CONTENT WRITING",
+  "headline": [
+   {
+    "text": "400 descriptions ",
+    "hl": false
+   },
+   {
+    "text": "is a system",
+    "hl": true
+   }
+  ],
+  "sub": "Sort into three tiers before writing a word. Most of the job is assembly.",
+  "panel": {
+   "label": "TIER THE CATALOGUE FIRST",
+   "type": "rows",
+   "items": [
+    {
+     "label": "Written properly",
+     "value": "18 products",
+     "note": "Range carriers. Answer the objection.",
+     "level": 0.05,
+     "hl": true
+    },
+    {
+     "label": "Assembled from a template",
+     "value": "286 products",
+     "note": "Structure, not a mad lib.",
+     "level": 0.72,
+     "hl": false
+    },
+    {
+     "label": "One honest sentence",
+     "value": "96 products",
+     "note": "Spare parts. Nobody is reading prose.",
+     "level": 0.23,
+     "hl": false
+    }
+   ]
+  },
+  "tagline": "NO CLAIM THAT IS NOT IN THE DATA",
+  "uncertain": []
+ },
+ {
+  "slug": "writing-product-descriptions-at-scale",
+  "kind": "figure",
+  "src": "/media/blog/ceb8ec43adf57496-1600.webp",
+  "series": "15",
+  "category": "CONTENT WRITING",
+  "headline": [
+   {
+    "text": "400 descriptions ",
+    "hl": false
+   },
+   {
+    "text": "is a system",
+    "hl": true
+   }
+  ],
+  "sub": "Sort into three tiers before writing a word. Most of the job is assembly.",
+  "panel": {
+   "label": "TIER THE CATALOGUE FIRST",
+   "type": "rows",
+   "items": [
+    {
+     "label": "Written properly",
+     "value": "18 products",
+     "note": "Range carriers. Answer the objection.",
+     "level": 0.05,
+     "hl": true
+    },
+    {
+     "label": "Assembled from a template",
+     "value": "286 products",
+     "note": "Structure, not a mad lib.",
+     "level": 0.72,
+     "hl": false
+    },
+    {
+     "label": "One honest sentence",
+     "value": "96 products",
+     "note": "Spare parts. Nobody is reading prose.",
+     "level": 0.23,
+     "hl": false
+    }
+   ]
+  },
+  "tagline": "NO CLAIM THAT IS NOT IN THE DATA",
+  "uncertain": []
+ },
+ {
+  "slug": "ga4-small-store-measurement",
+  "kind": "cover",
+  "src": "/media/blog/51fc3e6faf3b1476-1600.webp",
+  "series": "14",
+  "category": "PROCESS & OPERATIONS",
+  "headline": [
+   {
+    "text": "Four numbers, ",
+    "hl": false
+   },
+   {
+    "text": "not forty",
+    "hl": true
+   }
+  ],
+  "sub": "On a small store, most of the dashboard is noise wearing a percentage sign.",
+  "panel": {
+   "label": "WHAT I ACTUALLY TRACK",
+   "type": "tiles",
+   "items": [
+    {
+     "label": "ORGANIC SESSIONS",
+     "value": "3,140",
+     "note": "rolling 28 days",
+     "hl": true
+    },
+    {
+     "label": "PRODUCTS / SESSION",
+     "value": "2.4",
+     "note": "browsing works?",
+     "hl": false
+    },
+    {
+     "label": "ADD TO CART",
+     "value": "6.1%",
+     "note": "convinced?",
+     "hl": false
+    },
+    {
+     "label": "CHECKOUT COMPLETE",
+     "value": "71%",
+     "note": "mechanical?",
+     "hl": true
+    }
+   ]
+  },
+  "tagline": "EACH ONE LOCALISES A PROBLEM TO A STAGE",
+  "footnote": "Search Console answers the question GA4 cannot: what they were looking for.",
+  "uncertain": []
+ },
+ {
+  "slug": "inventory-price-sync-drift",
+  "kind": "cover",
+  "src": "/media/blog/ed6f31c598211f9e-1600.webp",
+  "series": "13",
+  "category": "E-COMMERCE OPERATIONS",
+  "headline": [
+   {
+    "text": "The numbers ",
+    "hl": false
+   },
+   {
+    "text": "drift",
+    "hl": true
+   },
+   {
+    "text": " between the syncs",
+    "hl": false
+   }
+  ],
+  "sub": "It is a timing problem before it is a data problem. Tier the schedule.",
+  "panel": {
+   "label": "WHO OWNS THE FIELD",
+   "type": "checklist",
+   "items": [
+    {
+     "label": "Stock quantity",
+     "tag": "WAREHOUSE",
+     "hl": true
+    },
+    {
+     "label": "Cost and list price",
+     "tag": "ERP",
+     "hl": true
+    },
+    {
+     "label": "Promotional price",
+     "tag": "STORE",
+     "hl": false
+    },
+    {
+     "label": "Copy, images, categories",
+     "tag": "STORE",
+     "hl": false
+    }
+   ]
+  },
+  "panel2": {
+   "label": "SYNC FREQUENCY",
+   "type": "bars",
+   "items": [
+    {
+     "label": "Fast movers · top 3%",
+     "value": "hourly",
+     "level": 0.95,
+     "hl": true
+    },
+    {
+     "label": "Everything else",
+     "value": "nightly",
+     "level": 0.3,
+     "hl": false
+    }
+   ]
+  },
+  "tagline": "RECONCILE MONTHLY. ALERT ON BULK CHANGES.",
+  "uncertain": []
+ },
+ {
+  "slug": "product-images-at-catalog-scale",
+  "kind": "cover",
+  "src": "/media/blog/fb41cff41b3ad332-1600.webp",
+  "series": "12",
+  "category": "PHOTOSHOP",
+  "headline": [
+   {
+    "text": "Four numbers, ",
+    "hl": false
+   },
+   {
+    "text": "four thousand files",
+    "hl": true
+   }
+  ],
+  "sub": "Canvas, ratio, padding, background. Decide once, then repeat without drift.",
+  "panel": {
+   "label": "THE SPECIFICATION",
+   "type": "tiles",
+   "items": [
+    {
+     "label": "CANVAS",
+     "value": "2000px",
+     "hl": false
+    },
+    {
+     "label": "RATIO",
+     "value": "1 : 1",
+     "hl": false
+    },
+    {
+     "label": "PADDING",
+     "value": "8%",
+     "hl": false
+    },
+    {
+     "label": "BACKGROUND",
+     "value": "#FFFFFF",
+     "hl": false
+    }
+   ]
+  },
+  "panel2": {
+   "label": "PIPELINE",
+   "type": "chips",
+   "items": [
+    {
+     "label": "Batch",
+     "hl": true
+    },
+    {
+     "label": "Retouch",
+     "hl": false
+    },
+    {
+     "label": "Export",
+     "hl": false
+    },
+    {
+     "label": "Import",
+     "hl": false
+    }
+   ]
+  },
+  "tagline": "BATCH FIRST. RETOUCH THE EXCEPTIONS ONLY.",
+  "uncertain": [
+   "RATIO tile value: rendered with visible gaps either side of the colon, transcribed as \"1 : 1\"; the exact space characters cannot be confirmed from pixels"
+  ]
+ },
+ {
+  "slug": "product-filters-attributes-ecommerce",
+  "kind": "cover",
+  "src": "/media/blog/7323658b87aad5a7-1600.webp",
+  "series": "11",
+  "category": "E-COMMERCE OPERATIONS",
+  "headline": [
+   {
+    "text": "Filters are ",
+    "hl": false
+   },
+   {
+    "text": "the real search",
+    "hl": true
+   }
+  ],
+  "sub": "A filter is only as good as the attribute coverage sitting behind it.",
+  "panel": {
+   "label": "ATTRIBUTE COVERAGE ACROSS THE CATALOGUE",
+   "type": "bars",
+   "items": [
+    {
+     "label": "Size",
+     "value": "99%",
+     "level": 0.99,
+     "hl": false
+    },
+    {
+     "label": "Colour",
+     "value": "97%",
+     "level": 0.97,
+     "hl": false
+    },
+    {
+     "label": "Material",
+     "value": "61%",
+     "level": 0.61,
+     "hl": true
+    },
+    {
+     "label": "Fit",
+     "value": "44%",
+     "level": 0.44,
+     "hl": true
+    },
+    {
+     "label": "Certification",
+     "value": "12%",
+     "level": 0.12,
+     "hl": true
+    }
+   ]
+  },
+  "tagline": "BELOW 95% — FIX IT OR DO NOT SHIP THE FILTER",
+  "uncertain": []
+ },
+ {
+  "slug": "category-structure-large-catalog",
+  "kind": "cover",
+  "src": "/media/blog/4916e6addddbc3d5-1600.webp",
+  "series": "10",
+  "category": "E-COMMERCE OPERATIONS",
+  "headline": [
+   {
+    "text": "Category trees ",
+    "hl": false
+   },
+   {
+    "text": "that",
+    "hl": true
+   },
+   {
+    "text": " do not collapse",
+    "hl": false
+   }
+  ],
+  "sub": "Three levels, a size band per leaf, and a split rule decided before it is needed.",
+  "panel": {
+   "label": "DEPARTMENT / CATEGORY / SUBCATEGORY",
+   "type": "tree",
+   "items": [
+    {
+     "label": "Workwear",
+     "value": "2,840",
+     "depth": 0,
+     "hl": false
+    },
+    {
+     "label": "Trousers",
+     "value": "410",
+     "depth": 1,
+     "parent": "Workwear",
+     "hl": false
+    },
+    {
+     "label": "Jackets",
+     "value": "1,180",
+     "depth": 1,
+     "parent": "Workwear",
+     "hl": true
+    },
+    {
+     "label": "Shirts",
+     "value": "360",
+     "depth": 1,
+     "parent": "Workwear",
+     "hl": false
+    },
+    {
+     "label": "Hi-vis jackets",
+     "value": "290",
+     "depth": 2,
+     "parent": "Jackets",
+     "hl": false
+    },
+    {
+     "label": "Insulated jackets",
+     "value": "340",
+     "depth": 2,
+     "parent": "Jackets",
+     "hl": false
+    }
+   ]
+  },
+  "tagline": "OVER THE BAND — SPLIT IT NOW, NOT LATER",
+  "uncertain": []
+ },
+ {
+  "slug": "shopify-or-woocommerce-decision",
+  "kind": "cover",
+  "src": "/media/blog/25197a5f793c6403-1600.webp",
+  "series": "09",
+  "category": "E-COMMERCE OPERATIONS",
+  "headline": [
+   {
+    "text": "Four questions",
+    "hl": true
+   },
+   {
+    "text": " decide the platform",
+    "hl": false
+   }
+  ],
+  "sub": "Not the feature list. Who runs it, how odd the pricing is, where the data comes from.",
+  "panel": {
+   "type": "table",
+   "columns": [
+    "SHOPIFY",
+    "WOOCOMMERCE"
+   ],
+   "items": [
+    {
+     "label": "Who maintains it?",
+     "cells": [
+      "managed",
+      "you do"
+     ],
+     "hl": false
+    },
+    {
+     "label": "How odd is the pricing?",
+     "cells": [
+      "apps",
+      "native"
+     ],
+     "hl": false
+    },
+    {
+     "label": "Where does data come from?",
+     "cells": [
+      "API",
+      "anything"
+     ],
+     "hl": false
+    },
+    {
+     "label": "What else must the site do?",
+     "cells": [
+      "shop",
+      "a site"
+     ],
+     "hl": false
+    }
+   ],
+   "extra": "Column headers: SHOPIFY | WOOCOMMERCE. All answer cells are printed in red; the questions in black."
+  },
+  "tagline": "THE ANSWER IS ABOUT THE BUSINESS, NOT THE SOFTWARE",
+  "uncertain": []
+ },
+ {
+  "slug": "shopify-or-woocommerce-decision",
+  "kind": "figure",
+  "src": "/media/blog/04ace0e713a979c0-1600.webp",
+  "series": "09",
+  "category": "E-COMMERCE OPERATIONS",
+  "headline": [
+   {
+    "text": "Four questions",
+    "hl": true
+   },
+   {
+    "text": " decide the platform",
+    "hl": false
+   }
+  ],
+  "sub": "Not the feature list. Who runs it, how odd the pricing is, where the data comes from.",
+  "panel": {
+   "type": "table",
+   "columns": [
+    "SHOPIFY",
+    "WOOCOMMERCE"
+   ],
+   "items": [
+    {
+     "label": "Who maintains it?",
+     "cells": [
+      "managed",
+      "you do"
+     ],
+     "hl": false
+    },
+    {
+     "label": "How odd is the pricing?",
+     "cells": [
+      "apps",
+      "native"
+     ],
+     "hl": false
+    },
+    {
+     "label": "Where does data come from?",
+     "cells": [
+      "API",
+      "anything"
+     ],
+     "hl": false
+    },
+    {
+     "label": "What else must the site do?",
+     "cells": [
+      "shop",
+      "a site"
+     ],
+     "hl": false
+    }
+   ],
+   "extra": "Column headers: SHOPIFY | WOOCOMMERCE. All answer cells are printed in red; the questions in black."
+  },
+  "tagline": "THE ANSWER IS ABOUT THE BUSINESS, NOT THE SOFTWARE",
+  "uncertain": []
+ },
+ {
+  "slug": "redirect-mapping-ecommerce-migration",
+  "kind": "cover",
+  "src": "/media/blog/4d50b119f73d742a-1600.webp",
+  "series": "08",
+  "category": "SEO",
+  "headline": [
+   {
+    "text": "Redirects ",
+    "hl": false
+   },
+   {
+    "text": "are",
+    "hl": true
+   },
+   {
+    "text": " the migration",
+    "hl": false
+   }
+  ],
+  "headline_lines": [
+   "Redirects are",
+   "the migration"
+  ],
+  "sub": "The map is the only artefact that carries the old store across to the new one.",
+  "panel": {
+   "label": "OLD URL → NEW URL",
+   "type": "rows",
+   "items": [
+    {
+     "label": "/shop/cat/product-a",
+     "value": "301 → product",
+     "hl": true
+    },
+    {
+     "label": "/shop/cat/product-b",
+     "value": "301 → replacement",
+     "hl": true
+    },
+    {
+     "label": "/shop/old-category",
+     "value": "301 → category",
+     "hl": false
+    },
+    {
+     "label": "/shop/discontinued",
+     "value": "410 gone",
+     "hl": true
+    },
+    {
+     "label": "/shop/product-c",
+     "value": "302 → chain",
+     "hl": false
+    }
+   ],
+   "extra": "Five stacked row cards, old URL on the left (dark, semibold), result on the right. Consecutive rows are joined by a small grey downward arrow. Highlighted rows: white fill, red outline, red right-hand text. Other rows: pale fill, light grey outline, grey right-hand text."
+  },
+  "tagline": "ONE HOP. NO CHAINS. DECIDED BY A PERSON.",
+  "progress": 0.5,
+  "uncertain": [
+   "Arrow glyph transcribed as U+2192 '→'; the exact code point cannot be proven from pixels (it renders as a short right arrow)."
+  ]
+ },
+ {
+  "slug": "redirect-mapping-ecommerce-migration",
+  "kind": "figure",
+  "src": "/media/blog/ccd5ac9f62a572f3-1600.webp",
+  "series": "08",
+  "category": "SEO",
+  "headline": [
+   {
+    "text": "Redirects ",
+    "hl": false
+   },
+   {
+    "text": "are",
+    "hl": true
+   },
+   {
+    "text": " the migration",
+    "hl": false
+   }
+  ],
+  "headline_lines": [
+   "Redirects are",
+   "the migration"
+  ],
+  "sub": "The map is the only artefact that carries the old store across to the new one.",
+  "panel": {
+   "label": "OLD URL → NEW URL",
+   "type": "rows",
+   "items": [
+    {
+     "label": "/shop/cat/product-a",
+     "value": "301 → product",
+     "hl": true
+    },
+    {
+     "label": "/shop/cat/product-b",
+     "value": "301 → replacement",
+     "hl": true
+    },
+    {
+     "label": "/shop/old-category",
+     "value": "301 → category",
+     "hl": false
+    },
+    {
+     "label": "/shop/discontinued",
+     "value": "410 gone",
+     "hl": true
+    },
+    {
+     "label": "/shop/product-c",
+     "value": "302 → chain",
+     "hl": false
+    }
+   ],
+   "extra": "Five stacked row cards, old URL on the left (dark, semibold), result on the right. Consecutive rows are joined by a small grey downward arrow. Highlighted rows: white fill, red outline, red right-hand text. Other rows: pale fill, light grey outline, grey right-hand text."
+  },
+  "tagline": "ONE HOP. NO CHAINS. DECIDED BY A PERSON.",
+  "progress": 0.5,
+  "uncertain": [
+   "Arrow glyph transcribed as U+2192 '→'; the exact code point cannot be proven from pixels (it renders as a short right arrow)."
+  ],
+  "note": "This inline image is 1024×538 (not 1600×840) and shows the same design and the same text as the cover of this post; every item was re-read on this image and matches the cover exactly."
+ },
+ {
+  "slug": "sku-structure-product-catalog",
+  "kind": "cover",
+  "src": "/media/blog/16d86781bf3f0a7a-1600.webp",
+  "series": "07",
+  "category": "PRODUCT DATA",
+  "headline": [
+   {
+    "text": "The SKU is a ",
+    "hl": false
+   },
+   {
+    "text": "decision",
+    "hl": true
+   },
+   {
+    "text": ", not a label",
+    "hl": false
+   }
+  ],
+  "headline_lines": [
+   "The SKU is a",
+   "decision, not a label"
+  ],
+  "sub": "A four-segment identifier that survives fourteen thousand rows and three systems.",
+  "panel_top": {
+   "label": "PARENT",
+   "type": "chips",
+   "items": [
+    {
+     "label": "UTW",
+     "note": "BRAND",
+     "group": "PARENT",
+     "hl": false
+    },
+    {
+     "label": "CRWN",
+     "note": "FAMILY",
+     "group": "PARENT",
+     "hl": false
+    },
+    {
+     "label": "NVY",
+     "note": "COLOUR",
+     "group": "PARENT",
+     "hl": false
+    },
+    {
+     "label": "L",
+     "note": "SIZE",
+     "group": "CHILD",
+     "hl": true
+    }
+   ],
+   "extra": "SKU segment diagram shown ABOVE the checklist. Four white tiles in a row with bold dark text (UTW, CRWN, NVY) and the fourth tile 'L' with a red outline and red letter. Tiny grey dots sit between the tiles as separators. The first three tiles are enclosed in a red dashed rectangle, with the label 'PARENT' printed in red above its top-left. A second label 'CHILD' is printed in grey above the 'L' tile. Under each tile a small grey uppercase caption: BRAND, FAMILY, COLOUR, SIZE (stored in each item's 'note')."
+  },
+  "panel": {
+   "label": "WHAT BELONGS IN THE STRING",
+   "type": "checklist",
+   "items": [
+    {
+     "label": "Fixed-width segments",
+     "tag": "KEEP",
+     "hl": true
+    },
+    {
+     "label": "Meaning that never changes",
+     "tag": "KEEP",
+     "hl": true
+    },
+    {
+     "label": "Supplier code",
+     "tag": "DROP",
+     "hl": false
+    },
+    {
+     "label": "Season or price",
+     "tag": "DROP",
+     "hl": false
+    },
+    {
+     "label": "Warehouse location",
+     "tag": "DROP",
+     "hl": false
+    }
+   ],
+   "extra": "This checklist sits below the SKU segment diagram (see panel_top). Highlighted items: red hollow circle, bold dark text, red outlined pill. Other items: small pale grey dot, grey regular text, grey outlined pill."
+  },
+  "progress": 0.44,
+  "uncertain": []
+ },
+ {
+  "slug": "web-project-workflow-failure-points",
+  "kind": "cover",
+  "src": "/media/blog/eeb7a83e0e3b07f6-1600.webp",
+  "series": "06",
+  "category": "PROCESS & OPERATIONS",
+  "headline": [
+   {
+    "text": "Eleven steps, ",
+    "hl": false
+   },
+   {
+    "text": "three",
+    "hl": true
+   },
+   {
+    "text": " failure points",
+    "hl": false
+   }
+  ],
+  "headline_lines": [
+   "Eleven steps, three",
+   "failure points"
+  ],
+  "sub": "Every workflow lists the same steps. Only some of them absorb pressure safely.",
+  "panel": {
+   "label": "THE ELEVEN, AND THE THREE THAT MATTER",
+   "type": "checklist",
+   "items": [
+    {
+     "label": "Business goal",
+     "tag": "HIGH RISK",
+     "hl": true
+    },
+    {
+     "label": "Research",
+     "hl": false
+    },
+    {
+     "label": "Planning",
+     "hl": false
+    },
+    {
+     "label": "Content",
+     "tag": "HIGH RISK",
+     "hl": true
+    },
+    {
+     "label": "Design",
+     "hl": false
+    },
+    {
+     "label": "Development",
+     "hl": false
+    },
+    {
+     "label": "Testing",
+     "hl": false
+    },
+    {
+     "label": "SEO",
+     "hl": false
+    },
+    {
+     "label": "Launch",
+     "hl": false
+    },
+    {
+     "label": "Measure",
+     "tag": "HIGH RISK",
+     "hl": true
+    },
+    {
+     "label": "Improve",
+     "hl": false
+    }
+   ],
+   "extra": "Vertical timeline of 11 steps joined by a thin grey vertical line. Highlighted steps: red hollow circle, bold dark text, red outlined 'HIGH RISK' pill on the right. Other steps: small pale grey dot, grey regular text, no pill."
+  },
+  "progress": 0.375,
+  "uncertain": []
+ },
+ {
+  "slug": "on-page-seo-large-product-catalog",
+  "kind": "cover",
+  "src": "/media/blog/99649d885d8bf04a-1600.webp",
+  "series": "05",
+  "category": "SEO",
+  "headline": [
+   {
+    "text": "On-page SEO ",
+    "hl": false
+   },
+   {
+    "text": "at",
+    "hl": true
+   },
+   {
+    "text": " catalogue scale",
+    "hl": false
+   }
+  ],
+  "headline_lines": [
+   "On-page SEO at",
+   "catalogue scale"
+  ],
+  "sub": "Nobody hand-writes SEO for fourteen thousand products. Sort into three tiers.",
+  "panel": {
+   "label": "WHERE THE EFFORT GOES",
+   "type": "bars",
+   "items": [
+    {
+     "label": "Written",
+     "value": "240 pages",
+     "note": "Head terms, real margin, real demand.",
+     "level": 0.03,
+     "hl": true
+    },
+    {
+     "label": "Templated",
+     "value": "12,800 pages",
+     "note": "Attributes carry the variation.",
+     "level": 0.91,
+     "hl": false
+    },
+    {
+     "label": "Excluded",
+     "value": "960 pages",
+     "note": "Thin, duplicated, or out of stock for good.",
+     "level": 0.07,
+     "hl": false
+    }
+   ],
+   "extra": "Three white cards. Each: bold title top-left, page count in grey semibold top-right, grey description line, then a thin full-width bar track with a fill. 'Written' card has a red outline, red title and a red bar fill; the other two have light grey outlines, black titles and grey bar fills. Bar fill fractions were measured in pixels (track 583px): Written ≈0.03 (short stub), Templated ≈0.91, Excluded ≈0.07."
+  },
+  "tagline": "SPEND REAL EFFORT ONLY WHERE IT CHANGES ANYTHING",
+  "progress": 0.3125,
+  "uncertain": []
+ },
+ {
+  "slug": "elementor-client-handoff",
+  "kind": "cover",
+  "src": "/media/blog/5688ef50bc8a025b-1600.webp",
+  "series": "04",
+  "category": "WORDPRESS & WEB",
+  "headline": [
+   {
+    "text": "Builds that ",
+    "hl": false
+   },
+   {
+    "text": "survive",
+    "hl": true
+   },
+   {
+    "text": " the handoff",
+    "hl": false
+   }
+  ],
+  "headline_lines": [
+   "Builds that survive",
+   "the handoff"
+  ],
+  "sub": "Finished means someone who was not there can change it without breaking it.",
+  "panel": {
+   "label": "STANDARDISE BEFORE THE FIRST PAGE",
+   "type": "checklist",
+   "items": [
+    {
+     "label": "Global colours and type",
+     "tag": "DAY ONE",
+     "hl": true,
+     "group": "STANDARDISE BEFORE THE FIRST PAGE"
+    },
+    {
+     "label": "Container and spacing scale",
+     "tag": "DAY ONE",
+     "hl": true,
+     "group": "STANDARDISE BEFORE THE FIRST PAGE"
+    },
+    {
+     "label": "Named, reusable sections",
+     "tag": "DAY ONE",
+     "hl": true,
+     "group": "STANDARDISE BEFORE THE FIRST PAGE"
+    },
+    {
+     "label": "Naming convention",
+     "tag": "DAY ONE",
+     "hl": false,
+     "group": "STANDARDISE BEFORE THE FIRST PAGE"
+    },
+    {
+     "label": "One-page edit guide",
+     "tag": "PDF",
+     "hl": false,
+     "group": "LEAVE BEHIND AT HANDOVER"
+    },
+    {
+     "label": "A page they can safely duplicate",
+     "tag": "TEMPLATE",
+     "hl": false,
+     "group": "LEAVE BEHIND AT HANDOVER"
+    },
+    {
+     "label": "The six-month test",
+     "tag": "DIARISED",
+     "hl": true,
+     "group": "LEAVE BEHIND AT HANDOVER"
+    }
+   ],
+   "extra": "Two groups in one checklist. The first four items sit under the label 'STANDARDISE BEFORE THE FIRST PAGE'; the last three sit under a second small grey uppercase label 'LEAVE BEHIND AT HANDOVER' (item 'group' field). Highlighted items: red hollow circle, bold dark text, red outlined pill. Other items: small pale grey dot, grey regular text, grey outlined pill."
+  },
+  "progress": 0.25,
+  "uncertain": []
+ },
+ {
+  "slug": "client-editable-restaurant-menu-wordpress",
+  "kind": "cover",
+  "src": "/media/blog/4c9f04567cead32e-1600.webp",
+  "series": "03",
+  "category": "WORDPRESS & WEB",
+  "headline": [
+   {
+    "text": "A menu page ",
+    "hl": false
+   },
+   {
+    "text": "the",
+    "hl": true
+   },
+   {
+    "text": " client can update",
+    "hl": false
+   }
+  ],
+  "headline_lines": [
+   "A menu page the",
+   "client can update"
+  ],
+  "sub": "Not a design problem. A maintenance problem with three possible structures.",
+  "panel": {
+   "label": "THREE STRUCTURES, THREE COSTS AFTER LAUNCH",
+   "type": "other",
+   "items": [
+    {
+     "label": "Page builder sections",
+     "pro": "Easy to design",
+     "con": "Client will break it",
+     "lines": [
+      "+ Easy to design",
+      "– Client will break it"
+     ],
+     "hl": false
+    },
+    {
+     "label": "Repeatable fields",
+     "pro": "Safe to edit",
+     "con": "Costs setup time",
+     "lines": [
+      "+ Safe to edit",
+      "– Costs setup time"
+     ],
+     "hl": true
+    },
+    {
+     "label": "PDF upload",
+     "pro": "Zero effort",
+     "con": "Invisible to search",
+     "lines": [
+      "+ Zero effort",
+      "– Invisible to search"
+     ],
+     "hl": false
+    }
+   ],
+   "extra": "Three stacked white option cards. Each: bold title, then two grey semibold lines, the first prefixed with '+' (pro) and the second with a dash (con). The 'Repeatable fields' card is highlighted: red outline and red title; the other two have light grey outlines and black titles."
+  },
+  "tagline": "CHOOSE BY WHO EDITS IT, NOT BY HOW IT LOOKS",
+  "progress": 0.1875,
+  "uncertain": [
+   "The dash before each con line is a short horizontal bar about 8px wide (the '+' is 7px wide at the same size); transcribed as an en dash '–', but it could be a minus sign '−'. It is clearly longer than a hyphen."
+  ]
+ },
+ {
+  "slug": "cleaning-product-data-csv",
+  "kind": "cover",
+  "src": "/media/blog/0bb07bf022322f97-1600.webp",
+  "series": "02",
+  "category": "PRODUCT DATA",
+  "headline": [
+   {
+    "text": "Clean the data ",
+    "hl": false
+   },
+   {
+    "text": "before",
+    "hl": true
+   },
+   {
+    "text": " it reaches the store",
+    "hl": false
+   }
+  ],
+  "headline_lines": [
+   "Clean the data before",
+   "it reaches the store"
+  ],
+  "sub": "A spreadsheet damages product data in ways that stay invisible until import.",
+  "panel": {
+   "label": "WHAT THE VALIDATION COLUMN FINDS",
+   "type": "checklist",
+   "items": [
+    {
+     "label": "Leading zeros dropped",
+     "value": "412",
+     "tag": "412 ROWS",
+     "hl": true
+    },
+    {
+     "label": "Scientific notation on codes",
+     "value": "88",
+     "tag": "88 ROWS",
+     "hl": true
+    },
+    {
+     "label": "Trailing whitespace",
+     "value": "1,204",
+     "tag": "1,204 ROWS",
+     "hl": true
+    },
+    {
+     "label": "Duplicate SKUs",
+     "value": "31",
+     "tag": "31 ROWS",
+     "hl": true
+    },
+    {
+     "label": "Encoding damage",
+     "value": "6",
+     "tag": "6 ROWS",
+     "hl": false
+    },
+    {
+     "label": "Prices as text",
+     "value": "2",
+     "tag": "2 ROWS",
+     "hl": false
+    }
+   ],
+   "extra": "Highlighted items: red hollow circle, bold dark text, red outlined pill with the row count. Other items: small pale grey dot, grey regular text, grey outlined pill."
+  },
+  "tagline": "ONE FORMULA REPLACES MANUAL CHECKING",
+  "progress": 0.125,
+  "uncertain": []
+ },
+ {
+  "slug": "product-catalog-migration-field-mapping",
+  "kind": "cover",
+  "src": "/media/blog/ac22a23e67c35b49-1600.webp",
+  "series": "01",
+  "category": "E-COMMERCE OPERATIONS",
+  "headline": [
+   {
+    "text": "Field mapping ",
+    "hl": false
+   },
+   {
+    "text": "is",
+    "hl": true
+   },
+   {
+    "text": " the whole migration",
+    "hl": false
+   }
+  ],
+  "headline_lines": [
+   "Field mapping is",
+   "the whole migration"
+  ],
+  "sub": "Four decisions per field, made before a single row is imported.",
+  "panel": {
+   "label": "SOURCE FIELD → TARGET FIELD",
+   "type": "rows",
+   "items": [
+    {
+     "label": "ITEM_NO",
+     "value": "sku",
+     "hl": true
+    },
+    {
+     "label": "DESCR_1 + DESCR_2",
+     "value": "name",
+     "hl": true
+    },
+    {
+     "label": "UOM",
+     "value": "unit · needs rule",
+     "hl": true
+    },
+    {
+     "label": "PRC_LIST",
+     "value": "regular_price",
+     "hl": false
+    },
+    {
+     "label": "IMG_URL",
+     "value": "image",
+     "hl": false
+    }
+   ],
+   "extra": "Five stacked row cards, source field on the left (dark, semibold), target field on the right. Consecutive rows are joined by a small grey downward arrow. Highlighted rows: white fill, red outline, red right-hand text. Other rows: pale fill, light grey outline, grey right-hand text."
+  },
+  "tagline": "TYPE · TRANSFORM · DEFAULT · WHO OWNS IT",
+  "progress": 0.0625,
+  "uncertain": [
+   "Arrow glyph transcribed as U+2192 '→'; the exact code point cannot be proven from pixels (it renders as a short right arrow)."
+  ]
+ }
+]

@@ -26,6 +26,7 @@ const heroImg = (slug) => {
 const read = (f, d) => { try { return JSON.parse(fs.readFileSync(path.join(root, f), 'utf8')); } catch { return d; } };
 const pub = (src) => (src ? pathToFileURL(path.join(root, 'public', src)).href : null);
 const posts = read('src/data/blog.json', []);
+const drawn = read('src/data/blog-drawn.json', { covers: {} });
 const reviews = read('src/data/reviews.json', []);
 const esc = (s = '') => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 // Mousa's original logo file, used as published (portfolio-home/favicon.svg).
@@ -41,7 +42,7 @@ const cards = [
   { name: 'blog', kicker: `Blog · ${posts.length} articles`, title: 'Notes from running stores.', sub: 'WordPress, e-commerce operations, product data and SEO — the things that break, and what I do about them.' },
   { name: 'reviews', kicker: `Reviews · ${reviews.length} independent reviews`, title: 'Reviews, counted.', sub: 'Public pages only, every finding dated — and a working fix built alongside.' },
   ...cases.map((c) => ({ name: `work-${c.slug}`, kicker: `${c.group === 'systems' ? 'Systems' : 'Sites & stores'} · ${c.kicker}`, title: c.title, sub: 'Case study — Mousa Batarseh', img: heroImg(c.hero) })),
-  ...posts.map((p) => ({ name: `blog-${p.slug}`, kicker: `Blog · ${p.categories.join(' · ')}`, title: p.title, sub: 'Mousa Batarseh', img: pub(p.image?.src) })),
+  ...posts.map((p) => ({ name: `blog-${p.slug}`, kicker: `Blog · ${p.categories.join(' · ')}`, title: p.title, sub: 'Mousa Batarseh', img: pub((drawn.covers[p.slug] || p.image)?.src) })),
   ...reviews.map((r) => ({ name: `review-${r.slug}`, kicker: `Review · ${r.title}`, title: r.headline, sub: `${r.stat.of ? `${r.stat.value} / ${r.stat.of}` : r.stat.value} ${r.stat.label}`, img: pub(r.sheets[0]?.shot?.src || r.hero?.src) })),
 ];
 

@@ -1,19 +1,21 @@
 ---
-// "Every part in its place." — the about, beside a board of labelled slots. Scroll and the scattered
-// parts fly into their slots; when the last one lands, the board is stamped. Reduced motion: already in place.
+// "Every part in its place." — the about, beside a board of labelled slots. Scrolling down, the scattered
+// coloured parts fly into their slots and the board is stamped; scrolling on, they fly back out; scrolling up
+// replays it in reverse. Reduced motion: already in place.
 import Sticker from './Sticker.astro';
 import type { StickerName } from './types';
 import { person } from '../../data/site';
-const parts: { name: StickerName; label: string; tone: string }[] = [
-  { name: 'blocks', label: 'Pages', tone: 'var(--lilac)' },
-  { name: 'cell', label: 'Catalog', tone: 'var(--sky)' },
-  { name: 'tag', label: 'Prices', tone: 'var(--peach)' },
-  { name: 'barcode', label: 'SKUs', tone: 'var(--blush)' },
-  { name: 'percent', label: 'Promotions', tone: 'var(--lemon)' },
-  { name: 'lens', label: 'SEO', tone: 'var(--lilac)' },
-  { name: 'cursor', label: 'UX', tone: 'var(--sky)' },
-  { name: 'pin', label: 'Local', tone: 'var(--peach)' },
-  { name: 'check', label: 'QA', tone: 'var(--mint)' },
+// Each piece is a coloured tile: cobalt, orange, night or white, spread so no two neighbours match.
+const parts: { name: StickerName; label: string; tile: 'blue' | 'orange' | 'night' | 'white' }[] = [
+  { name: 'blocks', label: 'Pages', tile: 'blue' },
+  { name: 'cell', label: 'Catalog', tile: 'white' },
+  { name: 'tag', label: 'Prices', tile: 'orange' },
+  { name: 'barcode', label: 'SKUs', tile: 'night' },
+  { name: 'percent', label: 'Promotions', tile: 'orange' },
+  { name: 'lens', label: 'SEO', tile: 'blue' },
+  { name: 'cursor', label: 'UX', tile: 'orange' },
+  { name: 'pin', label: 'Local', tile: 'white' },
+  { name: 'check', label: 'QA', tile: 'blue' },
 ];
 import Ghost from '../Ghost.astro';
 ---
@@ -30,8 +32,8 @@ import Ghost from '../Ghost.astro';
     <div class="parts__board" data-parts-board>
       <ul class="parts__slots" role="list" aria-label="What a working site needs">
         {parts.map((p, i) => (
-          <li class="parts__slot" style={`--tone:${p.tone}`}>
-            <span class="parts__piece" data-piece data-i={i}><Sticker name={p.name} /></span>
+          <li class="parts__slot">
+            <span class:list={['parts__piece', `parts__piece--${p.tile}`]} data-piece data-i={i}><Sticker name={p.name} /></span>
             <span class="parts__label">{p.label}</span>
           </li>
         ))}
@@ -44,7 +46,7 @@ import Ghost from '../Ghost.astro';
 <style>
   .parts__grid { display: grid; gap: var(--s-8); align-items: center; }
   .parts__text { display: grid; gap: var(--s-5); }
-  .parts__title { max-width: 8ch; }
+  .parts__title { max-width: 12ch; }
   .parts__lead { max-width: 26ch; font-weight: 550; }
   .parts__body { color: var(--fg-2); max-width: 46ch; }
   .parts__board {
@@ -58,7 +60,7 @@ import Ghost from '../Ghost.astro';
     position: relative;
     aspect-ratio: 1;
     border-radius: var(--r-l);
-    background: var(--tone);
+    background: #fff;
     display: grid;
     place-items: center;
     outline: 1.5px dashed rgb(14 17 22 / 0.16);
@@ -66,6 +68,9 @@ import Ghost from '../Ghost.astro';
   }
   .parts__piece { width: 64%; display: block; position: relative; z-index: 2; will-change: transform; }
   .parts__piece :global(.sticker) { --size: 100%; width: 100%; }
+  .parts__piece--blue :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--orange-soft); box-shadow: 0 18px 30px -18px rgb(28 51 168 / 0.7); }
+  .parts__piece--orange :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: #fff; box-shadow: 0 18px 30px -18px rgb(194 65 12 / 0.6); }
+  .parts__piece--night :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--orange); }
   .parts__label {
     position: absolute;
     left: 50%;
