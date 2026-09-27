@@ -1,5 +1,5 @@
 ---
-// "The latest 16 builds." on /work/: sixteen website builds as small cards that start scattered all over the
+// "The index." on /work/: the sixteen most recent builds (all kinds, newest first) as small cards that start scattered all over the
 // screen and come together into a neat grid as the section arrives. On desktop the section holds still (a
 // sticky stage whose extra scroll is reserved in CSS) while they gather. Then a button opens /index/, where
 // every build is listed by category. (Motion: scripts/motion/gather.ts; the list: latestBuilds in data/work.ts.)
@@ -16,8 +16,8 @@ const host = (u?: string) => (u ? u.replace(/^https?:\/\/(www\.)?/, '').split('/
   <section class="lb" aria-labelledby="latest-title" data-gather>
     <div class="wrap lb__inner">
       <header class="lb__head">
-        <p class="kicker">The index</p>
-        <h2 class="h2" id="latest-title">The latest {items.length} builds.</h2>
+        <p class="kicker">Newest first</p>
+        <h2 class="h2" id="latest-title">The index.</h2>
         <p class="lb__note">Websites and stores I built, newest first. The index has every build — {entryCount} of them: tools, sites, stores, reviews and proposals, by category.</p>
         <a class="btn lb__all" href="/index/">Open the index <span class="arrow" aria-hidden="true">→</span></a>
       </header>
