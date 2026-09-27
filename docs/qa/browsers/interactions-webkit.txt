@@ -1,14 +1,15 @@
 webkit 26.0 — http://localhost:4321
 PASS  Skip link is the first Tab stop and becomes visible — {"text":"Skip to content","visible":true}
 PASS  Skip link moves focus to <main>
-PASS  Nav has links — Mousa Batarseh→/, Work 68→/work/, Tools→/tools/, Reviews→/reviews/, Blog→/blog/, About→/about/, Let’s talk→#contact
+PASS  Nav has links — Mousa Batarseh→/, Home→/, Work 68→/work/, Tools→/tools/, Reviews→/reviews/, Blog→/blog/, About→/about/, Let’s talk→#contact
 PASS  Nav "Mousa Batarseh" opens / — /
+PASS  Nav "Home" opens / — /
 PASS  Nav "Work 68" opens /work/ — /work/
 PASS  Nav "Tools" opens /tools/ — /tools/
 PASS  Nav "Reviews" opens /reviews/ — /reviews/
 PASS  Nav "Blog" opens /blog/ — /blog/
 PASS  Nav "About" opens /about/ — /about/
-PASS  Nav "Let’s talk" scrolls to #contact — on screen after 464 ms (scrollY 22664, target at 23246)
+PASS  Nav "Let’s talk" scrolls to #contact — on screen after 532 ms (scrollY 22343, target at 22777)
 PASS  Six featured case-study links on the home page — /work/united-textile/ /work/universal-wholesale/ /work/firefly-burgers/ /work/eat-with-samar/ /work/great-lakes-cigar-festival/ /work/ptee/
 PASS  Clicking a featured card image opens its case study (stretched link) — /work/united-textile/
 PASS  /blog/ filter "all" shows 16 rows — visible 16, aria-pressed true, status "16 posts shown"
@@ -34,7 +35,7 @@ PASS  /work/ filter "proposals" shows 3 rows — visible 3, aria-pressed true, s
 PASS  All 33 internal links on /work/ return 200
 PASS  External links on /work/ carry rel=noopener
 PASS  Archive preview window opens on row hover — {"opacity":"1","visibility":"visible","url":"asas.build"}
-PASS  The project scrolls inside the preview window — translateY -541px
+PASS  The project scrolls inside the preview window — translateY -505px
 PASS  /tools/: 9 tool sections, one h1
 PASS  /tools/: every jump link has its section
 PASS  /tools/: every tool opens its live page with rel=noopener
@@ -65,4 +66,4 @@ PASS  Escape closes the menu and returns focus to the toggle — {"expanded":"fa
 PASS  Menu link "Work" navigates on tap — /work/
 PASS  Menu is closed on the new page
 
-65/65 passed
+66/66 passed
