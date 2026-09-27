@@ -91,7 +91,7 @@ for (const url of PAGES) {
 for (const u of EXTRA) await save(ctx, u, 'direct');
 // Paths the new site would add at the root: are they free on the live domain?
 report.paths = [];
-for (const p of ['/tools/', '/tools', '/Tools/', '/work/', '/about/']) {
+for (const p of ['/tools/', '/tools', '/Tools/', '/work/', '/about/', '/index/', '/index']) {
   try {
     const res = await ctx.request.get(`https://mousabatarseh.com${p}`, { maxRedirects: 0, timeout: 20000 });
     const body = res.status() === 200 ? (await res.text()).slice(0, 4000) : '';

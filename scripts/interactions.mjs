@@ -77,8 +77,8 @@ async function ctx(opts) {
     check('Clicking a featured card image opens its case study (stretched link)', new URL(p.url()).pathname === feats[0], path(p));
   }
 
-  // Filters (archive, blog, reviews): the visible rows match each chip's count; aria-pressed and the status follow.
-  for (const where of ['/blog/', '/reviews/', '/work/']) {
+  // Filters (blog, reviews): the visible rows match each chip's count; aria-pressed and the status follow.
+  for (const where of ['/blog/', '/reviews/']) {
     await p.goto(BASE + where, { waitUntil: 'networkidle' });
     const chips = await p.$$eval('[data-filter] button', (bs) => bs.map((b) => ({ v: b.dataset.filterValue, n: Number(b.querySelector('span:last-child')?.textContent || 0) })));
     for (const ch of chips) {
@@ -91,7 +91,8 @@ async function ctx(opts) {
     await p.waitForTimeout(500);
   }
 
-  // Every archive and plate link: internal ones must load, external ones must open in a way that keeps the site.
+  // Every link on /work/ (plates, the latest builds): internal ones must load, external ones must keep the site.
+  await p.goto(BASE + '/work/', { waitUntil: 'networkidle' });
   const links = await p.$$eval('main a[href]', (as) => [...new Set(as.map((a) => a.getAttribute('href')))]);
   const internal = links.filter((h) => h.startsWith('/'));
   let bad = [];
@@ -100,27 +101,35 @@ async function ctx(opts) {
   const extNoRel = await p.$$eval('main a[href^="http"]', (as) => as.filter((a) => !/noopener/.test(a.rel)).map((a) => a.href));
   check('External links on /work/ carry rel=noopener', extNoRel.length === 0, extNoRel.slice(0, 5).join(' '));
 
-  // Preview: hovering a row opens the browser window, and a project with a full-page capture scrolls inside it.
-  // A browser that reports no fine pointer (e.g. headless Firefox on a server with no mouse) gets the touch
-  // layout instead — every row shows its screenshot inline — so that is what gets checked there.
-  const fine = await p.evaluate(() => document.documentElement.classList.contains('pointer-fine'));
-  if (fine) {
-    const row = p.locator('[data-row][data-full]').first();
-    await row.scrollIntoViewIfNeeded();
-    await p.waitForTimeout(400);
-    await row.hover();
-    await p.waitForTimeout(700);
-    const lens = await p.evaluate(() => { const l = document.querySelector('[data-loupe-lens]'); if (!l) return null; const cs = getComputedStyle(l); return { opacity: cs.opacity, visibility: cs.visibility, url: l.querySelector('[data-loupe-url]')?.textContent }; });
-    check('Archive preview window opens on row hover', !!lens && lens.visibility !== 'hidden' && Number(lens.opacity) > 0.5, JSON.stringify(lens));
-    const box = await row.boundingBox();
-    if (box) await p.mouse.move(box.x + box.width * 0.3, box.y + box.height / 2);
-    await p.waitForTimeout(3200);
-    const y = await p.evaluate(() => { const m = getComputedStyle(document.querySelector('[data-loupe-img]')).transform; return m === 'none' ? 0 : new DOMMatrix(m).m42; });
-    check('The project scrolls inside the preview window', y < -20, `translateY ${Math.round(y)}px`);
-  } else {
-    const shown = await p.evaluate(() => [...document.querySelectorAll('.index__thumb')].filter((i) => i.getBoundingClientRect().width > 0).length);
-    check(`No fine pointer reported (${ENGINE}): rows show their screenshots inline instead of the hover window`, shown > 20, `${shown} thumbnails shown`);
+  // The latest builds on /work/: sixteen cards, each linking somewhere, and the way into the index.
+  const lb = await p.evaluate(() => ({ cards: document.querySelectorAll('[data-gather-card]').length, linked: [...document.querySelectorAll('[data-gather-card] a[href]')].length, toIndex: !!document.querySelector('.lb a[href="/index/"]') }));
+  check('/work/: the latest 16 builds, each linked, and a link to /index/', lb.cards === 16 && lb.linked === 16 && lb.toIndex, JSON.stringify(lb));
+  // As the section arrives the cards come together: once scrolled through, every card sits in the grid.
+  if (!(await p.evaluate(() => document.documentElement.classList.contains('motion-reduced')))) {
+    await p.evaluate(async () => { const h = document.querySelector('[data-gather-hold]'); const end = h.getBoundingClientRect().bottom + scrollY - innerHeight; for (let i = 1; i <= 10; i++) { const v = end * i / 10; window.__lenis ? window.__lenis.scrollTo(v, { immediate: true, force: true }) : scrollTo(0, v); await new Promise((r) => setTimeout(r, 60)); } });
+    await p.waitForTimeout(1600);
+    const off = await p.evaluate(() => [...document.querySelectorAll('[data-gather-card]')].filter((c) => { const m = getComputedStyle(c).transform; if (m === 'none') return false; const d = new DOMMatrix(m); return Math.abs(d.m41) > 2 || Math.abs(d.m42) > 2; }).length);
+    check('/work/: the latest builds have come together once scrolled through', off === 0, `${off} cards still out of place`);
   }
+
+  // The index: every entry in the archive is a card, in its category's section, and every link works.
+  await p.goto(BASE + '/index/', { waitUntil: 'networkidle' });
+  const ix = await p.evaluate(() => ({
+    h1: document.querySelectorAll('h1').length,
+    sections: [...document.querySelectorAll('section.ixs')].map((s) => ({ id: s.id, cards: s.querySelectorAll('.ixc').length, label: Number(s.querySelector('.kicker')?.textContent.match(/\d+/)?.[0] || -1) })),
+    jumps: [...document.querySelectorAll('.ixj a')].map((a) => ({ href: a.getAttribute('href'), n: Number(a.querySelector('.ixj__n')?.textContent || -1) })),
+    cards: document.querySelectorAll('.ixc').length,
+    ids: new Set([...document.querySelectorAll('.ixc')].map((c) => c.id)).size,
+  }));
+  const total = Number((await p.request.get(BASE + '/work/').then((r) => r.text())).match(/(\d+) entries/)?.[1] || -1);
+  check(`/index/: every one of the ${total} builds is a card, once`, ix.cards === total && ix.ids === total && ix.h1 === 1, `${ix.cards} cards, ${ix.ids} unique`);
+  check('/index/: five categories, each section\'s count matches its cards and its jump link', ix.sections.length === 5 && ix.sections.every((s, i) => s.cards === s.label && ix.jumps[i]?.href === `#${s.id}` && ix.jumps[i]?.n === s.cards), JSON.stringify(ix.sections));
+  const ixLinks = await p.$$eval('main a[href]', (as) => [...new Set(as.map((a) => a.getAttribute('href')))]);
+  const ixBad = [];
+  for (const h of ixLinks.filter((x) => x.startsWith('/'))) { const r = await p.request.get(BASE + h); if (r.status() !== 200) ixBad.push(`${h} ${r.status()}`); }
+  check(`/index/: all ${ixLinks.filter((x) => x.startsWith('/')).length} internal links return 200`, ixBad.length === 0, ixBad.join(', '));
+  const ixNoRel = await p.$$eval('main a[href^="http"]', (as) => as.filter((a) => !/noopener/.test(a.rel)).map((a) => a.href));
+  check('/index/: external links carry rel=noopener', ixNoRel.length === 0, ixNoRel.slice(0, 5).join(' '));
 
   // Tools: every tool has its section, the jump links resolve, and each opens its live tool.
   await p.goto(BASE + '/tools/', { waitUntil: 'networkidle' });

@@ -218,10 +218,11 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
     .skills__group:hover li { animation: chip-wave 0.6s var(--ease-pop) both; animation-delay: calc(var(--k) * 35ms); }
   }
   @keyframes chip-wave { 40% { translate: 0 -5px; } 100% { translate: 0 0; } }
-  .courses { display: grid; gap: 12px; }
+  /* More room between the certificates (Mousa, round 6): wider gaps between cards and rows, roomier cards. */
+  .courses { display: grid; gap: clamp(20px, 2.6vw, 40px) clamp(16px, 2.2vw, 32px); }
   .cert { position: relative; }
-  .cert__card { position: relative; height: 100%; overflow: hidden; display: grid; gap: 6px; align-content: start; padding: 20px 22px; border-radius: var(--r-l); background: var(--cloud); }
-  .has-cert .cert__card { padding-right: 34%; min-height: 200px; }
+  .cert__card { position: relative; height: 100%; overflow: hidden; display: grid; gap: 10px; align-content: start; padding: clamp(22px, 2.4vw, 32px) clamp(22px, 2.4vw, 32px) clamp(26px, 2.8vw, 36px); border-radius: var(--r-l); background: var(--cloud); }
+  .has-cert .cert__card { padding-right: 34%; min-height: 230px; }
   .courses__date { font: 650 0.8125rem / 1.3 var(--font-text); color: var(--ink-2); }
   /* A quarter of the certificate peeks out of the card's corner; hovering shows the whole of it. */
   .cert__peek { position: absolute; right: -16%; bottom: -24%; width: 50%; padding: 0; border-radius: 6px; overflow: hidden; background: #fff; box-shadow: var(--shadow-2); transform: rotate(-8deg); transition: transform 0.6s var(--ease-register); cursor: zoom-in; }
@@ -239,7 +240,7 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
   .certdlg__close { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: var(--r-pill); background: #fff; color: var(--ink); font-weight: 700; }
   .certdlg__img { width: 100%; height: auto; max-height: calc(92vh - 70px); object-fit: contain; border-radius: 10px; background: #fff; }
   /* The degree: one wide dark card above the certificates. */
-  .degree { position: relative; display: flex; align-items: center; gap: clamp(16px, 2.4vw, 32px); margin-bottom: 14px; padding: clamp(20px, 2.6vw, 36px); border-radius: var(--r-l); background: var(--night); color: #fff; overflow: hidden; transition: translate 0.5s var(--ease-register), box-shadow 0.4s; }
+  .degree { position: relative; display: flex; align-items: center; gap: clamp(16px, 2.4vw, 32px); margin-bottom: clamp(28px, 3.4vw, 52px); padding: clamp(20px, 2.6vw, 36px); border-radius: var(--r-l); background: var(--night); color: #fff; overflow: hidden; transition: translate 0.5s var(--ease-register), box-shadow 0.4s; }
   .degree:hover { translate: 0 -4px; box-shadow: 0 28px 50px -26px rgb(14 17 22 / 0.6); }
   .degree__icon { flex: none; width: clamp(56px, 6vw, 84px); }
   .degree__icon :global(.sticker) { --size: 100%; width: 100%; }

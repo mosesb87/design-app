@@ -7,7 +7,8 @@ import { allReviews, statText } from './reviews';
 export type Category = 'systems' | 'case-studies' | 'sites' | 'reviews' | 'proposals';
 export const categories: { id: Category; label: string; blurb: string }[] = [
   { id: 'systems', label: 'Systems', blurb: 'Working tools, running live. Nothing uploads a file or needs an account.' },
-  { id: 'case-studies', label: 'Case studies', blurb: 'An independent e-commerce case study and the pieces built around it.' },
+  // Not "Case studies": only the lab itself is one; the rest are the pieces built around it (Mousa, round 6).
+  { id: 'case-studies', label: 'Commerce lab', blurb: 'The DiaMedical Commerce Intelligence Lab — an independent e-commerce case study — and the pieces built around it.' },
   { id: 'sites', label: 'Sites & stores', blurb: 'WooCommerce, Shopify and WordPress sites and stores, in English and Arabic.' },
   { id: 'reviews', label: 'Reviews', blurb: 'Independent website reviews — public pages only, every finding dated.' },
   { id: 'proposals', label: 'Proposals', blurb: 'Proposal sites built for specific job applications, each a working demo.' },
@@ -34,7 +35,7 @@ export type Entry = {
   status: Status;
   caseStudy?: string; // slug of /work/<slug>/
   family?: string; // parent slug for grouped rows
-  media?: string; // capture slug for the loupe preview
+  media?: string; // capture slug for the card screenshots
   date?: string; // ISO — only where published
 };
 
@@ -55,7 +56,7 @@ export const entries: Entry[] = [
   { slug: 'the-lab', title: 'The Lab', category: 'systems', what: 'Hub for working demos and modeled-company adaptations.', platform: 'Browser tools', url: 'https://lab.mousabatarseh.com/', status: 'live', media: 'the-lab' },
   { slug: 'ai-academy', title: 'AI Academy', category: 'systems', what: 'Bilingual AI learning map — nineteen lessons in Arabic and English.', platform: 'Web app', languages: ['AR', 'EN'], url: 'https://apps.moseswebworks.com/aiacademy/', status: 'live', media: 'ai-academy' },
 
-  // ── Case studies
+  // ── Commerce lab (the DiaMedical lab and the pieces built around it)
   { slug: 'diamedical-lab', title: 'DiaMedical Commerce Intelligence Lab', category: 'case-studies', what: 'Independent e-commerce case study built from public information for a Marketing and eCommerce Coordinator role.', platform: 'Web · workbook', url: `${M}/diamedical/`, status: 'independent', caseStudy: 'diamedical-lab', media: 'diamedical-lab' },
   { slug: 'diamedical-academy', title: 'DiaMedical Academy', category: 'case-studies', what: 'Guided learning experience built around the lab.', url: `${M}/diamedical/academy/`, status: 'independent', family: 'diamedical-lab', media: 'diamedical-academy' },
   { slug: 'diamedical-review', title: 'DiaMedical Experience Review', category: 'case-studies', what: 'Evidence-backed website review.', url: '/reviews/diamedical/', status: 'independent', family: 'diamedical-lab', media: 'diamedical-review' },
@@ -101,3 +102,24 @@ export const entries: Entry[] = [
 
 export const entryCount = entries.length;
 export const countBy = (c: Category) => entries.filter((e) => e.category === c).length;
+
+// The latest website builds shown on /work/ (sixteen, newest first). The live sites carry no build dates, so the
+// order is set by hand here; the index page (/index/) lists every build.
+export const latestBuilds: string[] = [
+  'united-textile',
+  'universal-wholesale',
+  'firefly-burgers',
+  'eat-with-samar',
+  'great-lakes-cigar-festival',
+  'ptee',
+  'ptee-admissions',
+  'btee',
+  'jabal-amman-publishers',
+  'ophir-publishers',
+  'samona-hospitality',
+  'full-house-wholesale',
+  'wildbills-drivethru-menu',
+  'wildbills-disposables-menu',
+  'ptee-courses',
+  'wildbills-fathers-day',
+];

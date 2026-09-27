@@ -1,0 +1,131 @@
+---
+// The index: every build, grouped by what it is — systems, the commerce lab, sites & stores, reviews, proposals.
+// Each build is a card with its screenshot, what it is, platform and languages, an honest status where it isn't
+// simply live, and its links (the case study where there is one, the live build or the review). Grouped work
+// sits right after its parent and says so. Cards fly in scattered and settle as they come up the screen (pop.ts).
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/play/PageHead.astro';
+import Picture from '../../components/Picture.astro';
+import { entries, entryCount, categories, countBy, statusLabel, type Entry } from '../../data/work';
+import { allReviews } from '../../data/reviews';
+import { view } from '../../lib/media';
+import { SITE_URL, CHECKED } from '../../data/site';
+
+const tone: Record<string, string> = { systems: 'var(--lilac)', 'case-studies': 'var(--sky)', sites: 'var(--mint)', reviews: 'var(--lemon)', proposals: 'var(--blush)' };
+const dot: Record<string, string> = { systems: 'var(--accent)', 'case-studies': 'var(--iris-deep)', sites: 'var(--leaf)', reviews: 'var(--blue-soft)', proposals: 'var(--grey-4)' };
+const byCat = categories.map((c) => ({ ...c, items: entries.filter((e) => e.category === c.id) }));
+const parentOf = (e: Entry) => (e.family ? entries.find((p) => p.slug === e.family) : undefined);
+const host = (u?: string) => (u && /^https?:/.test(u) ? u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '');
+// Reviews without a site capture show the first sheet's screenshot from the review itself.
+const reviewShot = (e: Entry) => {
+  if (e.category !== 'reviews') return null;
+  const r = allReviews.find((x) => `review-${x.slug}` === e.slug);
+  return r?.thumb || r?.hero || r?.sheets.find((s) => s.shot)?.shot || null;
+};
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/index/#page`,
+    name: 'The index — every build by Mousa Batarseh',
+    url: `${SITE_URL}/index/`,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: entries.length,
+      itemListElement: entries.map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: e.title, url: e.caseStudy ? `${SITE_URL}/work/${e.caseStudy}/` : e.url?.startsWith('/') ? `${SITE_URL}${e.url}` : e.url })),
+    },
+  },
+];
+---
+<Base title="The index" description={`Every build by Mousa Batarseh — ${entryCount} tools, sites, stores, reviews and proposals, grouped by what they are, each with its screenshot and links.`} path="/index/" og="work" jsonLd={jsonLd}>
+  <PageHead title="The index." kicker={`Every build · checked ${CHECKED}`} lead={`All ${entryCount} builds, grouped by what they are. Each card links to its case study where there is one, and to the live build.`} stickers={['blocks', 'code', 'bag']}>
+    <nav class="ixj" aria-label="Categories">
+      {byCat.map((c) => (
+        <a class="ixj__a" href={`#${c.id}`} style={`--dot:${dot[c.id]}`}>{c.label} <span class="ixj__n">{c.items.length}</span></a>
+      ))}
+    </nav>
+  </PageHead>
+
+  {byCat.map((c) => (
+    <section class="ixs section wrap" id={c.id} aria-labelledby={`${c.id}-title`} style={`--tone:${tone[c.id]};--dot:${dot[c.id]}`}>
+      <header class="ixs__head">
+        <p class="kicker">{countBy(c.id)} {countBy(c.id) === 1 ? 'build' : 'builds'}</p>
+        <h2 class="h2" id={`${c.id}-title`}>{c.label}</h2>
+        <p class="ixs__blurb">{c.blurb}</p>
+      </header>
+      <ul class="ixs__grid" role="list" data-pop-grid>
+        {c.items.map((e, i) => {
+          const shot = view(e.media, 'desktop-hero');
+          const rshot = shot ? null : reviewShot(e);
+          const parent = parentOf(e);
+          const primary = e.caseStudy ? `/work/${e.caseStudy}/` : e.url;
+          const external = !!primary && /^https?:/.test(primary);
+          const liveHref = e.url && e.caseStudy ? e.url : null;
+          return (
+            <li class:list={['ixc', { 'ixc--child': !!parent }]} id={`e-${e.slug}`} data-pop>
+              <div class="ixc__shot" aria-hidden="true">
+                {shot ? <Picture data={shot} alt="" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 45vw, 90vw" />
+                  : rshot ? <img src={rshot.small || rshot.src} width={rshot.sw || rshot.w} height={Math.round(rshot.h * ((rshot.sw || rshot.w) / rshot.w))} alt="" loading="lazy" decoding="async" />
+                  : <span class="ixc__blank"><span>{host(e.url) || e.title}</span></span>}
+              </div>
+              <p class="ixc__meta">
+                <span class="ixc__n num">{String(i + 1).padStart(2, '0')}</span>
+                {parent ? <span>Part of {parent.title}</span> : <span>{e.platform || c.label}</span>}
+              </p>
+              <h3 class="ixc__title">{primary ? <a href={primary} rel={external ? 'noopener' : undefined}>{e.title}</a> : e.title}</h3>
+              <p class="ixc__what">{e.what}</p>
+              <p class="ixc__tags">
+                {e.caseStudy && <span class="ixc__tag ixc__tag--case">Case study</span>}
+                {e.status !== 'live' && <span class="ixc__tag">{statusLabel[e.status]}</span>}
+                {e.languages && <span class="ixc__tag ixc__tag--lang">{e.languages.join(' · ')}</span>}
+                {parent && e.platform && <span class="ixc__tag ixc__tag--lang">{e.platform}</span>}
+              </p>
+              {liveHref && <a class="ixc__live" href={liveHref} rel="noopener">Live site <span aria-hidden="true">↗</span><span class="visually-hidden"> ({e.title})</span></a>}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  ))}
+</Base>
+
+<style>
+  .ixj { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--s-4); }
+  .ixj__a { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: var(--r-pill); background: var(--grey-1); color: var(--ink); font-weight: 650; text-decoration: none; transition: background-color var(--d-small), translate 0.4s var(--ease-register); }
+  .ixj__a::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--dot); }
+  .ixj__a:hover { background: var(--accent-tint-2); translate: 0 -2px; }
+  .ixj__n { display: inline-grid; place-items: center; min-width: 26px; height: 22px; padding-inline: 6px; border-radius: var(--r-s); background: #fff; font: 750 0.75rem / 1 var(--font-text); }
+
+  .ixs { scroll-margin-top: calc(var(--nav-h) + 16px); }
+  .ixs + .ixs { padding-top: 0; }
+  .ixs__head { display: grid; gap: var(--s-3); margin-bottom: var(--s-6); }
+  .ixs__head .kicker::before { background: var(--dot); }
+  .ixs__blurb { max-width: 52ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.32; }
+  .ixs__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 3vw, 44px) clamp(14px, 1.6vw, 24px); }
+  @media (min-width: 700px) { .ixs__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .ixs__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+  .ixc { position: relative; display: grid; gap: 8px; align-content: start; padding: 10px 10px 18px; border-radius: var(--r-l); background: var(--tone); color: var(--ink); transition: box-shadow var(--d-small), translate 0.5s var(--ease-register); }
+  .ixc:hover { box-shadow: var(--shadow-2); translate: 0 -4px; }
+  .ixc--child { background: color-mix(in srgb, var(--tone) 55%, #fff); }
+  .ixc__shot { aspect-ratio: 16 / 10; border-radius: 8px; overflow: hidden; background: var(--night); margin-bottom: 4px; box-shadow: 0 12px 26px -16px rgb(14 17 22 / 0.5); }
+  .ixc__shot :global(picture), .ixc__shot :global(img) { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: scale 0.9s var(--ease-register); }
+  .ixc:hover .ixc__shot :global(img) { scale: 1.05; }
+  .ixc__blank { display: grid; place-items: center; height: 100%; padding: 12px; background: radial-gradient(120% 90% at 30% 10%, #3f5ff0 0%, var(--accent) 40%, var(--accent-deep) 100%); color: #fff; text-align: center; font: 900 1.25rem / 1 var(--font-display); font-stretch: 75%; text-transform: uppercase; overflow-wrap: anywhere; }
+  .ixc__meta { display: flex; align-items: center; gap: 8px; min-width: 0; font: 700 var(--t-label) / 1.25 var(--font-text); text-transform: uppercase; letter-spacing: 0.03em; }
+  .ixc__meta span:last-child { min-width: 0; overflow-wrap: anywhere; }
+  .ixc__n { flex: none; padding: 3px 7px; border-radius: var(--r-s); background: var(--ink); color: #fff; }
+  .ixc__title { font: 900 var(--t-h3) / 0.92 var(--font-display); font-stretch: 75%; text-transform: uppercase; overflow-wrap: anywhere; }
+  .ixc__title a { color: inherit; text-decoration: none; }
+  /* The whole card opens its main link; the live-site link sits above it. */
+  .ixc__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 1; }
+  .ixc__title a:focus-visible { outline: none; }
+  .ixc:has(.ixc__title a:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .ixc__what { font-weight: 500; line-height: 1.4; color: var(--ink-2); }
+  .ixc__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .ixc__tags:empty { display: none; }
+  .ixc__tag { display: inline-flex; align-items: center; min-height: 24px; padding: 2px 8px; border-radius: var(--r-s); background: rgb(255 255 255 / 0.75); font: 650 0.75rem / 1.2 var(--font-text); }
+  .ixc__tag--case { background: var(--ink); color: #fff; }
+  .ixc__tag--lang { background: transparent; box-shadow: inset 0 0 0 0 transparent; padding-inline: 0; color: var(--ink-2); }
+  .ixc__live { position: relative; z-index: 2; justify-self: start; display: inline-flex; align-items: center; gap: 4px; min-height: 32px; padding: 0 12px; border-radius: var(--r-pill); background: #fff; color: var(--ink); font: 650 0.8125rem / 1 var(--font-text); text-decoration: none; transition: background-color var(--d-small); }
+  .ixc__live:hover { background: var(--accent); color: #fff; }
+</style>

@@ -15,6 +15,7 @@ Nothing here has been done. The live site at mousabatarseh.com is untouched; the
 | Path | Effect |
 |---|---|
 | `index.html`, icons, `llms.txt` | **Replaced** by the new home page and icons. |
+| `/index/` | New: the index of every build. Not checked against the live domain yet — step 2.3 checks for a clash. |
 | `/work/`, `/about/`, `/tools/` | New. All three return 404 on the live domain today (`/tools/`, `/Tools/` and `/tools` checked 2026-09-27), so nothing is shadowed. The existing tool folders (`/dealproof/`, `/changeatlas/`, `/SEO-Tools/` …) are untouched; the Tools page links to them. |
 | `/blog/` | **`index.html` replaced**; a folder per post added (`/blog/<post>/`). |
 | `/reviews/` | **`index.html` replaced**; a folder per review added (`/reviews/<review>/`). The old `/reviews/reviews/`, `/builds/`, `/method/`, `/img/` and `/assets/` folders stay on the server; nothing in the new site links to them. |
@@ -38,7 +39,7 @@ This runs a production build (indexable, canonical URLs on mousabatarseh.com) in
 2. **Quick copies of what gets replaced:** cPanel → *File Manager* → `public_html`:
    - download `index.html` (or whichever `index.*` serves the home page), `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `llms.txt` and the root `.htaccess`;
    - select the `blog` and `reviews` folders → *Compress* → download the two zips.
-3. **Check for name clashes:** `public_html` must not already contain `work`, `about`, `_assets`, `media` or `og`. If one exists, stop.
+3. **Check for name clashes:** `public_html` must not already contain `work`, `about`, `tools`, `index` (a folder — the `index.html` file is expected), `_assets`, `media` or `og`. If one exists, stop.
 4. **Check the index order:** if the home page is served by `index.php` rather than `index.html`, rename the old `index.php` to `index.php.bak` or ask the host which one `DirectoryIndex` prefers.
 
 ## 3. Upload
@@ -65,7 +66,7 @@ Optional, for the designed 404 page: add `ErrorDocument 404 /404.html` — only 
 
 ## 5. Verify (fresh private window, desktop and phone)
 
-- `/`, `/work/`, `/tools/`, `/about/`, `/blog/`, `/reviews/`, one case study, one post and one review load with styles, fonts, images and recordings.
+- `/`, `/work/`, `/index/`, `/tools/`, `/about/`, `/blog/`, `/reviews/`, one case study, one post and one review load with styles, fonts, images and recordings.
 - The footer shows "This page: … KB" and the build date.
 - `/v2/`, `/changeatlas/`, `/csv-mapper/`, `/deals-os/`, `/dealproof/`, `/SEO-Tools/`, `/diamedical/`, one full review (for example `/vanguard-review/`) and one proposal still load exactly as before.
 - `view-source:` of the home page has no `noindex` and has `<link rel="canonical" href="https://mousabatarseh.com/">`.
@@ -74,7 +75,7 @@ Optional, for the designed 404 page: add `ErrorDocument 404 /404.html` — only 
 
 ## Rollback (about five minutes)
 
-1. File Manager → `public_html`: delete the folders `work`, `about`, `_assets`, `media`, `og` and the files `404.html` and `sitemap-portfolio.xml`.
+1. File Manager → `public_html`: delete the folders `work`, `about`, `tools`, `index`, `_assets`, `media`, `og` and the files `404.html` and `sitemap-portfolio.xml`.
 2. Delete the `blog` and `reviews` folders, then upload and extract the two folder zips from step 2.2.
 3. Upload the `index.html`, icons, `llms.txt` and root `.htaccess` saved in step 2.2 (this also removes the redirects).
 4. Remove the `Sitemap: …/sitemap-portfolio.xml` line from `robots.txt`.

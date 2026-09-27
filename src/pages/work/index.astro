@@ -1,8 +1,9 @@
 ---
-// All the work: the counts as tiles, the eleven case studies as equal cards (each screenshot in a black browser
-// window breaking out of its card's top edge), then the full index.
+// All the work: the counts as tiles, the ASAS spotlight, the eleven builds with a full case study as equal cards
+// (each screenshot in a black browser window breaking out of its card's top edge), then the latest sixteen builds
+// coming together, with the way into the full index (/index/).
 import Base from '../../layouts/Base.astro';
-import IndexTable from '../../components/IndexTable.astro';
+import LatestBuilds from '../../components/LatestBuilds.astro';
 import Picture from '../../components/Picture.astro';
 import BrowserFrame from '../../components/BrowserFrame.astro';
 import AsasSpotlight from '../../components/AsasSpotlight.astro';
@@ -30,7 +31,7 @@ const jsonLd = [
 ];
 ---
 <Base title="All the work" description={`Every project, tool, case study, website, store, review and proposal by Mousa Batarseh — ${entryCount} entries, each linked to its case study or the live thing.`} path="/work/" og="work" jsonLd={jsonLd}>
-  <PageHead title="All the work." kicker={`The archive · checked ${CHECKED}`} lead={`${entryCount} entries: the tools I built, the sites and stores I built or ran, reviews and proposals. Eleven have a full case study.`} stickers={['blocks', 'bag', 'chart']}>
+  <PageHead title="All the work." kicker={`The archive · checked ${CHECKED}`} lead={`${entryCount} entries: the tools I built, the sites and stores I built or ran, reviews and proposals. Eleven are written up in full.`} stickers={['blocks', 'bag', 'chart']}>
     <ul class="counts" role="list" data-pop-grid>
       {categories.map((c, i) => (
         <li class="count" style={`--bg:${tileTones[i % tileTones.length]}`} data-pop>
@@ -46,7 +47,7 @@ const jsonLd = [
   <section class="cases section wrap" aria-labelledby="cases-title">
     <header class="cases__head">
       <p class="kicker">In depth</p>
-      <h2 class="h2" id="cases-title">{featured.length} case studies.</h2>
+      <h2 class="h2" id="cases-title">{featured.length} builds, up close.</h2>
     </header>
     <ol class="cases__grid" role="list" data-pop-grid>
       {featured.map((c, i) => {
@@ -68,16 +69,7 @@ const jsonLd = [
     </ol>
   </section>
 
-  <section class="archive section wrap" aria-labelledby="index-title">
-    <header class="archive__head">
-      <div class="archive__title-block">
-        <p class="kicker">Every entry</p>
-        <h2 class="h2 archive__title" id="index-title">The index.</h2>
-      </div>
-      <p class="archive__note">Every project in one place. Grouped work follows its parent, and statuses are honest: demos, fictional-company adaptations and independent studies are labelled as such.</p>
-    </header>
-    <IndexTable filters id="index-full" />
-  </section>
+  <LatestBuilds />
 </Base>
 
 <style>
@@ -89,12 +81,6 @@ const jsonLd = [
   @media (min-width: 700px) { .counts { grid-template-columns: repeat(5, minmax(0, 1fr)); } .count:last-child:nth-child(odd) { grid-column: auto; } }
 
   .cases__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
-  /* The index header is compact: a smaller title with the note beside it from desktop up. */
-  .archive__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-5); align-items: end; }
-  .archive__title-block { display: grid; gap: var(--s-3); }
-  .archive__title { font-size: var(--t-h2); }
-  .archive__note { color: var(--fg-2); max-width: 48ch; font-size: var(--t-small); line-height: 1.45; }
-  @media (min-width: 1024px) { .archive__head { grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(32px, 5vw, 96px); } .archive__note { justify-self: end; } }
   .cases__grid { display: grid; gap: clamp(80px, 7vw, 112px) clamp(14px, 1.6vw, 24px); }
   /* No perspective on the grid: one shared vanishing point pushed each lifted screenshot a different distance
      (towards or away from its label, by the card's place on the page). Each card leans with its own perspective

@@ -18,7 +18,6 @@ Promise.all([
   mount('[data-tilt]', () => import('./motion/tilt')),
   mount('[data-exploded]', () => import('./motion/exploded')),
   mount('[data-rack]', () => import('./motion/rack')),
-  mount('[data-loupe]', () => import('./motion/loupe')),
   mount('[data-count]', () => import('./motion/counters')),
   mount('[data-video]', () => import('./motion/media')),
   mount('[data-contact]', () => import('./motion/contact')),
@@ -33,6 +32,7 @@ Promise.all([
   mount('[data-fly]', () => import('./motion/fly')),
   mount('[data-tiles]', () => import('./motion/tiles')),
   mount('[data-phone]', () => import('./motion/phones')),
+  mount('[data-gather]', () => import('./motion/gather')),
 ]).then(refreshSoon);
 
 document.fonts?.ready.then(refreshSoon);

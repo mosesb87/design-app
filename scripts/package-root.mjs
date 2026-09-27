@@ -67,6 +67,7 @@ const effect = {
   reviews: 'REPLACES /reviews/index.html and adds /reviews/<review>/ folders; the old /reviews/reviews/, /reviews/builds/, /reviews/method/, /reviews/img/ and /reviews/assets/ stay on the server — download the whole existing reviews folder first',
   about: 'new folder — /about/ returns 404 on the live domain today (checked 2026-09-26)',
   tools: 'new folder — /tools/ returns 404 on the live domain today (checked 2026-09-27)',
+  index: 'new folder — the index of every build (/index/); check public_html has no folder called "index" first',
   _assets: 'new folder — CSS, JavaScript and fonts',
   media: 'new folder — captures and recordings',
   og: 'new folder — social sharing images',

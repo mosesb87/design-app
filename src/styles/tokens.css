@@ -82,6 +82,10 @@
   --leaf-soft: #cdf59a;
   --iris: #a595ff;
   --iris-deep: #5b3fd6;
+  /* A red for a few icon tiles only (Mousa, round 6: "a small number of the icons can be red") — the red bar of
+     his logo, taken a touch deeper so it reads red, never orange. White strokes on it. */
+  --red: #e8232e;
+  --red-soft: #ffc9cc;
   /* The old orange names now resolve to the blues and greys, so nothing can turn orange again. */
   --orange: var(--blue-soft);
   --orange-deep: var(--accent-deep);

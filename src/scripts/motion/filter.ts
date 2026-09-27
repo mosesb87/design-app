@@ -1,4 +1,4 @@
-// Archive filters: pressing a category re-flows the rows (GSAP Flip) and announces the result.
+// Filters (the blog and the reviews): pressing a category re-flows the rows (GSAP Flip) and announces the result.
 import { gsap } from 'gsap';
 import { Flip } from 'gsap/Flip';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -8,7 +8,7 @@ import { ease } from './tokens';
 gsap.registerPlugin(Flip);
 
 export default function filter([group]: HTMLElement[], env: Env) {
-  const root = group.closest('[data-loupe]') || document;
+  const root = document;
   const rows = [...root.querySelectorAll<HTMLElement>('[data-row]')];
   const buttons = [...group.querySelectorAll<HTMLButtonElement>('[data-filter-value]')];
   const status = group.querySelector<HTMLElement>('[data-filter-status]');
