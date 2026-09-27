@@ -67,9 +67,11 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
         </picture>
       </figure>
     </div>
-    {tiles.map((t, i) => (
-      <span class:list={['finale__s', `finale__s--${i + 1}`]} aria-hidden="true" data-tile data-depth={t.depth}><Sticker name={t.name} tilt={t.tilt} /></span>
-    ))}
+    <div class="finale__cluster" aria-hidden="true">
+      {tiles.map((t, i) => (
+        <span class:list={['finale__s', `finale__s--${i + 1}`]} data-tile data-depth={t.depth}><Sticker name={t.name} tilt={t.tilt} /></span>
+      ))}
+    </div>
   </div>
 </section>
 
@@ -104,11 +106,8 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     padding-block: 6px;
     color: #fff;
     text-decoration: none;
-    background: linear-gradient(transparent 90%, var(--accent) 0) left / 100% 100% no-repeat;
-    transition: color var(--d-small), background-size 0.5s var(--ease-register);
     overflow-wrap: anywhere;
   }
-  .finale__email:hover { color: var(--accent-soft); background-image: linear-gradient(transparent 88%, var(--accent-soft) 0); }
   .finale__copy { --btn-bg: #fff; --btn-fg: var(--ink); }
   .finale__actions { display: flex; align-items: center; gap: var(--s-5); flex-wrap: wrap; }
   .finale__stamp:empty { display: none; }
@@ -120,10 +119,11 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     margin-top: var(--s-3);
   }
   .finale__ledger div { padding: 10px 14px; border-radius: var(--r-m); background: rgb(255 255 255 / 0.06); transition: background-color var(--d-small), translate 0.4s var(--ease-register); }
-  .finale__ledger div:hover { background: rgb(43 77 224 / 0.3); translate: 0 -3px; }
-  .finale__ledger dt { font: 700 var(--t-slug) / 1.3 var(--font-text); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 6px; }
-  .finale__ledger dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+  .finale__ledger div:hover { background: rgb(255 255 255 / 0.12); translate: 0 -3px; }
+  .finale__ledger dt { font: 700 var(--t-slug) / 1.3 var(--font-text); letter-spacing: 0.06em; text-transform: uppercase; color: #fff; margin-bottom: 6px; }
+  .finale__ledger dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; color: #fff; }
   .finale__ledger a { color: #fff; text-decoration-color: color-mix(in srgb, #fff 45%, transparent); }
+  .finale__ledger a:hover { color: #fff; text-decoration-color: #fff; }
 
   /* Mousa in a cobalt panel (desktop): his head breaks the panel's top edge, as in the hero. */
   .finale__me { display: none; position: relative; margin: 0; aspect-ratio: 1 / 1.08; align-self: end; }
@@ -155,12 +155,13 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
 
   /* Colored icon tiles on the black room. Each floats on its own rhythm (the CSS translate, so the pointer lean
      from tiles.ts adds to it) and wiggles when touched (hover.css). */
-  .finale__s { position: absolute; z-index: 3; pointer-events: none; animation: finale-bob 3.4s ease-in-out infinite alternate; }
+  .finale__cluster { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+  .finale__s { position: absolute; pointer-events: none; animation: finale-bob 3.4s ease-in-out infinite alternate; }
   .finale__s :global(.sticker) { --size: 100%; width: 100%; }
   .finale .finale__s--1 :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); background: linear-gradient(150deg, #4d6bff, var(--accent) 45%, var(--accent-deep)); box-shadow: 0 18px 36px -16px rgb(43 77 224 / 0.7); }
   .finale .finale__s--2 :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--leaf-soft), var(--leaf) 60%); }
   .finale .finale__s--3 :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--accent); }
-  .finale .finale__s--4 :global(.sticker) { --tile: var(--iris); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, #c7bdff, var(--iris) 60%); }
+  .finale .finale__s--4 :global(.sticker) { --tile: var(--red); --stroke: #fff; --acc: var(--red-soft); background: linear-gradient(150deg, #ff5a60, var(--red) 55%); box-shadow: 0 18px 36px -16px rgb(232 35 46 / 0.6); }
   .finale .finale__s--5 :global(.sticker) { --tile: var(--blue-soft); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--blue-pale), var(--blue-soft) 60%); }
   .finale .finale__s--6 :global(.sticker) { --tile: var(--leaf-soft); --stroke: var(--ink); --acc: var(--accent); }
   .finale .finale__s--7 :global(.sticker) { --tile: var(--red); --stroke: #fff; --acc: var(--red-soft); background: linear-gradient(150deg, #ff5a60, var(--red) 55%); box-shadow: 0 18px 36px -16px rgb(232 35 46 / 0.6); }
@@ -173,18 +174,21 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     .finale__s--5 { display: block; width: clamp(48px, 5vw, 72px); right: 9%; top: 30%; animation-delay: -1.8s; animation-duration: 4s; }
     .finale__s--7 { display: block; width: clamp(38px, 4vw, 56px); right: 30%; top: 16%; animation-delay: -0.4s; animation-duration: 3.8s; }
   }
-  /* Desktop: the tiles gather in the open space beside Mousa's head — between the text and the photo, never over
-     the words — and scatter in from there (motion/tiles.ts). Pointing at any of them scatters them again. */
+  /* Desktop: the tiles come together as a tidy grid — four across, two rows, all one size — in the open space
+     beside Mousa's head, between the text and the photo (they scatter in from there: motion/tiles.ts, and
+     pointing at any of them scatters them again). */
   @media (min-width: 1024px) {
-    .finale__s { pointer-events: auto; }
-    .finale__s--1 { width: clamp(56px, 5.4vw, 84px); right: 30%; top: 20%; }
-    .finale__s--2 { right: 41%; top: 30%; }
-    .finale__s--3 { display: block; width: clamp(50px, 4.4vw, 66px); right: 34%; top: 40%; animation-delay: -2s; }
-    .finale__s--4 { display: block; width: clamp(44px, 4vw, 60px); right: 29%; top: 55%; animation-delay: -0.6s; }
-    .finale__s--5 { right: 46%; top: 46%; }
-    .finale__s--6 { right: 37%; top: 55%; }
-    .finale__s--7 { right: 48%; top: 16%; }
-    .finale__s--8 { display: block; width: clamp(38px, 3.6vw, 52px); right: 40%; top: 8%; animation-delay: -3s; animation-duration: 4.2s; }
+    .finale__cluster {
+      --tile: clamp(52px, 4.6vw, 68px);
+      inset: auto;
+      right: 29%;
+      top: 26%;
+      display: grid;
+      grid-template-columns: repeat(4, var(--tile));
+      gap: clamp(10px, 1vw, 16px);
+    }
+    .finale__s, .finale__s--3, .finale__s--4, .finale__s--8 { display: block; position: static; width: var(--tile); pointer-events: auto; }
+    .finale__s--1 { width: var(--tile); }
   }
   @keyframes finale-bob { from { translate: 0 0; } to { translate: 0 -12px; } }
   @media (prefers-reduced-motion: reduce) { .finale__s { animation: none; } }
