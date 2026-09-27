@@ -129,11 +129,11 @@ const jsonLd = [
   {more.length > 0 && (
     <section class="wrap rv__more" aria-labelledby="more-title">
       <h2 class="h2" id="more-title">More like this.</h2>
-      <ul class="more" role="list">
+      <ul class="more" role="list" data-pop-grid>
         {more.map((x) => {
           const t = toneFor(x.slug);
           return (
-            <li class="more__card" style={`--bg:${t.bg};--on:${t.fg}`}>
+            <li class="more__card" style={`--bg:${t.bg};--on:${t.fg}`} data-pop>
               <p class="more__num num">{statText(x)}</p>
               <p class="more__label">{x.stat.label}</p>
               <h3 class="more__title"><a href={`/reviews/${x.slug}/`}>{x.brand}</a></h3>
@@ -202,8 +202,8 @@ const jsonLd = [
 
   .rv__more { padding-block: var(--s-10) var(--s-6); display: grid; gap: var(--s-6); }
   .more { display: grid; gap: clamp(14px, 1.6vw, 24px); }
-  .more__card { container-type: inline-size; position: relative; display: grid; gap: 10px; padding: clamp(20px, 2.2vw, 30px); border-radius: var(--r-xl); background: var(--bg); color: var(--on); transition: transform 0.5s var(--ease-pop); }
-  .more__card:hover { transform: translateY(-6px); }
+  .more__card { container-type: inline-size; position: relative; display: grid; gap: 10px; padding: clamp(20px, 2.2vw, 30px); border-radius: var(--r-xl); background: var(--bg); color: var(--on); transition: translate 0.5s var(--ease-pop); }
+  .more__card:hover { translate: 0 -6px; }
   .more__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(3rem, 5vw, 4.5rem); line-height: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .more__label { font-weight: 600; }
   .more__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.6rem, 2.2vw, 2.2rem); line-height: 0.95; text-transform: uppercase; }

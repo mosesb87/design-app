@@ -1,6 +1,6 @@
 // The review checks beside the /reviews/ title: scattered, then into order, then scattered again, scrubbed to
 // scroll so scrolling up plays it backwards. Desktop: the header holds still for a short stretch while the cards
-// sort themselves (pinned, no hijack — the extra scroll is added to the page). Phones: the same moves over the
+// sort themselves (a sticky header whose extra scroll the page reserves in CSS — no hijack). Phones: the same moves over the
 // cards' own pass through the screen, no pin. Reduced motion: the cards simply sit in order.
 import { gsap } from 'gsap';
 import type { Env } from './runtime';
@@ -9,6 +9,8 @@ export default function checks([root]: HTMLElement[], env: Env) {
   if (env.reduced) return;
   const cards = [...root.querySelectorAll<HTMLElement>('[data-check]')];
   const header = root.closest<HTMLElement>('[data-play-hero]') || root.parentElement!;
+  // The page reserves the hold in CSS (a sticky header in a taller wrapper); without that wrapper, pin instead.
+  const hold = root.closest<HTMLElement>('[data-checks-hold]');
   const rnd = gsap.utils.random;
   // Two different scatters, so "scattered again" is not simply the first state rewound.
   const scatter = (spreadX: number, spreadY: number) => cards.map((_, i) => ({
@@ -26,7 +28,11 @@ export default function checks([root]: HTMLElement[], env: Env) {
 
   const mm = gsap.matchMedia();
   mm.add('(min-width: 1024px)', () => {
-    const tl = gsap.timeline({ scrollTrigger: { trigger: header, start: 'top top', end: '+=85%', pin: true, pinSpacing: true, scrub: 0.8, anticipatePin: 1 } });
+    const tl = gsap.timeline({
+      scrollTrigger: hold
+        ? { trigger: hold, start: 'top top', end: '+=85%', scrub: 0.8 }
+        : { trigger: header, start: 'top top', end: '+=85%', pin: true, pinSpacing: true, scrub: 0.8, anticipatePin: 1 },
+    });
     place(scatter(320, 220), scatter(360, 260), tl);
     return () => { tl.scrollTrigger?.kill(); tl.kill(); gsap.set(cards, { clearProps: 'transform' }); };
   });

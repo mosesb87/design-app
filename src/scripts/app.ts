@@ -29,6 +29,7 @@ Promise.all([
   mount('[data-cert-open]', () => import('./motion/certs')),
   mount('[data-glow]', () => import('./motion/glow')),
   mount('[data-ghost]', () => import('./motion/ghost')),
+  mount('[data-asas]', () => import('./motion/asas')),
 ]).then(refreshSoon);
 
 document.fonts?.ready.then(refreshSoon);

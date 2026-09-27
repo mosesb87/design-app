@@ -29,9 +29,9 @@ const jsonLd = [
       ))}
       <p class="visually-hidden" role="status" aria-live="polite" data-filter-status></p>
     </div>
-    <ul class="cards" role="list">
+    <ul class="cards" role="list" data-pop-grid>
       {blogPosts.map((p, n) => (
-        <li class:list={['card', { 'card--lead': n === 0 }]} data-row data-cat={p.categories.map(catKey).join(' ')} style={`--bg:${toneOf(p.categories[0])}`} data-glow>
+        <li class:list={['card', { 'card--lead': n === 0 }]} data-row data-cat={p.categories.map(catKey).join(' ')} style={`--bg:${toneOf(p.categories[0])}`} data-glow data-pop>
           {p.image && <div class="card__img"><img src={n === 0 ? p.image.src : p.image.small} srcset={n === 0 ? `${p.image.small} 800w, ${p.image.src} ${p.image.w}w` : undefined} sizes={n === 0 ? '(min-width: 1100px) 56vw, 92vw' : undefined} width={n === 0 ? p.image.w : 800} height={n === 0 ? p.image.h : Math.round((p.image.h / p.image.w) * 800)} alt="" loading={n === 0 ? 'eager' : 'lazy'} fetchpriority={n === 0 ? 'high' : undefined} decoding="async" /></div>}
           <p class="post-meta">{n === 0 && <span class="tag">Latest</span>}<span>{p.categories.join(' · ')}</span><span>{formatDate(p.date)}</span></p>
           <h3 class="card__title"><a href={`/blog/${p.slug}/`}>{p.title}</a></h3>
@@ -49,9 +49,9 @@ const jsonLd = [
         <h2 class="h2" id="sums-title">Summaries for now.</h2>
         <p class="sums__note">These are listed on my blog, but their full articles aren’t published yet. Each one gets its own page here as soon as it is.</p>
       </header>
-      <ul class="sums__grid" role="list">
+      <ul class="sums__grid" role="list" data-pop-grid>
         {blogSummaries.map((p) => (
-          <li class="sum">
+          <li class="sum" data-pop>
             {p.image && <div class="sum__img"><img src={p.image.small} width="800" height={Math.round((p.image.h / p.image.w) * 800)} alt="" loading="lazy" decoding="async" /></div>}
             <div class="sum__text">
               <p class="post-meta"><span>{p.categories.join(' · ')}</span><span>{formatDate(p.date)}</span></p>
@@ -78,8 +78,8 @@ const jsonLd = [
   .chip[aria-pressed='true'] { background: var(--ink); color: #fff; }
   .chip[aria-pressed='true'] span { background: rgb(255 255 255 / 0.18); }
   .cards { display: grid; gap: clamp(14px, 1.6vw, 24px); }
-  .card { position: relative; display: grid; gap: var(--s-4); align-content: start; padding: clamp(18px, 2vw, 28px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); transition: transform 0.5s var(--ease-pop), box-shadow var(--d-small); }
-  .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); }
+  .card { position: relative; display: grid; gap: var(--s-4); align-content: start; padding: clamp(18px, 2vw, 28px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); transition: translate 0.5s var(--ease-pop), box-shadow var(--d-small); }
+  .card:hover { translate: 0 -6px; box-shadow: var(--shadow-2); }
   .card[hidden] { display: none; }
   .card__img { border-radius: var(--r-m); overflow: hidden; aspect-ratio: 16 / 9; background: #fff; }
   .card__img img { width: 100%; height: 100%; object-fit: cover; }
@@ -94,7 +94,7 @@ const jsonLd = [
   @media (min-width: 1100px) {
     .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .card--lead { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); grid-template-rows: 1fr auto auto auto auto 1fr; column-gap: clamp(28px, 3vw, 52px); padding: clamp(22px, 2.2vw, 34px); }
-    .card--lead:hover { transform: translateY(-6px); }
+    .card--lead:hover { translate: 0 -6px; }
     .card--lead .card__img { grid-row: 1 / -1; grid-column: 1; align-self: center; }
     .card--lead > :not(.card__img) { grid-column: 2; }
     .card--lead .post-meta { grid-row: 2; }

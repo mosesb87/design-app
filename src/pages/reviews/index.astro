@@ -23,9 +23,11 @@ const jsonLd = [
 ];
 ---
 <Base title="Reviews" description={`${allReviews.length} independent reviews of live stores and websites by Mousa Batarseh — public pages only, every finding dated, each one leading with the number that explains the rest.`} path="/reviews/" og="reviews" jsonLd={jsonLd}>
+  <div class="rl-hold" data-checks-hold>
   <PageHead title="Reviews, counted." size="l" kicker={`Reviews · ${allReviews.length} independent reviews`} lead="I read a company’s website the way a shopper, a crawler and an AI answer engine do — public pages only, every finding dated — and build a working fix alongside." id="reviews-title">
     <ReviewChecks slot="aside" />
   </PageHead>
+  </div>
 
   <section class="wrap rl" aria-labelledby="rl-title">
     <h2 class="visually-hidden" id="rl-title">All reviews</h2>
@@ -45,6 +47,13 @@ const jsonLd = [
 </Base>
 
 <style>
+  /* Desktop with motion: the header holds (sticky) for 85% of a screen while the checks sort themselves. The
+     space is reserved in CSS from the first paint, so nothing below it shifts when the scripts start. */
+  @media (min-width: 1024px) {
+    /* A spacer, not padding: a sticky element can travel only inside its parent's content box. */
+    :global(.motion-ok) .rl-hold::after { content: ''; display: block; height: 85vh; }
+    :global(.motion-ok) .rl-hold > :global(.phd) { position: sticky; top: 0; }
+  }
   .rl { padding-block: var(--s-7) var(--s-9); display: grid; gap: var(--s-6); }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; }
   .chip { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: var(--r-pill); background: var(--cloud); font-weight: 650; font-size: 0.9375rem; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }

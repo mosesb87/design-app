@@ -2,6 +2,7 @@
 import '../styles/tokens.css';
 import '../styles/base.css';
 import '../styles/transitions.css';
+import '../styles/hover.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import ContactFinale from '../components/ContactFinale.astro';
@@ -90,6 +91,8 @@ const graph = {
 
     <script is:inline>
       document.documentElement.classList.replace('no-js', 'js');
+      // Motion class before first paint, so space that scroll scenes reserve in CSS never shifts the page.
+      document.documentElement.classList.add(matchMedia('(prefers-reduced-motion: reduce)').matches ? 'motion-reduced' : 'motion-ok');
       // View-transition naming must be registered before first render.
       (function () {
         var NAME = 'project-plate';

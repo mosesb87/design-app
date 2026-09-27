@@ -10,6 +10,7 @@ export default function check([section]: HTMLElement[], env: Env) {
   const q = <T extends Element = HTMLElement>(s: string) => [...section.querySelectorAll<T>(s)] as unknown as T[];
   const cards = q<HTMLElement>('[data-card]');
   const lens = section.querySelector<HTMLElement>('[data-lens]');
+  const head = section.querySelector<HTMLElement>('[data-scan-head]');
   const fail = section.querySelector<HTMLElement>('[data-fail]');
   const stale = section.querySelector<HTMLElement>('[data-stale]');
   const flip = section.querySelector<HTMLElement>('[data-flip]');
@@ -32,17 +33,24 @@ export default function check([section]: HTMLElement[], env: Env) {
     // Scrubbed (desktop), the cards are dealt as the section arrives — see deal() — so the stage is never empty
     // while it scrolls into view; the scrub then drives the check itself.
     if (!scrubbed) tl.fromTo(cards, dealFrom, { ...dealTo, duration: 0.22 * D, stagger: 0.05 }, 0);
+    // The scan line reads across the cards: over the sheet, onto the register (where the stale price shows),
+    // then the shelf, and fades once the verdict lands.
     if (lens && scrubbed) {
-      tl.fromTo(lens, { x: () => -lens.offsetWidth, y: 0, rotation: -20, opacity: 0 }, { x: () => stage.offsetWidth * 0.12, opacity: 1, rotation: -8, duration: 0.1, ease: 'power2.out' }, 0.26)
-        .to(lens, { x: () => stage.offsetWidth * 0.5 - lens.offsetWidth / 2, y: -20, rotation: 6, duration: 0.18, ease: 'power1.inOut' }, 0.36);
+      tl.fromTo(lens, { x: 0, opacity: 0 }, { x: () => stage.offsetWidth * 0.18, opacity: 1, duration: 0.1, ease: 'power2.out' }, 0.26)
+        .to(lens, { x: () => stage.offsetWidth * 0.5, duration: 0.18, ease: 'power1.inOut' }, 0.36);
     }
-    // The strike follows the playhead in both directions (a callback would only fire one way reliably).
-    tl.eventCallback('onUpdate', () => stale?.classList.toggle('is-struck', tl.time() >= 0.5));
+    // The strike and the scan chip's failed state follow the playhead in both directions (a callback would
+    // only fire one way reliably).
+    tl.eventCallback('onUpdate', () => {
+      const t = tl.time();
+      stale?.classList.toggle('is-struck', t >= 0.5);
+      head?.classList.toggle('is-fail', t >= 0.52 && t < 0.74);
+    });
     tl.fromTo(fail, { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.07, ease: 'power3.out' }, 0.52)
       .fromTo(cards[1], { x: 0 }, { keyframes: { x: [-10, 10, -6, 6, 0] }, duration: 0.06, ease: 'none' }, 0.52)
       .to(flip, { rotationY: 180, duration: 0.14, ease: scrubbed ? 'power2.inOut' : 'power3.out' }, 0.6)
       .fromTo(verdict, { scale: 0.7, opacity: 0, y: 12 }, { scale: 1, opacity: 1, y: 0, duration: 0.08, ease: 'power3.out' }, 0.8);
-    if (lens && scrubbed) tl.to(lens, { x: () => stage.offsetWidth * 0.84 - lens.offsetWidth / 2, y: 30, rotation: 18, duration: 0.14, ease: 'power1.inOut' }, 0.6).to(lens, { opacity: 0, scale: 0.6, duration: 0.06 }, 0.78);
+    if (lens && scrubbed) tl.to(lens, { x: () => stage.offsetWidth * 0.86, duration: 0.14, ease: 'power1.inOut' }, 0.6).to(lens, { x: () => stage.offsetWidth, opacity: 0, duration: 0.06 }, 0.78);
     tl.to({}, { duration: 0.1 }, 0.9);
     // The flip needs the faces to stack in 3D.
     gsap.set(flip, { transformStyle: 'preserve-3d' });
@@ -54,7 +62,7 @@ export default function check([section]: HTMLElement[], env: Env) {
     const dealt = deal();
     const tl = build(true);
     const st = ScrollTrigger.create({ trigger: track, start: 'top top', end: 'bottom bottom', scrub: 0.6, animation: tl, invalidateOnRefresh: true });
-    return () => { dealt.kill(); st.kill(); tl.kill(); gsap.set([...cards, fail, verdict, flip, lens].filter(Boolean), { clearProps: 'all' }); };
+    return () => { dealt.kill(); st.kill(); tl.kill(); head?.classList.remove('is-fail'); gsap.set([...cards, fail, verdict, flip, lens].filter(Boolean), { clearProps: 'all' }); };
   });
   mm.add('(max-width: 1023px)', () => {
     const tl = build(false);

@@ -1,24 +1,31 @@
 ---
 // ASAS Studio, given its own section on /work/: the promise, what it is, its four moves, the numbers from the
 // live site, the real recording and the studio capture, and the links. Content from src/data/tools.ts (Mousa's
-// own published wording).
+// own published wording). Motion (scripts/motion/asas.ts): the title squeezes and stretches as the section
+// passes, letters widen under the pointer, the studio capture swings in, the move chips and number cards
+// scatter into place, the glow drifts.
 import BrowserFrame from './BrowserFrame.astro';
 import VideoPlate from './VideoPlate.astro';
 import Picture from './Picture.astro';
 import { toolPages } from '../data/tools';
 const t = toolPages.find((x) => x.slug === 'asas-studio')!;
+// The title, one word per line, split into letters so its width can breathe with scroll and under the pointer.
+const titleWords = t.name.toUpperCase().split(/\s+/);
 ---
-<section class="asas" id="asas" aria-labelledby="asas-title" data-ground="night">
-  <div class="asas__glow" aria-hidden="true"></div>
+<section class="asas" id="asas" aria-labelledby="asas-title" data-ground="night" data-asas>
+  <div class="asas__glow" aria-hidden="true" data-asas-glow></div>
   <div class="wrap asas__grid">
     <div class="asas__text">
       <p class="kicker asas__kicker">Spotlight · my own product</p>
-      <h2 class="asas__title" id="asas-title">{t.name}</h2>
+      <h2 class="asas__title" id="asas-title" data-asas-title>
+        <span class="visually-hidden">{t.name}</span>
+        {titleWords.map((w) => <span class="asas__line" aria-hidden="true">{[...w].map((ch) => <span class="asas__l" data-al>{ch}</span>)}</span>)}
+      </h2>
       <p class="asas__promise">{t.promise}</p>
       <p class="asas__what">{t.what}</p>
       {t.how && (
-        <ol class="asas__moves" role="list" aria-label="Four moves">
-          {t.how.map((m, i) => <li><span class="num">{String(i + 1).padStart(2, '0')}</span>{m.title}</li>)}
+        <ol class="asas__moves" role="list" aria-label="Four moves" data-pop-grid>
+          {t.how.map((m, i) => <li data-pop><span class="num">{String(i + 1).padStart(2, '0')}</span>{m.title}</li>)}
         </ol>
       )}
       <p class="asas__cta">
@@ -26,11 +33,11 @@ const t = toolPages.find((x) => x.slug === 'asas-studio')!;
         <a class="btn btn--line asas__live" href={t.live} rel="noopener">Open {t.liveLabel} <span class="arrow" aria-hidden="true">↗</span></a>
       </p>
     </div>
-    <div class="asas__media">
+    <div class="asas__media" data-asas-media>
       <BrowserFrame url={t.live}>
         <VideoPlate slug="asas" label={`Recording of ${t.name}: ${t.shows}`} caption={t.shows} />
       </BrowserFrame>
-      <div class="asas__studio" aria-hidden="true">
+      <div class="asas__studio" aria-hidden="true" data-asas-studio>
         <BrowserFrame url="asas.build/studio"><Picture slug="asas-studio-app" alt="" sizes="(min-width: 1024px) 18vw, 40vw" /></BrowserFrame>
       </div>
     </div>
@@ -60,10 +67,16 @@ const t = toolPages.find((x) => x.slug === 'asas-studio')!;
   .asas__grid { display: grid; gap: var(--s-7); }
   .asas__text { display: grid; gap: var(--s-4); align-content: start; }
   .asas__kicker { background: rgb(255 255 255 / 0.1); color: #fff; }
-  .asas__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(3.5rem, 8vw, 8rem); line-height: 0.84; text-transform: uppercase; color: #fff; }
+  /* --wd (scroll) and --hw (pointer) set each letter's width; together they never pass the font's 125%. */
+  .asas__title { font-family: var(--font-display); font-weight: 900; font-size: clamp(3.5rem, 8vw, 8rem); line-height: 0.84; text-transform: uppercase; color: #fff; }
+  .asas__line { display: block; white-space: nowrap; }
+  .asas__l { --wd: 75; --hw: 0; display: inline-block; font-stretch: calc(min(125, var(--wd) + var(--hw)) * 1%); transition: color 0.3s var(--ease-register); }
+  .asas__l.is-hot { color: var(--orange); }
   .asas__promise { font-size: var(--t-lead); font-weight: 650; line-height: 1.25; color: var(--orange-soft); max-width: 26ch; }
   .asas__what { max-width: 48ch; color: var(--night-ink-2); }
   .asas__moves { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .asas__moves li { transition: background-color var(--d-small), translate 0.4s var(--ease-register); }
+  .asas__moves li:hover { background: rgb(255 255 255 / 0.16); translate: 0 -2px; }
   .asas__moves li { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px 0 6px; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.08); font-weight: 650; }
   .asas__moves .num { display: inline-grid; place-items: center; min-width: 28px; height: 28px; border-radius: var(--r-pill); background: var(--orange); color: var(--ink); font: 750 0.6875rem / 1 var(--font-text); }
   .asas__cta { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-3); }
@@ -75,7 +88,10 @@ const t = toolPages.find((x) => x.slug === 'asas-studio')!;
   .asas__studio :global(.bf__view) { aspect-ratio: 16 / 10; }
   .asas__studio :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
   .asas__nums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .asas__nums li { container-type: inline-size; display: grid; gap: 6px; padding: 18px 20px; border-radius: var(--r-l); background: #fff; color: var(--ink); }
+  .asas__nums li { container-type: inline-size; display: grid; gap: 6px; padding: 18px 20px; border-radius: var(--r-l); background: #fff; color: var(--ink); transition: translate 0.5s var(--ease-register), box-shadow var(--d-small); }
+  .asas__nums li:hover { translate: 0 -6px; box-shadow: 0 24px 40px -22px rgb(0 0 0 / 0.7); }
+  .asas__num { display: inline-block; transform-origin: 0 100%; transition: transform 0.5s var(--ease-pop); }
+  .asas__nums li:hover .asas__num { transform: scale(1.08); }
   .asas__nums li:first-child { background: var(--orange); }
   .asas__nums li:nth-child(2) { background: var(--accent); color: #fff; }
   .asas__num { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: min(4.5rem, 32cqi); line-height: 0.85; }

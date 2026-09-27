@@ -1,6 +1,6 @@
 ---
 // "Start with the business goal. End with the measurement." — the four-step method as cards that stack as you
-// scroll (CSS sticky, no scripting), then the six services as a calm grid.
+// scroll (CSS sticky, no scripting), then the six services as cards that fly in from scattered spots (scripts/motion/pop.ts).
 import Sticker from './Sticker.astro';
 import type { StickerName } from './types';
 import { method, services } from '../../data/site';
@@ -34,9 +34,9 @@ import Ghost from '../Ghost.astro';
     </ol>
     <div class="meth__services">
       <h3 class="meth__services-title">What I can take off your plate</h3>
-      <ul class="pills" role="list">
+      <ul class="pills" role="list" data-pop-grid>
         {services.map((s, i) => (
-          <li class="pill" data-glow>
+          <li class="pill" data-glow data-pop>
             <span class="pill__n num">{String(i + 1).padStart(2, '0')}</span>
             <span class="pill__t">{s.title}</span>
             <span class="pill__d">{s.text}</span>
@@ -76,6 +76,11 @@ import Ghost from '../Ghost.astro';
   .step__body { font-size: var(--t-lead); line-height: 1.3; font-weight: 500; }
   .step__sticker { position: absolute; right: clamp(-20px, 1vw, 24px); bottom: -14px; width: clamp(90px, 12vw, 180px); opacity: 0.95; }
   .step__sticker :global(.sticker) { --size: 100%; width: 100%; }
+  /* Coloured tiles that contrast with each card: cobalt on grey, orange on white, orange on night, night on cobalt. */
+  .meth .step--grey .step__sticker :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--orange-soft); }
+  .meth .step--white .step__sticker :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: #fff; }
+  .meth .step--night .step__sticker :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: none; }
+  .meth .step--accent .step__sticker :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--orange); box-shadow: none; }
   .meth__services { margin-top: var(--s-10); display: grid; gap: var(--s-6); }
   .meth__services-title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h3); text-transform: uppercase; }
   .pills { display: grid; gap: 12px; }
@@ -88,9 +93,9 @@ import Ghost from '../Ghost.astro';
     border-radius: var(--r-l);
     background: var(--cloud);
     color: var(--ink);
-    transition: transform 0.5s var(--ease-register), background-color var(--d-small), box-shadow var(--d-small);
+    transition: translate 0.5s var(--ease-register), background-color var(--d-small), box-shadow var(--d-small);
   }
-  .pill:hover { transform: translateY(-3px); background: #fff; box-shadow: var(--shadow-1); }
+  .pill:hover { translate: 0 -3px; background: #fff; box-shadow: var(--shadow-1); }
   .pill__n { font: 700 0.75rem / 1 var(--font-text); letter-spacing: 0.06em; color: var(--accent); }
   @media (min-width: 700px) { .pills { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (min-width: 1100px) { .pills { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

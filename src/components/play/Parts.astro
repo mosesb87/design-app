@@ -6,17 +6,19 @@ import Sticker from './Sticker.astro';
 import type { StickerName } from './types';
 import { person } from '../../data/site';
 // Each piece is a coloured tile: cobalt, orange, night or white, spread so no two neighbours match.
-const parts: { name: StickerName; label: string; tile: 'blue' | 'orange' | 'night' | 'white' }[] = [
+const parts: { name: StickerName; label: string; tile: 'blue' | 'orange' | 'night' | 'sky' | 'peach' }[] = [
   { name: 'blocks', label: 'Pages', tile: 'blue' },
-  { name: 'cell', label: 'Catalog', tile: 'white' },
-  { name: 'tag', label: 'Prices', tile: 'orange' },
-  { name: 'barcode', label: 'SKUs', tile: 'night' },
-  { name: 'percent', label: 'Promotions', tile: 'orange' },
-  { name: 'lens', label: 'SEO', tile: 'blue' },
-  { name: 'cursor', label: 'UX', tile: 'orange' },
-  { name: 'pin', label: 'Local', tile: 'white' },
+  { name: 'cell', label: 'Catalog', tile: 'orange' },
+  { name: 'tag', label: 'Prices', tile: 'night' },
+  { name: 'barcode', label: 'SKUs', tile: 'peach' },
+  { name: 'percent', label: 'Promotions', tile: 'blue' },
+  { name: 'lens', label: 'SEO', tile: 'orange' },
+  { name: 'cursor', label: 'UX', tile: 'night' },
+  { name: 'pin', label: 'Local', tile: 'sky' },
   { name: 'check', label: 'QA', tile: 'blue' },
 ];
+// The title, split into letters for the scatter (the full sentence stays readable as one string).
+const title = [['Every', 'part'], ['in', 'its', 'place.']];
 import Ghost from '../Ghost.astro';
 ---
 <section class="parts section has-ghost" id="about" aria-labelledby="parts-title" data-parts>
@@ -24,7 +26,14 @@ import Ghost from '../Ghost.astro';
   <div class="wrap parts__grid">
     <div class="parts__text">
       <p class="kicker">About</p>
-      <h2 class="h2 parts__title" id="parts-title">Every part<br />in its place.</h2>
+      <h2 class="h2 parts__title" id="parts-title" data-parts-title>
+        <span class="visually-hidden">Every part in its place.</span>
+        {title.map((line) => (
+          <span class="parts__line" aria-hidden="true">
+            {line.map((word) => <span class="parts__word">{[...word].map((ch) => <span class="parts__l" data-pl>{ch}</span>)}</span>)}
+          </span>
+        ))}
+      </h2>
       <p class="lead parts__lead">I’m Mousa — the person you call when the website looks fine but nothing quite works.</p>
       <p class="parts__body">Seven years building and running sites on WordPress, Elementor and Divi. I turn “someone does this by hand every Friday” into systems that run themselves — and I’m happiest when a site goes from fragile to boring, in the best way.</p>
       <p class="parts__more"><a class="btn btn--line" href="/about/">More about me <span class="arrow" aria-hidden="true">→</span></a></p>
@@ -46,7 +55,11 @@ import Ghost from '../Ghost.astro';
 <style>
   .parts__grid { display: grid; gap: var(--s-8); align-items: center; }
   .parts__text { display: grid; gap: var(--s-5); }
-  .parts__title { max-width: 12ch; }
+  .parts__title { font-size: clamp(3.4rem, 8.6vw, 9.25rem); line-height: 0.84; }
+  .parts__line { display: block; white-space: nowrap; }
+  .parts__word { display: inline-block; }
+  .parts__word + .parts__word { margin-left: 0.2em; }
+  .parts__l { display: inline-block; will-change: transform; }
   .parts__lead { max-width: 26ch; font-weight: 550; }
   .parts__body { color: var(--fg-2); max-width: 46ch; }
   .parts__board {
@@ -68,9 +81,11 @@ import Ghost from '../Ghost.astro';
   }
   .parts__piece { width: 64%; display: block; position: relative; z-index: 2; will-change: transform; }
   .parts__piece :global(.sticker) { --size: 100%; width: 100%; }
-  .parts__piece--blue :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--orange-soft); box-shadow: 0 18px 30px -18px rgb(28 51 168 / 0.7); }
-  .parts__piece--orange :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: #fff; box-shadow: 0 18px 30px -18px rgb(194 65 12 / 0.6); }
-  .parts__piece--night :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--orange); }
+  .parts .parts__piece--blue :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--orange-soft); box-shadow: 0 18px 30px -18px rgb(28 51 168 / 0.7); }
+  .parts .parts__piece--orange :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: #fff; box-shadow: 0 18px 30px -18px rgb(194 65 12 / 0.6); }
+  .parts .parts__piece--night :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--orange); }
+  .parts .parts__piece--sky :global(.sticker) { --tile: var(--accent-soft); --stroke: var(--ink); --acc: var(--orange-deep); box-shadow: 0 18px 30px -18px rgb(43 77 224 / 0.55); }
+  .parts .parts__piece--peach :global(.sticker) { --tile: var(--orange-soft); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: 0 18px 30px -18px rgb(194 65 12 / 0.5); }
   .parts__label {
     position: absolute;
     left: 50%;
@@ -97,7 +112,7 @@ import Ghost from '../Ghost.astro';
   .parts__stamp i { font-style: normal; color: var(--accent-soft); margin-right: 4px; }
   @media (min-width: 1024px) {
     .parts__grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
-    .parts__text { grid-column: 1 / span 5; }
+    .parts__text { grid-column: 1 / span 6; }
     .parts__board { grid-column: 7 / span 6; }
   }
   :global(.motion-ok) .parts__stamp { opacity: 0; }

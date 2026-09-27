@@ -20,9 +20,9 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
   try { sessionStorage.setItem('mb-hero', '1'); } catch {}
   const k = seen ? 0.6 : 1;
   const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
-  tl.from(letters, { yPercent: 105, opacity: 0, duration: 1 * k, stagger: 0.035 * k }, 0)
-    .from(stickers, { scale: 0.7, opacity: 0, y: 16, duration: 0.9 * k, stagger: 0.08 * k }, 0.35 * k)
-    .from(fades, { y: 16, opacity: 0, duration: 0.7 * k, ease: 'power3.out', stagger: 0.08 }, 0.3 * k);
+  if (letters.length) tl.from(letters, { yPercent: 105, opacity: 0, duration: 1 * k, stagger: 0.035 * k }, 0);
+  if (stickers.length) tl.from(stickers, { scale: 0.7, opacity: 0, y: 16, duration: 0.9 * k, stagger: 0.08 * k }, 0.35 * k);
+  if (fades.length) tl.from(fades, { y: 16, opacity: 0, duration: 0.7 * k, ease: 'power3.out', stagger: 0.08 }, 0.3 * k);
   if (me) tl.from(me, { y: 40, opacity: 0, duration: 1.1 * k }, 0.15 * k);
   if (photo) gsap.set(photo, { scale: 1.05, transformOrigin: '50% 100%' });
 

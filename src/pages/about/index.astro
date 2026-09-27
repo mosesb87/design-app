@@ -49,9 +49,9 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
       <p class="kicker">Workflow</p>
       <h2 class="h2" id="workflow-title">Eleven steps, goal to measurement.</h2>
     </header>
-    <ol class="workflow" role="list">
+    <ol class="workflow" role="list" data-pop-grid>
       {workflow.map(([t, d], i) => (
-        <li><span class="workflow__n num">{String(i + 1).padStart(2, '0')}</span><span class="workflow__t">{t}</span><span class="workflow__d">{d}</span></li>
+        <li data-pop><span class="workflow__n num">{String(i + 1).padStart(2, '0')}</span><span class="workflow__t">{t}</span><span class="workflow__d">{d}</span></li>
       ))}
     </ol>
   </section>
@@ -61,9 +61,9 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
       <p class="kicker">Services</p>
       <h2 class="h2" id="services-title">What I do.</h2>
     </header>
-    <ol class="svc" role="list">
+    <ol class="svc" role="list" data-pop-grid>
       {services.map((s, i) => (
-        <li style={`--bg:${['var(--lilac)', 'var(--mint)', 'var(--lemon)', 'var(--sky)', 'var(--peach)', 'var(--blush)'][i % 6]}`}>
+        <li data-pop style={`--bg:${['var(--lilac)', 'var(--mint)', 'var(--lemon)', 'var(--sky)', 'var(--peach)', 'var(--blush)'][i % 6]}`}>
           <span class="svc__n num">{s.n}</span>
           <h3 class="svc__t">{s.title}</h3>
           <p class="svc__d">{s.text}</p>

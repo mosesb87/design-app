@@ -12,9 +12,9 @@ import Ghost from '../Ghost.astro';
       <p class="kicker">Blog</p>
       <h2 class="h2" id="notes-title">Notes from<br />running stores.</h2>
     </header>
-    <ul class="notes__grid" role="list">
+    <ul class="notes__grid" role="list" data-pop-grid>
       {latest.map((p) => (
-        <li class="note" style={`--bg:${toneOf(p.categories[0])}`} data-glow>
+        <li class="note" style={`--bg:${toneOf(p.categories[0])}`} data-glow data-pop>
           <p class="note__meta"><span>{p.categories.join(' · ')}</span><span>{formatDate(p.date)}</span><span>{p.minutes} min read</span></p>
           <h3 class="note__title"><a href={`/blog/${p.slug}/`}>{p.title}</a></h3>
           <span class="note__arrow" aria-hidden="true">→</span>
@@ -28,8 +28,8 @@ import Ghost from '../Ghost.astro';
 <style>
   .notes__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
   .notes__grid { display: grid; gap: clamp(14px, 1.6vw, 24px); }
-  .note { position: relative; display: grid; gap: var(--s-5); align-content: space-between; min-height: 240px; padding: clamp(22px, 2.4vw, 34px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); transition: transform 0.5s var(--ease-register); }
-  .note:hover { transform: translateY(-6px); }
+  .note { position: relative; display: grid; gap: var(--s-5); align-content: space-between; min-height: 240px; padding: clamp(22px, 2.4vw, 34px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); transition: translate 0.5s var(--ease-register); }
+  .note:hover { translate: 0 -6px; }
   .note__meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 700 var(--t-slug) / 1.4 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; }
   .note__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.75rem, 2.6vw, 2.75rem); line-height: 0.95; text-transform: uppercase; }
   .note__title a { text-decoration: none; }

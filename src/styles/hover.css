@@ -1,0 +1,156 @@
+/* Hover, everywhere — mouse and trackpad only (touch keeps its tap behaviour).
+   Every kind of element answers the pointer. Movement uses the individual `translate`, `scale` and `rotate`
+   properties, never `transform`, so a hover composes with the scroll animations GSAP writes to `transform`.
+   Rules start with `html` to sit just above the components' own scoped styles. */
+
+@keyframes hv-sweep { from { background-position: 100% 0; } to { background-position: 0 0; } }
+@keyframes hv-dot { 0%, 100% { scale: 1; } 50% { scale: 1.9; } }
+@keyframes hv-blink { 50% { opacity: 0.35; } }
+
+@media (hover: hover) and (pointer: fine) {
+  :root { --sweep: var(--orange); }
+  :is([data-ground='night'], .on-dark, .finale, .footer) { --sweep: var(--accent-soft); }
+  :is(.check--orange, .mq--light, .asas__nums li:first-child, .parts__piece--orange, .nums__tile--light) { --sweep: var(--accent); }
+
+  /* Headings, card titles and intro lines: a band of light passes through the letters, left to right.
+     The text stays real text; only its fill is painted from a moving gradient while hovered. */
+  html :is(.h2:not(.parts__title), .h3, .chk__h, .step__title, .pill__t, .meth__services-title, .tools__title, .tool__promise,
+    .finale__title, .asas__promise, .tl__name, .tl__promise, .tl__quote, .tl__step-title, .find__title, .feature__title,
+    .svc__t, .method__title, .courses__t, .sheet__title, .next__title, .more__title, .family__title, .workflow__t,
+    .skills__title, .check__t, .lead, .phd__lead, .ph__intro, .parts__lead, .tools__sub, .chk__close, .revs__lead, .finale__sub):hover,
+  html :is(.note, .site, .rcard, .case-card, .card, .sum, .pill, .step, .more__card, .tl__how li, .feature, .find):hover
+    :is(.note__title, .site__title, .rcard__title, .case-card__title, .card__title, .sum__title, .pill__t, .step__title,
+    .more__title, .tl__step-title, .feature__title, .find__title) {
+    background-image: linear-gradient(100deg, currentColor 0 42%, var(--sweep) 47% 53%, currentColor 58% 100%);
+    background-size: 320% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hv-sweep 1.1s var(--ease-sweep) both;
+  }
+
+  /* Icon tiles: the drawing turns and grows inside its tile. Tiles take the pointer even inside decorative
+     layers, so every icon answers. */
+  html .sticker.sticker { pointer-events: auto; }
+  html .sticker.sticker svg { transition: rotate 0.6s var(--ease-pop), scale 0.6s var(--ease-pop); }
+  html .sticker.sticker:hover svg { rotate: -12deg; scale: 1.14; }
+
+  /* Kickers: the dot pulses and the label warms. */
+  html .kicker { transition: background-color var(--d-small), color var(--d-small); }
+  html .kicker:hover { background: color-mix(in srgb, var(--accent-fg) 18%, transparent); }
+  html .kicker:hover::before { animation: hv-dot 0.7s var(--ease-pop); }
+
+  /* Big numbers: they grow a little and take the accent. */
+  html :is(.nums__value, .rcard__num, .count__n, .receipt__num, .tl__num, .step__n, .asas__num, .chk__price, .chk__rows dd, .pill__n, .check__n, .workflow__n, .svc__n, .method__n, .feature__n, .find__n) {
+    transition: scale 0.5s var(--ease-pop), color var(--d-small);
+    transform-origin: 0 100%;
+  }
+  html :is(.nums__value, .rcard__num, .count__n, .receipt__num, .tl__num, .step__n, .asas__num, .chk__price, .pill__n, .workflow__n, .svc__n, .method__n, .feature__n, .find__n):hover,
+  html :is(.nums__tile, .count, .receipt, .tl__nums li, .step, .pill, .check, .workflow li, .svc li, .method li, .feature, .find):hover :is(.nums__value, .count__n, .receipt__num, .tl__num, .step__n, .pill__n, .check__n, .workflow__n, .svc__n, .method__n, .feature__n, .find__n) { scale: 1.08; }
+  html .chk__rows div:hover dd { scale: 1.1; color: var(--accent); }
+
+  /* Browser windows: the dots light up in turn, the page inside eases closer, the window lifts. */
+  html .bf { transition: translate 0.5s var(--ease-register), box-shadow 0.4s; }
+  html .bf:hover { translate: 0 -3px; box-shadow: 0 1px 2px rgb(14 17 22 / 0.2), 0 34px 60px -26px rgb(14 17 22 / 0.7); }
+  html .bf__view :is(img, video) { transition: scale 1.2s var(--ease-register); }
+  /* Windows inside cards (which pass the pointer through to the card) answer to the card's hover. */
+  html :is(.bf, .site, .case-card, .rcard, .tool, .tl__media, .asas__media):hover .bf__view :is(img, video),
+  html .bf:hover .bf__view :is(img, video) { scale: 1.04; }
+  html :is(.bf, .site, .case-card, .rcard, .tool):hover .bf__dots i { animation: hv-blink 0.9s var(--ease-drift) infinite; }
+  html :is(.bf, .site, .case-card, .rcard, .tool):hover .bf__dots i:nth-child(2) { animation-delay: 0.15s; }
+  html :is(.bf, .site, .case-card, .rcard, .tool):hover .bf__dots i:nth-child(3) { animation-delay: 0.3s; background: #fff; }
+  html .bf__url { transition: color var(--d-small), background-color var(--d-small); }
+  html :is(.bf, .site, .case-card, .rcard, .tool):hover .bf__url { color: #fff; background: #262c38; }
+
+  /* Rows, facts and list items: each lifts a little and takes a tint. */
+  html :is(.chk__rows div, .tl__inside li, .workflow li, .about__ledger div, .case__facts > div, .rv__facts > div, .finale__ledger div,
+    .skills li, .spec-table > div, .details li, .tl__facts > div, .check, .asas__moves li, .phd .counts li) {
+    transition: translate 0.45s var(--ease-register), background-color var(--d-small), box-shadow var(--d-small);
+  }
+  html :is(.chk__rows div, .tl__inside li, .workflow li, .about__ledger div, .case__facts > div, .rv__facts > div, .skills li, .spec-table > div, .details li, .tl__facts > div):hover {
+    translate: 4px 0;
+    background-color: color-mix(in srgb, var(--accent) 10%, var(--bg, #fff));
+  }
+  html .check:hover { box-shadow: 0 0 0 2px var(--accent), 0 16px 30px -16px rgb(14 17 22 / 0.45); }
+
+  /* Cards that had no hover of their own: they lift. */
+  html :is(.chk__card, .step, .tl__how li, .feature, .find, .receipt, .method li, .svc li, .count, .cert__card, .sheet, .tl__problem, .more-card, .sum) {
+    transition: translate 0.55s var(--ease-register), box-shadow 0.4s, background-color var(--d-small);
+  }
+  html :is(.chk__card, .tl__how li, .feature, .find, .receipt, .method li, .svc li, .count, .cert__card, .tl__problem, .more-card, .sum):hover {
+    translate: 0 -5px;
+    box-shadow: 0 26px 48px -24px rgb(14 17 22 / 0.45);
+  }
+  /* The method cards are stuck while they stack, so they answer with their icon and number instead of moving. */
+  html .step:hover { box-shadow: 0 -12px 30px -18px rgb(14 17 22 / 0.3), 0 0 0 2px color-mix(in srgb, var(--accent) 55%, transparent) inset; }
+  html .step__sticker { transition: rotate 0.6s var(--ease-pop), translate 0.6s var(--ease-pop); }
+  html .step:hover .step__sticker { rotate: -10deg; translate: -6px -8px; }
+
+  /* The parts board: a slot's outline turns solid cobalt and its label steps up. */
+  html .parts__slot { transition: outline-color var(--d-small), background-color var(--d-small); }
+  html .parts__slot:hover { outline: 2px solid var(--accent); background: var(--accent-tint); }
+  html .parts__label { transition: translate 0.4s var(--ease-register), color var(--d-small); }
+  html .parts__slot:hover .parts__label { translate: 0 -4px; color: var(--accent); }
+
+  /* Marquee words: the one under the pointer takes the accent (the band already pauses). */
+  html .mq__item { transition: color var(--d-small); }
+  html .mq__item:hover { color: var(--sweep); }
+
+  /* Photos: a slow lean-in. */
+  html :is(.about__photo, .post__cover, .prose-play figure) img { transition: scale 1.2s var(--ease-register), filter 0.9s var(--ease-register); }
+  html :is(.about__photo, .post__cover, .prose-play figure):hover img { scale: 1.03; }
+
+  /* Prose: table rows, quotes and figures answer too. */
+  html .prose-play tr { transition: background-color var(--d-small); }
+  html .prose-play tbody tr:hover { background: var(--accent-tint); }
+  html .prose-play blockquote { transition: background-color var(--d-small), translate 0.45s var(--ease-register); }
+  html .prose-play blockquote:hover { background: var(--accent-tint-2); translate: 4px 0; }
+  html .prose-play :is(ul, ol) > li { transition: translate 0.4s var(--ease-register); }
+  html .prose-play :is(ul, ol) > li:hover { translate: 4px 0; }
+  html .prose-play figcaption { transition: color var(--d-small); }
+  html .prose-play figure:hover figcaption { color: var(--fg); }
+
+  /* Buttons: the halo breathes; the chips and small labels lift. */
+  html .btn:active { translate: 0 1px; }
+  html :is(.tag, .chk__badge, .chk__fail, .tool__n span, .tl__status, .post-meta span, .rcard__meta span, .note__meta span) { transition: translate 0.35s var(--ease-register), color var(--d-small); }
+  html :is(.tag, .chk__badge, .chk__fail, .tool__n span, .tl__status):hover { translate: 0 -2px; }
+  html :is(.post-meta span, .rcard__meta span, .note__meta span):hover { color: var(--accent-fg); }
+
+  /* The contact email and the verdict: a small nudge. */
+  html .chk__verdict { transition: translate 0.4s var(--ease-register), background-color var(--d-small); }
+  html .chk__verdict:hover { background: var(--accent-deep); }
+  html .chk__vs { transition: rotate 0.6s var(--ease-pop); }
+  html .chk__verdict:hover .chk__vs { rotate: 360deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html *:hover { animation: none !important; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  /* Article headings sweep like the section headings. */
+  html .prose-play :is(h2, h3):hover {
+    background-image: linear-gradient(100deg, currentColor 0 42%, var(--sweep) 47% 53%, currentColor 58% 100%);
+    background-size: 320% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hv-sweep 1.1s var(--ease-sweep) both;
+  }
+  /* The hero's highlighted words: the marker fills them. */
+  html .ph__intro strong { background-size: 100% 100%; transition: background-image var(--d-small); }
+  html .ph__intro strong:hover { background: linear-gradient(transparent 8%, var(--accent-tint-2) 0); }
+  /* The photo caption and the tools rack's labels lift. */
+  html .ph__cap { transition: translate 0.45s var(--ease-register), background-color var(--d-small); }
+  html .ph__cap:hover { translate: 0 -4px; background: #fff; }
+  html .tool__n { transition: translate 0.45s var(--ease-register); }
+  html .tool:hover .tool__n { translate: 6px 0; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  /* "Every part in its place": each letter hops and takes the accent under the pointer. */
+  html .parts__l { transition: translate 0.3s var(--ease-pop), color 0.3s; }
+  html .parts__l:hover { translate: 0 -0.1em; color: var(--accent); }
+}

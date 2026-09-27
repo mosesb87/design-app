@@ -45,9 +45,9 @@ import Ghost from '../Ghost.astro';
     border-radius: var(--r-xl);
     background: var(--cloud);
     color: var(--ink);
-    transition: transform 0.6s var(--ease-register), box-shadow var(--d-small);
+    transition: translate 0.6s var(--ease-register), box-shadow var(--d-small);
   }
-  .nums__tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
+  .nums__tile:hover { translate: 0 -4px; box-shadow: var(--shadow-2); }
   .nums__tile--dark { background: var(--night); color: var(--night-ink); }
   .nums__tile--accent { background: var(--accent); color: #fff; }
   .nums__tile--dark .nums__src, .nums__tile--accent .nums__src { opacity: 0.8; }

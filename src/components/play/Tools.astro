@@ -76,6 +76,7 @@ const tones = ['var(--cloud)', '#ffffff', 'var(--accent-tint)'];
   .tools__bolt { position: absolute; right: var(--margin); top: -10px; width: clamp(80px, 10vw, 150px); animation: bolt-float 4.2s var(--ease-drift) infinite alternate; }
   @keyframes bolt-float { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(-14px) rotate(-5deg); } }
   .tools__bolt :global(.sticker) { --size: 100%; width: 100%; }
+  .tools .tools__bolt :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--orange-soft); box-shadow: 0 22px 44px -20px rgb(43 77 224 / 0.8); }
   .tools__viewport { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-inline: var(--margin); scroll-padding-inline: var(--margin); }
   .tools__viewport::-webkit-scrollbar { display: none; }
   .tools__track { display: flex; gap: clamp(14px, 1.6vw, 24px); width: max-content; padding-block: 8px 24px; }

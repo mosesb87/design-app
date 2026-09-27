@@ -49,7 +49,13 @@ import { person } from '../../data/site';
               </div>
             </div>
           </article>
-          <span class="chk__lens" data-lens><Sticker name="lens" /></span>
+          <span class="chk__scan" data-lens aria-hidden="true">
+            <span class="chk__beam"></span>
+            <span class="chk__chip" data-scan-head>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="7" /><circle cx="12" cy="12" r="2.2" /><path d="M12 2v4M12 18v4M2 12h4M18 12h4" /></svg>
+              <span>Check 04</span>
+            </span>
+          </span>
           <p class="chk__verdict" data-verdict data-rewinds><span class="chk__vs" aria-hidden="true"><Sticker name="check" /></span>Nothing wrong reached the shelf</p>
         </div>
         <p class="chk__close">{person.thesis.close}</p>
@@ -114,11 +120,34 @@ import { person } from '../../data/site';
   .chk__prod { font-weight: 600; color: var(--ink-2); }
   .chk__blocked { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: 2.25rem; line-height: 0.95; text-transform: uppercase; color: var(--accent-soft); }
   .chk__owner { font-weight: 550; color: var(--night-ink-2); max-width: 24ch; }
-  .chk__lens { position: absolute; z-index: 5; width: clamp(90px, 9vw, 150px); left: 0; top: 30%; pointer-events: none; display: none; }
-  .chk__lens :global(.sticker), .chk__vs :global(.sticker) { --size: 100%; width: 100%; }
-  /* The lens is the one coloured tile in the scene, so it reads against the white cards it passes over. */
-  .chk__lens :global(.sticker) { --tile: var(--orange); --stroke: var(--ink); --acc: #fff; box-shadow: 0 0 0 1px rgb(194 65 12 / 0.25), 0 20px 36px -18px rgb(194 65 12 / 0.65); }
-  .chk__vs :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: #fff; }
+  /* The scanner: a cobalt read line that sweeps across the three cards with a soft trail, headed by a dark
+     "Check 04" chip with a crosshair. The chip turns red while the check fails. */
+  .chk__scan { position: absolute; z-index: 5; left: 0; top: -18px; bottom: 64px; width: 0; pointer-events: none; display: none; }
+  .chk__beam { position: absolute; top: 0; bottom: 0; right: -1px; width: 2px; border-radius: 2px; background: var(--accent); box-shadow: 0 0 12px 2px rgb(43 77 224 / 0.45); }
+  .chk__beam::before { content: ''; position: absolute; top: 0; bottom: 0; right: 2px; width: clamp(80px, 9vw, 160px); background: linear-gradient(to left, rgb(43 77 224 / 0.16), transparent); }
+  .chk__chip {
+    position: absolute;
+    top: -14px;
+    left: 0;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px 8px 10px;
+    border-radius: var(--r-pill);
+    background: var(--ink);
+    color: #fff;
+    font: 750 0.8125rem / 1 var(--font-text);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 14px 28px -14px rgb(14 17 22 / 0.6);
+    transition: background-color 0.25s var(--ease-register);
+  }
+  .chk__chip svg { flex: none; color: var(--orange); transition: transform 0.4s var(--ease-register); }
+  .chk__chip.is-fail { background: var(--fail); }
+  .chk__chip.is-fail svg { color: #fff; transform: rotate(45deg); }
+  .chk__vs :global(.sticker) { --size: 100%; width: 100%; --tile: var(--accent); --stroke: #fff; --acc: #fff; }
   .chk__verdict {
     justify-self: center;
     display: inline-flex;
@@ -132,12 +161,14 @@ import { person } from '../../data/site';
     box-shadow: var(--shadow-sticker);
   }
   .chk__vs { width: 52px; display: block; }
+  .chk__stage > .chk__verdict { margin-top: var(--s-5); }
   .chk__close { max-width: 60ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.35; }
 
   @media (min-width: 1024px) {
-    .chk__stage { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gutter); align-items: stretch; padding-bottom: 72px; }
-    .chk__verdict { position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%); white-space: nowrap; }
-    .chk__lens { display: block; }
+    .chk__stage { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gutter); align-items: stretch; padding-bottom: clamp(124px, 15vh, 156px); }
+    .chk__verdict { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); white-space: nowrap; }
+    .chk__scan { bottom: clamp(124px, 15vh, 156px); }
+    .chk__scan { display: block; }
     /* Pinned scene: the track is tall, the stage sticks */
     :global(.motion-ok) .chk__track { height: 320vh; }
     :global(.motion-ok) .chk__sticky { position: sticky; top: 0; height: 100svh; display: flex; align-items: center; padding-block: calc(var(--nav-h) + 8px) 24px; overflow: hidden; }

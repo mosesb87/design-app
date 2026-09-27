@@ -251,12 +251,12 @@ const jsonLd = [
           <p class="kicker">Also part of this work</p>
           <h2 class="h2" id="more-title">More from the same build.</h2>
         </header>
-        <ul class="more-grid" role="list">
+        <ul class="more-grid" role="list" data-pop-grid>
           {c.media.more.map((x) => {
             const v = view(x.slug, 'desktop-hero');
             const mu = media(x.slug)?.url;
             return (
-              <li class="more-card">
+              <li class="more-card" data-pop>
                 <div class="more-card__img">{v ? <Picture data={v} alt={x.label} sizes="(min-width: 1024px) 40vw, 92vw" /> : <span class="more-card__blank">{x.label}</span>}</div>
                 <p class="more-card__cap"><span>{x.label}</span>{mu && <span>{domain(mu)}</span>}</p>
               </li>
