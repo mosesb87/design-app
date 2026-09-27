@@ -95,7 +95,10 @@ const jsonLd = [
   .archive__title { font-size: var(--t-h2); }
   .archive__note { color: var(--fg-2); max-width: 48ch; font-size: var(--t-small); line-height: 1.45; }
   @media (min-width: 1024px) { .archive__head { grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(32px, 5vw, 96px); } .archive__note { justify-self: end; } }
-  .cases__grid { display: grid; gap: clamp(80px, 7vw, 112px) clamp(14px, 1.6vw, 24px); perspective: 1400px; }
+  .cases__grid { display: grid; gap: clamp(80px, 7vw, 112px) clamp(14px, 1.6vw, 24px); }
+  /* No perspective on the grid: one shared vanishing point pushed each lifted screenshot a different distance
+     (towards or away from its label, by the card's place on the page). Each card leans with its own perspective
+     (tilt.ts), so every card keeps the same spacing between screenshot and label. */
   .case-card {
     position: relative;
     display: grid;

@@ -22,11 +22,13 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
   const k = seen ? 0.6 : 1;
   const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
   // The title's letters fly in from scattered spots, each from its own direction, and settle into the words.
+  // Kept short (Mousa, round 5: the flight was too much): a little under a fifth of the screen at most, a light
+  // turn, close to their own size.
   const rnd = gsap.utils.random;
-  const reach = Math.min(innerWidth * 0.35, 460);
+  const reach = Math.min(innerWidth * 0.16, 200);
   if (letters.length) {
     tl.from(letters, {
-      x: () => rnd(-reach, reach), y: () => rnd(-220, 220), rotation: () => rnd(-80, 80), scale: () => rnd(0.4, 1.5), opacity: 0,
+      x: () => rnd(-reach, reach), y: () => rnd(-110, 110), rotation: () => rnd(-28, 28), scale: () => rnd(0.75, 1.25), opacity: 0,
       duration: 1.2 * k, ease: 'expo.out', stagger: { each: 0.03 * k, from: 'random' },
     }, 0);
   }
@@ -76,11 +78,22 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
   }
 
   // Scroll: as the header leaves, its letters scatter away again, each its own way; scrolling back up brings
-  // them home (scrubbed).
+  // them home (scrubbed). On /reviews/ the header holds still (sticky) while the checks sort themselves; its letters wait for the hold
+  // to end, then leave with the header.
+  const hold = hero.closest<HTMLElement>('[data-checks-hold]');
+  const held = () => !!hold && getComputedStyle(hero).position === 'sticky';
   if (letters.length) {
-    const out = gsap.timeline({ scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.8 } });
+    const out = gsap.timeline({
+      scrollTrigger: {
+        trigger: hero,
+        start: () => (held() ? hold!.getBoundingClientRect().top + scrollY + hold!.offsetHeight - hero.offsetHeight : 'top top'),
+        end: (self) => (held() ? self.start + hero.offsetHeight : 'bottom top'),
+        scrub: 0.8,
+        invalidateOnRefresh: true,
+      },
+    });
     out.fromTo(letters, { x: 0, y: 0, rotation: 0, scale: 1 }, {
-      x: () => rnd(-reach, reach), y: () => rnd(-260, 60), rotation: () => rnd(-70, 70), scale: () => rnd(0.5, 1.3),
+      x: () => rnd(-reach, reach), y: () => rnd(-140, 30), rotation: () => rnd(-24, 24), scale: () => rnd(0.8, 1.15),
       ease: 'power2.in', duration: 1, stagger: { each: 0.01, from: 'random' }, immediateRender: false,
     }, 0);
   }

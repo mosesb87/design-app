@@ -2,7 +2,7 @@
 // Hero: the name, huge and condensed, beside Mousa's photo standing in a cobalt panel (his head breaks the
 // panel's top edge). Letters fly in from scattered spots and hop when touched; the photo leans with the
 // pointer, turns from black-and-white to colour and extends on hover, and shrinks and extends with scroll;
-// a few icon tiles float around it. (Motion: scripts/motion/play-hero.ts, photoflex.ts.)
+// colourful icon tiles float, sway and lean around it. (Motion: scripts/motion/play-hero.ts, photoflex.ts.)
 import Sticker from './Sticker.astro';
 import { person } from '../../data/site';
 const rows = [person.first.toUpperCase(), person.last.toUpperCase()];
@@ -11,6 +11,8 @@ const stickers = [
   { name: 'cell', cls: 's-cell', depth: 0.6, tilt: 6 },
   { name: 'check', cls: 's-check', depth: 1.1, tilt: 8 },
   { name: 'cursor', cls: 's-cursor', depth: 0.8, tilt: 0 },
+  { name: 'chart', cls: 's-chart', depth: 1.2, tilt: -10 },
+  { name: 'heart', cls: 's-heart', depth: 0.5, tilt: 9 },
 ] as const;
 const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
 ---
@@ -139,11 +141,13 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
   .ph .s-check :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); }
   .ph .s-cursor :global(.sticker) { --tile: var(--iris); --stroke: var(--ink); --acc: var(--accent-deep); }
   .ph .s-cell :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); }
+  .ph .s-chart :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--accent); box-shadow: 0 18px 32px -18px rgb(14 17 22 / 0.4); }
+  .ph .s-heart :global(.sticker) { --tile: var(--iris-deep); --stroke: #fff; --acc: var(--leaf); background: linear-gradient(150deg, var(--iris), var(--iris-deep) 60%); box-shadow: 0 18px 32px -18px rgb(91 63 214 / 0.7); }
   /* Tiles sit on the panel's right edge and over the photo's lower corners, never over the name.
      Phones: two tiles; more from tablet up. */
   .s-tag { width: 88px; top: 6%; right: -3%; }
   .s-check { width: 56px; bottom: 30%; left: 4%; }
-  .s-cell, .s-cursor { display: none; }
+  .s-cell, .s-cursor, .s-chart, .s-heart { display: none; }
   @media (min-width: 700px) {
     .ph__bottom { grid-template-columns: 1fr auto; }
     .ph__me { width: min(56vw, 460px); margin-top: calc(var(--s-7) * -1); }
@@ -157,6 +161,8 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     .s-cell { width: 120px; top: 46%; right: -9%; }
     .s-check { width: 64px; bottom: 34%; left: 5%; }
     .s-cursor { display: block; width: 58px; bottom: 7%; right: 6%; }
+    .s-chart { display: block; width: 62px; top: 21%; left: 4%; }
+    .s-heart { display: block; width: 46px; top: 1%; left: 16%; }
   }
   @media (min-width: 1280px) {
     .ph__bottom { grid-template-columns: 1fr auto; }

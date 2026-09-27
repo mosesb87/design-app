@@ -1,7 +1,9 @@
 ---
 // Inner-page header in the home page's language: a condensed title, one size on every page, whose letters fly in
-// from scattered spots and settle (and hop when touched), a few stickers that float, lean towards the pointer and spin when clicked. The same motion module
-// as the home hero (play-hero.ts). Optional tone turns the header into a coloured room.
+// from scattered spots and settle (and hop when touched), and colourful icon tiles that float, sway, lean towards
+// the pointer and wiggle when touched — the page's own three, plus three more on desktop (unless an aside takes
+// the right side). The same motion module as the home hero (play-hero.ts). Optional tone turns the header into a
+// coloured room.
 import Sticker from './Sticker.astro';
 import type { StickerName } from './types';
 interface Props {
@@ -17,9 +19,14 @@ interface Props {
 }
 const { title, kicker, lead, tone, stickers = [], size = 'xl', id = 'page-title', breakAfter } = Astro.props;
 const words = title.toUpperCase().split(/\s+/);
-const tilts = [-9, 11, -5];
+const tilts = [-9, 11, -5, 7, -12, 9];
 const hasAside = Astro.slots.has('aside');
-const depths = [0.9, 0.6, 1.2];
+const depths = [0.9, 0.6, 1.2, 0.7, 1.1, 0.5];
+// Three more tiles for desktop, picked from a pool so a page never shows the same icon twice.
+const pool: StickerName[] = ['chart', 'bag', 'fx', 'code', 'cursor', 'spark', 'check', 'heart', 'tag', 'cell'];
+const own = stickers.slice(0, 3);
+const extras = own.length && !hasAside ? pool.filter((n) => !own.includes(n)).slice(0, 3) : [];
+const tiles = [...own, ...extras];
 ---
 <header class:list={['phd', `phd--${size}`, { 'phd--room': !!tone, 'phd--aside': hasAside, 'phd--lines': !!breakAfter }]} style={tone ? `--bg:${tone}` : undefined} data-play-hero>
   <div class="wrap phd__inner">
@@ -39,9 +46,9 @@ const depths = [0.9, 0.6, 1.2];
     <slot />
     {hasAside && <div class="phd__aside"><slot name="aside" /></div>}
   </div>
-  {stickers.length > 0 && (
+  {tiles.length > 0 && (
     <div class="phd__stickers" aria-hidden="true">
-      {stickers.slice(0, 3).map((s, i) => (
+      {tiles.map((s, i) => (
         <span class:list={['phd__s', `phd__s--${i + 1}`]} data-ph-sticker data-depth={depths[i]}>
           <Sticker name={s} tilt={tilts[i]} />
         </span>
@@ -91,9 +98,18 @@ const depths = [0.9, 0.6, 1.2];
   .phd .phd__s--3 :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); background: linear-gradient(150deg, var(--accent-deep), var(--night) 70%); box-shadow: 0 20px 36px -20px rgb(13 16 21 / 0.7); }
   .phd__s--1 { width: clamp(84px, 13vw, 210px); right: var(--margin); top: calc(var(--nav-h) + 28px); }
   .phd__s--2 { width: clamp(44px, 5.5vw, 88px); right: calc(var(--margin) + clamp(96px, 15vw, 250px)); top: calc(var(--nav-h) + 12px); }
-  .phd__s--3 { display: none; }
+  /* The desktop extras: violet, pale sky and deep violet, with the same light-to-deep gradients. */
+  .phd .phd__s--4 :global(.sticker) { --tile: var(--iris); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, #c7bdff, var(--iris) 55%, #8a76f5); box-shadow: 0 20px 36px -20px rgb(91 63 214 / 0.6); }
+  .phd .phd__s--5 :global(.sticker) { --tile: var(--blue-soft); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--blue-pale), var(--blue-soft) 60%); box-shadow: 0 18px 32px -18px rgb(43 77 224 / 0.5); }
+  .phd .phd__s--6 :global(.sticker) { --tile: var(--iris-deep); --stroke: #fff; --acc: var(--leaf); background: linear-gradient(150deg, var(--iris), var(--iris-deep) 60%); box-shadow: 0 18px 32px -18px rgb(91 63 214 / 0.7); }
+  .phd__s--3, .phd__s--4, .phd__s--5, .phd__s--6 { display: none; }
+  /* Desktop: all six sit in the upper right, measured from the top, so they stay beside the title and never
+     reach the cards some pages put below it (the archive's counts, a case study's facts). */
   @media (min-width: 1024px) {
-    .phd__s--3 { display: block; width: clamp(90px, 8vw, 130px); right: calc(var(--margin) + 4vw); bottom: 16%; }
+    .phd__s--3 { display: block; width: clamp(90px, 8vw, 130px); right: calc(var(--margin) + 4vw); top: calc(var(--nav-h) + clamp(250px, 20vw, 300px)); }
+    .phd__s--4 { display: block; width: clamp(58px, 5vw, 84px); right: calc(var(--margin) + clamp(210px, 22vw, 340px)); top: calc(var(--nav-h) + clamp(150px, 13vw, 200px)); }
+    .phd__s--5 { display: block; width: clamp(44px, 3.8vw, 62px); right: calc(var(--margin) + clamp(150px, 15vw, 240px)); top: calc(var(--nav-h) + clamp(230px, 18vw, 280px)); }
+    .phd__s--6 { display: block; width: clamp(40px, 3.4vw, 56px); right: calc(var(--margin) - 8px); top: calc(var(--nav-h) + clamp(250px, 19vw, 300px)); }
   }
   @media (max-width: 699px) {
     .phd__s--1 { top: calc(var(--nav-h) + 8px); }
@@ -101,6 +117,8 @@ const depths = [0.9, 0.6, 1.2];
   }
   /* With an aside (e.g. the review checks): title and lead on the left, the aside on the right from desktop up. */
   .phd__aside { position: relative; z-index: 0; margin-top: var(--s-5); }
+  /* The aside's cards scatter past the header's lower edge: clip only the sides. */
+  .phd--aside { overflow: visible; overflow-x: clip; }
   .phd--aside .phd__title, .phd--aside .phd__lead, .phd--aside .phd__kicker { position: relative; z-index: 2; }
   @media (min-width: 1024px) {
     .phd--aside .phd__inner { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); column-gap: clamp(32px, 4vw, 72px); align-items: center; }

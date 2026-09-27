@@ -1,7 +1,8 @@
 ---
 // "Then I make them work better." — six sites and stores as equal cards: the real desktop capture in a black
 // browser window that breaks out of the card's top edge, the phone capture tucked in front, and one line. The whole card is one link (its CTA, stretched). Cards tilt towards
-// the pointer on desktop (scripts/motion/tilt.ts).
+// the pointer on desktop (scripts/motion/tilt.ts); the phone turns on its own as the card passes, the opposite way
+// on neighbouring cards, and swings out further on hover (scripts/motion/phones.ts).
 import Picture from '../Picture.astro';
 import BrowserFrame from '../BrowserFrame.astro';
 import { siteCases } from '../../data/cases';
@@ -25,7 +26,7 @@ import Ghost from '../Ghost.astro';
           <li class="site" style={`--tone:${tones[i % tones.length]}`} data-tilt data-vt-host data-glow data-pop>
             <div class="site__media">
               <div class="site__desk" data-vt-target><BrowserFrame url={c.url}><Picture slug={c.media.hero} alt={`${c.title} — the live site on desktop`} sizes="(min-width: 1024px) 44vw, 90vw" eager={i < 2} /></BrowserFrame></div>
-              {mob && <div class="site__phone" aria-hidden="true"><Picture data={mob} alt="" sizes="(min-width: 1024px) 10vw, 24vw" /></div>}
+              {mob && <div class="site__phone" aria-hidden="true" data-phone={i % 2 ? 'r' : 'l'}><Picture data={mob} alt="" sizes="(min-width: 1024px) 10vw, 24vw" /></div>}
             </div>
             <div class="site__text">
               <p class="site__kicker">{c.kicker}</p>
@@ -77,6 +78,11 @@ import Ghost from '../Ghost.astro';
     background: var(--night);
   }
   .site__phone :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  @media (hover: hover) and (pointer: fine) {
+    .site__phone { transition: rotate 0.7s var(--ease-pop), translate 0.7s var(--ease-pop), scale 0.7s var(--ease-pop); }
+    .site:hover .site__phone { rotate: -7deg; translate: 0 -14px; scale: 1.06; }
+    .site:hover .site__phone[data-phone='r'] { rotate: 7deg; }
+  }
   .site__text { display: grid; gap: 8px; }
   .site__kicker { font: 750 var(--t-label) / 1.2 var(--font-text); text-transform: uppercase; letter-spacing: 0.04em; }
   .site__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h3); line-height: 0.9; text-transform: uppercase; }

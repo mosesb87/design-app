@@ -3,7 +3,7 @@
 //   again as it leaves), letter by letter so the change runs through the word like a wave;
 // - under the pointer, the letters nearest it widen and turn pale cobalt;
 // - the studio capture swings in beside the recording and keeps drifting; the recording rises slightly slower
-//   than the page; the glow wanders.
+//   than the page.
 // The move chips and number cards scatter into place through pop.ts. Scrubbed, so scrolling up reverses it.
 // Reduced motion: none of it — the title sits at its normal width.
 import { gsap } from 'gsap';
@@ -15,7 +15,6 @@ export default function asas([section]: HTMLElement[], env: Env) {
   const letters = [...section.querySelectorAll<HTMLElement>('[data-al]')];
   const studio = section.querySelector<HTMLElement>('[data-asas-studio]');
   const media = section.querySelector<HTMLElement>('[data-asas-media]');
-  const glow = section.querySelector<HTMLElement>('[data-asas-glow]');
 
   // Width with scroll: 125 → 75 → 118, staggered across the letters.
   if (letters.length) {
@@ -50,8 +49,5 @@ export default function asas([section]: HTMLElement[], env: Env) {
   if (media) {
     const frame = media.firstElementChild as HTMLElement | null;
     if (frame) gsap.fromTo(frame, { y: 60 }, { y: -40, ease: 'none', scrollTrigger: { trigger: media, start: 'top bottom', end: 'bottom top', scrub: 0.9 } });
-  }
-  if (glow) {
-    gsap.fromTo(glow, { xPercent: -18, yPercent: 10, rotation: -8 }, { xPercent: 12, yPercent: 40, rotation: 10, ease: 'sine.inOut', scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1.4 } });
   }
 }

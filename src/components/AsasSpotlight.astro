@@ -3,7 +3,7 @@
 // live site, the real recording and the studio capture, and the links. Content from src/data/tools.ts (Mousa's
 // own published wording). Motion (scripts/motion/asas.ts): the title squeezes and stretches as the section
 // passes, letters widen under the pointer, the studio capture swings in, the move chips and number cards
-// scatter into place, the glow drifts.
+// scatter into place. A plain black room (Mousa: black, not navy).
 import BrowserFrame from './BrowserFrame.astro';
 import VideoPlate from './VideoPlate.astro';
 import Picture from './Picture.astro';
@@ -13,7 +13,6 @@ const t = toolPages.find((x) => x.slug === 'asas-studio')!;
 const titleWords = t.name.toUpperCase().split(/\s+/);
 ---
 <section class="asas" id="asas" aria-labelledby="asas-title" data-ground="night" data-asas>
-  <div class="asas__glow" aria-hidden="true" data-asas-glow></div>
   <div class="wrap asas__grid">
     <div class="asas__text">
       <p class="kicker asas__kicker">Spotlight · my own product</p>
@@ -63,7 +62,6 @@ const titleWords = t.name.toUpperCase().split(/\s+/);
     background: var(--night);
     color: var(--night-ink);
   }
-  .asas__glow { position: absolute; inset: -30% -10% auto 30%; height: 90%; z-index: -1; background: radial-gradient(45% 50% at 30% 50%, rgb(43 77 224 / 0.5), transparent 70%), radial-gradient(35% 40% at 75% 60%, rgb(142 162 255 / 0.18), transparent 70%); pointer-events: none; }
   .asas__grid { display: grid; gap: var(--s-7); }
   .asas__text { display: grid; gap: var(--s-4); align-content: start; }
   .asas__kicker { background: rgb(255 255 255 / 0.1); color: #fff; }

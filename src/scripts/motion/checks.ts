@@ -14,9 +14,12 @@ export default function checks([root]: HTMLElement[], env: Env) {
   const rnd = gsap.utils.random;
   // Two different scatters, so "scattered again" is not simply the first state rewound. Each card goes its own
   // way: directions step round the compass by the golden angle, so neighbours never share one.
-  const scatter = (spreadX: number, spreadY: number, turn = 0) => cards.map((_, i) => {
+  // The leaving scatter (up = true) sends every card upwards and sideways, never down, so no card slides out
+  // under the header's bottom edge or onto the list below.
+  const scatter = (spreadX: number, spreadY: number, turn = 0, up = false) => cards.map((_, i) => {
     const a = i * 2.39996 + turn + rnd(-0.3, 0.3);
-    return { x: Math.cos(a) * spreadX * rnd(0.6, 1), y: Math.sin(a) * spreadY * rnd(0.6, 1), rotation: rnd(-26, 26), scale: rnd(0.82, 1.04) };
+    const dy = up ? (Math.sin(a) * 0.45 - 0.65) : Math.sin(a);
+    return { x: Math.cos(a) * spreadX * rnd(0.6, 1), y: dy * spreadY * rnd(0.6, 1), rotation: rnd(-26, 26), scale: rnd(0.82, 1.04) };
   });
   const place = (from: ReturnType<typeof scatter>, to: ReturnType<typeof scatter>, tl: gsap.core.Timeline) => {
     cards.forEach((c, i) => {
@@ -32,12 +35,12 @@ export default function checks([root]: HTMLElement[], env: Env) {
         ? { trigger: hold, start: 'top top', end: '+=85%', scrub: 0.8 }
         : { trigger: header, start: 'top top', end: '+=85%', pin: true, pinSpacing: true, scrub: 0.8, anticipatePin: 1 },
     });
-    place(scatter(320, 220), scatter(360, 260, Math.PI), tl);
+    place(scatter(320, 220), scatter(360, 260, Math.PI, true), tl);
     return () => { tl.scrollTrigger?.kill(); tl.kill(); gsap.set(cards, { clearProps: 'transform' }); };
   });
   mm.add('(max-width: 1023px)', () => {
     const tl = gsap.timeline({ scrollTrigger: { trigger: root, start: 'top 95%', end: 'bottom top', scrub: 0.8 } });
-    place(scatter(120, 90), scatter(140, 110, Math.PI), tl);
+    place(scatter(120, 90), scatter(140, 110, Math.PI, true), tl);
     return () => { tl.scrollTrigger?.kill(); tl.kill(); gsap.set(cards, { clearProps: 'transform' }); };
   });
 }

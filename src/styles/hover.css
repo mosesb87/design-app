@@ -157,3 +157,21 @@
   html .parts__l { transition: translate 0.3s var(--ease-pop), color 0.3s; }
   html .parts__l:hover { translate: 0 -0.1em; color: var(--accent); }
 }
+
+/* Always-on life (motion allowed only; html.motion-ok is set in the head before first paint).
+   Mousa's photo breathes: the whole figure shrinks and extends a little, slowly, on top of the scroll's flex
+   (the CSS scale property, so it adds to the GSAP transforms). */
+html.motion-ok [data-photo-flex] { transform-origin: 50% 100%; animation: me-breathe 5.6s ease-in-out infinite; }
+@keyframes me-breathe { 0%, 100% { scale: 1; } 50% { scale: 1.04; } }
+/* The icon tiles in the page headers, the home hero and the contact block keep moving: their icons sway, pulse
+   or turn over on their own rhythms (the transform on the icon, so hover's rotate and scale add to it). */
+html.motion-ok :is(.phd__s, .ph__s, .finale__s) svg { animation: ic-sway 4.6s ease-in-out infinite; }
+html.motion-ok :is(.phd__s, .ph__s, .finale__s):nth-child(2n) svg { animation: ic-pulse 3.6s ease-in-out infinite; }
+html.motion-ok :is(.phd__s, .ph__s, .finale__s):nth-child(3n) svg { animation: ic-turn 7.5s cubic-bezier(0.7, 0, 0.3, 1) infinite; }
+html.motion-ok :is(.phd__s, .ph__s, .finale__s):nth-child(5n) svg { animation-delay: -1.7s; }
+@keyframes ic-sway { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(7deg); } }
+@keyframes ic-pulse { 0%, 100% { transform: scale(0.94); } 50% { transform: scale(1.1); } }
+@keyframes ic-turn { 0%, 78% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  [data-photo-flex], :is(.phd__s, .ph__s, .finale__s) svg { animation: none !important; }
+}

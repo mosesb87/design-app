@@ -30,6 +30,9 @@ Promise.all([
   mount('[data-ghost]', () => import('./motion/ghost')),
   mount('[data-asas]', () => import('./motion/asas')),
   mount('[data-photo-flex]', () => import('./motion/photoflex')),
+  mount('[data-fly]', () => import('./motion/fly')),
+  mount('[data-tiles]', () => import('./motion/tiles')),
+  mount('[data-phone]', () => import('./motion/phones')),
 ]).then(refreshSoon);
 
 document.fonts?.ready.then(refreshSoon);
