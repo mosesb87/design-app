@@ -48,10 +48,11 @@ const host = (u?: string) => (u ? u.replace(/^https?:\/\/(www\.)?/, '').split('/
   .lb-hold { position: relative; overflow-x: clip; }
   .lb { padding-block: var(--section) calc(var(--section) * 0.6); }
   .lb__inner { display: grid; gap: var(--s-6); }
-  .lb__head { display: grid; gap: var(--s-4); align-content: start; }
+  /* The title and button stay above the cards while they fly, so nothing ever lies over the button. */
+  .lb__head { position: relative; z-index: 2; display: grid; gap: var(--s-4); align-content: start; }
   .lb__note { max-width: 40ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.32; }
   .lb__all { justify-self: start; }
-  .lb__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(10px, 1.1vw, 16px); }
+  .lb__grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(10px, 1.1vw, 16px); }
   .lb__card { position: relative; border-radius: var(--r-l); background: var(--tone); color: var(--ink); transition: box-shadow var(--d-small), translate 0.5s var(--ease-register); }
   .lb__card:hover { box-shadow: var(--shadow-2); translate: 0 -4px; }
   .lb__link { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 8px; row-gap: 2px; padding: 8px 8px 12px; text-decoration: none; color: inherit; border-radius: inherit; }

@@ -1,6 +1,7 @@
-// The complete archive. Every non-review project from /v2/work/ is here (merged where they are the
-// same product), plus every review (each has its own page here) and the three proposals. Two entries are deliberately
-// excluded at Mousa's request: the Job Search Log and the DiaMedical Interview Trainer.
+// The complete archive: every build on Mousa's own lists — /v2/work/, his builds index (/reviews/builds/, 58
+// builds, scanned 2026-09-22) and the project list on his earlier home page — merged where they are the same
+// product, plus every review (each has its own page here) and every proposal (audited 2026-09-27). Excluded at
+// Mousa's request: the Job Search Log and the DiaMedical Interview Trainer. Private builds are listed without a link.
 import { reviews } from './site';
 import { allReviews, statText } from './reviews';
 
@@ -14,7 +15,7 @@ export const categories: { id: Category; label: string; blurb: string }[] = [
   { id: 'proposals', label: 'Proposals', blurb: 'Proposal sites built for specific job applications, each a working demo.' },
 ];
 
-export type Status = 'live' | 'demo' | 'login' | 'adaptation' | 'independent' | 'unverified';
+export type Status = 'live' | 'demo' | 'login' | 'adaptation' | 'independent' | 'unverified' | 'private' | 'unchecked';
 export const statusLabel: Record<Status, string> = {
   live: 'Live',
   demo: 'Demo — not a live business',
@@ -22,6 +23,8 @@ export const statusLabel: Record<Status, string> = {
   adaptation: 'Fictional-company adaptation',
   independent: 'Independent — not commissioned',
   unverified: 'Host blocks automated checks',
+  private: 'Private — shared on request',
+  unchecked: 'From my earlier portfolio — not re-checked',
 };
 
 export type Entry = {
@@ -44,6 +47,7 @@ const M = 'https://mousabatarseh.com';
 export const entries: Entry[] = [
   // ── Systems
   { slug: 'asas-studio', title: 'ASAS Studio', category: 'systems', what: 'Elementor wireframe studio: real blocks, English and Arabic search, one colour system, native JSON export.', platform: 'WordPress · Elementor', languages: ['EN', 'AR'], url: 'https://asas.build/', status: 'live', caseStudy: 'asas-studio', media: 'asas' },
+  { slug: 'asas-studio-app', title: 'ASAS Studio app', category: 'systems', what: 'The studio itself: browse the ASAS Elementor block and wireframe library and build a page from it.', platform: 'Web app · Elementor', languages: ['EN', 'AR'], url: 'https://asas.build/studio/', status: 'live', family: 'asas-studio', media: 'asas-studio-app' },
   { slug: 'changeatlas', title: 'ChangeAtlas Commerce', category: 'systems', what: 'Shows what a catalog import will change before it runs.', platform: 'Browser tool', url: `${M}/changeatlas/`, status: 'live', caseStudy: 'changeatlas', media: 'changeatlas' },
   { slug: 'changeatlas-demo', title: 'ChangeAtlas review demo', category: 'systems', what: 'Interactive demo of the review workflow, processed locally in the browser.', platform: 'Browser tool', url: `${M}/changeatlas/app/`, status: 'live', family: 'changeatlas', media: 'changeatlas-app' },
   { slug: 'deals-os', title: 'The Deals Operating System', category: 'systems', what: 'Promotion QA: one intake row, sixteen checks, one verdict.', platform: 'Workbook · rule engine', url: `${M}/deals-os/`, status: 'live', caseStudy: 'deals-os', media: 'deals-os' },
@@ -59,10 +63,11 @@ export const entries: Entry[] = [
   // ── Commerce lab (the DiaMedical lab and the pieces built around it)
   { slug: 'diamedical-lab', title: 'DiaMedical Commerce Intelligence Lab', category: 'case-studies', what: 'Independent e-commerce case study built from public information for a Marketing and eCommerce Coordinator role.', platform: 'Web · workbook', url: `${M}/diamedical/`, status: 'independent', caseStudy: 'diamedical-lab', media: 'diamedical-lab' },
   { slug: 'diamedical-academy', title: 'DiaMedical Academy', category: 'case-studies', what: 'Guided learning experience built around the lab.', url: `${M}/diamedical/academy/`, status: 'independent', family: 'diamedical-lab', media: 'diamedical-academy' },
-  { slug: 'diamedical-review', title: 'DiaMedical Experience Review', category: 'case-studies', what: 'Evidence-backed website review.', url: '/reviews/diamedical/', status: 'independent', family: 'diamedical-lab', media: 'diamedical-review' },
   { slug: 'diamedical-workbook', title: 'DiaMedical Workbook Explorer', category: 'case-studies', what: 'Interactive workbook experience.', url: `${M}/diamedical/v3/`, status: 'independent', family: 'diamedical-lab', media: 'diamedical-workbook' },
   { slug: 'diamedical-intro', title: 'How I Thought It Through', category: 'case-studies', what: 'Narrated reasoning walkthrough of the lab.', url: `${M}/diamedical-intro/`, status: 'independent', family: 'diamedical-lab', media: 'diamedical-intro' },
   { slug: 'halden-medical', title: 'Halden Medical', category: 'case-studies', what: 'The lab adapted for a medical-supply company.', url: 'https://lab.mousabatarseh.com/halden-medical/', status: 'adaptation', family: 'diamedical-lab', media: 'halden-medical' },
+  { slug: 'diamedical-pathfinder', title: 'DiaMedical Product Pathfinder', category: 'case-studies', what: 'Private discovery concept: asks program, teaching goal and priority, then builds a product-discovery path from the answers.', status: 'private', family: 'diamedical-lab' },
+  { slug: 'diamedical-decision-brief', title: 'DiaMedical Decision Brief', category: 'case-studies', what: 'Private research brief: buyer setting, requirements, evidence, lifecycle services and purchase routes, organized for a decision.', status: 'private', family: 'diamedical-lab' },
 
   // ── Sites & stores
   { slug: 'united-textile', title: 'United Textile', category: 'sites', what: 'Shopify B2B wholesale store: collections, case-pack pricing and buyer accounts.', platform: 'Shopify', languages: ['EN'], url: 'https://shopunitedtextile.com/', status: 'live', caseStudy: 'united-textile', media: 'united-textile' },
@@ -72,16 +77,16 @@ export const entries: Entry[] = [
   { slug: 'great-lakes-cigar-festival', title: 'Great Lakes Cigar Festival', category: 'sites', what: 'WordPress event and ticketing site: tickets, schedules, sponsors and vendors.', platform: 'WordPress · Elementor', languages: ['EN'], url: 'https://greatlakescigarfest.com/home/', status: 'live', caseStudy: 'great-lakes-cigar-festival', media: 'great-lakes-cigar-festival' },
   { slug: 'ptee', title: 'PTEE', category: 'sites', what: 'Bilingual education platform: a courses website and a separate admissions platform.', languages: ['AR', 'EN'], url: 'https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/', status: 'live', caseStudy: 'ptee', media: 'ptee-renewal' },
   { slug: 'ptee-admissions', title: 'PTEE admissions portal', category: 'sites', what: 'Bilingual admissions and online-services portal.', languages: ['EN', 'AR'], url: 'https://ptee.moseswebworks.com/admissions/en', status: 'live', family: 'ptee', media: 'ptee-admissions' },
-  { slug: 'btee', title: 'BTEE bilingual build', category: 'sites', what: 'Hosting-migration build of the PTEE redesign.', languages: ['AR'], url: 'https://btee.moseswebworks.com/ar/', status: 'live', family: 'ptee', media: 'btee-build' },
+  { slug: 'btee', title: 'BTEE bilingual build', category: 'sites', what: 'Hosting-migration build of the PTEE redesign, with separate Arabic and English sites.', languages: ['AR', 'EN'], url: 'https://btee.moseswebworks.com/ar/', status: 'live', family: 'ptee', media: 'btee-build' },
   { slug: 'ptee-courses', title: 'PTEE courses & programs', category: 'sites', what: 'Bilingual course catalog.', languages: ['AR', 'EN'], url: 'https://ptee.moseswebworks.com/courses/ar', status: 'live', family: 'ptee', media: 'ptee-courses' },
   { slug: 'ptee-org', title: 'PTEE — ptee.org', category: 'sites', what: 'The programme’s bilingual education website.', languages: ['AR'], url: 'https://ptee.org/', status: 'live', family: 'ptee', media: 'ptee-org' },
   { slug: 'ptee-online', title: 'PTEE company platform', category: 'sites', what: 'Education platform.', url: 'https://ptee.online/', status: 'login', family: 'ptee', media: 'ptee-online' },
   { slug: 'jabal-amman-publishers', title: 'Jabal Amman Publishers', category: 'sites', what: 'WooCommerce publishing house and bookstore.', platform: 'WooCommerce', languages: ['AR'], url: 'https://japublishers.com/', status: 'live', media: 'jabal-amman-publishers' },
   { slug: 'ophir-publishers', title: 'Ophir Publishers — Jordan', category: 'sites', what: 'WooCommerce publishing catalog.', platform: 'WooCommerce', languages: ['AR'], url: 'https://ophir.com.jo/', status: 'live', family: 'jabal-amman-publishers', media: 'ophir-publishers' },
-  { slug: 'mawtini-dabke', title: 'Mawtini Dabke Troupe', category: 'sites', what: 'Community organization website: services, performance galleries and a quote-request path.', platform: 'WordPress', languages: ['EN'], url: 'https://mawtinidabke.com/', status: 'unverified', media: 'mawtini-dabke' },
+  { slug: 'mawtini-dabke', title: 'Mawtini Dabke Troupe', category: 'sites', what: 'Community organization website: services, performance galleries and a quote-request path.', platform: 'WordPress', languages: ['EN'], url: 'https://mawtinidabke.com/', status: 'live', media: 'mawtini-dabke' },
   { slug: 'st-mary-berkley', title: 'St. Mary Church Berkley', category: 'sites', what: 'Church website: parish history, clergy, iconography, gallery and online donations.', platform: 'WordPress · Elementor', languages: ['EN'], url: 'https://stmaryberkley.org/', status: 'unverified', media: 'st-mary-berkley' },
   { slug: 'samona-hospitality', title: 'Samona Hospitality Group', category: 'sites', what: 'WordPress hospitality website.', platform: 'WordPress', languages: ['EN'], url: 'https://the-shg.com/', status: 'live', media: 'samona-hospitality' },
-  { slug: 'larkspur-mobility', title: 'Larkspur Mobility', category: 'sites', what: 'WordPress website for a mobility service.', platform: 'WordPress', languages: ['EN'], url: `${M}/Larkspur/`, status: 'unverified', media: 'larkspur-mobility' },
+  { slug: 'larkspur-mobility', title: 'Larkspur Mobility', category: 'sites', what: 'WordPress website for a mobility service.', platform: 'WordPress', languages: ['EN'], url: `${M}/Larkspur/`, status: 'live', media: 'larkspur-mobility' },
   { slug: 'american-hot-wheel', title: 'American Hot Wheel', category: 'sites', what: 'WooCommerce storefront concept with a vehicle-first finder. Checkout disabled.', platform: 'WooCommerce', languages: ['EN'], url: 'https://interviewdemo.mousabatarseh.com/', status: 'demo', media: 'american-hot-wheel' },
   { slug: 'full-house-wholesale', title: 'Full House Wholesale', category: 'sites', what: 'B2B wholesale product catalog.', languages: ['EN'], url: 'https://www.fullhousewholesale.com/', status: 'login', media: 'full-house-wholesale' },
   { slug: 'wildbills-drivethru-menu', title: 'Wild Bill’s drive-thru menu', category: 'sites', what: 'WordPress digital catalog and menu.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/drivethru-menu/', status: 'live', media: 'wildbills-drivethru-menu' },
@@ -90,14 +95,18 @@ export const entries: Entry[] = [
   { slug: 'wildbills-christmas', title: 'Christmas sale landing', category: 'sites', what: 'WordPress holiday campaign landing page.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/christmas-sale-2024/', status: 'live', family: 'wildbills-drivethru-menu', media: 'wildbills-christmas' },
   { slug: 'wildbills-stpatrick', title: 'St. Patrick’s sales form', category: 'sites', what: 'WordPress campaign and sales form.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/stpatrick-form/', status: 'live', family: 'wildbills-drivethru-menu', media: 'wildbills-stpatrick' },
   { slug: 'wildbills-wild-wednesdays', title: 'Wild Wednesdays landing page', category: 'sites', what: 'WordPress campaign landing page.', platform: 'WordPress', languages: ['EN'], url: 'https://wildbillstobacco.com/wild-wednesdays/', status: 'live', family: 'wildbills-drivethru-menu', media: 'wildbills-wild-wednesdays' },
+  { slug: 'k-wav', title: 'K-WAV (now Total LED)', category: 'sites', what: 'Production Wix build for a direct-view LED display manufacturer: spec-sheet product-line pages, forms and rebrand-migration planning.', platform: 'Wix', languages: ['EN'], url: 'https://www.k-wav.com/', status: 'unchecked' },
+  { slug: 'our-family-life', title: 'Our Family Life Blog', category: 'sites', what: 'Family blog website.', languages: ['EN'], url: 'https://ourfamilylife.net/', status: 'unchecked' },
+  { slug: 'projects-archive', title: 'Projects Archive', category: 'sites', what: 'Motion-led archive of web, e-commerce, landing-page, SEO and product-data work.', platform: 'Portfolio', languages: ['EN'], url: `${M}/projects/`, status: 'live' },
 
   // ── Reviews: every one, each with its page on this site (/reviews/<slug>/)
   ...allReviews.map((r): Entry => ({ slug: `review-${r.slug}`, title: r.brand, category: 'reviews', what: `${r.kind}: ${statText(r)} ${r.stat.label}.`, platform: r.focus.join(' · '), url: `/reviews/${r.slug}/`, status: 'live', media: reviews.find((x) => x.slug === r.slug)?.media, date: r.date })),
 
   // ── Proposals
-  { slug: 'proposal-gardner-white', title: 'Same-Day Answers — web-orders desk', category: 'proposals', what: 'Proposal site built for a job application: a working web-orders desk demo with fictional customers.', url: `${M}/gardner-white-proposal/`, status: 'live', media: 'proposal-gardner-white' },
-  { slug: 'proposal-bran', title: 'Web department proposal', category: 'proposals', what: 'Proposal site built for a job application: a site audit, a filterable line card and a build standard.', url: `${M}/bran-proposal/`, status: 'live', media: 'proposal-bran' },
-  { slug: 'proposal-rmc', title: 'Build standard & monitoring proposal', category: 'proposals', what: 'Proposal site built for a job application: a build standard, a monitoring run and a request desk.', url: `${M}/rmc-proposal/`, status: 'live', media: 'proposal-rmc' },
+  { slug: 'proposal-gardner-white', title: 'Same-Day Answers · Gardner-White web-orders desk', category: 'proposals', what: 'Proposal site built for a job application: a working web-orders desk demo with fictional customers.', url: `${M}/gardner-white-proposal/`, status: 'live', media: 'proposal-gardner-white' },
+  { slug: 'proposal-bran', title: 'Bran Marketing web department proposal', category: 'proposals', what: 'Proposal site built for a job application: a site audit, a filterable line card and a build standard.', url: `${M}/bran-proposal/`, status: 'live', media: 'proposal-bran' },
+  { slug: 'proposal-rmc', title: 'Recovery Movement Consulting proposal', category: 'proposals', what: 'Proposal site built for a job application: a build standard, a monitoring run and a request desk.', url: `${M}/rmc-proposal/`, status: 'live', media: 'proposal-rmc' },
+  { slug: 'sapience-annotated-record', title: 'Sapience AI · The Annotated Record', category: 'proposals', what: 'Independent, motion-led design concept for a web-designer role: a nine-chapter annotated record with margin notes, a provenance view and a motion toggle. Not an official Sapience AI website.', platform: 'Design concept', languages: ['EN'], url: `${M}/sapienceai/`, status: 'independent' },
 ];
 
 export const entryCount = entries.length;

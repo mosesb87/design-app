@@ -4,6 +4,8 @@ The current design is direction 3, calm and precise ([05-calm-and-precise.md](05
 
 ## Direction 3 — calm and precise (current)
 
+Round 6 (the latest 16 builds on /work/, the new /index/ of every build, "Commerce lab", a few red icons, certificate spacing, missing builds added): interactions **64/64** (the /work/ filter checks were replaced by: 16 latest builds, each linked, with a link to /index/; the cards have come together once scrolled through; every one of the 74 builds is a card on /index/, once; each category's count matches its cards and jump link; every /index/ link works); /, /work/, /index/, /about/ at phone and desktop with axe — clean after two fixes: the /index/ card titles now show their own focus outline, and the "Open the index" button stays above the flying cards (axe target-size).
+
 Latest round: Mousa's fifth set of notes (the contact title flies in, colourful moving tiles, stronger photo flex, black transition cover and dark rooms, phones turning on their own, calmer title letters, the /reviews/ cards no longer cut, equal spacing on the /work/ case cards), commits 2b39dd9 and 814077b:
 
 | Check | Result |
