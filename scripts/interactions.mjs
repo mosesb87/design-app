@@ -101,18 +101,26 @@ async function ctx(opts) {
   check('External links on /work/ carry rel=noopener', extNoRel.length === 0, extNoRel.slice(0, 5).join(' '));
 
   // Preview: hovering a row opens the browser window, and a project with a full-page capture scrolls inside it.
-  const row = p.locator('[data-row][data-full]').first();
-  await row.scrollIntoViewIfNeeded();
-  await p.waitForTimeout(400);
-  await row.hover();
-  await p.waitForTimeout(700);
-  const lens = await p.evaluate(() => { const l = document.querySelector('[data-loupe-lens]'); if (!l) return null; const cs = getComputedStyle(l); return { opacity: cs.opacity, visibility: cs.visibility, url: l.querySelector('[data-loupe-url]')?.textContent }; });
-  check('Archive preview window opens on row hover', !!lens && lens.visibility !== 'hidden' && Number(lens.opacity) > 0.5, JSON.stringify(lens));
-  const box = await row.boundingBox();
-  if (box) await p.mouse.move(box.x + box.width * 0.3, box.y + box.height / 2);
-  await p.waitForTimeout(3200);
-  const y = await p.evaluate(() => { const m = getComputedStyle(document.querySelector('[data-loupe-img]')).transform; return m === 'none' ? 0 : new DOMMatrix(m).m42; });
-  check('The project scrolls inside the preview window', y < -20, `translateY ${Math.round(y)}px`);
+  // A browser that reports no fine pointer (e.g. headless Firefox on a server with no mouse) gets the touch
+  // layout instead — every row shows its screenshot inline — so that is what gets checked there.
+  const fine = await p.evaluate(() => document.documentElement.classList.contains('pointer-fine'));
+  if (fine) {
+    const row = p.locator('[data-row][data-full]').first();
+    await row.scrollIntoViewIfNeeded();
+    await p.waitForTimeout(400);
+    await row.hover();
+    await p.waitForTimeout(700);
+    const lens = await p.evaluate(() => { const l = document.querySelector('[data-loupe-lens]'); if (!l) return null; const cs = getComputedStyle(l); return { opacity: cs.opacity, visibility: cs.visibility, url: l.querySelector('[data-loupe-url]')?.textContent }; });
+    check('Archive preview window opens on row hover', !!lens && lens.visibility !== 'hidden' && Number(lens.opacity) > 0.5, JSON.stringify(lens));
+    const box = await row.boundingBox();
+    if (box) await p.mouse.move(box.x + box.width * 0.3, box.y + box.height / 2);
+    await p.waitForTimeout(3200);
+    const y = await p.evaluate(() => { const m = getComputedStyle(document.querySelector('[data-loupe-img]')).transform; return m === 'none' ? 0 : new DOMMatrix(m).m42; });
+    check('The project scrolls inside the preview window', y < -20, `translateY ${Math.round(y)}px`);
+  } else {
+    const shown = await p.evaluate(() => [...document.querySelectorAll('.index__thumb')].filter((i) => i.getBoundingClientRect().width > 0).length);
+    check(`No fine pointer reported (${ENGINE}): rows show their screenshots inline instead of the hover window`, shown > 20, `${shown} thumbnails shown`);
+  }
 
   // Tools: every tool has its section, the jump links resolve, and each opens its live tool.
   await p.goto(BASE + '/tools/', { waitUntil: 'networkidle' });

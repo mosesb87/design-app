@@ -167,4 +167,8 @@ const host = (e: Entry) => (e.url ? (e.url.startsWith('/') ? `mousabatarseh.com$
   }
   @media (min-width: 900px) and (max-width: 1199px) { .index__c-plat { display: none; } }
   :global(.pointer-coarse) .loupe { display: none; }
+  /* No mouse (tablets, touch laptops in touch mode): no hover window, so every row shows its screenshot inline. */
+  @media (min-width: 900px) {
+    :global(.pointer-coarse) .index__thumb { display: block; width: 180px; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; margin-top: 12px; border-radius: 10px; background: var(--night); box-shadow: 0 0 0 4px var(--night); }
+  }
 </style>
