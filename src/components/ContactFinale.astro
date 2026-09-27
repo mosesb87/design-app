@@ -11,15 +11,15 @@ import { person } from '../data/site';
 interface Props { heading?: string }
 const { heading } = Astro.props;
 const lines = heading ? [heading] : ['Put yours', 'in place.'];
-const tiles: { name: StickerName; tilt: number; depth: number }[] = [
-  { name: 'heart', tilt: -6, depth: 0.9 },
-  { name: 'spark', tilt: 10, depth: 0.5 },
-  { name: 'check', tilt: 8, depth: 1.1 },
-  { name: 'cursor', tilt: -6, depth: 0.8 },
-  { name: 'chart', tilt: 7, depth: 0.6 },
-  { name: 'bag', tilt: -9, depth: 1.2 },
-  { name: 'fx', tilt: 5, depth: 0.7 },
-  { name: 'code', tilt: -4, depth: 1 },
+const tiles: { name: StickerName; depth: number }[] = [
+  { name: 'heart', depth: 0.9 },
+  { name: 'spark', depth: 0.5 },
+  { name: 'check', depth: 1.1 },
+  { name: 'cursor', depth: 0.8 },
+  { name: 'chart', depth: 0.6 },
+  { name: 'bag', depth: 1.2 },
+  { name: 'fx', depth: 0.7 },
+  { name: 'code', depth: 1 },
 ];
 const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
 ---
@@ -69,7 +69,7 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     </div>
     <div class="finale__cluster" aria-hidden="true" data-tile-cluster>
       {tiles.map((t, i) => (
-        <span class:list={['finale__s', `finale__s--${i + 1}`]} data-tile data-depth={t.depth}><Sticker name={t.name} tilt={t.tilt} /></span>
+        <span class:list={['finale__s', `finale__s--${i + 1}`]} data-tile data-depth={t.depth}><Sticker name={t.name} /></span>
       ))}
     </div>
   </div>

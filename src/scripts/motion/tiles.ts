@@ -1,12 +1,12 @@
-// Floating icon tiles ([data-tiles], tiles [data-tile] with data-depth): they start scattered across the room
-// and come into place as it scrolls up the screen (scrubbed, so scrolling back scatters them again); they lean
-// towards the pointer by their depth and settle back when it leaves (fine pointers only); and pointing at the
-// photo in the room ([data-photo-flex]) scatters them a little before they settle. The float is a CSS animation
-// on `translate` and the lean is on the holder, so the scroll scatter and the hover live on the tile inside
-// ([data-sticker]) and the three never fight. Reduced motion: still, in place.
+// Floating icon tiles ([data-tiles], tiles [data-tile] with data-depth): they sit straight in their spots, and
+// scrolling jostles them out of place only while the page moves — whenever it is still they are back where they
+// belong (jostle.ts); they lean towards the pointer by their depth and settle back when it leaves (fine pointers
+// only); and pointing at a tile or the photo in the room ([data-photo-flex]) scatters them a little before they
+// settle. The float is a CSS animation on `translate` and the lean is on the holder, so the scroll jostle and the
+// hover live on the tile inside ([data-sticker]) and take turns. Reduced motion: still, in place.
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import type { Env } from './runtime';
+import { jostle } from './jostle';
 
 export default function tiles(roots: HTMLElement[], env: Env) {
   if (env.reduced) return;
@@ -17,25 +17,16 @@ export default function tiles(roots: HTMLElement[], env: Env) {
     const inner = holders.map((h) => h.querySelector<HTMLElement>('[data-sticker]') || h);
     placeCluster(root);
 
-    // Scroll: thrown out from their places (golden-angle steps, so neighbours never share a direction) and back
-    // into place by the time the room is 45% up the screen.
-    const reach = Math.min(innerWidth * 0.3, 360);
     const placed = { x: 0, y: 0, rotation: 0, scale: 1 };
-    const tl = gsap.timeline({ scrollTrigger: { trigger: root, start: 'top bottom', end: 'top 45%', scrub: 0.8, invalidateOnRefresh: true } });
-    inner.forEach((s, i) => {
-      const a = i * 2.39996 + rnd(-0.4, 0.4);
-      const r = rnd(0.5, 1) * reach;
-      tl.fromTo(s, { x: Math.cos(a) * r, y: Math.sin(a) * r * 0.6 + 80, rotation: rnd(-40, 40), scale: rnd(0.6, 1.2) }, { ...placed, ease: 'power3.out', duration: 1 }, (i % 4) * 0.05);
-    });
-    ScrollTrigger.refresh();
+    let busy = false;
+    const shake = jostle(root, inner, { reach: Math.min(innerWidth * 0.12, 150), lift: -40, turn: 26, grow: 0.15, weight: (el) => Number(el.closest<HTMLElement>('[data-tile]')?.dataset.depth || 0.6), hold: () => busy });
 
     if (!env.fine) return;
 
     // Pointing at any tile (or the photo): they all scatter, then come back into place.
     const photo = root.querySelector<HTMLElement>('[data-photo-flex]');
-    let busy = false;
     const scatter = () => {
-      if (busy || tl.progress() < 1) return;
+      if (busy || shake.moving()) return;
       busy = true;
       inner.forEach((s) => {
         gsap.timeline({ onComplete: () => { busy = false; } })

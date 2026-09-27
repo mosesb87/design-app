@@ -73,6 +73,14 @@ async function processView(slug, view, src, dir) {
       entry.avif.push({ w, src: rel(base + '.avif') });
     }
   }
+  // A source between two planned widths (a 900px thumbnail) also keeps its own width, so high-density
+  // screens don't have to stretch the smaller size.
+  const top = entry.webp.at(-1)?.w || 0;
+  if (top && meta.width > top * 1.15 && plan.widths.some((w) => w > meta.width)) {
+    const base = path.join(dir, `${view}-${meta.width}`);
+    if (newer(src, base + '.webp')) await sharp(src, { limitInputPixels: false }).webp({ quality: 82, effort: 5 }).toFile(base + '.webp');
+    entry.webp.push({ w: meta.width, src: rel(base + '.webp') });
+  }
   if (!entry.webp.length) {
     const base = path.join(dir, `${view}-${meta.width}`);
     await sharp(src, { limitInputPixels: false }).webp({ quality: 80 }).toFile(base + '.webp');

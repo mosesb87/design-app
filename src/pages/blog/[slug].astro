@@ -15,6 +15,11 @@ const newer = blogPosts[i - 1];
 const older = blogPosts[i + 1];
 const more = related(post);
 const tone = toneOf(post.categories[0]);
+// Three colored icon tiles beside the title, a different trio on each post (Mousa, round 7: the blog's icons
+// get colors). Straight at rest, like every heading's tiles.
+const tileTones = ['blue', 'leaf', 'iris', 'night', 'sky', 'red'] as const;
+const tileNames = ['lens', 'cell', 'tag', 'check', 'blocks', 'percent'] as const;
+const trio = [0, 2, 4].map((k) => ({ name: tileNames[(i + k) % 6], tone: tileTones[(i + k) % 6] }));
 const jsonLd = [
   {
     '@type': 'BlogPosting',
@@ -50,7 +55,9 @@ const jsonLd = [
         </p>
         <h1 class="post__title">{post.title}</h1>
         <p class="post__meta"><span>By {person.name}</span><span><time datetime={post.date}>{formatDate(post.date, 'long')}</time></span><span>{post.minutes} min read</span></p>
-        <span class="post__s" aria-hidden="true"><Sticker name={['lens', 'cell', 'tag', 'check', 'blocks', 'percent'][i % 6] as any} tilt={i % 2 ? 10 : -8} /></span>
+        <span class="post__icons" aria-hidden="true">
+          {trio.map((t, k) => <span class:list={['post__s', `post__s--${k + 1}`, `post__s--${t.tone}`]}><Sticker name={t.name} /></span>)}
+        </span>
       </div>
     </header>
     {post.image && (
@@ -97,9 +104,19 @@ const jsonLd = [
   .post__cat::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--dot); }
   .post__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(3rem, 7.2vw, 7.5rem); line-height: 0.88; text-wrap: balance; max-width: 16ch; }
   .post__meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-weight: 600; }
-  .post__s { position: absolute; right: 0; top: -10px; width: clamp(80px, 12vw, 190px); pointer-events: none; }
+  .post__icons { position: absolute; inset: 0; pointer-events: none; }
+  .post__s { position: absolute; }
+  .post__s--1 { right: 0; top: -10px; width: clamp(80px, 12vw, 190px); }
+  .post__s--2 { right: clamp(104px, 15vw, 240px); top: -18px; width: clamp(40px, 5vw, 80px); }
+  .post__s--3 { right: clamp(40px, 6vw, 100px); top: clamp(96px, 13.5vw, 214px); width: clamp(48px, 6.4vw, 104px); }
   .post__s :global(.sticker) { --size: 100%; width: 100%; }
-  .post .post__s :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); box-shadow: 0 22px 40px -22px rgb(28 51 168 / 0.75); }
+  .post .post__s--blue :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); background: linear-gradient(150deg, #4d6bff, var(--accent) 45%, var(--accent-deep)); box-shadow: 0 22px 40px -22px rgb(28 51 168 / 0.75); }
+  .post .post__s--leaf :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--leaf-soft), var(--leaf) 60%); box-shadow: 0 18px 32px -18px rgb(90 160 0 / 0.55); }
+  .post .post__s--iris :global(.sticker) { --tile: var(--iris); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, #c7bdff, var(--iris) 55%, #8a76f5); box-shadow: 0 20px 36px -20px rgb(91 63 214 / 0.6); }
+  .post .post__s--night :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); background: linear-gradient(150deg, var(--accent-deep), var(--night) 70%); box-shadow: 0 20px 36px -20px rgb(13 16 21 / 0.7); }
+  .post .post__s--sky :global(.sticker) { --tile: var(--blue-soft); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--blue-pale), var(--blue-soft) 60%); box-shadow: 0 18px 32px -18px rgb(43 77 224 / 0.5); }
+  .post .post__s--red :global(.sticker) { --tile: var(--red); --stroke: #fff; --acc: var(--red-soft); background: linear-gradient(150deg, #ff5a60, var(--red) 60%); box-shadow: 0 18px 32px -18px rgb(232 35 46 / 0.6); }
+  @media (max-width: 699px) { .post__s--2, .post__s--3 { display: none; } }
   .post__hero { margin-top: var(--s-7); }
   .post__hero img { width: 100%; max-width: 1100px; margin-inline: auto; border-radius: var(--r-xl); box-shadow: var(--shadow-2); }
   .post__body { margin: var(--s-8) auto 0; max-width: 68ch; }

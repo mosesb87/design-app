@@ -7,12 +7,12 @@ import Sticker from './Sticker.astro';
 import { person } from '../../data/site';
 const rows = [person.first.toUpperCase(), person.last.toUpperCase()];
 const stickers = [
-  { name: 'tag', cls: 's-tag', depth: 0.9, tilt: -8 },
-  { name: 'cell', cls: 's-cell', depth: 0.6, tilt: 6 },
-  { name: 'check', cls: 's-check', depth: 1.1, tilt: 8 },
-  { name: 'cursor', cls: 's-cursor', depth: 0.8, tilt: 0 },
-  { name: 'chart', cls: 's-chart', depth: 1.2, tilt: -10 },
-  { name: 'heart', cls: 's-heart', depth: 0.5, tilt: 9 },
+  { name: 'tag', cls: 's-tag', depth: 0.9 },
+  { name: 'cell', cls: 's-cell', depth: 0.6 },
+  { name: 'check', cls: 's-check', depth: 1.1 },
+  { name: 'cursor', cls: 's-cursor', depth: 0.8 },
+  { name: 'chart', cls: 's-chart', depth: 1.2 },
+  { name: 'heart', cls: 's-heart', depth: 0.5 },
 ] as const;
 const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
 ---
@@ -47,7 +47,7 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
       <div class="ph__stickers" aria-hidden="true">
         {stickers.map((s) => (
           <span class:list={['ph__s', s.cls]} data-ph-sticker data-depth={s.depth}>
-            <Sticker name={s.name} tilt={s.tilt} depth={s.depth} />
+            <Sticker name={s.name} depth={s.depth} />
           </span>
         ))}
       </div>

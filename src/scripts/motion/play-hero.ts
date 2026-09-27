@@ -1,9 +1,11 @@
-// Hero (home and inner pages): the title's letters fly in from scattered spots, hop when touched and scatter
-// away as the header scrolls off; icon tiles settle in, float gently, lean
-// towards the pointer (fine pointers) and drift with scroll; on the home page the photo leans with the pointer
-// and rises slower than the page. Reduced motion: everything is simply there.
+// Hero (home and inner pages): the title's letters fly in from scattered spots on arrival and hop when touched;
+// icon tiles settle in, float gently and lean towards the pointer (fine pointers); on the home page the photo
+// leans with the pointer and rises slower than the page. Scrolling jostles the letters and the tiles out of place
+// only while the page moves: whenever it is still, the words are whole and the tiles sit straight in their spots
+// (jostle.ts). Reduced motion: everything is simply there.
 import { gsap } from 'gsap';
 import type { Env } from './runtime';
+import { jostle } from './jostle';
 
 export default function playHero([hero]: HTMLElement[], env: Env) {
   const letters = [...hero.querySelectorAll<HTMLElement>('[data-l]')];
@@ -41,6 +43,8 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
   // The photo rises without fading: it is the page's largest paint, and a fade would hold that paint back.
   if (me) tl.from(me, { y: 40, duration: 1.1 * k }, 0.15 * k);
   if (photo) gsap.set(photo, { scale: 1.05, transformOrigin: '50% 100%' });
+  // Once the letters have landed, scrolling jostles them (on x/y — the hop below uses yPercent).
+  if (letters.length) tl.eventCallback('onComplete', () => jostle(hero, letters, { reach: Math.min(innerWidth * 0.14, 170), lift: -50, turn: 22, grow: 0.15 }));
 
   // Float: each tile drifts slowly on its own rhythm.
   stickers.forEach((s, i) => {
@@ -96,35 +100,8 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
     hero.addEventListener('pointerleave', () => { movers.forEach((m) => { m.x(0); m.y(0); }); px?.(0); pr?.(0); });
   }
 
-  // Scroll: as the header leaves, its letters scatter away again, each its own way; scrolling back up brings
-  // them home (scrubbed). On /reviews/ the header holds still (sticky) while the checks sort themselves; its letters wait for the hold
-  // to end, then leave with the header.
-  const hold = hero.closest<HTMLElement>('[data-checks-hold]');
-  const held = () => !!hold && getComputedStyle(hero).position === 'sticky';
-  if (letters.length) {
-    const out = gsap.timeline({
-      scrollTrigger: {
-        trigger: hero,
-        start: () => (held() ? hold!.getBoundingClientRect().top + scrollY + hold!.offsetHeight - hero.offsetHeight : 'top top'),
-        end: (self) => (held() ? self.start + hero.offsetHeight : 'bottom top'),
-        scrub: 0.8,
-        invalidateOnRefresh: true,
-      },
-    });
-    out.fromTo(letters, { x: 0, y: 0, rotation: 0, scale: 1 }, {
-      x: () => rnd(-reach, reach), y: () => rnd(-140, 30), rotation: () => rnd(-24, 24), scale: () => rnd(0.8, 1.15),
-      ease: 'power2.in', duration: 1, stagger: { each: 0.01, from: 'random' }, immediateRender: false,
-    }, 0);
-  }
-
-  // Scroll: as the hero leaves, the tiles scatter away — each its own way, the deeper ones further — and scrolling
-  // back up brings them into place again (scrubbed). The photo sinks slowly into its panel.
-  holders.forEach((h) => {
-    const d = Number(h.dataset.depth || 0.5);
-    gsap.fromTo(h, { xPercent: 0, yPercent: 0, rotation: 0 }, {
-      xPercent: () => rnd(-90, 90) * d, yPercent: () => -rnd(60, 160) * d, rotation: () => rnd(-30, 30),
-      ease: 'power1.in', immediateRender: false, scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.6, invalidateOnRefresh: true },
-    });
-  });
+  // Scroll: the tiles are jostled too, the deeper ones further (on xPercent/yPercent — the lean owns x/y), and
+  // they are back in their spots as soon as the page is still. The photo sinks slowly into its panel.
+  if (holders.length) jostle(hero, holders, { reach: 70, lift: -45, turn: 24, percent: true, weight: (h) => Number(h.dataset.depth || 0.5) });
   if (photo) gsap.to(photo, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.6 } });
 }

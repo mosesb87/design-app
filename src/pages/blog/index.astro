@@ -36,7 +36,7 @@ const jsonLd = [
           <p class="post-meta">{n === 0 && <span class="tag">Latest</span>}<span>{p.categories.join(' · ')}</span><span>{formatDate(p.date)}</span></p>
           <h3 class="card__title"><a href={`/blog/${p.slug}/`}>{p.title}</a></h3>
           <p class="card__ex">{p.excerpt}</p>
-          <p class="card__foot"><span>{p.minutes} min read</span><span class="card__arrow" aria-hidden="true">→</span></p>
+          <p class="card__foot"><span>{p.minutes} min read</span><span class:list={['card__arrow', `card__arrow--${n % 5}`]} aria-hidden="true">→</span></p>
         </li>
       ))}
     </ul>
@@ -89,6 +89,11 @@ const jsonLd = [
   .card__ex { font-weight: 500; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .card__foot { display: flex; justify-content: space-between; align-items: center; font: 700 var(--t-slug) / 1 var(--font-text); letter-spacing: 0.04em; text-transform: uppercase; margin-top: auto; }
   .card__arrow { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 1rem; transition: transform 0.5s var(--ease-pop); }
+  /* The arrows take turns in the site's colors (Mousa, round 7): cobalt, the logo's green, violet, red, black. */
+  .card__arrow--0 { background: var(--accent); }
+  .card__arrow--1 { background: var(--leaf); color: var(--ink); }
+  .card__arrow--2 { background: var(--iris); color: var(--ink); }
+  .card__arrow--3 { background: var(--red-deep); }
   .card:hover .card__arrow { transform: rotate(-45deg); }
   @media (min-width: 700px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .card--lead { grid-column: 1 / -1; } .card--lead .card__title { font-size: clamp(2.5rem, 5.4vw, 4rem); line-height: 0.9; } }
   @media (min-width: 1100px) {

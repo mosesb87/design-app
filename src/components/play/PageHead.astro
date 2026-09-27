@@ -19,7 +19,6 @@ interface Props {
 }
 const { title, kicker, lead, tone, stickers = [], size = 'xl', id = 'page-title', breakAfter } = Astro.props;
 const words = title.toUpperCase().split(/\s+/);
-const tilts = [-9, 11, -5, 7, -12, 9];
 const hasAside = Astro.slots.has('aside');
 const depths = [0.9, 0.6, 1.2, 0.7, 1.1, 0.5];
 // Three more tiles for desktop, picked from a pool so a page never shows the same icon twice.
@@ -50,7 +49,7 @@ const tiles = [...own, ...extras];
     <div class="phd__stickers" aria-hidden="true">
       {tiles.map((s, i) => (
         <span class:list={['phd__s', `phd__s--${i + 1}`]} data-ph-sticker data-depth={depths[i]}>
-          <Sticker name={s} tilt={tilts[i]} />
+          <Sticker name={s} />
         </span>
       ))}
     </div>

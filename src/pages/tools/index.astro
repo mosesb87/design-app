@@ -178,8 +178,9 @@ const jsonLd = [
   .tl__problem { position: relative; padding: clamp(20px, 2.4vw, 32px); border-radius: var(--r-l); background: var(--grey-1); color: var(--ink); }
   .tl__problem .tl__label { color: var(--accent-deep); }
   .tl--room .tl__problem { background: #fff; }
-  .tl--dark .tl__problem { background: var(--blue-soft); }
-  .tl--dark .tl__problem .tl__label { color: var(--ink); }
+  /* On the black rooms the problem card is cobalt with white words (Mousa, round 7). */
+  .tl--dark .tl__problem { background: var(--accent); color: #fff; }
+  .tl--dark .tl__problem .tl__label { color: #dfe5ff; }
   .tl__problem-text { font-size: var(--t-lead); line-height: 1.32; font-weight: 550; letter-spacing: -0.01em; }
   .tl__how { display: grid; gap: 10px; }
   .tl__how li { position: relative; display: grid; gap: 6px; align-content: start; padding: 18px 20px; border-radius: var(--r-l); background: var(--cloud); }

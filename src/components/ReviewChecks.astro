@@ -6,12 +6,12 @@ import { allReviews } from '../data/reviews';
 const brand = (slug: string) => allReviews.find((r) => r.slug === slug)?.brand ?? slug;
 const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'sky' | 'night' | 'leaf' | 'iris' | 'red' }[] = [
   { title: 'Prices & promotions', from: ['highprofile', 'jars', 'lume', 'hayhouse'], tone: 'blue' },
-  { title: 'Structured data', from: ['petsafe', 'salt', 'bran', 'reworked'], tone: 'white' },
-  { title: 'Sitemaps, robots & llms.txt', from: ['petsafe', 'salt'], tone: 'leaf' },
+  { title: 'Structured data', from: ['petsafe', 'salt', 'bran', 'reworked'], tone: 'red' },
+  { title: 'Sitemaps, robots & llms.txt', from: ['petsafe', 'salt'], tone: 'white' },
   { title: 'Stock & availability', from: ['reworked', 'dehanche', 'jbtools'], tone: 'night' },
-  { title: 'Product names & spellings', from: ['dutchie', 'icr', 'jbtools'], tone: 'iris' },
+  { title: 'Product names & spellings', from: ['dutchie', 'icr', 'jbtools'], tone: 'blue' },
   { title: 'Filters & facets', from: ['carhartt', 'oakwood', 'diamedical'], tone: 'white' },
-  { title: 'Titles & meta', from: ['bran', 'icr'], tone: 'sky' },
+  { title: 'Titles & meta', from: ['bran', 'icr'], tone: 'night' },
   { title: 'Canonicals & indexing', from: ['behealth', 'moment'], tone: 'blue' },
   { title: 'Local store pages', from: ['dunhams', 'bestlife'], tone: 'red' },
   { title: 'Launch readiness', from: ['biotrust', 'aedit'], tone: 'night' },
@@ -34,12 +34,14 @@ const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'sky' | 
 
 <style>
   .checks { position: relative; z-index: 0; }
-  .checks__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  /* Every card the same size as the first (Mousa, round 7): all rows share the tallest row's height. */
+  .checks__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 8px; }
   .check {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 10px;
     align-items: baseline;
+    align-content: center;
     padding: 12px 14px;
     border-radius: var(--r-m);
     background: #fff;
@@ -59,7 +61,7 @@ const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'sky' | 
   .check--leaf { background: var(--leaf); }
   .check--leaf .check__n { color: var(--ink); }
   .check--leaf .check__f { color: var(--ink); }
-  /* One red card among the checks (Mousa, round 6), white text on the deeper red. */
+  /* The red cards (Mousa, rounds 6 and 7): white text on the deeper red. */
   .check--red { background: var(--red-deep); color: #fff; }
   .check--red .check__n, .check--red .check__f { color: #fff; }
   .check--iris { background: var(--iris); }

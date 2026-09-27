@@ -130,3 +130,12 @@ Hovering (or focusing) a row in the /work/ index opens a small browser window be
 - **Red, twice more:** one of the /reviews/ checks (Local store pages) and one spec-sheet card (Writing & AI) are red instead of green — a deeper red with white text (5.3:1).
 - **Index cards:** more space between each screenshot and its title (on /work/ and /index/).
 - **Before going live (round 6, last notes):** the About line runs across the whole width in three lines, the type sized to fill it ("WORK BETTER." in cobalt; phones let it wrap); the latest builds on /work/ keep clear space between each screenshot and its number and title (the screenshot no longer spills onto them on tall screens), with more room between the section title and the grid; once the cards have come together they stay together; the footer links to "The index"; the /tools/ page title is now "Catch it before it ships." (the kicker still says "Tools I built").
+
+## Round 7 — Mousa's notes (2026-09-27, evening)
+
+- **Aligned at rest, scattered only while scrolling (Mousa: "very important"):** page titles, the home hero's name, the About line and "Put yours in place." no longer scatter by scroll position. Their letters — and the icon tiles beside them — are thrown out only while the page moves, as far as the scroll is fast and the way it is going, and come straight back as it slows; whenever the page is still, the words are whole and the tiles sit in their spots (`scripts/motion/jostle.ts`, one ticker for the page). The home and page-header tiles, the contact tiles and the blog post tiles sit straight (no resting tilt). The arrival flight on page load is kept; it ends aligned.
+- **Index pictures:** the six index cards without a screenshot (Mawtini Dabke, St. Mary Berkley, Larkspur, American Hot Wheel — hosts that refuse automated screenshots — and the two private DiaMedical builds) now show Mousa's own thumbnails from his builds index (`scripts/capture/thumbs.mjs`, fetched on Actions; the 900px originals are kept at their own width).
+- **/reviews/ checks:** Structured data is red, Sitemaps white, Product names blue, Titles & meta black; every card is the size of the first (equal rows).
+- **/tools/:** on the black rooms, "The problem" is a cobalt card with white words.
+- **About:** the degree's icon is cobalt; more space between the certificate cards and inside them.
+- **Blog:** each post has three coloured icon tiles beside its title (a different trio per post), and the round arrows on the blog cards take turns in cobalt, green, violet, red and black.
