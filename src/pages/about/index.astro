@@ -6,7 +6,7 @@ import Sticker from '../../components/play/Sticker.astro';
 import type { StickerName } from '../../components/play/types';
 // The spec sheet: skills, then tools, each group a colored card with its own icon.
 const specLook: { tone: string; icon: StickerName }[] = [
-  { tone: 'blue', icon: 'cell' }, { tone: 'white', icon: 'lens' }, { tone: 'night', icon: 'bag' }, { tone: 'leaf', icon: 'fx' }, { tone: 'sky', icon: 'check' },
+  { tone: 'blue', icon: 'cell' }, { tone: 'white', icon: 'lens' }, { tone: 'night', icon: 'bag' }, { tone: 'red', icon: 'fx' }, { tone: 'sky', icon: 'check' },
   { tone: 'night', icon: 'code' }, { tone: 'iris', icon: 'chart' }, { tone: 'white', icon: 'heart' }, { tone: 'blue', icon: 'blocks' }, { tone: 'red', icon: 'bolt' },
 ];
 const specGroups = [...skills.map((g) => ({ title: g.title, items: [...g.items] })), ...toolGroups.map((g) => ({ title: `Tools · ${g.title}`, items: [...g.items] }))]
@@ -240,7 +240,7 @@ const accentFrom = 9; // "work better." — the last two of the eleven words
   .skills__group--red { background: var(--red-deep); color: #fff; }
   .about__skills .skills__group--blue .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--accent); }
   .about__skills .skills__group--white .skills__icon :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); }
-  .about__skills .skills__group--night .skills__icon :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); }
+  .about__skills .skills__group--night .skills__icon :global(.sticker) { --tile: var(--red); --stroke: #fff; --acc: var(--red-soft); }
   .about__skills .skills__group--leaf .skills__icon :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--leaf); }
   .about__skills .skills__group--sky .skills__icon :global(.sticker) { --tile: var(--iris-deep); --stroke: #fff; --acc: var(--blue-pale); }
   .about__skills .skills__group--iris .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--iris-deep); }

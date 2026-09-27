@@ -28,7 +28,7 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     <div class="wrap finale__inner">
       <div class="finale__text">
         <p class="kicker finale__kicker">Contact</p>
-        <h2 class="finale__title" id="contact-title" data-fly="in">
+        <h2 class="finale__title" id="contact-title" data-fly="in" data-cluster-edge>
           <span class="visually-hidden">{lines.join(' ')}</span>
           <span aria-hidden="true">
             {lines.map((line) => (
@@ -40,7 +40,7 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
             ))}
           </span>
         </h2>
-        <p class="finale__sub">{person.contactLine} {person.contactSub}</p>
+        <p class="finale__sub" data-cluster-edge>{person.contactLine} {person.contactSub}</p>
 
         <div class="finale__email-row">
           <a class="finale__email" href={`mailto:${person.email}`} data-email>{person.email}</a>
@@ -175,14 +175,14 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
     .finale__s--7 { display: block; width: clamp(38px, 4vw, 56px); right: 30%; top: 16%; animation-delay: -0.4s; animation-duration: 3.8s; }
   }
   /* Desktop: the tiles come together as a tidy grid — four across, two rows, all one size — in the open space
-     beside Mousa's head: its top edge level with the top of his head and its right edge just off the photo
-     (motion/tiles.ts measures and places it; the values here are the fallback). They scatter in from there,
+     beside Mousa's head: its top edge level with the top of his head, centred between the end of the words and
+     the photo (motion/tiles.ts measures and places it; the values here are the fallback). They scatter in from there,
      and pointing at any of them scatters them again. */
   @media (min-width: 1024px) {
     .finale__cluster {
       --tile: clamp(52px, 4.6vw, 68px);
       inset: auto;
-      right: 34%;
+      right: 36%;
       top: 26%;
       display: grid;
       grid-template-columns: repeat(4, var(--tile));

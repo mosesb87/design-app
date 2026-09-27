@@ -63,8 +63,8 @@ export default function tiles(roots: HTMLElement[], env: Env) {
   });
 }
 
-// The contact room's grid of tiles ([data-tile-cluster]) sits with its top edge level with the top of Mousa's head
-// and its right edge 24px off the photo, whatever the screen width: measured from the layout (untransformed
+// The contact room's grid of tiles ([data-tile-cluster]) sits with its top edge level with the top of Mousa's head,
+// centred in the space between the end of the words ([data-cluster-edge]) and the photo, whatever the screen width: measured from the layout (untransformed
 // offsets, so the photo's scroll and hover scaling don't move it), and again when the page resizes or its fonts
 // settle. Below the desktop layout the CSS positions rule.
 function placeCluster(root: HTMLElement) {
@@ -77,8 +77,16 @@ function placeCluster(root: HTMLElement) {
     let top = 0, left = 0;
     for (let el: HTMLElement | null = fig; el && el !== root; el = el.offsetParent as HTMLElement | null) { top += el.offsetTop; left += el.offsetLeft; }
     const headTop = top + fig.offsetHeight - img.offsetHeight;
+    // The right edge of the words, at the room's scale: the widest of the title and the line under it.
+    let textRight = 0;
+    root.querySelectorAll<HTMLElement>('[data-cluster-edge]').forEach((t) => {
+      let l = 0;
+      for (let el: HTMLElement | null = t; el && el !== root; el = el.offsetParent as HTMLElement | null) l += el.offsetLeft;
+      textRight = Math.max(textRight, l + t.offsetWidth);
+    });
+    const centre = (textRight + left) / 2;
     cluster.style.top = `${Math.round(headTop)}px`;
-    cluster.style.right = `${Math.round(root.clientWidth - left + 24)}px`;
+    cluster.style.right = `${Math.round(root.clientWidth - centre - cluster.offsetWidth / 2)}px`;
   };
   place();
   if (!img.complete) img.addEventListener('load', place, { once: true });
