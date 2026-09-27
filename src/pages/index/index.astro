@@ -7,21 +7,15 @@ import Base from '../../layouts/Base.astro';
 import PageHead from '../../components/play/PageHead.astro';
 import Picture from '../../components/Picture.astro';
 import { entries, entryCount, categories, countBy, statusLabel, type Entry } from '../../data/work';
-import { allReviews } from '../../data/reviews';
+import { reviewShot } from '../../lib/shots';
 import { view } from '../../lib/media';
-import { SITE_URL, CHECKED } from '../../data/site';
+import { SITE_URL, CHECKED, formatDate } from '../../data/site';
 
 const tone: Record<string, string> = { systems: 'var(--lilac)', 'case-studies': 'var(--sky)', sites: 'var(--mint)', reviews: 'var(--lemon)', proposals: 'var(--blush)' };
 const dot: Record<string, string> = { systems: 'var(--accent)', 'case-studies': 'var(--iris-deep)', sites: 'var(--leaf)', reviews: 'var(--blue-soft)', proposals: 'var(--grey-4)' };
 const byCat = categories.map((c) => ({ ...c, items: entries.filter((e) => e.category === c.id) }));
 const parentOf = (e: Entry) => (e.family ? entries.find((p) => p.slug === e.family) : undefined);
 const host = (u?: string) => (u && /^https?:/.test(u) ? u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '');
-// Reviews without a site capture show the first sheet's screenshot from the review itself.
-const reviewShot = (e: Entry) => {
-  if (e.category !== 'reviews') return null;
-  const r = allReviews.find((x) => `review-${x.slug}` === e.slug);
-  return r?.thumb || r?.hero || r?.sheets.find((s) => s.shot)?.shot || null;
-};
 const jsonLd = [
   {
     '@type': 'CollectionPage',
@@ -75,6 +69,7 @@ const jsonLd = [
               <p class="ixc__what">{e.what}</p>
               <p class="ixc__tags">
                 {e.caseStudy && <span class="ixc__tag ixc__tag--case">Case study</span>}
+                {e.date && <span class="ixc__tag"><time datetime={e.date}>{formatDate(e.date)}</time></span>}
                 {e.status !== 'live' && <span class="ixc__tag">{statusLabel[e.status]}</span>}
                 {e.languages && <span class="ixc__tag ixc__tag--lang">{e.languages.join(' · ')}</span>}
                 {parent && e.platform && <span class="ixc__tag ixc__tag--lang">{e.platform}</span>}
@@ -107,7 +102,7 @@ const jsonLd = [
   .ixc { position: relative; display: grid; gap: 8px; align-content: start; padding: 10px 10px 18px; border-radius: var(--r-l); background: var(--tone); color: var(--ink); transition: box-shadow var(--d-small), translate 0.5s var(--ease-register); }
   .ixc:hover { box-shadow: var(--shadow-2); translate: 0 -4px; }
   .ixc--child { background: color-mix(in srgb, var(--tone) 55%, #fff); }
-  .ixc__shot { aspect-ratio: 16 / 10; border-radius: 8px; overflow: hidden; background: var(--night); margin-bottom: 4px; box-shadow: 0 12px 26px -16px rgb(14 17 22 / 0.5); }
+  .ixc__shot { aspect-ratio: 16 / 10; border-radius: 8px; overflow: hidden; background: var(--night); margin-bottom: 14px; box-shadow: 0 12px 26px -16px rgb(14 17 22 / 0.5); }
   .ixc__shot :global(picture), .ixc__shot :global(img) { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: scale 0.9s var(--ease-register); }
   .ixc:hover .ixc__shot :global(img) { scale: 1.05; }
   .ixc__blank { display: grid; place-items: center; height: 100%; padding: 12px; background: radial-gradient(120% 90% at 30% 10%, #3f5ff0 0%, var(--accent) 40%, var(--accent-deep) 100%); color: #fff; text-align: center; font: 900 1.25rem / 1 var(--font-display); font-stretch: 75%; text-transform: uppercase; overflow-wrap: anywhere; }

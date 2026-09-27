@@ -4,7 +4,7 @@
 // scattered again (scripts/motion/checks.ts). Reduced motion or no script: they simply sit in order.
 import { allReviews } from '../data/reviews';
 const brand = (slug: string) => allReviews.find((r) => r.slug === slug)?.brand ?? slug;
-const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'sky' | 'night' | 'leaf' | 'iris' }[] = [
+const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'sky' | 'night' | 'leaf' | 'iris' | 'red' }[] = [
   { title: 'Prices & promotions', from: ['highprofile', 'jars', 'lume', 'hayhouse'], tone: 'blue' },
   { title: 'Structured data', from: ['petsafe', 'salt', 'bran', 'reworked'], tone: 'white' },
   { title: 'Sitemaps, robots & llms.txt', from: ['petsafe', 'salt'], tone: 'leaf' },
@@ -13,7 +13,7 @@ const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'sky' | 
   { title: 'Filters & facets', from: ['carhartt', 'oakwood', 'diamedical'], tone: 'white' },
   { title: 'Titles & meta', from: ['bran', 'icr'], tone: 'sky' },
   { title: 'Canonicals & indexing', from: ['behealth', 'moment'], tone: 'blue' },
-  { title: 'Local store pages', from: ['dunhams', 'bestlife'], tone: 'leaf' },
+  { title: 'Local store pages', from: ['dunhams', 'bestlife'], tone: 'red' },
   { title: 'Launch readiness', from: ['biotrust', 'aedit'], tone: 'night' },
   { title: 'Reviews & claims', from: ['moment', 'behealth'], tone: 'iris' },
   { title: 'Help content for AI answers', from: ['dutchie'], tone: 'sky' },
@@ -59,6 +59,9 @@ const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'sky' | 
   .check--leaf { background: var(--leaf); }
   .check--leaf .check__n { color: var(--ink); }
   .check--leaf .check__f { color: var(--ink); }
+  /* One red card among the checks (Mousa, round 6), white text on the deeper red. */
+  .check--red { background: var(--red-deep); color: #fff; }
+  .check--red .check__n, .check--red .check__f { color: #fff; }
   .check--iris { background: var(--iris); }
   .check--iris .check__n { color: var(--ink); }
   .check--iris .check__f { color: var(--ink); }

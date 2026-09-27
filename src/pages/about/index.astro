@@ -7,12 +7,13 @@ import type { StickerName } from '../../components/play/types';
 // The spec sheet: skills, then tools, each group a coloured card with its own icon.
 const specLook: { tone: string; icon: StickerName }[] = [
   { tone: 'blue', icon: 'cell' }, { tone: 'white', icon: 'lens' }, { tone: 'night', icon: 'bag' }, { tone: 'leaf', icon: 'fx' }, { tone: 'sky', icon: 'check' },
-  { tone: 'night', icon: 'code' }, { tone: 'iris', icon: 'chart' }, { tone: 'white', icon: 'heart' }, { tone: 'blue', icon: 'blocks' }, { tone: 'leaf', icon: 'bolt' },
+  { tone: 'night', icon: 'code' }, { tone: 'iris', icon: 'chart' }, { tone: 'white', icon: 'heart' }, { tone: 'blue', icon: 'blocks' }, { tone: 'red', icon: 'bolt' },
 ];
 const specGroups = [...skills.map((g) => ({ title: g.title, items: [...g.items] })), ...toolGroups.map((g) => ({ title: `Tools · ${g.title}`, items: [...g.items] }))]
   .map((g, i) => ({ ...g, ...specLook[i % specLook.length] }));
 import { SITE_URL } from '../../data/site';
 const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url: `${SITE_URL}/about/`, mainEntity: { '@id': `${SITE_URL}/#person` } }];
+const statementLines = ['I build websites', 'that work, then', 'I make them', 'work better.'];
 ---
 <Base title="About" description={`About ${person.name}: seven years building and running WordPress sites and e-commerce stores — product data, SEO, operations and the tools that check them. Warren, Michigan.`} path="/about/" og="about" type="profile" jsonLd={jsonLd}>
   <PageHead title="Sites that just work." kicker="About · Warren, Michigan" lead="Reliable, predictable and quietly doing their job: that is what I build and look after." stickers={['heart', 'bag', 'chart']} />
@@ -39,6 +40,22 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
       </picture>
       <figcaption class="about__cap"><span>{person.name}</span><span>{person.location}</span></figcaption>
     </figure>
+  </section>
+
+  <!-- Mousa's line, in his words (round 6), set large: the letters fly in as it comes up the screen (fly.ts). -->
+  <section class="statement wrap" aria-labelledby="statement-title">
+    <h2 class="statement__t" id="statement-title" data-fly>
+      <span class="visually-hidden">I build websites that work, then I make them work better.</span>
+      <span aria-hidden="true">
+        {statementLines.map((line, i) => (
+          <span class:list={['statement__line', { 'statement__line--accent': i === statementLines.length - 1 }]}>
+            {line.split(' ').map((w, j, all) => (
+              <><span class="statement__w">{[...w].map((ch) => <span class="statement__l" data-fl>{ch}</span>)}</span>{j < all.length - 1 && ' '}</>
+            ))}
+          </span>
+        ))}
+      </span>
+    </h2>
   </section>
 
   <section class="about__method section wrap" aria-labelledby="method-title">
@@ -143,6 +160,16 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
 </Base>
 
 <style>
+  .statement { padding-block: var(--s-7) var(--s-8); }
+  .statement__t { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.6rem, 7.6vw, 8.5rem); line-height: 0.86; letter-spacing: -0.01em; text-transform: uppercase; user-select: none; }
+  .statement__line { display: block; white-space: nowrap; }
+  .statement__line--accent { color: var(--accent); }
+  .statement__w { display: inline-block; }
+  .statement__l { display: inline-block; transition: translate 0.35s var(--ease-register), color 0.35s; }
+  @media (hover: hover) and (pointer: fine) {
+    .statement__l:hover { translate: 0 -0.08em; color: var(--accent); transition-duration: 0.12s; }
+    .statement__line--accent .statement__l:hover { color: var(--ink); }
+  }
   .about__intro { display: grid; gap: var(--s-8); }
   .about__text { display: grid; gap: var(--s-7); align-content: start; }
   .about__me { position: relative; margin: 0; width: min(88vw, 460px); aspect-ratio: 1 / 1.12; justify-self: center; }
@@ -200,19 +227,21 @@ const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url:
   .skills__group--leaf { background: var(--leaf-soft); }
   .skills__group--sky { background: var(--accent-tint-2); }
   .skills__group--iris { background: var(--iris); }
+  .skills__group--red { background: var(--red-deep); color: #fff; }
   .about__skills .skills__group--blue .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--accent); }
   .about__skills .skills__group--white .skills__icon :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); }
   .about__skills .skills__group--night .skills__icon :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); }
   .about__skills .skills__group--leaf .skills__icon :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--leaf); }
   .about__skills .skills__group--sky .skills__icon :global(.sticker) { --tile: var(--iris-deep); --stroke: #fff; --acc: var(--blue-pale); }
   .about__skills .skills__group--iris .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--iris-deep); }
+  .about__skills .skills__group--red .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--red); }
   .skills__title { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: var(--t-h3); line-height: 1; text-transform: uppercase; margin-bottom: 14px; }
   .skills__group ul { display: flex; flex-wrap: wrap; gap: 6px; }
   .skills__group li { padding: 6px 11px; border-radius: var(--r-pill); background: #fff; color: var(--ink); font-size: 0.875rem; font-weight: 600; transition: background-color var(--d-small), color var(--d-small), translate 0.4s var(--ease-pop); }
   .skills__group--white li { background: var(--cloud); }
-  .skills__group--blue li, .skills__group--night li { background: rgb(255 255 255 / 0.12); color: #fff; }
+  .skills__group--blue li, .skills__group--night li, .skills__group--red li { background: rgb(255 255 255 / 0.14); color: #fff; }
   .skills__group li:hover { background: var(--ink); color: #fff; translate: 0 -2px; }
-  .skills__group--night li:hover, .skills__group--blue li:hover { background: #fff; color: var(--ink); }
+  .skills__group--night li:hover, .skills__group--blue li:hover, .skills__group--red li:hover { background: #fff; color: var(--ink); }
   /* Pointing at a card sends a ripple through its chips. */
   @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
     .skills__group:hover li { animation: chip-wave 0.6s var(--ease-pop) both; animation-delay: calc(var(--k) * 35ms); }

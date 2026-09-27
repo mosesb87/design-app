@@ -86,6 +86,7 @@
      his logo, taken a touch deeper so it reads red, never orange. White strokes on it. */
   --red: #e8232e;
   --red-soft: #ffc9cc;
+  --red-deep: #d0202b; /* cards with white text: 5.3:1 */
   /* The old orange names now resolve to the blues and greys, so nothing can turn orange again. */
   --orange: var(--blue-soft);
   --orange-deep: var(--accent-deep);

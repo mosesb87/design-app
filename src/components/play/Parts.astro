@@ -25,7 +25,7 @@ import Ghost from '../Ghost.astro';
 <section class="parts section has-ghost" id="about" aria-labelledby="parts-title" data-parts>
   <Ghost text="About" align="right" top="6%" />
   <div class="wrap parts__grid">
-    <div class="parts__text">
+    <header class="parts__head">
       <p class="kicker">About</p>
       <h2 class="h2 parts__title" id="parts-title" data-parts-title>
         <span class="visually-hidden">Every part in its place.</span>
@@ -35,6 +35,8 @@ import Ghost from '../Ghost.astro';
           </span>
         ))}
       </h2>
+    </header>
+    <div class="parts__text">
       <p class="lead parts__lead">I’m Mousa — the person you call when the website looks fine but nothing quite works.</p>
       <p class="parts__body">Seven years building and running sites on WordPress, Elementor and Divi. I turn “someone does this by hand every Friday” into systems that run themselves — and I’m happiest when a site simply works, every day, without anyone having to rescue it.</p>
       <p class="parts__more"><a class="btn btn--line" href="/about/">More about me <span class="arrow" aria-hidden="true">→</span></a></p>
@@ -56,7 +58,10 @@ import Ghost from '../Ghost.astro';
 <style>
   .parts__grid { display: grid; gap: var(--s-8); align-items: center; }
   .parts__text { display: grid; gap: var(--s-5); }
-  .parts__title { font-size: var(--t-h2); line-height: 0.84; }
+  /* The one heading on the site set far larger than the rest (Mousa, round 6: "make it bigger"): full width,
+     above the text and the board, its letters still assembling with the parts. */
+  .parts__head { display: grid; gap: var(--s-4); }
+  .parts__title { font-size: clamp(2.8rem, 11.5vw, 13rem); line-height: 0.82; letter-spacing: -0.01em; }
   .parts__line { display: block; white-space: nowrap; }
   .parts__word { display: inline-block; }
   .parts__word + .parts__word { margin-left: 0.2em; }
@@ -112,6 +117,7 @@ import Ghost from '../Ghost.astro';
   .parts__stamp i { font-style: normal; color: var(--accent-soft); margin-right: 4px; }
   @media (min-width: 1024px) {
     .parts__grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .parts__head { grid-column: 1 / -1; }
     .parts__text { grid-column: 1 / span 6; }
     .parts__board { grid-column: 7 / span 6; }
   }

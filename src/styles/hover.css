@@ -11,7 +11,7 @@
 @media (hover: hover) and (pointer: fine) {
   :root { --sweep: var(--accent); }
   :is([data-ground='night'], .on-dark, .finale, .footer) { --sweep: var(--accent-soft); }
-  :is(.check--blue, .step--accent, .nums__tile--accent, .tool, .asas__nums li:nth-child(2)) { --sweep: #fff; }
+  :is(.check--blue, .check--red, .skills__group--red, .step--accent, .nums__tile--accent, .tool, .asas__nums li:nth-child(2)) { --sweep: #fff; }
   :is(.check--sky, .check--leaf, .check--iris, .mq--light, .nums__tile--light) { --sweep: var(--accent-deep); }
 
   /* Headings, card titles and intro lines: a band of light passes through the letters, left to right.

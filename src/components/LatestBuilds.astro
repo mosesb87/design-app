@@ -3,14 +3,16 @@
 // screen and come together into a neat grid as the section arrives. On desktop the section holds still (a
 // sticky stage whose extra scroll is reserved in CSS) while they gather. Then a button opens /index/, where
 // every build is listed by category. (Motion: scripts/motion/gather.ts; the list: latestBuilds in data/work.ts.)
-// Each card's second line: its status when it isn't simply live, "Case study" when it has one, else its domain.
+// Each card's second line: what kind of build it is and the date it shipped (see `date` in data/work.ts).
 import Picture from './Picture.astro';
-import { entries, latestBuilds, entryCount, statusLabel } from '../data/work';
+import { entries, latestBuilds, entryCount } from '../data/work';
 import { view } from '../lib/media';
+import { reviewShot } from '../lib/shots';
+import { formatDate } from '../data/site';
 
 const items = latestBuilds.map((slug) => entries.find((e) => e.slug === slug)).filter((e) => !!e);
 const tones = ['var(--lilac)', 'var(--sky)', 'var(--mint)', 'var(--lemon)', 'var(--blush)', 'var(--grey-1)'];
-const host = (u?: string) => (u ? u.replace(/^https?:\/\/(www\.)?/, '').split('/')[0] : '');
+const kind: Record<string, string> = { reviews: 'Review', proposals: 'Proposal', systems: 'Tool', 'case-studies': 'Commerce lab', sites: 'Site' };
 ---
 <div class="lb-hold" data-gather-hold>
   <section class="lb" aria-labelledby="latest-title" data-gather>
@@ -18,23 +20,26 @@ const host = (u?: string) => (u ? u.replace(/^https?:\/\/(www\.)?/, '').split('/
       <header class="lb__head">
         <p class="kicker">Newest first</p>
         <h2 class="h2" id="latest-title">The index.</h2>
-        <p class="lb__note">Websites and stores I built, newest first. The index has every build — {entryCount} of them: tools, sites, stores, reviews and proposals, by category.</p>
+        <p class="lb__note">My most recent builds of every kind — reviews, proposals, tools and sites — by the date each shipped. The index has all {entryCount}, by category.</p>
         <a class="btn lb__all" href="/index/">Open the index <span class="arrow" aria-hidden="true">→</span></a>
       </header>
       <ol class="lb__grid" role="list">
         {items.map((e, i) => {
           const shot = view(e.media, 'desktop-hero');
+          const rshot = shot ? null : reviewShot(e);
           const href = e.caseStudy ? `/work/${e.caseStudy}/` : e.url;
           const external = !e.caseStudy && !!e.url && /^https?:/.test(e.url);
           return (
             <li class="lb__card" style={`--tone:${tones[i % tones.length]}`} data-gather-card>
               <a class="lb__link" href={href} rel={external ? 'noopener' : undefined}>
                 <span class="lb__shot">
-                  {shot ? <Picture data={shot} alt="" sizes="(min-width: 1024px) 15vw, (min-width: 700px) 30vw, 45vw" /> : <span class="lb__blank">{e.title}</span>}
+                  {shot ? <Picture data={shot} alt="" sizes="(min-width: 1024px) 15vw, (min-width: 700px) 30vw, 45vw" />
+                    : rshot ? <img src={rshot.small || rshot.src} width={rshot.sw || rshot.w} height={Math.round(rshot.h * ((rshot.sw || rshot.w) / rshot.w))} alt="" loading="lazy" decoding="async" />
+                    : <span class="lb__blank">{e.title}</span>}
                 </span>
                 <span class="lb__n num">{String(i + 1).padStart(2, '0')}</span>
                 <span class="lb__name">{e.title}</span>
-                <span class="lb__meta">{e.status !== 'live' ? statusLabel[e.status] : e.caseStudy ? 'Case study' : host(e.url)}</span>
+                <span class="lb__meta">{e.category === 'proposals' && e.platform ? e.platform : kind[e.category]} · <time datetime={e.date}>{formatDate(e.date!)}</time></span>
               </a>
             </li>
           );
@@ -57,7 +62,7 @@ const host = (u?: string) => (u ? u.replace(/^https?:\/\/(www\.)?/, '').split('/
   .lb__card:hover { box-shadow: var(--shadow-2); translate: 0 -4px; }
   .lb__link { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 8px; row-gap: 2px; padding: 8px 8px 12px; text-decoration: none; color: inherit; border-radius: inherit; }
   .lb__link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-  .lb__shot { grid-column: 1 / -1; display: block; aspect-ratio: 16 / 9; margin-bottom: 8px; border-radius: 8px; overflow: hidden; background: var(--night); box-shadow: 0 10px 22px -14px rgb(14 17 22 / 0.5); }
+  .lb__shot { grid-column: 1 / -1; display: block; aspect-ratio: 16 / 9; margin-bottom: 14px; border-radius: 8px; overflow: hidden; background: var(--night); box-shadow: 0 10px 22px -14px rgb(14 17 22 / 0.5); }
   .lb__shot :global(picture), .lb__shot :global(img) { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: scale 0.9s var(--ease-register); }
   .lb__card:hover .lb__shot :global(img) { scale: 1.05; }
   .lb__blank { display: grid; place-items: center; height: 100%; padding: 8px; color: #fff; text-align: center; font: 900 clamp(0.95rem, 1.2vw, 1.2rem) / 0.95 var(--font-display); font-stretch: 75%; text-transform: uppercase; }

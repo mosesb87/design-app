@@ -65,14 +65,11 @@ export default function parts(sections: HTMLElement[], env: Env) {
         tl.fromTo(p, before[i], { xPercent: 0, yPercent: 0, rotation: 0, scale: 1, opacity: 1, ease: 'power3.out', duration: 0.4 }, d);
         tl.to(p, { ...after[i], ease: 'power2.in', duration: 0.36 }, 0.62 + d);
       });
-      // On wide screens the title sits beside the board, so it assembles on the same scroll as the parts.
+      // The title now runs full width above the board (set large), so it assembles on its own pass up the screen.
       let own: gsap.core.Timeline | undefined;
       if (letters.length && title) {
-        if (wide) lettersIn(tl, 0.02, 0.4);
-        else {
-          own = gsap.timeline({ scrollTrigger: { trigger: title, start: 'top bottom', end: 'bottom top', scrub: 0.8 } });
-          lettersIn(own, 0, 0.42);
-        }
+        own = gsap.timeline({ scrollTrigger: { trigger: title, start: 'top bottom', end: 'bottom top', scrub: 0.8 } });
+        lettersIn(own, 0, wide ? 0.36 : 0.42);
       }
       return () => { tl.scrollTrigger?.kill(); tl.kill(); own?.scrollTrigger?.kill(); own?.kill(); gsap.set([...pieces, ...letters], { clearProps: 'transform,opacity' }); };
     });
