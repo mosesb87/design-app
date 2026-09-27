@@ -7,16 +7,16 @@ import type { StickerName } from './types';
 import { person } from '../../data/site';
 // Each piece is a colored tile — cobalt, sky, night, deep cobalt, the logo's green, violet — spread so no two
 // neighbours match.
-const parts: { name: StickerName; label: string; tile: 'blue' | 'sky' | 'night' | 'deep' | 'leaf' | 'iris' }[] = [
+const parts: { name: StickerName; label: string; tile: 'blue' | 'sky' | 'night' | 'deep' | 'leaf' | 'red' }[] = [
   { name: 'blocks', label: 'Pages', tile: 'blue' },
   { name: 'cell', label: 'Catalog', tile: 'leaf' },
   { name: 'tag', label: 'Prices', tile: 'night' },
-  { name: 'barcode', label: 'SKUs', tile: 'iris' },
+  { name: 'barcode', label: 'SKUs', tile: 'red' },
   { name: 'percent', label: 'Promotions', tile: 'sky' },
   { name: 'lens', label: 'SEO', tile: 'blue' },
   { name: 'cursor', label: 'UX', tile: 'leaf' },
   { name: 'chart', label: 'Analytics', tile: 'deep' },
-  { name: 'check', label: 'QA', tile: 'iris' },
+  { name: 'check', label: 'QA', tile: 'red' },
 ];
 // The title, split into letters for the scatter (the full sentence stays readable as one string).
 const title = [['Every', 'part'], ['in', 'its', 'place.']];
@@ -90,7 +90,7 @@ import Ghost from '../Ghost.astro';
   .parts .parts__piece--night :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); }
   .parts .parts__piece--deep :global(.sticker) { --tile: var(--accent-deep); --stroke: #fff; --acc: var(--blue-soft); box-shadow: 0 18px 30px -18px rgb(28 51 168 / 0.75); }
   .parts .parts__piece--leaf :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: 0 18px 30px -18px rgb(90 160 0 / 0.6); }
-  .parts .parts__piece--iris :global(.sticker) { --tile: var(--iris); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: 0 18px 30px -18px rgb(91 63 214 / 0.55); }
+  .parts .parts__piece--red :global(.sticker) { --tile: var(--red); --stroke: #fff; --acc: var(--red-soft); background: linear-gradient(150deg, #ff5a60, var(--red) 55%); box-shadow: 0 18px 30px -18px rgb(232 35 46 / 0.6); }
   .parts__label {
     position: absolute;
     left: 50%;

@@ -11,7 +11,7 @@ import { person } from '../../data/site';
       <div class="wrap chk__inner">
         <header class="chk__head">
           <p class="kicker">How I think</p>
-          <h2 class="h2 chk__title" id="chk-title">A request is trusted by default. Almost every error begins there.</h2>
+          <h2 class="h2 chk__title" id="chk-title">A request is trusted by default.<br class="br-wide" /> Almost every error begins there.</h2>
         </header>
         <div class="chk__stage" data-check-stage>
           <article class="chk__card chk__card--sheet" data-card>
@@ -174,7 +174,9 @@ import { person } from '../../data/site';
     :global(.motion-ok) .chk__sticky { position: sticky; top: 0; height: 100svh; display: flex; align-items: center; padding-block: calc(var(--nav-h) + 8px) 24px; overflow: hidden; }
     :global(.motion-ok) .chk__sticky > .wrap { width: 100%; }
     :global(.motion-ok) .chk__inner { gap: clamp(40px, 5vh, 64px); }
-    :global(.motion-ok) .chk__title { font-size: var(--t-h2); max-width: 22ch; }
+    /* Two lines on desktop: one sentence each (the <br>), so the heading can be as wide as it needs. */
+    :global(.motion-ok) .chk__title { font-size: var(--t-h2); max-width: none; }
+    .chk__title { max-width: none; }
     :global(.motion-ok) .chk__close { display: none; }
   }
   @media (min-width: 1024px) and (max-height: 820px) {

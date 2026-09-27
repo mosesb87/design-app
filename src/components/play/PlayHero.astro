@@ -6,9 +6,6 @@
 import Sticker from './Sticker.astro';
 import { person } from '../../data/site';
 const rows = [person.first.toUpperCase(), person.last.toUpperCase()];
-// The letters are black; touched, they flash blue — except one, the last A of BATARSEH (row 2, index 3), which
-// flashes red. Change these two numbers to move it.
-const RED = { row: 1, i: 3 };
 const stickers = [
   { name: 'tag', cls: 's-tag', depth: 0.9, tilt: -8 },
   { name: 'cell', cls: 's-cell', depth: 0.6, tilt: 6 },
@@ -27,7 +24,7 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
         <span class="visually-hidden">{person.name}</span>
         {rows.map((w, r) => (
           <span class:list={['ph__row', `ph__row--${r + 1}`]} aria-hidden="true">
-            {[...w].map((ch, i) => <span class="ph__l" data-l data-hot={r === RED.row && i === RED.i ? 'red' : undefined}>{ch}</span>)}
+            {[...w].map((ch, i) => <span class="ph__l" data-l>{ch}</span>)}
           </span>
         ))}
       </h1>
