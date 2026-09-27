@@ -1,6 +1,7 @@
 // "The latest builds" on /work/: the cards start scattered all over the screen — thrown out from their places
 // in every direction (golden-angle steps, so neighbours never share one), turned and resized — and come together
-// into the grid, scrubbed to scroll so scrolling up scatters them again.
+// into the grid, scrubbed to scroll (scrolling back before they've landed scatters them again). Once they have
+// come together they stay together, so the grid is always tidy when you come back to it.
 // Desktop screens tall enough for the whole grid: the section holds still (a sticky stage in a taller wrapper, the
 // space reserved in CSS) while they gather, so the whole grid comes together on one screen. Elsewhere each card
 // gathers over its own pass up the screen. Cards are thrown mostly downwards and sideways, so while scattered
@@ -35,7 +36,12 @@ export default function gather([root]: HTMLElement[], env: Env) {
     mm.add('(min-width: 1024px) and (min-height: 760px)', () => {
       const from = thrown(Math.min(innerWidth * 0.42, 620), Math.min(innerHeight * 0.5, 440));
       // From when the section is three quarters of the way up the screen to near the end of the hold.
-      const tl = gsap.timeline({ scrollTrigger: { trigger: hold || root, start: 'top 75%', end: 'bottom bottom', scrub: 0.8, invalidateOnRefresh: true } });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: hold || root, start: 'top 75%', end: 'bottom bottom', scrub: 0.8, invalidateOnRefresh: true,
+          onLeave: (self) => { self.kill(); tl.progress(1); },
+        },
+      });
       cards.forEach((c, i) => tl.fromTo(c, from[i], { ...placed, ease: 'power3.out', duration: 0.62 }, (i % 4) * 0.03 + Math.floor(i / 4) * 0.07));
       return () => { tl.scrollTrigger?.kill(); tl.kill(); gsap.set(cards, { clearProps: 'transform' }); };
     });
@@ -48,10 +54,14 @@ export default function gather([root]: HTMLElement[], env: Env) {
       const grid = root.querySelector<HTMLElement>('.lb__grid') || root;
       const tweens = cards.map((c, i) => {
         const dy = () => c.offsetTop - grid.offsetTop;
-        return gsap.fromTo(c, from[i], {
+        const t: gsap.core.Tween = gsap.fromTo(c, from[i], {
           ...placed, ease: 'power3.out',
-          scrollTrigger: { trigger: grid, start: () => `top+=${dy()} bottom`, end: () => `top+=${dy()} 62%`, scrub: 0.8, invalidateOnRefresh: true },
+          scrollTrigger: {
+            trigger: grid, start: () => `top+=${dy()} bottom`, end: () => `top+=${dy()} 62%`, scrub: 0.8, invalidateOnRefresh: true,
+            onLeave: (self) => { self.kill(); t.progress(1); },
+          },
         });
+        return t;
       });
       return () => { tweens.forEach((t) => { t.scrollTrigger?.kill(); t.kill(); }); gsap.set(cards, { clearProps: 'transform' }); };
     });

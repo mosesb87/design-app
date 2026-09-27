@@ -13,7 +13,9 @@ const specGroups = [...skills.map((g) => ({ title: g.title, items: [...g.items] 
   .map((g, i) => ({ ...g, ...specLook[i % specLook.length] }));
 import { SITE_URL } from '../../data/site';
 const jsonLd = [{ '@type': 'ProfilePage', '@id': `${SITE_URL}/about/#page`, url: `${SITE_URL}/about/`, mainEntity: { '@id': `${SITE_URL}/#person` } }];
-const statementLines = ['I build websites', 'that work, then', 'I make them', 'work better.'];
+// Mousa's line in three lines across the whole width (round 6); the last two words in cobalt. Phones let it wrap.
+const statementLines = [['I', 'build', 'websites'], ['that', 'work,', 'then', 'I', 'make'], ['them', 'work', 'better.']];
+const accentFrom = 9; // "work better." — the last two of the eleven words
 ---
 <Base title="About" description={`About ${person.name}: seven years building and running WordPress sites and e-commerce stores — product data, SEO, operations and the tools that check them. Warren, Michigan.`} path="/about/" og="about" type="profile" jsonLd={jsonLd}>
   <PageHead title="Sites that just work." kicker="About · Warren, Michigan" lead="Reliable, predictable and quietly doing their job: that is what I build and look after." stickers={['heart', 'bag', 'chart']} />
@@ -47,11 +49,13 @@ const statementLines = ['I build websites', 'that work, then', 'I make them', 'w
     <h2 class="statement__t" id="statement-title" data-fly>
       <span class="visually-hidden">I build websites that work, then I make them work better.</span>
       <span aria-hidden="true">
-        {statementLines.map((line, i) => (
-          <span class:list={['statement__line', { 'statement__line--accent': i === statementLines.length - 1 }]}>
-            {line.split(' ').map((w, j, all) => (
-              <><span class="statement__w">{[...w].map((ch) => <span class="statement__l" data-fl>{ch}</span>)}</span>{j < all.length - 1 && ' '}</>
-            ))}
+        {statementLines.map((line, li) => (
+          <span class="statement__line">
+            {line.map((w, j) => {
+              const k = statementLines.slice(0, li).flat().length + j;
+              return <><span class:list={['statement__w', { 'statement__w--accent': k >= accentFrom }]}>{[...w].map((ch) => <span class="statement__l" data-fl>{ch}</span>)}</span>{j < line.length - 1 && ' '}</>;
+            })}
+            {' '}
           </span>
         ))}
       </span>
@@ -160,15 +164,21 @@ const statementLines = ['I build websites', 'that work, then', 'I make them', 'w
 </Base>
 
 <style>
-  .statement { padding-block: var(--s-7) var(--s-8); }
-  .statement__t { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.6rem, 7.6vw, 8.5rem); line-height: 0.86; letter-spacing: -0.01em; text-transform: uppercase; user-select: none; }
-  .statement__line { display: block; white-space: nowrap; }
-  .statement__line--accent { color: var(--accent); }
-  .statement__w { display: inline-block; }
+  /* Mousa's line across the whole width: three lines, the type sized so the longest ("that work, then I make")
+     fills the column (container units); phones let the words wrap. */
+  .statement { padding-block: var(--s-7) var(--s-8); container-type: inline-size; }
+  .statement__t { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.4rem, 12vw, 5.5rem); line-height: 0.86; letter-spacing: -0.01em; text-transform: uppercase; user-select: none; }
+  .statement__line { display: inline; }
+  .statement__w { display: inline-block; white-space: nowrap; }
+  .statement__w--accent { color: var(--accent); }
   .statement__l { display: inline-block; transition: translate 0.35s var(--ease-register), color 0.35s; }
+  @media (min-width: 700px) {
+    .statement__t { font-size: min(calc(100cqi / 9.05), 16rem); }
+    .statement__line { display: block; white-space: nowrap; }
+  }
   @media (hover: hover) and (pointer: fine) {
     .statement__l:hover { translate: 0 -0.08em; color: var(--accent); transition-duration: 0.12s; }
-    .statement__line--accent .statement__l:hover { color: var(--ink); }
+    .statement__w--accent .statement__l:hover { color: var(--ink); }
   }
   .about__intro { display: grid; gap: var(--s-8); }
   .about__text { display: grid; gap: var(--s-7); align-content: start; }

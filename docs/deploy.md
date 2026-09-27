@@ -24,6 +24,20 @@ Nothing here has been done. The live site at mousabatarseh.com is untouched; the
 
 The package contains **no root `.htaccess`, `robots.txt` or `sitemap.xml`**, so no existing routing, blocking or listing rule is overwritten. `deploy/MANIFEST.txt` lists every top-level entry and its size.
 
+## The quick way: one-step deploy from GitHub (recommended)
+
+`.github/workflows/go-live.yml` does steps 1–3 and 5 for you, with a backup first:
+
+1. **Add the FTP login as repository secrets** — GitHub → the repository → *Settings* → *Secrets and variables* → *Actions* → *New repository secret*:
+   - `FTP_HOST` — the FTP server (cPanel → *FTP Accounts* shows it; often `ftp.mousabatarseh.com`)
+   - `FTP_USER` and `FTP_PASSWORD` — an FTP account whose folder contains the site (cPanel's main account, or a new FTP account for `public_html`)
+   - optional: `FTP_DIR` if the site's folder isn't `public_html` from that account's home (for an account created *for* `public_html`, set it to `.`); `FTP_TLS_VERIFY` = `no` only if the run reports a certificate-name mismatch.
+2. **Say go.** Claude (or anyone with push access) changes `deploy/go-live.txt` and pushes; that starts the run.
+3. The run builds the checked package, **downloads a backup** of everything it will replace (home page, icons, `llms.txt`, root `.htaccess`, `robots.txt`, and the whole `blog/` and `reviews/` folders) and keeps it on the run page for 90 days, **uploads the new site without deleting anything**, then checks the new pages and the existing folders (`/v2/`, `/changeatlas/`, `/dealproof/`, a full review, `/sapienceai/`) on the live domain.
+4. Afterwards, optionally: step 4 below (redirects) and the `Sitemap:` line in `robots.txt`.
+
+Rollback is the same as below, using the backup from the run page.
+
 ## 1. Build the package
 
 ```bash

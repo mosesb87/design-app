@@ -11,6 +11,7 @@ const year = new Date().getFullYear();
     <a class="footer__brand" href="/"><Logo size={22} /><span>{person.name}</span></a>
     <nav class="footer__nav" aria-label="Footer">
       {nav.filter((n) => n.href !== '/').map((n) => <a href={n.href}>{n.label}</a>)}
+      <a href="/index/">The index</a>
       <a href="#top" class="footer__top">Back to top <span aria-hidden="true">↑</span></a>
     </nav>
   </div>
