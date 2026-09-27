@@ -89,6 +89,18 @@ for (const url of PAGES) {
   await page.close();
 }
 for (const u of EXTRA) await save(ctx, u, 'direct');
+// Paths the new site would add at the root: are they free on the live domain?
+report.paths = [];
+for (const p of ['/tools/', '/tools', '/Tools/', '/work/', '/about/']) {
+  try {
+    const res = await ctx.request.get(`https://mousabatarseh.com${p}`, { maxRedirects: 0, timeout: 20000 });
+    const body = res.status() === 200 ? (await res.text()).slice(0, 4000) : '';
+    report.paths.push({ path: p, status: res.status(), location: res.headers().location || null, title: (body.match(/<title>([^<]*)<\/title>/i) || [])[1] || null });
+  } catch (e) {
+    report.paths.push({ path: p, error: String(e.message || e).slice(0, 200) });
+  }
+}
 await browser.close();
 writeJSON(`${OUT}/brand.json`, report);
 console.log(JSON.stringify(report.files.map((f) => [f.url, f.status, f.bytes, f.file]), null, 1));
+console.log(JSON.stringify(report.paths, null, 1));
