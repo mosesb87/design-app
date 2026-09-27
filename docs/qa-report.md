@@ -4,7 +4,7 @@ The current design is direction 3, calm and precise ([05-calm-and-precise.md](05
 
 ## Direction 3 — calm and precise (current)
 
-Latest round: Mousa's third set of notes (hover on everything, scattered cards, the black contact and footer), commit 266e7dc and later.
+Latest round: Mousa's fourth set of notes (white background, no orange, the compact index, one heading size per level, all certificates and the degree), commit 6474bf5. Every check below was re-run on that build.
 
 | Check | Result |
 |---|---|
@@ -12,7 +12,7 @@ Latest round: Mousa's third set of notes (hover on everything, scattered cards, 
 | Type check / build | `astro check`: 0 errors; build clean |
 | All-pages sweep (every page, phone 430 + desktop 1440, full motion, axe) | **112 runs, 0 findings**: no overflow, disappearing text, console errors, failed requests, axe violations or layout shift |
 | Interactions (Chromium) | **66/66** |
-| Firefox 142 / WebKit 26 (Actions) | 65 page runs, **0 findings** (Firefox's only message is its advisory about scroll-linked effects). Interactions: **Firefox 65/65, WebKit 66/66**. Headless Firefox reports no mouse, so the index check there confirms the inline thumbnails instead of the hover window |
+| Firefox 142 / WebKit 26 (Actions) | 65 page runs, **0 findings** (Firefox's only messages are its advisory about scroll-linked effects and, once, a cancelled repeat request for a video it already had cached — `NS_ERROR_PARSED_DATA_CACHED`, not a page error). Interactions: **Firefox 65/65, WebKit 66/66**. Headless Firefox reports no mouse, so the index check there confirms the touch layout (rows with screenshots) instead of the hover window |
 | Lighthouse 12.8 (home, /work/, /reviews/, /tools/ × mobile + desktop) | Accessibility, best practices and SEO **100** on every run; performance **100 on desktop**; mobile: /tools/ 98–99, /reviews/ 97, /work/ 96, home 92 (see below); CLS 0.000–0.003 |
 | Internal links and assets | 3,507 references, 0 missing |
 
@@ -28,6 +28,9 @@ Latest round: Mousa's third set of notes (hover on everything, scattered cards, 
 | Axe contrast: check numbers in orange-soft on cobalt; the ASAS chips and number cards while half-transparent in their scatter | Numbers in pale orange (5.2:1); cards fly in solid, moving only (no fading) |
 | The check scene's new "Check 04" chip lost its icon (flex item squeezed to 0 px inside a zero-width line) and at first shared a class name with the section heading | `flex: none`; renamed |
 | /work/ header counts sat half-scattered when the page opened | Cards on the first screen start in place and only scatter away |
+| Round 4, axe: the index's entry numbers (grey #8b919c) and the numbers on the blue review checks fell below 4.5:1 | Numbers in ink-2 (8:1) and pale cobalt on blue (5.1:1) |
+| Round 4, phones: the contact email link (24 px tall) and the index rows' links (21–23 px) were under the 24 px tap-target minimum | Vertical padding on both |
+| Round 4, interactions: "/tools/: 9 tool sections" failed after The Lab was removed at Mousa's request | The check now compares the sections with the jump links instead of a fixed count |
 | Lighthouse mobile: home 87 (TBT 204 ms), /tools/ 92 (TBT 311 ms). Setting up every card's scroll animation at start-up (one trigger per card, 50+ on /tools/) made five long tasks; the hero photo, the page's largest paint, also faded in from transparent | Card grids are set up only as they near the screen, measuring all cards before animating any; the photo rises without fading. Home 92 (TBT 28–46 ms), /tools/ 98–99 (TBT 0–1 ms) |
 
 The home page on mobile stays at 92: its largest paint is the photo, which arrives in about 0.5 s but is painted after the page's start-up work under Lighthouse's 4× CPU slowdown (3.3 s simulated; 0.23–0.28 s measured locally without throttling). Desktop is 100.
