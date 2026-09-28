@@ -162,8 +162,8 @@
   --t-h1: clamp(3.25rem, 9vw, 9.5rem);
   --t-h2: clamp(2.5rem, 5vw, 5.25rem); /* every section heading (Mousa, round 4: one size) */
   --t-h3: clamp(1.55rem, 2.3vw, 2.3rem); /* every card and paragraph heading */
-  --t-lead: clamp(1.25rem, 1.5vw, 1.625rem);
-  --t-body: clamp(1.0625rem, 0.35vw + 0.95rem, 1.1875rem);
+  --t-lead: clamp(1.125rem, 1.3vw, 1.4375rem);
+  --t-body: clamp(1rem, 0.3vw + 0.9rem, 1.0625rem);
   --t-small: 0.9375rem;
   --t-slug: 0.75rem;
   --t-label: 0.8125rem;

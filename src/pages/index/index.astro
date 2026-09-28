@@ -11,7 +11,7 @@ import { reviewShot } from '../../lib/shots';
 import { view } from '../../lib/media';
 import { SITE_URL, CHECKED, formatDate } from '../../data/site';
 
-const tone: Record<string, string> = { systems: 'var(--lilac)', 'case-studies': 'var(--sky)', sites: 'var(--mint)', reviews: 'var(--lemon)', proposals: 'var(--blush)' };
+const tone: Record<string, string> = { systems: '#dbe8fd', 'case-studies': 'var(--sky)', sites: 'var(--mint)', reviews: 'var(--lemon)', proposals: 'var(--blush)' };
 const dot: Record<string, string> = { systems: 'var(--accent)', 'case-studies': 'var(--iris-deep)', sites: 'var(--leaf)', reviews: 'var(--blue-soft)', proposals: 'var(--grey-4)' };
 const byCat = categories.map((c) => ({ ...c, items: entries.filter((e) => e.category === c.id) }));
 const parentOf = (e: Entry) => (e.family ? entries.find((p) => p.slug === e.family) : undefined);

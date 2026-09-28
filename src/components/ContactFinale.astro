@@ -99,16 +99,19 @@ const src = (w: number, f: string) => `/media/me/mousa-${w}.${f}`;
   .finale__email {
     justify-self: start;
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 500;
     font-stretch: 80%;
-    font-size: min(clamp(1.35rem, 2.7vw, 2.5rem), calc(100cqi / 12.6));
+    font-size: min(clamp(1.25rem, 2.3vw, 2.125rem), calc(100cqi / 12.6));
     line-height: 1.1;
     padding-block: 6px;
     color: #fff;
     text-decoration: none;
     overflow-wrap: anywhere;
   }
-  .finale__copy { --btn-bg: #fff; --btn-fg: var(--ink); }
+  /* Copy sits beside the address as a quiet text control: no fill, small. */
+  .finale__copy { --btn-bg: transparent; --btn-fg: #fff; min-height: 40px; padding: 0 4px; border-color: transparent; font-size: 0.875rem; text-decoration: underline; text-decoration-color: rgb(255 255 255 / 0.4); text-underline-offset: 4px; }
+  .finale__copy::before { display: none; }
+  .finale__copy:hover { text-decoration-color: currentColor; }
   .finale__actions { display: flex; align-items: center; gap: var(--s-5); flex-wrap: wrap; }
   .finale__stamp:empty { display: none; }
   .finale__stamp { display: inline-block; padding: 10px 16px; border-radius: var(--r-pill); background: var(--accent); color: #fff; font: 750 0.9375rem/1 var(--font-text); }
