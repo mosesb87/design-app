@@ -64,7 +64,7 @@ const effect = {
   '404.html': 'new file; only used if you add the optional ErrorDocument line',
   work: 'new folder — /work/ returns 404 on the live domain today (checked 2026-09-26)',
   blog: 'REPLACES /blog/index.html and adds /blog/<post>/ folders — download the whole existing blog folder first',
-  reviews: 'REPLACES /reviews/index.html and adds /reviews/<review>/ folders; the old /reviews/reviews/, /reviews/builds/, /reviews/method/, /reviews/img/ and /reviews/assets/ stay on the server — download the whole existing reviews folder first',
+  reviews: 'REPLACES /reviews/index.html only (its cards open each review’s own website); the old /reviews/reviews/, /reviews/builds/, /reviews/method/, /reviews/img/ and /reviews/assets/ stay on the server — download the whole existing reviews folder first',
   about: 'new folder — /about/ returns 404 on the live domain today (checked 2026-09-26)',
   tools: 'new folder — /tools/ returns 404 on the live domain today (checked 2026-09-27)',
   index: 'new folder — the index of every build; /index/ returns 404 on the live domain today (checked 2026-09-27)',
@@ -101,13 +101,7 @@ const redirects = `# mousabatarseh.com — redirects for the new portfolio. Past
 # Blog: each post that has a page here (old links opened the blog index).
 ${posts.map((p) => `RewriteRule ^${p.slug}/?$ /blog/${p.slug}/ [R=301,L]`).join('\n')}
 
-# Reviews: the reviews site's summary pages → the review's page here.
-RewriteRule ^reviews/reviews/([a-z0-9-]+)/?(index\.html)?$ /reviews/$1/ [R=301,L]
-RewriteRule ^reviews/index\.html$ /reviews/ [R=301,L]
-
-# Optional — only if you want the full-review folders to point here too. They are the original work samples
-# (some were sent with job applications), so they are left alone unless you uncomment these.
-${reviews.map((r) => `# RewriteRule ^${r.source.replace('https://mousabatarseh.com/', '').replace(/\/$/, '')}/?$ /reviews/${r.slug}/ [R=301,L]`).join('\n')}
+# Reviews: no rules. Each review is its own independent website and keeps its own address.
 `;
 fs.writeFileSync(path.join(root, 'deploy', 'redirects.htaccess'), redirects);
 

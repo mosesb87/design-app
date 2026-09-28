@@ -1,7 +1,7 @@
 ---
 // One review as a card: the review's first screen in a black browser window that breaks out of the card's top
 // edge, the number that explains the rest, what
-// it counts, the brand and the date. The whole card opens the review's page on this site.
+// it counts, the brand and the date. The whole card opens the review's own website (Mousa: each review is an independent site).
 import BrowserFrame from './BrowserFrame.astro';
 import { allReviews, statText } from '../data/reviews';
 import { formatDate } from '../data/site';
@@ -21,7 +21,7 @@ const Heading = level;
   <div class="rcard__body">
     <p class="rcard__num num" style={`--chars:${Math.max(3, num.length)}`}>{num}</p>
     <p class="rcard__label">{label ?? r.stat.label}</p>
-    <Heading class="rcard__title"><a href={`/reviews/${r.slug}/`}>{r.brand}<span class="rcard__kind"> · {r.kind}</span></a></Heading>
+    <Heading class="rcard__title"><a href={r.source}>{r.brand}<span class="rcard__kind"> · {r.kind}</span></a></Heading>
     {showBlurb && <p class="rcard__blurb">{r.blurb}</p>}
     <p class="rcard__meta"><span>{r.site}</span><span><time datetime={r.date}>{formatDate(r.date)}</time></span></p>
     {showFocus && <p class="rcard__focus">{r.focus.map((f) => <span>{f}</span>)}</p>}

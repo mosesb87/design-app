@@ -17,7 +17,7 @@ const jsonLd = [
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: allReviews.length,
-      itemListElement: allReviews.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: r.title, url: `${SITE_URL}/reviews/${r.slug}/` })),
+      itemListElement: allReviews.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: r.title, url: r.source })),
     },
   },
 ];

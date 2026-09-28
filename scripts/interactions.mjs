@@ -152,8 +152,14 @@ async function ctx(opts) {
     check(`Case ${h}: one h1, next → ${info.next}`, info.h1 === 1 && !!info.next && info.next !== h);
   }
 
-  // Blog and reviews: every card opens a page on this site with one h1 and its article; sheet anchors resolve.
-  for (const [where, sel, body] of [['/blog/', '.card__title a', '.post__body'], ['/reviews/', '.rcard__title a', '.sheet']]) {
+  // Reviews: each card opens the review's own website on mousabatarseh.com (independent sites, not pages here).
+  await p.goto(BASE + '/reviews/', { waitUntil: 'networkidle' });
+  const revHrefs = await p.$$eval('.rcard__title a', (as) => as.map((a) => a.getAttribute('href')));
+  const notOwn = revHrefs.filter((h) => !/^https:\/\/mousabatarseh\.com\/[a-z0-9-]+-review\/$/.test(h));
+  check(`/reviews/: every card opens its own review website (${revHrefs.length})`, revHrefs.length === 22 && notOwn.length === 0, notOwn.slice(0, 3).join(' '));
+
+  // Blog: every card opens a page on this site with one h1 and its article.
+  for (const [where, sel, body] of [['/blog/', '.card__title a', '.post__body']]) {
     await p.goto(BASE + where, { waitUntil: 'networkidle' });
     const hrefs = await p.$$eval(sel, (as) => as.map((a) => a.getAttribute('href')));
     const off = hrefs.filter((h) => !h.startsWith(where));

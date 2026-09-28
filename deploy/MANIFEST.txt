@@ -1,4 +1,4 @@
-mousabatarseh-root.zip — built 2026-09-27T23:42:21.609Z
+mousabatarseh-root.zip — built 2026-09-28T04:21:54.276Z
 Unzip into the domain's document root (public_html). Top-level entries:
 
 404.html                    0.0 MB   new file; only used if you add the optional ErrorDocument line
@@ -13,7 +13,7 @@ index.html                  0.1 MB   REPLACES the current home page — download
 llms.txt                    0.0 MB   new or replaces — check whether the root already has one
 media/                     79.2 MB   new folder — captures and recordings
 og/                         3.4 MB   new folder — social sharing images
-reviews/                    1.4 MB   REPLACES /reviews/index.html and adds /reviews/<review>/ folders; the old /reviews/reviews/, /reviews/builds/, /reviews/method/, /reviews/img/ and /reviews/assets/ stay on the server — download the whole existing reviews folder first
+reviews/                    0.1 MB   REPLACES /reviews/index.html only (its cards open each review’s own website); the old /reviews/reviews/, /reviews/builds/, /reviews/method/, /reviews/img/ and /reviews/assets/ stay on the server — download the whole existing reviews folder first
 sitemap-portfolio.xml       0.0 MB   new file; the existing sitemap.xml is untouched
 tools/                      0.1 MB   new folder — /tools/ returns 404 on the live domain today (checked 2026-09-27)
 work/                       0.6 MB   new folder — /work/ returns 404 on the live domain today (checked 2026-09-26)

@@ -103,8 +103,8 @@ export const entries: Entry[] = [
   { slug: 'our-family-life', title: 'Our Family Life Blog', category: 'sites', what: 'Family blog website.', languages: ['EN'], url: 'https://ourfamilylife.net/', status: 'unchecked', media: 'our-family-life' },
   { slug: 'projects-archive', title: 'Projects Archive', category: 'sites', what: 'Motion-led archive of web, e-commerce, landing-page, SEO and product-data work.', platform: 'Portfolio', languages: ['EN'], url: `${M}/projects/`, status: 'live', media: 'projects-archive', date: '2026-09-15' },
 
-  // ── Reviews: every one, each with its page on this site (/reviews/<slug>/)
-  ...allReviews.map((r): Entry => ({ slug: `review-${r.slug}`, title: r.brand, category: 'reviews', what: `${r.kind}: ${statText(r)} ${r.stat.label}.`, platform: r.focus.join(' · '), url: `/reviews/${r.slug}/`, status: 'live', media: reviews.find((x) => x.slug === r.slug)?.media, date: r.date })),
+  // ── Reviews: every one, each linking to its own independent website
+  ...allReviews.map((r): Entry => ({ slug: `review-${r.slug}`, title: r.brand, category: 'reviews', what: `${r.kind}: ${statText(r)} ${r.stat.label}.`, platform: r.focus.join(' · '), url: r.source, status: 'live', media: reviews.find((x) => x.slug === r.slug)?.media, date: r.date })),
 
   // ── Proposals
   { slug: 'proposal-gardner-white', title: 'Same-Day Answers · Gardner-White web-orders desk', category: 'proposals', what: 'Proposal site built for a job application: a working web-orders desk demo with fictional customers.', url: `${M}/gardner-white-proposal/`, status: 'live', media: 'proposal-gardner-white', date: '2026-09-22' },
