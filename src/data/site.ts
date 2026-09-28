@@ -186,7 +186,7 @@ export const courses: { title: string; issuer: string; text: string; cert?: { im
 ];
 
 // The degree, as Mousa's home page states it (place from his résumé page).
-export const degree = { title: 'Bachelor of Arts (B.A.)', field: 'Accounting Information Systems', school: 'Al-Balqa Applied University', place: 'Amman, Jordan', years: '2006–2010' };
+export const degree = { title: 'Bachelor of Science (B.S.)', field: 'Accounting Information Systems', school: 'Al-Balqa Applied University', place: 'Amman, Jordan', years: '2016' };
 
 // Six curated reviews (the full set of 22 stays on the live /reviews/ index)
 export type Review = {
