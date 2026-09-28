@@ -25,7 +25,7 @@ const jsonLd = [
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: entries.length,
-      itemListElement: entries.map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: e.title, url: e.caseStudy ? `${SITE_URL}/work/${e.caseStudy}/` : e.url })),
+      itemListElement: entries.map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: e.title, url: e.url ?? (e.caseStudy ? `${SITE_URL}/work/${e.caseStudy}/` : undefined) })),
     },
   },
 ];
@@ -60,8 +60,9 @@ const jsonLd = [
               </BrowserFrame>
             </div>
             <p class="case-card__meta"><span class="case-card__n num">{String(i + 1).padStart(2, '0')}</span><span>{c.group === 'systems' ? 'System' : 'Site / store'}</span></p>
-            <h3 class="case-card__title"><a href={`/work/${c.slug}/`} data-vt-plate>{c.title}</a></h3>
+            <h3 class="case-card__title"><a href={c.url} rel="noopener" data-vt-plate>{c.title}</a></h3>
             <p class="case-card__kicker">{c.kicker}</p>
+            <p class="case-card__case"><a href={`/work/${c.slug}/`}>Case study <span aria-hidden="true">→</span><span class="visually-hidden">: {c.title}</span></a></p>
             <span class="case-card__arrow" aria-hidden="true">→</span>
           </li>
         );
@@ -111,6 +112,8 @@ const jsonLd = [
   .case-card__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 3; }
   .case-card__title a:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; border-radius: 4px; }
   .case-card__kicker { font-weight: 550; color: var(--ink-2); }
+  .case-card__case { position: relative; z-index: 4; margin-top: 6px; font-weight: 700; }
+  .case-card__case a { text-decoration: none; border-bottom: 2px solid currentColor; }
   .case-card__arrow { position: absolute; right: clamp(14px, 1.4vw, 20px); bottom: clamp(20px, 2vw, 28px); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: #fff; transition: transform 0.5s var(--ease-pop); }
   .case-card:hover .case-card__arrow { transform: rotate(-45deg); }
   @media (min-width: 700px) { .cases__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

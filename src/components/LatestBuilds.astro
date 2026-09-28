@@ -27,8 +27,9 @@ const kind: Record<string, string> = { reviews: 'Review', proposals: 'Proposal',
         {items.map((e, i) => {
           const shot = view(e.media, 'desktop-hero');
           const rshot = shot ? null : reviewShot(e);
-          const href = e.caseStudy ? `/work/${e.caseStudy}/` : e.url;
-          const external = !e.caseStudy && !!e.url && /^https?:/.test(e.url);
+          // Each build opens its own website; builds without one open their case study.
+          const href = e.url ?? `/work/${e.caseStudy}/`;
+          const external = !!e.url && /^https?:/.test(e.url);
           return (
             <li class="lb__card" style={`--tone:${tones[i % tones.length]}`} data-gather-card>
               <a class="lb__link" href={href} rel={external ? 'noopener' : undefined}>

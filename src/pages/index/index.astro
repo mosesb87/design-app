@@ -51,9 +51,10 @@ const jsonLd = [
           const shot = view(e.media, 'desktop-hero');
           const rshot = shot ? null : reviewShot(e);
           const parent = parentOf(e);
-          const primary = e.caseStudy ? `/work/${e.caseStudy}/` : e.url;
+          // Each build links to its own website; the case study, where there is one, is the secondary link.
+          const primary = e.url ?? (e.caseStudy ? `/work/${e.caseStudy}/` : undefined);
           const external = !!primary && /^https?:/.test(primary);
-          const liveHref = e.url && e.caseStudy ? e.url : null;
+          const caseHref = e.caseStudy ? `/work/${e.caseStudy}/` : null;
           return (
             <li class:list={['ixc', { 'ixc--child': !!parent }]} id={`e-${e.slug}`} data-pop>
               <div class="ixc__shot" aria-hidden="true">
@@ -74,7 +75,7 @@ const jsonLd = [
                 {e.languages && <span class="ixc__tag ixc__tag--lang">{e.languages.join(' · ')}</span>}
                 {parent && e.platform && <span class="ixc__tag ixc__tag--lang">{e.platform}</span>}
               </p>
-              {liveHref && <a class="ixc__live" href={liveHref} rel="noopener">Live site <span aria-hidden="true">↗</span><span class="visually-hidden"> ({e.title})</span></a>}
+              {caseHref && <a class="ixc__live" href={caseHref}>Case study <span aria-hidden="true">→</span><span class="visually-hidden"> ({e.title})</span></a>}
             </li>
           );
         })}

@@ -1,2 +1,1 @@
-Package requested 2026-09-28: build the upload for mousabatarseh.com from this commit (red-letter hero, aligned icons, reviews linking to their own sites).
-Upload only after Mousa approves — see docs/deploy.md.
+Package requested 2026-09-28 (b): every build card links to its own website; tools unchanged.
