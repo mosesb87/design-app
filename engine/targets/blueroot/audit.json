@@ -1,0 +1,187 @@
+{
+  "status": "audited",
+  "company": "Blueroot Health (storefront scored: Fairhaven Health)",
+  "url": "https://www.fairhavenhealth.com",
+  "hq_city": "Middletown, CT",
+  "segment": "DTC brand",
+  "sells": "fertility, prenatal, menopause and women's health supplements",
+  "platform": "Shopify",
+  "platform_evidence": "robots.txt 'Shopify storefront' header; /cdn/shop/ assets; /products/ and /collections/ URLs; Shopify.theme = Vision 7.0.0 (theme_store_id 2053); shop fairhavenhealthcom.myshopify.com; Recharge SubscriptionWidgetConfig, Rebuy, Stamped, Klaviyo, Gorgias, Redo, Route, Triple Whale scripts",
+  "audited_at": "2026-09-28",
+  "pages_checked": [
+    "https://www.fairhavenhealth.com/",
+    "https://www.fairhavenhealth.com/robots.txt",
+    "https://www.fairhavenhealth.com/sitemap.xml",
+    "https://www.fairhavenhealth.com/sitemap_products_1.xml?from=8181787656477&to=9959747649821",
+    "https://www.fairhavenhealth.com/sitemap_collections_1.xml?from=438525034781&to=638925111581",
+    "https://www.fairhavenhealth.com/collections.json?limit=250",
+    "https://www.fairhavenhealth.com/products.json?limit=250",
+    "https://www.fairhavenhealth.com/collections/all",
+    "https://www.fairhavenhealth.com/collections/female-fertility-supplements",
+    "https://www.fairhavenhealth.com/collections/shop-pregnancy",
+    "https://www.fairhavenhealth.com/collections/pregnancy-and-ovulation-tests",
+    "https://www.fairhavenhealth.com/collections/ovulation-prediction/products.json?limit=50",
+    "https://www.fairhavenhealth.com/collections/private/products.json?limit=50",
+    "https://www.fairhavenhealth.com/products/fh-pro-for-women",
+    "https://www.fairhavenhealth.com/products/myo-inositol",
+    "https://www.fairhavenhealth.com/products/coq10",
+    "https://www.fairhavenhealth.com/products/fh-pro-fertility-multivitamin-for-men",
+    "https://www.fairhavenhealth.com/products/ovaboost",
+    "https://www.fairhavenhealth.com/products/calcium-magnesium-prenatal",
+    "https://www.fairhavenhealth.com/products/prenatal-dha-epa",
+    "https://www.fairhavenhealth.com/products/peapod-prenatal",
+    "https://www.fairhavenhealth.com/products/fertilecm-cervical-mucus-supplement",
+    "https://www.fairhavenhealth.com/products/fertilaid-multivitamin-for-women",
+    "https://www.fairhavenhealth.com/products/fertilaid-multivitamin-for-men",
+    "https://www.fairhavenhealth.com/products/fertilitea-fertility-tea-for-women",
+    "https://www.fairhavenhealth.com/products/fertilaid-multivitamin-value-pack",
+    "https://www.fairhavenhealth.com/products/motilityboost",
+    "https://www.fairhavenhealth.com/products/milkies-nursing-postnatal-breastfeeding-multivitamin",
+    "https://www.fairhavenhealth.com/products/female-fertility-supplement-starter-pack",
+    "https://www.fairhavenhealth.com/products/isofresh-vaginal-probiotic",
+    "https://www.fairhavenhealth.com/products/babydance-fertility-lubricant-no-applicators",
+    "https://www.fairhavenhealth.com/products/complete-menopause-relief",
+    "https://www.fairhavenhealth.com/products/myo-d-chiro-inositol",
+    "https://www.fairhavenhealth.com/pages/contactus",
+    "https://www.fairhavenhealth.com/pages/our-story",
+    "https://www.fairhavenhealth.com/pages/shipping-and-returns",
+    "https://www.fairhavenhealth.com/pages/accessibility-statement",
+    "https://www.fairhavenhealth.com/pages/retailers-distributors",
+    "https://www.fairhavenhealth.com/blogs/fairhaven-health-library",
+    "https://www.fairhavenhealth.com/search?q=fertilaid"
+  ],
+  "sample_urls": {
+    "category": "https://www.fairhavenhealth.com/collections/female-fertility-supplements",
+    "product1": "https://www.fairhavenhealth.com/products/fh-pro-for-women",
+    "product2": "https://www.fairhavenhealth.com/products/myo-inositol"
+  },
+  "checks": {
+    "F1": {
+      "s": 2,
+      "e": "curl final URL https://www.fairhavenhealth.com/ returned 200; all 40 fetched URLs served over https"
+    },
+    "F2": {
+      "s": 2,
+      "e": "/robots.txt: 'Allow: /', blocks only cart/checkout/account/sort_by; ends 'Sitemap: https://www.fairhavenhealth.com/sitemap.xml'"
+    },
+    "F3": {
+      "s": 2,
+      "e": "/sitemap.xml index -> sitemap_products_1.xml (32 product URLs), sitemap_collections_1.xml (42), pages, blogs; all fetched 200"
+    },
+    "F4": {
+      "s": 2,
+      "e": "Home 'Fairhaven Health - Natural Fertility, Pregnancy, and Nursing Products'; 20/20 sampled PDP titles unique (73-91 chars, brand suffix)"
+    },
+    "F5": {
+      "s": 2,
+      "e": "Home desc 'Fairhaven Health offers all natural, doctor-designed fertility...'; PDP desc unique on 20/20 (13 end 'Learn more…')"
+    },
+    "F6": {
+      "s": 2,
+      "e": "<link rel=canonical> = https://www.fairhavenhealth.com/ on home and https://www.fairhavenhealth.com/products/fh-pro-for-women on PDP"
+    },
+    "F7": {
+      "s": 2,
+      "e": "PDP ld+json: Product (sku, gtin12) + Offer (89.99, InStock) + FAQPage; home Organization+WebSite; no BreadcrumbList/AggregateRating 20/20"
+    },
+    "F8": {
+      "s": 2,
+      "e": "Hyphenated handles: /products/fh-pro-for-women, /collections/female-fertility-supplements; no IDs or session params"
+    },
+    "C1": {
+      "s": 2,
+      "e": "Consistent brand/type titles: 'FH PRO® Fertility Multivitamin For Women', 'Myo + D-Chiro Inositol Powder'; sizes as variants '120 CT/240 CT'"
+    },
+    "C2": {
+      "s": 2,
+      "e": "products.json body_html: fh-pro-for-women 421 words, myo-inositol 164 words (range 145-847; 1 of 32 empty: milkies-nursing-postnatal)"
+    },
+    "C3": {
+      "s": 2,
+      "e": "fh-pro-for-women 7 images, myo-inositol 10 images; alt e.g. 'Fairhaven Health FH Pro Fertility Multivitamin for Women supplement facts.'"
+    },
+    "C4": {
+      "s": 2,
+      "e": "PDP $89.99 + 'Add to Cart'; sold-out item shows 'Sold out'; Offer availability InStock/OutOfStock; 'Free Shipping (US) on orders $35+'"
+    },
+    "C5": {
+      "s": 2,
+      "e": "/products/myo-inositol has Size selector (120 CT $19.99 / 240 CT $35.99); Supplement Facts only as image (*_SFP.jpg), no HTML table on 20/20"
+    },
+    "C6": {
+      "s": 2,
+      "e": "Mega-menu Products > Life Stage/Health Concern; crumb 'Home / Shop / Female Fertility Supplements'; PDP crumb only 'Home / product name'"
+    },
+    "C7": {
+      "s": 2,
+      "e": "Metafield filters (filter.p.m.custom.gender, life_stage, health_benefit, key_ingredients, made_without...) + 9 sort options on collection"
+    },
+    "C8": {
+      "s": 2,
+      "e": "/search?q=fertilaid -> page titled 'Search: 30 results found for \"fertilaid\"' with filters, Relevance sort; predictive search drawer"
+    },
+    "B1": {
+      "s": 2,
+      "e": "'Add to Cart' button on PDP (product-form); homepage hero 'Shop Now' + 9 'Add to Cart' buttons on product cards"
+    },
+    "B2": {
+      "s": 2,
+      "e": "/pages/shipping-and-returns: free shipping over $35 ($4.95 under), ships 1-2 business days, 4-8 day delivery, 30-day unopened returns + RMA"
+    },
+    "B3": {
+      "s": 2,
+      "e": "PDP renders Shopify accelerated-checkout (Shop Pay/PayPal) buttons; 'Login' optional header link, no account wall (checkout not entered)"
+    },
+    "B4": {
+      "s": 2,
+      "e": "Home links /collections/new, /best-sellers, /bundles, /surplus-savings, /fh-pro + product carousels; /collections/all 200 (32 products)"
+    },
+    "B5": {
+      "s": 2,
+      "e": "Stamped ratings on cards/PDP (FertilAid Women 1,921 reviews 4.5★); 'guaranteed for quality and label claim' on returns page; Route/Redo apps"
+    },
+    "T1": {
+      "s": 2,
+      "e": "/pages/contactus: form + 800-367-2837 (Mon-Fri 8-6 ET) + 45 Kenneth Dooley Drive, Middletown CT 06457 + support@fairhavenhealth.com"
+    },
+    "T2": {
+      "s": 1,
+      "e": "/pages/our-story 'Our Difference': ~161 words (20+ years, vision/mission, 5 bullets) then a Best Sellers carousel - brief"
+    },
+    "T3": {
+      "s": 2,
+      "e": "Footer: /policies/privacy-policy, /policies/terms-of-service, /pages/ccpa-opt-out + /pages/accessibility-statement ('Updated: August 2023')"
+    },
+    "T4": {
+      "s": 2,
+      "e": "Footer: facebook.com/FairhavenHealth.FertilAid and instagram.com/fairhaven_health (also in Organization sameAs)"
+    },
+    "T5": {
+      "s": 2,
+      "e": "'Skip to content' link to #main-content; product images carry alt text; /pages/accessibility-statement present"
+    },
+    "N1": {
+      "s": 1,
+      "e": "/blogs/fairhaven-health-library exists (3 pages, 'Why Blood Sugar Balance Is So Important...') but no <time>/date on index or home cards"
+    },
+    "N2": {
+      "s": 2,
+      "e": "FAQ accordion on 17/20 PDPs (FAQPage ld+json); /pages/products-quiz; blog how-tos e.g. 'How to Talk to Your Healthcare Provider...'"
+    },
+    "N3": {
+      "s": 1,
+      "e": "/pages/retailers-distributors lists international distributors with addresses/phones (Bulgaria, Canada, NZ...); no US store locator or hours"
+    }
+  },
+  "strengths": [
+    "Clean technical SEO baseline: robots.txt with Sitemap line, sitemap index with 32 product + 42 collection URLs, canonicals and unique titles/meta descriptions on 20/20 sampled PDPs, Product+Offer+FAQPage JSON-LD on every PDP (captures/fh_pdp_sample_summary.json).",
+    "Native Shopify Search & Discovery metafield filters (Gender, Life Stage, Health Benefit, Key Ingredients, Made Without, Product Form, Lifestyle, FSA/HSA) plus 9 sort options on collections and a working search results page (captures/fh_collections_female-fertility-supplements.html).",
+    "Consistent PDP template on 20/20 sampled products: Key benefits / Ingredients / Suggested Use / Product Description / FAQ / Frequently Bought Together, Stamped review counts (up to 1,921), Recharge 10% subscribe widget, and prices that match products.json and collection cards on 20/20 (captures/fh_pdp_sample_summary.json)."
+  ],
+  "fixes": [
+    "Footer 'Shop' nav and sitemap: remove or refill empty collections - /collections/shop-pregnancy ('0 products'), /collections/pregnancy-and-ovulation-tests ('No products found'), /collections/private (0 products) and /collections/ovulation-prediction (1 sold-out lubricant); set 'Pregnancy'/'Ovulation' footer links to live collections or unpublish them from the Online Store channel.",
+    "Promotions: the '30% OFF LIMITED-TIME OFFER - SELECT SIZES - APPLIED IN CART' badge sits on 5 single-variant products (FertileCM, FertiliTea, Milkies, Complete Lactation Support, Menopause Multivitamin Essentials) while PDP/card/JSON-LD still show full price and compare_at_price is null on 32/32 products - use compare-at pricing or a Shopify Function discount that renders the sale price on card and PDP, and fix the 'select sizes' copy.",
+    "Catalog data: fill product_type on 32/32 products (blank today vs 0/112 blank on bariatricfusion.com), normalize the 32 tags (three spellings of 'vaginal care', internal tags like exclude_rebuy/fam-fhpro-men mixed with merchandising tags), and move Supplement Facts from image-only (*_SFP.jpg on 17/20 PDPs) into a metafield rendered as an HTML table."
+  ],
+  "notes": "All 40 Fairhaven fetches returned 200 via curl (no JS-render fallback needed). Review widgets (Stamped) and the Recharge subscription widget render client-side; counts were read from server-side badge attributes (data-reviews/data-rating) and SubscriptionWidgetConfig. Checkout was not entered; B3 is based on accelerated-checkout buttons on the PDP. Blog article pages were not fetched (per-store fetch cap), so N1 reflects the undated index only. Sister stores bariatricfusion.com, vitalnutrients.co and unjury.com were sampled (17 fetches total) for Part 2 cross-brand findings only and are not scored here. Health/medical claim language was deliberately not evaluated."
+}

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Royal Apparel · Good Blanks, Blank Fields · an ecommerce review by Mousa Batarseh</title>
+<meta name="description" content="An independent review of royalapparel.net for the Digital Marketing & Ecommerce Coordinator role: 1,063 sitemap URLs and 20 product pages read on September 28, 2026, six findings, five working fixes and the merchandising QA workbook.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://mousabatarseh.com/royal-apparel-review/">
+<meta property="og:title" content="Royal Apparel · Good blanks, blank fields">
+<meta property="og:description" content="1,063 sitemap URLs read. Six findings. Five working fixes. By Mousa Batarseh.">
+<meta property="og:image" content="https://mousabatarseh.com/royal-apparel-review/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='13' y='2' width='6' height='28' rx='2' fill='%23111'/%3E%3Crect x='2' y='13' width='28' height='6' rx='2' fill='%23b3261e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+__ENGINE_CSS__
+/* ---- Royal Apparel tokens: black on white, a Garamond for the headlines, condensed caps for labels, thread-red only for flags ---- */
+:root{
+  --paper:#ffffff; --paper-2:#f3f3f0; --ink:#121212; --ink-2:#3d4348; --muted:#6f7479;
+  --accent:#121212; --accent-ink:#fff; --accent-soft:#e9e9e4; --good:#2e6b3a; --warn:#9a5b16; --bad:#b3261e;
+  --line:rgba(18,18,18,.16); --r:6px; --wrap:1180px;
+  --display:"EB Garamond",Garamond,Georgia,serif; --sans:"Barlow",Helvetica,Arial,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif;
+}
+body{font-size:17.5px}
+h2{font-weight:600;letter-spacing:-.01em}
+.kicker,.eyebrow,.finding .lab,.strip .suffix,.proto-head .tag,.plan h3,.tbl th,.checks summary .m,.dial .grade,.fit .h{font-family:var(--cond);letter-spacing:.14em;font-weight:600}
+.nav a{font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;font-size:.95rem;font-weight:600;border-radius:0}
+.btn{border-radius:0;font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;font-size:1rem}
+.hero h1{font-weight:600;font-size:clamp(3rem,8.4vw,7rem);letter-spacing:-.02em}
+.hero h1 .accent{font-style:italic;font-weight:500}
+.strip{border-radius:0}.strip b{font-weight:600}
+.fit,.proto,.plan>div,.dial,.checks details,.files a,.tbl-scroll,.note{border-radius:0}
+.finding .num{font-weight:600}
+.finding .count{border-radius:0}
+.pill{border-radius:0}
+.toggle{border-radius:0}.toggle button{font-family:var(--cond);text-transform:uppercase;letter-spacing:.08em;font-size:.95rem}
+/* ---- hero art: the woven label ---- */
+.label-stage{display:grid;justify-items:center;gap:14px}
+.label{width:min(100%,360px);background:#fff;border:1px solid var(--ink);padding:18px 18px 22px;position:relative;box-shadow:0 30px 50px -36px rgba(0,0,0,.5);font-family:var(--cond);text-transform:uppercase;letter-spacing:.08em}
+.label::before{content:"";position:absolute;inset:6px;border:1px dashed var(--ink);pointer-events:none}
+.label .lh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.label .lh b{font-size:1.5rem;letter-spacing:.06em}
+.label .lh span{font-size:.72rem;color:var(--muted)}
+.label .row{display:grid;grid-template-columns:118px 1fr;gap:6px 10px;padding:7px 0;font-size:.82rem;align-items:baseline}
+.label .row + .row{background:none}
+.label .row .k{color:var(--muted);font-weight:500}
+.label .row .v{font-family:var(--mono);text-transform:none;letter-spacing:0;font-size:.8rem;min-height:1.2em}
+.label .row .v.blank{color:var(--bad)}
+.label .row .v.blank::after{content:"▯";opacity:.6}
+.label .row .v.filled{color:var(--good)}
+.label .stitch{margin-top:12px;font-size:.66rem;color:var(--muted);display:flex;justify-content:space-between}
+.label .cut{position:absolute;left:-1px;right:-1px;top:-1px;height:1px;border-top:1px dashed var(--ink)}
+.label-stage .toggle{justify-self:center}
+.marquee{overflow:hidden;margin-top:clamp(28px,4vw,48px);border:1px solid var(--line);padding:10px 0;background:var(--paper)}
+.marquee .track{display:flex;gap:40px;white-space:nowrap;width:max-content;animation:mq 46s linear infinite;font-family:var(--cond);font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.marquee .track span::after{content:"·";margin-left:40px;color:var(--bad)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+/* ---- prototypes ---- */
+.chain{display:grid;gap:8px}
+.hop{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:12px 14px;border:1px solid var(--line);background:var(--paper)}
+.hop .st{font-family:var(--mono);font-size:.8rem;font-weight:600;padding:2px 8px;background:var(--paper-2)}
+.hop .st.s3{background:color-mix(in srgb,var(--warn) 18%,#fff);color:var(--warn)}.hop .st.s2{background:color-mix(in srgb,var(--good) 16%,#fff);color:var(--good)}.hop .st.s2.bad{background:color-mix(in srgb,var(--bad) 12%,#fff);color:var(--bad)}
+.hop .u{font-family:var(--mono);font-size:.82rem;word-break:break-all}
+.hop .n{font-size:.86rem;color:var(--ink-2);margin-top:4px}
+.bars{display:grid;gap:10px}
+.bar-row{display:grid;grid-template-columns:150px 1fr auto;gap:10px;align-items:center;font-size:.9rem}
+.bar-row .b{height:22px;background:var(--paper-2);position:relative;overflow:hidden}
+.bar-row .b i{position:absolute;inset:0 auto 0 0;background:var(--ink);width:0;transition:width 1.2s var(--ease)}
+.bar-row .b i.warn{background:var(--warn)}.bar-row .b i.bad{background:var(--bad)}.bar-row .b i.good{background:var(--good)}
+.bar-row .n{font-family:var(--mono);font-size:.82rem;min-width:70px;text-align:right}
+.lint{display:grid;gap:10px}
+.lint .item{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:10px 12px;border:1px solid var(--line);font-size:.9rem;align-items:start}
+.lint .item .s{font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;font-weight:700;font-size:.8rem;padding:3px 8px}
+.lint .item .s.fail{background:color-mix(in srgb,var(--bad) 12%,#fff);color:var(--bad)}.lint .item .s.pass{background:color-mix(in srgb,var(--good) 14%,#fff);color:var(--good)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.card{border:1px solid var(--line);background:#fff;display:grid;gap:8px;padding:10px;font-size:.84rem;position:relative}
+.card .ph{aspect-ratio:2/3;background:var(--paper-2);display:grid;place-items:center;font-family:var(--cond);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-size:.7rem;text-align:center;padding:8px}
+.card .sty{font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+.card .nm{font-weight:600;line-height:1.25}
+.card .pr{font-family:var(--mono)}
+.card .badges{display:flex;gap:4px;flex-wrap:wrap;min-height:20px}
+.card .badge{font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;font-weight:700;padding:3px 6px;background:var(--ink);color:#fff}
+.card .badge.usa{background:#fff;color:var(--ink);border:1px solid var(--ink)}
+.card .badge.zero{background:var(--bad)}
+.card.zero .pr{color:var(--bad)}
+.pager{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.pager a{font-family:var(--mono);font-size:.82rem;padding:6px 10px;border:1px solid var(--line);text-decoration:none}
+.pager a[aria-current]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.small-note{font-size:.86rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap in">
+    <a class="brand" href="#top" aria-label="Mousa Batarseh — review home">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect x="13" y="2" width="6" height="28" rx="2" fill="#121212"/><rect x="2" y="13" width="28" height="6" rx="2" fill="#b3261e"/></svg>
+      <span>Mousa Batarseh<small>Royal Apparel review</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#why">Why</a><a href="#strengths">Strengths</a><a href="#findings">Findings</a><a href="#fixes">Fixes</a><a href="#scorecard">Scorecard</a><a href="#plan">90 days</a><a href="#about">About</a>
+    </nav>
+    <a class="btn dark sm cta" href="files/Mousa-Batarseh-Resume-Royal-Apparel.pdf">Résumé</a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow"><i></i>Independent review · royalapparel.net · Sep 28, 2026</span>
+    <div class="hero-grid">
+      <div>
+        <h1><span class="ln"><span>Good blanks.</span></span><span class="ln"><span class="accent">Blank</span></span><span class="ln"><span>fields.</span></span></h1>
+        <p class="lede">An independent review of <b>royalapparel.net</b> for the <b>Digital Marketing &amp; Ecommerce Coordinator</b> role. I read the homepage, the sitemap's <b>1,063 URLs</b>, the Men's category and <b>20 product pages</b> — 39 page fetches plus 17 header checks, no logins, no carts. The garments are well documented: 28 colors, 9 sizes and 107 photos on style 5051. The data around them is not: no canonical on any page, a sitemap that is 38% redirects, a five-star rating hard-coded on every product, and GA4 events whose product names are empty strings. Six findings, five working fixes.</p>
+        <div class="ctas"><a class="btn dark" href="#findings">Read the findings →</a><a class="btn" href="#fixes">Try the fixes</a></div>
+        <div class="meta"><span>Scope <b>served HTML, sitemap, robots.txt, inline product JSON</b></span><span>Read <b>20 product pages</b></span><span>Logins / carts <b>none</b></span></div>
+      </div>
+      <div class="label-stage">
+        <div class="label" id="label" aria-label="A garment label showing the data fields of style 5051 as served and as they should be">
+          <span class="cut" aria-hidden="true"></span>
+          <div class="lh"><b>5051</b><span>Unisex Short Sleeve Tee</span></div>
+          <div class="row"><span class="k">Colors</span><span class="v filled" data-a="28" data-b="28">28</span></div>
+          <div class="row"><span class="k">Sizes</span><span class="v filled" data-a="9 (XS–5X)" data-b="9 (XS–5X)">9 (XS–5X)</span></div>
+          <div class="row"><span class="k">Photos</span><span class="v filled" data-a="107" data-b="107">107</span></div>
+          <div class="row"><span class="k">Brand</span><span class="v" data-a="" data-b="Royal Apparel"></span></div>
+          <div class="row"><span class="k">Availability</span><span class="v" data-a="" data-b="InStock (from availQty)"></span></div>
+          <div class="row"><span class="k">hexColor</span><span class="v" data-a="FFFFFF × 28" data-b="#000000, #8a1c2b, #d4c7b0 …"></span></div>
+          <div class="row"><span class="k">Rating</span><span class="v" data-a="5★ · 326 (every product)" data-b="— (no real reviews yet)"></span></div>
+          <div class="row"><span class="k">Canonical</span><span class="v" data-a="" data-b="/product/5051/Unisex-Short-Sleeve-Tee.html"></span></div>
+          <div class="row"><span class="k">GA4 item_name</span><span class="v" data-a="" data-b="Unisex Short Sleeve Tee"></span></div>
+          <div class="stitch"><span>Made in USA</span><span id="label-state">As served · Sep 28, 2026</span></div>
+        </div>
+        <div class="toggle" role="group" aria-label="Label state"><button type="button" aria-pressed="true" data-label="a">As served</button><button type="button" aria-pressed="false" data-label="b">Filled in</button></div>
+      </div>
+    </div>
+    <div class="strip" role="list" data-re="stats"></div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div class="track" id="mq"></div></div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">Why this review</p><h2>Why Royal Apparel</h2></div><p class="sub">Two new facilities, a West Coast warehouse and a new import division in twelve months means more styles, two inventory states and a second brand to keep straight in categories, feeds and tracking. That is the job in the posting.</p></div>
+    <div class="about">
+      <div class="fit rv" role="table" data-re="why"></div>
+      <div>
+        <p class="rv">Everything here comes from public pages: served HTML, the sitemap, robots.txt and the inline product JSON the site itself uses to render. Nothing was submitted, carted or logged into. The platform is custom, so every fix is written at the template or web-server level rather than for a particular app.</p>
+        <div class="note rv"><b>What ships with this page.</b> A workbook with the 29-check scorecard, the six findings with their evidence files, a merchandising QA sheet for the weekly pass, and the 30/60/90 plan. <a href="files/Royal-Apparel-Merchandising-QA-Workbook.xlsx">Download the workbook</a>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="strengths">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">First, what works</p><h2>Three things the site does well</h2></div><p class="sub">On the same public-page rubric I run on the ShelfMark Michigan index, royalapparel.net scores 78 of 100 — it would rank 12th of 21. The product data underneath is deeper than most of that index.</p></div>
+    <div class="strengths" data-re="strengths"></div>
+  </div>
+</section>
+
+<section id="findings">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">Six findings</p><h2>Where the fields are blank</h2></div><p class="sub">Each finding names the page, the count, the duty in the posting it maps to, and the fix. Evidence chips name the captured file behind the number.</p></div>
+    <div class="findings" data-re="findings"></div>
+    <div class="sec-head" style="margin-top:56px"><div><p class="kicker">Also noticed</p><h3 style="font-family:var(--display);font-size:1.7rem;font-weight:600">Smaller things, for the same sheet</h3></div></div>
+    <ul class="also rv" data-re="also"></ul>
+  </div>
+</section>
+
+<section class="tint" id="fixes">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">Working fixes</p><h2>Five prototypes, built on your data</h2></div><p class="sub">Everything below runs on what the site served on Sep 28, 2026 — the real sitemap, the real product JSON, the real dataLayer pushes. Each one is the template or server change described in the finding.</p></div>
+
+    <!-- P1 redirects -->
+    <div class="proto rv" id="p-redirects">
+      <div class="proto-head"><span class="tag">Fix 1 · finding 1</span><h3>One homepage, one hostname</h3></div>
+      <p class="proto-what">The chain a crawler walks today, and the one it should walk. Then the two rules that do it and the canonical every template would emit.</p>
+      <div class="two">
+        <div><p class="kicker" style="margin-bottom:8px">Today</p><div class="chain" id="chain-a"></div></div>
+        <div><p class="kicker" style="margin-bottom:8px">After</p><div class="chain" id="chain-b"></div></div>
+      </div>
+      <div class="two">
+        <pre class="code" aria-label="web server rules"><span class="k"># Apache (.htaccess or vhost)</span>
+RewriteEngine On
+<span class="k"># http → https, non-www → www, one hop</span>
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.royalapparel\.net$ [NC]
+RewriteRule ^ https://www.royalapparel.net%{REQUEST_URI} [R=301,L]
+<span class="k"># the homepage lives at / ; retire the stub and /index</span>
+RewriteRule ^index/?$ / [R=301,L]
+<span class="k"># case-fold and slash categories</span>
+RewriteRule ^category/(.*)$ /Category/$1 [R=301,L,NC]
+RewriteRule ^(Category|Accessory-Type)/([^/]+)$ /$1/$2/ [R=301,L]</pre>
+        <pre class="code" aria-label="layout template head"><span class="k">&lt;!-- wam_tmpl/layout: emitted on every page --&gt;</span>
+&lt;link rel="canonical"
+      href="https://www.royalapparel.net<span class="s">{{ pretty_path }}</span>"&gt;
+<span class="k">&lt;!-- pretty_path resolves to: --&gt;</span>
+<span class="good">/</span>                                      homepage
+<span class="good">/Category/Men/</span>                         category
+<span class="good">/product/5051/Unisex-Short-Sleeve-Tee.html</span>  product
+<span class="k">&lt;!-- never a cgi-bin URL, never a hash --&gt;</span></pre>
+      </div>
+    </div>
+
+    <!-- P2 sitemap -->
+    <div class="proto rv" id="p-sitemap">
+      <div class="proto-head"><span class="tag">Fix 2 · finding 2</span><h3>Sitemap, regenerated</h3></div>
+      <p class="proto-what">All 1,063 URLs in today's file, sorted into keep, redirect and exclude — and the first rows of the file that replaces it, generated from the catalog with a real lastmod per product.</p>
+      <div class="bars" id="sm-bars"></div>
+      <div class="two" style="margin-top:8px">
+        <div><p class="kicker" style="margin-bottom:8px">Excluded — transactional templates found in today's file</p><div class="chips" id="sm-trans"></div><p class="small-note" style="margin-top:10px">Plus /404, /Register, a test page and the store-locator template. Retired styles below get 404 or 410 instead of a 200 that says "Product Not Found".</p><div class="tbl-scroll" style="margin-top:10px"><table class="tbl" id="sm-dead"><thead><tr><th>Style</th><th>Name</th><th>Today</th><th>After</th></tr></thead><tbody></tbody></table></div></div>
+        <div><p class="kicker" style="margin-bottom:8px">sitemap.xml — regenerated nightly (first rows)</p><pre class="code" id="sm-new"></pre></div>
+      </div>
+    </div>
+
+    <!-- P3 schema -->
+    <div class="proto rv" id="p-schema">
+      <div class="proto-head"><span class="tag">Fix 3 · finding 3</span><h3>One Product, one truth</h3></div>
+      <p class="proto-what">Style 5051's structured data as served — three blocks, two of them Product — and the single Product the template should emit, filled from the same product JSON the page already carries. The checker on the right runs the rules Google's product rich results require.</p>
+      <div class="toggle" role="group" aria-label="Schema state"><button type="button" aria-pressed="true" data-schema="a">As served</button><button type="button" aria-pressed="false" data-schema="b">One Product</button></div>
+      <div class="two"><pre class="code" id="schema-code" style="max-height:520px"></pre><div class="lint" id="schema-lint"></div></div>
+    </div>
+
+    <!-- P4 dataLayer -->
+    <div class="proto rv" id="p-datalayer">
+      <div class="proto-head"><span class="tag">Fix 4 · finding 4</span><h3>dataLayer linter</h3></div>
+      <p class="proto-what">The pushes the site makes today, run through a checker, and the corrected payloads built from the same products. The rules are GA4's own ecommerce event spec; the data is the Men's category and the 5051 product page.</p>
+      <div class="toggle" role="group" aria-label="dataLayer state"><button type="button" aria-pressed="true" data-dl="a">As served</button><button type="button" aria-pressed="false" data-dl="b">Corrected</button></div>
+      <div class="two"><pre class="code" id="dl-code" style="max-height:560px"></pre><div class="lint" id="dl-lint"></div></div>
+    </div>
+
+    <!-- P5 grid -->
+    <div class="proto rv" id="p-grid">
+      <div class="proto-head"><span class="tag">Fix 5 · finding 5</span><h3>A crawlable category grid</h3></div>
+      <p class="proto-what">The 21 Men's products the category serves today, rendered as server-side cards with real links and real pagination — custom-dye programs as "Request pricing" instead of $0.00, a New badge only where a street date says so, and Royal-made styles ahead of Basic Supply Co. imports.</p>
+      <div class="toggle" role="group" aria-label="Grid state"><button type="button" aria-pressed="false" data-grid="a">As served (in HTML: 1 link)</button><button type="button" aria-pressed="true" data-grid="b">Server-rendered</button></div>
+      <div id="grid-wrap"></div>
+    </div>
+  </div>
+</section>
+
+<section id="scorecard">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">The scorecard</p><h2>royalapparel.net on 29 public-page checks</h2></div><p class="sub">The same rubric I run on ShelfMark, the Michigan Storefront Benchmark: findability, catalog, buy path, trust and content, scored 2 / 1 / 0 from what a public page shows. Open a pillar to read the evidence behind every score.</p></div>
+    <div class="score-grid" data-re="scorecard"></div>
+  </div>
+</section>
+
+<section class="tint" id="plan">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">If I joined</p><h2>The first ninety days</h2></div><p class="sub">Crawlability and tracking first, because everything else is measured through them.</p></div>
+    <div class="plan" data-re="plan"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="me">
+      <div>
+        <p class="kicker">About the reviewer</p>
+        <h2 style="margin:12px 0 18px">Mousa Batarseh</h2>
+        <p class="rv">Seven years merchandising and running wholesale and retail storefronts: two textile and apparel brands on Shopify and WooCommerce in parallel — styles, colors, sizes and inventory for 14,000+ SKUs, coupons and the seasonal promo calendar, banners and email assets, product data for marketplaces, and the technical SEO and GA4 reporting underneath. Blank apparel is the catalog I know best.</p>
+        <p class="rv">Warren, Michigan · remote, hybrid or on-site as the posting allows · <a href="mailto:hireme@mousabatarseh.com">hireme@mousabatarseh.com</a> · <a href="https://mousabatarseh.com">mousabatarseh.com</a> · <a href="https://www.linkedin.com/in/mousabatarseh">LinkedIn</a></p>
+      </div>
+      <div class="files rv" data-re="files"></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap in">
+    <span>Independent and unsolicited. Public pages only, read on Sep 28, 2026. Not affiliated with Royal Apparel, Inc. Private link — this page is not indexed.</span>
+    <span><a href="https://mousabatarseh.com">mousabatarseh.com</a> · <a href="https://mousabatarseh.com/shelfmark/">ShelfMark</a></span>
+  </div>
+</footer>
+<script>window.REVIEW=__DATA__;window.PROTO=__PROTO__;</script>
+<script>
+__ENGINE_JS__
+</script>
+<script>
+(function(){
+  const P=window.PROTO, $=(s,r)=>(r||document).querySelector(s), esc=(s)=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // label typewriter
+  const label=$("#label");
+  function setLabel(state){label.querySelectorAll(".v").forEach(v=>{const t=v.dataset[state]||"";v.classList.toggle("blank",!t&&state==="a");v.classList.toggle("filled",!!t&&(state==="b"||v.dataset.a===v.dataset.b));if(reduce){v.textContent=t;return;}v.textContent="";let i=0;const id=setInterval(()=>{v.textContent=t.slice(0,++i);if(i>=t.length)clearInterval(id);},14);});$("#label-state").textContent=state==="a"?"As served · Sep 28, 2026":"With the template fixes";}
+  label.parentNode.querySelectorAll("[data-label]").forEach(b=>b.addEventListener("click",()=>{label.parentNode.querySelectorAll("[data-label]").forEach(x=>x.setAttribute("aria-pressed",x===b));setLabel(b.dataset.label);}));
+  setLabel("a");
+  // P1 chains
+  const hop=(st,cls,u,n)=>`<div class="hop"><span class="st ${cls}">${st}</span><div><div class="u">${esc(u)}</div>${n?`<div class="n">${esc(n)}</div>`:""}</div></div>`;
+  $("#chain-a").innerHTML=P.variants.filter(v=>v.url!=="https://www.royalapparel.net/").map(v=>hop(v.status,"s2 bad",v.url,"answers 200 with the same body — no redirect to one hostname")).join("")+P.chain.map((c,i)=>hop(c.status,c.status===301?"s3":(i===2?"s2 bad":"s2 bad"),c.url,c.note)).join("");
+  $("#chain-b").innerHTML=hop(301,"s3","http://royalapparel.net/  ·  http://www.royalapparel.net/  ·  https://royalapparel.net/","one hop to the canonical host")+hop(200,"s2","https://www.royalapparel.net/","the homepage template itself · <link rel=canonical href=https://www.royalapparel.net/>")+hop(301,"s3","https://www.royalapparel.net/index","→ / (kept for old links)")+hop(200,"s2","https://www.royalapparel.net/Category/Men/","canonical → itself · /category/men/ and /Category/Men 301 here");
+  // P2 sitemap
+  const S=P.sitemap, c=S.counts, total=S.total;
+  const rows=[["Product pages","keep, add lastmod",c.product,"good"],["Landing pages","keep",c.page,"good"],["CGI category links","replace with pretty /Category/ URLs",c.cgi_browse,"warn"],["Cart / login / checkout templates","exclude",c.cgi_other,"bad"]];
+  $("#sm-bars").innerHTML=rows.map(r=>`<div class="bar-row"><span>${esc(r[0])}<br><span class="small-note">${esc(r[1])}</span></span><span class="b"><i class="${r[3]}" data-w="${Math.round(100*r[2]/total)}"></i></span><span class="n">${r[2].toLocaleString()} · ${Math.round(100*r[2]/total)}%</span></div>`).join("");
+  $("#sm-trans").innerHTML=S.transactional.map(t=>`<span class="chip">${esc(t)}</span>`).join("");
+  $("#sm-dead tbody").innerHTML=S.dead.map(d=>`<tr><td class="mono">${esc(d.style)}</td><td>${esc(d.name)}</td><td class="no">${esc(d.status)}</td><td class="ok">${d.style==="15250006"?"404 (or 410) · dropped from the sitemap":"301 → replacement style, or 410 · dropped"}</td></tr>`).join("");
+  const today=new Date().toISOString().slice(0,10);
+  $("#sm-new").innerHTML=`<span class="k">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>\n&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;\n  &lt;url&gt;&lt;loc&gt;<span class="good">https://www.royalapparel.net/</span>&lt;/loc&gt;&lt;lastmod&gt;${today}&lt;/lastmod&gt;&lt;/url&gt;\n  &lt;url&gt;&lt;loc&gt;<span class="good">https://www.royalapparel.net/Category/Men/</span>&lt;/loc&gt;&lt;lastmod&gt;${today}&lt;/lastmod&gt;&lt;/url&gt;\n  &lt;url&gt;&lt;loc&gt;<span class="good">https://www.royalapparel.net/Category/Women/</span>&lt;/loc&gt;&lt;lastmod&gt;${today}&lt;/lastmod&gt;&lt;/url&gt;\n`+S.sample_products.slice(0,4).map(u=>`  &lt;url&gt;&lt;loc&gt;<span class="good">${esc(u.replace("https://www.royalapparel.net","https://www.royalapparel.net"))}</span>&lt;/loc&gt;&lt;lastmod&gt;<span class="s">{{ item.last_edited }}</span>&lt;/lastmod&gt;&lt;/url&gt;`).join("\n")+`\n  <span class="k">… ${c.product} products with itemStatus ≠ obsolete, ${c.page} landing pages, 0 cgi-bin URLs</span>\n&lt;/urlset&gt;`;
+  // P3 schema
+  const F=P.five;
+  const one={"@context":"https://schema.org","@type":"Product","name":F.name,"sku":F.style,"mpn":F.style,"brand":{"@type":"Brand","name":F.mill==="BSC"?"Basic Supply Co.":"Royal Apparel"},"image":F.images,"description":"100% combed ring-spun cotton, 4.4 oz/sq yd; set-on rib collar, double-needle hems, side seamed, tear-away label. Made in USA.","color":F.color_names.slice(0,5).join(", ")+" … ("+F.colors+" colors)","size":F.size_names.join(", "),"offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":F.low,"highPrice":F.high,"offerCount":F.colors*F.sizes,"url":F.url,"availability":"https://schema.org/InStock  ← derived from availQty, per size"}};
+  const asServed=P.ld.map((b,i)=>`<span class="k">// block ${i+1} of ${P.ld.length} as served</span>\n${esc(b.length>900?b.slice(0,900)+" …":b)}`).join("\n\n");
+  const lints={a:[["fail","Two separate Product objects for one product"],["fail","Offer.availability is an empty string (must be a schema.org value)"],["fail","Offer.url and priceValidUntil are empty strings"],["fail","aggregateRating 5 / 326 is identical on all 19 sampled products — not from reviews"],["fail","No brand on the Offer-bearing Product; no gtin / mpn"],["fail","Corporation block has empty url and logo"],["fail","No BreadcrumbList, no og:image"]],b:[["pass","One Product: name, sku, mpn, brand, images, description"],["pass","AggregateOffer with lowPrice / highPrice / currency / url"],["pass","availability derived from the same availQty the page uses"],["pass","No rating until real review data exists"],["pass","brand switches to Basic Supply Co. when millCode = BSC"],["pass","BreadcrumbList Home › Unisex › 5051 emitted alongside; og:image = imageLg"]]};
+  function schema(state){$("#schema-code").innerHTML=state==="a"?asServed:`<span class="k">// one Product, filled from prodJSON (styleCode, description, color[], size[], altView[], regLowPrice/regHighPrice, millCode)</span>\n${esc(JSON.stringify(one,null,2)).replace("https://schema.org/InStock  ← derived from availQty, per size",'<span class="s">https://schema.org/InStock</span>  <span class="k">← derived from availQty, per size</span>')}`;$("#schema-lint").innerHTML=lints[state].map(l=>`<div class="item"><span class="s ${l[0]}">${l[0]}</span><span>${esc(l[1])}</span></div>`).join("");}
+  document.querySelectorAll("[data-schema]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-schema]").forEach(x=>x.setAttribute("aria-pressed",x===b));schema(b.dataset.schema);}));schema("a");
+  // P4 datalayer
+  const D=P.datalayer, G=P.grid;
+  const brand=m=>m==="BSC"?"Basic Supply Co.":"Royal Apparel";
+  const corrected=`<span class="k">// page-level: a plain object, not an array</span>\ndataLayer.push({site:"B2B", pageType:"catalog_product", pageID:"catalog_product", loggedIn:false, language:"en"});\n\n<span class="k">// category listing: view_item_list with complete items (first 3 of 21 shown)</span>\ndataLayer.push({ event:"view_item_list", ecommerce:{ item_list_id:"category_men", item_list_name:"Men", items:[\n${G.slice(0,3).map((p,i)=>`  { item_id:"${p.id}", item_name:${JSON.stringify(p.name)}, item_brand:"${brand(p.mill)}", item_category:"Men", price:${p.price}, index:${i+1} }`).join(",\n")}\n  <span class="k">… 18 more</span>\n]}});\n\n<span class="k">// product page: currency + value at ecommerce level, price at item level</span>\ndataLayer.push({ event:"view_item", ecommerce:{ currency:"USD", value:${F.low}, items:[\n  { item_id:"5051", item_name:"Unisex Short Sleeve Tee", item_brand:"Royal Apparel", item_category:"Unisex", item_variant:"BLACK", price:${F.low}, quantity:1 }\n]}});\n\n<span class="k">// related products: a second view_item_list, not a UA "impressions" block</span>\ndataLayer.push({ event:"view_item_list", ecommerce:{ item_list_id:"related_5051", item_list_name:"Related", items:[ … ] }});\n\n<span class="k">// add_to_cart: one shape, one currency key</span>\ndataLayer.push({ event:"add_to_cart", ecommerce:{ currency:"USD", value:<span class="s">total</span>, items:<span class="s">products</span> }});`;
+  const served=`<span class="k">// page-level push, every template</span>\n${esc(D.page_push)}\n\n<span class="k">// category: impressionList (first 3 of 21)</span>\n${esc(JSON.stringify({impressions:D.impressions.slice(0,3)},null,1))}\n\n<span class="k">// product page</span>\n${esc(D.view_item)}\n\n<span class="k">// related products push (UA shape)</span>\n${esc(D.related.slice(0,420))} …\n\n<span class="k">// /js/catalog_product.js — add_to_cart written twice</span>\n${esc(D.add_to_cart[0].slice(0,120))} …\n${esc(D.add_to_cart[1].slice(0,120))} …`;
+  const blank=D.impressions.filter(i=>!i.item_name).length;
+  const dll={a:[["fail",`page push is wrapped in an array — pageType/pageID unreadable as Data Layer Variables`],["fail",`${blank} of ${D.impressions.length} category impressions have item_name "" and item_brand ""; price is a formatted string`],["fail","view_item: value at item level instead of price; no currency, item_brand, item_variant, quantity"],["fail",'related products use the UA "impressions" shape with no event — GA4 never receives view_item_list'],["fail","add_to_cart pushes both currencyCode and currency"],["fail","no select_item on card clicks"]],b:[["pass","plain object page push"],["pass","view_item_list with item_list_id/name and complete items (name, brand, numeric price, index)"],["pass","view_item with currency + value, item-level price and variant"],["pass","related strip as a second view_item_list; select_item wired to card clicks"],["pass","one add_to_cart shape, currency only"],["pass","verify: GTM Preview → GA4 DebugView → item_name coverage tile on the dashboard"]]};
+  function dl(state){$("#dl-code").innerHTML=state==="a"?served:corrected;$("#dl-lint").innerHTML=dll[state].map(l=>`<div class="item"><span class="s ${l[0]}">${l[0]}</span><span>${esc(l[1])}</span></div>`).join("");}
+  document.querySelectorAll("[data-dl]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-dl]").forEach(x=>x.setAttribute("aria-pressed",x===b));dl(b.dataset.dl);}));dl("a");
+  // P5 grid
+  const wrap=$("#grid-wrap");
+  function grid(state){
+    if(state==="a"){wrap.innerHTML=`<pre class="code" style="max-height:300px"><span class="k">&lt;!-- /Category/Men/ as served: the grid is empty in HTML and filled by $.wam.browse.init({...}) --&gt;</span>\n&lt;div class="browse-grid"&gt;&lt;/div&gt;\n&lt;script&gt;$.wam.browse.init({"browseProd":[ <span class="k">… 21 of 136 products …</span> ], "prodPerPage":21, "pages":7, "sortby":"manual"})&lt;/script&gt;\n<span class="k">&lt;!-- pages 2–7: location.hash='page=2'; location.reload() — no &lt;a href&gt;, no rel=next --&gt;</span>\n<span class="k">&lt;!-- product links in the served HTML: 1 (a mega-menu entry) --&gt;</span></pre>`;return;}
+    const items=G.slice().sort((a,b)=>(a.mill==="BSC")-(b.mill==="BSC"));
+    wrap.innerHTML=`<div class="grid">${items.map(p=>{const zero=p.price===0;const isNew=!!p.streetDate;return `<article class="card${zero?" zero":""}"><div class="badges">${p.mill!=="BSC"?'<span class="badge usa">Made in USA</span>':'<span class="badge">Import</span>'}${zero?'<span class="badge zero">Custom program</span>':""}${isNew?'<span class="badge">New</span>':""}</div><div class="ph">${esc(p.cat)} · ${p.swatches} color${p.swatches===1?"":"s"}</div><span class="sty">${esc(p.id)}${p.mill==="BSC"?" · Basic Supply Co.":""}</span><a class="nm" href="${esc(p.url)}" rel="nofollow">${esc(p.name)}</a><span class="pr">${zero?"Request pricing":p.priceDisp+(p.onSale?" · sale "+p.sale:"")}</span></article>`;}).join("")}</div><nav class="pager" aria-label="Pagination">${[1,2,3,4,5,6,7].map(n=>`<a href="/Category/Men/?page=${n}" ${n===1?'aria-current="page"':""} rel="nofollow">${n}</a>`).join("")}<span class="small-note" style="align-self:center;margin-left:8px">136 products · 21 per page · canonical → page 1 · rel=next on page 1</span></nav>`;
+  }
+  document.querySelectorAll("[data-grid]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-grid]").forEach(x=>x.setAttribute("aria-pressed",x===b));grid(b.dataset.grid);}));grid("b");
+  // sitemap bars animate with the shared observer (they use .bar-row .b i[data-w])
+  const bars=[...document.querySelectorAll(".bar-row .b i")];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.width=e.target.dataset.w+"%";io.unobserve(e.target);}}),{threshold:.2});bars.forEach(b=>io.observe(b));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+# URL -> file -> HTTP status -> fetched-at (UTC) -> bytes | curl -sL, UA Chrome/128 desktop. federalfp.com: 40 page/feed GETs (incl. 3 of 9 sitemap files + 1 merged CSS), plus 1 logo image GET, 2 HEAD status checks (no -L), 1 GET on legacy host mail.federalfp.com (404). patriothyd.com: 5 GETs.
+https://federalfp.com/robots.txt -> robots.txt -> 200 -> 2026-09-28T12:12:06Z -> 540B
+https://federalfp.com/sitemaps/ffp/sitemap.xml -> sitemap.xml -> 200 -> 2026-09-28T12:12:06Z -> 1101B
+https://federalfp.com/ -> homepage.html -> 200 -> 2026-09-28T12:12:07Z -> 553824B
+https://federalfp.com/static/version1789741354/_cache/merged/ae99b5f97e9e4803df98938f5a963829.css -> merged.css -> 200 -> 2026-09-28T12:13:12Z -> 574534B
+https://federalfp.com/sitemaps/ffp/sitemap_001.xml -> sitemap_001.xml -> 200 -> 2026-09-28T12:13:13Z -> 9731203B
+https://federalfp.com/adapters-fittings/couplings.html -> category_couplings.html -> 200 -> 2026-09-28T12:13:13Z -> 846204B
+https://federalfp.com/adapters-fittings/couplings/fi-te-04llmk-w3-ms-6010000456.html -> pdp_fi-te-04llmk-w3-ms-6010000456.html -> 200 -> 2026-09-28T12:14:46Z -> 507622B
+https://federalfp.com/adapters-fittings/couplings/fi-ge-06llm6x1k-w3-ms-6010000421.html -> pdp_fi-ge-06llm6x1k-w3-ms-6010000421.html -> 200 -> 2026-09-28T12:14:47Z -> 507779B
+https://federalfp.com/sitemaps/ffp/sitemap_009.xml -> sitemap_009.xml -> 200 -> 2026-09-28T12:15:38Z -> 5252964B
+https://federalfp.com/sitemaps/ffp/sitemap_005.xml -> sitemap_005.xml -> 200 -> 2026-09-28T12:15:39Z -> 9143851B
+https://federalfp.com/ffp-federal-fluid-power-info/ -> about_ffp-federal-fluid-power-info.html -> 200 -> 2026-09-28T12:16:04Z -> 405154B
+https://federalfp.com/contact/ -> contact.html -> 200 -> 2026-09-28T12:16:05Z -> 408920B
+https://federalfp.com/terms/ -> terms_shipping-policy.html -> 200 -> 2026-09-28T12:16:06Z -> 419073B
+https://federalfp.com/ffp-terms-conditions-of-sale/ -> ffp-terms-conditions-of-sale.html -> 200 -> 2026-09-28T12:16:07Z -> 418012B
+https://federalfp.com/ks-a37-05-32-seal-kit-for-a37-05-piston-pump.html -> pdp_ks-a37-05-32-seal-kit-for-a37-05-piston-pump.html -> 200 -> 2026-09-28T12:17:02Z -> 506542B
+https://federalfp.com/pv2r12-31-41-f-reaa-4390-double-fixed-vol-vane-pump.html -> pdp_pv2r12-31-41-f-reaa-4390-double-fixed-vol-vane-pump.html -> 200 -> 2026-09-28T12:17:05Z -> 507865B
+https://federalfp.com/dshg-03-3c4-d24-n1-14-dir-valve-pilot-operated.html -> pdp_dshg-03-3c4-d24-n1-14-dir-valve-pilot-operated.html -> 200 -> 2026-09-28T12:17:06Z -> 506741B
+https://federalfp.com/nv105-04-04-04comp-04comp-needle-valve.html -> pdp_nv105-04-04-04comp-04comp-needle-valve.html -> 200 -> 2026-09-28T12:17:08Z -> 507085B
+https://federalfp.com/ls-5502-12-12-12mp-12fp-90-live-swivel.html -> pdp_ls-5502-12-12-12mp-12fp-90-live-swivel.html -> 200 -> 2026-09-28T12:17:10Z -> 507876B
+https://federalfp.com/hp-10y-4-50-x10-00-yellow-hose-protector.html -> pdp_hp-10y-4-50-x10-00-yellow-hose-protector.html -> 200 -> 2026-09-28T12:17:12Z -> 507865B
+https://federalfp.com/m2-5-5-r-40-3-phase-electric-motor-7-3-hp.html -> pdp_m2-5-5-r-40-3-phase-electric-motor-7-3-hp.html -> 200 -> 2026-09-28T12:17:14Z -> 506391B
+https://federalfp.com/st1004-10-10-jis-air-bleed-2-64-gpm.html -> pdp_st1004-10-10-jis-air-bleed-2-64-gpm.html -> 200 -> 2026-09-28T12:17:16Z -> 506122B
+https://federalfp.com/ms11-2-121-f12-1320-g000.html -> pdp_ms11-2-121-f12-1320-g000.html -> 200 -> 2026-09-28T12:17:18Z -> 510639B
+https://federalfp.com/bpo-npt-06-08.html -> pdp_bpo-npt-06-08.html -> 200 -> 2026-09-28T12:17:25Z -> 505235B
+https://federalfp.com/bv3-04-npt.html -> pdp_bv3-04-npt.html -> 200 -> 2026-09-28T12:17:27Z -> 505135B
+https://federalfp.com/catalog/product/view/id/101454/ -> pdp_catalog_product_view_id_101454.html -> 200 -> 2026-09-28T12:17:29Z -> 504259B
+https://federalfp.com/catalog/product/view/id/97434/ -> pdp_catalog_product_view_id_97434.html -> 200 -> 2026-09-28T12:17:31Z -> 508396B
+https://federalfp.com/ffp03-2b10bl-a120-n-8-v-5080-d05-4w2p.html -> pdp_ffp03-2b10bl-a120-n-8-v-5080-d05-4w2p.html -> 200 -> 2026-09-28T12:17:33Z -> 507246B
+https://federalfp.com/700018114.html -> pdp_700018114.html -> 200 -> 2026-09-28T12:17:35Z -> 505237B
+https://federalfp.com/ffp01-3c9-a120-n-7-7080.html -> pdp_ffp01-3c9-a120-n-7-7080.html -> 200 -> 2026-09-28T12:17:36Z -> 509176B
+https://federalfp.com/catalog/product/view/id/310140/ -> pdp_catalog_product_view_id_310140.html -> 200 -> 2026-09-28T12:17:38Z -> 506993B
+https://federalfp.com/dshg-03-3c4-d24-n1-14-dir-valve-pilot-operated.html -> HEAD -> 2026-09-28T12:19:18Z
+https://federalfp.com/700018114.html -> HEAD -> 2026-09-28T12:19:19Z
+https://federalfp.com/catalogsearch/result/?q=FI-TE-04LLMK-W3-MS -> search_FI-TE-04LLMK-W3-MS.html -> 200 -> 2026-09-28T12:19:53Z -> 1741945B
+https://federalfp.com/adapters-fittings/couplings.html?p=2 -> category_couplings_p2.html -> 200 -> 2026-09-28T12:19:56Z -> 835589B
+https://federalfp.com/adapters-fittings/couplings.html?brand=14 -> category_couplings_brand14.html -> 200 -> 2026-09-28T12:19:58Z -> 862504B
+https://federalfp.com/garage-and-shop/chairs-and-creepers.html -> category_chairs-and-creepers.html -> 200 -> 2026-09-28T12:20:01Z -> 801336B
+https://federalfp.com/engineering-toolbox/ -> engineering-toolbox.html -> 200 -> 2026-09-28T12:20:03Z -> 862311B
+https://federalfp.com/career-at-federal-fluid-power-inc/ -> career.html -> 200 -> 2026-09-28T12:20:05Z -> 404092B
+https://federalfp.com/ffp-privacy-policy/ -> ffp-privacy-policy.html -> 200 -> 2026-09-28T12:20:07Z -> 407493B
+https://www.patriothyd.com/ -> patriot_homepage.html -> 200 -> 2026-09-28T12:21:27Z -> 454221B
+https://www.patriothyd.com/robots.txt -> patriot_robots.txt -> 200 -> 2026-09-28T12:21:29Z -> 540B
+https://www.patriothyd.com/fi-te-04llmk-w3-ms-6010000456.html -> patriot_pdp_fi-te-04llmk-w3-ms-6010000456.html -> 200 -> 2026-09-28T12:21:31Z -> 500686B
+https://www.patriothyd.com/ffp01-3c9-a120-n-7-7080.html -> patriot_pdp_ffp01-3c9-a120-n-7-7080.html -> 200 -> 2026-09-28T12:21:33Z -> 507837B
+https://patriothyd.com/sitemaps/patriot/sitemap.xml -> patriot_sitemap.xml -> 200 -> 2026-09-28T12:21:35Z -> 1716B
+https://federalfp.com/brand/patriot-hydraulics -> brand_patriot-hydraulics.html -> 404 -> 2026-09-28T12:24:35Z -> 482897B
+https://mail.federalfp.com/index.php -> legacy_mail.federalfp.com_index.html -> 404 -> 2026-09-28T12:24:37Z -> 1145B
+https://federalfp.com/hydraulics-1/cylinders-1.html -> category_hydraulics-1_cylinders-1.html -> 200 -> 2026-09-28T12:25:14Z -> 1579561B
+https://federalfp.com/media/logo/stores/2/FFP_Logo.png -> FFP_Logo.png -> 200 -> 2026-09-28T12:26:52Z (image asset)
+derived: pdp_sample.csv -> per-PDP extraction (title, canonical, meta, attributes, images, CTA, schema availability) of the 19 pdp_*.html captures

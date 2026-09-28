@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Federal Fluid Power · The Parts Are Here, the Fields Aren't · a catalog review by Mousa Batarseh</title>
+<meta name="description" content="An independent review of federalfp.com for the E-Commerce Developer & Content Editor role: 54,496 sitemap URLs and 19 product pages read on September 28, 2026, six findings, six working fixes and the catalog QA workbook.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://mousabatarseh.com/federal-fluid-power-review/">
+<meta property="og:title" content="Federal Fluid Power · The parts are here. The fields aren't.">
+<meta property="og:description" content="54,496 sitemap URLs read. Six findings. Six working fixes. By Mousa Batarseh.">
+<meta property="og:image" content="https://mousabatarseh.com/federal-fluid-power-review/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='13' y='2' width='6' height='28' rx='2' fill='%23e81820'/%3E%3Crect x='2' y='13' width='28' height='6' rx='2' fill='%230e5ea8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+__ENGINE_CSS__
+/* ---- Federal Fluid Power tokens: logo blue and red on white, condensed industrial display, mono for part numbers ---- */
+:root{
+  --paper:#ffffff; --paper-2:#f2f4f7; --ink:#14161a; --ink-2:#3a3f47; --muted:#6b7280;
+  --accent:#0e5ea8; --accent-ink:#fff; --accent-soft:#e6eef8; --red:#e81820; --good:#1f7a3a; --warn:#b3471b; --bad:#c8151d;
+  --line:rgba(20,22,26,.16); --r:4px; --wrap:1200px;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif; --sans:"Barlow",Segoe UI,Helvetica,Arial,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+body{background-image:linear-gradient(rgba(14,94,168,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(14,94,168,.045) 1px,transparent 1px);background-size:32px 32px;background-attachment:fixed}
+.tint{background:var(--paper-2)}
+h2{font-weight:800;text-transform:uppercase;letter-spacing:.005em;font-size:clamp(2.2rem,5vw,4rem)}
+.hero h1{font-weight:800;text-transform:uppercase;letter-spacing:-.005em;font-size:clamp(3.2rem,9vw,7.6rem);line-height:.92}
+.hero h1 .accent{color:var(--red)}
+.strip b,.finding .num,.dial .big,.strengths h3,.finding h3,.proto-head h3{font-weight:800}
+.strengths h3,.finding h3,.proto-head h3{text-transform:uppercase;letter-spacing:.01em}
+.finding .num{color:var(--red)}
+.kicker,.eyebrow,.finding .lab,.proto-head .tag,.plan h3,.tbl th,.dial .grade{color:var(--accent)}
+.btn.dark{background:var(--accent);border-color:var(--accent);color:#fff}
+.nav a:hover,.nav a.is-active{background:var(--accent-soft)}
+::selection{background:var(--red);color:#fff}
+/* ---- hero art: the datasheet that fills itself ---- */
+.sheet{background:#fff;border:1px solid var(--ink);padding:0;position:relative;font-size:.86rem;box-shadow:0 30px 60px -40px rgba(14,94,168,.5)}
+.sheet .hd{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;background:var(--ink);color:#fff;font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.sheet .hd .pn{font-family:var(--mono);font-weight:500;letter-spacing:0;text-transform:none;font-size:.82rem;color:#cfe3ff}
+.sheet .in{padding:14px 14px 10px}
+.sheet .src{font-family:var(--mono);font-size:.8rem;padding:10px 12px;background:var(--paper-2);border:1px dashed var(--line);margin-bottom:12px;line-height:1.45;word-break:break-word}
+.sheet .src b{color:var(--accent)}
+.sheet table{width:100%;border-collapse:collapse}
+.sheet th{text-align:left;font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;color:var(--muted);padding:6px 0;font-weight:700}
+.sheet td{padding:7px 0;font-family:var(--mono);font-size:.8rem;vertical-align:top}
+.sheet tbody tr:nth-child(even) td{background:var(--paper-2)}
+.sheet td.k{color:var(--ink-2);width:44%;font-family:var(--sans);font-weight:600;font-size:.84rem;padding-left:6px}
+.sheet td.v{color:var(--good)}
+.sheet td.v.today{color:var(--bad)}
+.sheet .ft{display:flex;justify-content:space-between;padding:8px 14px;font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;color:var(--muted);background:var(--paper-2)}
+.sheet .dim{position:absolute;left:-1px;right:-1px;bottom:-22px;height:14px;pointer-events:none}
+.sheet-stage{display:grid;gap:14px;justify-items:center}
+.sheet-stage .toggle{justify-self:center}
+.marquee{overflow:hidden;margin-top:clamp(28px,4vw,48px);background:var(--ink);padding:10px 0}
+.marquee .track{display:flex;gap:40px;white-space:nowrap;width:max-content;animation:mq 46s linear infinite;font-family:var(--display);font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:700}
+.marquee .track span::after{content:"·";margin-left:40px;color:var(--red)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+/* ---- prototypes ---- */
+.parse{display:grid;gap:12px}
+.parse .out{display:grid;gap:6px}
+.attr{display:grid;grid-template-columns:150px 1fr auto;gap:10px;align-items:center;padding:8px 12px;border:1px solid var(--line);background:#fff;font-size:.9rem}
+.attr .k{font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--accent);font-size:.8rem}
+.attr .v{font-family:var(--mono);font-size:.86rem}
+.attr .v.none{color:var(--muted)}
+.attr .how{font-size:.76rem;color:var(--muted);font-family:var(--mono)}
+.samples{display:flex;flex-wrap:wrap;gap:6px}
+.samples button{font:inherit;font-family:var(--mono);font-size:.78rem;padding:6px 10px;border:1px solid var(--line);background:#fff;cursor:pointer}
+.samples button:hover{border-color:var(--accent);color:var(--accent)}
+.norm{display:grid;gap:14px}
+@media (min-width:900px){.norm{grid-template-columns:1fr 1fr}}
+.norm .col{border:1px solid var(--line);background:#fff;padding:12px}
+.norm h4{margin:0 0 8px;font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;color:var(--accent)}
+.norm .vals{display:flex;flex-wrap:wrap;gap:5px;max-height:220px;overflow:auto}
+.norm .vals span{font-family:var(--mono);font-size:.76rem;padding:3px 7px;background:var(--paper-2)}
+.norm .vals span.twin{background:color-mix(in srgb,var(--bad) 12%,#fff);color:var(--bad)}
+.norm .vals span.date{background:color-mix(in srgb,var(--warn) 18%,#fff);color:var(--warn)}
+.norm .cnt{font-size:.82rem;color:var(--muted);margin-top:8px}
+.foot-demo{border:1px solid var(--line);background:var(--paper-2);padding:16px;font-size:.86rem;display:grid;gap:10px}
+.foot-demo .cols{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.foot-demo h5{margin:0 0 6px;font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:.76rem;color:var(--ink)}
+.foot-demo ul{margin:0;padding:0;list-style:none;display:grid;gap:4px;color:var(--ink-2)}
+.foot-demo .bad{color:var(--bad);font-weight:600}.foot-demo .good{color:var(--good);font-weight:600}
+.foot-demo .copy{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.serp{font-family:Arial,sans-serif;background:#fff;border:1px solid var(--line);padding:10px 14px;max-width:600px}
+.serp .u{font-size:.78rem;color:#4d5156}.serp .t{color:#1a0dab;font-size:1.05rem;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.serp .d{font-size:.86rem;color:#4d5156;margin-top:2px}
+.len{font-family:var(--mono);font-size:.78rem}.len.over{color:var(--bad)}.len.ok{color:var(--good)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap in">
+    <a class="brand" href="#top" aria-label="Mousa Batarseh — review home">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect x="13" y="2" width="6" height="28" rx="2" fill="#e81820"/><rect x="2" y="13" width="28" height="6" rx="2" fill="#0e5ea8"/></svg>
+      <span>Mousa Batarseh<small>Federal Fluid Power review</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#why">Why</a><a href="#strengths">Strengths</a><a href="#findings">Findings</a><a href="#fixes">Fixes</a><a href="#scorecard">Scorecard</a><a href="#plan">90 days</a><a href="#about">About</a>
+    </nav>
+    <a class="btn dark sm cta" href="files/Mousa-Batarseh-Resume-Federal-Fluid-Power.pdf">Résumé</a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow"><i></i>Independent review · federalfp.com · Sep 28, 2026</span>
+    <div class="hero-grid">
+      <div>
+        <h1><span class="ln"><span>The parts are here.</span></span><span class="ln"><span class="accent">The fields</span></span><span class="ln"><span>aren't.</span></span></h1>
+        <p class="lede">An independent review of <b>federalfp.com</b> for the <b>E-Commerce Developer &amp; Content Editor</b> role. I read three of the nine sitemap files (<b>54,496 URLs</b>), five category pages, <b>19 product pages</b> and eight content pages, plus five pages on the sister store patriothyd.com — no logins, no carts. Search by part number works and the structured data is better than most distributors ship. The catalog behind it shows the marks of a bulk ERP import nobody has mapped yet: 20,242 product URLs with no URL key, specs trapped inside title strings, prices printed on parts you can only request a quote for, and supplier logos standing in for photos on 69% of the catalog. Six findings, six working fixes — each one is the job.</p>
+        <div class="ctas"><a class="btn dark" href="#findings">Read the findings →</a><a class="btn" href="#fixes">Try the fixes</a></div>
+        <div class="meta"><span>Scope <b>served HTML, 3 of 9 sitemap files, robots.txt, JSON-LD</b></span><span>Read <b>19 product pages</b></span><span>Logins / carts / RFQs <b>none</b></span></div>
+      </div>
+      <div class="sheet-stage">
+        <div class="sheet" id="sheet" aria-label="A product datasheet for BV3-04-NPT as the site shows it and as the attribute set would show it">
+          <div class="hd"><span>Product datasheet</span><span class="pn">BV3-04-NPT · DNP Americas</span></div>
+          <div class="in">
+            <div class="src">Name as imported: <b>BV3-04-NPT 1/4" Three way selector Ball valve w/ 1/4" NPT Threads. (5,800 PSI)</b></div>
+            <table><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody id="sheet-rows"></tbody></table>
+          </div>
+          <div class="ft"><span>federalfp.com/bv3-04-npt.html</span><span id="sheet-state">As served · Sep 28, 2026</span></div>
+        </div>
+        <div class="toggle" role="group" aria-label="Datasheet state"><button type="button" aria-pressed="true" data-sheet="a">As served</button><button type="button" aria-pressed="false" data-sheet="b">With the attribute set</button></div>
+      </div>
+    </div>
+    <div class="strip" role="list" data-re="stats"></div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div class="track" id="mq"></div></div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">Why this review</p><h2>Why Federal Fluid Power</h2></div><p class="sub">The posting is a catalog job first: product listings, attributes, images, the ERP-to-Magento sync. A 52,000-SKU distributor's storefront shows exactly how that sync is doing, so I read it before applying.</p></div>
+    <div class="about">
+      <div class="fit rv" role="table" data-re="why"></div>
+      <div>
+        <p class="rv">Everything here comes from public pages: served HTML, the sitemaps, robots.txt and JSON-LD. I did not log in, add to cart or submit a quote request. Numbers marked sitemap-wide come from the three sitemap files I fetched, not all nine. I'm in Warren — Plymouth is 35 minutes away.</p>
+        <div class="note rv"><b>What ships with this page.</b> A workbook with the 29-check scorecard, the six findings with their evidence files, a weekly catalog QA sheet (keyless products, zero prices, RFQ-with-InStock, logo-as-image, duplicate keys) and the 30/60/90 plan. <a href="files/Federal-Fluid-Power-Catalog-QA-Workbook.xlsx">Download the workbook</a>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="strengths">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">First, what works</p><h2>Three things the store does well</h2></div><p class="sub">On the same public-page rubric I run on the ShelfMark Michigan index, federalfp.com scores 61 of 100 — it would rank 19th of 21. The technical bones are better than that number: the gaps are in the data.</p></div>
+    <div class="strengths" data-re="strengths"></div>
+  </div>
+</section>
+
+<section id="findings">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">Six findings</p><h2>What the import left behind</h2></div><p class="sub">Each finding names the page, the count, the duty in the posting it maps to, and the fix inside Magento. Evidence chips name the captured file behind the number.</p></div>
+    <div class="findings" data-re="findings"></div>
+    <div class="sec-head" style="margin-top:56px"><div><p class="kicker">Also counted</p><h3 style="font-family:var(--display);font-size:1.8rem;text-transform:uppercase">Smaller things, for the same sheet</h3></div></div>
+    <ul class="also rv" data-re="also"></ul>
+  </div>
+</section>
+
+<section class="tint" id="fixes">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">Working fixes</p><h2>Six prototypes, built on your catalog</h2></div><p class="sub">Everything below runs on what federalfp.com served on Sep 28, 2026 — the real product names, the real filter values, the real footer. Each one is the Magento change described in the finding, and two of them are the scripts I would run in week one.</p></div>
+
+    <!-- P1 url keys -->
+    <div class="proto rv" id="p-urlkey">
+      <div class="proto-head"><span class="tag">Fix 1 · finding 1</span><h3>URL-key generator</h3></div>
+      <p class="proto-what">The three keyless products I fetched, plus the sample set, run through the rule Magento's import needs: <span class="mono">url_key = slug(name) + "-" + slug(sku)</span>, unique, lowercase, no inch marks. The output is the CSV column the bulk import takes; the blocked <span class="mono">/catalog/product/view/id/N/</span> URLs leave the sitemap once the keys exist and the URL rewrites reindex.</p>
+      <div class="bars" style="display:grid;gap:8px" id="uk-bars"></div>
+      <div class="tbl-scroll"><table class="tbl" id="uk"><thead><tr><th>SKU</th><th>Name as imported</th><th>Today's URL</th><th>url_key (generated)</th></tr></thead><tbody></tbody></table></div>
+      <pre class="code" id="uk-csv"></pre>
+    </div>
+
+    <!-- P2 attribute parser -->
+    <div class="proto rv" id="p-parser">
+      <div class="proto-head"><span class="tag">Fix 2 · finding 2</span><h3>Attribute parser</h3></div>
+      <p class="proto-what">Paste any product name from the catalog and watch thread size, port, pressure, material, dimensions and flow fall into structured attributes. This is the one-off script that populates the attribute set — and the reason the More Information table would stop reading Name / SKU / Weight / Brand.</p>
+      <div class="parse">
+        <label for="parse-in" class="kicker">Product name (as imported)</label>
+        <input class="field" id="parse-in" value="" spellcheck="false" aria-describedby="parse-help">
+        <div class="samples" id="parse-samples" aria-label="Sample names from the catalog"></div>
+        <div class="out" id="parse-out" aria-live="polite"></div>
+        <p class="small-note" id="parse-help" style="font-size:.84rem;color:var(--muted);margin:0">Rules shown next to each value. Anything the parser can't place stays in the name and is flagged for a human — the script writes a review column, never a guess.</p>
+      </div>
+    </div>
+
+    <!-- P3 option normalizer -->
+    <div class="proto rv" id="p-normalizer">
+      <div class="proto-head"><span class="tag">Fix 2 · finding 2</span><h3>Option normalizer</h3></div>
+      <p class="proto-what">The Cylinders filter values exactly as the category page serves them, and the same values after one normalization pass: inch marks stripped, x lowercased, fractions restored from Excel date serials, units made consistent. Fractions and decimals meet in one convention (2 1/2 → 2.5, the way Bore already reads). Red = a twin of another value; orange = a date serial.</p>
+      <div class="norm" id="norm"></div>
+    </div>
+
+    <!-- P4 stock -->
+    <div class="proto rv" id="p-stock">
+      <div class="proto-head"><span class="tag">Fix 3 · finding 3</span><h3>Stock and price, in agreement</h3></div>
+      <p class="proto-what">The nine sampled products whose button says Request Pricing, with the price the page prints and the availability the JSON-LD declares — then the Offer each should emit once the RFQ module keys off <span class="mono">is_salable</span> and the sync maps quantity.</p>
+      <div class="toggle" role="group" aria-label="Offer state"><button type="button" aria-pressed="true" data-stock="a">As served</button><button type="button" aria-pressed="false" data-stock="b">After the sync mapping</button></div>
+      <div class="tbl-scroll"><table class="tbl" id="stock"><thead><tr><th>SKU</th><th>Brand</th><th>Button</th><th class="num">Price shown</th><th>Offer.availability</th><th>Consistent?</th></tr></thead><tbody></tbody></table></div>
+    </div>
+
+    <!-- P5 meta templates -->
+    <div class="proto rv" id="p-meta">
+      <div class="proto-head"><span class="tag">Fix 5 · finding 5</span><h3>Meta template preview</h3></div>
+      <p class="proto-what">The 19 sampled products run through one title and one description template from Stores → Configuration → Catalog → Product Fields Auto-Generation. Every page unique, every title under 60 and every description under 155 characters — and the same sitewide description retired.</p>
+      <div class="two">
+        <div><label class="kicker" for="tpl-t" style="display:block;margin-bottom:6px">Title template</label><input class="field" id="tpl-t" value="{{name}} | {{brand}} {{category}} | Federal Fluid Power"></div>
+        <div><label class="kicker" for="tpl-d" style="display:block;margin-bottom:6px">Description template</label><input class="field" id="tpl-d" value="{{name}} by {{brand}} — hydraulic {{category}} from Federal Fluid Power, Plymouth MI. Price, availability and lead time online; application engineering on call."></div>
+      </div>
+      <div class="tbl-scroll"><table class="tbl" id="meta"><thead><tr><th>SKU</th><th>Title today</th><th>Title (template)</th><th class="num">Chars</th><th>Description (template)</th><th class="num">Chars</th></tr></thead><tbody></tbody></table></div>
+      <div class="two"><div><p class="kicker" style="margin-bottom:8px">Today (every product)</p><div class="serp"><div class="u">federalfp.com › bv3-04-npt.html</div><div class="t">BV3-04-NPT</div><div class="d">Discover a trusted online destination for all your hydraulic requirements at Federal Fluid Power…</div></div></div><div><p class="kicker" style="margin-bottom:8px">With the template</p><div class="serp"><div class="u">federalfp.com › bv3-04-npt.html</div><div class="t" id="serp-t"></div><div class="d" id="serp-d"></div></div></div></div>
+    </div>
+
+    <!-- P6 store view -->
+    <div class="proto rv" id="p-storeview">
+      <div class="proto-head"><span class="tag">Fix 6 · finding 6</span><h3>Store-view footer</h3></div>
+      <p class="proto-what">The footer and header strings as federalfp.com renders them today, and the same blocks scoped to the Federal store view in Content → Blocks — the ten-minute fix a customer notices first.</p>
+      <div class="toggle" role="group" aria-label="Footer state"><button type="button" aria-pressed="true" data-foot="a">As served</button><button type="button" aria-pressed="false" data-foot="b">Store-view scoped</button></div>
+      <div class="foot-demo" id="foot"></div>
+    </div>
+  </div>
+</section>
+
+<section id="scorecard">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">The scorecard</p><h2>federalfp.com on 29 public-page checks</h2></div><p class="sub">The same rubric I run on ShelfMark, the Michigan Storefront Benchmark: findability, catalog, buy path, trust and content, scored 2 / 1 / 0 from what a public page shows. Open a pillar to read the evidence behind every score.</p></div>
+    <div class="score-grid" data-re="scorecard"></div>
+  </div>
+</section>
+
+<section class="tint" id="plan">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">If I joined</p><h2>The first ninety days</h2></div><p class="sub">Keys and templates first, because they unlock the catalog for everything after.</p></div>
+    <div class="plan" data-re="plan"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="me">
+      <div>
+        <p class="kicker">About the reviewer</p>
+        <h2 style="margin:12px 0 18px">Mousa Batarseh</h2>
+        <p class="rv">Seven years running wholesale and retail storefronts in Metro Detroit: catalogs of 14,000+ SKUs maintained by bulk CSV, platform migrations with redirects intact, product data mapped between an inventory system and the store, and the QA sheets that keep prices and product pages honest. WordPress, WooCommerce, Shopify; HTML, CSS and JavaScript; Python for the scripts above. Magento's admin and import model are the same shape as the catalogs I have run.</p>
+        <p class="rv">Warren, Michigan — 35 minutes from Plymouth · <a href="mailto:hireme@mousabatarseh.com">hireme@mousabatarseh.com</a> · <a href="https://mousabatarseh.com">mousabatarseh.com</a> · <a href="https://www.linkedin.com/in/mousabatarseh">LinkedIn</a></p>
+      </div>
+      <div class="files rv" data-re="files"></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap in">
+    <span>Independent and unsolicited. Public pages only, read on Sep 28, 2026. Not affiliated with Federal Fluid Power, Inc. or Patriot Hydraulics. Private link — this page is not indexed.</span>
+    <span><a href="https://mousabatarseh.com">mousabatarseh.com</a> · <a href="https://mousabatarseh.com/shelfmark/">ShelfMark</a></span>
+  </div>
+</footer>
+<script>window.REVIEW=__DATA__;window.PROTO=__PROTO__;</script>
+<script>
+__ENGINE_JS__
+</script>
+<script>
+(function(){
+  const P=window.PROTO, $=(s,r)=>(r||document).querySelector(s), esc=(s)=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  // ---- the parser (shared by the hero sheet and fix 2)
+  function parse(name){
+    const out=[]; let rest=" "+name+" ";
+    const take=(key,re,how,fmt,all)=>{const m=rest.match(re); if(m){out.push({k:key,v:fmt?fmt(m):m[1],how}); rest=all?rest.split(m[0]).join(" "):rest.replace(m[0]," ");}};
+    take("mfr_part_number",/^\s*([A-Z0-9][A-Z0-9.\/-]{2,})\b/i,"first token = the manufacturer code");
+    take("pressure_rating",/\(?\s*([\d,]{3,6})\s*PSI\s*\)?/i,"number followed by PSI",m=>m[1].replace(",","")+" psi");
+    take("flow_rate",/(\d+(?:\.\d+)?)\s*gpm/i,"number followed by gpm",m=>m[1]+" gpm");
+    take("power",/(\d+(?:\.\d+)?)\s*hp\b/i,"number followed by hp",m=>m[1]+" hp");
+    take("dimensions",/(\d+(?:\.\d+)?)\s*"?\s*[xX×]\s*(\d+(?:\.\d+)?)\s*"?/,"A x B with inch marks",m=>m[1]+" × "+m[2]+" in");
+    take("thread_size",/(\d+\/\d+|\d+(?:\.\d+)?)\s*"\s*(NPT|NPTF|SAE|JIC|ORB|BSPP|BSP|JIS)?/i,"fraction + inch mark (+ standard)",m=>m[1]+" in"+(m[2]?" "+m[2].toUpperCase():""),true);
+    take("thread_standard",/\b(NPTF|NPT|SAE|JIC|ORB|BSPP|BSP|JIS|DIN|ISO)\b/i,"thread standard keyword",m=>m[1].toUpperCase());
+    take("port_size",/\b(\d{2})(?:MP|FP|COMP)\b/i,"two-digit dash size before MP / FP / COMP",m=>"-"+m[1]+" ("+m[1]/16+" in)");
+    take("phase",/\b(\d)\s*phase\b/i,"N phase",m=>m[1]+"-phase");
+    take("color",/\b(YELLOW|BLACK|RED|BLUE|GREEN|ORANGE|GREY|GRAY)\b/i,"color word",m=>m[1][0]+m[1].slice(1).toLowerCase());
+    take("material",/\b(brass|steel|stainless|aluminum|aluminium|nylon|zinc|carbon steel)\b/i,"material word",m=>m[1].toLowerCase());
+    const type=rest.replace(/\bw\/\s*(threads?)?/ig," ").replace(/[-–—]/g," ").replace(/\s*\(\s*\)/g,"").replace(/\s+/g," ").trim();
+    if(type) out.push({k:"product_type",v:type.replace(/[.]+$/,""),how:"what remains after the attributes are removed"});
+    return out;
+  }
+  const NAMES=["thread_size","thread_standard","port_size","pressure_rating","material","dimensions","flow_rate","power","phase","color","product_type","mfr_part_number"];
+  // ---- hero sheet
+  const sheetRows=$("#sheet-rows");
+  const served=[["Product Name","BV3-04-NPT"],["SKU","BV3-04-NPT-dnp"],["Weight","5.000000"],["Brand","DNP Americas"]];
+  function sheet(state){
+    if(state==="a"){sheetRows.innerHTML=served.map(r=>`<tr><td class="k">${esc(r[0])}</td><td class="v today">${esc(r[1])}</td></tr>`).join("")+`<tr><td class="k" style="color:var(--muted)">thread size · port · pressure · material</td><td class="v today">— (inside the name only)</td></tr>`;}
+    else{const p=parse("BV3-04-NPT 1/4\" Three way selector Ball valve w/ 1/4\" NPT Threads. (5,800 PSI)");sheetRows.innerHTML=served.slice(0,2).map(r=>`<tr><td class="k">${esc(r[0])}</td><td class="v">${esc(r[1])}</td></tr>`).join("")+p.filter(a=>a.k!=="mfr_part_number").map(a=>`<tr><td class="k">${esc(a.k)}</td><td class="v">${esc(a.v)}</td></tr>`).join("")+`<tr><td class="k">Brand</td><td class="v">DNP Americas</td></tr><tr><td class="k">Weight</td><td class="v" style="color:var(--warn)">5.000000 → verify (default)</td></tr>`;}
+    $("#sheet-state").textContent=state==="a"?"As served · Sep 28, 2026":"With the attribute set";
+  }
+  document.querySelectorAll("[data-sheet]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-sheet]").forEach(x=>x.setAttribute("aria-pressed",x===b));sheet(b.dataset.sheet);}));sheet("a");
+  // ---- P1 url keys
+  const S=P.sitemap;
+  $("#uk-bars").innerHTML=Object.entries(S.files).map(([f,v])=>`<div class="bar-row" style="display:grid;grid-template-columns:130px 1fr auto;gap:10px;align-items:center;font-size:.88rem"><span class="mono">${esc(f)}</span><span style="height:18px;background:var(--paper-2);position:relative;overflow:hidden"><i style="position:absolute;inset:0 auto 0 0;background:var(--bad);width:${Math.round(100*v.keyless/v.urls)}%"></i></span><span class="mono" style="font-size:.8rem">${v.keyless.toLocaleString()} of ${v.urls.toLocaleString()} keyless</span></div>`).join("")+`<p class="small-note" style="font-size:.84rem;color:var(--muted);margin:4px 0 0">${S.keyless.toLocaleString()} of ${S.total.toLocaleString()} URLs (${S.pct}%) across the three files fetched. The other six files were not read.</p>`;
+  const slug=s=>s.toLowerCase().replace(/["']/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+  const keyless=[{sku:"804500106-Stucchi",name:"804500106",url:"/catalog/product/view/id/101454/"},{sku:"FFP03-2B3BL-B220-8-5090-PHD",name:"FFP03-2B3BL-B220-8-5090",url:"/catalog/product/view/id/310140/"},{sku:"DD03HPB064B",name:"DD03HPB064B",url:"/catalog/product/view/id/97434/"}].concat(S.examples.slice(0,3).map(u=>({sku:"(from the export)",name:"(from the export)",url:u.replace("https://federalfp.com","")})));
+  const seen=new Set();
+  const rows=keyless.map(k=>{if(k.name.startsWith("("))return {...k,key:"{{ slug(name) }} + \"-\" + {{ slug(sku) }} when name ≠ sku"};const root=slug(k.sku.replace(/-(Stucchi|PHD|dnp|Yuken|Tompkins|White)$/i,""));let key=slug(k.name);if(!key.includes(root))key+="-"+root;if(seen.has(key))key+="-2";seen.add(key);return {...k,key};});
+  $("#uk tbody").innerHTML=rows.map(r=>`<tr><td class="mono">${esc(r.sku)}</td><td>${esc(r.name)}</td><td class="mono" style="font-size:.76rem;color:var(--bad)">${esc(r.url)}</td><td class="mono ok">${esc(r.key)}</td></tr>`).join("");
+  $("#uk-csv").innerHTML=`<span class="k"># import.csv — System → Data Transfer → Import → Products (Add/Update)</span>\nsku,url_key\n${rows.filter(r=>!r.name.startsWith("(")).map(r=>esc(r.sku)+","+esc(r.key)).join("\n")}\n<span class="k"># then: bin/magento indexer:reindex catalog_url_rewrite && Marketing → Site Map → Generate</span>`;
+  // ---- P2 parser
+  const samples=$("#parse-samples"), pin=$("#parse-in"), pout=$("#parse-out");
+  samples.innerHTML=P.names.map(n=>`<button type="button" data-n="${esc(n.text)}">${esc(n.sku)}</button>`).join("");
+  samples.addEventListener("click",e=>{const b=e.target.closest("button");if(b){pin.value=b.dataset.n;render();}});
+  function render(){const p=parse(pin.value);pout.innerHTML=NAMES.filter(k=>p.some(a=>a.k===k)||["thread_size","port_size","pressure_rating","material"].includes(k)).map(k=>{const a=p.find(x=>x.k===k);return `<div class="attr"><span class="k">${esc(k)}</span><span class="v ${a?"":"none"}">${a?esc(a.v):"— not in the name → review column"}</span><span class="how">${a?esc(a.how):""}</span></div>`;}).join("");}
+  pin.addEventListener("input",render); pin.value=P.names[0].text; render();
+  // ---- P3 normalizer
+  const F=P.facets;
+  const serialToFraction=s=>{const n=+s;if(!(n>40000&&n<50000))return null;const d=new Date(Date.UTC(1899,11,30)+n*86400000);return (d.getUTCMonth()+1)+"/"+d.getUTCDate();};
+  const fracToDec=t=>t.replace(/(\d+)\s+(\d+)\/(\d+)/g,(m,a,b,c)=>String(+a+ b/c)).replace(/(^|\s)(\d+)\/(\d+)(?=\s|$)/g,(m,p,b,c)=>p+String(b/c));
+  const trim=n=>String(Math.round(n*10000)/10000);
+  function normalize(v){let s=String(v).trim();const fr=serialToFraction(s);if(fr)s=fr;s=s.replace(/["″]/g,"").replace(/\s*[xX×]\s*/g," x ").replace(/\s*lbs?$/i,"").replace(/\s+/g," ").trim();s=fracToDec(s);s=s.split(" x ").map(part=>/^\d+(\.\d+)?$/.test(part)?trim(+part):part).join(" x ");return s;}
+  const order=["Bore","Stroke","Rod Diameter","Bore x Stroke","Ports NPTF","Column Load"];
+  $("#norm").innerHTML=order.filter(k=>F[k]).map(k=>{const vals=F[k];const normed=vals.map(normalize);const counts={};normed.forEach(n=>counts[n]=(counts[n]||0)+1);const twins=vals.filter((v,i)=>counts[normed[i]]>1).length;const dates=vals.filter(v=>serialToFraction(v)).length;const uniq=[...new Set(normed)].sort((a,b)=>(parseFloat(a)-parseFloat(b))||a.localeCompare(b,undefined,{numeric:true}));return `<div class="col"><h4>${esc(k)} — as served (${vals.length})</h4><div class="vals">${vals.map((v,i)=>`<span class="${serialToFraction(v)?"date":(counts[normed[i]]>1?"twin":"")}">${esc(v)}</span>`).join("")}</div><p class="cnt">${twins} value${twins===1?"":"s"} collapse into twins · ${dates} date serial${dates===1?"":"s"}</p></div><div class="col"><h4>${esc(k)} — normalized (${uniq.length})</h4><div class="vals">${uniq.map(v=>`<span>${esc(v)}</span>`).join("")}</div><p class="cnt">${vals.length} → ${uniq.length} option values${k==="Column Load"?" · bare numbers (1, 10, 11 …) kept as-is and flagged: unit missing in the source":""}</p></div>`;}).join("");
+  // ---- P4 stock
+  function stock(state){$("#stock tbody").innerHTML=P.rfq.map(r=>{const zero=r.price==="0.00";return state==="a"?`<tr><td class="mono">${esc(r.sku)}</td><td>${esc(r.brand)}</td><td>${esc(r.cta)}</td><td class="num">${zero?'<span class="no">$0.00</span>':"$"+esc(r.price)}</td><td class="mono ${r.ld_availability==="InStock"?"no":""}">${esc(r.ld_availability)}</td><td><span class="no">no — quote-only, printed price${r.ld_availability==="InStock"?", InStock schema":""}</span></td></tr>`:`<tr><td class="mono">${esc(r.sku)}</td><td>${esc(r.brand)}</td><td>${zero?"Request pricing":"Request availability"}</td><td class="num">${zero?"— (no price → no Offer)":"$"+esc(r.price)+" <span class=\"pill\">list</span>"}</td><td class="mono ok">${zero?"(Offer omitted)":"BackOrder · lead time from ERP"}</td><td><span class="ok">yes — button, price and schema agree</span></td></tr>`;}).join("");}
+  document.querySelectorAll("[data-stock]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-stock]").forEach(x=>x.setAttribute("aria-pressed",x===b));stock(b.dataset.stock);}));stock("a");
+  // ---- P5 meta templates
+  const CAT={"White Drive Products":"motors","DNP Americas":"fittings","Stucchi":"couplings","Patriot Hydraulics":"valves","Daman":"manifolds","Yuken":"pumps and valves","Stauff":"couplings","TOMPKINS INDUSTRIES INC.":"fittings","Poclain":"motors"};
+  const nice=b=>b==="TOMPKINS INDUSTRIES INC."?"Tompkins":b;
+  const tt=$("#tpl-t"), td=$("#tpl-d");
+  function fill(tpl,s){return tpl.replace(/\{\{name\}\}/g,s.title).replace(/\{\{brand\}\}/g,nice(s.brand)).replace(/\{\{category\}\}/g,CAT[s.brand]||"components");}
+  function meta(){$("#meta tbody").innerHTML=P.sample.map(s=>{const t=fill(tt.value,s),d=fill(td.value,s);return `<tr><td class="mono" style="font-size:.76rem">${esc(s.sku)}</td><td>${esc(s.title)}</td><td>${esc(t)}</td><td class="num"><span class="len ${t.length>60?"over":"ok"}">${t.length}</span></td><td>${esc(d)}</td><td class="num"><span class="len ${d.length>155?"over":"ok"}">${d.length}</span></td></tr>`;}).join("");const s=P.sample.find(x=>x.sku.startsWith("BV3"))||P.sample[0];$("#serp-t").textContent=fill(tt.value,s);$("#serp-d").textContent=fill(td.value,s);}
+  tt.addEventListener("input",meta);td.addEventListener("input",meta);meta();
+  // ---- P6 footer
+  const FT=P.footer;
+  function foot(state){const a=state==="a";$("#foot").innerHTML=`<div class="cols"><div><h5>Header</h5><ul><li>Call Us: <span class="${a?"bad":"good"}">${a?esc(FT.header_phone)+" (Patriot's)":esc(FT.federal_phone)}</span></li><li>sales@federalfp.com</li></ul></div><div><h5>Support</h5><ul><li>Shipping Policy → <span class="${a?"bad":"good"}">${a?"/terms/ (2,320-word T&amp;C)":"/shipping-policy/"}</span></li><li>Return Policy → <span class="${a?"bad":"good"}">${a?"/terms/":"/returns/"}</span></li><li>Order History → <span class="${a?"bad":"good"}">${a?"#":"/sales/order/history/"}</span></li><li>Order Tracking → <span class="${a?"bad":"good"}">${a?"#":"/sales/order/history/"}</span></li></ul></div><div><h5>Locations</h5><ul><li>Plymouth · 1-734-455-1722</li><li>Vestaburg · 1-989-775-2878</li><li>Gaylord · 1-989-370-3993</li></ul></div><div><h5>Sitemap</h5><ul><li>${a?'<span class="bad">/test/ · /webkul/ · /pictures/ · /privacy-patriothyd/</span>':'<span class="good">test pages disabled and excluded</span>'}</li><li>${a?'<span class="bad">/brand/patriot-hydraulics → 404 that looks like the homepage</span>':'<span class="good">proper no-route page</span>'}</li></ul></div></div><div class="copy">${a?'<span class="bad">'+esc(FT.copyright)+'</span>':'<span class="good">© 2026 Federal Fluid Power, Inc. All rights reserved.</span>'} — ${a?"one block for both store views":"Content → Blocks → footer_copyright, scope: Federal store view"}</div>`;}
+  document.querySelectorAll("[data-foot]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-foot]").forEach(x=>x.setAttribute("aria-pressed",x===b));foot(b.dataset.foot);}));foot("a");
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+{
+  "status": "audited",
+  "company": "Royal Apparel, Inc.",
+  "url": "https://www.royalapparel.net",
+  "hq_city": "Hauppauge, NY",
+  "segment": "Manufacturer (USA-made blank apparel; wholesale B2B + retail + promo channels)",
+  "sells": "USA-made blank tees, fleece, tanks, kids apparel, accessories",
+  "platform": "Custom (WAM / liveb2b CGI templates)",
+  "platform_evidence": "wamInitObj {'appURL':'/cgi-bin/liveb2b/','pageTemplate':'catalog_browse'}; /cgi-bin/liveb2b/wam_tmpl/*.p templates; Bootstrap 3 + jQuery 2.2.2/3.3.1 + Handlebars grid; no Shopify/Woo/Magento markers",
+  "audited_at": "2026-09-28",
+  "pages_checked": [
+    "https://www.royalapparel.net/ (515-byte meta-refresh stub)",
+    "https://royalapparel.net/ and http://royalapparel.net/ (HEAD + GET, redirect tracing)",
+    "https://www.royalapparel.net/cgi-bin/liveb2b/wam_tmpl/marketing.p?site=B2B&layout=Baseb2b&page=homepage (301 -> /index)",
+    "https://www.royalapparel.net/index (real homepage)",
+    "https://www.royalapparel.net/robots.txt",
+    "https://royalapparel.net/sitemap.xml (1,063 URLs)",
+    "https://www.royalapparel.net/Category/Men/",
+    "https://www.royalapparel.net/cgi-bin/liveb2b//wam_tmpl/catalog_browse.p?site=B2B&layout=Baseb2b&page=catalog_browse&browsepath=205 (301 -> /Category/Men/)",
+    "https://www.royalapparel.net/Category/Face-Cover-Accessories/",
+    "https://www.royalapparel.net/product/5051/Unisex-Short-Sleeve-Tee.html",
+    "https://www.royalapparel.net/product/5001W/Womens-Short-Sleeve-Tee.html",
+    "18 further /product/ URLs sampled from the sitemap (see captures/product-sample-18.txt)",
+    "https://www.royalapparel.net/js/catalog_product.js?v=6.2.15.2.2",
+    "https://www.royalapparel.net/customer-service",
+    "https://www.royalapparel.net/about-royal-apparel",
+    "https://www.royalapparel.net/shipping",
+    "https://www.royalapparel.net/in-the-news",
+    "https://www.royalapparel.net/product-specifications",
+    "https://www.royalapparel.net/jobs",
+    "https://www.royalapparel.net/cgi-bin/liveb2b//wam_tmpl/store_locator.p?site=B2B&layout=Baseb2b&page=store_locator",
+    "https://www.royalapparel.net/cgi-bin/liveb2b/wam_tmpl/catalog_browse.p?site=B2B&layout=Baseb2b&page=catalog_browse&searchText=5051",
+    "https://www.royalapparel.net/css/baseb2b.css?v=41 and /main.css",
+    "HEAD only: /privacy, /Terms, /favicon.ico, /sitemap, /Category/Unisex/, /category/men/, /Category/Men, /product/5051/, /product/5051/anything.html, catalog_product.p?product=5051, catalog_browse.p?browsePath=464, /royal-apparel-reviews, /eco-certifications, /samples, /Category/Sale/"
+  ],
+  "sample_urls": {
+    "category": "https://www.royalapparel.net/Category/Men/",
+    "product1": "https://www.royalapparel.net/product/5051/Unisex-Short-Sleeve-Tee.html",
+    "product2": "https://www.royalapparel.net/product/5001W/Womens-Short-Sleeve-Tee.html"
+  },
+  "checks": {
+    "F1": {
+      "s": 1,
+      "e": "https serves 200 with HSTS, but http://royalapparel.net/ also returns 200 (same 515-byte stub), no 301 to https (redirect-chains.txt)"
+    },
+    "F2": {
+      "s": 2,
+      "e": "robots.txt: 2 Disallow lines (search & preview URLs only) + 'Sitemap: https://royalapparel.net/sitemap.xml'"
+    },
+    "F3": {
+      "s": 2,
+      "e": "sitemap.xml 200, 1,063 URLs incl. 248 /product/ URLs; but 408 CGI catalog_browse URLs that 301, plus cart.p/login.p/404 entries"
+    },
+    "F4": {
+      "s": 2,
+      "e": "Home 'USA-Made Wholesale Apparel & Eco-Friendly Clothing | Royal Apparel | Royal Wholesale'; PDP 'Unisex Short Sleeve Tee | Royal Wholesale'"
+    },
+    "F5": {
+      "s": 2,
+      "e": "Home meta 'Premium blank apparel made in the USA…'; PDP 5051 meta specific; but /Category/Men/ has none and 6/20 PDPs use one auto-template"
+    },
+    "F6": {
+      "s": 0,
+      "e": "No <link rel=canonical> on /index, /Category/Men/ or any of 20 PDPs; only the 515-byte meta-refresh stub at / carries one"
+    },
+    "F7": {
+      "s": 1,
+      "e": "PDP LD+JSON: 2 separate Product blocks; Offer has availability:'' url:''; aggregateRating 5/326 identical on 19/19; no BreadcrumbList"
+    },
+    "F8": {
+      "s": 1,
+      "e": "/product/5051/Unisex-Short-Sleeve-Tee.html readable; but nav + 408 sitemap URLs use catalog_browse.p?site=B2B&layout=Baseb2b&browsepath=205"
+    },
+    "C1": {
+      "s": 2,
+      "e": "H1 '5051 Unisex Short Sleeve Tee', '5001w Women's Short Sleeve Tee'; 19/20 sampled names follow type+fabric+item pattern"
+    },
+    "C2": {
+      "s": 2,
+      "e": "5051 description 64 words (fabric oz, seams, tear-away label); 5001W 79 words; 17/19 live sampled PDPs >=50 words"
+    },
+    "C3": {
+      "s": 2,
+      "e": "5051 prodJSON: 107 alt-view images; rendered alts like 'Unisex Short Sleeve Tee BLACK Back'; 5001W 51 images"
+    },
+    "C4": {
+      "s": 1,
+      "e": "Public price: prodJSON regPrice 6.98, view_item value 6.98; per-size stock is JS-only (show_stock false; Offer availability '')"
+    },
+    "C5": {
+      "s": 2,
+      "e": "5051: 28 colors x 9 sizes (XS-5X) in prodJSON, size row rendered in HTML, Spec Sheet PDF link, fabric weight in copy"
+    },
+    "C6": {
+      "s": 1,
+      "e": "23 categories incl. Kids > Infant/Toddler/Youth, but 0 breadcrumb markup on /Category/Men/ or any of 20 PDPs"
+    },
+    "C7": {
+      "s": 2,
+      "e": "/Category/Men/: filters Color, Fabric, Item Type, Sleeve Length, Neckline, Tear Away, USA or Import; sort Default/Product ID/Name/Price"
+    },
+    "C8": {
+      "s": 2,
+      "e": "Header search -> catalog_browse.p?searchText=5051 returns 9 results, 5051 first (h1 'Search for: 5051')"
+    },
+    "B1": {
+      "s": 1,
+      "e": "PDP add-to-cart is built by /js/catalog_product.js ('.addToCartBtn', 'Add To Cart Click'); not in server HTML; home CTA 'CREATE AN ACCOUNT'"
+    },
+    "B2": {
+      "s": 2,
+      "e": "/shipping: free freight on orders >= $350 (+$9.95 handling, per warehouse); /customer-service: RA number, 20% restocking, 10-day window"
+    },
+    "B3": {
+      "s": 1,
+      "e": "'CREATE ACCOUNT' -> /customer/account/login/; customer_registration.p + web_checkout.p exist; guest checkout not verifiable"
+    },
+    "B4": {
+      "s": 2,
+      "e": "/index: 4-slide hero (files dated 20260909-20260923), tiles Women/Men/Heavyweight/Vintage, nav Best Sellers/New/Sale, all 200"
+    },
+    "B5": {
+      "s": 1,
+      "e": "/royal-apparel-reviews 200 + Made-in-USA badges; PDP rating hardcoded 5/326 on 19/19 PDPs; footer /eco-certifications link 404s"
+    },
+    "T1": {
+      "s": 2,
+      "e": "/customer-service: Tel 866.769.2517, Fax 631.922.8438, 91 Cabot Court Hauppauge NY 11788, hours Mon-Fri 9-5:30 EST, inquiry form"
+    },
+    "T2": {
+      "s": 2,
+      "e": "/about-royal-apparel: 264-word founding story (early 1990s, Manhattan Garment District) + links to usa-made, go-green, our-team"
+    },
+    "T3": {
+      "s": 2,
+      "e": "/privacy 200 and /Terms 200 linked in footer; Termly 'Do Not Sell or Share' links; UserWay widget but no accessibility statement page seen"
+    },
+    "T4": {
+      "s": 2,
+      "e": "Footer links Facebook, X, Instagram, YouTube, Pinterest, TikTok (6 profiles) with aria-labels"
+    },
+    "T5": {
+      "s": 1,
+      "e": "No skip link on /index or PDP; product imgs have alts; carousel has ARIA; 6 home dropdown banners + 90 imgs on /Category/Men/ lack alt"
+    },
+    "N1": {
+      "s": 1,
+      "e": "/in-the-news (footer 'News') has 47 words of intro and no posts or dates; newest sitemap lastmod is 2024-07-23"
+    },
+    "N2": {
+      "s": 2,
+      "e": "Help Center support.royalapparel.com (FAQ 'Definitions, How to's') + guides /our-fabrics-information, /fabric-weights, /colors"
+    },
+    "N3": {
+      "s": 1,
+      "e": "HQ address on /customer-service; 'East Coast + West Coast Distribution' on PDP; store_locator.p is a bare 'Store Locator Template'"
+    }
+  },
+  "strengths": [
+    "Fresh homepage merchandising: the 4-slide hero uses creative dated 2026-09-09 to 2026-09-23 (e.g. /img/homepage_slider/B2B_S_USAManu_20260923.jpg) and every slide links to a live 200 page.",
+    "Deep, well-labelled product imagery: 5051 ships 107 alt-view images across 28 colors with alts like 'Unisex Short Sleeve Tee BLACK Back'; wrong product slugs and CGI product URLs 301 to the correct pretty URL.",
+    "Clear B2B commercial terms: public wholesale pricing, free freight >= $350 with the $9.95 handling fee stated, returns with RA number/20% restocking/10-day window, phone + HQ address + hours on /customer-service."
+  ],
+  "fixes": [
+    "Add <link rel=canonical> (self-referencing pretty URL) to /index, every /Category/ page and every /product/ page, and 301 http:// and https://royalapparel.net to https://www.royalapparel.net (currently all return 200).",
+    "Rebuild sitemap.xml from the pretty URLs: drop the 408 redirecting catalog_browse.p entries, the cart/login/checkout/404 entries and the 200-status 'Product Not Found' products (e.g. /product/15250006/USA-Team-Beanie.html); add lastmod to the 248 product URLs.",
+    "Merge the two Product LD+JSON blocks on each PDP into one with brand, sku/mpn, image, offers.url, offers.availability (schema.org/InStock) and remove the hardcoded aggregateRating 5/326 unless it comes from real reviews; add BreadcrumbList."
+  ],
+  "notes": "Homepage / is a 515-byte static stub (meta refresh 0 + JS location.replace) to marketing.p, which 301s to /index; the stub has a self-canonical but no title/description, /index has title+description but no canonical. Category grids and PDP buy boxes are rendered client-side from inline JSON (prodJSON, $.wam.browse.init) so prices, colors, sizes and add-to-cart are absent from server HTML; pagination is hash-based (#page=2). Stock levels and add-to-cart could not be observed (no cart/login actions taken). /product/15250006/USA-Team-Beanie.html returns 200 with 'Product Not Found' (soft 404). LinkedIn job page blocked by robots for WebFetch; posting text taken from a mirror (thesocialmediaassociation.com). Fetch tally: ~39 GETs + 17 HEADs on the target, all logged in captures/index.txt."
+}

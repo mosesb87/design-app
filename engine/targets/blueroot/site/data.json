@@ -1,0 +1,719 @@
+{
+ "review": {
+  "slug": "blueroot",
+  "path": "blueroot-review",
+  "company": "Blueroot Health",
+  "company_short": "Blueroot",
+  "store_scored": "fairhavenhealth.com",
+  "stores": [
+   "fairhavenhealth.com",
+   "bariatricfusion.com",
+   "vitalnutrients.co",
+   "unjury.com"
+  ],
+  "platform": "Shopify (four stores; Klaviyo, Recharge, Rebuy, Stamped)",
+  "audited_at": "2026-09-28",
+  "audited_label": "Sep 28, 2026",
+  "role": {
+   "title": "DTC Operations Manager",
+   "mode": "Fully remote (US) · Middletown, CT",
+   "posting_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4513499",
+   "posting_alt": "https://www.linkedin.com/jobs/view/4468862686",
+   "posted": "Sep 17, 2026",
+   "apply_via": "Paylocity",
+   "duties": [
+    "Own product setup, catalog accuracy, pricing and merchandising across all DTC storefronts",
+    "Manage collections, navigation, PDP content, promotions and landing pages",
+    "Routine QA for broken links, pricing issues and content discrepancies",
+    "PDP and digital-shelf optimization: titles, descriptions, imagery, FAQs, attributes, on-page SEO",
+    "Recurring DTC reporting — revenue, conversion, AOV, traffic, fulfillment KPIs",
+    "Operational liaison to the 3PL and Supply Chain; Recharge subscription administration"
+   ]
+  },
+  "people": [
+   {
+    "name": "Domenic DiSiena",
+    "title": "Head of eCommerce (per ZoomInfo; LinkedIn headline: Senior Ecommerce & Digital Executive)",
+    "url": "https://www.linkedin.com/in/domenicdisiena/",
+    "channel": "LinkedIn InMail",
+    "primary": true
+   },
+   {
+    "name": "Erin Anthony",
+    "title": "Chief Marketing Officer",
+    "url": "https://www.linkedin.com/in/erinanthony/",
+    "channel": "LinkedIn connection note",
+    "primary": false
+   }
+  ],
+  "hero": {
+   "eyebrow": "Independent review · Blueroot Health's four Shopify stores · Sep 28, 2026",
+   "headline": [
+    "Four stores.",
+    "One",
+    "checklist."
+   ],
+   "lede": "An independent review of Blueroot Health's direct-to-consumer storefronts for the DTC Operations Manager role. I read fairhavenhealth.com in full and sampled bariatricfusion.com, vitalnutrients.co and unjury.com — 397 published products, 57 page fetches, no logins. Fairhaven's public-page baseline is the strongest I have measured this year. The six findings below are the operating gaps a weekly QA sheet would catch: empty footer collections, a sold-out product in the #2 slot sitewide, a 30%-off badge with no discounted price, facts panels that exist only as JPGs, titles that truncate on every product page, and four stores with four sets of rules from one warehouse.",
+   "stats": [
+    {
+     "n": "397",
+     "label": "published products read across four stores (32 · 112 · 168 · 85)"
+    },
+    {
+     "n": "95",
+     "suffix": "/100",
+     "label": "ShelfMark score for fairhavenhealth.com — would rank 1st of 21 on the Michigan index"
+    },
+    {
+     "n": "3",
+     "suffix": " of 8",
+     "label": "footer “Shop” links that open an empty or one-sold-out-item collection"
+    },
+    {
+     "n": "20",
+     "suffix": "/20",
+     "label": "sampled product titles over 70 characters — every one truncates in search"
+    },
+    {
+     "n": "28",
+     "suffix": " of 89",
+     "label": "SKUs sold on two stores with two different names (0 price mismatches)"
+    }
+   ]
+  },
+  "why": {
+   "kicker": "Why this review",
+   "title": "Why Blueroot Health",
+   "sub": "The posting asks for someone who keeps four storefronts “accurate, performant and conversion-ready” with “a documented, repeatable operating cadence.” I read the stores the way that person would on a Monday morning.",
+   "rows": [
+    [
+     "Site & merchandising operations",
+     "Collections, navigation, sort defaults, promotions — findings 1, 2 and 3."
+    ],
+    [
+     "Digital shelf & PDP optimization",
+     "Titles, descriptions, attributes, schema, facts panels — findings 4 and 5."
+    ],
+    [
+     "A repeatable cadence across the portfolio",
+     "Policy pages, shipping promises, shared-SKU naming across four stores — finding 6."
+    ],
+    [
+     "Reporting and QA",
+     "Every finding is a row in the QA workbook that ships with this page."
+    ]
+   ],
+   "note": "Everything here comes from public pages and Shopify's public product feeds (products.json, collections.json). I evaluated structure, data and merchandising only — no health or product claim language, which belongs to your regulatory review, not mine."
+  },
+  "strengths": [
+   {
+    "title": "A clean technical-SEO baseline on Fairhaven",
+    "text": "robots.txt ends with the sitemap line; every one of 20 sampled product pages has a self-referencing canonical, a unique title, a unique description and Product + Offer JSON-LD with sku and gtin12; 17 of 20 also carry FAQPage schema."
+   },
+   {
+    "title": "Real, metafield-driven discovery",
+    "text": "Collection filters run on custom metafields — gender, life stage, health benefit, key ingredients, made without, product form, FSA/HSA eligibility — with nine sort options, and site search returns a proper results page with the same filters. Bariatric Fusion and Vital Nutrients use the same approach."
+   },
+   {
+    "title": "One PDP template, and prices that agree everywhere",
+    "text": "All 20 sampled Fairhaven PDPs share one template (benefits, ingredients, use, description, FAQ, bought-together) with Stamped reviews and Recharge subscribe-and-save. Card price = PDP price = feed price on 20 of 20 Fairhaven, 40 of 40 Bariatric Fusion and 16 of 16 Vital Nutrients products checked; the 89 SKUs shared by bariatricfusion.com and unjury.com show 0 price and 0 stock mismatches."
+   }
+  ],
+  "findings": [
+   {
+    "id": "F1",
+    "pillar": "B",
+    "duty": "Collections & navigation QA",
+    "title": "Footer “Shop” links and the sitemap point at empty collections",
+    "count": "3 of 8 footer collection links · 4 of 42 sitemap collections · 32 products vs 42 collections",
+    "observed": "The footer's “Pregnancy” link opens /collections/shop-pregnancy, which renders “No products found” under a title that still promises stretch mark cream and fetal dopplers — and the page is indexable and in the sitemap. “Pregnancy and Ovulation Tests” is empty too; “Ovulation Prediction” holds exactly one product, the sold-out BabyDance lubricant. collections.json still reports counts of 120, 74 and 45 for collections that hold unpublished legacy items, against a storefront of 32 published products.",
+    "why": "The posting's first duty is collections, navigation and “routine QA checks for broken links and content discrepancies.” A footer link to zero products is the purchase-path dead end that role exists to catch.",
+    "fix": "Unpublish shop-pregnancy, pregnancy-products, pregnancy-and-ovulation-tests, private, uncategorized and fairhaven-health from the Online Store channel so they leave the sitemap; retitle the survivors; repoint the footer “Pregnancy” link to /collections/prenatal and remove “Ovulation Prediction”; run the collection-health check below every Monday.",
+    "evidence": [
+     "fh_collections_shop-pregnancy.html",
+     "fh_collections_pregnancy-and-ovulation-tests.html",
+     "fh_collections_ovulation-prediction_products.json",
+     "fh_collections.json",
+     "fh_sitemap_collections_1.xml",
+     "fh_home.html"
+    ],
+    "prototype": "p-collections"
+   },
+   {
+    "id": "F2",
+    "pillar": "B",
+    "duty": "Sort defaults & discoverability",
+    "title": "A sold-out product is the #2 item on All Products and in the search drawer sitewide",
+    "count": "position 2 of 32 on /collections/all · position 2 of 3 in “Trending Now” on 32 of 32 captured pages",
+    "observed": "/collections/all defaults to Alphabetically, A–Z, so BabyDance Fertility Lubricant — the only fully sold-out product in products.json — sits second with a Sold out badge. The theme's search drawer shows the first three A–Z products as “Trending Now” on every page, so the sold-out item is the second trending product on the homepage, the contact page, every policy page and every PDP. vitalnutrients.co's All Products defaults to A–Z as well.",
+    "why": "The first screen of All Products and the search drawer are the two highest-traffic merchandising slots on the store, and both lead with something nobody can buy.",
+    "fix": "Set All Products to Best selling (or manual with sold-out last); turn on “push sold-out to the bottom” in Search & Discovery; point the theme's Trending Now block at a curated collection; add the available flag from products.json to the weekly QA sheet so any sold-out SKU in a top-8 slot is flagged.",
+    "evidence": [
+     "fh_collections_all.html",
+     "fh_home.html",
+     "fh_pages_contactus.html",
+     "fh_products.json",
+     "vn_collections_all.html"
+    ],
+    "prototype": "p-sort"
+   },
+   {
+    "id": "F3",
+    "pillar": "B",
+    "duty": "Promotions & pricing QA",
+    "title": "“30% OFF – select sizes” badges on single-variant products while every price still shows full",
+    "count": "5 of 32 products badged · 5 of 5 single-variant · 0 of 5 show a reduced price · 0 of 32 use compare-at pricing",
+    "observed": "A badge reading “30% OFF · LIMITED-TIME OFFER · SELECT SIZES – APPLIED IN CART” sits on five product cards and PDPs. All five products have one variant (“Default Title”), so “select sizes” cannot apply. Because the discount is an automatic in-cart discount, the card, the PDP price ($26.99 for FertileCM), the Offer.price in JSON-LD and the Recharge subscription price (10% off the full price) all show the undiscounted number. compare_at_price is null on 32 of 32 Fairhaven products — and on 112 of 112 Bariatric Fusion, 167 of 168 Vital Nutrients and 85 of 85 UNJURY products — so no store ever shows a strike-through sale price.",
+    "why": "“Pricing issues” and “promotions” are explicit QA duties, and an Offer.price that differs from the checkout price is a Merchant Center and Shop app mismatch waiting to be flagged.",
+    "fix": "Run the promotion as compare-at pricing on the affected variants (bulk editor) or as a Shopify Functions discount surfaced in the theme's price block so badge, price and JSON-LD agree; make the badge copy conditional on variant count; adopt a five-step promo launch check — badge → price display → JSON-LD → subscription price → cart total — on one badged PDP before go-live.",
+    "evidence": [
+     "fh_products_fertilecm-cervical-mucus-supplement.html",
+     "fh_collections_all.html",
+     "fh_products.json",
+     "bf_products.json",
+     "vn_products.json",
+     "unjury_products.json"
+    ],
+    "prototype": "p-promo"
+   },
+   {
+    "id": "F4",
+    "pillar": "C",
+    "duty": "PDP content & product attributes",
+    "title": "Supplement Facts live only in JPGs; product_type and tags are unusable for merchandising",
+    "count": "facts panel image-only on 17 of 20 PDPs · Ingredients accordion ≤19 words on 15 of 20 · product_type blank on 32 of 32 · 32 tags on 32 products",
+    "observed": "On 17 of 20 sampled Fairhaven PDPs the facts panel is a gallery image; no PDP has an HTML table, and the Ingredients accordion on 15 of 20 holds only the other-ingredients line (8–19 words). products.json shows product_type blank on all 32 products (Bariatric Fusion: 0 of 112 blank), 32 distinct tags on 32 products including three spellings of one concept and internal flags (exclude_rebuy, fam-fhpro-men, Ovia, The Ribbon Box) mixed with merchandising tags. One product ships with an empty description, no facts image and no subscription widget.",
+    "why": "Product attributes, SKU-level monitoring and feeds all key off product_type and tags, and text that exists only inside a JPG cannot be searched, filtered or read by a screen reader.",
+    "fix": "Add a custom.supplement_facts metafield and render it as a table inside the Ingredients accordion (keep the image as a second view); set Shopify's standard Product Category plus a house product_type list on all 32 products via CSV; move internal flags to a custom.internal_flags metafield and collapse the three vaginal-care tags into one; a products.json diff before and after is the acceptance test.",
+    "evidence": [
+     "fh_pdp_sample_summary.json",
+     "fh_products_fh-pro-for-women.html",
+     "fh_products_milkies-nursing-postnatal-breastfeeding-multivitamin.html",
+     "fh_products.json",
+     "bf_products.json"
+    ],
+    "prototype": "p-facts"
+   },
+   {
+    "id": "F5",
+    "pillar": "F",
+    "duty": "On-page SEO & digital-shelf scorecard",
+    "title": "Every sampled PDP title truncates in search; no rating or breadcrumb schema; no H1 on the homepage",
+    "count": "20 of 20 titles at 73–91 characters · 13 of 20 descriptions end “Learn more…” · 0 of 20 with aggregateRating · 0 of 20 with BreadcrumbList · 20 of 20 og:image over http",
+    "observed": "Each product title carries a benefit clause plus “ – Fairhaven Health” (the longest is 91 characters), so Google cuts all 20. The homepage has no h1 or h2 — the hero line “A Better Prenatal for the First 1000 Days” is not a heading. Product JSON-LD has no aggregateRating on 20 of 20 PDPs even though the Stamped badge on the same page exposes the review count and rating, and no Fairhaven or Bariatric Fusion PDP has BreadcrumbList (Vital Nutrients does). The homepage copy also contains “clincially-tested.”",
+    "why": "The posting asks for on-page SEO, content scorecards and organic search visibility; these are the cheapest measurable wins on the digital shelf.",
+    "fix": "Rewrite titles to ≤60 characters with the product first and the brand last (bulk editor or the search-engine-listing field) and replace the “Learn more…” tail; wrap the hero headline in an h1; enable Stamped's rich-snippet JSON-LD; add a BreadcrumbList snippet to main-product.liquid; set the social image URL to https. Track title length and schema presence per SKU in the weekly scorecard.",
+    "evidence": [
+     "fh_pdp_sample_summary.json",
+     "fh_home.html",
+     "fh_products_fh-pro-for-women.html",
+     "bf_products_glp-one.html",
+     "vn_products_glp-1-complete.html"
+    ],
+    "prototype": "p-titles"
+   },
+   {
+    "id": "F6",
+    "pillar": "T",
+    "duty": "Portfolio operating cadence",
+    "title": "Four stores, four conventions: policies, shipping promises and shared-SKU names diverge",
+    "count": "4 themes · 4 policy-URL patterns · 3 free-shipping thresholds ($35 / $49 / $100) from one warehouse · 28 of 89 shared SKUs titled differently · 1 live “copy-of-” handle + 5 “-1” handles · 7 empty descriptions on Vital Nutrients",
+    "observed": "The four stores run four themes and put shipping, terms and contact pages at four URL patterns. All four ship from 45 Kenneth Dooley Drive, yet free shipping starts at $35 (Fairhaven), $49 (Vital Nutrients) and $100 (Bariatric Fusion), processing is “1–2” vs “within 2” business days and delivery “4–8” vs “3–5.” bariatricfusion.com and unjury.com sell 89 identical SKUs with matching prices and stock but 28 different titles for the same SKU. Bariatric Fusion still serves a product at a copy-of- handle published in 2020 with a 5% subscription discount (10% elsewhere), plus five -1 duplicate handles and two empty collections; seven Vital Nutrients products — six of them the kids line launched in June 2026 — have an empty body_html, so feeds carry no description.",
+    "why": "The role is defined as “a documented, repeatable operating cadence across the portfolio.” These are the places where one owner and one checklist would show up immediately.",
+    "fix": "Publish a one-page portfolio standard (policy handles, free-shipping copy, processing and transit language taken from the 3PL's real SLA, subscription discount) and align each store to it; keep a master SKU sheet (SKU → canonical title → price → subscription %) and reconcile bariatricfusion.com and unjury.com by CSV; rename the copy-of and -1 handles with 301 redirects; copy the kids-line section copy into body_html so Shop and Google feeds get a description.",
+    "evidence": [
+     "fh_pages_shipping-and-returns.html",
+     "bf_pages_shipping-policy.html",
+     "vn_pages_shipping-policy.html",
+     "unjury_pages_shipping-return-policy.html",
+     "bf_products.json",
+     "unjury_products.json",
+     "bf_products_copy-of-calcium-variety-pack.html",
+     "vn_products_tummy-troopers-probiotic.html"
+    ],
+    "prototype": "p-standard"
+   }
+  ],
+  "also": [
+   "/collections/all has no meta description (Shopify default); nav collections do.",
+   "PDP breadcrumb is only Home / product (no collection level) while collection pages show Home / Shop / collection.",
+   "The Rebuy bought-together widget exposes live inventory counts in a hidden select (data-qty=\"15816\" for FH PRO for Men).",
+   "complete-menopause-relief renders an empty 0.0 Stamped badge on cards and PDP instead of hiding it.",
+   "Multi-variant cards (myo-inositol $19.99 / $35.99) show one price with no “From.”",
+   "Blog index and homepage blog cards carry no publish dates.",
+   "Fairhaven's newest published_at is 2026-01-28; Vital Nutrients published six kids SKUs in May–June 2026 and UNJURY's newest is 2026-07-28."
+  ],
+  "prototypes": [
+   {
+    "id": "p-collections",
+    "title": "Collection health monitor",
+    "what": "Reads collections.json against the storefront and flags every published collection with 0 or 1 buyable products — the Monday check, from the real Fairhaven data."
+   },
+   {
+    "id": "p-sort",
+    "title": "Sold-out to the bottom",
+    "what": "All 32 Fairhaven products as the store sorts them today (A–Z) and as they would sort with sold-out last — plus the Trending Now drawer, before and after."
+   },
+   {
+    "id": "p-promo",
+    "title": "Promo consistency check",
+    "what": "The five badged products across badge, card price, PDP price, JSON-LD and subscription price, then the same row once compare-at pricing is set."
+   },
+   {
+    "id": "p-facts",
+    "title": "Facts panel as a table",
+    "what": "The FH PRO for Women PDP's Ingredients accordion rebuilt with a real HTML facts table next to the image — searchable, filterable, readable."
+   },
+   {
+    "id": "p-titles",
+    "title": "Title fitter",
+    "what": "All 20 sampled titles with their character counts, each rewritten under 60 characters with the product first and the brand last."
+   },
+   {
+    "id": "p-standard",
+    "title": "The one-page portfolio standard",
+    "what": "Policy handles, shipping copy and subscription discount for all four stores in one table, with the 28 shared-SKU title mismatches and a proposed canonical name for each."
+   }
+  ],
+  "plan": {
+   "30": [
+    "Ship the weekly QA workbook (collection health, sold-out placement, promo consistency, title length, schema presence) and run it on all four stores",
+    "Fix the six footer/sitemap collections and the All Products sort on Fairhaven",
+    "Correct the five promo badges so price, JSON-LD and subscription price agree"
+   ],
+   "60": [
+    "Facts-panel metafield and product_type on all 32 Fairhaven products; tag cleanup",
+    "Title and description rewrite across the sampled set, then the rest of the catalog",
+    "Stamped rich snippets + BreadcrumbList on Fairhaven and Bariatric Fusion"
+   ],
+   "90": [
+    "Publish the portfolio standard and align the four stores' policies and shipping copy to the 3PL's SLA",
+    "Reconcile the 89 shared BF/UNJURY SKUs from one master sheet; 301 the copy-of and -1 handles",
+    "Recurring DTC report: revenue, conversion, AOV, traffic and fulfillment KPIs per store, with the digital-shelf scorecard as a page"
+   ]
+  },
+  "files": {
+   "resume": "files/Mousa-Batarseh-Resume-Blueroot-Health.pdf",
+   "cover": "files/Mousa-Batarseh-Cover-Letter-Blueroot-Health.pdf",
+   "summary": "files/Blueroot-Health-DTC-Review-Summary.pdf",
+   "workbook": "files/Blueroot-Health-Weekly-QA-Workbook.xlsx"
+  },
+  "marquee": [
+   "397 products read",
+   "4 Shopify stores",
+   "57 page fetches",
+   "No logins",
+   "Public pages only",
+   "Every count dated Sep 28, 2026",
+   "Six findings",
+   "Six working fixes",
+   "The workbook ships with it"
+  ]
+ },
+ "scorecard": {
+  "score": 95.2,
+  "grade": "A",
+  "band": "Benchmark",
+  "rank": 1,
+  "index_n": 21,
+  "index_mean": 75.9,
+  "verified": 29,
+  "coverage": 1.0,
+  "confidence": "High",
+  "weakest": "N",
+  "weakest_name": "Content",
+  "pillars": [
+   {
+    "id": "F",
+    "name": "Findability",
+    "weight": 25,
+    "question": "Can search engines and shoppers find the store and its products?",
+    "pts": 16,
+    "max": 16,
+    "verified": 8,
+    "pct": 1.0
+   },
+   {
+    "id": "C",
+    "name": "Catalog",
+    "weight": 30,
+    "question": "Is the product data complete enough to sell from?",
+    "pts": 16,
+    "max": 16,
+    "verified": 8,
+    "pct": 1.0
+   },
+   {
+    "id": "B",
+    "name": "Buy",
+    "weight": 20,
+    "question": "Is there a clear, trustworthy path from product to purchase?",
+    "pts": 10,
+    "max": 10,
+    "verified": 5,
+    "pct": 1.0
+   },
+   {
+    "id": "T",
+    "name": "Trust",
+    "weight": 15,
+    "question": "Does the site prove there is a real, reachable business behind it?",
+    "pts": 9,
+    "max": 10,
+    "verified": 5,
+    "pct": 0.9
+   },
+   {
+    "id": "N",
+    "name": "Content",
+    "weight": 10,
+    "question": "Does the store publish anything that helps a shopper decide?",
+    "pts": 4,
+    "max": 6,
+    "verified": 3,
+    "pct": 0.6666666666666666
+   }
+  ],
+  "checks": [
+   {
+    "id": "F1",
+    "name": "HTTPS",
+    "pillar": "F",
+    "s": 2,
+    "e": "curl final URL https://www.fairhavenhealth.com/ returned 200; all 40 fetched URLs served over https",
+    "two": "Site serves on https (final URL https)",
+    "one": "Mixed / uncertain",
+    "zero": "http only"
+   },
+   {
+    "id": "F2",
+    "name": "robots.txt",
+    "pillar": "F",
+    "s": 2,
+    "e": "/robots.txt: 'Allow: /', blocks only cart/checkout/account/sort_by; ends 'Sitemap: https://www.fairhavenhealth.com/sitemap.xml'",
+    "two": "Present, does not block products/categories, contains a Sitemap: line",
+    "one": "Present but no Sitemap line, or blocks something important",
+    "zero": "Missing, or Disallow: / for everything"
+   },
+   {
+    "id": "F3",
+    "name": "XML sitemap",
+    "pillar": "F",
+    "s": 2,
+    "e": "/sitemap.xml index -> sitemap_products_1.xml (32 product URLs), sitemap_collections_1.xml (42), pages, blogs; all fetched 200",
+    "two": "Reachable and includes product/category (or article) URLs",
+    "one": "Reachable but thin / only static pages",
+    "zero": "Not reachable"
+   },
+   {
+    "id": "F4",
+    "name": "Title tags",
+    "pillar": "F",
+    "s": 2,
+    "e": "Home 'Fairhaven Health - Natural Fertility, Pregnancy, and Nursing Products'; 20/20 sampled PDP titles unique (73-91 chars, brand suffix)",
+    "two": "Homepage title is descriptive (brand + what/where) AND a sampled product title is unique and descriptive",
+    "one": "Present but generic / duplicated / templated",
+    "zero": "Missing or just 'Home'"
+   },
+   {
+    "id": "F5",
+    "name": "Meta descriptions",
+    "pillar": "F",
+    "s": 2,
+    "e": "Home desc 'Fairhaven Health offers all natural, doctor-designed fertility...'; PDP desc unique on 20/20 (13 end 'Learn more…')",
+    "two": "Specific meta description on homepage AND on a sampled product page",
+    "one": "On one only, or templated / duplicated",
+    "zero": "None"
+   },
+   {
+    "id": "F6",
+    "name": "Canonical tags",
+    "pillar": "F",
+    "s": 2,
+    "e": "<link rel=canonical> = https://www.fairhavenhealth.com/ on home and https://www.fairhavenhealth.com/products/fh-pro-for-women on PDP",
+    "two": "Canonical present on homepage AND product page",
+    "one": "On one only",
+    "zero": "None"
+   },
+   {
+    "id": "F7",
+    "name": "Structured data",
+    "pillar": "F",
+    "s": 2,
+    "e": "PDP ld+json: Product (sku, gtin12) + Offer (89.99, InStock) + FAQPage; home Organization+WebSite; no BreadcrumbList/AggregateRating 20/20",
+    "two": "Product/Breadcrumb schema evidence seen on product pages",
+    "one": "Partial evidence (e.g. breadcrumb schema only)",
+    "zero": "None seen where expected"
+   },
+   {
+    "id": "F8",
+    "name": "Clean URLs",
+    "pillar": "F",
+    "s": 2,
+    "e": "Hyphenated handles: /products/fh-pro-for-women, /collections/female-fertility-supplements; no IDs or session params",
+    "two": "Readable hyphenated product/category URLs, no session IDs",
+    "one": "Readable but awkward separators or numeric IDs appended",
+    "zero": "Query-string-only product URLs"
+   },
+   {
+    "id": "C1",
+    "name": "Product titles",
+    "pillar": "C",
+    "s": 2,
+    "e": "Consistent brand/type titles: 'FH PRO® Fertility Multivitamin For Women', 'Myo + D-Chiro Inositol Powder'; sizes as variants '120 CT/240 CT'",
+    "two": "Descriptive and consistent (brand / type / size or count)",
+    "one": "Partially descriptive",
+    "zero": "Vague / inconsistent"
+   },
+   {
+    "id": "C2",
+    "name": "Descriptions",
+    "pillar": "C",
+    "s": 2,
+    "e": "products.json body_html: fh-pro-for-women 421 words, myo-inositol 164 words (range 145-847; 1 of 32 empty: milkies-nursing-postnatal)",
+    "two": ">=50 words of specific copy on both sampled products",
+    "one": "Short / boilerplate (<50 words) or only one product",
+    "zero": "Missing"
+   },
+   {
+    "id": "C3",
+    "name": "Imagery",
+    "pillar": "C",
+    "s": 2,
+    "e": "fh-pro-for-women 7 images, myo-inositol 10 images; alt e.g. 'Fairhaven Health FH Pro Fertility Multivitamin for Women supplement facts.'",
+    "two": ">=2 images per product (gallery) with alt text",
+    "one": "One image, or missing alt text",
+    "zero": "None / placeholder"
+   },
+   {
+    "id": "C4",
+    "name": "Price & availability",
+    "pillar": "C",
+    "s": 2,
+    "e": "PDP $89.99 + 'Add to Cart'; sold-out item shows 'Sold out'; Offer availability InStock/OutOfStock; 'Free Shipping (US) on orders $35+'",
+    "two": "Price AND stock state visible (B2B: clear 'login for pricing' plus how to get an account)",
+    "one": "Price only, no availability",
+    "zero": "Neither / unclear"
+   },
+   {
+    "id": "C5",
+    "name": "Variants & specs",
+    "pillar": "C",
+    "s": 2,
+    "e": "/products/myo-inositol has Size selector (120 CT $19.99 / 240 CT $35.99); Supplement Facts only as image (*_SFP.jpg), no HTML table on 20/20",
+    "two": "Structured variant selectors and/or a spec table",
+    "one": "Variants only described in text",
+    "zero": "None where expected"
+   },
+   {
+    "id": "C6",
+    "name": "Taxonomy & breadcrumbs",
+    "pillar": "C",
+    "s": 2,
+    "e": "Mega-menu Products > Life Stage/Health Concern; crumb 'Home / Shop / Female Fertility Supplements'; PDP crumb only 'Home / product name'",
+    "two": "Logical category tree (>=2 levels) AND breadcrumbs",
+    "one": "Categories but no breadcrumbs",
+    "zero": "Flat / none"
+   },
+   {
+    "id": "C7",
+    "name": "Filters & sort",
+    "pillar": "C",
+    "s": 2,
+    "e": "Metafield filters (filter.p.m.custom.gender, life_stage, health_benefit, key_ingredients, made_without...) + 9 sort options on collection",
+    "two": "Filters (price / type / attribute) AND sort on category pages",
+    "one": "Sort or pagination only",
+    "zero": "None"
+   },
+   {
+    "id": "C8",
+    "name": "Site search",
+    "pillar": "C",
+    "s": 2,
+    "e": "/search?q=fertilaid -> page titled 'Search: 30 results found for \"fertilaid\"' with filters, Relevance sort; predictive search drawer",
+    "two": "Search box with a results page",
+    "one": "Search present but weak / unclear",
+    "zero": "None"
+   },
+   {
+    "id": "B1",
+    "name": "Primary CTA",
+    "pillar": "B",
+    "s": 2,
+    "e": "'Add to Cart' button on PDP (product-form); homepage hero 'Shop Now' + 9 'Add to Cart' buttons on product cards",
+    "two": "Add to cart / order / request a quote prominent on product page AND homepage",
+    "one": "Present but buried",
+    "zero": "No path to buy or enquire"
+   },
+   {
+    "id": "B2",
+    "name": "Shipping & returns",
+    "pillar": "B",
+    "s": 2,
+    "e": "/pages/shipping-and-returns: free shipping over $35 ($4.95 under), ships 1-2 business days, 4-8 day delivery, 30-day unopened returns + RMA",
+    "two": "Shipping AND returns info with specifics (thresholds, timelines) linked from product page or footer",
+    "one": "Generic policy page only",
+    "zero": "None"
+   },
+   {
+    "id": "B3",
+    "name": "Checkout access",
+    "pillar": "B",
+    "s": 2,
+    "e": "PDP renders Shopify accelerated-checkout (Shop Pay/PayPal) buttons; 'Login' optional header link, no account wall (checkout not entered)",
+    "two": "Guest checkout, or for B2B a clear become-a-customer application with steps",
+    "one": "Account required but sign-up exists",
+    "zero": "No way to buy online"
+   },
+   {
+    "id": "B4",
+    "name": "Merchandising",
+    "pillar": "B",
+    "s": 2,
+    "e": "Home links /collections/new, /best-sellers, /bundles, /surplus-savings, /fh-pro + product carousels; /collections/all 200 (32 products)",
+    "two": "Homepage features collections / seasonal / new / best sellers with working links",
+    "one": "Static links only",
+    "zero": "None"
+   },
+   {
+    "id": "B5",
+    "name": "Trust signals",
+    "pillar": "B",
+    "s": 2,
+    "e": "Stamped ratings on cards/PDP (FertilAid Women 1,921 reviews 4.5★); 'guaranteed for quality and label claim' on returns page; Route/Redo apps",
+    "two": "Product or store reviews PLUS guarantees / awards / secure badges",
+    "one": "One type only",
+    "zero": "None"
+   },
+   {
+    "id": "T1",
+    "name": "Contact",
+    "pillar": "T",
+    "s": 2,
+    "e": "/pages/contactus: form + 800-367-2837 (Mon-Fri 8-6 ET) + 45 Kenneth Dooley Drive, Middletown CT 06457 + support@fairhavenhealth.com",
+    "two": "Phone + physical address + form or email",
+    "one": "Form or email only",
+    "zero": "None"
+   },
+   {
+    "id": "T2",
+    "name": "About",
+    "pillar": "T",
+    "s": 1,
+    "e": "/pages/our-story 'Our Difference': ~161 words (20+ years, vision/mission, 5 bullets) then a Best Sellers carousel - brief",
+    "two": "Substantial about / story page",
+    "one": "Brief",
+    "zero": "None"
+   },
+   {
+    "id": "T3",
+    "name": "Policies",
+    "pillar": "T",
+    "s": 2,
+    "e": "Footer: /policies/privacy-policy, /policies/terms-of-service, /pages/ccpa-opt-out + /pages/accessibility-statement ('Updated: August 2023')",
+    "two": "Privacy AND terms (accessibility statement is a bonus)",
+    "one": "One",
+    "zero": "None"
+   },
+   {
+    "id": "T4",
+    "name": "Social",
+    "pillar": "T",
+    "s": 2,
+    "e": "Footer: facebook.com/FairhavenHealth.FertilAid and instagram.com/fairhaven_health (also in Organization sameAs)",
+    "two": ">=2 linked profiles",
+    "one": "One",
+    "zero": "None"
+   },
+   {
+    "id": "T5",
+    "name": "Accessibility basics",
+    "pillar": "T",
+    "s": 2,
+    "e": "'Skip to content' link to #main-content; product images carry alt text; /pages/accessibility-statement present",
+    "two": "Skip link AND alt text on product images (or an accessibility statement)",
+    "one": "Some",
+    "zero": "Images without alt and no skip link"
+   },
+   {
+    "id": "N1",
+    "name": "Blog / news freshness",
+    "pillar": "N",
+    "s": 1,
+    "e": "/blogs/fairhaven-health-library exists (3 pages, 'Why Blood Sugar Balance Is So Important...') but no <time>/date on index or home cards",
+    "two": "A dated post within the last 90 days",
+    "one": "Blog exists but stale or undated",
+    "zero": "None"
+   },
+   {
+    "id": "N2",
+    "name": "Guides / FAQ",
+    "pillar": "N",
+    "s": 2,
+    "e": "FAQ accordion on 17/20 PDPs (FAQPage ld+json); /pages/products-quiz; blog how-tos e.g. 'How to Talk to Your Healthcare Provider...'",
+    "two": "FAQ AND guides / recipes / how-tos",
+    "one": "FAQ only, or one guide",
+    "zero": "None"
+   },
+   {
+    "id": "N3",
+    "name": "Locations / where to buy",
+    "pillar": "N",
+    "s": 1,
+    "e": "/pages/retailers-distributors lists international distributors with addresses/phones (Bulgaria, Canada, NZ...); no US store locator or hours",
+    "two": "Locator or locations page with addresses & hours (B2B: service area / depots)",
+    "one": "A bare list",
+    "zero": "None"
+   }
+  ],
+  "platform": "Shopify",
+  "audited_at": "2026-09-28",
+  "sample_urls": {
+   "category": "https://www.fairhavenhealth.com/collections/female-fertility-supplements",
+   "product1": "https://www.fairhavenhealth.com/products/fh-pro-for-women",
+   "product2": "https://www.fairhavenhealth.com/products/myo-inositol"
+  },
+  "pages_checked": [
+   "https://www.fairhavenhealth.com/",
+   "https://www.fairhavenhealth.com/robots.txt",
+   "https://www.fairhavenhealth.com/sitemap.xml",
+   "https://www.fairhavenhealth.com/sitemap_products_1.xml?from=8181787656477&to=9959747649821",
+   "https://www.fairhavenhealth.com/sitemap_collections_1.xml?from=438525034781&to=638925111581",
+   "https://www.fairhavenhealth.com/collections.json?limit=250",
+   "https://www.fairhavenhealth.com/products.json?limit=250",
+   "https://www.fairhavenhealth.com/collections/all",
+   "https://www.fairhavenhealth.com/collections/female-fertility-supplements",
+   "https://www.fairhavenhealth.com/collections/shop-pregnancy",
+   "https://www.fairhavenhealth.com/collections/pregnancy-and-ovulation-tests",
+   "https://www.fairhavenhealth.com/collections/ovulation-prediction/products.json?limit=50",
+   "https://www.fairhavenhealth.com/collections/private/products.json?limit=50",
+   "https://www.fairhavenhealth.com/products/fh-pro-for-women",
+   "https://www.fairhavenhealth.com/products/myo-inositol",
+   "https://www.fairhavenhealth.com/products/coq10",
+   "https://www.fairhavenhealth.com/products/fh-pro-fertility-multivitamin-for-men",
+   "https://www.fairhavenhealth.com/products/ovaboost",
+   "https://www.fairhavenhealth.com/products/calcium-magnesium-prenatal",
+   "https://www.fairhavenhealth.com/products/prenatal-dha-epa",
+   "https://www.fairhavenhealth.com/products/peapod-prenatal",
+   "https://www.fairhavenhealth.com/products/fertilecm-cervical-mucus-supplement",
+   "https://www.fairhavenhealth.com/products/fertilaid-multivitamin-for-women",
+   "https://www.fairhavenhealth.com/products/fertilaid-multivitamin-for-men",
+   "https://www.fairhavenhealth.com/products/fertilitea-fertility-tea-for-women",
+   "https://www.fairhavenhealth.com/products/fertilaid-multivitamin-value-pack",
+   "https://www.fairhavenhealth.com/products/motilityboost",
+   "https://www.fairhavenhealth.com/products/milkies-nursing-postnatal-breastfeeding-multivitamin",
+   "https://www.fairhavenhealth.com/products/female-fertility-supplement-starter-pack",
+   "https://www.fairhavenhealth.com/products/isofresh-vaginal-probiotic",
+   "https://www.fairhavenhealth.com/products/babydance-fertility-lubricant-no-applicators",
+   "https://www.fairhavenhealth.com/products/complete-menopause-relief",
+   "https://www.fairhavenhealth.com/products/myo-d-chiro-inositol",
+   "https://www.fairhavenhealth.com/pages/contactus",
+   "https://www.fairhavenhealth.com/pages/our-story",
+   "https://www.fairhavenhealth.com/pages/shipping-and-returns",
+   "https://www.fairhavenhealth.com/pages/accessibility-statement",
+   "https://www.fairhavenhealth.com/pages/retailers-distributors",
+   "https://www.fairhavenhealth.com/blogs/fairhaven-health-library",
+   "https://www.fairhavenhealth.com/search?q=fertilaid"
+  ]
+ }
+}

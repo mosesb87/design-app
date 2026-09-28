@@ -1,0 +1,125 @@
+{
+  "blueroot": {
+    "tokens": {"fonts": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@500&display=swap", "display": "'Fraunces', Georgia, serif", "display_weight": "700", "display_extra": "font-variation-settings: 'opsz' 144;", "sans": "'Inter', system-ui, sans-serif", "mono": "'JetBrains Mono', monospace", "accent": "#973961"},
+    "summary_lede": "Four Shopify stores read from public pages and feeds — 397 products, 20 Fairhaven product pages in full, no logins. Fairhaven's technical baseline is the strongest I have measured this year; the six findings are the operating gaps a weekly QA sheet catches.",
+    "resume": {
+      "headline": "DTC E-Commerce Operations  ·  Shopify  ·  Catalog & Merchandising QA  ·  Reporting (GA4, Search Console)",
+      "summary": "E-commerce specialist with seven years running retail and wholesale storefronts end to end on Shopify, WooCommerce and WordPress: product setup and catalog data for 14,000+ SKUs, collections and navigation, promotions and seasonal launches, and the QA checks that keep prices, pages and feeds honest. I document the cadence, run it every week, and report the result in GA4 and Search Console. Portfolio of independent, evidence-backed store reviews at mousabatarseh.com — including one of Blueroot Health's four stores, with working fixes and a weekly QA workbook.",
+      "skills": [
+        "Site & merchandising operations: product setup, pricing and catalog accuracy · collections, navigation and sort rules · promotions and launch checklists · landing pages from templates · broken-link, pricing and content QA",
+        "Digital shelf: titles, descriptions, attributes and imagery at scale · bulk CSV imports and exports · metafields and tags · on-page SEO and structured data · title/description length and schema scorecards per SKU",
+        "Reporting & tools: GA4, Search Console, Tag Manager · Excel/Sheets models and weekly QA workbooks · Shopify (Liquid, themes, Search & Discovery), WooCommerce, WordPress · AI-assisted QA and data cleanup (Claude, ChatGPT, Python)"
+      ],
+      "jobs": [
+        {"title": "Independent E-Commerce & Web Specialist", "org": "Remote", "dates": "2019 – Present", "bullets": [
+          "Reviewed Blueroot Health's four Shopify stores from public pages and feeds — 397 products, 20 Fairhaven PDPs in full — and published six findings with working fixes and a weekly QA workbook: 3 of 8 footer collections empty, a sold-out product in the #2 slot sitewide, promo badges with no discounted price, facts panels that exist only as images, 20 of 20 titles truncating in search, and four shipping and policy conventions from one warehouse.",
+          "Published 22 independent storefront reviews as working microsites in September 2026 — carhartt.com, Carhartt Reworked, PetSafe, DiaMedical and others — each with dated evidence, counts, prototypes and a 90-day plan; built ShelfMark, a 29-check public-page benchmark of 21 Michigan storefronts."
+        ]},
+        {"title": "Webmaster / E-Commerce Specialist", "org": "Wild Bill's Tobacco — Michigan (multi-location retailer)", "dates": "Oct 2024 – Jul 2025", "bullets": [
+          "Ran the wholesale B2B store and two corporate sites (WordPress, WooCommerce, Elementor): product setup, catalog accuracy, pricing, inventory, descriptions and imagery across a large assortment.",
+          "Planned and launched seasonal and promotional campaign pages with marketing and merchandising; QA, accessibility and change management on every release; results reported in GA4 and Search Console."
+        ]},
+        {"title": "Webmaster / E-Commerce Specialist", "org": "Universal Wholesale & United Textile — Southfield, MI", "dates": "Jun 2019 – Apr 2024", "bullets": [
+          "Built and ran Shopify and WordPress storefronts for two brands in parallel — navigation, collections, filters and conversion paths; moved 1,000 products from an offline inventory system into Shopify.",
+          "Owned product setup and catalog data for 14,000+ SKUs: bulk imports and exports, pricing, inventory, collections, product copy, images and SEO metadata; migrated catalogs between platforms with redirects intact.",
+          "Ran the seasonal promo calendar — banners, coupons, email assets — and coordinated stock updates with the warehouse; organic rankings reached Google pages 1–2 within the first year."
+        ]}
+      ]
+    },
+    "cover": {
+      "date": "September 28, 2026",
+      "company_line": "Blueroot Health — DTC Operations Manager",
+      "re": "Re: DTC Operations Manager (fully remote)",
+      "greeting": "Hi Blueroot ecommerce team,",
+      "body": [
+        "Before applying, I read the four stores the way the posting describes the job: fairhavenhealth.com in full and bariatricfusion.com, vitalnutrients.co and unjury.com sampled — 397 published products, 57 page fetches, no logins. The review, with working fixes and a weekly QA workbook, is at mousabatarseh.com/blueroot-review/. It opens with what works, and a lot does: Fairhaven scores 95 of 100 on the 29-check rubric I run on Michigan storefronts, the best result I have measured this year.",
+        "The findings are the operating gaps a Monday checklist catches. Three of the eight footer \"Shop\" links open an empty or one-sold-out-item collection. Because All Products sorts A–Z, the one sold-out product sits second on the page and second in the search drawer's Trending Now on every page of the store. Five single-variant products carry a \"30% off select sizes\" badge while the card, the PDP, the JSON-LD and the subscription price all show full price. Every one of 20 sampled titles runs 73–91 characters. And the four stores ship from one address with three free-shipping thresholds and two delivery promises. Each finding on the page has a count, the Shopify change that fixes it, and a working prototype built on your own product data.",
+        "For seven years I have run retail and wholesale storefronts on Shopify and WooCommerce: product setup and catalog data for 14,000+ SKUs, promotions and seasonal launches, the QA that keeps prices and pages honest, and the GA4 and Search Console reporting behind it. The weekly sheet on the page is the cadence I would run from the first Monday.",
+        "Two things to say plainly. I have not administered Recharge, and my 3PL coordination has been with a warehouse rather than a named fulfillment partner — the order flow, inventory sync and exception handling are the same work. I stayed away from all health and product-claim language; that review belongs to your regulatory team."
+      ],
+      "closing": "I'd welcome a call to walk through the review and the workbook."
+    }
+  },
+  "royal-apparel": {
+    "tokens": {"fonts": "https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600;700&family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600&family=IBM+Plex+Mono:wght@500&display=swap", "display": "'EB Garamond', Garamond, Georgia, serif", "display_weight": "600", "display_extra": "", "sans": "'Barlow', Helvetica, Arial, sans-serif", "mono": "'IBM Plex Mono', monospace", "accent": "#121212"},
+    "summary_lede": "royalapparel.net read from public pages: the sitemap's 1,063 URLs, the Men's category and 20 product pages — no logins, no carts. The garments are well documented; the data around them is not. Six findings, five working fixes.",
+    "resume": {
+      "headline": "E-Commerce & Digital Marketing Coordinator  ·  Website Merchandising  ·  Technical SEO  ·  GA4 / GTM  ·  Product Feeds",
+      "summary": "E-commerce specialist with seven years merchandising and running wholesale and retail storefronts for textile and apparel brands: styles, colors, sizes and inventory for 14,000+ SKUs, coupons and the seasonal promo calendar, banners and email assets, product data for marketplaces, and the technical SEO and GA4 reporting underneath. I read a site's served HTML, sitemap and dataLayer before I touch it. Portfolio of independent, evidence-backed store reviews at mousabatarseh.com — including royalapparel.net, with working fixes.",
+      "skills": [
+        "Website merchandising: styles, colors, sizes and inventory updates · discontinuing items with redirects · tagged product groups and categories for campaigns · coupons, sliders, banners and popups · product photography and video coordination",
+        "SEO & content: technical SEO (canonicals, redirects, sitemaps, structured data) · titles and descriptions at scale · content publishing across ecommerce and wholesale platforms · rank tracking and AI-visibility checks",
+        "Analytics, email & feeds: GA4, Tag Manager and dataLayer validation · reporting dashboards in Sheets/Looker Studio · Mailchimp campaigns with UTMs · Google Shopping, Faire and marketplace product data · Shopify, WooCommerce, WordPress, HTML/CSS/JavaScript"
+      ],
+      "jobs": [
+        {"title": "Independent E-Commerce & Web Specialist", "org": "Remote", "dates": "2019 – Present", "bullets": [
+          "Reviewed royalapparel.net from public pages — 1,063 sitemap URLs classified, 20 product pages read, the dataLayer on every template — and published six findings with five working fixes: no canonical on any page and four live hostnames, a sitemap that is 38% redirects and lists checkout templates, a five-star rating hard-coded on every product, GA4 impressions with blank item names, and a category grid with 21 of 136 products in the HTML.",
+          "Published 22 independent storefront reviews as working microsites in September 2026 — carhartt.com, Carhartt Reworked, PetSafe, DiaMedical and others — each with dated evidence, counts, prototypes and a 90-day plan; built ShelfMark, a 29-check public-page benchmark of 21 Michigan storefronts."
+        ]},
+        {"title": "Webmaster / E-Commerce Specialist", "org": "Universal Wholesale & United Textile — Southfield, MI", "dates": "Jun 2019 – Apr 2024", "bullets": [
+          "Merchandised Shopify and WordPress storefronts for two textile and apparel brands in parallel: styles, colorways and sizes, collections and categories, filters, coupons and conversion paths; moved 1,000 products from an offline inventory system into Shopify.",
+          "Owned product data for 14,000+ SKUs — bulk imports and exports, pricing, inventory, product copy, images and SEO metadata; migrated catalogs between platforms with redirects intact; led the RepZio B2B platform migration.",
+          "Ran the seasonal promo calendar — banners, coupons, Mailchimp email assets — built wholesale registration workflows and coordinated stock with the warehouse; organic rankings reached Google pages 1–2 within the first year."
+        ]},
+        {"title": "Webmaster / E-Commerce Specialist", "org": "Wild Bill's Tobacco — Michigan (multi-location retailer)", "dates": "Oct 2024 – Jul 2025", "bullets": [
+          "Ran the wholesale B2B store and two corporate sites (WordPress, WooCommerce, Elementor): product setup, catalog accuracy, pricing, inventory, descriptions and imagery; seasonal campaign pages, sliders and promotions launched with marketing and merchandising.",
+          "Optimized SEO metadata and page performance; validated tracking and reported in GA4 and Search Console; QA, accessibility and change management on every release."
+        ]}
+      ]
+    },
+    "cover": {
+      "date": "September 28, 2026",
+      "company_line": "Royal Apparel — Digital Marketing & Ecommerce Coordinator",
+      "re": "Re: Digital Marketing & Ecommerce Coordinator (hybrid, remote or on-site)",
+      "greeting": "Hi Royal Apparel team,",
+      "body": [
+        "The posting asks for a résumé and a brief summary of experience. Here is the summary, and something more useful: before applying I read royalapparel.net the way the job describes it — the sitemap's 1,063 URLs, the Men's category, 20 product pages and the dataLayer on every template, no logins, no carts. The review, with working fixes, is at mousabatarseh.com/royal-apparel-review/. It opens with what works: fresh hero merchandising dated within the last three weeks, 28 colors and 107 photos on style 5051, wholesale terms stated precisely, and a search that puts a style number in position one.",
+        "The data around the garments is where the coordinator's work is. No page on the site carries a canonical tag, and four hostname variants answer 200 with the same body. The sitemap is 38% redirecting CGI links and lists the cart, login and checkout templates; three of twenty sampled products are dead or obsolete and still return 200. Every product page carries the same five-star rating from 326 reviews, with availability left blank. The GA4 impressions on the Men's category have empty item names and brands, so the reporting the posting asks for can't attribute what merchandising does. Each finding on the page has a count, a fix written at the template or server level, and a prototype built on your own product data — including the category grid re-rendered server-side and the single Product schema your feeds need.",
+        "For seven years I merchandised and ran wholesale and retail storefronts for two textile and apparel brands: styles, colors and sizes for 14,000+ SKUs, coupons and the seasonal promo calendar, banners and Mailchimp assets, product data for wholesale accounts, and the technical SEO and GA4 reporting underneath. Blank apparel is the catalog I know best.",
+        "Two things to say plainly. I have supported paid search and social rather than owned them, and I have not worked in Faire, Sage or ASI directly — the product-data side of those feeds is the same work as the marketplace and wholesale exports I have run. I am in Michigan and glad to work remote, or hybrid on a schedule that suits Hauppauge."
+      ],
+      "closing": "I'd welcome a call to walk through the review."
+    }
+  },
+  "federal-fluid-power": {
+    "tokens": {"fonts": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap", "display": "'Barlow Condensed', 'Arial Narrow', sans-serif", "display_weight": "800", "display_extra": "text-transform: uppercase;", "sans": "'Barlow', Segoe UI, Arial, sans-serif", "mono": "'IBM Plex Mono', monospace", "accent": "#0e5ea8"},
+    "summary_lede": "federalfp.com read from public pages: three of nine sitemap files (54,496 URLs), five category pages, 19 product pages and eight content pages, plus the sister store — no logins, no carts, no quote requests. Search by part number works; the catalog shows the marks of a bulk ERP import nobody has mapped yet.",
+    "resume": {
+      "headline": "E-Commerce Developer & Content Editor  ·  Catalog Data & Bulk Imports  ·  WordPress / HTML / CSS / JavaScript  ·  Product Content at Scale",
+      "summary": "Web developer and e-commerce specialist with seven years running wholesale and retail storefronts and the catalogs behind them: 14,000+ SKUs maintained by bulk CSV, platform migrations with redirects intact, product data mapped between an inventory system and the store, and the QA that keeps prices and product pages honest. WordPress, WooCommerce and Shopify administration; HTML, CSS and JavaScript; Python for the scripts that clean data before it is imported. Portfolio of evidence-backed store reviews at mousabatarseh.com — including federalfp.com, with working fixes built on its own catalog.",
+      "skills": [
+        "Catalog & product data: attribute sets and option values · bulk CSV imports and exports · URL keys, redirects and canonical structure · product copy, images and datasheets at scale · price and stock consistency checks · field mapping between an inventory/ERP system and the store",
+        "Web development: WordPress, WooCommerce, Shopify (Liquid) · HTML, CSS, JavaScript · Python data scripts (parsers, normalizers, import files) · Elementor · page performance and Core Web Vitals · Magento-ready: same admin, attribute and import model as the catalogs above",
+        "Operations & reporting: content templates for titles and descriptions · multi-store and store-view hygiene · GA4, Search Console, Tag Manager · Excel/Sheets QA workbooks · site maintenance: core, themes, plugins, security, backups"
+      ],
+      "jobs": [
+        {"title": "Independent Web Developer & E-Commerce Specialist", "org": "Remote", "dates": "2019 – Present", "bullets": [
+          "Reviewed federalfp.com from public pages — 54,496 sitemap URLs, 19 product pages, the layered-navigation values on Cylinders — and published six findings with six working fixes built on the store's own catalog: 20,242 product URLs with no URL key, specs trapped inside title strings, Request-Pricing products with InStock schema, supplier logos as product photos on 69% of the catalog, one meta description sitewide, and Patriot Hydraulics' copyright and phone on Federal's pages. The attribute parser and option normalizer on the page are the scripts I would run in week one.",
+          "Built the tools I use on catalogs: ChangeAtlas (catalog-import preview), Data Checker & Importer (CSV mapping and validation) and a 16-check promotion QA system; published 22 independent storefront reviews as working microsites in September 2026 and ShelfMark, a 29-check benchmark of 21 Michigan storefronts."
+        ]},
+        {"title": "Webmaster / E-Commerce Specialist", "org": "Wild Bill's Tobacco — Michigan (multi-location retailer)", "dates": "Oct 2024 – Jul 2025", "bullets": [
+          "Administered two corporate websites and the wholesale B2B store (WordPress, WooCommerce, Elementor); operated the product catalog — accuracy, pricing, descriptions and imagery; built forms and landing pages; maintained core, themes and plugins with QA, security and change management on every release.",
+          "Customized themes with custom code; optimized metadata and page performance; reported in GA4 and Search Console."
+        ]},
+        {"title": "Webmaster / E-Commerce Specialist", "org": "Universal Wholesale & United Textile — Southfield, MI", "dates": "Jun 2019 – Apr 2024", "bullets": [
+          "Built, launched and ran Shopify and WordPress storefronts for two brands in parallel; moved 1,000 products from an offline inventory system into Shopify with the fields mapped and validated first.",
+          "Maintained catalogs of 14,000+ SKUs by bulk CSV — pricing, categories, descriptions, images and SEO metadata; managed redirects and URL structure through migrations; led the RepZio B2B platform migration.",
+          "Coordinated stock and order data with the warehouse; built wholesale registration workflows; organic rankings reached Google pages 1–2 within the first year."
+        ]}
+      ]
+    },
+    "cover": {
+      "date": "September 28, 2026",
+      "company_line": "Federal Fluid Power, Inc. — Full Stack IT Specialist, E-Commerce Developer & Content Editor",
+      "re": "Re: Full Stack IT Specialist, E-Commerce Developer & Content Editor (Plymouth, MI)",
+      "greeting": "Hi Federal Fluid Power team,",
+      "body": [
+        "Before applying, I read federalfp.com the way the posting describes the job: three of the nine sitemap files (54,496 URLs), five category pages, 19 product pages and eight content pages, plus five on patriothyd.com — no logins, no carts, no quote requests. The review, with working fixes built on your own catalog, is at mousabatarseh.com/federal-fluid-power-review/. It opens with what works: part-number search returns the right part, the product pages carry Product, Offer, shipping and breadcrumb schema most distributors never ship, and the Engineering Toolbox is real content.",
+        "The catalog behind it shows the marks of a bulk ERP import that nobody has mapped yet. 20,242 product URLs (37% of what I read) have no URL key, so the sitemap sends Google twenty thousand pages your own robots.txt blocks. Thread size, port, material and pressure live inside title strings — none of the 19 sampled product pages has them as attributes — and where attributes exist, the Cylinders filters hold twins like 2.5 and 2.5\", and two values are Excel date serials (44628 is 3/8). Nine of nineteen products are Request Pricing, yet print a price and declare InStock. Supplier logos stand in for photos on 69% of the catalog. Every page shares one meta description, and Federal's footer still reads \"© 2023 Patriot Hydraulics\" with Patriot's phone number in the header. Each finding on the page has a count, the Magento setting or import that fixes it, and a working tool: a URL-key generator, an attribute parser you can paste any product name into, an option normalizer, and a meta-template preview across the sample.",
+        "For seven years I have run wholesale and retail catalogs and the sites in front of them: 14,000+ SKUs maintained by bulk CSV, migrations with redirects intact, data mapped between an inventory system and the store, WordPress and WooCommerce administration, HTML, CSS and JavaScript, and Python for the scripts that clean data before it is imported. I'm in Warren, 35 minutes from Plymouth, and on-site is fine.",
+        "Two things to say plainly. My platform years are WooCommerce and Shopify rather than Magento — the attribute sets, import model and URL rewrites are the same shape, and the fixes on the page are written for Magento's admin. And I can cover the internal IT and network support the posting lists as a secondary duty, but I would want to be honest that the catalog work is where I am strongest."
+      ],
+      "closing": "I'd welcome a call, or a visit to Plymouth, to walk through the review."
+    }
+  }
+}

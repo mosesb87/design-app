@@ -1,0 +1,171 @@
+{
+  "status": "audited",
+  "company": "Federal Fluid Power, Inc.",
+  "url": "https://federalfp.com",
+  "hq_city": "Plymouth, MI",
+  "segment": "B2B distributor",
+  "sells": "hydraulic components, fittings, pumps, valves, cylinders",
+  "platform": "Magento",
+  "platform_evidence": "static/version1789741354/frontend/FederalFP/default, mage/ modules, /catalogsearch/, /checkout/cart/, Hyva theme (hyva.str, Alpine x-data), Amasty Shop By + Product Attachments, Magezon page builder; sister store patriothyd.com shares the same static version and robots.txt",
+  "audited_at": "2026-09-28",
+  "pages_checked": [
+    "https://federalfp.com/",
+    "https://federalfp.com/robots.txt",
+    "https://federalfp.com/sitemaps/ffp/sitemap.xml",
+    "https://federalfp.com/sitemaps/ffp/sitemap_001.xml",
+    "https://federalfp.com/sitemaps/ffp/sitemap_005.xml",
+    "https://federalfp.com/sitemaps/ffp/sitemap_009.xml",
+    "https://federalfp.com/adapters-fittings/couplings.html",
+    "https://federalfp.com/adapters-fittings/couplings.html?p=2",
+    "https://federalfp.com/adapters-fittings/couplings.html?brand=14",
+    "https://federalfp.com/garage-and-shop/chairs-and-creepers.html",
+    "https://federalfp.com/hydraulics-1/cylinders-1.html",
+    "https://federalfp.com/adapters-fittings/couplings/fi-te-04llmk-w3-ms-6010000456.html",
+    "https://federalfp.com/adapters-fittings/couplings/fi-ge-06llm6x1k-w3-ms-6010000421.html",
+    "17 further product URLs sampled from sitemap_001/005/009 (see captures/pdp_sample.csv)",
+    "https://federalfp.com/catalogsearch/result/?q=FI-TE-04LLMK-W3-MS",
+    "https://federalfp.com/ffp-federal-fluid-power-info/",
+    "https://federalfp.com/contact/",
+    "https://federalfp.com/terms/",
+    "https://federalfp.com/ffp-terms-conditions-of-sale/",
+    "https://federalfp.com/ffp-privacy-policy/",
+    "https://federalfp.com/engineering-toolbox/",
+    "https://federalfp.com/career-at-federal-fluid-power-inc/",
+    "https://federalfp.com/brand/patriot-hydraulics (404)",
+    "https://www.patriothyd.com/ (+ robots.txt, sitemap index, 2 PDPs) for sister-store comparison"
+  ],
+  "sample_urls": {
+    "category": "https://federalfp.com/adapters-fittings/couplings.html",
+    "product1": "https://federalfp.com/adapters-fittings/couplings/fi-te-04llmk-w3-ms-6010000456.html",
+    "product2": "https://federalfp.com/adapters-fittings/couplings/fi-ge-06llm6x1k-w3-ms-6010000421.html"
+  },
+  "checks": {
+    "F1": {
+      "s": 2,
+      "e": "All 40 fetched pages served on https; canonical https://federalfp.com; no http redirects seen (captures/index.txt)"
+    },
+    "F2": {
+      "s": 1,
+      "e": "robots.txt has 2 Sitemap: lines but 'Disallow: /catalog/product/view/' blocks 20,242 of 54,496 product URLs in the 3 sitemap files fetched"
+    },
+    "F3": {
+      "s": 2,
+      "e": "sitemap.xml = index of 9 files; sitemap_001.xml holds 19,921 URLs (2,484 categories + 17,437 products with image tags), lastmod 2026-09-18"
+    },
+    "F4": {
+      "s": 1,
+      "e": "Homepage title descriptive; PDP <title> is the bare part code ('FI-TE-04LLMk-W3-MS - 6010000456'); 11/19 sampled titles code-only"
+    },
+    "F5": {
+      "s": 1,
+      "e": "Homepage has a specific description; 19/19 sampled PDPs + 7 CMS pages share one boilerplate 'Discover a trusted online destination…'"
+    },
+    "F6": {
+      "s": 2,
+      "e": "Canonical on homepage (https://federalfp.com) and PDP (/fi-te-04llmk-w3-ms-6010000456.html); 3/3 unrewritten PDPs canonical to a blocked URL"
+    },
+    "F7": {
+      "s": 2,
+      "e": "PDP ld+json Product+Offer (price 22.9, InStock, shippingDetails) + BreadcrumbList; caveat: 2 BreadcrumbList blocks, InStock on 8/9 RFQ items"
+    },
+    "F8": {
+      "s": 1,
+      "e": "Rewritten URLs hyphenated (/fi-te-04llmk-w3-ms-6010000456.html) but 37% of sitemap products are /catalog/product/view/id/N/; 95% cats end -1"
+    },
+    "C1": {
+      "s": 1,
+      "e": "Names are vendor part codes; 11/19 sampled have no descriptor ('BV3-04-NPT', '804500106'), 8/19 add one ('KS-A37-05-32 - Seal Kit for A37…')"
+    },
+    "C2": {
+      "s": 1,
+      "e": "Both sampled couplings: 'DIN-Stud Couplings mild steel' (4 words); 17/19 sampled PDPs under 50 words, 7 just repeat the title"
+    },
+    "C3": {
+      "s": 1,
+      "e": "1 gallery image on 14/19 PDPs; 10/19 show a manufacturer logo (alaindustries.jpg, dnpamerica.jpg, stucchi.jpg) as product photo; alt = code"
+    },
+    "C4": {
+      "s": 1,
+      "e": "Price shown ($22.90) but no stock state/qty; 9/19 PDPs swap Add to Cart for 'Request Pricing and Availability' yet print a price ($3.40)"
+    },
+    "C5": {
+      "s": 1,
+      "e": "'More Information' = Product Name, SKU, Weight, Brand only on 18/19 PDPs; thread/port/material live only in title/description; no variants"
+    },
+    "C6": {
+      "s": 2,
+      "e": "Tree up to 7 levels (2,484 category URLs in sitemap_001); breadcrumb nav + BreadcrumbList on PDP: Home / Adapters & Fittings / Couplings / …"
+    },
+    "C7": {
+      "s": 1,
+      "e": "Amasty filters (couplings: Category/Brand/Price; cylinders: Bore, Stroke, Rod Dia.) but no sort control; toolbar only 'Show 20 40 80'"
+    },
+    "C8": {
+      "s": 2,
+      "e": "Header search; /catalogsearch/result/?q=FI-TE-04LLMK-W3-MS returns the exact item ('1 Item'); results noindex; page 1.74 MB, 528 facets"
+    },
+    "B1": {
+      "s": 1,
+      "e": "'Add to Cart' on PDP and listing cards; homepage is a category-tile grid ('Click a category below') with no buy/quote CTA or featured items"
+    },
+    "B2": {
+      "s": 1,
+      "e": "Footer 'Shipping Policy' and 'Return Policy' both link to /terms/ (legal T&C): returns 30 days, no restocking fee if new; no shipping rates"
+    },
+    "B3": {
+      "s": 1,
+      "e": "'Create an Account' (/customer/account/create/) + 'Checkout as a new customer' popup; guest checkout is a runtime flag, unverifiable"
+    },
+    "B4": {
+      "s": 1,
+      "e": "Homepage = static category tiles + one banner (HPUBannerFFP.jpg); no new/best-seller/seasonal blocks; indexed /brand/patriot-hydraulics 404s"
+    },
+    "B5": {
+      "s": 0,
+      "e": "No product/store reviews or ratings, no guarantee/award/secure badges on homepage or PDP; footer has only a theme 'cdz-footer-payment' strip"
+    },
+    "T1": {
+      "s": 2,
+      "e": "Footer: 14940 Cleat St, Plymouth MI 48170 + Vestaburg + Gaylord addresses, phones (1-734-455-1722), sales@federalfp.com, hours; contact form"
+    },
+    "T2": {
+      "s": 1,
+      "e": "/ffp-federal-fluid-power-info/ is a 126-word 'Services/About Us' block; same text reused on /career-at-federal-fluid-power-inc/"
+    },
+    "T3": {
+      "s": 2,
+      "e": "Privacy /ffp-privacy-policy/ (693 words) and Terms /terms/ (+ duplicate /ffp-terms-conditions-of-sale/, 2,315 words); no accessibility page"
+    },
+    "T4": {
+      "s": 0,
+      "e": "No facebook/linkedin/instagram/youtube links anywhere in homepage or footer HTML (grep on captures/homepage.html returned none)"
+    },
+    "T5": {
+      "s": 2,
+      "e": "'Skip to Content' link (#contentarea) on every page; listing/gallery images alt = product name (server-rendered gallery img alt=\"\" until JS)"
+    },
+    "N1": {
+      "s": 0,
+      "e": "No blog/news link in nav, footer or the 63 CMS URLs in sitemap_009; no dated articles anywhere fetched"
+    },
+    "N2": {
+      "s": 1,
+      "e": "Engineering Toolbox (/engineering-toolbox/, in-browser calculators, 2,570 words) + Hose/Product Configurators; no FAQ page"
+    },
+    "N3": {
+      "s": 2,
+      "e": "Footer 'Locations' lists 3 branches with street address, phone and 'Mon-Fri / 8:00 am - 5:00 pm EST' (Plymouth, Vestaburg, Gaylord)"
+    }
+  },
+  "strengths": [
+    "Exact part-number search works: /catalogsearch/result/?q=FI-TE-04LLMK-W3-MS returns the one matching SKU with price and Add to Cart, and results pages are correctly noindexed",
+    "Product JSON-LD is unusually complete for a small distributor: Product, Offer with price/currency, shippingDetails (handling 2-5 days, $9.99) and MerchantReturnPolicy, plus BreadcrumbList on every PDP and category",
+    "The Engineering Toolbox (/engineering-toolbox/) is a genuine in-browser hydraulic calculator suite (cylinder force/area/speed, pumps, conversions) with 'Shop Cylinders' links back into the catalog"
+  ],
+  "fixes": [
+    "Give the ~20,000 products with no URL key a url_key (Magento admin bulk 'Update attributes' or import) so the sitemap stops listing /catalog/product/view/id/N/ URLs that robots.txt itself disallows; then regenerate the sitemap",
+    "Replace the single site-wide meta description on every PDP/CMS page with a Magento product meta template ({{name}} {{brand}} - Federal Fluid Power) and move thread size / port / material / pressure from the title string into filterable attributes",
+    "Fix the shared footer: change '© 2023 Patriot Hydraulics' to Federal Fluid Power 2026, point 'Shipping Policy'/'Return Policy' to real pages instead of /terms/, replace the two '#' links (Order History, Order Tracking), and set the header phone to 734-455-1722 instead of Patriot's 734-479-9641"
+  ],
+  "notes": "All pages fetched with curl (no 403/429). PDPs are server-rendered except the Hyva gallery/alt binding. Sitemap totals: only files 001, 005 and 009 of 9 were downloaded (54,496 URLs); the other six were not fetched to stay within the fetch cap, so site-wide figures are extrapolations from those three. Indeed job page could not be retrieved (WebFetch of the jk URL returned a different expired posting; Indeed MCP rate-limited), so posting text comes from the target brief. patriothyd.com is the same Magento install (same static version 1789741354, identical robots.txt listing both sitemaps) with the same SKUs, prices and copy; 2/2 sampled SKUs exist on both domains with self-referencing canonicals."
+}

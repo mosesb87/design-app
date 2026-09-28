@@ -1,0 +1,17 @@
+{
+  "status": "audited",
+  "company": "Company Name",
+  "url": "https://www.example.com",
+  "hq_city": "City, ST",
+  "segment": "DTC brand | Retail chain | B2B distributor | Manufacturer",
+  "sells": "what it sells, 3-8 words",
+  "platform": "Shopify | WooCommerce | BigCommerce | Magento | Custom | ...",
+  "platform_evidence": "specific markers seen",
+  "audited_at": "2026-09-28",
+  "pages_checked": ["https://...", "..."],
+  "sample_urls": {"category": "https://...", "product1": "https://...", "product2": "https://..."},
+  "checks": {"F1": {"s": 2, "e": "≤140 char evidence with URL or quoted text"}, "F2": {"s": 1, "e": "..."}, "...": "all 29 ids F1-F8, C1-C8, B1-B5, T1-T5, N1-N3; s is 0, 1, 2 or \"U\""},
+  "strengths": ["three specific, evidence-backed strengths"],
+  "fixes": ["three specific fixes, each naming the page and the change"],
+  "notes": "anything the reviewer must know (blocked pages, JS-only rendering, etc.)"
+}

@@ -1,0 +1,1935 @@
+{
+ "products": [
+  {
+   "handle": "babydance-fertility-lubricant-10-applicators",
+   "title": "BabyDance Fertility Lubricant - 10 Applicators",
+   "price": 21.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "babydance",
+    "Fertility Lubricants & More",
+    "FSA / HSA Eligible",
+    "Ovia",
+    "Shop Vaginal Care",
+    "Subscription",
+    "vaginal care",
+    "Vaginal Care & Menopause"
+   ],
+   "images": 9,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "babydance-fertility-lubricant-no-applicators",
+   "title": "BabyDance Fertility Lubricant - No Applicators",
+   "price": 19.99,
+   "compare_at": null,
+   "available": false,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "babydance",
+    "Fertility Lubricants & More",
+    "FSA / HSA Eligible",
+    "Ovulation Prediction",
+    "Shop Vaginal Care",
+    "Subscription",
+    "vaginal care",
+    "Vaginal Care & Menopause"
+   ],
+   "images": 8,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "calcium-magnesium-prenatal",
+   "title": "Calcium + Magnesium",
+   "price": 17.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "FSA / HSA Eligible",
+    "PeaPod",
+    "Pregnancy Products",
+    "Prenatal",
+    "Subscription"
+   ],
+   "images": 6,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "complete-lactation-support",
+   "title": "Complete Lactation Support",
+   "price": 29.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Breastfeeding Supplements",
+    "Lactation",
+    "New",
+    "Postnatal",
+    "Specialized Support",
+    "Subscription"
+   ],
+   "images": 6,
+   "published_at": "2024-10-03",
+   "empty_body": false
+  },
+  {
+   "handle": "complete-menopause-relief",
+   "title": "Complete Menopause Relief",
+   "price": 34.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Hot Flashes/Night Sweats",
+    "New",
+    "Specialized Support",
+    "Subscription",
+    "Vaginal Care & Menopause"
+   ],
+   "images": 8,
+   "published_at": "2024-10-01",
+   "empty_body": false
+  },
+  {
+   "handle": "coq10",
+   "title": "CoQ10",
+   "price": 20.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "All Women",
+    "Egg Quality",
+    "Sperm Health",
+    "Subscription"
+   ],
+   "images": 7,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "female-fertility-supplement-starter-pack",
+   "title": "Female Fertility Supplement Starter Pack",
+   "price": 87.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Bundles",
+    "Combo",
+    "Subscription"
+   ],
+   "images": 1,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "fertilaid-multivitamin-for-men",
+   "title": "FertilAid® Multivitamin For Men",
+   "price": 38.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "fam-fhpro-men",
+    "Multivitamins",
+    "Sperm Health",
+    "Subscription"
+   ],
+   "images": 7,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "fertilaid-multivitamin-for-women",
+   "title": "FertilAid® Multivitamin For Women",
+   "price": 38.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Egg Quality",
+    "faw-fhpro-women",
+    "Multivitamins",
+    "Subscription"
+   ],
+   "images": 7,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "fertilaid-multivitamin-value-pack",
+   "title": "FertilAid® Multivitamin Value Pack",
+   "price": 69.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Bundles",
+    "Combo",
+    "Ovia",
+    "Subscription"
+   ],
+   "images": 1,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "fertilecm-cervical-mucus-supplement",
+   "title": "FertileCM® For Women",
+   "price": 26.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Ovia",
+    "Specialized Support",
+    "Subscription"
+   ],
+   "images": 6,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "fertilitea-fertility-tea-for-women",
+   "title": "FertiliTea®",
+   "price": 21.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Subscription"
+   ],
+   "images": 6,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "fh-pro-fertility-multivitamin-combo-pack",
+   "title": "FH PRO® Fertility Multivitamin Combo Pack",
+   "price": 168.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Bundles",
+    "Combo",
+    "FH PRO",
+    "premium",
+    "Subscription"
+   ],
+   "images": 4,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "fh-pro-fertility-multivitamin-for-men",
+   "title": "FH PRO® Fertility Multivitamin For Men",
+   "price": 96.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "fam-fhpro-men",
+    "FH PRO",
+    "Multivitamins",
+    "Sperm Health",
+    "Subscription",
+    "The Ribbon Box"
+   ],
+   "images": 7,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "fh-pro-for-women",
+   "title": "FH PRO® Fertility Multivitamin For Women",
+   "price": 89.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Cycle Health",
+    "Egg Quality",
+    "faw-fhpro-women",
+    "FH PRO",
+    "Multivitamins",
+    "Ovia",
+    "Subscription",
+    "The Ribbon Box"
+   ],
+   "images": 7,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "isofresh-vaginal-probiotic",
+   "title": "IsoFresh® Vaginal Probiotic",
+   "price": 19.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "All Women",
+    "Shop Vaginal Care",
+    "Specialized Support",
+    "Subscription",
+    "The Ribbon Box",
+    "vaginal care",
+    "Vaginal Care & Menopause"
+   ],
+   "images": 5,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "male-fertility-supplement-starter-pack",
+   "title": "Male Fertility Supplement Starter Pack",
+   "price": 78.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Bundles",
+    "Combo",
+    "Subscription"
+   ],
+   "images": 3,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "menopause-multivitamin-essentials",
+   "title": "Menopause Multivitamin Essentials",
+   "price": 31.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Multivitamins",
+    "New",
+    "Subscription",
+    "Vaginal Care & Menopause"
+   ],
+   "images": 7,
+   "published_at": "2024-10-01",
+   "empty_body": false
+  },
+  {
+   "handle": "milkies-nursing-postnatal-breastfeeding-multivitamin",
+   "title": "Milkies Nursing Postnatal Breastfeeding Multivitamin",
+   "price": 19.95,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "exclude_rebuy",
+    "Private"
+   ],
+   "images": 3,
+   "published_at": "2026-01-28",
+   "empty_body": true
+  },
+  {
+   "handle": "motilityboost",
+   "title": "MotilityBoost® For Men",
+   "price": 26.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Specialized Support",
+    "Sperm Health",
+    "Subscription"
+   ],
+   "images": 6,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "multi-symptom-pms-relief",
+   "title": "Multi-Symptom PMS Relief",
+   "price": 29.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Cycle Health",
+    "New"
+   ],
+   "images": 6,
+   "published_at": "2025-09-12",
+   "empty_body": false
+  },
+  {
+   "handle": "myo-d-chiro-inositol",
+   "title": "Myo + D-Chiro Inositol",
+   "price": 24.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 2,
+   "variant_titles": [
+    "120 CT",
+    "240 CT"
+   ],
+   "product_type": "",
+   "tags": [
+    "All Women",
+    "Cycle Health",
+    "Egg Quality",
+    "Specialized Support",
+    "Subscription"
+   ],
+   "images": 10,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "myo-d-chiro-inositol-powder",
+   "title": "Myo + D-Chiro Inositol Powder",
+   "price": 81.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "All Women",
+    "Cycle Health",
+    "Egg Quality",
+    "Specialized Support",
+    "Subscription"
+   ],
+   "images": 7,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "myo-folate",
+   "title": "Myo-Folate® Drink Mix for Fertility",
+   "price": 27.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Cycle Health",
+    "Egg Quality",
+    "Specialized Support",
+    "Subscription"
+   ],
+   "images": 6,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "myo-inositol",
+   "title": "Myo-Inositol",
+   "price": 19.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 2,
+   "variant_titles": [
+    "120 CT",
+    "240 CT"
+   ],
+   "product_type": "",
+   "tags": [
+    "All Women",
+    "Cycle Health",
+    "Egg Quality",
+    "Specialized Support",
+    "Subscription"
+   ],
+   "images": 10,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "ovaboost",
+   "title": "OvaBoost® For Women",
+   "price": 36.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Cycle Health",
+    "Egg Quality",
+    "Specialized Support",
+    "Subscription",
+    "The Ribbon Box"
+   ],
+   "images": 6,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "peapod-prenatal",
+   "title": "PeaPod Prenatal",
+   "price": 19.95,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "exclude_rebuy",
+    "FSA / HSA Eligible",
+    "PeaPod",
+    "Pregnancy Products"
+   ],
+   "images": 5,
+   "published_at": "2025-01-22",
+   "empty_body": false
+  },
+  {
+   "handle": "postnatal-multivitamin-essentials",
+   "title": "Postnatal Multivitamin Essentials with DHA",
+   "price": 34.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Breastfeeding Supplements",
+    "Lactation",
+    "Multivitamins",
+    "New",
+    "Postnatal",
+    "Subscription"
+   ],
+   "images": 6,
+   "published_at": "2024-10-03",
+   "empty_body": false
+  },
+  {
+   "handle": "pqq-myo-d-chiro-inositol",
+   "title": "PQQ+ Myo + D-Chiro Inositol",
+   "price": 34.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "All Women",
+    "Cycle Health",
+    "Egg Quality",
+    "New",
+    "Specialized Support"
+   ],
+   "images": 6,
+   "published_at": "2025-08-07",
+   "empty_body": false
+  },
+  {
+   "handle": "prenatal-dha-epa",
+   "title": "Prenatal DHA + EPA",
+   "price": 21.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "FSA / HSA Eligible",
+    "PeaPod",
+    "Pregnancy Products",
+    "Prenatal",
+    "Subscription"
+   ],
+   "images": 5,
+   "published_at": "2023-03-08",
+   "empty_body": false
+  },
+  {
+   "handle": "prenatal-multivitamin-essentials",
+   "title": "Prenatal Multivitamin Essentials with DHA",
+   "price": 34.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "Multivitamins",
+    "New",
+    "Prenatal"
+   ],
+   "images": 6,
+   "published_at": "2024-05-10",
+   "empty_body": false
+  },
+  {
+   "handle": "womens-multivitamin-essentials",
+   "title": "Women's Multivitamin Essentials",
+   "price": 21.99,
+   "compare_at": null,
+   "available": true,
+   "variants": 1,
+   "variant_titles": [
+    "Default Title"
+   ],
+   "product_type": "",
+   "tags": [
+    "All Women",
+    "Multivitamins",
+    "New",
+    "Subscription"
+   ],
+   "images": 6,
+   "published_at": "2024-10-03",
+   "empty_body": false
+  }
+ ],
+ "footer": [
+  {
+   "label": "Fertility Supplements",
+   "handle": "fertility-supplements",
+   "products_count_reported": 41,
+   "storefront": [
+    "not fetched in this review",
+    null
+   ]
+  },
+  {
+   "label": "Ovulation Prediction",
+   "handle": "ovulation-prediction",
+   "products_count_reported": 13,
+   "storefront": [
+    "products.json → 1 product, sold out",
+    1
+   ]
+  },
+  {
+   "label": "Lubricants & Gels",
+   "handle": "vaginal-care-menopause",
+   "products_count_reported": 13,
+   "storefront": [
+    "not fetched in this review",
+    null
+   ]
+  },
+  {
+   "label": "Pregnancy and Ovulation Tests",
+   "handle": "pregnancy-and-ovulation-tests",
+   "products_count_reported": 12,
+   "storefront": [
+    "No products found",
+    0
+   ]
+  },
+  {
+   "label": "Pregnancy",
+   "handle": "shop-pregnancy",
+   "products_count_reported": 0,
+   "storefront": [
+    "No products found",
+    0
+   ]
+  },
+  {
+   "label": "Breastfeeding",
+   "handle": "shop-breastfeeding",
+   "products_count_reported": 7,
+   "storefront": [
+    "not fetched in this review",
+    null
+   ]
+  },
+  {
+   "label": "Women's Health",
+   "handle": "menopause",
+   "products_count_reported": 4,
+   "storefront": [
+    "not fetched in this review",
+    null
+   ]
+  },
+  {
+   "label": "Surplus Savings",
+   "handle": "surplus-savings",
+   "products_count_reported": 18,
+   "storefront": [
+    "not fetched in this review",
+    null
+   ]
+  }
+ ],
+ "collections": [
+  {
+   "handle": "all-women",
+   "title": "All Women",
+   "products_count": 7,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "best-sellers",
+   "title": "Best Sellers",
+   "products_count": 12,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "breast-milk-collection-storage",
+   "title": "Breast Milk Collection & Storage",
+   "products_count": 8,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "breastfeeding-products",
+   "title": "Breastfeeding Products",
+   "products_count": 7,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "breastfeeding-supplements",
+   "title": "Breastfeeding Supplements",
+   "products_count": 6,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "bundles",
+   "title": "Bundles",
+   "products_count": 13,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "cycle-health",
+   "title": "Cycle Health",
+   "products_count": 8,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "egg-quality",
+   "title": "Egg Quality",
+   "products_count": 9,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "fairhaven-health",
+   "title": "Fairhaven Health",
+   "products_count": 120,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "female-fertility-supplements",
+   "title": "Female Fertility Supplements",
+   "products_count": 30,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "fertilaid",
+   "title": "FertilAid",
+   "products_count": 4,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "shop-fertility",
+   "title": "Fertility",
+   "products_count": 41,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "fertility-supplements",
+   "title": "Fertility Supplements",
+   "products_count": 41,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "fh-pro",
+   "title": "FH PRO Multivitamins",
+   "products_count": 7,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "fsa-hsa",
+   "title": "FSA / HSA",
+   "products_count": 28,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "hot-flashes-night-sweats",
+   "title": "Hot Flashes/Night Sweats",
+   "products_count": 2,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "lactation",
+   "title": "Lactation",
+   "products_count": 12,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "male-fertility-supplements",
+   "title": "Male Fertility Supplements",
+   "products_count": 18,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "menopause",
+   "title": "Menopause",
+   "products_count": 4,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "milkies-breastfeeding-products",
+   "title": "Milkies Breastfeeding Products",
+   "products_count": 16,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "multivitamins",
+   "title": "Multivitamins",
+   "products_count": 8,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "myo-inositol-products",
+   "title": "Myo-Inositol Products",
+   "products_count": 11,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "new",
+   "title": "New",
+   "products_count": 8,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "ovulation-prediction",
+   "title": "Ovulation Prediction",
+   "products_count": 13,
+   "storefront": [
+    "products.json → 1 product, sold out",
+    1
+   ]
+  },
+  {
+   "handle": "peapod-prenatal-supplements",
+   "title": "PeaPod Prenatal Supplements",
+   "products_count": 8,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "postnatal",
+   "title": "Postnatal",
+   "products_count": 2,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "pregnancy-and-ovulation-tests",
+   "title": "Pregnancy and Ovulation Tests",
+   "products_count": 12,
+   "storefront": [
+    "No products found",
+    0
+   ]
+  },
+  {
+   "handle": "pregnancy-products",
+   "title": "Pregnancy Products",
+   "products_count": 0,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "prenatal",
+   "title": "Prenatal",
+   "products_count": 3,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "prenatal-vitamins-supplements",
+   "title": "Prenatal Vitamins & Supplements",
+   "products_count": 4,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "private",
+   "title": "Private",
+   "products_count": 45,
+   "storefront": [
+    "products.json → 0 products",
+    0
+   ]
+  },
+  {
+   "handle": "sale",
+   "title": "Sale",
+   "products_count": 39,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "shop-breastfeeding",
+   "title": "Shop Breastfeeding",
+   "products_count": 7,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "shop-pregnancy",
+   "title": "Shop Pregnancy",
+   "products_count": 0,
+   "storefront": [
+    "No products found",
+    0
+   ]
+  },
+  {
+   "handle": "sitewide-savings",
+   "title": "Sitewide Savings",
+   "products_count": 74,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "specialized-support",
+   "title": "Specialized Support",
+   "products_count": 12,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "sperm-health",
+   "title": "Sperm Health",
+   "products_count": 5,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "subscribe-save",
+   "title": "Subscribe & Save",
+   "products_count": 56,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "surplus-savings",
+   "title": "Surplus Savings",
+   "products_count": 18,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "uncategorized",
+   "title": "Uncategorized",
+   "products_count": 2,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "vaginal-care",
+   "title": "Vaginal Care",
+   "products_count": 10,
+   "storefront": [
+    "",
+    null
+   ]
+  },
+  {
+   "handle": "vaginal-care-menopause",
+   "title": "Vaginal Care & Menopause",
+   "products_count": 13,
+   "storefront": [
+    "",
+    null
+   ]
+  }
+ ],
+ "trending": [
+  "babydance-fertility-lubricant-10-applicators",
+  "babydance-fertility-lubricant-no-applicators"
+ ],
+ "promo": [
+  {
+   "handle": "complete-lactation-support",
+   "title": "Complete Lactation Support",
+   "price": 29.99,
+   "compare_at": null,
+   "variants": 1,
+   "badge": "30% OFF · LIMITED-TIME OFFER · SELECT SIZES – APPLIED IN CART",
+   "subscription": 26.99
+  },
+  {
+   "handle": "fertilecm-cervical-mucus-supplement",
+   "title": "FertileCM® For Women",
+   "price": 26.99,
+   "compare_at": null,
+   "variants": 1,
+   "badge": "30% OFF · LIMITED-TIME OFFER · SELECT SIZES – APPLIED IN CART",
+   "subscription": 24.29
+  },
+  {
+   "handle": "fertilitea-fertility-tea-for-women",
+   "title": "FertiliTea®",
+   "price": 21.99,
+   "compare_at": null,
+   "variants": 1,
+   "badge": "30% OFF · LIMITED-TIME OFFER · SELECT SIZES – APPLIED IN CART",
+   "subscription": 19.79
+  },
+  {
+   "handle": "menopause-multivitamin-essentials",
+   "title": "Menopause Multivitamin Essentials",
+   "price": 31.99,
+   "compare_at": null,
+   "variants": 1,
+   "badge": "30% OFF · LIMITED-TIME OFFER · SELECT SIZES – APPLIED IN CART",
+   "subscription": 28.79
+  },
+  {
+   "handle": "milkies-nursing-postnatal-breastfeeding-multivitamin",
+   "title": "Milkies Nursing Postnatal Breastfeeding Multivitamin",
+   "price": 19.95,
+   "compare_at": null,
+   "variants": 1,
+   "badge": "30% OFF · LIMITED-TIME OFFER · SELECT SIZES – APPLIED IN CART",
+   "subscription": 17.95
+  }
+ ],
+ "pdp": [
+  {
+   "handle": "babydance-fertility-lubricant-no-applicators",
+   "title": "Sperm-Friendly Lubricant - BabyDance Flip Top Tube for Nightstand – Fairhaven Health",
+   "title_len": 84,
+   "desc": "A convenient flip top tube of fertility-friendly BabyDance lube. Supplements natural lubrication, won't harm sperm. Safe for TTC couples.",
+   "desc_len": 137,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "3",
+    "4.7"
+   ],
+   "og_http": true,
+   "h1": [
+    "BabyDance Fertility Lubricant - No Applicators"
+   ]
+  },
+  {
+   "handle": "calcium-magnesium-prenatal",
+   "title": "Calcium + Magnesium | Bone & Muscle Development Support* – Fairhaven Health",
+   "title_len": 75,
+   "desc": "Support bone and muscle development in trying-to-conceive, pregnant, and nursing women with Calcium + Magnesium. Learn more…",
+   "desc_len": 124,
+   "ld": [
+    "Organization",
+    "Product"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "14",
+    "5.0"
+   ],
+   "og_http": true,
+   "h1": [
+    "Calcium + Magnesium"
+   ]
+  },
+  {
+   "handle": "complete-menopause-relief",
+   "title": "Complete Menopause Relief | Hot Flashes, Night Sweats, Mood, & More – Fairhaven Health",
+   "title_len": 86,
+   "desc": "Get powerful, hormone-free relief from 13 major menopausal symptoms, including hot flashes, night sweats, mood swings, and sleep disturbances. Learn more…",
+   "desc_len": 154,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "0",
+    "0.0"
+   ],
+   "og_http": true,
+   "h1": [
+    "Complete Menopause Relief"
+   ]
+  },
+  {
+   "handle": "coq10",
+   "title": "CoQ10 | Support for Mitochondrial Health and Cellular Energy* – Fairhaven Health",
+   "title_len": 80,
+   "desc": "Support mitochondrial health by neutralizing free radicals and promoting cellular energy production with Fairhaven Health CoQ10. Learn more…",
+   "desc_len": 140,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "6",
+    "4.7"
+   ],
+   "og_http": true,
+   "h1": [
+    "CoQ10"
+   ]
+  },
+  {
+   "handle": "female-fertility-supplement-starter-pack",
+   "title": "Female Fertility Supplement Starter Pack | Reproductive Health Support – Fairhaven Health",
+   "title_len": 89,
+   "desc": "Promote hormone balance and cycle regularity with the Female Fertility Starter Pack, a collection of supplements to support fertility and reproductive wellness.",
+   "desc_len": 160,
+   "ld": [
+    "Organization",
+    "Product"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 0,
+   "rating": [
+    "144",
+    "4.7"
+   ],
+   "og_http": true,
+   "h1": [
+    "Female Fertility Supplement Starter Pack"
+   ]
+  },
+  {
+   "handle": "fertilaid-multivitamin-for-men",
+   "title": "FertilAid® Multivitamin For Men | Support for Male Fertility – Fairhaven Health",
+   "title_len": 79,
+   "desc": "A male fertility pill designed to increase total count and motility, FertilAid Multivitamin For Men a leading male fertility supplement since 2003. Learn more…",
+   "desc_len": 159,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "621",
+    "4.8"
+   ],
+   "og_http": true,
+   "h1": [
+    "FertilAid® Multivitamin For Men"
+   ]
+  },
+  {
+   "handle": "fertilaid-multivitamin-for-women",
+   "title": "FertilAid® Multivitamin For Women | Daily Support for Female Fertility – Fairhaven Health",
+   "title_len": 89,
+   "desc": "This comprehensive reproductive health supplement with key nutrients for female fertility promotes hormone balance and cycle regularity.",
+   "desc_len": 136,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "1921",
+    "4.5"
+   ],
+   "og_http": true,
+   "h1": [
+    "FertilAid® Multivitamin For Women"
+   ]
+  },
+  {
+   "handle": "fertilaid-multivitamin-value-pack",
+   "title": "FertilAid® Multivitamin Pack | Daily Support for Male & Female Fertility – Fairhaven Health",
+   "title_len": 91,
+   "desc": "The FertilAid Multivitamin Pack includes comprehensive fertility support for men’s and women’s reproductive health. Learn more..",
+   "desc_len": 128,
+   "ld": [
+    "Organization",
+    "Product"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 0,
+   "rating": [
+    "564",
+    "4.6"
+   ],
+   "og_http": true,
+   "h1": [
+    "FertilAid® Multivitamin Value Pack"
+   ]
+  },
+  {
+   "handle": "fertilecm-cervical-mucus-supplement",
+   "title": "FertileCM For Women | Cervical Mucus Support Supplement for Fertility – Fairhaven Health",
+   "title_len": 88,
+   "desc": "Support fertility by increasing the quantity and quality of cervical mucus with FertileCM. Learn more…",
+   "desc_len": 102,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "484",
+    "4.6"
+   ],
+   "og_http": true,
+   "h1": [
+    "FertileCM® For Women"
+   ]
+  },
+  {
+   "handle": "fertilitea-fertility-tea-for-women",
+   "title": "Fertility Tea - All Natural Herbal Tea with Vitex and Red Raspberry – Fairhaven Health",
+   "title_len": 86,
+   "desc": "Fertility tea supports cycle regularity and hormone balance. Delicious and made with organic herbs for women who are trying to get pregnant.",
+   "desc_len": 140,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "435",
+    "4.6"
+   ],
+   "og_http": true,
+   "h1": [
+    "FertiliTea®"
+   ]
+  },
+  {
+   "handle": "fh-pro-fertility-multivitamin-for-men",
+   "title": "FH Pro® Fertility Multivitamin For Men | Support for Male Fertility – Fairhaven Health",
+   "title_len": 86,
+   "desc": "A male fertility supplement designed to support healthy sperm function, including count, motility, morphology, and DNA integrity. Learn more…",
+   "desc_len": 141,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "26",
+    "4.8"
+   ],
+   "og_http": true,
+   "h1": [
+    "FH PRO® Fertility Multivitamin For Men"
+   ]
+  },
+  {
+   "handle": "fh-pro-for-women",
+   "title": "FH Pro® Fertility Multivitamin For Women | Support for Women’s Fertility – Fairhaven Health",
+   "title_len": 91,
+   "desc": "This clinically studied, advanced multivitamin for female reproductive health includes myo-inositol, D-chiro inositol, methylfolate, and an antioxidant blend.",
+   "desc_len": 158,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "102",
+    "4.7"
+   ],
+   "og_http": true,
+   "h1": [
+    "FH PRO® Fertility Multivitamin For Women"
+   ]
+  },
+  {
+   "handle": "isofresh-vaginal-probiotic",
+   "title": "IsoFresh Vaginal Probiotic | Balance for a Healthy Vaginal Microbiome* – Fairhaven Health",
+   "title_len": 89,
+   "desc": "Support balance for a healthy vaginal microbiome with IsoFresh Vaginal Probiotic, an oral probiotic for vaginal health. Learn more…",
+   "desc_len": 131,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "33",
+    "4.9"
+   ],
+   "og_http": true,
+   "h1": [
+    "IsoFresh® Vaginal Probiotic"
+   ]
+  },
+  {
+   "handle": "milkies-nursing-postnatal-breastfeeding-multivitamin",
+   "title": "Milkies Nursing Postnatal - A Multivitamin for Healthy Lactation – Fairhaven Health",
+   "title_len": 83,
+   "desc": "A postnatal supplement for breastfeeding with key nutrients - Vitamin D, iron, iodine, and B vitamins - to support healthy lactation, energy, and immunity.",
+   "desc_len": 155,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 0,
+   "rating": [
+    "65",
+    "4.9"
+   ],
+   "og_http": true,
+   "h1": [
+    "Milkies Nursing Postnatal Breastfeeding Multivitamin"
+   ]
+  },
+  {
+   "handle": "motilityboost",
+   "title": "MotilityBoost® For Men | Support for Male Reproductive Health – Fairhaven Health",
+   "title_len": 80,
+   "desc": "Increase sperm motility with this key blend of vitamins, antioxidants, and herbs including L-carnitine, vitamin B12, and vitamin B6. Learn more…",
+   "desc_len": 144,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "79",
+    "4.6"
+   ],
+   "og_http": true,
+   "h1": [
+    "MotilityBoost® For Men"
+   ]
+  },
+  {
+   "handle": "myo-d-chiro-inositol",
+   "title": "Myo + D-Chiro Inositol | Hormone Balance, Cycle Regularity, Fertility – Fairhaven Health",
+   "title_len": 88,
+   "desc": "Support metabolic and hormone balance, cycle regularity, and reproductive health with Myo + D-Chiro Inositol in a 40:1 inositol blend. Learn more…",
+   "desc_len": 146,
+   "ld": [
+    "Organization",
+    "Product",
+    "ProductGroup",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 6,
+   "rating": [
+    "2",
+    "5.0"
+   ],
+   "og_http": true,
+   "h1": [
+    "Myo + D-Chiro Inositol"
+   ]
+  },
+  {
+   "handle": "myo-inositol",
+   "title": "Myo-Inositol | Hormone Balance, Cycle Regularity, and Egg Quality – Fairhaven Health",
+   "title_len": 84,
+   "desc": "Support metabolic and hormone balance, cycle regularity, and reproductive health with Myo-Inositol, a naturally occurring vitamin-like compound. Learn more…",
+   "desc_len": 156,
+   "ld": [
+    "Organization",
+    "Product",
+    "ProductGroup",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 6,
+   "rating": [
+    "107",
+    "4.8"
+   ],
+   "og_http": true,
+   "h1": [
+    "Myo-Inositol"
+   ]
+  },
+  {
+   "handle": "ovaboost",
+   "title": "OvaBoost For Women | Hormone Balance, Cycle Regularity, Fertility – Fairhaven Health",
+   "title_len": 84,
+   "desc": "Support metabolic and hormone balance, and cycle regularity with OvaBoost For Women, a blend of vitamins and antioxidants to support fertility. Learn more…",
+   "desc_len": 155,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "363",
+    "4.6"
+   ],
+   "og_http": true,
+   "h1": [
+    "OvaBoost® For Women"
+   ]
+  },
+  {
+   "handle": "peapod-prenatal",
+   "title": "Once-Daily Prenatal Vitamin for Preconception and Pregnancy Wellness – Fairhaven Health",
+   "title_len": 87,
+   "desc": "Small, easy to swallow tablets. With key nutrients including iron, iodine, and methylfolate. Great value! One bottle is a 2 month supply.",
+   "desc_len": 137,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "81",
+    "4.8"
+   ],
+   "og_http": true,
+   "h1": [
+    "PeaPod Prenatal"
+   ]
+  },
+  {
+   "handle": "prenatal-dha-epa",
+   "title": "Prenatal DHA + EPA | Support for Babies’ Brain Health* – Fairhaven Health",
+   "title_len": 73,
+   "desc": "Support the development of babies’ brain health with Prenatal DHA + EPA, a pharmaceutical-grade fish oil supplement that provides omega-3 fats. Learn more…",
+   "desc_len": 155,
+   "ld": [
+    "Organization",
+    "Product",
+    "FAQPage"
+   ],
+   "ldrating": null,
+   "bc_ld": false,
+   "sf_table": false,
+   "sfp_img": 3,
+   "rating": [
+    "1",
+    "5.0"
+   ],
+   "og_http": true,
+   "h1": [
+    "Prenatal DHA + EPA"
+   ]
+  }
+ ],
+ "shared": {
+  "count": 89,
+  "title_mismatches": [
+   {
+    "sku": "BFCAPSB50",
+    "bf": "B-50 Complex",
+    "unjury": "B50 Complex",
+    "price_bf": "15.99",
+    "price_un": "15.99"
+   },
+   {
+    "sku": "BFCAPSENERGY",
+    "bf": "Energy Support*",
+    "unjury": "Energy Support",
+    "price_bf": "19.99",
+    "price_un": "19.99"
+   },
+   {
+    "sku": "BFCAPSHSNR",
+    "bf": "Bariatric Hair, Skin & Nails Rejuvenator",
+    "unjury": "Hair, Skin & Nails Rejuvenator",
+    "price_bf": "21.99",
+    "price_un": "21.99"
+   },
+   {
+    "sku": "BFCAPSHSNR120",
+    "bf": "Bariatric Hair, Skin & Nails Rejuvenator",
+    "unjury": "Hair, Skin & Nails Rejuvenator",
+    "price_bf": "39.99",
+    "price_un": "39.99"
+   },
+   {
+    "sku": "BFCAPSIRON30",
+    "bf": "One Per Day Bariatric Multivitamin With Iron",
+    "unjury": "One PER Day Bariatric Multivitamin Capsule With 45mg Iron",
+    "price_bf": "19.99",
+    "price_un": "19.99"
+   },
+   {
+    "sku": "BFCAPSIRON90",
+    "bf": "One Per Day Bariatric Multivitamin With Iron",
+    "unjury": "One PER Day Bariatric Multivitamin Capsule With 45mg Iron",
+    "price_bf": "46.99",
+    "price_un": "46.99"
+   },
+   {
+    "sku": "BFCAPSMULTIMEN30",
+    "bf": "Men’s One Per Day Bariatric Multivitamin with Iron Capsules",
+    "unjury": "Men’s One Per Day Multivitamin Capsules",
+    "price_bf": "16.99",
+    "price_un": "16.99"
+   },
+   {
+    "sku": "BFCAPSMULTIMEN90",
+    "bf": "Men’s One Per Day Bariatric Multivitamin with Iron Capsules",
+    "unjury": "Men’s One Per Day Multivitamin Capsules",
+    "price_bf": "45.99",
+    "price_un": "45.99"
+   },
+   {
+    "sku": "BFCAPSMULTIWOMEN30",
+    "bf": "Women’s One Per Day Bariatric Multivitamin With Iron Capsules",
+    "unjury": "Women’s One Per Day Multivitamin Capsules",
+    "price_bf": "16.99",
+    "price_un": "16.99"
+   },
+   {
+    "sku": "BFCAPSMULTIWOMEN90",
+    "bf": "Women’s One Per Day Bariatric Multivitamin With Iron Capsules",
+    "unjury": "Women’s One Per Day Multivitamin Capsules",
+    "price_bf": "45.99",
+    "price_un": "45.99"
+   },
+   {
+    "sku": "BFCAPSPROBIOTIC",
+    "bf": "Bariatric Probiotic Capsule",
+    "unjury": "Probiotic Capsule",
+    "price_bf": "27.99",
+    "price_un": "27.99"
+   },
+   {
+    "sku": "BFCAPSSLEEP",
+    "bf": "Sleep Support*",
+    "unjury": "Sleep Support",
+    "price_bf": "19.99",
+    "price_un": "19.99"
+   },
+   {
+    "sku": "BFCHEW-CHERRY",
+    "bf": "Wild Cherry Complete Chewable | Bariatric Multivitamin",
+    "unjury": "Wild Cherry Complete Chewable Bariatric Multivitamin",
+    "price_bf": "32.99",
+    "price_un": "32.99"
+   },
+   {
+    "sku": "BFCHEW-MIXEDBERRY",
+    "bf": "Mixed Berry Complete Chewable | Bariatric Multivitamin",
+    "unjury": "Mixed Berry Complete Chewable Bariatric Multivitamin",
+    "price_bf": "32.99",
+    "price_un": "32.99"
+   },
+   {
+    "sku": "BFCHEW-ORANGE",
+    "bf": "Orange Cream Complete Chewable | Bariatric Multivitamin",
+    "unjury": "Orange Cream Complete Chewable Bariatric Multivitamin",
+    "price_bf": "32.99",
+    "price_un": "32.99"
+   },
+   {
+    "sku": "BFCHEW-STRAWBERRY",
+    "bf": "Strawberry Complete Chewable | Bariatric Multivitamin",
+    "unjury": "Strawberry Complete Chewable Bariatric Multivitamin",
+    "price_bf": "32.99",
+    "price_un": "32.99"
+   },
+   {
+    "sku": "BFCHEW-TROPICAL",
+    "bf": "Tropical Complete Chewable | Bariatric Multivitamin",
+    "unjury": "Tropical Complete Chewable Bariatric Multivitamin",
+    "price_bf": "32.99",
+    "price_un": "32.99"
+   },
+   {
+    "sku": "BFCHEWCALCIUM-ORANGE",
+    "bf": "Orange Citrus Chewable Calcium Citrate",
+    "unjury": "Calcium-Citrate Plus Chewable",
+    "price_bf": "19.99",
+    "price_un": "19.99"
+   },
+   {
+    "sku": "BFSOFTCALCIUM-CARAMEL",
+    "bf": "Caramel Bariatric Calcium Citrate Soft Chews",
+    "unjury": "Caramel Bariatric Calcium Citrate Soft Chew",
+    "price_bf": "26.99",
+    "price_un": "26.99"
+   },
+   {
+    "sku": "BFSOFTCALCIUM-FRUITPUNCH",
+    "bf": "Fruit Punch Bariatric Calcium Citrate Soft Chews",
+    "unjury": "Fruit Punch Bariatric Calcium Citrate Soft Chew",
+    "price_bf": "26.99",
+    "price_un": "26.99"
+   },
+   {
+    "sku": "BFSOFTCALCIUM-LEMON",
+    "bf": "Lemon Calcium Citrate Soft Chew",
+    "unjury": "Lemon Calcium Soft Chew",
+    "price_bf": "26.99",
+    "price_un": "26.99"
+   },
+   {
+    "sku": "BFSOFTIRON-CHERRY",
+    "bf": "Cherry Bariatric Iron Soft Chew with Vitamin C",
+    "unjury": "Iron Soft Chew with Vitamin C",
+    "price_bf": "32.99",
+    "price_un": "32.99"
+   },
+   {
+    "sku": "BFSOFTIRON-GRAPE",
+    "bf": "Grape Bariatric Iron Soft Chew with Vitamin C",
+    "unjury": "Iron Soft Chew with Vitamin C",
+    "price_bf": "32.99",
+    "price_un": "32.99"
+   },
+   {
+    "sku": "BFSOFTIRON-WATERMELON",
+    "bf": "Watermelon Bariatric Iron Soft Chew with Vitamin C",
+    "unjury": "Iron Soft Chew with Vitamin C",
+    "price_bf": "32.99",
+    "price_un": "32.99"
+   },
+   {
+    "sku": "BFSUBB12-CHERRY",
+    "bf": "Cherry-Berry Vitamin B12 Quick Melt",
+    "unjury": "Vitamin B12 Quick Melt",
+    "price_bf": "18.99",
+    "price_un": "18.99"
+   },
+   {
+    "sku": "BFSUBB12-GRAPE",
+    "bf": "Grape Vitamin B12 Quick Melt",
+    "unjury": "Vitamin B12 Quick Melt",
+    "price_bf": "18.99",
+    "price_un": "18.99"
+   },
+   {
+    "sku": "UNPCHOCCNT",
+    "bf": "Unjury Plant-Based Chocolate Protein Powder",
+    "unjury": "Plant-Based Chocolate Protein Powder",
+    "price_bf": "29.99",
+    "price_un": "29.99"
+   },
+   {
+    "sku": "UNPUNFLVCNT",
+    "bf": "Unjury Unflavored Plant-Based Protein Powder",
+    "unjury": "Plant-Based Unflavored Protein Powder",
+    "price_bf": "29.99",
+    "price_un": "29.99"
+   }
+  ],
+  "price_mismatches": 0,
+  "stock_mismatches": 0
+ },
+ "standard": [
+  {
+   "store": "fairhavenhealth.com",
+   "theme": "Vision 7.0.0",
+   "free_ship": "$35+",
+   "under": "$4.95",
+   "processing": "1–2 business days",
+   "transit": "4–8 business days",
+   "shipping_page": "/pages/shipping-and-returns",
+   "terms": "/policies/terms-of-service",
+   "contact": "/pages/contactus",
+   "sub_discount": "10%"
+  },
+  {
+   "store": "bariatricfusion.com",
+   "theme": "Dawn 7.0.1 (custom)",
+   "free_ship": "$100+",
+   "under": "$8.50",
+   "processing": "within 2 business days",
+   "transit": "3–5 business days",
+   "shipping_page": "/pages/shipping-policy + /pages/return-policy",
+   "terms": "/pages/terms-of-service",
+   "contact": "/pages/contact-us",
+   "sub_discount": "10% (5% on the copy-of handle)"
+  },
+  {
+   "store": "vitalnutrients.co",
+   "theme": "eHouse All Natural 0.1.0",
+   "free_ship": "$49+",
+   "under": "from $4.95",
+   "processing": "1–2 business days",
+   "transit": "3–5 business days",
+   "shipping_page": "/pages/shipping-policy",
+   "terms": "/pages/terms-and-conditions",
+   "contact": "/pages/contact",
+   "sub_discount": "—"
+  },
+  {
+   "store": "unjury.com",
+   "theme": "Expanse 4.4.1",
+   "free_ship": "(none on homepage)",
+   "under": "—",
+   "processing": "—",
+   "transit": "—",
+   "shipping_page": "/pages/shipping-return-policy",
+   "terms": "/pages/terms-conditions",
+   "contact": "/pages/contact",
+   "sub_discount": "—"
+  }
+ ]
+}

@@ -1,0 +1,700 @@
+{
+ "review": {
+  "slug": "federal-fluid-power",
+  "path": "federal-fluid-power-review",
+  "company": "Federal Fluid Power",
+  "company_short": "Federal Fluid Power",
+  "store_scored": "federalfp.com",
+  "stores": [
+   "federalfp.com",
+   "patriothyd.com"
+  ],
+  "platform": "Magento 2 (Hyvä theme, Amasty, Magezon) — one install serving federalfp.com and patriothyd.com",
+  "audited_at": "2026-09-28",
+  "audited_label": "Sep 28, 2026",
+  "role": {
+   "title": "Full Stack IT Specialist, E-Commerce Developer & Content Editor",
+   "mode": "On-site · Plymouth, MI · up to $65,000",
+   "posting_url": "https://www.indeed.com/viewjob?jk=2f539b8a6bbf3400",
+   "posting_alt": "",
+   "posted": "Sep 16, 2026 (Indeed)",
+   "apply_via": "Indeed",
+   "duties": [
+    "Create and maintain product listings — copy, attributes, images and catalog content — for the B2B store",
+    "Oversee the Magento 2 integration with the ERP; keep product and inventory data accurate",
+    "Build EDI and API connections for data transfer between systems",
+    "Magento plus WordPress/HTML; CRM/ERP familiarity, especially inventory",
+    "Internal IT and network support; report progress to management"
+   ]
+  },
+  "people": [
+   {
+    "name": "Ryan Barringer",
+    "title": "President (BBB principal contact); Sales & Applications Engineer on LinkedIn",
+    "url": "https://www.linkedin.com/in/ryan-barringer-7b71a37/",
+    "channel": "Email + LinkedIn connection note",
+    "primary": true
+   },
+   {
+    "name": "Mark Barringer",
+    "title": "General Manager",
+    "url": "https://www.linkedin.com/in/mark-barringer-b1560229/",
+    "channel": "LinkedIn connection note",
+    "primary": false
+   }
+  ],
+  "hero": {
+   "eyebrow": "Independent review · federalfp.com · Sep 28, 2026",
+   "headline": [
+    "The parts are here.",
+    "The",
+    "fields aren't."
+   ],
+   "lede": "An independent review of federalfp.com for the E-Commerce Developer & Content Editor role. I read three of the nine sitemap files (54,496 URLs), five category pages, 19 product pages and eight content pages, plus five pages on the sister store patriothyd.com — no logins, no carts. Search by part number works and the structured data is better than most distributors ship. The catalog behind it shows the marks of a bulk ERP import that nobody has mapped yet: 20,242 product URLs with no URL key, specs trapped inside title strings, prices printed on parts you can only request a quote for, and supplier logos standing in for photos on 69% of the catalog. Six findings, five working fixes — each one is the job.",
+   "stats": [
+    {
+     "n": "54,496",
+     "label": "sitemap URLs read (3 of 9 files) — 51,918 products, 2,515 categories, 63 pages"
+    },
+    {
+     "n": "20,242",
+     "label": "product URLs (37%) with no URL key, blocked by the site's own robots.txt"
+    },
+    {
+     "n": "0",
+     "suffix": " of 19",
+     "label": "sampled product pages with a thread, port, material or pressure attribute"
+    },
+    {
+     "n": "69",
+     "suffix": "%",
+     "label": "of products share a generic first image; 10 of 19 sampled PDPs show a supplier logo as the only picture"
+    },
+    {
+     "n": "61",
+     "suffix": "/100",
+     "label": "ShelfMark score — would rank 19th of 21 on the Michigan index"
+    }
+   ]
+  },
+  "why": {
+   "kicker": "Why this review",
+   "title": "Why Federal Fluid Power",
+   "sub": "The posting is a catalog job first: product listings, attributes, images, the ERP-to-Magento sync. A 52,000-SKU distributor's storefront shows exactly how that sync is doing, so I read it before applying.",
+   "rows": [
+    [
+     "Product listings: copy, attributes, images",
+     "Findings 2, 4 and 5 — attributes, imagery, titles and descriptions."
+    ],
+    [
+     "Magento 2 ↔ ERP integration",
+     "Findings 1 and 3 — URL keys and the price/stock signals an import leaves behind."
+    ],
+    [
+     "Keep product and inventory data accurate",
+     "The attribute parser and option normalizer below are the tools I would run first."
+    ],
+    [
+     "Two store views, one install",
+     "Finding 6 — the Patriot Hydraulics strings on Federal's pages."
+    ]
+   ],
+   "note": "Everything here comes from public pages: served HTML, the sitemaps, robots.txt and JSON-LD. I did not log in, add to cart or submit a quote request. Numbers marked “sitemap-wide” come from the three sitemap files I fetched, not all nine."
+  },
+  "strengths": [
+   {
+    "title": "Part-number search works",
+    "text": "Searching FI-TE-04LLMK-W3-MS returns exactly one hit with price and Add to Cart, and the results page is noindex with a canonical to the search root — the right handling for buyers who type manufacturer codes."
+   },
+   {
+    "title": "Structured data most distributors never ship",
+    "text": "Every sampled product page carries Product + Offer with price, currency and availability, shippingDetails (2–5 business days, $9.99, US), a merchant return policy and a BreadcrumbList; category pages add an OfferCatalog. 19 of 19."
+   },
+   {
+    "title": "The Engineering Toolbox is real content",
+    "text": "/engineering-toolbox/ is a 2,570-word in-browser calculator suite — cylinder force, speed and flow, rod buckling, pumps, HPUs, pneumatics, conversions — with Shop Cylinders links back into the catalog, alongside a hose configurator and a product configurator."
+   }
+  ],
+  "findings": [
+   {
+    "id": "F1",
+    "pillar": "F",
+    "duty": "ERP → Magento product data",
+    "title": "37% of sitemap product URLs have no URL key and are blocked by robots.txt",
+    "count": "20,242 of 54,496 URLs (37.1%) across the three sitemap files fetched · 3 of 3 sampled pages return 200 with a robots-blocked canonical",
+    "observed": "robots.txt disallows /catalog/product/view/, yet sitemap_005.xml lists 10,879 URLs and sitemap_009.xml 9,363 of the form /catalog/product/view/id/93633/ — products imported without a url_key. Fetching three of them returns 200, and each page's own canonical points at another blocked URL (/catalog/product/view/_ignore_category/1/id/101454/s/804500106/). Google receives twenty thousand URLs it is told not to crawl.",
+    "why": "The role owns ERP-to-Magento product data, and a missing url_key on ~20,000 SKUs is exactly the kind of import-mapping gap that silently removes products from search.",
+    "fix": "Filter the product grid for URL Key = empty, bulk-update (or re-import a CSV) with url_key = slugified name + SKU, reindex catalog_url_rewrite, regenerate the sitemap and verify no /catalog/product/view/ URLs remain. Keep the Disallow so the numeric duplicates never index.",
+    "evidence": [
+     "robots.txt",
+     "sitemap_005.xml",
+     "sitemap_009.xml",
+     "pdp_catalog_product_view_id_101454.html",
+     "pdp_catalog_product_view_id_97434.html",
+     "pdp_catalog_product_view_id_310140.html"
+    ],
+    "prototype": "p-urlkey"
+   },
+   {
+    "id": "F2",
+    "pillar": "C",
+    "duty": "Product attributes & layered navigation",
+    "title": "Specs live inside the title string; where attributes exist the values are dirty",
+    "count": "18 of 19 PDPs with only Name / SKU / Weight / Brand · 0 of 19 with a thread, port, material or pressure attribute · Cylinders: 6 of 17 Bore values are inch-mark twins, 72 of 142 Bore×Stroke values are x/X twins, 2 values are Excel date serials",
+    "observed": "The More Information table on 18 of 19 sampled PDPs is Product Name, SKU, Weight and Brand; thread size, port, material and pressure appear only inside the name, e.g. “BV3-04-NPT 1/4″ Three way selector Ball valve w/ 1/4″ NPT Threads (5,800 PSI).” Where spec attributes exist (Cylinders, 953 items) the filter values are unnormalized: Bore lists 2.5 and 2.5″, Stroke 8 and 8″, Bore×Stroke 2 1/2 x 10 and 2 1/2 X 10, Rod Diameter 1 1/4″ and 1.25, Column Load mixes 11520 lbs with a bare 11. Two values are date serials — Ports (NPTF) = 44628 and Rod Diameter = 44624 — the sign of a fraction like 3/8 converted to a date in a spreadsheet before import. Weights are round defaults (a $3.40 stud coupling weighs 10.000000).",
+    "why": "“Keep product data accurate” and “build listings with attributes” is the core of this role; these are the errors a buyer hits when filtering.",
+    "fix": "Define thread_size, port_size, material, pressure_rating, pack_qty and mfr_part_number in an attribute set per product line; parse them out of existing names with a one-off script (the parser below is that script); normalize option values — strip inch marks, lowercase x, one unit convention — under Manage Options; re-export the cylinder CSV with text-formatted columns so 3/8 never becomes 44628 again.",
+    "evidence": [
+     "pdp_sample.csv",
+     "category_hydraulics-1_cylinders-1.html",
+     "pdp_bv3-04-npt.html",
+     "pdp_fi-ge-06llm6x1k-w3-ms-6010000421.html"
+    ],
+    "prototype": "p-parser"
+   },
+   {
+    "id": "F3",
+    "pillar": "B",
+    "duty": "Inventory & price sync",
+    "title": "Price and availability contradict each other — the public symptoms of an unmapped ERP sync",
+    "count": "9 of 19 PDPs are Request-Pricing-only, and 8 of those 9 declare InStock in schema · 1 of 19 prints $0.00 · Chairs & Creepers page 1: 20 of 20 unpriced · a $40,000–$50,000 price bucket on couplings",
+    "observed": "Unavailable items swap Add to Cart for a Request Pricing and Availability button but still print a price on the PDP ($3.40 on a stud coupling whose listing card hides the price), and their JSON-LD still declares availability InStock. Product 804500106 shows $0.00. No PDP shows a stock quantity or in/out-of-stock text; only the three Patriot-brand valves show a lead time (“Usually Ships Within 1–3 Days”). Whole leaf categories are unpriced, and the Couplings price facet offers a $40,000–$50,000 bucket, so at least one coupling is priced above $40,000.",
+    "why": "The posting names the Magento-ERP integration and inventory accuracy; these are what a buyer, and Google, see when quantity and price fields do not map cleanly.",
+    "fix": "Map ERP quantity and price into qty, is_in_stock and price on every sync run and key the RFQ module off is_salable; render Magento's stock-status block on PDPs; set Offer availability to OutOfStock or BackOrder (or drop the Offer) when the button is RFQ; add a sync alert for price = 0 or price > $10,000 on fittings.",
+    "evidence": [
+     "pdp_fi-ge-06llm6x1k-w3-ms-6010000421.html",
+     "pdp_catalog_product_view_id_101454.html",
+     "category_couplings.html",
+     "category_couplings_p2.html",
+     "category_chairs-and-creepers.html",
+     "pdp_sample.csv"
+    ],
+    "prototype": "p-stock"
+   },
+   {
+    "id": "F4",
+    "pillar": "C",
+    "duty": "Product imagery",
+    "title": "Manufacturer logos stand in for product photos on tens of thousands of SKUs",
+    "count": "10 of 19 sampled PDPs show a supplier logo as the only image · sitemap-wide, 35,744 of 51,918 products (69%) share a generic first image · 512 have no image at all",
+    "observed": "Five Yuken items show alaindustries.jpg, others show dnpamerica.jpg, stucchi.jpg, poclain.jpg or Damanlogo.jpg as the product picture; the two Stauff couplings share one family drawing. In the sitemaps the first image is a file shared by 100 or more products for 35,744 of 51,918 products, and one of six logo files for 14,732. Homepage category tiles carry mismatched alt text (Fittings.png alt=“Hydraulic Oil”).",
+    "why": "The role writes copy, attributes and images for the store; a logo where the part should be is the single most visible content gap for a buyer comparing fittings.",
+    "fix": "Pull supplier line-drawing and CAD sets (Stauff, Tompkins and Poclain publish them) and import by SKU via Import → Products with base_image, small_image and thumbnail; use a per-family drawing as the fallback instead of the logo; set a Magento image placeholder so the 512 image-less SKUs stop rendering blank; fix the tile alts.",
+    "evidence": [
+     "pdp_sample.csv",
+     "sitemap_001.xml",
+     "sitemap_005.xml",
+     "sitemap_009.xml",
+     "pdp_dshg-03-3c4-d24-n1-14-dir-valve-pilot-operated.html",
+     "homepage.html"
+    ],
+    "prototype": null
+   },
+   {
+    "id": "F5",
+    "pillar": "F",
+    "duty": "Content editing at catalog scale",
+    "title": "One meta description sitewide, code-only titles, and three URL layers for the same part",
+    "count": "19 of 19 PDPs + 7 of 7 content pages share one description · 11 of 19 titles are the bare part code · 12 of 17 sitemap product URLs return 200 with a different canonical · 2,368 of 2,515 category URLs (94%) end in -1/-2/-3 · 58 homepage links into an alias category tree",
+    "observed": "Every product and content page fetched carries the same description (“Discover a trusted online destination for all your hydraulic requirements…”); product titles are the bare part code with no brand or site suffix (“BV3-04-NPT”). The URL layer is duplicated three ways: sitemap product URLs that canonical elsewhere (one to another SKU's key), category-path product links on listings whose canonical is the root URL, and a /hydraulics-1/ alias tree the homepage links into 58 times. Each page emits two BreadcrumbList blocks.",
+    "why": "“Content editor” for a 52,000-SKU catalog means templates, not hand edits, and the crawl budget is currently spent on duplicates of the same part.",
+    "fix": "Set product meta templates under Product Fields Auto-Generation ({{name}} | {{brand}} hydraulic {{category}} | Federal Fluid Power, and a description from name + brand + first spec); set Use Categories Path for Product URLs to No with permanent redirects on key change; run a URL-rewrite cleanup so old keys 301 instead of 200; relink the homepage grid to canonical category URLs; remove the second breadcrumb block from the Hyvä template.",
+    "evidence": [
+     "pdp_sample.csv",
+     "pdp_700018114.html",
+     "pdp_hp-10y-4-50-x10-00-yellow-hose-protector.html",
+     "category_couplings.html",
+     "homepage.html",
+     "sitemap_001.xml"
+    ],
+    "prototype": "p-meta"
+   },
+   {
+    "id": "F6",
+    "pillar": "T",
+    "duty": "Multi-store hygiene",
+    "title": "Federal's pages carry Patriot Hydraulics' copyright and phone number; policy links go to the wrong pages",
+    "count": "2 wrong-brand strings on every page · Shipping and Return Policy both link to /terms/ · 2 “#” footer links · 6 test/junk pages in the sitemap · the same typo on 19 of 19 PDPs · 2 of 2 SKUs duplicated across both domains",
+    "observed": "federalfp.com's footer reads “© 2023 Patriot Hydraulics” and the header says Call Us 734-479-9641 — Patriot's number (Federal's is 734-455-1722). Shipping Policy and Return Policy both open the 2,320-word terms page, and a second copy of it exists at /ffp-terms-conditions-of-sale/. Order History and Order Tracking link to #. The sitemap lists /test/, /webkul/, /webkul-seller/, /pictures/ and /privacy-patriothyd/; the 404 page is a clone of the homepage with the homepage title; every PDP prints “ask about our leads times?” Both sampled SKUs exist on patriothyd.com with identical content and self-referencing canonicals on each domain.",
+    "why": "These are the first things a customer sees, and each is a ten-minute fix inside Content → Blocks and Pages for someone who owns the multi-store setup.",
+    "fix": "Scope the footer and header blocks to the Federal store view (copyright, phone); create real Shipping and Returns pages and relink the footer; disable the test pages and drop them from the sitemap; assign a proper no-route page; fix the typo in the PDP template; choose one canonical domain per SKU or noindex the Patriot copies.",
+    "evidence": [
+     "homepage.html",
+     "terms_shipping-policy.html",
+     "ffp-terms-conditions-of-sale.html",
+     "sitemap_009.xml",
+     "career.html",
+     "brand_patriot-hydraulics.html",
+     "patriot_homepage.html",
+     "patriot_pdp_fi-te-04llmk-w3-ms-6010000456.html"
+    ],
+    "prototype": "p-storeview"
+   }
+  ],
+  "also": [
+   "Descriptions: 17 of 19 sampled PDPs under 50 words; 7 of 19 just repeat the name.",
+   "Datasheets: 5 of 19 PDPs have Amasty attachments (Poclain MS11: PDF + DXF + STP); none link a PDF otherwise.",
+   "Category tree: 2,515 category URLs in one sitemap file, seven levels deep; no empty category found; Couplings alone is 4,114 items over 206 pages.",
+   "No sort control renders on any listing (the toolbar is Show 20 / 40 / 80 only); Couplings filters are Category, Brand and Price — no thread size, port or material.",
+   "Page weight: product pages are 504–511 KB of HTML with 68–69 script tags; the search results page is 1.74 MB because a 528-value cross-reference facet renders inline; every page embeds a 250-option country list for the quote modal.",
+   "Homepage: 21 h1 elements (each category tile is one), no social links, favicon is a JPEG, no og:image.",
+   "Patriot's sitemap index has 14 files to Federal's 9; product lastmod dates cluster in Aug 2026 (48,233) and Sep 2026 (3,749), consistent with a full-catalog resync."
+  ],
+  "prototypes": [
+   {
+    "id": "p-urlkey",
+    "title": "URL-key generator",
+    "what": "Takes the real sampled products with no URL key and produces the url_key Magento would need, as the CSV the bulk import takes."
+   },
+   {
+    "id": "p-parser",
+    "title": "Attribute parser",
+    "what": "Paste any product name from the catalog and watch thread size, port, pressure, material and pack quantity fall into structured attributes — the script that populates the attribute set."
+   },
+   {
+    "id": "p-normalizer",
+    "title": "Option normalizer",
+    "what": "The Cylinders filter values as they are, and as they come out of one normalization pass: inch marks stripped, x lowercased, fractions restored from date serials."
+   },
+   {
+    "id": "p-stock",
+    "title": "Stock and price, in agreement",
+    "what": "The nine Request-Pricing products with their current price and InStock schema, and the corrected Offer each should emit."
+   },
+   {
+    "id": "p-meta",
+    "title": "Meta template preview",
+    "what": "The 19 sampled products run through one title and description template — every page unique, every one under 60 and 155 characters."
+   },
+   {
+    "id": "p-storeview",
+    "title": "Store-view footer",
+    "what": "The footer as it renders on federalfp.com today and as it would with store-view-scoped blocks."
+   }
+  ],
+  "plan": {
+   "30": [
+    "URL keys generated and imported for the 20,242 keyless products; sitemap regenerated",
+    "Store-view footer and header blocks; Shipping and Returns pages; test pages removed",
+    "Product meta templates live; homepage relinked to canonical categories"
+   ],
+   "60": [
+    "Attribute set per product line; parser run across the catalog; option values normalized",
+    "ERP sync mapping for qty, is_in_stock and price; RFQ keyed off is_salable; stock status on PDPs",
+    "Supplier drawings imported for the top lines; placeholder image set"
+   ],
+   "90": [
+    "Layered navigation on thread size, port and material for fittings; sort control on listings",
+    "One canonical domain per SKU between Federal and Patriot",
+    "Weekly catalog QA report: keyless products, zero prices, RFQ-with-InStock, logo-as-image, duplicate keys"
+   ]
+  },
+  "files": {
+   "resume": "files/Mousa-Batarseh-Resume-Federal-Fluid-Power.pdf",
+   "cover": "files/Mousa-Batarseh-Cover-Letter-Federal-Fluid-Power.pdf",
+   "summary": "files/Federal-Fluid-Power-Catalog-Review-Summary.pdf",
+   "workbook": "files/Federal-Fluid-Power-Catalog-QA-Workbook.xlsx"
+  },
+  "marquee": [
+   "54,496 sitemap URLs read",
+   "19 product pages",
+   "5 category pages",
+   "No logins, no carts, no quote requests",
+   "Public pages only",
+   "Every count dated Sep 28, 2026",
+   "Six findings",
+   "Six working fixes",
+   "The workbook ships with it"
+  ]
+ },
+ "scorecard": {
+  "score": 61.0,
+  "grade": "C",
+  "band": "Developing",
+  "rank": 19,
+  "index_n": 21,
+  "index_mean": 75.9,
+  "verified": 29,
+  "coverage": 1.0,
+  "confidence": "High",
+  "weakest": "B",
+  "weakest_name": "Buy",
+  "pillars": [
+   {
+    "id": "F",
+    "name": "Findability",
+    "weight": 25,
+    "question": "Can search engines and shoppers find the store and its products?",
+    "pts": 12,
+    "max": 16,
+    "verified": 8,
+    "pct": 0.75
+   },
+   {
+    "id": "C",
+    "name": "Catalog",
+    "weight": 30,
+    "question": "Is the product data complete enough to sell from?",
+    "pts": 10,
+    "max": 16,
+    "verified": 8,
+    "pct": 0.625
+   },
+   {
+    "id": "B",
+    "name": "Buy",
+    "weight": 20,
+    "question": "Is there a clear, trustworthy path from product to purchase?",
+    "pts": 4,
+    "max": 10,
+    "verified": 5,
+    "pct": 0.4
+   },
+   {
+    "id": "T",
+    "name": "Trust",
+    "weight": 15,
+    "question": "Does the site prove there is a real, reachable business behind it?",
+    "pts": 7,
+    "max": 10,
+    "verified": 5,
+    "pct": 0.7
+   },
+   {
+    "id": "N",
+    "name": "Content",
+    "weight": 10,
+    "question": "Does the store publish anything that helps a shopper decide?",
+    "pts": 3,
+    "max": 6,
+    "verified": 3,
+    "pct": 0.5
+   }
+  ],
+  "checks": [
+   {
+    "id": "F1",
+    "name": "HTTPS",
+    "pillar": "F",
+    "s": 2,
+    "e": "All 40 fetched pages served on https; canonical https://federalfp.com; no http redirects seen (captures/index.txt)",
+    "two": "Site serves on https (final URL https)",
+    "one": "Mixed / uncertain",
+    "zero": "http only"
+   },
+   {
+    "id": "F2",
+    "name": "robots.txt",
+    "pillar": "F",
+    "s": 1,
+    "e": "robots.txt has 2 Sitemap: lines but 'Disallow: /catalog/product/view/' blocks 20,242 of 54,496 product URLs in the 3 sitemap files fetched",
+    "two": "Present, does not block products/categories, contains a Sitemap: line",
+    "one": "Present but no Sitemap line, or blocks something important",
+    "zero": "Missing, or Disallow: / for everything"
+   },
+   {
+    "id": "F3",
+    "name": "XML sitemap",
+    "pillar": "F",
+    "s": 2,
+    "e": "sitemap.xml = index of 9 files; sitemap_001.xml holds 19,921 URLs (2,484 categories + 17,437 products with image tags), lastmod 2026-09-18",
+    "two": "Reachable and includes product/category (or article) URLs",
+    "one": "Reachable but thin / only static pages",
+    "zero": "Not reachable"
+   },
+   {
+    "id": "F4",
+    "name": "Title tags",
+    "pillar": "F",
+    "s": 1,
+    "e": "Homepage title descriptive; PDP <title> is the bare part code ('FI-TE-04LLMk-W3-MS - 6010000456'); 11/19 sampled titles code-only",
+    "two": "Homepage title is descriptive (brand + what/where) AND a sampled product title is unique and descriptive",
+    "one": "Present but generic / duplicated / templated",
+    "zero": "Missing or just 'Home'"
+   },
+   {
+    "id": "F5",
+    "name": "Meta descriptions",
+    "pillar": "F",
+    "s": 1,
+    "e": "Homepage has a specific description; 19/19 sampled PDPs + 7 CMS pages share one boilerplate 'Discover a trusted online destination…'",
+    "two": "Specific meta description on homepage AND on a sampled product page",
+    "one": "On one only, or templated / duplicated",
+    "zero": "None"
+   },
+   {
+    "id": "F6",
+    "name": "Canonical tags",
+    "pillar": "F",
+    "s": 2,
+    "e": "Canonical on homepage (https://federalfp.com) and PDP (/fi-te-04llmk-w3-ms-6010000456.html); 3/3 unrewritten PDPs canonical to a blocked URL",
+    "two": "Canonical present on homepage AND product page",
+    "one": "On one only",
+    "zero": "None"
+   },
+   {
+    "id": "F7",
+    "name": "Structured data",
+    "pillar": "F",
+    "s": 2,
+    "e": "PDP ld+json Product+Offer (price 22.9, InStock, shippingDetails) + BreadcrumbList; caveat: 2 BreadcrumbList blocks, InStock on 8/9 RFQ items",
+    "two": "Product/Breadcrumb schema evidence seen on product pages",
+    "one": "Partial evidence (e.g. breadcrumb schema only)",
+    "zero": "None seen where expected"
+   },
+   {
+    "id": "F8",
+    "name": "Clean URLs",
+    "pillar": "F",
+    "s": 1,
+    "e": "Rewritten URLs hyphenated (/fi-te-04llmk-w3-ms-6010000456.html) but 37% of sitemap products are /catalog/product/view/id/N/; 95% cats end -1",
+    "two": "Readable hyphenated product/category URLs, no session IDs",
+    "one": "Readable but awkward separators or numeric IDs appended",
+    "zero": "Query-string-only product URLs"
+   },
+   {
+    "id": "C1",
+    "name": "Product titles",
+    "pillar": "C",
+    "s": 1,
+    "e": "Names are vendor part codes; 11/19 sampled have no descriptor ('BV3-04-NPT', '804500106'), 8/19 add one ('KS-A37-05-32 - Seal Kit for A37…')",
+    "two": "Descriptive and consistent (brand / type / size or count)",
+    "one": "Partially descriptive",
+    "zero": "Vague / inconsistent"
+   },
+   {
+    "id": "C2",
+    "name": "Descriptions",
+    "pillar": "C",
+    "s": 1,
+    "e": "Both sampled couplings: 'DIN-Stud Couplings mild steel' (4 words); 17/19 sampled PDPs under 50 words, 7 just repeat the title",
+    "two": ">=50 words of specific copy on both sampled products",
+    "one": "Short / boilerplate (<50 words) or only one product",
+    "zero": "Missing"
+   },
+   {
+    "id": "C3",
+    "name": "Imagery",
+    "pillar": "C",
+    "s": 1,
+    "e": "1 gallery image on 14/19 PDPs; 10/19 show a manufacturer logo (alaindustries.jpg, dnpamerica.jpg, stucchi.jpg) as product photo; alt = code",
+    "two": ">=2 images per product (gallery) with alt text",
+    "one": "One image, or missing alt text",
+    "zero": "None / placeholder"
+   },
+   {
+    "id": "C4",
+    "name": "Price & availability",
+    "pillar": "C",
+    "s": 1,
+    "e": "Price shown ($22.90) but no stock state/qty; 9/19 PDPs swap Add to Cart for 'Request Pricing and Availability' yet print a price ($3.40)",
+    "two": "Price AND stock state visible (B2B: clear 'login for pricing' plus how to get an account)",
+    "one": "Price only, no availability",
+    "zero": "Neither / unclear"
+   },
+   {
+    "id": "C5",
+    "name": "Variants & specs",
+    "pillar": "C",
+    "s": 1,
+    "e": "'More Information' = Product Name, SKU, Weight, Brand only on 18/19 PDPs; thread/port/material live only in title/description; no variants",
+    "two": "Structured variant selectors and/or a spec table",
+    "one": "Variants only described in text",
+    "zero": "None where expected"
+   },
+   {
+    "id": "C6",
+    "name": "Taxonomy & breadcrumbs",
+    "pillar": "C",
+    "s": 2,
+    "e": "Tree up to 7 levels (2,484 category URLs in sitemap_001); breadcrumb nav + BreadcrumbList on PDP: Home / Adapters & Fittings / Couplings / …",
+    "two": "Logical category tree (>=2 levels) AND breadcrumbs",
+    "one": "Categories but no breadcrumbs",
+    "zero": "Flat / none"
+   },
+   {
+    "id": "C7",
+    "name": "Filters & sort",
+    "pillar": "C",
+    "s": 1,
+    "e": "Amasty filters (couplings: Category/Brand/Price; cylinders: Bore, Stroke, Rod Dia.) but no sort control; toolbar only 'Show 20 40 80'",
+    "two": "Filters (price / type / attribute) AND sort on category pages",
+    "one": "Sort or pagination only",
+    "zero": "None"
+   },
+   {
+    "id": "C8",
+    "name": "Site search",
+    "pillar": "C",
+    "s": 2,
+    "e": "Header search; /catalogsearch/result/?q=FI-TE-04LLMK-W3-MS returns the exact item ('1 Item'); results noindex; page 1.74 MB, 528 facets",
+    "two": "Search box with a results page",
+    "one": "Search present but weak / unclear",
+    "zero": "None"
+   },
+   {
+    "id": "B1",
+    "name": "Primary CTA",
+    "pillar": "B",
+    "s": 1,
+    "e": "'Add to Cart' on PDP and listing cards; homepage is a category-tile grid ('Click a category below') with no buy/quote CTA or featured items",
+    "two": "Add to cart / order / request a quote prominent on product page AND homepage",
+    "one": "Present but buried",
+    "zero": "No path to buy or enquire"
+   },
+   {
+    "id": "B2",
+    "name": "Shipping & returns",
+    "pillar": "B",
+    "s": 1,
+    "e": "Footer 'Shipping Policy' and 'Return Policy' both link to /terms/ (legal T&C): returns 30 days, no restocking fee if new; no shipping rates",
+    "two": "Shipping AND returns info with specifics (thresholds, timelines) linked from product page or footer",
+    "one": "Generic policy page only",
+    "zero": "None"
+   },
+   {
+    "id": "B3",
+    "name": "Checkout access",
+    "pillar": "B",
+    "s": 1,
+    "e": "'Create an Account' (/customer/account/create/) + 'Checkout as a new customer' popup; guest checkout is a runtime flag, unverifiable",
+    "two": "Guest checkout, or for B2B a clear become-a-customer application with steps",
+    "one": "Account required but sign-up exists",
+    "zero": "No way to buy online"
+   },
+   {
+    "id": "B4",
+    "name": "Merchandising",
+    "pillar": "B",
+    "s": 1,
+    "e": "Homepage = static category tiles + one banner (HPUBannerFFP.jpg); no new/best-seller/seasonal blocks; indexed /brand/patriot-hydraulics 404s",
+    "two": "Homepage features collections / seasonal / new / best sellers with working links",
+    "one": "Static links only",
+    "zero": "None"
+   },
+   {
+    "id": "B5",
+    "name": "Trust signals",
+    "pillar": "B",
+    "s": 0,
+    "e": "No product/store reviews or ratings, no guarantee/award/secure badges on homepage or PDP; footer has only a theme 'cdz-footer-payment' strip",
+    "two": "Product or store reviews PLUS guarantees / awards / secure badges",
+    "one": "One type only",
+    "zero": "None"
+   },
+   {
+    "id": "T1",
+    "name": "Contact",
+    "pillar": "T",
+    "s": 2,
+    "e": "Footer: 14940 Cleat St, Plymouth MI 48170 + Vestaburg + Gaylord addresses, phones (1-734-455-1722), sales@federalfp.com, hours; contact form",
+    "two": "Phone + physical address + form or email",
+    "one": "Form or email only",
+    "zero": "None"
+   },
+   {
+    "id": "T2",
+    "name": "About",
+    "pillar": "T",
+    "s": 1,
+    "e": "/ffp-federal-fluid-power-info/ is a 126-word 'Services/About Us' block; same text reused on /career-at-federal-fluid-power-inc/",
+    "two": "Substantial about / story page",
+    "one": "Brief",
+    "zero": "None"
+   },
+   {
+    "id": "T3",
+    "name": "Policies",
+    "pillar": "T",
+    "s": 2,
+    "e": "Privacy /ffp-privacy-policy/ (693 words) and Terms /terms/ (+ duplicate /ffp-terms-conditions-of-sale/, 2,315 words); no accessibility page",
+    "two": "Privacy AND terms (accessibility statement is a bonus)",
+    "one": "One",
+    "zero": "None"
+   },
+   {
+    "id": "T4",
+    "name": "Social",
+    "pillar": "T",
+    "s": 0,
+    "e": "No facebook/linkedin/instagram/youtube links anywhere in homepage or footer HTML (grep on captures/homepage.html returned none)",
+    "two": ">=2 linked profiles",
+    "one": "One",
+    "zero": "None"
+   },
+   {
+    "id": "T5",
+    "name": "Accessibility basics",
+    "pillar": "T",
+    "s": 2,
+    "e": "'Skip to Content' link (#contentarea) on every page; listing/gallery images alt = product name (server-rendered gallery img alt=\"\" until JS)",
+    "two": "Skip link AND alt text on product images (or an accessibility statement)",
+    "one": "Some",
+    "zero": "Images without alt and no skip link"
+   },
+   {
+    "id": "N1",
+    "name": "Blog / news freshness",
+    "pillar": "N",
+    "s": 0,
+    "e": "No blog/news link in nav, footer or the 63 CMS URLs in sitemap_009; no dated articles anywhere fetched",
+    "two": "A dated post within the last 90 days",
+    "one": "Blog exists but stale or undated",
+    "zero": "None"
+   },
+   {
+    "id": "N2",
+    "name": "Guides / FAQ",
+    "pillar": "N",
+    "s": 1,
+    "e": "Engineering Toolbox (/engineering-toolbox/, in-browser calculators, 2,570 words) + Hose/Product Configurators; no FAQ page",
+    "two": "FAQ AND guides / recipes / how-tos",
+    "one": "FAQ only, or one guide",
+    "zero": "None"
+   },
+   {
+    "id": "N3",
+    "name": "Locations / where to buy",
+    "pillar": "N",
+    "s": 2,
+    "e": "Footer 'Locations' lists 3 branches with street address, phone and 'Mon-Fri / 8:00 am - 5:00 pm EST' (Plymouth, Vestaburg, Gaylord)",
+    "two": "Locator or locations page with addresses & hours (B2B: service area / depots)",
+    "one": "A bare list",
+    "zero": "None"
+   }
+  ],
+  "platform": "Magento",
+  "audited_at": "2026-09-28",
+  "sample_urls": {
+   "category": "https://federalfp.com/adapters-fittings/couplings.html",
+   "product1": "https://federalfp.com/adapters-fittings/couplings/fi-te-04llmk-w3-ms-6010000456.html",
+   "product2": "https://federalfp.com/adapters-fittings/couplings/fi-ge-06llm6x1k-w3-ms-6010000421.html"
+  },
+  "pages_checked": [
+   "https://federalfp.com/",
+   "https://federalfp.com/robots.txt",
+   "https://federalfp.com/sitemaps/ffp/sitemap.xml",
+   "https://federalfp.com/sitemaps/ffp/sitemap_001.xml",
+   "https://federalfp.com/sitemaps/ffp/sitemap_005.xml",
+   "https://federalfp.com/sitemaps/ffp/sitemap_009.xml",
+   "https://federalfp.com/adapters-fittings/couplings.html",
+   "https://federalfp.com/adapters-fittings/couplings.html?p=2",
+   "https://federalfp.com/adapters-fittings/couplings.html?brand=14",
+   "https://federalfp.com/garage-and-shop/chairs-and-creepers.html",
+   "https://federalfp.com/hydraulics-1/cylinders-1.html",
+   "https://federalfp.com/adapters-fittings/couplings/fi-te-04llmk-w3-ms-6010000456.html",
+   "https://federalfp.com/adapters-fittings/couplings/fi-ge-06llm6x1k-w3-ms-6010000421.html",
+   "17 further product URLs sampled from sitemap_001/005/009 (see captures/pdp_sample.csv)",
+   "https://federalfp.com/catalogsearch/result/?q=FI-TE-04LLMK-W3-MS",
+   "https://federalfp.com/ffp-federal-fluid-power-info/",
+   "https://federalfp.com/contact/",
+   "https://federalfp.com/terms/",
+   "https://federalfp.com/ffp-terms-conditions-of-sale/",
+   "https://federalfp.com/ffp-privacy-policy/",
+   "https://federalfp.com/engineering-toolbox/",
+   "https://federalfp.com/career-at-federal-fluid-power-inc/",
+   "https://federalfp.com/brand/patriot-hydraulics (404)",
+   "https://www.patriothyd.com/ (+ robots.txt, sitemap index, 2 PDPs) for sister-store comparison"
+  ]
+ }
+}

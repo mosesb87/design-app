@@ -1,0 +1,692 @@
+{
+ "review": {
+  "slug": "royal-apparel",
+  "path": "royal-apparel-review",
+  "company": "Royal Apparel",
+  "company_short": "Royal Apparel",
+  "store_scored": "royalapparel.net",
+  "stores": [
+   "royalapparel.net"
+  ],
+  "platform": "Custom B2B platform (WAM / liveb2b), Bootstrap 3, GTM + GA4",
+  "audited_at": "2026-09-28",
+  "audited_label": "Sep 28, 2026",
+  "role": {
+   "title": "Digital Marketing & Ecommerce Coordinator",
+   "mode": "Hybrid, remote or on-site · Hauppauge, NY",
+   "posting_url": "https://www.linkedin.com/jobs/view/4471865733",
+   "posting_alt": "https://www.thesocialmediaassociation.com/post/digital-marketing-ecommerce-coordinator",
+   "posted": "Sep 25, 2026 (LinkedIn; mirror dated Aug 20)",
+   "apply_via": "LinkedIn (résumé + a brief summary of experience)",
+   "duties": [
+    "Website merchandising: add and update styles, colors, sizes and inventory; deactivate discontinued items; tagged groups for campaigns",
+    "Coupons, sliders, banners and popups; product photography and video",
+    "SEO and content across the ecommerce and wholesale platforms; technical SEO, rank tracking, GEO / AI visibility",
+    "Validate GA4 and tag-manager tracking; maintain reporting dashboards",
+    "Email campaigns in templates with UTMs; paid search and social support; feed optimization",
+    "Product data for Faire, Sage and ASI; affiliate performance review"
+   ]
+  },
+  "people": [
+   {
+    "name": "Glen Brumer",
+    "title": "Sales Director",
+    "url": "https://www.linkedin.com/in/glenbrumer/",
+    "channel": "LinkedIn InMail",
+    "primary": true
+   },
+   {
+    "name": "Morey Mayeri",
+    "title": "Founder",
+    "url": "https://www.linkedin.com/in/morey-mayeri-56a6501a/",
+    "channel": "LinkedIn connection note",
+    "primary": false
+   }
+  ],
+  "hero": {
+   "eyebrow": "Independent review · royalapparel.net · Sep 28, 2026",
+   "headline": [
+    "Good blanks.",
+    "Blank",
+    "fields."
+   ],
+   "lede": "An independent review of royalapparel.net for the Digital Marketing & Ecommerce Coordinator role. I read the homepage, the sitemap's 1,063 URLs, the Men's category and 20 product pages — 39 page fetches plus 17 header checks, no logins, no carts. The garments are well documented: 28 colors, 9 sizes and 107 photos on style 5051. The data around them is not: no canonical on any page, a sitemap that is 38% redirects, a five-star rating hard-coded on every product, and GA4 events whose product names are empty strings. Six findings, five working fixes.",
+   "stats": [
+    {
+     "n": "1,063",
+     "label": "sitemap URLs read — 408 of them (38%) are redirecting CGI links"
+    },
+    {
+     "n": "0",
+     "suffix": " of 24",
+     "label": "pages with a canonical tag; 4 of 4 hostname/protocol variants answer 200"
+    },
+    {
+     "n": "19",
+     "suffix": "/19",
+     "label": "product pages carrying the same hard-coded 5★ rating from 326 reviews"
+    },
+    {
+     "n": "21",
+     "suffix": "/21",
+     "label": "GA4 category impressions with a blank item_name and item_brand"
+    },
+    {
+     "n": "78",
+     "suffix": "/100",
+     "label": "ShelfMark score — would rank 12th of 21 on the Michigan index"
+    }
+   ]
+  },
+  "why": {
+   "kicker": "Why this review",
+   "title": "Why Royal Apparel",
+   "sub": "Two new facilities, a West Coast warehouse and a new import division in twelve months means more styles, two inventory states and a second brand to keep straight in categories, feeds and tracking. That is the job in the posting.",
+   "rows": [
+    [
+     "Website merchandising",
+     "Category grid, sort order, $0.00 tiles, “New” on everything, Men = Unisex — finding 5."
+    ],
+    [
+     "Technical SEO & GEO",
+     "Redirect chain, canonicals, the sitemap — findings 1 and 2."
+    ],
+    [
+     "Feeds for Google, Faire, Sage, ASI",
+     "One Product schema with real availability, brand and color — finding 3."
+    ],
+    [
+     "Validate GA4 and tag-manager tracking",
+     "What the dataLayer sends today and what it should send — finding 4."
+    ],
+    [
+     "Content, photography, video",
+     "Size charts, alt text, news page, video — finding 6."
+    ]
+   ],
+   "note": "Everything here comes from public pages: served HTML, the sitemap, robots.txt and the inline product JSON the site itself uses to render. Nothing was submitted, carted or logged into. The platform is custom, so every fix is written at the template or web-server level rather than for a particular app."
+  },
+  "strengths": [
+   {
+    "title": "Fresh, on-brand homepage merchandising",
+    "text": "The four hero slides were produced within the last three weeks (files dated Sep 9–23, 2026), all four link to live pages, the carousel is ARIA-labelled, and the Women / Men / Heavyweight / Vintage Washed tiles carry descriptive alt text."
+   },
+   {
+    "title": "Unusually deep product data and imagery",
+    "text": "Style 5051 ships 28 colors × 9 sizes (XS–5X) with 107 alt-view images and specific alts (“Unisex Short Sleeve Tee BLACK Back”); the 19 live sampled PDPs average about 73 words of real spec copy. Product URLs are self-healing — /product/5051/anything.html, /product/5051/ and the CGI form all 301 to the canonical slug."
+   },
+   {
+    "title": "Clear wholesale terms and a search that respects style numbers",
+    "text": "Prices are public; /shipping states the rule precisely (free freight at $350 per warehouse, $9.95 handling, in-stock only, updated Oct 30, 2025); customer service lists phone, address, hours and the RA returns process. Searching “5051” returns the style in position 1."
+   }
+  ],
+  "findings": [
+   {
+    "id": "F1",
+    "pillar": "F",
+    "duty": "Technical SEO",
+    "title": "The homepage is a meta-refresh stub; four hostnames answer 200 and no page carries a canonical",
+    "count": "4 of 4 host/protocol variants return 200 · 0 of 24 HTML pages with a canonical · lowercase /category/men/ also 200",
+    "observed": "https://www.royalapparel.net/ is a 515-byte file whose only content is a meta refresh to a CGI URL, which 301s to /index, where the real homepage lives — without a canonical. The stub is the one page on the site that has a canonical, and it points at itself. http://, https://, www and non-www all return byte-identical 200 responses; there is no redirect to one hostname (HSTS is sent, which browsers honour only after a first HTTPS visit). /Category/Men without the slash is a 404; /category/men/ in lowercase is a second live copy.",
+    "why": "The posting owns technical SEO and GEO. With no canonicals and four live hostnames, link equity and AI-crawler citations split across duplicates, and the homepage's own signals point at an empty stub.",
+    "fix": "At the web server: 301 http → https and non-www → www; serve the homepage at / and 301 /index to it (or the reverse — one of the two); delete the stub. In the layout template: a self-referencing canonical on every page built from the pretty path. Case-fold category paths and 301 the slash-less form.",
+    "evidence": [
+     "home-root.html",
+     "home-root-nonwww.html",
+     "redirect-chains.txt",
+     "home-marketing-p.html",
+     "index.txt"
+    ],
+    "prototype": "p-redirects"
+   },
+   {
+    "id": "F2",
+    "pillar": "F",
+    "duty": "Deactivate discontinued items · crawlability",
+    "title": "The sitemap is 38% redirects, lists checkout and login pages, and serves dead products as 200",
+    "count": "408 of 1,063 URLs are redirecting CGI category links · 16 cart/login/checkout pages · 0 of 248 product URLs with lastmod · 3 of 20 sampled products dead or obsolete but 200",
+    "observed": "The sitemap robots.txt points to (on the non-www host) lists 1,063 URLs. 408 are CGI catalog_browse links that every one 301 to a pretty /Category/ URL — and the pretty targets are not in the file. Sixteen more are cart, abandoned-cart, checkout, login, password-reset and wish-list templates, plus /404 and a test page. No product URL has a lastmod; the newest date anywhere is 2024-07-23. Of 20 sampled products, /product/15250006/USA-Team-Beanie.html returns 200 with the body “Product Not Found,” and two more carry itemStatus “obsolete” while remaining listed and indexable.",
+    "why": "“Deactivate discontinued items” is the posting's first merchandising duty; a sitemap that spends 40% of its entries on redirects and lists the checkout tells Google the catalog is unmaintained.",
+    "fix": "Regenerate the sitemap nightly from the catalog: only www pretty URLs (/index, /Category/…/, /Accessory-Type/…/, /product/{style}/{slug}.html, landing pages) with a real lastmod per product; exclude obsolete items, Product-Not-Found styles and every CGI template; serve it on the www host and update robots.txt. Return 404 or 410 for retired styles and 301 obsolete styles to their replacement where the PDP already names one.",
+    "evidence": [
+     "sitemap.xml",
+     "sitemap-urls.txt",
+     "robots.txt",
+     "product-15250006.html",
+     "product-20055.html",
+     "product-32112.html",
+     "pdp-sample-analysis.json"
+    ],
+    "prototype": "p-sitemap"
+   },
+   {
+    "id": "F3",
+    "pillar": "F",
+    "duty": "Feeds & structured data",
+    "title": "Product schema is split in two, blank on availability, and carries the same 5★ / 326-review rating on every product",
+    "count": "19 of 19 PDPs with two Product blocks · 19 of 19 with Offer.availability “” · 19 of 19 identical aggregateRating 5 / 326 · 0 of 20 BreadcrumbList, og:image, GTIN or MPN · 150 of 150 color hexes set to FFFFFF",
+    "observed": "Each product page emits one Product with an Offer whose url, priceValidUntil and availability are empty strings, a Corporation block with empty url and logo, and a second Product carrying brand “Royal Apparel” and aggregateRating 5 from 326 ratings — identical on a $6.44 beanie and a $33.45 hoody. The feed attributes Google Shopping and Faire need are only partly present: color and size exist in the inline product JSON, but every color's hexColor is the placeholder FFFFFF, availSizes is empty for all 28 colors, and brand, GTIN and per-variant availability appear nowhere in the HTML.",
+    "why": "The posting asks for feed optimization and marketplace product data. Google's product rich results need one Product with brand, offers.availability and an authentic rating; a sitewide fabricated review count is what gets Merchant Center listings disapproved.",
+    "fix": "In the product template, output one Product: name, sku/mpn (the style code), brand (Royal Apparel, or Basic Supply Co. when the mill code is BSC), the image array, plain-text description, an AggregateOffer from the low/high wholesale price with availability derived from the same quantity the page already uses, no aggregateRating unless it comes from real reviews, plus BreadcrumbList and og:image. Fill hexColor from the swatch palette and export GTIN per SKU in the feed.",
+    "evidence": [
+     "product-5051.html",
+     "product-5001W.html",
+     "product-5051-prodJSON.json",
+     "pdp-sample-analysis.json"
+    ],
+    "prototype": "p-schema"
+   },
+   {
+    "id": "F4",
+    "pillar": "C",
+    "duty": "Validate GA4 and tag-manager tracking",
+    "title": "GA4 receives products without names, views without currency and no list attribution",
+    "count": "21 of 21 category impressions with blank item_name and item_brand · 20 of 20 view_item pushes without currency or brand · page-level push array-wrapped on every template · 0 view_item_list or select_item events anywhere",
+    "observed": "GTM-TG38JDV loads on every page and the site declares enhancedEcomm true. The page-level push is dataLayer.push([{…}]) — the object is wrapped in an array, so pageType and pageID are not readable as Data Layer Variables. The Men's listing pushes 21 impressions with item_name “”, item_brand “” and price as a formatted string. The PDP's view_item uses value at item level instead of price, with no currency, item_brand or item_variant; related products are pushed in the Universal Analytics impressions shape with no event, so GA4 never gets a view_item_list. The add_to_cart code is written twice — once with currencyCode, once with currency.",
+    "why": "The posting says “validate GA4 and tag-manager tracking” and build the dashboards. With these payloads, item reports show IDs without names, revenue-less views and no attribution for the merchandising the coordinator is meant to optimize.",
+    "fix": "Change the page push to a plain object; emit view_item_list on listings with item_list_id, item_list_name and complete items (name from the description, brand from the mill code, numeric price, index) and select_item on click; send view_item with currency, value and item-level price, brand and variant; replace the UA-shaped related push with a second view_item_list; standardize add_to_cart on currency. Verify in GTM Preview and GA4 DebugView, then add a data-quality tile (name and price coverage) to the dashboard.",
+    "evidence": [
+     "home-marketing-p.html",
+     "category-men.html",
+     "product-5051.html",
+     "product-5001W.html",
+     "js-catalog_product.js"
+    ],
+    "prototype": "p-datalayer"
+   },
+   {
+    "id": "F5",
+    "pillar": "B",
+    "duty": "Website merchandising",
+    "title": "Category grid: 21 of 136 Men's products in the HTML, $0.00 tiles, “New” on everything, Men = Unisex",
+    "count": "21 of 136 products (15%) present in HTML · 3 of 21 tiles at $0.00 · 21 of 21 flagged new · position 1 is an imported tee · Men (136) = Unisex (136) · 90 of 359 images without alt",
+    "observed": "/Category/Men/ renders its grid client-side from an inline JSON blob; the served HTML contains one product link. Pages 2–7 are reached by setting a hash and reloading — no page links, no rel next/prev — so 115 of 136 products are not linked from any crawlable URL. Inside the 21: three custom garment-dye programs show $0.00 with no swatches; all 21 carry isNew true (the badge markup is commented out, so the flag means nothing); position 1 under “manual” sort is a $4.93 Basic Supply Co. import on a category whose hero says USA Manufacturer. Men and Unisex are the same 136 items under two URLs; Accessories still lives at the pandemic-era slug /Category/Face-Cover-Accessories/. Searching “5051” interleaves two imports at positions 2–3 ahead of the 5051 family.",
+    "why": "Tagged product groups, sort order, deactivating items and category curation are the core of the posting, and the data shows the levers are not being used.",
+    "fix": "Server-render the first page of cards with real pagination links and a canonical; give custom-dye programs a “Request pricing” tile instead of $0.00; reset isNew to a 60-day window from the street date; canonicalize Men to Unisex or curate a distinct Men's assortment; 301 the Face-Cover slug to /Category/Accessories/; pin Royal-made styles above Basic Supply Co. imports on USA-positioned categories and in style-number search.",
+    "evidence": [
+     "category-men.html",
+     "category-men-browse-data.json",
+     "category-face-cover-accessories.html",
+     "search-5051.html"
+    ],
+    "prototype": "p-grid"
+   },
+   {
+    "id": "F6",
+    "pillar": "N",
+    "duty": "Content, photography, video",
+    "title": "Size charts are images labelled “Pick your color”, no product video, a News page with no news, a footer link that 404s sitewide",
+    "count": "18 chart images, 0 tables · 13 of 15 chart alts read “Pick your color” · 0 of 19 PDPs with video · 0 dated posts on /in-the-news · 1 footer link → 404 on every page · 38 of 38 image filenames are timestamps",
+    "observed": "The only size guidance is /product-specifications: 61 words of text and 18 images, no HTML table, no PDF; 13 of the 15 chart images carry alt text copied from a color page. No sampled PDP has a video, although the template supports one. The footer “News” link opens a 47-word intro with no articles, while the company's three real stories from the last year — the West Coast DC, the second Hauppauge plant, Basic Supply Co. — appear only on trade sites. “Eco-Certifications” in the footer returns 404 on every page, next to a stray “--->” from a broken comment. The homepage has no h1.",
+    "why": "An AI answer engine cannot read a size chart that is a JPEG labelled “Pick your color,” and a news page with no news undercuts the story the company is paying trade press to tell.",
+    "fix": "Rebuild the size charts as HTML tables (one per fit, inch and cm) and surface the matching table in the PDP Specs tab; fix the 13 alts. Publish the three 2025–26 stories on /in-the-news with dates and NewsArticle schema, then a monthly cadence from new-style drops. Point Eco-Certifications at a real page or remove it. Shoot short colorway clips for the top 20 styles and set the video fields the template already reads. Name new uploads by style and color.",
+    "evidence": [
+     "product-specifications.html",
+     "in-the-news.html",
+     "home-marketing-p.html",
+     "pdp-sample-analysis.json",
+     "index.txt"
+    ],
+    "prototype": null
+   }
+  ],
+  "also": [
+   "The Corporation JSON-LD on every page has empty url and logo fields.",
+   "robots.txt correctly disallows search-result and preview URLs; the search page itself has no noindex, so the disallow is the only guard.",
+   "Three copies of jQuery load on every page (2.2.2, 3.3.1, and a broken entity-encoded path).",
+   "The related-products strip surfaces deep clearance beside core styles (a $6.00 toddler tee at $0.99) — 19 such rows across the 20 sampled PDPs; worth confirming those prices are intended.",
+   "store_locator.p is in the sitemap but renders the unconfigured “Store Locator Template.”",
+   "No skip link on any page; the UserWay widget is loaded instead."
+  ],
+  "prototypes": [
+   {
+    "id": "p-redirects",
+    "title": "One homepage, one hostname",
+    "what": "The redirect chain as it runs today and as it should run, with the canonical every template would emit."
+   },
+   {
+    "id": "p-sitemap",
+    "title": "Sitemap, regenerated",
+    "what": "All 1,063 URLs sorted into keep / redirect / exclude, and the first rows of the file that replaces it."
+   },
+   {
+    "id": "p-schema",
+    "title": "One Product, one truth",
+    "what": "Style 5051's structured data before and after: a single Product with brand, offers, availability and images, validated field by field."
+   },
+   {
+    "id": "p-datalayer",
+    "title": "dataLayer linter",
+    "what": "The site's real pushes run through a checker that flags each GA4 problem, next to the corrected payloads."
+   },
+   {
+    "id": "p-grid",
+    "title": "A crawlable category grid",
+    "what": "The 21 real Men's products rendered as server-side cards with pagination links, Request-pricing tiles and USA-made styles pinned first."
+   }
+  ],
+  "plan": {
+   "30": [
+    "Hostname and homepage redirects, canonical tag in the layout template",
+    "Regenerated sitemap from the catalog; 404/410 for retired styles",
+    "GA4 payload fixes verified in DebugView; data-quality tile on the dashboard"
+   ],
+   "60": [
+    "One Product schema with real availability and brand; hexColor and GTIN filled for the feeds",
+    "Server-rendered category cards with pagination; New window and Request-pricing tiles; Accessories slug renamed",
+    "Size charts as tables; alt-text fixes; the three press stories on /in-the-news"
+   ],
+   "90": [
+    "Google Shopping and Faire feeds rebuilt from the corrected attributes; Sage and ASI data exports on a schedule",
+    "Colorway video for the top 20 styles",
+    "Monthly merchandising review: New collection, sort order, sale rows, discontinued items"
+   ]
+  },
+  "files": {
+   "resume": "files/Mousa-Batarseh-Resume-Royal-Apparel.pdf",
+   "cover": "files/Mousa-Batarseh-Cover-Letter-Royal-Apparel.pdf",
+   "summary": "files/Royal-Apparel-Ecommerce-Review-Summary.pdf",
+   "workbook": "files/Royal-Apparel-Merchandising-QA-Workbook.xlsx"
+  },
+  "marquee": [
+   "1,063 sitemap URLs read",
+   "20 product pages",
+   "39 fetches + 17 header checks",
+   "No logins, no carts",
+   "Public pages only",
+   "Every count dated Sep 28, 2026",
+   "Six findings",
+   "Five working fixes",
+   "The workbook ships with it"
+  ]
+ },
+ "scorecard": {
+  "score": 77.6,
+  "grade": "B",
+  "band": "Strong",
+  "rank": 12,
+  "index_n": 21,
+  "index_mean": 75.9,
+  "verified": 29,
+  "coverage": 1.0,
+  "confidence": "High",
+  "weakest": "N",
+  "weakest_name": "Content",
+  "pillars": [
+   {
+    "id": "F",
+    "name": "Findability",
+    "weight": 25,
+    "question": "Can search engines and shoppers find the store and its products?",
+    "pts": 11,
+    "max": 16,
+    "verified": 8,
+    "pct": 0.6875
+   },
+   {
+    "id": "C",
+    "name": "Catalog",
+    "weight": 30,
+    "question": "Is the product data complete enough to sell from?",
+    "pts": 14,
+    "max": 16,
+    "verified": 8,
+    "pct": 0.875
+   },
+   {
+    "id": "B",
+    "name": "Buy",
+    "weight": 20,
+    "question": "Is there a clear, trustworthy path from product to purchase?",
+    "pts": 7,
+    "max": 10,
+    "verified": 5,
+    "pct": 0.7
+   },
+   {
+    "id": "T",
+    "name": "Trust",
+    "weight": 15,
+    "question": "Does the site prove there is a real, reachable business behind it?",
+    "pts": 9,
+    "max": 10,
+    "verified": 5,
+    "pct": 0.9
+   },
+   {
+    "id": "N",
+    "name": "Content",
+    "weight": 10,
+    "question": "Does the store publish anything that helps a shopper decide?",
+    "pts": 4,
+    "max": 6,
+    "verified": 3,
+    "pct": 0.6666666666666666
+   }
+  ],
+  "checks": [
+   {
+    "id": "F1",
+    "name": "HTTPS",
+    "pillar": "F",
+    "s": 1,
+    "e": "https serves 200 with HSTS, but http://royalapparel.net/ also returns 200 (same 515-byte stub), no 301 to https (redirect-chains.txt)",
+    "two": "Site serves on https (final URL https)",
+    "one": "Mixed / uncertain",
+    "zero": "http only"
+   },
+   {
+    "id": "F2",
+    "name": "robots.txt",
+    "pillar": "F",
+    "s": 2,
+    "e": "robots.txt: 2 Disallow lines (search & preview URLs only) + 'Sitemap: https://royalapparel.net/sitemap.xml'",
+    "two": "Present, does not block products/categories, contains a Sitemap: line",
+    "one": "Present but no Sitemap line, or blocks something important",
+    "zero": "Missing, or Disallow: / for everything"
+   },
+   {
+    "id": "F3",
+    "name": "XML sitemap",
+    "pillar": "F",
+    "s": 2,
+    "e": "sitemap.xml 200, 1,063 URLs incl. 248 /product/ URLs; but 408 CGI catalog_browse URLs that 301, plus cart.p/login.p/404 entries",
+    "two": "Reachable and includes product/category (or article) URLs",
+    "one": "Reachable but thin / only static pages",
+    "zero": "Not reachable"
+   },
+   {
+    "id": "F4",
+    "name": "Title tags",
+    "pillar": "F",
+    "s": 2,
+    "e": "Home 'USA-Made Wholesale Apparel & Eco-Friendly Clothing | Royal Apparel | Royal Wholesale'; PDP 'Unisex Short Sleeve Tee | Royal Wholesale'",
+    "two": "Homepage title is descriptive (brand + what/where) AND a sampled product title is unique and descriptive",
+    "one": "Present but generic / duplicated / templated",
+    "zero": "Missing or just 'Home'"
+   },
+   {
+    "id": "F5",
+    "name": "Meta descriptions",
+    "pillar": "F",
+    "s": 2,
+    "e": "Home meta 'Premium blank apparel made in the USA…'; PDP 5051 meta specific; but /Category/Men/ has none and 6/20 PDPs use one auto-template",
+    "two": "Specific meta description on homepage AND on a sampled product page",
+    "one": "On one only, or templated / duplicated",
+    "zero": "None"
+   },
+   {
+    "id": "F6",
+    "name": "Canonical tags",
+    "pillar": "F",
+    "s": 0,
+    "e": "No <link rel=canonical> on /index, /Category/Men/ or any of 20 PDPs; only the 515-byte meta-refresh stub at / carries one",
+    "two": "Canonical present on homepage AND product page",
+    "one": "On one only",
+    "zero": "None"
+   },
+   {
+    "id": "F7",
+    "name": "Structured data",
+    "pillar": "F",
+    "s": 1,
+    "e": "PDP LD+JSON: 2 separate Product blocks; Offer has availability:'' url:''; aggregateRating 5/326 identical on 19/19; no BreadcrumbList",
+    "two": "Product/Breadcrumb schema evidence seen on product pages",
+    "one": "Partial evidence (e.g. breadcrumb schema only)",
+    "zero": "None seen where expected"
+   },
+   {
+    "id": "F8",
+    "name": "Clean URLs",
+    "pillar": "F",
+    "s": 1,
+    "e": "/product/5051/Unisex-Short-Sleeve-Tee.html readable; but nav + 408 sitemap URLs use catalog_browse.p?site=B2B&layout=Baseb2b&browsepath=205",
+    "two": "Readable hyphenated product/category URLs, no session IDs",
+    "one": "Readable but awkward separators or numeric IDs appended",
+    "zero": "Query-string-only product URLs"
+   },
+   {
+    "id": "C1",
+    "name": "Product titles",
+    "pillar": "C",
+    "s": 2,
+    "e": "H1 '5051 Unisex Short Sleeve Tee', '5001w Women's Short Sleeve Tee'; 19/20 sampled names follow type+fabric+item pattern",
+    "two": "Descriptive and consistent (brand / type / size or count)",
+    "one": "Partially descriptive",
+    "zero": "Vague / inconsistent"
+   },
+   {
+    "id": "C2",
+    "name": "Descriptions",
+    "pillar": "C",
+    "s": 2,
+    "e": "5051 description 64 words (fabric oz, seams, tear-away label); 5001W 79 words; 17/19 live sampled PDPs >=50 words",
+    "two": ">=50 words of specific copy on both sampled products",
+    "one": "Short / boilerplate (<50 words) or only one product",
+    "zero": "Missing"
+   },
+   {
+    "id": "C3",
+    "name": "Imagery",
+    "pillar": "C",
+    "s": 2,
+    "e": "5051 prodJSON: 107 alt-view images; rendered alts like 'Unisex Short Sleeve Tee BLACK Back'; 5001W 51 images",
+    "two": ">=2 images per product (gallery) with alt text",
+    "one": "One image, or missing alt text",
+    "zero": "None / placeholder"
+   },
+   {
+    "id": "C4",
+    "name": "Price & availability",
+    "pillar": "C",
+    "s": 1,
+    "e": "Public price: prodJSON regPrice 6.98, view_item value 6.98; per-size stock is JS-only (show_stock false; Offer availability '')",
+    "two": "Price AND stock state visible (B2B: clear 'login for pricing' plus how to get an account)",
+    "one": "Price only, no availability",
+    "zero": "Neither / unclear"
+   },
+   {
+    "id": "C5",
+    "name": "Variants & specs",
+    "pillar": "C",
+    "s": 2,
+    "e": "5051: 28 colors x 9 sizes (XS-5X) in prodJSON, size row rendered in HTML, Spec Sheet PDF link, fabric weight in copy",
+    "two": "Structured variant selectors and/or a spec table",
+    "one": "Variants only described in text",
+    "zero": "None where expected"
+   },
+   {
+    "id": "C6",
+    "name": "Taxonomy & breadcrumbs",
+    "pillar": "C",
+    "s": 1,
+    "e": "23 categories incl. Kids > Infant/Toddler/Youth, but 0 breadcrumb markup on /Category/Men/ or any of 20 PDPs",
+    "two": "Logical category tree (>=2 levels) AND breadcrumbs",
+    "one": "Categories but no breadcrumbs",
+    "zero": "Flat / none"
+   },
+   {
+    "id": "C7",
+    "name": "Filters & sort",
+    "pillar": "C",
+    "s": 2,
+    "e": "/Category/Men/: filters Color, Fabric, Item Type, Sleeve Length, Neckline, Tear Away, USA or Import; sort Default/Product ID/Name/Price",
+    "two": "Filters (price / type / attribute) AND sort on category pages",
+    "one": "Sort or pagination only",
+    "zero": "None"
+   },
+   {
+    "id": "C8",
+    "name": "Site search",
+    "pillar": "C",
+    "s": 2,
+    "e": "Header search -> catalog_browse.p?searchText=5051 returns 9 results, 5051 first (h1 'Search for: 5051')",
+    "two": "Search box with a results page",
+    "one": "Search present but weak / unclear",
+    "zero": "None"
+   },
+   {
+    "id": "B1",
+    "name": "Primary CTA",
+    "pillar": "B",
+    "s": 1,
+    "e": "PDP add-to-cart is built by /js/catalog_product.js ('.addToCartBtn', 'Add To Cart Click'); not in server HTML; home CTA 'CREATE AN ACCOUNT'",
+    "two": "Add to cart / order / request a quote prominent on product page AND homepage",
+    "one": "Present but buried",
+    "zero": "No path to buy or enquire"
+   },
+   {
+    "id": "B2",
+    "name": "Shipping & returns",
+    "pillar": "B",
+    "s": 2,
+    "e": "/shipping: free freight on orders >= $350 (+$9.95 handling, per warehouse); /customer-service: RA number, 20% restocking, 10-day window",
+    "two": "Shipping AND returns info with specifics (thresholds, timelines) linked from product page or footer",
+    "one": "Generic policy page only",
+    "zero": "None"
+   },
+   {
+    "id": "B3",
+    "name": "Checkout access",
+    "pillar": "B",
+    "s": 1,
+    "e": "'CREATE ACCOUNT' -> /customer/account/login/; customer_registration.p + web_checkout.p exist; guest checkout not verifiable",
+    "two": "Guest checkout, or for B2B a clear become-a-customer application with steps",
+    "one": "Account required but sign-up exists",
+    "zero": "No way to buy online"
+   },
+   {
+    "id": "B4",
+    "name": "Merchandising",
+    "pillar": "B",
+    "s": 2,
+    "e": "/index: 4-slide hero (files dated 20260909-20260923), tiles Women/Men/Heavyweight/Vintage, nav Best Sellers/New/Sale, all 200",
+    "two": "Homepage features collections / seasonal / new / best sellers with working links",
+    "one": "Static links only",
+    "zero": "None"
+   },
+   {
+    "id": "B5",
+    "name": "Trust signals",
+    "pillar": "B",
+    "s": 1,
+    "e": "/royal-apparel-reviews 200 + Made-in-USA badges; PDP rating hardcoded 5/326 on 19/19 PDPs; footer /eco-certifications link 404s",
+    "two": "Product or store reviews PLUS guarantees / awards / secure badges",
+    "one": "One type only",
+    "zero": "None"
+   },
+   {
+    "id": "T1",
+    "name": "Contact",
+    "pillar": "T",
+    "s": 2,
+    "e": "/customer-service: Tel 866.769.2517, Fax 631.922.8438, 91 Cabot Court Hauppauge NY 11788, hours Mon-Fri 9-5:30 EST, inquiry form",
+    "two": "Phone + physical address + form or email",
+    "one": "Form or email only",
+    "zero": "None"
+   },
+   {
+    "id": "T2",
+    "name": "About",
+    "pillar": "T",
+    "s": 2,
+    "e": "/about-royal-apparel: 264-word founding story (early 1990s, Manhattan Garment District) + links to usa-made, go-green, our-team",
+    "two": "Substantial about / story page",
+    "one": "Brief",
+    "zero": "None"
+   },
+   {
+    "id": "T3",
+    "name": "Policies",
+    "pillar": "T",
+    "s": 2,
+    "e": "/privacy 200 and /Terms 200 linked in footer; Termly 'Do Not Sell or Share' links; UserWay widget but no accessibility statement page seen",
+    "two": "Privacy AND terms (accessibility statement is a bonus)",
+    "one": "One",
+    "zero": "None"
+   },
+   {
+    "id": "T4",
+    "name": "Social",
+    "pillar": "T",
+    "s": 2,
+    "e": "Footer links Facebook, X, Instagram, YouTube, Pinterest, TikTok (6 profiles) with aria-labels",
+    "two": ">=2 linked profiles",
+    "one": "One",
+    "zero": "None"
+   },
+   {
+    "id": "T5",
+    "name": "Accessibility basics",
+    "pillar": "T",
+    "s": 1,
+    "e": "No skip link on /index or PDP; product imgs have alts; carousel has ARIA; 6 home dropdown banners + 90 imgs on /Category/Men/ lack alt",
+    "two": "Skip link AND alt text on product images (or an accessibility statement)",
+    "one": "Some",
+    "zero": "Images without alt and no skip link"
+   },
+   {
+    "id": "N1",
+    "name": "Blog / news freshness",
+    "pillar": "N",
+    "s": 1,
+    "e": "/in-the-news (footer 'News') has 47 words of intro and no posts or dates; newest sitemap lastmod is 2024-07-23",
+    "two": "A dated post within the last 90 days",
+    "one": "Blog exists but stale or undated",
+    "zero": "None"
+   },
+   {
+    "id": "N2",
+    "name": "Guides / FAQ",
+    "pillar": "N",
+    "s": 2,
+    "e": "Help Center support.royalapparel.com (FAQ 'Definitions, How to's') + guides /our-fabrics-information, /fabric-weights, /colors",
+    "two": "FAQ AND guides / recipes / how-tos",
+    "one": "FAQ only, or one guide",
+    "zero": "None"
+   },
+   {
+    "id": "N3",
+    "name": "Locations / where to buy",
+    "pillar": "N",
+    "s": 1,
+    "e": "HQ address on /customer-service; 'East Coast + West Coast Distribution' on PDP; store_locator.p is a bare 'Store Locator Template'",
+    "two": "Locator or locations page with addresses & hours (B2B: service area / depots)",
+    "one": "A bare list",
+    "zero": "None"
+   }
+  ],
+  "platform": "Custom (WAM / liveb2b CGI templates)",
+  "audited_at": "2026-09-28",
+  "sample_urls": {
+   "category": "https://www.royalapparel.net/Category/Men/",
+   "product1": "https://www.royalapparel.net/product/5051/Unisex-Short-Sleeve-Tee.html",
+   "product2": "https://www.royalapparel.net/product/5001W/Womens-Short-Sleeve-Tee.html"
+  },
+  "pages_checked": [
+   "https://www.royalapparel.net/ (515-byte meta-refresh stub)",
+   "https://royalapparel.net/ and http://royalapparel.net/ (HEAD + GET, redirect tracing)",
+   "https://www.royalapparel.net/cgi-bin/liveb2b/wam_tmpl/marketing.p?site=B2B&layout=Baseb2b&page=homepage (301 -> /index)",
+   "https://www.royalapparel.net/index (real homepage)",
+   "https://www.royalapparel.net/robots.txt",
+   "https://royalapparel.net/sitemap.xml (1,063 URLs)",
+   "https://www.royalapparel.net/Category/Men/",
+   "https://www.royalapparel.net/cgi-bin/liveb2b//wam_tmpl/catalog_browse.p?site=B2B&layout=Baseb2b&page=catalog_browse&browsepath=205 (301 -> /Category/Men/)",
+   "https://www.royalapparel.net/Category/Face-Cover-Accessories/",
+   "https://www.royalapparel.net/product/5051/Unisex-Short-Sleeve-Tee.html",
+   "https://www.royalapparel.net/product/5001W/Womens-Short-Sleeve-Tee.html",
+   "18 further /product/ URLs sampled from the sitemap (see captures/product-sample-18.txt)",
+   "https://www.royalapparel.net/js/catalog_product.js?v=6.2.15.2.2",
+   "https://www.royalapparel.net/customer-service",
+   "https://www.royalapparel.net/about-royal-apparel",
+   "https://www.royalapparel.net/shipping",
+   "https://www.royalapparel.net/in-the-news",
+   "https://www.royalapparel.net/product-specifications",
+   "https://www.royalapparel.net/jobs",
+   "https://www.royalapparel.net/cgi-bin/liveb2b//wam_tmpl/store_locator.p?site=B2B&layout=Baseb2b&page=store_locator",
+   "https://www.royalapparel.net/cgi-bin/liveb2b/wam_tmpl/catalog_browse.p?site=B2B&layout=Baseb2b&page=catalog_browse&searchText=5051",
+   "https://www.royalapparel.net/css/baseb2b.css?v=41 and /main.css",
+   "HEAD only: /privacy, /Terms, /favicon.ico, /sitemap, /Category/Unisex/, /category/men/, /Category/Men, /product/5051/, /product/5051/anything.html, catalog_product.p?product=5051, catalog_browse.p?browsePath=464, /royal-apparel-reviews, /eco-certifications, /samples, /Category/Sale/"
+  ]
+ }
+}
