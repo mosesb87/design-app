@@ -50,6 +50,7 @@ const M = 'https://mousabatarseh.com';
 
 export const entries: Entry[] = [
   // ── Systems
+  { slug: 'shelfmark', title: 'ShelfMark', category: 'systems', what: 'Michigan Storefront Benchmark: 21 stores scored on 29 public-page checks, with report cards, evidence and a score-your-store calculator. Scoring model ships as a workbook.', platform: 'Web · workbook', url: `${M}/shelfmark/`, status: 'live', media: 'shelfmark', date: '2026-09-28' },
   { slug: 'asas-studio', title: 'ASAS Studio', category: 'systems', what: 'Elementor wireframe studio: real blocks, English and Arabic search, one color system, native JSON export.', platform: 'WordPress · Elementor', languages: ['EN', 'AR'], url: 'https://asas.build/', status: 'live', caseStudy: 'asas-studio', media: 'asas', date: '2026-09-23' },
   { slug: 'asas-studio-app', title: 'ASAS Studio app', category: 'systems', what: 'The studio itself: browse the ASAS Elementor block and wireframe library and build a page from it.', platform: 'Web app · Elementor', languages: ['EN', 'AR'], url: 'https://asas.build/studio/', status: 'live', family: 'asas-studio', media: 'asas-studio-app', date: '2026-09-13' },
   { slug: 'changeatlas', title: 'ChangeAtlas Commerce', category: 'systems', what: 'Shows what a catalog import will change before it runs.', platform: 'Browser tool', url: `${M}/changeatlas/`, status: 'live', caseStudy: 'changeatlas', media: 'changeatlas', date: '2026-09-22' },
