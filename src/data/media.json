@@ -12114,5 +12114,53 @@
     "color": "rgb(248 248 248)"
    }
   }
+ },
+ "jaus-project": {
+  "title": null,
+  "url": null,
+  "capturedAt": null,
+  "views": {
+   "desktop-hero": {
+    "w": 900,
+    "h": 563,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/jaus-project/desktop-hero-480.webp"
+     },
+     {
+      "w": 900,
+      "src": "/media/jaus-project/desktop-hero-900.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABQBACdASoYAA8APu1iqU2ppaQiMAgBMB2JYwC/OCHgCvNTampNaH+k1cXAAP7wPg1FPtbqaPsBzehLiMBynyKZgxz4+L1Fzx4SazhkIuACXLX2mGlp/nQcv3t7tmcJGTs941puFw7qMfUYSteVXq11n/v/ut1n77ThhvP4jd8hkuMF6h3GN5t9NaNKYBdyxcAAAA==",
+    "color": "rgb(248 248 248)"
+   }
+  }
+ },
+ "bulletproof-review": {
+  "title": null,
+  "url": null,
+  "capturedAt": null,
+  "views": {
+   "desktop-hero": {
+    "w": 900,
+    "h": 563,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/bulletproof-review/desktop-hero-480.webp"
+     },
+     {
+      "w": 900,
+      "src": "/media/bulletproof-review/desktop-hero-900.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JYwC06CHf+HrqEGyhkS8AAP7rFJURBwyjmmAUI08x6zQp0V4et4vl3RFIDwmkmjVf5khthgpmpW/Fmuc96/x8k2DwI+zo5DFzrzojHtlrcKDXu2OsKRszmuv7Qo2jLRtzTmIbMtjrdgOwZ43MMcAA",
+    "color": "rgb(248 232 232)"
+   }
+  }
  }
 }

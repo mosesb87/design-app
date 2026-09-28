@@ -14,6 +14,8 @@ const builds = [
   { media: 'american-hot-wheel', name: 'american-hot-wheel' },
   { media: 'diamedical-pathfinder', name: 'diamedical-pathfinder' },
   { media: 'diamedical-decision-brief', name: 'diamedical-decision-brief' },
+  { media: 'jaus-project', name: 'jaus-project' },
+  { media: 'bulletproof-review', name: 'bulletproof-review' },
 ];
 const sizes = ['', '-2000', '-1600', '-1440', '-1200', '-1000', '-800', '-500'];
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36';
