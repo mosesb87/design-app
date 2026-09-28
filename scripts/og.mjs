@@ -34,13 +34,14 @@ const logo = fs.readFileSync(path.join(root, 'src/assets/mousa-logo.svg'), 'utf8
 const tools = (() => { try { return (fs.readFileSync(path.join(root, 'src/data/tools.ts'), 'utf8').match(/^    slug: '/gm) || []).length; } catch { return 0; } })();
 
 const cards = [
-  { name: 'home', kicker: 'Webmaster · WordPress & e-commerce · Product data · SEO', title: 'Mousa Batarseh', sub: 'I build and run WordPress websites and e-commerce stores — and the checks that keep them honest.', big: true },
+  { name: 'home', kicker: 'Webmaster · WordPress & e-commerce · Product data · SEO', title: 'Mousa Batarseh', sub: 'I find what’s costing an online store sales — and ship the fix, with the check that keeps it fixed.', big: true },
   { name: 'default', kicker: 'Warren, Michigan', title: 'Mousa Batarseh', sub: 'WordPress, e-commerce, product data & SEO.', big: true },
   { name: 'tools', kicker: `Tools · ${tools} working builds`, title: 'Tools I built.', sub: 'DealProof, ChangeAtlas Commerce, the Deals Operating System, CSV Mapper, ASAS Studio, SEO Tools — what each one checks and how it works.' },
   { name: 'work', kicker: 'The archive', title: 'All the work.', sub: 'Tools, systems, case studies, websites, stores, reviews and proposals — every row links somewhere live.' },
   { name: 'about', kicker: 'About · Warren, Michigan', title: 'From fragile to boring.', sub: 'In the best way. Seven years of WordPress, e-commerce, product data and SEO.' },
   { name: 'blog', kicker: `Blog · ${posts.length} articles`, title: 'Notes from running stores.', sub: 'WordPress, e-commerce operations, product data and SEO — the things that break, and what I do about them.' },
   { name: 'reviews', kicker: `Reviews · ${reviews.length} independent reviews`, title: 'Reviews, counted.', sub: 'Public pages only, every finding dated — and a working fix built alongside.' },
+  { name: 'method', kicker: 'Method · 29 checks · 5 pillars · one score', title: 'How I review a store.', sub: 'Public pages only. Every check scored 2, 1 or 0 from what a page shows; every finding counted, dated and shipped with a working fix.' },
   ...cases.map((c) => ({ name: `work-${c.slug}`, kicker: `${c.group === 'systems' ? 'Systems' : 'Sites & stores'} · ${c.kicker}`, title: c.title, sub: 'Case study — Mousa Batarseh', img: heroImg(c.hero) })),
   ...posts.map((p) => ({ name: `blog-${p.slug}`, kicker: `Blog · ${p.categories.join(' · ')}`, title: p.title, sub: 'Mousa Batarseh', img: pub((drawn.covers[p.slug] || p.image)?.src) })),
   ...reviews.map((r) => ({ name: `review-${r.slug}`, kicker: `Review · ${r.title}`, title: r.headline, sub: `${r.stat.of ? `${r.stat.value} / ${r.stat.of}` : r.stat.value} ${r.stat.label}`, img: pub(r.sheets[0]?.shot?.src || r.hero?.src) })),
@@ -75,7 +76,9 @@ ${c.big ? `<div class="biglogo">${logo}</div>` : `<p class="logo">${logo}Mousa B
 
 const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
+const only = new Set(process.argv.slice(2));
 for (const [n, c] of cards.entries()) {
+  if (only.size && !only.has(c.name)) continue;
   const tmp = path.join(out, `.${c.name}.html`);
   fs.writeFileSync(tmp, html(c, n));
   await page.goto(pathToFileURL(tmp).href);
@@ -86,6 +89,7 @@ for (const [n, c] of cards.entries()) {
   console.log('✓', c.name);
 }
 await browser.close();
+if (only.size) process.exit(0);
 
 // Icons from the original logo file (public/favicon.svg is that file, unchanged). The touch icon places it on
 // white with a margin, because iOS fills transparent icons with black.

@@ -29,6 +29,26 @@ const M = 'https://mousabatarseh.com';
 
 export const toolPages: ToolDetail[] = [
   {
+    slug: 'shelfmark',
+    name: 'ShelfMark',
+    promise: 'Twenty-nine checks. One score. Every store on the same rubric.',
+    what: 'The Michigan Storefront Benchmark: 21 stores scored on 29 public-page checks across findability, catalog, buy path, trust and content — report cards, evidence per check, a score-your-store calculator and the scoring workbook.',
+    problem: 'A storefront review is only as good as its rubric. Without one, every review starts from zero and no two stores can be compared.',
+    how: [
+      { title: 'Read', text: 'Homepage, robots.txt, sitemap, one category, two product pages, contact and policy pages — public pages only.' },
+      { title: 'Score', text: 'Each check is 2 (meets), 1 (partly), 0 (fails) or U (unverified). Pillar % = verified points ÷ (2 × verified checks); the score is the weighted average.' },
+      { title: 'Rank', text: 'Every store lands on the index with a grade, its weakest pillar and the evidence behind each score.' },
+      { title: 'Reuse', text: 'The same rubric scores any target store in an hour; the index is the comparison pool — see /method/.' },
+    ],
+    inside: ['21 Michigan storefronts, audited 2026-09-28', '609 scored observations, each with dated evidence', 'A workbook with live formulas: Index, Checks, Rubric, Score a Store, Findings, Insights, Outreach'],
+    numbers: [{ v: '21', l: 'stores' }, { v: '29', l: 'checks' }, { v: '609', l: 'observations' }],
+    role: 'Rubric, audits, scoring model, workbook, site',
+    status: 'Live',
+    live: `${M}/shelfmark/`,
+    media: 'shelfmark',
+    shows: 'the index and a report card',
+  },
+  {
     slug: 'dealproof',
     name: 'DealProof',
     promise: 'Good deals. No surprises.',
@@ -201,9 +221,9 @@ export const toolPages: ToolDetail[] = [
   },
 ];
 
-// The home rack: seven tools, each linking to its section on /tools/.
+// The home rack: eight tools (ShelfMark first, added 2026-09-28), each linking to its section on /tools/.
 export type Tool = { n: string; name: string; promise: string; what: string; href: string; live: string; media: string; caseStudy?: boolean; shows?: string };
-const rackOrder = ['changeatlas', 'deals-os', 'csv-mapper', 'diamedical-lab', 'asas-studio', 'dealproof', 'seo-tools'];
+const rackOrder = ['shelfmark', 'changeatlas', 'deals-os', 'csv-mapper', 'diamedical-lab', 'asas-studio', 'dealproof', 'seo-tools'];
 export const tools: Tool[] = rackOrder.map((slug, i) => {
   const t = toolPages.find((x) => x.slug === slug)!;
   return { n: String(i + 1).padStart(2, '0'), name: t.name, promise: t.promise ?? t.what, what: t.what, href: `/tools/#${t.slug}`, live: t.live, media: t.media, caseStudy: !!t.caseStudy, shows: t.shows };

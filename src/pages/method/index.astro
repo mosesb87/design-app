@@ -1,0 +1,199 @@
+---
+// How I review a store: the rubric every review runs on (ShelfMark's five pillars and 29 public-page checks), how a
+// score is built, what a review contains, and the rules. The checks themselves come from src/data/method.ts, which
+// mirrors the review engine's model. Added 2026-09-28.
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/play/PageHead.astro';
+import { pillars, checks, grades, indexStats } from '../../data/method';
+import { allReviews } from '../../data/reviews';
+import { SITE_URL } from '../../data/site';
+
+const tones = ['var(--accent)', 'var(--night)', 'var(--lilac)', 'var(--lemon)', 'var(--sky)'];
+const onDark = (i: number) => i < 2;
+const byPillar = (id: string) => checks.filter((c) => c.pillar === id);
+const jsonLd = [
+  {
+    '@type': 'WebPage',
+    '@id': `${SITE_URL}/method/#page`,
+    name: 'How I review a store — Mousa Batarseh',
+    url: `${SITE_URL}/method/`,
+    description: 'The rubric behind every review: five pillars, 29 public-page checks, one score, and the rules a review follows.',
+  },
+];
+const contents = [
+  { t: 'Three strengths first', d: 'What the store does well, with the evidence — a review is a piece of work about a store, not a verdict against it.' },
+  { t: 'Findings with counts', d: '“14 of 20 sampled product pages”, never “many”. Each finding names the page, the count, the duty it maps to and the fix.' },
+  { t: 'Working fixes', d: 'Prototypes built on the store’s own data: the sort, the schema, the parser, the template — before and after.' },
+  { t: 'The scorecard', d: 'All 29 checks with the evidence behind each score, the pillar percentages, and where the store would rank on the Michigan index.' },
+  { t: 'Ninety days', d: 'What I would do first, second and third if I joined — fixes first, then the cadence that keeps them fixed.' },
+  { t: 'The workbook', d: 'The same scorecard and findings as a spreadsheet with live formulas, plus the weekly QA sheet, so the review keeps running after the page.' },
+];
+const rules = [
+  'Public pages only. Nothing is logged into, carted, submitted or requested.',
+  'Every score has evidence: a URL or quoted text, dated. What can’t be observed is marked U, never guessed.',
+  'Counts, not adjectives. If a number can’t be counted across the sample, it isn’t a finding.',
+  'No health, legal or financial claim language is evaluated — that belongs to the company’s own review.',
+  'A review written for an application is a private link sent to one person; its page is not indexed.',
+];
+---
+<Base title="How I review a store" description="The rubric behind every review by Mousa Batarseh: five pillars, 29 public-page checks, one 0–100 score — the same checks as ShelfMark, the Michigan Storefront Benchmark — and the rules a review follows." path="/method/" og="method" jsonLd={jsonLd}>
+  <PageHead title="How I review a store." size="l" kicker={`Method · ${checks.length} checks · ${pillars.length} pillars · one score`} lead="Public pages only. Every check scored 2, 1 or 0 from what a page shows. Every finding counted, dated, and shipped with a working fix." stickers={['check', 'lens', 'chart']} id="method-title" />
+
+  <section class="m-pillars section wrap" aria-labelledby="pillars-title">
+    <header class="m-head">
+      <p class="kicker">Five pillars</p>
+      <h2 class="h2" id="pillars-title">Five questions,<br /> weighted.</h2>
+      <p class="m-sub">Each pillar answers one question a shopper, a crawler or a buyer would ask. The weights are the same on every store, so scores compare.</p>
+    </header>
+    <ol class="m-pillars__grid" role="list" data-pop-grid>
+      {pillars.map((p, i) => (
+        <li class:list={['m-pillar', { 'on-dark': onDark(i) }]} style={`--bg:${tones[i]}`} data-pop data-glow>
+          <span class="m-pillar__w num">{p.weight}<small>weight</small></span>
+          <h3 class="m-pillar__t">{p.name}</h3>
+          <p class="m-pillar__q">{p.question}</p>
+          <p class="m-pillar__n num">{byPillar(p.id).length} checks</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="m-checks section section--tight wrap" aria-labelledby="checks-title">
+    <header class="m-head">
+      <p class="kicker">The {checks.length} checks</p>
+      <h2 class="h2" id="checks-title">What scores 2,<br /> and what doesn’t.</h2>
+      <p class="m-sub">Every check is read from a public page: the homepage, robots.txt, the sitemap, one category, two product pages, contact and policy pages. Open a pillar to read the rule for each score.</p>
+    </header>
+    <div class="m-checks__list">
+      {pillars.map((p, i) => (
+        <details class="m-group" open={i === 0}>
+          <summary class="m-group__sum"><span class="m-group__t">{p.name}</span><span class="m-group__meta num">{byPillar(p.id).length} checks · weight {p.weight}</span></summary>
+          <table class="m-table">
+            <thead><tr><th scope="col">Check</th><th scope="col">Scores 2 when</th><th scope="col">Scores 1 when</th><th scope="col">Scores 0 when</th></tr></thead>
+            <tbody>
+              {byPillar(p.id).map((c) => (
+                <tr><th scope="row"><span class="m-table__id num">{c.id}</span> {c.name}</th><td>{c.two}</td><td>{c.one}</td><td>{c.zero}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="m-score section wrap" aria-labelledby="score-title">
+    <header class="m-head">
+      <p class="kicker">One score</p>
+      <h2 class="h2" id="score-title">How the number<br /> is built.</h2>
+    </header>
+    <div class="m-score__grid" data-pop-grid>
+      <div class="m-rule" data-pop>
+        <p class="m-rule__k">Pillar %</p>
+        <p class="m-rule__f num">verified points ÷ (2 × verified checks)</p>
+        <p class="m-rule__d">A check marked U — not observable from public pages — leaves both the top and the bottom of the fraction. It never counts for or against a store.</p>
+      </div>
+      <div class="m-rule" data-pop>
+        <p class="m-rule__k">Score</p>
+        <p class="m-rule__f num">weighted average of the five pillar percentages × 100</p>
+        <p class="m-rule__d">A pillar with no verified checks drops out and the other weights renormalise. Coverage (verified ÷ 29) and a confidence label travel with every score.</p>
+      </div>
+      <div class="m-rule" data-pop>
+        <p class="m-rule__k">Grades</p>
+        <p class="m-rule__f num">{grades.map((g) => `${g.grade} ≥ ${g.cut}`).join(' · ')}</p>
+        <p class="m-rule__d">{grades.map((g) => `${g.grade} — ${g.band}`).join(' · ')}. The thresholds are editable on the workbook’s Rubric sheet.</p>
+      </div>
+      <div class="m-rule m-rule--index on-dark" data-pop>
+        <p class="m-rule__k">The comparison pool</p>
+        <p class="m-rule__f num">{indexStats.stores} stores · {indexStats.observations} observations · average {indexStats.mean}</p>
+        <p class="m-rule__d">ShelfMark, the Michigan Storefront Benchmark, audited {indexStats.audited}. Every store I review afterwards gets the rank it would hold on that index — a number with a neighbourhood.</p>
+        <p class="m-rule__cta"><a class="btn btn--bright" href="/shelfmark/">Open ShelfMark <span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="m-review section wrap" aria-labelledby="review-title">
+    <header class="m-head">
+      <p class="kicker">What a review contains</p>
+      <h2 class="h2" id="review-title">Six parts,<br /> in this order.</h2>
+    </header>
+    <ol class="m-parts" role="list" data-pop-grid>
+      {contents.map((c, i) => (
+        <li class="m-part" data-pop>
+          <span class="m-part__n num">{String(i + 1).padStart(2, '0')}</span>
+          <h3 class="m-part__t">{c.t}</h3>
+          <p class="m-part__d">{c.d}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="m-rules">
+      <h3 class="m-rules__t">The rules</h3>
+      <ul class="m-rules__list" role="list">
+        {rules.map((r) => <li>{r}</li>)}
+      </ul>
+      <p class="m-rules__more"><a class="btn" href="/reviews/">All {allReviews.length} reviews <span class="arrow" aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .m-head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
+  .m-head .h2 { max-width: 20ch; }
+  .m-sub { max-width: 56ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.3; }
+
+  .m-pillars__grid { display: grid; gap: clamp(12px, 1.4vw, 20px); }
+  @media (min-width: 700px) { .m-pillars__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .m-pillars__grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+  .m-pillar { display: grid; align-content: start; gap: var(--s-3); min-height: 250px; padding: clamp(20px, 2vw, 28px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
+  .m-pillar.on-dark { color: #fff; }
+  .m-pillar__w { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: 3.4rem; line-height: 0.85; }
+  .m-pillar__w small { display: block; font: 700 0.6875rem / 1.2 var(--font-text); letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.7; margin-top: 8px; }
+  .m-pillar__t { font-family: var(--font-display); font-weight: 780; font-stretch: 78%; font-size: 1.6rem; line-height: 0.95; }
+  .m-pillar__q { font-size: 0.9375rem; line-height: 1.35; opacity: 0.9; }
+  .m-pillar__n { margin-top: auto; font: 700 0.75rem / 1 var(--font-text); letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75; }
+
+  .m-checks__list { display: grid; gap: 10px; }
+  .m-group { border-radius: var(--r-l); background: var(--cloud); }
+  .m-group__sum { list-style: none; cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; padding: 18px 22px; }
+  .m-group__sum::-webkit-details-marker { display: none; }
+  .m-group__t { font-family: var(--font-display); font-weight: 800; font-stretch: 78%; font-size: 1.5rem; line-height: 1; text-transform: uppercase; }
+  .m-group__meta { font: 700 0.75rem / 1 var(--font-text); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); }
+  .m-group[open] .m-group__sum::after { content: '−'; margin-left: auto; font-weight: 700; }
+  .m-group:not([open]) .m-group__sum::after { content: '+'; margin-left: auto; font-weight: 700; }
+  .m-table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; line-height: 1.4; margin: 0 0 6px; }
+  .m-table th, .m-table td { text-align: left; vertical-align: top; padding: 12px 22px; }
+  .m-table thead th { font: 700 0.6875rem / 1.2 var(--font-text); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+  .m-table tbody th { font-weight: 700; width: 24%; }
+  .m-table tbody tr:nth-child(odd) { background: #fff; }
+  .m-table__id { display: inline-block; min-width: 2.2em; font: 700 0.75rem / 1 var(--font-text); color: var(--accent); }
+  @media (max-width: 760px) {
+    .m-table thead { display: none; }
+    .m-table tr { display: grid; gap: 4px; padding: 12px 18px; }
+    .m-table th, .m-table td { display: block; padding: 0; }
+    .m-table td::before { content: attr(data-l); }
+    .m-table td:nth-child(2)::before { content: '2 · '; font-weight: 700; color: var(--pass); }
+    .m-table td:nth-child(3)::before { content: '1 · '; font-weight: 700; color: var(--ink-2); }
+    .m-table td:nth-child(4)::before { content: '0 · '; font-weight: 700; color: var(--fail); }
+  }
+
+  .m-score__grid { display: grid; gap: clamp(12px, 1.4vw, 20px); }
+  @media (min-width: 900px) { .m-score__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .m-rule { display: grid; gap: 10px; padding: clamp(20px, 2vw, 30px); border-radius: var(--r-xl); background: var(--cloud); }
+  .m-rule--index { background: var(--night); color: var(--night-ink); }
+  .m-rule__k { font: 700 0.75rem / 1 var(--font-text); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+  .m-rule--index .m-rule__k { color: var(--accent-soft); }
+  .m-rule__f { font-family: var(--font-display); font-weight: 800; font-stretch: 78%; font-size: clamp(1.4rem, 2.2vw, 2rem); line-height: 1; }
+  .m-rule__d { font-size: 0.9375rem; line-height: 1.45; color: var(--fg-2); }
+  .m-rule--index .m-rule__d { color: var(--night-ink-2); }
+  .m-rule__cta { margin-top: 6px; }
+
+  .m-parts { display: grid; gap: clamp(12px, 1.4vw, 20px); margin-bottom: var(--s-7); }
+  @media (min-width: 700px) { .m-parts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .m-parts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .m-part { display: grid; gap: 10px; padding: clamp(20px, 2vw, 28px); border-radius: var(--r-xl); background: #fff; box-shadow: 0 12px 24px -18px rgb(14 17 22 / 0.35); }
+  .m-part__n { font: 750 0.6875rem / 1 var(--font-text); letter-spacing: 0.06em; color: var(--accent); }
+  .m-part__t { font-family: var(--font-display); font-weight: 800; font-stretch: 78%; font-size: 1.4rem; line-height: 1; }
+  .m-part__d { font-size: 0.9375rem; line-height: 1.45; color: var(--fg-2); }
+  .m-rules { display: grid; gap: var(--s-4); max-width: 70ch; }
+  .m-rules__t { font-family: var(--font-display); font-weight: 800; font-stretch: 78%; font-size: 1.6rem; line-height: 1; }
+  .m-rules__list { display: grid; gap: 10px; padding-left: 1.2em; color: var(--fg-2); line-height: 1.45; }
+  .m-rules__more { margin-top: var(--s-3); }
+</style>

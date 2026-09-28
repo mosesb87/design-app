@@ -202,12 +202,12 @@ export type Review = {
   media: string; // capture slug
 };
 export const reviews: Review[] = [
-  { slug: 'reworked', title: 'Carhartt Reworked', site: 'reworked.carhartt.com', focus: 'E-commerce & DTC', date: '2026-09-25', number: '1,447 / 3,545', numberLabel: 'published listings with nothing left to buy', fix: 'Ten work orders and four working fixes, including a gift-collection builder.', url: 'https://mousabatarseh.com/reworked-review/', media: 'review-carhartt-reworked' },
-  { slug: 'oakwood', title: 'Oakwood Veneer', site: 'oakwoodveneer.com', focus: 'Catalog & UX', date: '2026-09-19', number: '300+', numberLabel: 'species behind two filters', fix: 'Species Atlas — a working, species-faceted browser built as the fix.', url: 'https://mousabatarseh.com/oakwood-review/', media: 'review-oakwood' },
-  { slug: 'vanguard', title: 'Vanguard', site: 'vanguardworld.com', focus: 'Product templates', date: '2026-09-19', number: '443', numberLabel: 'products carrying one template’s three defects', fix: 'A before/after toggle that applies the template fix to all 443 products.', url: 'https://mousabatarseh.com/vanguard-review/', media: 'review-vanguard' },
-  { slug: 'jbtools', title: 'JB Tools', site: 'jbtools.com', focus: 'Catalog & listings', date: '2026-09-19', number: '122 / 358', numberLabel: 'torque wrenches out of stock, one ranked #3', fix: 'A triage board and a supplier-price SOP.', url: 'https://mousabatarseh.com/jbtools-review/', media: 'review-jbtools' },
-  { slug: 'hayhouse', title: 'Hay House', site: 'shop.hayhouse.com', focus: 'Pricing & catalog', date: '2026-09-16', number: '$9.50 / $18.99', numberLabel: 'the same ISBN on two Hay House storefronts', fix: 'A catalog card with worked examples.', url: 'https://mousabatarseh.com/hayhouse-review/', media: 'review-hayhouse' },
-  { slug: 'biotrust', title: 'BioTRUST', site: 'biotrust.com', focus: 'Launch readiness', date: '2026-09-19', number: '117', numberLabel: 'products in a public, indexable staging store', fix: 'A clickable go-live gate that only reads GO when the blockers are cleared.', url: 'https://mousabatarseh.com/biotrust-review/', media: 'review-biotrust' },
+  { slug: 'reworked', title: 'Carhartt Reworked', site: 'reworked.carhartt.com', focus: 'E-commerce & DTC', date: '2026-09-25', number: '3,545', numberLabel: 'listings read, with four working fixes built on the day’s catalog', fix: 'Ten work orders and four working fixes, including a gift-collection builder.', url: 'https://mousabatarseh.com/reworked-review/', media: 'review-carhartt-reworked' },
+  { slug: 'oakwood', title: 'Oakwood Veneer', site: 'oakwoodveneer.com', focus: 'Catalog & UX', date: '2026-09-19', number: '300+', numberLabel: 'species, with a working species-faceted browser built as the fix', fix: 'Species Atlas — a working, species-faceted browser built as the fix.', url: 'https://mousabatarseh.com/oakwood-review/', media: 'review-oakwood' },
+  { slug: 'vanguard', title: 'Vanguard', site: 'vanguardworld.com', focus: 'Product templates', date: '2026-09-19', number: '443', numberLabel: 'products covered by one template fix', fix: 'A before/after toggle that applies the template fix to all 443 products.', url: 'https://mousabatarseh.com/vanguard-review/', media: 'review-vanguard' },
+  { slug: 'jbtools', title: 'JB Tools', site: 'jbtools.com', focus: 'Catalog & listings', date: '2026-09-19', number: '104,348', numberLabel: 'products in the index, with a supplier-price SOP', fix: 'A triage board and a supplier-price SOP.', url: 'https://mousabatarseh.com/jbtools-review/', media: 'review-jbtools' },
+  { slug: 'hayhouse', title: 'Hay House', site: 'shop.hayhouse.com', focus: 'Pricing & catalog', date: '2026-09-16', number: '874', numberLabel: 'products checked, with worked examples for reporting and SOPs', fix: 'A catalog card with worked examples.', url: 'https://mousabatarseh.com/hayhouse-review/', media: 'review-hayhouse' },
+  { slug: 'biotrust', title: 'BioTRUST', site: 'biotrust.com', focus: 'Launch readiness', date: '2026-09-19', number: '1', numberLabel: 'clickable go-live gate, built for the relaunch', fix: 'A clickable go-live gate that only reads GO when the blockers are cleared.', url: 'https://mousabatarseh.com/biotrust-review/', media: 'review-biotrust' },
 ];
 export const reviewsIndexUrl = 'https://mousabatarseh.com/reviews/';
 
@@ -228,6 +228,7 @@ export const nav = [
   { label: 'Work', href: '/work/' },
   { label: 'Tools', href: '/tools/' },
   { label: 'Reviews', href: '/reviews/' },
+  { label: 'Method', href: '/method/' },
   { label: 'Blog', href: '/blog/' },
   { label: 'About', href: '/about/' },
 ] as const;

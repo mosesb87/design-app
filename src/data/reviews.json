@@ -1,5 +1,181 @@
 [
  {
+  "slug": "federal-fluid-power",
+  "brand": "Federal Fluid Power",
+  "kind": "Catalog & content review",
+  "title": "Federal Fluid Power · Catalog & content review",
+  "site": "federalfp.com",
+  "focus": [
+   "Catalog & listings",
+   "SEO & AI search"
+  ],
+  "date": "2026-09-28",
+  "sources": "Public pages only",
+  "stat": {
+   "value": "54,496",
+   "of": "",
+   "label": "sitemap URLs read, with an attribute parser built on the catalog"
+  },
+  "headline": "The parts are here.",
+  "lede": "Three of nine sitemap files (54,496 URLs), five category pages and 19 product pages read from public pages — no logins, no quote requests — with six findings and six working fixes for a Magento catalog: a URL-key generator, an attribute parser, an option normalizer, stock and price agreement, meta templates and a store-view footer.",
+  "blurb": "54,496 sitemap URLs, five category pages and 19 product pages read — with six findings and six working fixes for a Magento catalog: a URL-key generator, an attribute parser, an option normalizer, stock and price agreement, meta templates and a store-view footer.",
+  "findings": [
+   {
+    "n": "01",
+    "title": "URL keys for the keyless",
+    "text": "The import file that gives every product a URL key, and the sitemap that follows."
+   },
+   {
+    "n": "02",
+    "title": "Specs out of the title string",
+    "text": "An attribute parser and an option normalizer run on the catalog’s real names and filter values."
+   },
+   {
+    "n": "03",
+    "title": "Templates, not hand edits",
+    "text": "One title and description template previewed across the sample; store-view blocks for the footer."
+   }
+  ],
+  "contents": [
+   "Why",
+   "Strengths",
+   "Findings",
+   "Fixes",
+   "Scorecard",
+   "90 days"
+  ],
+  "hero": {
+   "src": "/media/reviews/rv-federal-fluid-power-l.webp",
+   "small": "/media/reviews/rv-federal-fluid-power-s.webp",
+   "w": 1440,
+   "h": 1000,
+   "sw": 720,
+   "alt": "Federal Fluid Power review, first screen"
+  },
+  "thumb": null,
+  "disclaimer": "",
+  "minutes": 14,
+  "sheets": [],
+  "source": "https://mousabatarseh.com/federal-fluid-power-review/"
+ },
+ {
+  "slug": "royal-apparel",
+  "brand": "Royal Apparel",
+  "kind": "Ecommerce & digital marketing review",
+  "title": "Royal Apparel · Ecommerce & digital marketing review",
+  "site": "royalapparel.net",
+  "focus": [
+   "E-commerce & DTC",
+   "SEO & AI search"
+  ],
+  "date": "2026-09-28",
+  "sources": "Public pages only",
+  "stat": {
+   "value": "1,063",
+   "of": "",
+   "label": "sitemap URLs classified, with five working fixes"
+  },
+  "headline": "Made in USA, read field by field.",
+  "lede": "The sitemap’s 1,063 URLs, the Men’s category and 20 product pages read from public pages — no logins, no carts — with six findings and five working fixes: redirects and canonicals, a regenerated sitemap, one Product schema, a dataLayer linter and a crawlable category grid.",
+  "blurb": "The sitemap’s 1,063 URLs, the Men’s category and 20 product pages read from public pages — with six findings and five working fixes: redirects and canonicals, a regenerated sitemap, one Product schema, a dataLayer linter and a crawlable category grid.",
+  "findings": [
+   {
+    "n": "01",
+    "title": "One homepage, one hostname",
+    "text": "The redirect chain and the canonical every template would emit, written at the server and template level."
+   },
+   {
+    "n": "02",
+    "title": "Feeds and tracking from the same product JSON",
+    "text": "A single Product schema and corrected GA4 payloads built from the data the pages already carry."
+   },
+   {
+    "n": "03",
+    "title": "A crawlable category grid",
+    "text": "The Men’s category rendered server-side with real pagination, Request-pricing tiles and USA-made styles first."
+   }
+  ],
+  "contents": [
+   "Why",
+   "Strengths",
+   "Findings",
+   "Fixes",
+   "Scorecard",
+   "90 days"
+  ],
+  "hero": {
+   "src": "/media/reviews/rv-royal-apparel-l.webp",
+   "small": "/media/reviews/rv-royal-apparel-s.webp",
+   "w": 1440,
+   "h": 1000,
+   "sw": 720,
+   "alt": "Royal Apparel review, first screen"
+  },
+  "thumb": null,
+  "disclaimer": "",
+  "minutes": 14,
+  "sheets": [],
+  "source": "https://mousabatarseh.com/royal-apparel-review/"
+ },
+ {
+  "slug": "blueroot",
+  "brand": "Blueroot Health",
+  "kind": "DTC operations review",
+  "title": "Blueroot Health · DTC operations review",
+  "site": "fairhavenhealth.com",
+  "focus": [
+   "E-commerce & DTC"
+  ],
+  "date": "2026-09-28",
+  "sources": "Public pages + public product feeds",
+  "stat": {
+   "value": "397",
+   "of": "",
+   "label": "products read across four Shopify stores, with a weekly QA workbook"
+  },
+  "headline": "Four stores. One checklist.",
+  "lede": "Four Shopify stores read from public pages and feeds — 397 products, 20 product pages in full, no logins — with six findings, six working fixes and the weekly QA workbook.",
+  "blurb": "Four Shopify stores read from public pages and feeds — 397 products, 20 product pages in full — with six findings, six working fixes built on the stores’ own data, and the weekly QA workbook that keeps them fixed.",
+  "findings": [
+   {
+    "n": "01",
+    "title": "Collections, sort and promotions, checked the Monday way",
+    "text": "Footer collections, All Products sort and promo badges read against the public product feed, with the collection-health monitor and promo consistency check as working fixes."
+   },
+   {
+    "n": "02",
+    "title": "Facts panels and titles as data",
+    "text": "Facts panels rendered as a table from a metafield; twenty titles refitted under 60 characters."
+   },
+   {
+    "n": "03",
+    "title": "One standard across four stores",
+    "text": "Policy handles, shipping copy and shared-SKU names reconciled into a one-page portfolio standard."
+   }
+  ],
+  "contents": [
+   "Why",
+   "Strengths",
+   "Findings",
+   "Working fixes",
+   "Scorecard",
+   "90 days"
+  ],
+  "hero": {
+   "src": "/media/reviews/rv-blueroot-l.webp",
+   "small": "/media/reviews/rv-blueroot-s.webp",
+   "w": 1440,
+   "h": 1000,
+   "sw": 720,
+   "alt": "Blueroot Health review, first screen"
+  },
+  "thumb": null,
+  "disclaimer": "",
+  "minutes": 14,
+  "sheets": [],
+  "source": "https://mousabatarseh.com/blueroot-review/"
+ },
+ {
   "slug": "reworked",
   "brand": "Carhartt Reworked",
   "kind": "Recommerce merchandising review",
