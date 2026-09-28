@@ -119,8 +119,8 @@ a:hover { text-decoration-thickness: 2px; }
   font-variant-numeric: lining-nums;
 }
 .h1 { font-family: var(--font-display); font-size: var(--t-h1); font-weight: 900; font-stretch: 75%; line-height: 0.86; letter-spacing: -0.01em; text-wrap: balance; }
-.h2 { font-family: var(--font-display); font-size: var(--t-h2); font-weight: 880; font-stretch: 75%; line-height: 0.88; letter-spacing: -0.005em; text-wrap: balance; }
-.h3 { font-family: var(--font-display); font-size: var(--t-h3); font-weight: 800; font-stretch: 85%; line-height: 1.02; letter-spacing: 0; text-wrap: balance; }
+.h2 { font-family: var(--font-display); font-size: var(--t-h2); font-weight: 780; font-stretch: 75%; line-height: 0.88; letter-spacing: -0.005em; text-wrap: balance; }
+.h3 { font-family: var(--font-display); font-size: var(--t-h3); font-weight: 700; font-stretch: 85%; line-height: 1.02; letter-spacing: 0; text-wrap: balance; }
 /* One case for every heading on the site: capitals (Mousa, round 6). */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3 { text-transform: uppercase; }
 .lead { font-size: var(--t-lead); line-height: 1.35; font-weight: 450; letter-spacing: -0.01em; text-wrap: pretty; max-width: 34ch; }
@@ -273,7 +273,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3 { text-transform: uppercase; }
   counter-increment: h2;
   margin-top: 2.2em;
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 800;
   font-stretch: 78%;
   font-size: clamp(1.9rem, 3vw, 2.75rem);
   line-height: 0.96;
@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3 { text-transform: uppercase; }
   font: 750 0.75rem / 1 var(--font-text);
   letter-spacing: 0.06em;
 }
-.prose-play h3, .prose-play h4 { margin-top: 1.8em; font-family: var(--font-display); font-weight: 850; font-stretch: 85%; font-size: clamp(1.35rem, 1.8vw, 1.625rem); line-height: 1.1; }
+.prose-play h3, .prose-play h4 { margin-top: 1.8em; font-family: var(--font-display); font-weight: 750; font-stretch: 85%; font-size: clamp(1.35rem, 1.8vw, 1.625rem); line-height: 1.1; }
 .prose-play h2 + *, .prose-play h3 + *, .prose-play h4 + * { margin-top: 0.7em; }
 .prose-play strong, .prose-play b { font-weight: 720; }
 .prose-play a { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); text-decoration-thickness: 0.18em; text-underline-offset: 0.18em; font-weight: 600; padding-block: 0.16em; transition: background-color var(--d-small), text-decoration-color var(--d-small); }
@@ -319,8 +319,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3 { text-transform: uppercase; }
 .prose-play th { background: var(--cloud); font-weight: 720; }
 
 /* Full reviews: the review's own structure (labels, stat lines, severities, fact lists) in this site's type */
-.prose-review h3 { margin-top: 2.2em; font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.75rem, 2.8vw, 2.5rem); line-height: 0.96; text-transform: uppercase; text-wrap: balance; }
-.prose-review h4 { margin-top: 1.8em; font-family: var(--font-display); font-weight: 850; font-stretch: 85%; font-size: clamp(1.3rem, 1.8vw, 1.6rem); line-height: 1.08; }
+.prose-review h3 { margin-top: 2.2em; font-family: var(--font-display); font-weight: 800; font-stretch: 78%; font-size: clamp(1.75rem, 2.8vw, 2.5rem); line-height: 0.96; text-transform: uppercase; text-wrap: balance; }
+.prose-review h4 { margin-top: 1.8em; font-family: var(--font-display); font-weight: 750; font-stretch: 85%; font-size: clamp(1.3rem, 1.8vw, 1.6rem); line-height: 1.08; }
 .prose-review h5 { margin-top: 1.2em; font-weight: 750; font-size: 1.0625rem; line-height: 1.3; }
 .prose-review li > h5:first-child { margin-top: 0; }
 .prose-review li > h5 + p { margin-top: 0.3em; }

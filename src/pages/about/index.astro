@@ -167,7 +167,7 @@ const accentFrom = 9; // "work better." — the last two of the eleven words
   /* Mousa's line across the whole width: three lines, the type sized so the longest ("that work, then I make")
      fills the column (container units); phones let the words wrap. */
   .statement { padding-block: var(--s-7) var(--s-8); container-type: inline-size; }
-  .statement__t { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(2.4rem, 12vw, 5.5rem); line-height: 0.86; letter-spacing: -0.01em; text-transform: uppercase; user-select: none; }
+  .statement__t { font-family: var(--font-display); font-weight: 800; font-stretch: 75%; font-size: clamp(2.4rem, 12vw, 5.5rem); line-height: 0.86; letter-spacing: -0.01em; text-transform: uppercase; user-select: none; }
   .statement__line { display: inline; }
   .statement__w { display: inline-block; white-space: nowrap; }
   .statement__w--accent { color: var(--accent); }
@@ -208,7 +208,7 @@ const accentFrom = 9; // "work better." — the last two of the eleven words
   .method li.is-dark { background: var(--accent); color: #fff; --glow: rgb(255 255 255 / 0.12); }
   .method li.is-dark .method__n { background: #fff; color: var(--ink); }
   .method__n { justify-self: start; padding: 5px 10px; border-radius: var(--r-pill); background: var(--ink); color: #fff; font: 750 0.8125rem / 1 var(--font-text); }
-  .method__title { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: var(--t-h3); line-height: 0.92; text-transform: uppercase; }
+  .method__title { font-family: var(--font-display); font-weight: 800; font-stretch: 75%; font-size: var(--t-h3); line-height: 0.92; text-transform: uppercase; }
   .method__text { font-weight: 500; }
   .workflow { display: grid; gap: 8px; }
   .workflow li { display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; align-items: baseline; padding: 14px 18px; border-radius: var(--r-m); background: var(--cloud); }
@@ -218,7 +218,7 @@ const accentFrom = 9; // "work better." — the last two of the eleven words
   .svc { display: grid; gap: 12px; }
   .svc li { display: grid; gap: 8px; padding: clamp(20px, 2.2vw, 30px); border-radius: var(--r-xl); background: var(--bg); color: var(--ink); }
   .svc__n { justify-self: start; font: 750 0.8125rem / 1 var(--font-text); padding: 5px 10px; border-radius: var(--r-pill); background: #fff; }
-  .svc__t { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: var(--t-h3); line-height: 0.95; text-transform: uppercase; }
+  .svc__t { font-family: var(--font-display); font-weight: 800; font-stretch: 78%; font-size: var(--t-h3); line-height: 0.95; text-transform: uppercase; }
   .svc__d { max-width: 56ch; font-weight: 500; }
   .svc__tools { display: flex; flex-wrap: wrap; gap: 6px; }
   .svc__tools span { padding: 5px 10px; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.7); font: 650 0.8125rem / 1.2 var(--font-text); }
@@ -245,7 +245,7 @@ const accentFrom = 9; // "work better." — the last two of the eleven words
   .about__skills .skills__group--sky .skills__icon :global(.sticker) { --tile: var(--iris-deep); --stroke: #fff; --acc: var(--blue-pale); }
   .about__skills .skills__group--iris .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--iris-deep); }
   .about__skills .skills__group--red .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--red); }
-  .skills__title { font-family: var(--font-display); font-weight: 900; font-stretch: 80%; font-size: var(--t-h3); line-height: 1; text-transform: uppercase; margin-bottom: 14px; }
+  .skills__title { font-family: var(--font-display); font-weight: 800; font-stretch: 80%; font-size: var(--t-h3); line-height: 1; text-transform: uppercase; margin-bottom: 14px; }
   .skills__group ul { display: flex; flex-wrap: wrap; gap: 6px; }
   .skills__group li { padding: 6px 11px; border-radius: var(--r-pill); background: #fff; color: var(--ink); font-size: 0.875rem; font-weight: 600; transition: background-color var(--d-small), color var(--d-small), translate 0.4s var(--ease-pop); }
   .skills__group--white li { background: var(--cloud); }
@@ -286,9 +286,9 @@ const accentFrom = 9; // "work better." — the last two of the eleven words
   .about__courses .degree__icon :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); background: linear-gradient(150deg, #4d6bff, var(--accent) 45%, var(--accent-deep)); box-shadow: 0 18px 36px -16px rgb(43 77 224 / 0.7); }
   .degree__text { display: grid; gap: 6px; }
   .degree__kicker { font: 750 var(--t-label) / 1 var(--font-text); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-soft); }
-  .degree__title { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: var(--t-h3); line-height: 1; text-transform: uppercase; }
+  .degree__title { font-family: var(--font-display); font-weight: 800; font-stretch: 78%; font-size: var(--t-h3); line-height: 1; text-transform: uppercase; }
   .degree__school { color: var(--night-ink-2); font-weight: 550; }
-  .courses__t { font-family: var(--font-display); font-weight: 900; font-stretch: 82%; font-size: var(--t-h3); line-height: 1.05; text-transform: uppercase; }
+  .courses__t { font-family: var(--font-display); font-weight: 800; font-stretch: 82%; font-size: var(--t-h3); line-height: 1.05; text-transform: uppercase; }
   .courses__i { justify-self: start; padding: 4px 9px; border-radius: var(--r-pill); background: var(--grey-1); color: var(--accent-deep); font: 700 0.75rem / 1.2 var(--font-text); }
   .courses__d { color: var(--ink-2); font-size: var(--t-small); }
   .about__checked { margin-top: var(--s-6); font-size: 0.875rem; font-weight: 600; color: var(--fg-2); }
