@@ -1,0 +1,900 @@
+<title>ShelfMark Index</title>
+<meta name="description" content="ShelfMark scores 21 Michigan e-commerce storefronts on 29 public-page checks across findability, catalog, buy path, trust and content. Every score carries its evidence.">
+<meta property="og:title" content="ShelfMark — Michigan Storefront Benchmark, Vol. 1">
+<meta property="og:description" content="21 Michigan storefronts, 29 checks, one score each. A public benchmark by Moses Batarseh.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23111417'/%3E%3Crect x='7' y='17' width='4' height='8' fill='%23F3F4F1'/%3E%3Crect x='14' y='11' width='4' height='14' fill='%23F3F4F1'/%3E%3Crect x='21' y='6' width='4' height='19' fill='%231E45E8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F3F4F1; --paper-2:#E8EBE7; --paper-3:#DDE1DC;
+  --ink:#111417; --ink-2:#4B535A; --ink-3:#858D94;
+  --line:#C3C9CB; --line-2:#D9DEDE;
+  --accent:#1E45E8; --accent-ink:#FFFFFF; --accent-soft:#DFE5FB;
+  --font-display:"Big Shoulders Display","Arial Narrow","Helvetica Neue",Impact,sans-serif;
+  --font-body:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --gutter:clamp(16px,4vw,48px);
+  --max:1320px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1113; --paper-2:#161A1D; --paper-3:#1F2529;
+    --ink:#ECEFEA; --ink-2:#AAB2B8; --ink-3:#737C83;
+    --line:#333B40; --line-2:#242B2F;
+    --accent:#7C99FF; --accent-ink:#0B1020; --accent-soft:#1B2545;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1113; --paper-2:#161A1D; --paper-3:#1F2529;
+  --ink:#ECEFEA; --ink-2:#AAB2B8; --ink-3:#737C83;
+  --line:#333B40; --line-2:#242B2F;
+  --accent:#7C99FF; --accent-ink:#0B1020; --accent-soft:#1B2545;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);font-size:17px;line-height:1.55;
+  font-feature-settings:"kern","liga";-webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--accent);color:var(--accent-ink)}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+img,svg{max-width:100%;display:block}
+h1,h2,h3,h4{margin:0;font-weight:inherit}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.display{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.005em;line-height:.92}
+.eyebrow{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 12px;z-index:100;border-radius:3px}
+.skip:focus{left:12px}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- masthead ---------- */
+.mast{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.mast .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
+.brand b{font-family:var(--font-display);font-weight:800;font-size:28px;text-transform:uppercase;letter-spacing:.01em;line-height:1}
+.brand span{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:var(--ink-2)}
+.nav{display:flex;align-items:center;gap:6px}
+.nav a{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:8px 10px;border-radius:3px;color:var(--ink-2);transition:color .2s,background .2s}
+.nav a:hover,.nav a.on{color:var(--ink);background:var(--paper-2)}
+.iconbtn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid var(--line);border-radius:3px;color:var(--ink);transition:background .2s,border-color .2s}
+.iconbtn:hover{background:var(--paper-2);border-color:var(--ink-3)}
+.iconbtn svg{width:16px;height:16px}
+.burger{display:none}
+.progress{height:2px;background:var(--line-2)}
+.progress i{display:block;height:100%;width:0;background:var(--accent);transition:width .1s linear}
+.overlay{position:fixed;inset:0;background:var(--paper);z-index:60;display:none;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 20px) var(--gutter) 40px}
+.overlay.open{display:flex}
+.overlay .top{display:flex;justify-content:space-between;align-items:center;height:40px}
+.overlay nav{display:flex;flex-direction:column;gap:4px;margin-top:40px}
+.overlay nav a{font-family:var(--font-display);font-size:clamp(44px,12vw,72px);text-transform:uppercase;text-decoration:none;line-height:1;padding:8px 0;display:flex;justify-content:space-between;align-items:baseline}
+.overlay nav a small{font-family:var(--font-mono);font-size:12px;color:var(--ink-3);letter-spacing:.1em}
+.overlay .foot{margin-top:auto;font-family:var(--font-mono);font-size:12px;color:var(--ink-3);letter-spacing:.06em}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(40px,7vw,96px) clamp(40px,6vw,80px)}
+.hero .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);align-items:start;margin-top:clamp(28px,4vw,56px)}
+.hero h1{font-size:clamp(56px,8.6vw,132px);margin-top:18px}
+.hero h1 .l{display:block;overflow:hidden}
+.hero h1 .l span{display:block;transform:translateY(0)}
+.hero .lede{max-width:56ch;font-size:clamp(17px,1.35vw,20px);color:var(--ink-2)}
+.hero .lede b{color:var(--ink);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid var(--ink);border-radius:3px;text-decoration:none;font-family:var(--font-mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,color .2s,transform .2s,border-color .2s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.accent{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.accent:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn svg{width:14px;height:14px}
+.board{border:1px solid var(--line);border-radius:4px;padding:18px 18px 14px;background:var(--paper)}
+.board .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:12px}
+.board .head .eyebrow{color:var(--ink)}
+.board ol{display:flex;flex-direction:column;gap:3px}
+.board li a{display:grid;grid-template-columns:28px minmax(0,150px) 1fr 48px;align-items:center;gap:12px;text-decoration:none;padding:3px 6px;border-radius:3px;font-size:13px;transition:background .15s}
+.board li a:hover{background:var(--paper-2)}
+.board .r{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
+.board .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}
+.board .bar{height:10px;background:var(--paper-2);border-radius:2px;position:relative;overflow:hidden}
+.board .bar i{position:absolute;inset:0;background:var(--ink);transform-origin:left center;transform:scaleX(var(--v));border-radius:2px}
+.board li.top .bar i{background:var(--accent)}
+.board .s{font-family:var(--font-display);font-weight:700;font-size:20px;text-align:right;line-height:1}
+.board .foot{margin-top:12px;display:flex;justify-content:space-between;gap:12px;font-family:var(--font-mono);font-size:11px;color:var(--ink-3);letter-spacing:.06em}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;margin-top:clamp(28px,4vw,44px)}
+.stats > div{background:var(--paper);padding:18px 20px 16px}
+.stats .v{font-family:var(--font-display);font-weight:700;font-size:clamp(40px,3.6vw,56px);line-height:1;font-variant-numeric:tabular-nums}
+.stats .k{margin-top:8px;font-size:13.5px;color:var(--ink-2)}
+
+/* ---------- sections ---------- */
+.section{padding-block:clamp(56px,8vw,120px)}
+.section.tint{background:var(--paper-2)}
+.section-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.section-head h2{font-size:clamp(46px,7vw,112px);margin-top:12px}
+.section-head p{color:var(--ink-2);max-width:52ch;font-size:clamp(16px,1.2vw,18px)}
+.rule{height:1px;background:var(--line)}
+
+/* ---------- index table ---------- */
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;border:1px solid var(--line);border-radius:3px;color:var(--ink-2);transition:all .15s}
+.chip:hover{border-color:var(--ink-3);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.field{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:3px;padding:0 10px;height:36px;background:var(--paper)}
+.field svg{width:14px;height:14px;color:var(--ink-3);flex:none}
+.field input,.field select{border:0;background:transparent;font:inherit;font-size:14px;color:var(--ink);min-width:0;height:100%;outline:none}
+.field input{width:190px}
+.field label{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
+.controls .spacer{flex:1}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--paper)}
+table.index{border-collapse:collapse;width:100%;min-width:860px}
+table.index th,table.index td{border:1px solid var(--line-2);padding:10px 12px;text-align:left;vertical-align:middle}
+table.index th{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:500;background:var(--paper-2);white-space:nowrap;user-select:none}
+table.index th button{display:inline-flex;align-items:center;gap:6px;font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit}
+table.index th button:hover{color:var(--ink)}
+table.index th.on button{color:var(--accent)}
+table.index th .arr{width:8px;height:8px;opacity:0;transition:transform .2s,opacity .2s}
+table.index th.on .arr{opacity:1}
+table.index th.on .arr{transform:rotate(180deg)}
+table.index th.on.desc .arr{transform:none}
+table.index tbody tr{cursor:pointer;transition:background .15s}
+table.index tbody tr:hover{background:var(--paper-2)}
+table.index tbody tr:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+td.rank{font-family:var(--font-mono);font-size:12px;color:var(--ink-3);width:44px;text-align:right}
+td.store .name{font-weight:600;font-size:15px;line-height:1.2}
+td.store .meta{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);margin-top:4px;letter-spacing:.02em}
+td.seg{font-size:13px;color:var(--ink-2);white-space:nowrap}
+td.p{width:84px}
+.pc{display:flex;flex-direction:column;gap:5px}
+.pc b{font-family:var(--font-mono);font-weight:500;font-size:12.5px}
+.pc b.u{color:var(--ink-3)}
+.pc i{display:block;height:3px;background:var(--paper-3);border-radius:2px;position:relative;overflow:hidden}
+.pc i::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:left;transform:scaleX(var(--v,0));border-radius:2px}
+td.score{width:116px;text-align:right}
+td.score b{font-family:var(--font-display);font-weight:700;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+td.grade{width:64px;text-align:center}
+.stamp{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:1.5px solid var(--ink);border-radius:3px;font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1}
+.stamp.gA{background:var(--ink);color:var(--paper)}
+.stamp.gF,.stamp.gD{border-style:dashed}
+.conf{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;color:var(--ink-3);text-transform:uppercase}
+.mobile-pillars{display:none}
+.empty{padding:32px;text-align:center;color:var(--ink-3);font-family:var(--font-mono);font-size:13px}
+.tablenote{margin-top:12px;font-family:var(--font-mono);font-size:11.5px;color:var(--ink-3);letter-spacing:.03em;line-height:1.6}
+
+/* ---------- findings ---------- */
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.fact{background:var(--paper);padding:26px 26px 24px;display:flex;flex-direction:column;gap:12px;min-height:220px}
+.fact .big{font-family:var(--font-display);font-weight:700;font-size:clamp(56px,6vw,92px);line-height:.9;font-variant-numeric:tabular-nums}
+.fact .big small{font-size:.42em;font-weight:600;color:var(--ink-3);margin-left:6px}
+.fact p{font-size:15.5px;line-height:1.45;color:var(--ink);max-width:36ch}
+.fact .src{margin-top:auto;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.passrate{margin-top:clamp(32px,4vw,56px);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,4vw,64px);align-items:start}
+.passrate h3{font-size:clamp(28px,3vw,44px)}
+.passrate p{color:var(--ink-2);margin-top:12px;max-width:40ch;font-size:15.5px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:11px;height:11px;border:1.5px solid var(--ink);border-radius:2px;flex:none;background:transparent}
+.dot.s2{background:var(--ink)}
+.dot.s1{background:linear-gradient(135deg,var(--ink) 50%,transparent 50%)}
+.dot.sU{border-style:dashed;border-color:var(--ink-3)}
+.bars{display:flex;flex-direction:column;gap:6px}
+.brow{display:grid;grid-template-columns:36px minmax(0,190px) 1fr 108px;gap:12px;align-items:center;font-size:13px}
+.brow .id{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
+.brow .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brow .track{height:14px;background:var(--paper-3);border-radius:2px;position:relative;overflow:hidden}
+.brow .track i{position:absolute;inset:0;border-radius:2px}
+.brow .track .m{background:var(--ink);transform-origin:left;transform:scaleX(var(--v))}
+.brow .track .p{background:var(--ink-3);opacity:.45;transform-origin:left;transform:scaleX(var(--w));left:0}
+.brow .ct{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);text-align:right;white-space:nowrap}
+.brow.head{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;align-items:end}
+.brow.head .ct{white-space:normal;line-height:1.3}
+
+/* ---------- report cards ---------- */
+.cards{display:flex;flex-direction:column;gap:14px}
+.card{border:1px solid var(--line);border-radius:4px;background:var(--paper);transition:border-color .2s;scroll-margin-top:84px}
+.card:hover{border-color:var(--ink-3)}
+.card.open{border-color:var(--ink)}
+.card .hd{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:clamp(14px,2vw,28px);align-items:center;padding:clamp(18px,2.4vw,28px)}
+.card .rk{font-family:var(--font-display);font-weight:800;font-size:clamp(44px,5vw,72px);line-height:.85;color:var(--ink-3)}
+.card.open .rk,.card:hover .rk{color:var(--ink)}
+.card h3{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.2vw,44px);line-height:.95;text-transform:uppercase}
+.card h3 a{text-decoration:none}
+.card h3 a:hover{color:var(--accent)}
+.card .meta{margin-top:8px;font-family:var(--font-mono);font-size:11.5px;color:var(--ink-2);letter-spacing:.03em;display:flex;flex-wrap:wrap;gap:6px 14px}
+.card .sc{display:flex;align-items:center;gap:14px}
+.card .sc .v{font-family:var(--font-display);font-weight:800;font-size:clamp(48px,5vw,72px);line-height:.85;font-variant-numeric:tabular-nums;text-align:right}
+.card .sc .g{display:flex;flex-direction:column;align-items:center;gap:6px}
+.card .body{padding:0 clamp(18px,2.4vw,28px) clamp(18px,2.4vw,28px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(16px,3vw,48px)}
+.pillars{display:flex;flex-direction:column;gap:9px}
+.prow{display:grid;grid-template-columns:96px 1fr 44px;gap:12px;align-items:center}
+.prow .pn{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.prow .dots{display:flex;gap:5px;flex-wrap:wrap}
+.prow .pv{font-family:var(--font-mono);font-size:12.5px;text-align:right;font-weight:500}
+.prow .pv.u{color:var(--ink-3)}
+.fixfirst{display:flex;flex-direction:column;gap:8px}
+.fixfirst .eyebrow{color:var(--accent)}
+.fixfirst p{font-size:15px;line-height:1.45}
+.card .actions{display:flex;gap:8px;flex-wrap:wrap;padding:0 clamp(18px,2.4vw,28px) clamp(18px,2.4vw,28px)}
+.card .actions .btn{padding:9px 14px;font-size:11.5px}
+.card .more{display:grid;grid-template-rows:0fr;grid-template-columns:minmax(0,1fr);transition:grid-template-rows .45s var(--ease)}
+.card.open .more{grid-template-rows:1fr}
+.card .more > div{overflow:hidden;min-width:0}
+.detail{padding:0 clamp(18px,2.4vw,28px) clamp(18px,2.4vw,28px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(16px,3vw,48px)}
+.detail > *{min-width:0}
+.detail h4{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
+.detail ol{display:flex;flex-direction:column;gap:10px;counter-reset:n}
+.detail ol li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:14.5px;line-height:1.45}
+.detail ol li::before{counter-increment:n;content:counter(n);font-family:var(--font-mono);font-size:11px;color:var(--ink-3);padding-top:3px}
+.detail ol.fixes li::before{color:var(--accent);font-weight:600}
+.evidence{grid-column:1/-1}
+.evwrap{overflow-x:auto;border:1px solid var(--line-2);border-radius:3px}
+table.ev{border-collapse:collapse;width:100%;min-width:620px;font-size:13px}
+table.ev th,table.ev td{border:1px solid var(--line-2);padding:7px 10px;text-align:left;vertical-align:top}
+table.ev th{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:500;background:var(--paper-2)}
+table.ev td.i{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);white-space:nowrap}
+table.ev td.c{white-space:nowrap}
+table.ev td.e{color:var(--ink-2);line-height:1.4}
+table.ev tr.pillarhead td{background:var(--paper-2);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.sc-chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;font-weight:500}
+.pages{grid-column:1/-1;font-family:var(--font-mono);font-size:11.5px;color:var(--ink-2);line-height:1.7;word-break:break-all}
+.pages a{color:var(--ink-2)}
+.pages a:hover{color:var(--accent)}
+.note{grid-column:1/-1;font-size:13.5px;color:var(--ink-2);line-height:1.5}
+
+/* ---------- method ---------- */
+.method{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,80px)}
+.weights{display:flex;height:64px;gap:2px;border-radius:3px;overflow:hidden;margin-top:12px}
+.weights div{display:flex;align-items:flex-end;padding:8px;color:var(--paper);font-family:var(--font-display);font-weight:700;font-size:22px;line-height:1;background:var(--ink)}
+.weights div:nth-child(2){opacity:.86}.weights div:nth-child(3){opacity:.72}.weights div:nth-child(4){opacity:.58}.weights div:nth-child(5){opacity:.44}
+.plist{display:flex;flex-direction:column;gap:14px;margin-top:20px}
+.plist li{display:grid;grid-template-columns:40px 1fr;gap:12px}
+.plist .id{font-family:var(--font-display);font-weight:800;font-size:30px;line-height:1}
+.plist b{font-weight:600}
+.plist p{color:var(--ink-2);font-size:14.5px;margin-top:2px}
+.formula{margin-top:24px;border:1px solid var(--line);border-radius:3px;padding:16px 18px;font-family:var(--font-mono);font-size:12.5px;line-height:1.7;color:var(--ink);background:var(--paper)}
+.formula b{color:var(--accent);font-weight:500}
+.checks{border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.checks .row{display:grid;grid-template-columns:44px 170px 1fr;gap:12px;padding:10px 14px;font-size:13.5px;align-items:baseline}
+.checks .row + .row{box-shadow:0 -1px 0 var(--line-2)}
+.checks .row.ph{background:var(--paper-2);font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);grid-template-columns:1fr auto}
+.checks .id{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
+.checks .nm{font-weight:600}
+.checks .d{color:var(--ink-2)}
+.limits{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px 28px}
+.limits li{font-size:14.5px;color:var(--ink-2);line-height:1.5;padding-left:16px;position:relative}
+.limits li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;background:var(--ink);border-radius:1px}
+
+/* ---------- calculator ---------- */
+.calc{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,3vw,48px);align-items:start}
+.calc .form{display:flex;flex-direction:column;gap:22px}
+.cgroup h4{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px}
+.cgroup h4 span{color:var(--ink-3)}
+.crow{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 0}
+.crow + .crow{box-shadow:0 -1px 0 var(--line-2)}
+.crow .id{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
+.crow .nm{font-size:14.5px;font-weight:500;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.help{width:18px;height:18px;border:1px solid var(--line);border-radius:50%;font-family:var(--font-mono);font-size:10px;color:var(--ink-3);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.help:hover{border-color:var(--ink);color:var(--ink)}
+.crow .tip{grid-column:2/-1;font-size:13px;color:var(--ink-2);line-height:1.45;display:none;padding:4px 0 2px}
+.crow.tipon .tip{display:block}
+.segctl{display:flex;gap:4px}
+.segctl button{width:34px;height:30px;border:1px solid var(--line);border-radius:3px;font-family:var(--font-mono);font-size:12px;color:var(--ink-2);transition:all .15s}
+.segctl button:hover{border-color:var(--ink);color:var(--ink)}
+.segctl button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.segctl button.u[aria-pressed="true"]{background:transparent;color:var(--ink);border-style:dashed}
+.result{position:sticky;top:84px;border:1px solid var(--ink);border-radius:4px;padding:22px;background:var(--paper);display:flex;flex-direction:column;gap:18px}
+.result .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.result .bigv{font-family:var(--font-display);font-weight:800;font-size:clamp(72px,8vw,112px);line-height:.85;font-variant-numeric:tabular-nums;color:var(--accent)}
+.result .bigv small{font-size:.28em;color:var(--ink-3);font-weight:600;margin-left:4px}
+.result .rankline{font-size:14.5px;color:var(--ink-2)}
+.result .rankline b{color:var(--ink);font-weight:600}
+.rbars{display:flex;flex-direction:column;gap:9px}
+.rbar{display:grid;grid-template-columns:86px 1fr 40px;gap:10px;align-items:center;font-family:var(--font-mono);font-size:11.5px}
+.rbar .l{color:var(--ink-2);letter-spacing:.06em;text-transform:uppercase}
+.rbar .t{height:10px;background:var(--paper-2);border-radius:2px;position:relative;overflow:hidden}
+.rbar .t i{position:absolute;inset:0;background:var(--accent);transform-origin:left;transform:scaleX(var(--v));border-radius:2px;transition:transform .5s var(--ease)}
+.rbar .t em{position:absolute;top:0;bottom:0;left:0;width:2px;background:var(--ink);transform:translateX(var(--x));transition:transform .5s var(--ease)}
+.rbar .v{text-align:right}
+.dist{margin-top:4px}
+.dist .track{position:relative;height:38px;border:1px solid var(--line-2);border-radius:3px;background:var(--paper)}
+.dist .tick{position:absolute;top:8px;bottom:8px;width:2px;background:var(--ink-3);opacity:.6;border-radius:1px}
+.dist .you{position:absolute;top:2px;bottom:2px;width:3px;background:var(--accent);border-radius:1px;transition:left .5s var(--ease)}
+.dist .lbl{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-3);margin-top:5px;letter-spacing:.06em}
+.result .btns{display:flex;flex-wrap:wrap;gap:8px}
+.result .btns .btn{padding:9px 13px;font-size:11.5px}
+.pitch{margin-top:clamp(28px,4vw,48px);border:1px solid var(--line);border-radius:4px;padding:clamp(20px,3vw,32px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.pitch h3{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3vw,42px);text-transform:uppercase;line-height:.95}
+.pitch p{color:var(--ink-2);margin-top:8px;max-width:56ch;font-size:15px}
+.copyrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.copyrow code{font-family:var(--font-mono);font-size:13px;border:1px solid var(--line);border-radius:3px;padding:9px 12px;background:var(--paper);user-select:all}
+
+/* ---------- author ---------- */
+.author{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,80px);align-items:start}
+.author h2{font-size:clamp(46px,6vw,96px)}
+.author p{color:var(--ink-2);max-width:58ch;margin-top:18px;font-size:16.5px}
+.author p b{color:var(--ink);font-weight:600}
+.author .links{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+.author .links a{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;padding:16px 0;font-family:var(--font-mono);font-size:13px;letter-spacing:.04em}
+.author .links a + a{box-shadow:0 -1px 0 var(--line)}
+.author .links a span{color:var(--ink-3);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.author .links a:hover{color:var(--accent)}
+footer{padding-block:32px 48px;font-family:var(--font-mono);font-size:11.5px;color:var(--ink-3);line-height:1.7;letter-spacing:.02em}
+footer .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px}
+footer a{color:var(--ink-2);text-decoration:none}
+footer a:hover{color:var(--accent)}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translate(-50%,20px);background:var(--ink);color:var(--paper);font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;padding:10px 14px;border-radius:3px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:70}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- motion ---------- */
+.hero h1 .l span{transition:transform .9s var(--ease)}
+.hero.boot h1 .l span{transform:translateY(110%)}
+.hero.boot .board li{opacity:0}
+.hero.boot .board .bar i{transform:scaleX(0)}
+.hero.boot .stats > div{opacity:0}
+.board .bar i{transition:transform 1s var(--ease)}
+.board li,.stats > div{transition:opacity .5s var(--ease)}
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion:no-preference){
+    .fact,.card,.brow,.plist li,.checks .row,.cgroup,.section-head{animation:rise 1s var(--ease) both;animation-timeline:view();animation-range:entry 0% entry 30%}
+    .pc i::after,.brow .track i.m{animation:grow 1s var(--ease) both;animation-timeline:view();animation-range:entry 0% entry 55%}
+    .brow .track i.p{animation:growp 1s var(--ease) both;animation-timeline:view();animation-range:entry 0% entry 55%}
+    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(var(--v,1))}}
+    @keyframes growp{from{transform:scaleX(0)}to{transform:scaleX(var(--w,1))}}
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .hero.boot h1 .l span{transform:none}
+  .hero.boot .board li,.hero.boot .stats > div{opacity:1}
+  .hero.boot .board .bar i{transform:scaleX(var(--v,1))}
+  *{transition-duration:.001ms!important;animation-duration:.001ms!important}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1040px){
+  .hero .grid{grid-template-columns:minmax(0,1fr)}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .passrate,.method,.calc,.author{grid-template-columns:minmax(0,1fr)}
+  .result{position:static}
+  .section-head{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .nav,.brand span{display:none}
+  .burger{display:inline-flex}
+  .hero h1{font-size:clamp(50px,14.5vw,84px)}
+  .stats .v{font-size:40px}
+  .board li a{grid-template-columns:24px minmax(0,1fr) 72px 40px}
+  .facts{grid-template-columns:1fr}
+  .fact{min-height:0}
+  table.index{min-width:0}
+  table.index th.hide,table.index td.hide{display:none}
+  td.score b{font-size:28px}
+  td.store .meta{display:none}
+  .mobile-pillars{display:flex;gap:4px;margin-top:8px}
+  .mobile-pillars i{display:block;height:4px;flex:1;background:var(--paper-3);border-radius:2px;position:relative;overflow:hidden}
+  .mobile-pillars i::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:left;transform:scaleX(var(--v,0))}
+  .mobile-pillars i.u::after{background:repeating-linear-gradient(90deg,var(--ink-3) 0 3px,transparent 3px 6px);transform:none}
+  .card .hd{grid-template-columns:44px minmax(0,1fr);gap:12px}
+  .card .sc{grid-column:1/-1;justify-content:space-between;padding-top:6px}
+  .card .body,.detail{grid-template-columns:minmax(0,1fr)}
+  .prow{grid-template-columns:78px 1fr 40px}
+  .brow{grid-template-columns:30px minmax(0,110px) 1fr 70px;gap:8px}
+  .brow .ct{font-size:10px}
+  .checks .row{grid-template-columns:36px 1fr;font-size:13px}
+  .checks .row .d{grid-column:2}
+  .limits{grid-template-columns:1fr}
+  .pitch{grid-template-columns:minmax(0,1fr)}
+  .crow{grid-template-columns:30px minmax(0,1fr)}
+  .crow .segctl{grid-column:2}
+  .segctl button{width:40px;height:34px}
+  footer .wrap{grid-template-columns:1fr}
+  .field input{width:140px}
+}
+</style>
+
+<a class="skip" href="#index">Skip to the index</a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<header class="mast">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="ShelfMark, back to top"><b>ShelfMark</b><span>MI · VOL. 1 · 09.2026</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#index">Index</a><a href="#findings">Findings</a><a href="#cards">Report cards</a><a href="#method">Method</a><a href="#score">Score your store</a><a href="#author">Author</a>
+    </nav>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="iconbtn" id="theme" aria-label="Switch color theme" title="Switch color theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+      </button>
+      <button class="iconbtn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="overlay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"><i id="prog"></i></div>
+</header>
+
+<div class="overlay" id="overlay" aria-hidden="true">
+  <div class="top">
+    <a class="brand" href="#top"><b>ShelfMark</b></a>
+    <button class="iconbtn" id="closeov" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <nav aria-label="Sections">
+    <a href="#index">Index <small>21 stores</small></a>
+    <a href="#findings">Findings <small>what the data says</small></a>
+    <a href="#cards">Report cards <small>evidence</small></a>
+    <a href="#method">Method <small>29 checks</small></a>
+    <a href="#score">Score yours <small>calculator</small></a>
+    <a href="#author">Author</a>
+  </nav>
+  <div class="foot">Michigan Storefront Benchmark · Vol. 1 · September 2026</div>
+</div>
+
+<main id="top">
+<section class="hero boot" id="hero">
+  <div class="wrap">
+    <p class="eyebrow">Michigan Storefront Benchmark — Vol. 1 · audited 28 Sep 2026</p>
+    <h1 class="display"><span class="l"><span>Twenty-one storefronts.</span></span><span class="l"><span>One score each.</span></span></h1>
+    <div class="grid">
+      <div class="left">
+        <p class="lede">ShelfMark scores real e-commerce sites on the <b>29 public-page checks</b> that decide whether a shopper can find a product, trust the store and buy it. Nothing is estimated: every point on this page links to the page it was observed on. Vol. 1 covers Michigan, from Detroit distributors to Upper Peninsula makers.</p>
+        <div class="hero-cta">
+          <a class="btn solid" href="#index">Read the index <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn" href="#score">Score your own store</a>
+        </div>
+        <div class="stats" id="stats"></div>
+      </div>
+      <div class="board" aria-label="The board: all 21 stores ranked by ShelfMark Score">
+        <div class="head"><span class="eyebrow">The board</span><span class="eyebrow">ShelfMark Score · 0–100</span></div>
+        <ol id="board"></ol>
+        <div class="foot"><span>Rank · store · score</span><span id="board-foot"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="index">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">The index</p><h2 class="display">Every store, every pillar</h2></div>
+      <p>Sort by any pillar, filter by segment, or search. A pillar score is the share of its checks the store met, counting only what could be verified from public pages. Click a row for the full report card.</p>
+    </div>
+    <div class="controls">
+      <div class="chips" id="segchips" role="group" aria-label="Filter by segment"></div>
+      <span class="spacer"></span>
+      <div class="field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search stores" aria-label="Search stores"></div>
+      <div class="field"><label for="sort">Sort</label><select id="sort">
+        <option value="score">Score</option><option value="F">Findability</option><option value="C">Catalog</option><option value="B">Buy</option><option value="T">Trust</option><option value="N">Content</option><option value="coverage">Coverage</option><option value="name">Name</option>
+      </select></div>
+    </div>
+    <div class="tablewrap">
+      <table class="index" id="table">
+        <thead><tr>
+          <th scope="col">#</th>
+          <th scope="col"><button data-k="name">Store <svg class="arr" viewBox="0 0 8 8" aria-hidden="true"><path d="M4 1v6M1 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button></th>
+          <th scope="col" class="hide">Segment</th>
+          <th scope="col" class="hide"><button data-k="F">Find <svg class="arr" viewBox="0 0 8 8" aria-hidden="true"><path d="M4 1v6M1 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button></th>
+          <th scope="col" class="hide"><button data-k="C">Catalog <svg class="arr" viewBox="0 0 8 8" aria-hidden="true"><path d="M4 1v6M1 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button></th>
+          <th scope="col" class="hide"><button data-k="B">Buy <svg class="arr" viewBox="0 0 8 8" aria-hidden="true"><path d="M4 1v6M1 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button></th>
+          <th scope="col" class="hide"><button data-k="T">Trust <svg class="arr" viewBox="0 0 8 8" aria-hidden="true"><path d="M4 1v6M1 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button></th>
+          <th scope="col" class="hide"><button data-k="N">Content <svg class="arr" viewBox="0 0 8 8" aria-hidden="true"><path d="M4 1v6M1 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button></th>
+          <th scope="col" class="on desc"><button data-k="score">Score <svg class="arr" viewBox="0 0 8 8" aria-hidden="true"><path d="M4 1v6M1 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button></th>
+          <th scope="col">Grade</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No store matches that search.</div>
+    </div>
+    <p class="tablenote" id="tablenote"></p>
+  </div>
+</section>
+
+<section class="section tint" id="findings">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">Findings</p><h2 class="display">What the data says</h2></div>
+      <p>Six patterns across the index, each computed from the 609 observations behind it. The pass-rate chart shows which of the 29 checks Michigan stores fail most often.</p>
+    </div>
+    <div class="facts" id="facts"></div>
+    <div class="passrate">
+      <div>
+        <h3 class="display">Pass rate by check</h3>
+        <p>Share of stores that fully met each check, worst first. The lighter segment adds stores that partly met it. Unverified observations are excluded from the rate and counted on the right.</p>
+        <div class="legend"><span><i class="dot s2"></i>Met</span><span><i class="dot s1"></i>Partly</span><span><i class="dot"></i>Failed</span><span><i class="dot sU"></i>Unverified</span></div>
+      </div>
+      <div class="bars" id="bars"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cards">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">Report cards</p><h2 class="display">The evidence</h2></div>
+      <p>One card per store, in rank order. Each pillar row shows its checks as squares: filled = met, half = partly, empty = failed, dashed = unverified. Open a card for three strengths, three fixes in priority order, and the observation behind every score.</p>
+    </div>
+    <div class="cards" id="cardlist"></div>
+  </div>
+</section>
+
+<section class="section tint" id="method">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">Method</p><h2 class="display">How a score is built</h2></div>
+      <p>Five pillars, weighted by how much they decide a sale. Twenty-nine checks, each scored 2, 1 or 0 against a fixed definition, or marked unverified when a public page could not show it.</p>
+    </div>
+    <div class="method">
+      <div>
+        <p class="eyebrow">Pillar weights</p>
+        <div class="weights" id="weights" aria-label="Pillar weights: Findability 25, Catalog 30, Buy 20, Trust 15, Content 10"></div>
+        <ol class="plist" id="plist"></ol>
+        <div class="formula" id="formula">
+          pillar % = <b>verified points</b> ÷ (2 × <b>verified checks</b>)<br>
+          ShelfMark Score = Σ (weight × pillar %) ÷ Σ weight, over pillars with ≥1 verified check<br>
+          coverage = verified checks ÷ 29 · confidence: High ≥ 26, Medium 20–25, Low &lt; 20<br>
+          grade: A ≥ 85 · B ≥ 70 · C ≥ 55 · D ≥ 40 · F below
+        </div>
+        <ul class="limits">
+          <li>Public pages only: homepage, robots.txt, sitemap, one category, two product pages, contact or about. No logins, no purchases.</li>
+          <li>Unverified never counts for or against a store. A client-rendered page or a bot challenge earns a U, not a guess.</li>
+          <li>Structured data (F7) is unverified for 20 of 21 stores because served HTML rarely exposes it to a fetcher; it stays in the rubric for hands-on audits.</li>
+          <li>Scores describe a snapshot on 28 Sep 2026. Stores change; corrections and re-audits are welcome.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:12px">The 29 checks — what earns a 2</p>
+        <div class="checks" id="checklist"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="score">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">Score your store</p><h2 class="display">Same rubric, your site</h2></div>
+      <p>Work through the 29 checks with your own site open. Tap 2, 1, 0, or U for anything you cannot verify. The score, grade and your place on the index update as you go. Nothing is sent anywhere; the page does the math.</p>
+    </div>
+    <div class="calc">
+      <div class="form" id="calcform"></div>
+      <aside class="result" aria-live="polite">
+        <div class="top">
+          <div>
+            <p class="eyebrow">Your ShelfMark Score</p>
+            <div class="bigv" id="r-score">—<small>/100</small></div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+            <span class="stamp" id="r-grade" aria-label="Grade">–</span>
+            <span class="conf" id="r-conf">coverage –</span>
+          </div>
+        </div>
+        <p class="rankline" id="r-rank">Score a few checks to see where you would land.</p>
+        <div class="rbars" id="r-bars"></div>
+        <div class="dist">
+          <div class="track" id="dist"></div>
+          <div class="lbl"><span>0</span><span id="dist-mid">index average</span><span>100</span></div>
+        </div>
+        <div class="field" style="height:38px"><label for="cmp">Compare with</label><select id="cmp"><option value="">— nobody —</option></select></div>
+        <div class="btns"><button class="btn" id="r-example">Load example</button><button class="btn" id="r-reset">Reset</button></div>
+      </aside>
+    </div>
+    <div class="pitch">
+      <div>
+        <h3>Want it done with evidence?</h3>
+        <p>I audit storefronts the way this index was built: every check scored against a fixed definition, every score tied to the page it came from, and the three fixes that move the number most. Email me and I will send your report card.</p>
+      </div>
+      <div class="copyrow"><code id="email">hireme@mousabatarseh.com</code><button class="btn" data-copy="hireme@mousabatarseh.com">Copy</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="author">
+  <div class="wrap">
+    <div class="author">
+      <div>
+        <p class="eyebrow">Who made this</p>
+        <h2 class="display">Moses Batarseh</h2>
+        <p><b>Webmaster and e-commerce specialist, Warren, Michigan.</b> Seven years as the sole webmaster and SEO lead for multi-location retail and wholesale companies: catalogs of 14,000+ SKUs on Shopify, WooCommerce and Wix, platform migrations with redirect maps, technical and on-page SEO, and reporting in Search Console and GA4 that ties fixes to outcomes.</p>
+        <p>ShelfMark is the rubric I use on real jobs, published so anyone can check the work. The scoring model is a spreadsheet: type 29 scores for any store and it returns the pillar percentages, the ShelfMark Score and where the store would rank. I am open to full-time e-commerce and webmaster roles.</p>
+      </div>
+      <div class="links">
+        <a href="https://mousabatarseh.com" target="_blank" rel="noopener">mousabatarseh.com <span>Portfolio</span></a>
+        <a href="https://www.linkedin.com/in/mousabatarseh" target="_blank" rel="noopener">linkedin.com/in/mousabatarseh <span>LinkedIn</span></a>
+        <a href="https://lab.mousabatarseh.com" target="_blank" rel="noopener">lab.mousabatarseh.com <span>The Lab · tools I built</span></a>
+        <a href="files/ShelfMark-Michigan-Storefront-Benchmark-2026.xlsx">ShelfMark scoring model (.xlsx) <span>Rubric · 609 observations · calculator</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>ShelfMark · Michigan Storefront Benchmark · Vol. 1 · Method v1.0 · Public pages fetched 28 Sep 2026.<br>Companies are named so every finding can be checked against its source page. ShelfMark is independent and not affiliated with any company listed. Corrections: <a href="#author">hireme@mousabatarseh.com</a></div>
+    <div>Pillars: Findability 25 · Catalog 30 · Buy 20 · Trust 15 · Content 10<br>© 2026 Moses Batarseh · <a href="https://mousabatarseh.com" target="_blank" rel="noopener">mousabatarseh.com</a></div>
+  </div>
+</footer>
+
+<script id="shelfmark-data" type="application/json">__DATA__</script>
+<script>
+(function(){
+"use strict";
+const D = JSON.parse(document.getElementById('shelfmark-data').textContent);
+const STORES = D.stores, CHECKS = D.checks, PILLARS = D.pillars;
+const byId = Object.fromEntries(CHECKS.map(c => [c.id, c]));
+const N = STORES.length;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = (s, r=document) => r.querySelector(s);
+const h = (tag, attrs={}, ...kids) => {
+  const el = document.createElement(tag);
+  for (const [k,v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === 'class') el.className = v;
+    else if (k === 'html') el.innerHTML = v;
+    else if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
+    else if (k === 'style') el.style.cssText = v;
+    else el.setAttribute(k, v === true ? '' : v);
+  }
+  for (const kid of kids.flat()) if (kid != null) el.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+  return el;
+};
+const fmt1 = n => n.toFixed(1);
+const pct = p => p == null ? '—' : Math.round(p*100) + '%';
+const gradeOf = s => s >= 85 ? 'A' : s >= 70 ? 'B' : s >= 55 ? 'C' : s >= 40 ? 'D' : 'F';
+const bandOf = {A:'Benchmark',B:'Strong',C:'Developing',D:'Needs work',F:'At risk'};
+const toast = (msg) => { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._t); t._t = setTimeout(()=>t.classList.remove('show'), 1800); };
+
+/* ---------- motion primitives ---------- */
+function countUp(el){ const end = +el.dataset.count, t0 = performance.now(), dur = 900; const step = t => { const k = Math.min(1, (t - t0)/dur), e = 1 - Math.pow(1-k, 3); el.textContent = fmt1(end*e); if (k < 1) requestAnimationFrame(step); else el.textContent = fmt1(end); }; requestAnimationFrame(step); }
+const io = new IntersectionObserver(entries => entries.forEach(en => { if (en.isIntersecting) { io.unobserve(en.target); if (en.target.dataset.count) countUp(en.target); } }), {rootMargin:'0px 0px -8% 0px', threshold: 0.2});
+function wakeBars(){}
+
+/* ---------- theme ---------- */
+const root = document.documentElement;
+try { const t = localStorage.getItem('shelfmark-theme'); if (t) root.setAttribute('data-theme', t); } catch(e){}
+$('#theme').addEventListener('click', () => {
+  const dark = root.getAttribute('data-theme') === 'dark' || (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+  const next = dark ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  try { localStorage.setItem('shelfmark-theme', next); } catch(e){}
+});
+
+/* ---------- menu ---------- */
+const ov = $('#overlay'), burger = $('#burger');
+const openMenu = (o) => { ov.classList.toggle('open', o); ov.setAttribute('aria-hidden', String(!o)); burger.setAttribute('aria-expanded', String(o)); document.body.style.overflow = o ? 'hidden' : ''; };
+burger.addEventListener('click', () => openMenu(true));
+$('#closeov').addEventListener('click', () => openMenu(false));
+ov.querySelectorAll('a').forEach(a => a.addEventListener('click', () => openMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') openMenu(false); });
+
+/* ---------- progress + active nav ---------- */
+const prog = $('#prog');
+const navLinks = [...document.querySelectorAll('.nav a')];
+const sections = navLinks.map(a => $(a.getAttribute('href')));
+const onScroll = () => {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  prog.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
+  let cur = -1; sections.forEach((s, i) => { if (s && s.getBoundingClientRect().top <= 120) cur = i; });
+  navLinks.forEach((a, i) => a.classList.toggle('on', i === cur));
+};
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+/* ---------- board ---------- */
+const board = $('#board');
+const ranked = [...STORES].sort((a,b) => a.rank - b.rank || b.coverage - a.coverage);
+ranked.forEach((s, i) => {
+  board.append(h('li', {class: i === 0 ? 'top' : '', style:`transition-delay:${reduce?0:i*45}ms`},
+    h('a', {href:'#card-'+s.slug, onclick: e => { e.preventDefault(); openCard(s.slug, true); }},
+      h('span', {class:'r'}, String(s.rank).padStart(2,'0')),
+      h('span', {class:'n'}, s.company),
+      h('span', {class:'bar', 'aria-hidden':'true'}, h('i', {style:`--v:${s.score/100};transition-delay:${reduce?0:120+i*45}ms`})),
+      h('span', {class:'s'}, fmt1(s.score)))));
+});
+const avg = STORES.reduce((a,s)=>a+s.score,0)/N;
+const sortedScores = STORES.map(s=>s.score).sort((a,b)=>a-b);
+const median = N%2 ? sortedScores[(N-1)/2] : (sortedScores[N/2-1]+sortedScores[N/2])/2;
+const verifiedTotal = STORES.reduce((a,s)=>a+s.verified,0);
+$('#board-foot').textContent = `Index average ${fmt1(avg)} · median ${fmt1(median)}`;
+const stats = $('#stats');
+[[fmt1(avg), 'Index average, out of 100'],
+ [STORES.filter(s=>s.grade==='A').length, 'Stores at grade A (85+)'],
+ [`${Math.round(sortedScores[N-1]-sortedScores[0])}`, `Point spread, best (${fmt1(sortedScores[N-1])}) to lowest (${fmt1(sortedScores[0])})`],
+ [`${Math.round(100*verifiedTotal/(29*N))}%`, `Observations verified: ${verifiedTotal} of ${29*N}`]
+].forEach(([v,k], i) => stats.append(h('div', {style:`transition-delay:${reduce?0:500+i*90}ms`}, h('div', {class:'v num'}, v), h('div', {class:'k'}, k))));
+
+/* ---------- index table ---------- */
+const segs = [...new Set(STORES.map(s=>s.segment))].sort();
+let seg = 'All', sortKey = 'score', sortDesc = true, query = '';
+const chips = $('#segchips');
+['All', ...segs].forEach(name => chips.append(h('button', {class:'chip', 'aria-pressed': String(name==='All'), onclick: (e) => { seg = name; chips.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', String(c.textContent===name))); renderTable(); }}, name)));
+$('#q').addEventListener('input', e => { query = e.target.value.trim().toLowerCase(); renderTable(); });
+$('#sort').addEventListener('change', e => { sortKey = e.target.value; sortDesc = sortKey !== 'name'; syncHeads(); renderTable(); });
+document.querySelectorAll('th button[data-k]').forEach(b => b.addEventListener('click', () => {
+  const k = b.dataset.k;
+  if (sortKey === k) sortDesc = !sortDesc; else { sortKey = k; sortDesc = k !== 'name'; }
+  $('#sort').value = ['score','F','C','B','T','N','coverage','name'].includes(k) ? k : 'score';
+  syncHeads(); renderTable();
+}));
+function syncHeads(){ document.querySelectorAll('th').forEach(th => { const b = th.querySelector('button'); th.classList.toggle('on', !!b && b.dataset.k === sortKey); th.classList.toggle('desc', !!b && b.dataset.k === sortKey && sortDesc); }); }
+const keyVal = (s, k) => k === 'score' ? s.score : k === 'name' ? s.company.toLowerCase() : k === 'coverage' ? s.coverage : (s.pillars[k].pct == null ? -1 : s.pillars[k].pct);
+const tbody = $('#tbody');
+function renderTable(){
+  let rows = STORES.filter(s => (seg === 'All' || s.segment === seg) && (!query || (s.company + ' ' + s.hq_city + ' ' + s.platform + ' ' + s.sells).toLowerCase().includes(query)));
+  rows.sort((a,b) => { const va = keyVal(a, sortKey), vb = keyVal(b, sortKey); if (va < vb) return sortDesc ? 1 : -1; if (va > vb) return sortDesc ? -1 : 1; return a.rank - b.rank; });
+  tbody.replaceChildren();
+  rows.forEach(s => {
+    const tr = h('tr', {tabindex:'0', 'data-slug': s.slug, onclick: () => openCard(s.slug, true), onkeydown: e => { if (e.key==='Enter'||e.key===' ') { e.preventDefault(); openCard(s.slug, true); } }});
+    tr.append(h('td', {class:'rank num'}, String(s.rank)));
+    tr.append(h('td', {class:'store'}, h('div', {class:'name'}, s.company), h('div', {class:'meta'}, `${s.hq_city} · ${s.platform}`),
+      h('div', {class:'mobile-pillars', 'aria-hidden':'true'}, ...PILLARS.map(p => h('i', {class: s.pillars[p.id].pct == null ? 'u' : '', style:`--v:${s.pillars[p.id].pct ?? 0}`})))));
+    tr.append(h('td', {class:'seg hide'}, s.segment));
+    PILLARS.forEach(p => { const v = s.pillars[p.id].pct; tr.append(h('td', {class:'p hide'}, h('div', {class:'pc', title:`${p.name}: ${s.pillars[p.id].pts} of ${s.pillars[p.id].max} verified points`}, h('b', {class: v==null?'u':''}, v==null ? 'n/a' : pct(v)), h('i', {style:`--v:${v ?? 0}`})))); });
+    tr.append(h('td', {class:'score'}, h('b', {}, fmt1(s.score)), h('div', {class:'conf'}, `${s.confidence} · ${Math.round(s.coverage*100)}%`)));
+    tr.append(h('td', {class:'grade'}, h('span', {class:'stamp g'+s.grade, title: bandOf[s.grade]}, s.grade)));
+    tbody.append(tr);
+  });
+  $('#empty').hidden = rows.length > 0;
+  $('#tablenote').textContent = `${rows.length} of ${N} stores shown. Score confidence: High = 26+ of 29 checks verified, Medium = 20–25, Low = under 20. n/a = no check in that pillar could be verified.`;
+  wakeBars(tbody);
+}
+syncHeads(); renderTable();
+
+/* ---------- findings ---------- */
+const count = (id, v) => STORES.filter(s => s.checks[id].s === v).length;
+const segAvg = name => { const r = STORES.filter(s=>s.segment===name); return r.reduce((a,s)=>a+s.score,0)/r.length; };
+const platAvg = name => { const r = STORES.filter(s=>s.platform===name); return r.length ? [r.reduce((a,s)=>a+s.score,0)/r.length, r.length] : [null,0]; };
+const pillarAvg = p => { const r = STORES.filter(s=>s.pillars[p].pct!=null); return 100*r.reduce((a,s)=>a+s.pillars[p].pct,0)/r.length; };
+const facts = $('#facts');
+const b2b = segAvg('Wholesale / B2B'), brand = segAvg('Brand & maker');
+const [shop, nShop] = platAvg('Shopify'), [cust, nCust] = platAvg('Custom'), [mag, nMag] = platAvg('Magento');
+const noBlog = count('N1',0), fresh = count('N1',2), stale = count('N1',1);
+const trustBoth = count('B5',2), trustNone = count('B5',0), trustOne = count('B5',1);
+const bc = count('C6',2), bcNone = count('C6',0);
+const filt = count('C7',2), filtV = N - count('C7','U');
+const meta2 = count('F5',2), metaV = N - count('F5','U');
+const F = [
+  [`${Math.round(brand-b2b)}<small>pts</small>`, `Brands & makers average ${fmt1(brand)}. Wholesale distributors average ${fmt1(b2b)}. The gap is the public catalog: most B2B sites list category names and no products, prices or specs.`, 'Segment averages'],
+  [`${trustBoth}<small>of ${N}</small>`, `Only ${trustBoth} stores pair customer reviews with a guarantee or badge. ${trustOne} show one or the other; ${trustNone} show neither on the product page.`, 'B5 · trust signals'],
+  [`${fresh}<small>of ${N}</small>`, `${fresh} stores published a dated post in the last 90 days. ${stale} keep a blog that has gone quiet, and ${noBlog} have no news or blog page at all.`, 'N1 · blog freshness'],
+  [`${bc}<small>of ${N}</small>`, `${bc} stores show breadcrumbs on category and product pages. ${bcNone} have a flat catalog with no visible tree; the rest have categories with no trail.`, 'C6 · taxonomy & breadcrumbs'],
+  [`${fmt1(shop)}<small>avg</small>`, `Shopify stores (${nShop}) average ${fmt1(shop)}. Custom-built stores (${nCust}) average ${fmt1(cust)}, Magento (${nMag}) ${fmt1(mag)}. The platform sets the floor; the merchandising team sets the score.`, 'By platform'],
+  [`${Math.round(pillarAvg('T'))}<small>vs ${Math.round(pillarAvg('C'))}</small>`, `Trust averages ${Math.round(pillarAvg('T'))}%, Catalog ${Math.round(pillarAvg('C'))}%. Stores are better at proving they exist than at describing what they sell: filters (${filt} of ${filtV}) and product-page meta descriptions (${meta2} of ${metaV}) are where most points go missing.`, 'Pillar averages'],
+];
+F.forEach(([big, text, src]) => facts.append(h('div', {class:'fact reveal'}, h('div', {class:'big', html: big}), h('p', {}, text), h('div', {class:'src'}, src))));
+const bars = $('#bars');
+bars.append(h('div', {class:'brow head'}, h('span', {}, 'ID'), h('span', {}, 'Check'), h('span', {}, 'Share of stores'), h('span', {class:'ct'}, 'met · partly · failed · unv.')));
+const rates = CHECKS.map(c => { const m = count(c.id,2), p = count(c.id,1), f = count(c.id,0), u = count(c.id,'U'); const v = m+p+f; return {c, m, p, f, u, v, rate: v ? m/v : 0, prate: v ? (m+p)/v : 0}; }).sort((a,b) => a.rate - b.rate || b.f - a.f);
+rates.forEach((r, i) => bars.append(h('div', {class:'brow', style:`--i:${i}`},
+  h('span', {class:'id'}, r.c.id), h('span', {class:'nm', title:r.c.name}, r.c.name),
+  h('span', {class:'track', 'aria-label':`${r.c.name}: ${r.m} met, ${r.p} partly, ${r.f} failed, ${r.u} unverified`},
+    h('i', {class:'p', style:`--w:${r.prate};transition-delay:${reduce?0:i*25}ms`}), h('i', {class:'m', style:`--v:${r.rate};transition-delay:${reduce?0:i*25}ms`})),
+  h('span', {class:'ct'}, `${r.m} · ${r.p} · ${r.f} · ${r.u}`))));
+
+/* ---------- report cards ---------- */
+const list = $('#cardlist');
+const dotFor = (s, c, v) => h('span', {class:'dot s'+v, role:'img', title:`${c.id} ${c.name} — ${v==='U'?'unverified':v+' of 2'}: ${s.checks[c.id].e}`, 'aria-label':`${c.name}: ${v==='U'?'unverified':v+' of 2'}`});
+function cardFor(s){
+  const meta = h('div', {class:'meta'}, h('span', {}, s.hq_city), h('span', {}, s.segment), h('span', {}, s.platform), h('span', {}, s.sells), h('span', {}, 'audited ' + s.audited_at));
+  const pil = h('div', {class:'pillars'});
+  PILLARS.forEach(p => { const P = s.pillars[p.id]; pil.append(h('div', {class:'prow'}, h('span', {class:'pn'}, p.name),
+    h('div', {class:'dots'}, ...CHECKS.filter(c=>c.pillar===p.id).map(c => dotFor(s, c, s.checks[c.id].s))),
+    h('span', {class:'pv num'+(P.pct==null?' u':'')}, P.pct==null ? 'n/a' : pct(P.pct)))); });
+  const ev = h('table', {class:'ev'}, h('thead', {}, h('tr', {}, h('th', {}, 'ID'), h('th', {}, 'Check'), h('th', {}, 'Score'), h('th', {}, 'Observed'))));
+  const tb = h('tbody'); ev.append(tb);
+  PILLARS.forEach(p => { tb.append(h('tr', {class:'pillarhead'}, h('td', {colspan:'4'}, `${p.name} · ${s.pillars[p.id].pts} / ${s.pillars[p.id].max} verified points · weight ${p.weight}`)));
+    CHECKS.filter(c=>c.pillar===p.id).forEach(c => { const v = s.checks[c.id].s; tb.append(h('tr', {}, h('td', {class:'i'}, c.id), h('td', {class:'c'}, c.name), h('td', {class:'c'}, h('span', {class:'sc-chip'}, h('i', {class:'dot s'+v}), v==='U'?'U':v+'/2')), h('td', {class:'e'}, s.checks[c.id].e))); }); });
+  const pages = h('div', {class:'pages'}, h('h4', {}, 'Pages sampled'), ...['category','product1','product2'].filter(k => s.sample_urls[k]).map(k => h('div', {}, `${k === 'category' ? 'Category' : 'Product'}: `, h('a', {href:s.sample_urls[k], target:'_blank', rel:'noopener'}, s.sample_urls[k]))), h('div', {}, 'Platform evidence: ' + s.platform_evidence));
+  const card = h('article', {class:'card', id:'card-'+s.slug},
+    h('div', {class:'hd'},
+      h('div', {class:'rk num', 'aria-label':'Rank '+s.rank}, String(s.rank).padStart(2,'0')),
+      h('div', {}, h('h3', {}, h('a', {href:s.url, target:'_blank', rel:'noopener', title:'Open '+s.url}, s.company)), meta),
+      h('div', {class:'sc'}, h('div', {class:'v num', 'data-count':s.score}, fmt1(s.score)), h('div', {class:'g'}, h('span', {class:'stamp g'+s.grade, title:bandOf[s.grade]}, s.grade), h('span', {class:'conf'}, s.confidence)))),
+    h('div', {class:'body'}, pil, h('div', {class:'fixfirst'}, h('span', {class:'eyebrow'}, 'Fix first'), h('p', {}, s.fixes[0]))),
+    h('div', {class:'actions'},
+      h('button', {class:'btn', 'aria-expanded':'false', 'aria-controls':'more-'+s.slug, onclick: () => toggleCard(card)}, h('span', {class:'lbl'}, 'Open report card')),
+      h('button', {class:'btn', onclick: () => copy(location.href.split('#')[0] + '#card-' + s.slug)}, 'Copy link'),
+      h('a', {class:'btn', href:s.url, target:'_blank', rel:'noopener'}, 'Visit site')),
+    h('div', {class:'more', id:'more-'+s.slug}, h('div', {},
+      h('div', {class:'detail'},
+        h('div', {}, h('h4', {}, 'Strengths'), h('ol', {}, ...s.strengths.map(t => h('li', {}, h('span', {}, t))))),
+        h('div', {}, h('h4', {}, 'Fixes, in order'), h('ol', {class:'fixes'}, ...s.fixes.map(t => h('li', {}, h('span', {}, t))))),
+        h('div', {class:'evidence'}, h('h4', {}, `All 29 observations · ${s.verified} verified · ${s.confidence.toLowerCase()} confidence`), h('div', {class:'evwrap'}, ev)),
+        pages,
+        s.notes ? h('div', {class:'note'}, h('h4', {}, 'Auditor note'), s.notes) : null))));
+  return card;
+}
+ranked.forEach(s => list.append(cardFor(s)));
+function toggleCard(card, force){
+  const open = force == null ? !card.classList.contains('open') : force;
+  card.classList.toggle('open', open);
+  const b = card.querySelector('[aria-expanded]'); b.setAttribute('aria-expanded', String(open)); b.querySelector('.lbl').textContent = open ? 'Close report card' : 'Open report card';
+}
+function openCard(slug, scroll){
+  const card = document.getElementById('card-'+slug); if (!card) return;
+  toggleCard(card, true);
+  if (scroll) { card.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'start'}); history.replaceState(null, '', '#card-'+slug); }
+}
+if (location.hash && location.hash.startsWith('#card-')) setTimeout(() => openCard(location.hash.slice(6), true), 300);
+
+/* ---------- method ---------- */
+const w = $('#weights'); PILLARS.forEach(p => w.append(h('div', {style:`flex:${p.weight}`, title:`${p.name} ${p.weight}`}, p.weight)));
+const pl = $('#plist'); PILLARS.forEach(p => pl.append(h('li', {}, h('span', {class:'id'}, p.id), h('div', {}, h('b', {}, `${p.name} · weight ${p.weight}`), h('p', {}, p.question)))));
+const cl = $('#checklist');
+PILLARS.forEach(p => { cl.append(h('div', {class:'row ph'}, h('span', {}, p.name), h('span', {}, `${CHECKS.filter(c=>c.pillar===p.id).length} checks`)));
+  CHECKS.filter(c=>c.pillar===p.id).forEach(c => cl.append(h('div', {class:'row'}, h('span', {class:'id'}, c.id), h('span', {class:'nm'}, c.name), h('span', {class:'d'}, c.two)))); });
+
+/* ---------- calculator ---------- */
+const form = $('#calcform');
+const val = {}; CHECKS.forEach(c => val[c.id] = null);
+const example = {F1:2,F2:1,F3:2,F4:1,F5:0,F6:2,F7:'U',F8:2,C1:2,C2:1,C3:1,C4:2,C5:1,C6:1,C7:2,C8:2,B1:2,B2:1,B3:'U',B4:2,B5:1,T1:2,T2:1,T3:2,T4:2,T5:1,N1:0,N2:1,N3:2};
+PILLARS.forEach(p => {
+  const g = h('div', {class:'cgroup'}, h('h4', {}, h('span', {style:'color:var(--ink)'}, `${p.name}`), h('span', {}, `weight ${p.weight}`)));
+  CHECKS.filter(c=>c.pillar===p.id).forEach(c => {
+    const row = h('div', {class:'crow', id:'crow-'+c.id});
+    const tip = h('div', {class:'tip'}, h('b', {}, '2: '), c.two, ' ', h('b', {}, '1: '), c.one, ' ', h('b', {}, '0: '), c.zero);
+    const help = h('button', {class:'help', 'aria-label':'What earns each score for '+c.name, 'aria-expanded':'false', onclick: () => { const on = row.classList.toggle('tipon'); help.setAttribute('aria-expanded', String(on)); }}, '?');
+    const seg = h('div', {class:'segctl', role:'group', 'aria-label':c.name});
+    ['2','1','0','U'].forEach(v => seg.append(h('button', {class: v==='U'?'u':'', 'aria-pressed':'false', 'data-v':v, id:`calc-${c.id}-${v}`, onclick: () => setVal(c.id, v)}, v)));
+    row.append(h('span', {class:'id'}, c.id), h('span', {class:'nm'}, c.name, help), seg, tip);
+    g.append(row);
+  });
+  form.append(g);
+});
+function setVal(id, v){ val[id] = val[id] === v ? null : v; const seg = $('#crow-'+id+' .segctl'); seg.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === val[id]))); renderResult(); }
+const rbars = $('#r-bars');
+PILLARS.forEach(p => rbars.append(h('div', {class:'rbar', id:'rb-'+p.id}, h('span', {class:'l'}, p.name), h('span', {class:'t'}, h('i', {style:'--v:0'}), h('em', {style:'--x:-10px;display:none'})), h('span', {class:'v num'}, '—'))));
+const dist = $('#dist');
+STORES.forEach(s => dist.append(h('span', {class:'tick', style:`left:${s.score}%`, title:`${s.company} ${fmt1(s.score)}`})));
+dist.append(h('span', {class:'you', id:'you', style:'left:-1%;display:none'}));
+$('#dist-mid').textContent = `index average ${fmt1(avg)}`;
+const cmp = $('#cmp'); ranked.forEach(s => cmp.append(h('option', {value:s.slug}, `${s.company} · ${fmt1(s.score)}`)));
+cmp.addEventListener('change', renderResult);
+function calc(v){
+  const P = {}; let num = 0, den = 0, ver = 0;
+  PILLARS.forEach(p => { let pts = 0, mx = 0; CHECKS.filter(c=>c.pillar===p.id).forEach(c => { const x = v[c.id]; if (x === null || x === 'U' || x === undefined) return; pts += +x; mx += 2; ver++; });
+    P[p.id] = mx ? pts/mx : null; if (mx) { num += p.weight * (pts/mx); den += p.weight; } });
+  return {score: den ? 100*num/den : null, P, ver};
+}
+function renderResult(){
+  const {score, P, ver} = calc(val);
+  const sc = $('#r-score'), g = $('#r-grade');
+  if (score == null) { sc.innerHTML = '—<small>/100</small>'; g.textContent = '–'; g.className = 'stamp'; $('#r-conf').textContent = 'coverage –'; $('#r-rank').textContent = 'Score a few checks to see where you would land.'; $('#you').style.display = 'none'; }
+  else {
+    sc.innerHTML = `${fmt1(score)}<small>/100</small>`; const gr = gradeOf(score); g.textContent = gr; g.className = 'stamp g'+gr;
+    $('#r-conf').textContent = `${ver} of 29 verified · ${ver>=26?'high':ver>=20?'medium':'low'}`;
+    const above = STORES.filter(s => s.score > score).length;
+    const rank = above + 1;
+    const cmpS = STORES.find(s => s.slug === cmp.value);
+    $('#r-rank').innerHTML = `Would rank <b>#${rank} of ${N+1}</b> on this index (${bandOf[gr]}), ${score >= avg ? fmt1(score-avg) + ' points above' : fmt1(avg-score) + ' points below'} the average` + (cmpS ? `; <b>${cmpS.company}</b> scores ${fmt1(cmpS.score)}.` : '.');
+    const you = $('#you'); you.style.display = ''; you.style.left = score + '%';
+  }
+  PILLARS.forEach(p => { const rb = $('#rb-'+p.id); const v = P[p.id]; rb.querySelector('i').style.setProperty('--v', v ?? 0); rb.querySelector('.v').textContent = v == null ? '—' : pct(v);
+    const em = rb.querySelector('em'); const cmpS = STORES.find(s => s.slug === cmp.value); if (cmpS && cmpS.pillars[p.id].pct != null) { em.style.display = ''; em.style.setProperty('--x', `calc(${cmpS.pillars[p.id].pct*100}% - 1px)`); } else em.style.display = 'none'; });
+}
+$('#r-example').addEventListener('click', () => { CHECKS.forEach(c => { val[c.id] = String(example[c.id]); }); document.querySelectorAll('.segctl button').forEach(b => { const id = b.id.split('-')[1]; b.setAttribute('aria-pressed', String(b.dataset.v === val[id])); }); renderResult(); toast('Example loaded — an illustrative store, not a real one'); });
+$('#r-reset').addEventListener('click', () => { CHECKS.forEach(c => val[c.id] = null); document.querySelectorAll('.segctl button').forEach(b => b.setAttribute('aria-pressed','false')); cmp.value = ''; renderResult(); });
+renderResult();
+
+/* ---------- copy buttons ---------- */
+document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => copy(b.dataset.copy)));
+
+/* ---------- motion ---------- */
+const hero = $('#hero');
+requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.remove('boot')));
+if (!reduce) document.querySelectorAll('.card .v[data-count]').forEach(el => { if (el.getBoundingClientRect().top > innerHeight) io.observe(el); });
+})();
+</script>

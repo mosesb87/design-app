@@ -1,0 +1,990 @@
+[
+  {
+    "company": "Gardner-White Furniture",
+    "url": "https://www.gardner-white.com",
+    "hq_city": "Auburn Hills, MI",
+    "segment": "Retail chain",
+    "sells": "furniture and mattresses",
+    "platform": "Custom",
+    "platform_evidence": "No Shopify/Magento/BigCommerce markers; /product/{id}-slug URLs, assets on dl2m13ltstd3d.cloudfront.net; blog subdomain is WordPress (wp-content)",
+    "audited_at": "2026-09-28",
+    "pages_checked": [
+      "https://www.gardner-white.com",
+      "https://www.gardner-white.com/robots.txt",
+      "https://www.gardner-white.com/sitemap.xml",
+      "https://www.gardner-white.com/living-room/sofas",
+      "https://www.gardner-white.com/living-room/bestsellers",
+      "https://www.gardner-white.com/product/195580-elliot-graphite-sofa",
+      "https://www.gardner-white.com/product/191535-lawson-brown-reclining-sofa",
+      "https://www.gardner-white.com/about/contact",
+      "https://www.gardner-white.com/about",
+      "https://www.gardner-white.com/stores",
+      "https://www.gardner-white.com/about/faq",
+      "https://www.gardner-white.com/customer-service/return-policy",
+      "https://www.gardner-white.com/customer-service/pickup-delivery",
+      "https://www.gardner-white.com/customer-service/privacy-policy",
+      "https://www.gardner-white.com/customer-service/accessibility",
+      "https://www.gardner-white.com/terms",
+      "https://www.gardner-white.com/about/careers",
+      "https://news.gardner-white.com/"
+    ],
+    "sample_urls": {
+      "category": "https://www.gardner-white.com/living-room/sofas",
+      "product1": "https://www.gardner-white.com/product/195580-elliot-graphite-sofa",
+      "product2": "https://www.gardner-white.com/product/191535-lawson-brown-reclining-sofa"
+    },
+    "checks": {
+      "F1": {
+        "s": 2,
+        "e": "Homepage canonical https://www.gardner-white.com; every fetched page served over https"
+      },
+      "F2": {
+        "s": 2,
+        "e": "Sitemap: https://www.gardner-white.com/sitemap.xml; Disallow only /shop/*, /account/*, /in-store/*; Crawl-delay: 10"
+      },
+      "F3": {
+        "s": 2,
+        "e": "URL set with 3-level category tree (/living-room/sectionals/modular-sectionals) + buying guides; lastmod to 2026-09-17; no PDPs"
+      },
+      "F4": {
+        "s": 2,
+        "e": "Home 'Gardner White Furniture & Mattress Stores'; PDP 'Elliot Graphite Sofa at Gardner White' (unique per product)"
+      },
+      "F5": {
+        "s": 2,
+        "e": "Home: 'Only Gardner White gives you low prices & low payments...'; PDP: 'Elliot's streamlined silhouette creates a sofa...'"
+      },
+      "F6": {
+        "s": 2,
+        "e": "Canonical on home (https://www.gardner-white.com) and PDP (/product/195580-elliot-graphite-sofa)"
+      },
+      "F7": {
+        "s": "U",
+        "e": "No structured-data evidence visible in fetched text"
+      },
+      "F8": {
+        "s": 1,
+        "e": "/product/195580-elliot-graphite-sofa: readable slug but numeric ID prefixed; category URLs clean (/living-room/sofas)"
+      },
+      "C1": {
+        "s": 2,
+        "e": "'Elliot Graphite Sofa', 'Lawson Brown Reclining Sofa', 'Charlie 78 inch Cream Deep Seater Sofa' (name/color/type)"
+      },
+      "C2": {
+        "s": 2,
+        "e": "Elliot: description + 5 feature bullets + collection story (~150 words); Lawson ~60 words + collection copy"
+      },
+      "C3": {
+        "s": "U",
+        "e": "Gallery/alt not in fetched HTML (client-rendered); 12 empty thumbnail list items seen on Lawson PDP"
+      },
+      "C4": {
+        "s": 2,
+        "e": "Elliot $1399.99 (was $1999.99) with 'Stocked:' field; Lawson $795.95 (was $1199.99); '$30 / Month' financing"
+      },
+      "C5": {
+        "s": 2,
+        "e": "Spec table: Brand, Color/Finish, Material, Seat Height 19\", W 92.25\" x D 37\" x H 33.5\"; 'Color:' selector on Lawson"
+      },
+      "C6": {
+        "s": 2,
+        "e": "Category breadcrumb 'Home > Living Room > Sofas'; 3-level tree in sitemap (/living-room/sectionals/components)"
+      },
+      "C7": {
+        "s": "U",
+        "e": "Filters/sort not present in fetched category HTML (product grid renders client-side)"
+      },
+      "C8": {
+        "s": 1,
+        "e": "'Search' toggle in header; results page not verified"
+      },
+      "B1": {
+        "s": "U",
+        "e": "PDP shows price/financing but no add-to-cart label in fetched text; homepage has category/promo links only"
+      },
+      "B2": {
+        "s": 2,
+        "e": "Delivery: free weekday doorstep, white glove from $199.99, same-day; Returns: 7 days, 25% handling fee, 48h damage claims"
+      },
+      "B3": {
+        "s": "U",
+        "e": "Checkout not observed; Synchrony Pay Later 'offer available online only' implies online cart"
+      },
+      "B4": {
+        "s": 2,
+        "e": "Nav: New Arrivals, Bestsellers, Clearance, Sale, Back to School; featured Split Head Mattresses, ModularThree, Lighted Headboards"
+      },
+      "B5": {
+        "s": 2,
+        "e": "PDP 'Customer Reviews 4.0 (21)' and '4.7 (31)'; GW Mattress Pledge guarantee (/mattresses/pledge)"
+      },
+      "T1": {
+        "s": 2,
+        "e": "Privacy: 6500 E. 14 Mile Rd, Warren MI 48092, (586) 774-8853; terms: Auburn Hills addr; chat + service form + weborders@"
+      },
+      "T2": {
+        "s": 1,
+        "e": "About page ~75 words (founded Detroit 1912, family-owned); mostly links"
+      },
+      "T3": {
+        "s": 2,
+        "e": "Privacy policy + Terms & Conditions (/terms); bonus: Accessibility statement (WCAG 2.1 AA) and cookie policy"
+      },
+      "T4": {
+        "s": "U",
+        "e": "No social profile URLs in fetched HTML on 4 pages (footer appears client-rendered)"
+      },
+      "T5": {
+        "s": 2,
+        "e": "'Skip to Content' (#main) on every page + accessibility statement citing WCAG 2.1 AA"
+      },
+      "N1": {
+        "s": 2,
+        "e": "news.gardner-white.com post 'Gardner White Hosts Laila Lockhart Kraner...' dated September 9, 2026"
+      },
+      "N2": {
+        "s": 2,
+        "e": "FAQ page (/about/faq) + buying guides (/buying-guides/leather-buying-guide) + sofa FAQ block on category page"
+      },
+      "N3": {
+        "s": 2,
+        "e": "/stores lists 30+ locations with street address + phone (e.g. 6500 E. 14 Mile Rd, Warren (586) 826-8300); hours in FAQ"
+      }
+    },
+    "strengths": [
+      "PDPs carry full spec tables (dimensions, cushion construction, frame) with review counts (4.7/31) and monthly financing",
+      "Delivery and returns are specific: free weekday doorstep delivery, same-day options, 7-day return window with the 25% fee stated",
+      "Deep 3-level taxonomy with breadcrumbs, strong merchandising (Bestsellers/New/Clearance) and a news blog updated Sept 2026"
+    ],
+    "fixes": [
+      "Add a product sitemap covering all /product/ URLs and reference it from /sitemap.xml (only categories and guides are listed today)",
+      "Server-render category product grids, filters/sort and the footer (privacy/terms/social links) - none appear in the served HTML",
+      "Expand /about beyond ~75 words with the 1912 Detroit story, expose social links and phone in the footer HTML, drop Crawl-delay: 10"
+    ],
+    "notes": "Custom platform behind CloudFront; PDP content only visible via rendered fetch. HQ per /terms (4445 N Atlantic Blvd, Auburn Hills); privacy policy lists the Warren address.",
+    "status": "audited"
+  },
+  {
+    "company": "Dunham's Sports",
+    "url": "https://www.dunhamssports.com",
+    "hq_city": "Troy, MI",
+    "segment": "Retail chain",
+    "sells": "sporting goods, apparel and footwear",
+    "platform": "Custom",
+    "platform_evidence": "Shopware 6 referenced in page source; /media/ asset paths; PDP URLs slug-W0000117118.html; legacy demandware.store disallows left in robots.txt",
+    "audited_at": "2026-09-28",
+    "pages_checked": [
+      "https://www.dunhamssports.com",
+      "https://www.dunhamssports.com/robots.txt",
+      "https://www.dunhamssports.com/sitemap.xml",
+      "https://www.dunhamssports.com/footwear-1/",
+      "https://www.dunhamssports.com/under-armour-men-s-charged-pursuit-3-running-shoes-W0000117118.html",
+      "https://www.dunhamssports.com/under-armour-men-s-charged-assert-10-wide-running-shoes-W0000138232.html",
+      "https://www.dunhamssports.com/contactus.html",
+      "https://www.dunhamssports.com/aboutus.html",
+      "https://www.dunhamssports.com/faqs.html",
+      "https://www.dunhamssports.com/shipping-handling.html",
+      "https://www.dunhamssports.com/privacy-policy.html",
+      "https://www.dunhamssports.com/terms.html",
+      "https://www.dunhamssports.com/checkout.html",
+      "https://www.dunhamssports.com/store-locator",
+      "https://dunhamssports.com/store-details?city=&state=&storeID=117"
+    ],
+    "sample_urls": {
+      "category": "https://www.dunhamssports.com/footwear-1/",
+      "product1": "https://www.dunhamssports.com/under-armour-men-s-charged-pursuit-3-running-shoes-W0000117118.html",
+      "product2": "https://www.dunhamssports.com/under-armour-men-s-charged-assert-10-wide-running-shoes-W0000138232.html"
+    },
+    "checks": {
+      "F1": {
+        "s": 2,
+        "e": "Canonical https://www.dunhamssports.com/; all pages https"
+      },
+      "F2": {
+        "s": 2,
+        "e": "Sitemap line present; '*' disallows */account/, */checkout/, */navigation/; 'Disallow: /' only for PetalBot/Baidu/Yandex/sogou"
+      },
+      "F3": {
+        "s": 2,
+        "e": "Index -> sitemap/sitemap_product.xml.gz, sitemap_category.xml.gz, sitemap_home.xml.gz; lastmod 2026-09-24"
+      },
+      "F4": {
+        "s": 2,
+        "e": "Home 'Your Local Sporting Goods Store | Coupons... | Dunham's Sports'; PDP 'Under Armour Men's Charged Pursuit 3 Running Shoes'"
+      },
+      "F5": {
+        "s": 1,
+        "e": "Home meta specific ('Big Name, Low Prices...'); PDP meta duplicates the title ('Under Armour Men's Charged Pursuit 3 Running Shoes')"
+      },
+      "F6": {
+        "s": 2,
+        "e": "Canonical on home and PDP (.../charged-pursuit-3-running-shoes-W0000117118.html)"
+      },
+      "F7": {
+        "s": "U",
+        "e": "No structured-data evidence visible"
+      },
+      "F8": {
+        "s": 1,
+        "e": "PDP /under-armour-men-s-charged-pursuit-3-running-shoes-W0000117118.html (SKU suffix); category /footwear-1/ (numeric suffix)"
+      },
+      "C1": {
+        "s": 2,
+        "e": "'Under Armour Men's Charged Pursuit 3 Running Shoes', '...Charged Assert 10 Wide Running Shoes' (brand/gender/model/type)"
+      },
+      "C2": {
+        "s": 2,
+        "e": "Both PDPs: Product Details paragraph + 5 Specifications bullets (~70-80 words of specific copy each)"
+      },
+      "C3": {
+        "s": 1,
+        "e": "One product image captured, alt='Under Armour Men's Charged Assert 10 Wide Running Shoes'; gallery not verified"
+      },
+      "C4": {
+        "s": 1,
+        "e": "$54.97, 'Regular $75.00 (Save $20.03)'; no in-stock state on PDP ('inventory shown online may not reflect...store')"
+      },
+      "C5": {
+        "s": 2,
+        "e": "'Color: Pitch Gray' and 'Size 8.0 8.5 ... 13.0' selectors + Specifications bullet list"
+      },
+      "C6": {
+        "s": 1,
+        "e": "Tree Footwear > Mens > Athletic > Basketball (URLs) but no breadcrumbs on category or PDP"
+      },
+      "C7": {
+        "s": 2,
+        "e": "Filters: Price bands, Brand, Size, Color, Activity, Shoe Width, 'Hide Out Of Stock Items'; Sort By Name/Price; 'Showing 24 of 285'"
+      },
+      "C8": {
+        "s": "U",
+        "e": "Search box not visible in fetched header text"
+      },
+      "B1": {
+        "s": "U",
+        "e": "PDP shows price + Color/Size pickers but no add-to-cart label captured; home 'Order Now, Ship to Home - Shop Now'"
+      },
+      "B2": {
+        "s": 1,
+        "e": "Shipping page generic ('charges displayed in the check-out process'); returns specific: 60 days with receipt, tags attached"
+      },
+      "B3": {
+        "s": 2,
+        "e": "/checkout.html: 'If you are not registered, you can proceed without creating an account'"
+      },
+      "B4": {
+        "s": 2,
+        "e": "'Featured Labor Day Savings', 'Just In - View All New Arrivals', Digital Guides (Fall Fashion, Hunting, YETI), Value Vault, Flash Sale"
+      },
+      "B5": {
+        "s": 1,
+        "e": "Best Price Guarantee ('refund 100% of the difference') in FAQ; no product reviews/ratings seen"
+      },
+      "T1": {
+        "s": 2,
+        "e": "Corporate Office 5607 New King Drive, Suite #125 Troy, MI 48098 + contact form; store phones e.g. (717) 249-7667"
+      },
+      "T2": {
+        "s": 2,
+        "e": "About Us ~250 words: 1937 Dunham's Bait & Tackle in West Bloomfield MI; 260+ stores in 26 states"
+      },
+      "T3": {
+        "s": 2,
+        "e": "privacy-policy.html (Dunham's Athleisure Corporation) + terms.html; no accessibility statement seen"
+      },
+      "T4": {
+        "s": "U",
+        "e": "Only share intents (Facebook/Twitter/Pinterest) on PDP; no profile URLs in fetched footer"
+      },
+      "T5": {
+        "s": 2,
+        "e": "'Skip to main content' (#content-main) link + product image alt text present"
+      },
+      "N1": {
+        "s": 0,
+        "e": "No blog/news section found in nav, footer or site search results; only Weekly Ads and Digital Guides"
+      },
+      "N2": {
+        "s": 2,
+        "e": "FAQ (Price Matching, Layaways, Returns, Firearms) + Digital Guides (Fall Fashion, Hunting, Archery) + Bat Warranty resource"
+      },
+      "N3": {
+        "s": 2,
+        "e": "Locator (ZIP + city list) and store pages with address, phone, hours table (Carlisle PA: Mon-Sat 10-9, Sun 12-5)"
+      }
+    },
+    "strengths": [
+      "Category pages have rich faceted filters (price bands, brand, size, width, color, activity) plus sort and a '24 of 285' count",
+      "Guest checkout is allowed and PDPs show sale vs regular price with savings, color/size pickers and spec bullets",
+      "Store pages list address, phone and full weekly hours; FAQ spells out 60-day returns and a 100% price-match guarantee"
+    ],
+    "fixes": [
+      "Write unique product meta descriptions - PDP meta currently duplicates the title ('Under Armour Men's Charged Pursuit 3 Running Shoes')",
+      "Add breadcrumbs (Footwear > Mens > Athletic) to category and PDP templates and show explicit In Stock / Out of Stock on the PDP",
+      "Replace the generic shipping page with real rates, thresholds and delivery times; add product ratings and social profile links to the footer"
+    ],
+    "notes": "Shopware 6 storefront; the mega-menu crowds page content out of text fetches, so search box, add-to-cart label and social links could not be confirmed.",
+    "status": "audited"
+  },
+  {
+    "company": "English Gardens",
+    "url": "https://www.englishgardens.com",
+    "hq_city": "Dearborn Heights, MI",
+    "segment": "Retail chain",
+    "sells": "plants, garden supplies and seasonal decor",
+    "platform": "WooCommerce",
+    "platform_evidence": "meta-generator 'Elementor 4.2.4'; /wp-content/ paths; robots.txt disallows woocommerce_uploads and ?add-to-cart=; Yoast sitemap_index.xml",
+    "audited_at": "2026-09-28",
+    "pages_checked": [
+      "https://www.englishgardens.com",
+      "https://www.englishgardens.com/robots.txt",
+      "https://www.englishgardens.com/sitemap_index.xml",
+      "https://www.englishgardens.com/product-sitemap.xml",
+      "https://www.englishgardens.com/shop-online",
+      "https://www.englishgardens.com/christmas-silks/flowers-stems/",
+      "https://www.englishgardens.com/plants/",
+      "https://www.englishgardens.com/product/dark-red-velvet-poinsettia-clip/",
+      "https://www.englishgardens.com/green-giant-arborvitae-3-gallon-pot/",
+      "https://www.englishgardens.com/gift-cards/",
+      "https://www.englishgardens.com/about-us/",
+      "https://www.englishgardens.com/contact/",
+      "https://www.englishgardens.com/corporate-office/",
+      "https://www.englishgardens.com/locations/",
+      "https://www.englishgardens.com/faq/",
+      "https://www.englishgardens.com/shipping-policy/",
+      "https://www.englishgardens.com/return-policy/",
+      "https://www.englishgardens.com/privacy-policy/",
+      "https://www.englishgardens.com/good-advice/"
+    ],
+    "sample_urls": {
+      "category": "https://www.englishgardens.com/christmas-silks/flowers-stems/",
+      "product1": "https://www.englishgardens.com/green-giant-arborvitae-3-gallon-pot/",
+      "product2": "https://www.englishgardens.com/product/dark-red-velvet-poinsettia-clip/"
+    },
+    "checks": {
+      "F1": {
+        "s": 2,
+        "e": "Canonical https://www.englishgardens.com/; all pages https"
+      },
+      "F2": {
+        "s": 2,
+        "e": "Sitemap: https://www.englishgardens.com/sitemap_index.xml; disallows only wc-logs, woocommerce_uploads, ?add-to-cart=, wp-admin"
+      },
+      "F3": {
+        "s": 1,
+        "e": "Index lists 56 sitemaps (47 pa_* attribute, events, locations) but product-, product_cat-, page- and post-sitemap.xml all 404"
+      },
+      "F4": {
+        "s": 2,
+        "e": "Home 'English Gardens Garden Center | Plants, Landscaping & Decor'; PDP 'Green Giant Arborvitae #3 gallon pot - English Gardens'"
+      },
+      "F5": {
+        "s": 2,
+        "e": "Home 'English Gardens offers premium plants, garden supplies...'; PDP 'A stately looking upright evergreen that grows uniformly...'"
+      },
+      "F6": {
+        "s": 1,
+        "e": "Canonical on homepage; none reported on either sampled PDP"
+      },
+      "F7": {
+        "s": "U",
+        "e": "No structured-data evidence visible"
+      },
+      "F8": {
+        "s": 2,
+        "e": "Readable hyphenated slugs (/green-giant-arborvitae-3-gallon-pot/); note some PDPs use /product/ prefix, others root"
+      },
+      "C1": {
+        "s": 2,
+        "e": "'Green Giant Arborvitae #3 gallon pot', 'Dark Red Velvet Poinsettia Clip', 'Christmas Red Poinsettia, Extra Large'"
+      },
+      "C2": {
+        "s": 1,
+        "e": "Arborvitae description ~28 words; poinsettia clip ~25 words - both under 50"
+      },
+      "C3": {
+        "s": 1,
+        "e": "One image per PDP; arborvitae image (H135-12-13.jpg) has no alt text"
+      },
+      "C4": {
+        "s": 1,
+        "e": "Arborvitae $62.99 (was $89.99), '6 is instock', per-store In Stock; poinsettia: no price, 'Check Store for Availability'"
+      },
+      "C5": {
+        "s": 1,
+        "e": "SKU 69093SCN + pot size only; poinsettia weight 12 lbs / 1x1x1 in placeholder; store dropdown, no size/variant selector"
+      },
+      "C6": {
+        "s": 2,
+        "e": "Breadcrumbs 'Home / Garden Plants & Flowers / Evergreens / ...' and 'Home / Christmas / Christmas Silks / Flowers & Stems'"
+      },
+      "C7": {
+        "s": 1,
+        "e": "Sort dropdown (popularity, rating, latest, price, stock, SKU) + 'Showing all 51 results'; no filters"
+      },
+      "C8": {
+        "s": 1,
+        "e": "Search box in header; results page not verified"
+      },
+      "B1": {
+        "s": 1,
+        "e": "'Add to cart' on arborvitae PDP; poinsettia PDP has none ('Check Store for Availability', call 800-335-4769); home 'Shop Now'"
+      },
+      "B2": {
+        "s": 2,
+        "e": "Shipping: 48h processing, UPS next-day pickup, USPS 10-14 days; Returns: 30 days w/ receipt, 1-yr tree/shrub warranty, 20% restock"
+      },
+      "B3": {
+        "s": "U",
+        "e": "Checkout not observed (WooCommerce)"
+      },
+      "B4": {
+        "s": 2,
+        "e": "'What's On Sale' (40% off shrubs, 30% off perennials, BOGO containers), Fall Harvest, Christmas Store, New Products for 2025"
+      },
+      "B5": {
+        "s": 1,
+        "e": "Plant warranty (1 yr trees/shrubs), 'award-winning landscape company', testimonials page; no product ratings shown"
+      },
+      "T1": {
+        "s": 2,
+        "e": "800-335-4769, six store addresses, corporate office 22650 Ford Rd, Dearborn Heights MI 48127, contact form"
+      },
+      "T2": {
+        "s": 2,
+        "e": "About page ~2,500 words: family-owned Michigan business since 1954, six garden centers, four floral shops"
+      },
+      "T3": {
+        "s": 1,
+        "e": "Privacy policy present (modified 2020-04-09); no Terms & Conditions or accessibility statement found"
+      },
+      "T4": {
+        "s": "U",
+        "e": "No facebook/instagram profile URLs captured in fetched HTML on homepage, FAQ or contact page"
+      },
+      "T5": {
+        "s": 1,
+        "e": "'Skip to content' link present; product image alt missing; no accessibility statement"
+      },
+      "N1": {
+        "s": 2,
+        "e": "Good Advice blog: 'Advice for Success: Planting Spring-Flowering Bulbs' dated August 25, 2026"
+      },
+      "N2": {
+        "s": 2,
+        "e": "FAQ page (24 questions) + how-to guides, monthly gardening tips, Plant Diagnosis and videos"
+      },
+      "N3": {
+        "s": 2,
+        "e": "/locations: six stores with address, phone and hours (Clinton Twp 'Mon-Sat: 9am-7pm; Sun: 9am-6pm') + map"
+      }
+    },
+    "strengths": [
+      "Deep, logical taxonomy (Plants > Evergreens > Arborvitae-Upright) with breadcrumbs on both category and product pages",
+      "Content authority: Good Advice blog updated Aug 2026, a 24-question FAQ, monthly tips, and plant warranty terms spelled out",
+      "Per-store stock on PDPs ('In Stock' at Plymouth/Royal Oak) plus six locations with addresses, phones, hours and a corporate office page"
+    ],
+    "fixes": [
+      "Fix Yoast sitemaps: enable product/product_cat/page/post sitemaps (all 404) and disable the 47 pa_* attribute sitemaps; noindex attachment pages",
+      "Show a price and 'Add to cart' (or 'Reserve for pickup') on every PDP - Christmas silks show no price, only 'Check Store for Availability'",
+      "Add alt text to product images, a Terms & Conditions page and accessibility statement in the footer, and attribute filters on category pages"
+    ],
+    "notes": "WooCommerce + Elementor 4.2.4 + Yoast. Corporate office page confirms 22650 Ford Rd, Dearborn Heights.",
+    "status": "audited"
+  },
+  {
+    "company": "Belle Tire",
+    "url": "https://www.belletire.com",
+    "hq_city": "Southfield, MI",
+    "segment": "Retail chain",
+    "sells": "tires, wheels and auto service",
+    "platform": "Custom",
+    "platform_evidence": "React-style client-rendered app with Contentful assets (ctfassets.net) behind Cloudflare; no Shopify/Magento/BigCommerce/Demandware markers",
+    "audited_at": "2026-09-28",
+    "pages_checked": [
+      "https://www.belletire.com",
+      "https://www.belletire.com/robots.txt",
+      "https://www.belletire.com/sitemap-index.xml",
+      "https://www.belletire.com/sitemap-0.xml",
+      "https://www.belletire.com/sitemap-5.xml",
+      "https://www.belletire.com/tires-and-wheels/tire-brands",
+      "https://www.belletire.com/tires-and-wheels/tire-brands/goodyear/assurance-maxlife/214191",
+      "https://www.belletire.com/tires-and-wheels/tire-brands/goodyear/assurance-all-season/146686",
+      "https://www.belletire.com/faq",
+      "https://www.belletire.com/stores",
+      "https://www.belletire.com/our-company/privacy",
+      "https://www.belletire.com/our-company/contact-us",
+      "https://www.belletire.com/our-company",
+      "https://www.belletire.com/our-company/terms-of-use",
+      "https://www.belletire.com/chevy-silverado-tires-wheels-buying-guide"
+    ],
+    "sample_urls": {
+      "category": "https://www.belletire.com/tires-and-wheels/tire-brands",
+      "product1": "https://www.belletire.com/tires-and-wheels/tire-brands/goodyear/assurance-maxlife/214191",
+      "product2": "https://www.belletire.com/tires-and-wheels/tire-brands/goodyear/assurance-all-season/146686"
+    },
+    "checks": {
+      "F1": {
+        "s": 2,
+        "e": "https everywhere; robots.txt declares 'Host: https://www.belletire.com'"
+      },
+      "F2": {
+        "s": 2,
+        "e": "Allow: /; only confirmation/error pages disallowed; Sitemap: https://www.belletire.com/sitemap-index.xml (+ globalsiteseo index)"
+      },
+      "F3": {
+        "s": 2,
+        "e": "Index -> sitemap-0..10.xml; sitemap-0 has FAQ, buying guides, used-tires; sitemap-5 has /tire-finder/2009/gmc/acadia pages"
+      },
+      "F4": {
+        "s": 1,
+        "e": "Rendered home title 'Belle Tire | Tires, Wheels & Auto Service' but served HTML has no <title> on home, PDP, /faq, /stores"
+      },
+      "F5": {
+        "s": 0,
+        "e": "No meta description in served HTML on homepage, PDP (/goodyear/assurance-maxlife/214191), /faq or /stores"
+      },
+      "F6": {
+        "s": 0,
+        "e": "No canonical tag in served HTML on homepage or PDP"
+      },
+      "F7": {
+        "s": "U",
+        "e": "No structured-data evidence visible"
+      },
+      "F8": {
+        "s": 1,
+        "e": "/tires-and-wheels/tire-brands/goodyear/assurance-maxlife/214191 - readable path with numeric ID appended"
+      },
+      "C1": {
+        "s": 2,
+        "e": "Indexed PDP titles 'Goodyear - Assurance Maxlife - 215/50R17 95V XL', 'Goodyear - Assurance All Season - 205/70R15 96T'"
+      },
+      "C2": {
+        "s": "U",
+        "e": "PDP body not fetchable (empty client-rendered shell; Cloudflare challenge on rendered fetch)"
+      },
+      "C3": {
+        "s": "U",
+        "e": "PDP images not fetchable"
+      },
+      "C4": {
+        "s": "U",
+        "e": "No PDP price/availability observable; homepage shows offers only ('four Pegasus tires for $195')"
+      },
+      "C5": {
+        "s": "U",
+        "e": "PDP specs/size selectors not fetchable (/goodyear/sizes/65088 URLs suggest size pages exist)"
+      },
+      "C6": {
+        "s": 1,
+        "e": "Path tree Tires & Wheels > Tire Brands > Goodyear > Assurance Maxlife; breadcrumbs not observed"
+      },
+      "C7": {
+        "s": "U",
+        "e": "Brand/category listing not fetchable (empty shell)"
+      },
+      "C8": {
+        "s": 1,
+        "e": "Tire Finder by vehicle (/tire-finder), by size (/tire-size) and Wheel Finder; results page not observed"
+      },
+      "B1": {
+        "s": 1,
+        "e": "Homepage 'Shop Tires' / 'Find Tires' and 'Schedule Appointment' CTAs; PDP CTA not observable"
+      },
+      "B2": {
+        "s": "U",
+        "e": "No shipping/returns page found; /faq and Tire Protection Plan page not fetchable"
+      },
+      "B3": {
+        "s": "U",
+        "e": "Checkout not observable"
+      },
+      "B4": {
+        "s": 2,
+        "e": "Home: Michelin $80 back, Goodyear up to $100, Pegasus 4 for $195 with expiry dates; 'View All Current Deals' (/sale-deals)"
+      },
+      "B5": {
+        "s": 1,
+        "e": "'We'll beat any competitor's price', Free Lifetime Maintenance, price-match page; no reviews/ratings seen"
+      },
+      "T1": {
+        "s": 2,
+        "e": "Home: 25800 Northwestern Hwy Floor 10, Southfield MI 48075, 888-GO-BELLE (888-462-3553); contact-us page; privacy@belletire.com"
+      },
+      "T2": {
+        "s": 1,
+        "e": "Home 'A Century of Keeping You Moving' (~80 words: since 1922, Detroit shop to 185 locations); /our-company returns 404"
+      },
+      "T3": {
+        "s": 1,
+        "e": "Privacy Policy (effective Jan 1, 2026); Terms of Use cited but /our-company/terms-of-use 404; 'Accessibility & Cookie Settings' link"
+      },
+      "T4": {
+        "s": 2,
+        "e": "facebook.com/BelleTire/ and youtube.com/user/BelleTire in footer"
+      },
+      "T5": {
+        "s": 1,
+        "e": "Image alt seen ('Goodyear tires logo - current tire deal'); no skip link found; accessibility settings link only"
+      },
+      "N1": {
+        "s": 1,
+        "e": "Buying-guide articles exist (chevy-silverado-tires-wheels-buying-guide) but no dates visible; no blog index"
+      },
+      "N2": {
+        "s": 2,
+        "e": "/faq linked in footer + vehicle buying guides (Chevy Silverado, Dodge Ram tires & wheels)"
+      },
+      "N3": {
+        "s": 1,
+        "e": "Store Locator (/stores) with 185 locations claimed; addresses/hours not visible (client-rendered)"
+      }
+    },
+    "strengths": [
+      "Clear conversion paths on the homepage: vehicle/size tire finder, 'Schedule Appointment', and manufacturer rebates with expiry dates",
+      "Strong guarantees: beat-any-competitor price promise, free lifetime tire maintenance, a price-match page and financing options",
+      "Clean robots.txt with an 11-file sitemap index, per-vehicle finder URLs, and a privacy policy updated Jan 2026 with a contact email"
+    ],
+    "fixes": [
+      "Server-render title, meta description and canonical tags - served HTML for home, /faq, /stores and tire PDPs has none; content is JS-only",
+      "Clean sitemap-0.xml: remove 'https://test-page/' and 'page-not-found-error-rebate', and add lastmod to sitemap-index.xml",
+      "Publish a real About page (/our-company is 404) and the Terms of Use the privacy policy cites; add a skip-to-content link"
+    ],
+    "notes": "App routes serve an empty client-rendered shell and Cloudflare challenges rendered fetches, so catalog criteria are largely U. HQ from homepage contact block.",
+    "status": "audited"
+  },
+  {
+    "company": "Pet Supplies Plus",
+    "url": "https://www.petsuppliesplus.com",
+    "hq_city": "Livonia, MI",
+    "segment": "Retail chain",
+    "sells": "pet food and supplies",
+    "platform": "Custom",
+    "platform_evidence": "Proprietary store-aware storefront: /categories/{pet}/{type}/{slug}/{id} URLs with ?sku= variants, Bazaarvoice bvstate params, scprodcdn.petsuppliesplus.com CDN",
+    "audited_at": "2026-09-28",
+    "pages_checked": [
+      "https://www.petsuppliesplus.com/",
+      "https://www.petsuppliesplus.com/robots.txt",
+      "https://www.petsuppliesplus.com/sitemap.xml",
+      "https://www.petsuppliesplus.com/categories/shops/on-sale",
+      "https://www.petsuppliesplus.com/categories/Dog/Clothing-Accessories",
+      "https://www.petsuppliesplus.com/categories/dog/food/dry/blue-buffalo-life-protection-formula-natural-puppy-dry-dog-food-chicken-and-brown-rice/3703",
+      "https://www.petsuppliesplus.com/categories/dog/food/premium/dry/purina-pro-plan-toy-breed-dog-food-with-probiotics-for-dogs-chicken--rice-formula/19709",
+      "https://www.petsuppliesplus.com/about-us",
+      "https://www.petsuppliesplus.com/contact-us",
+      "https://www.petsuppliesplus.com/privacy-policy",
+      "https://www.petsuppliesplus.com/terms-of-use",
+      "https://www.petsuppliesplus.com/return-policy",
+      "https://www.petsuppliesplus.com/resources/learning-center"
+    ],
+    "sample_urls": {
+      "category": "https://www.petsuppliesplus.com/categories/shops/on-sale",
+      "product1": "https://www.petsuppliesplus.com/categories/dog/food/dry/blue-buffalo-life-protection-formula-natural-puppy-dry-dog-food-chicken-and-brown-rice/3703",
+      "product2": "https://www.petsuppliesplus.com/categories/dog/food/premium/dry/purina-pro-plan-toy-breed-dog-food-with-probiotics-for-dogs-chicken--rice-formula/19709"
+    },
+    "checks": {
+      "F1": {
+        "s": 2,
+        "e": "All fetched pages https; Terms of Use cite www.petsuppliesplus.com"
+      },
+      "F2": {
+        "s": "U",
+        "e": "/robots.txt returned 403 to WebFetch and errored on rendered fetch"
+      },
+      "F3": {
+        "s": "U",
+        "e": "/sitemap.xml returned 403 / fetch error"
+      },
+      "F4": {
+        "s": 1,
+        "e": "Homepage title just 'Home | Pet Supplies Plus'; PDP title 'Blue Buffalo Life Protection Formula Natural Puppy Dry Dog Food, ... 15 Pounds'"
+      },
+      "F5": {
+        "s": "U",
+        "e": "Meta descriptions not observable (raw HTML blocked with 403)"
+      },
+      "F6": {
+        "s": "U",
+        "e": "Canonical not observable (raw HTML blocked)"
+      },
+      "F7": {
+        "s": "U",
+        "e": "No structured-data evidence visible"
+      },
+      "F8": {
+        "s": 1,
+        "e": "/categories/dog/food/dry/blue-buffalo-...-brown-rice/3703 - readable slug + numeric ID; variants via ?sku= query"
+      },
+      "C1": {
+        "s": 2,
+        "e": "'Blue Buffalo Life Protection Formula Natural Puppy Dry Dog Food, Chicken and Brown Rice, 15 Pounds' (brand/line/flavor/size)"
+      },
+      "C2": {
+        "s": 1,
+        "e": "Blue Buffalo PDP: 5 detailed bullets + ingredients (well over 50 words); second PDP unfetchable (crawl errors)"
+      },
+      "C3": {
+        "s": 2,
+        "e": "9 gallery images on PDP, each with alt = product name"
+      },
+      "C4": {
+        "s": "U",
+        "e": "PDP shows placeholders '$List Price' and 'Availability: loader' - price/stock load client-side per store"
+      },
+      "C5": {
+        "s": 2,
+        "e": "'Ingredients & Composition' tab: full ingredient list + Guaranteed Analysis (Crude Protein 27%, Fat 16%); '15LB' size badge"
+      },
+      "C6": {
+        "s": 1,
+        "e": "URL tree Dog > Food > Premium > Dry; breadcrumbs not seen on PDP"
+      },
+      "C7": {
+        "s": "U",
+        "e": "Category pages (on-sale, Dog/Clothing-Accessories) rendered no product grid or failed to load"
+      },
+      "C8": {
+        "s": 1,
+        "e": "/search results page exists ('Search | Pet Supplies Plus'); search box not seen in rendered nav"
+      },
+      "B1": {
+        "s": 2,
+        "e": "PDP 'Add To Cart' + 'Add To Favorites'; home 'Shop BOGO Deals', 'Save More with Online Ordering!', 'Start New Order'"
+      },
+      "B2": {
+        "s": 1,
+        "e": "Returns: 30-day refund with receipt, animals 14-day guarantee; no shipping policy page found (only pickup/delivery/Autoship labels)"
+      },
+      "B3": {
+        "s": "U",
+        "e": "Checkout not observed"
+      },
+      "B4": {
+        "s": 2,
+        "e": "'Shop BOGO Deals by Category', 'Hot Deals', 'New & Trending', 'Shop Deals by Pet', Featured Brands (Fromm, Open Farm), Today's Deals"
+      },
+      "B5": {
+        "s": 1,
+        "e": "'best prices, best selection, best service. Guaranteed!' + 2016 Pet Retailer of the Year; PDP Reviews tab but no ratings seen"
+      },
+      "T1": {
+        "s": 2,
+        "e": "248-615-0039 + 'Email Us' form; Terms: PSP Group, LLC, 17410 College Pkwy, Livonia MI 48152"
+      },
+      "T2": {
+        "s": 1,
+        "e": "About Us page is brief: links to Services, Careers, Franchising, Leadership; award mention only"
+      },
+      "T3": {
+        "s": 2,
+        "e": "Privacy Policy (updated March 17, 2026) + Terms of Use (updated June 24, 2024); no accessibility statement seen"
+      },
+      "T4": {
+        "s": "U",
+        "e": "No social profile URLs captured in rendered text"
+      },
+      "T5": {
+        "s": 2,
+        "e": "'Skip to main' link + product gallery images carry alt text"
+      },
+      "N1": {
+        "s": 1,
+        "e": "Learning Center articles (How to Train Using Dog Treats, Flea & Tick Prevention) but no dates shown"
+      },
+      "N2": {
+        "s": 2,
+        "e": "FAQ topics (Curbside Pickup, Delivery, Autoship, Grooming, Pharmacy) + Learning Center how-tos"
+      },
+      "N3": {
+        "s": 2,
+        "e": "Header shows Livonia store: 29493 7 Mile Road, 248-615-0039, 'OPEN today from 10:00 AM - 06:00 PM'; /store/mi/... pages"
+      }
+    },
+    "strengths": [
+      "PDP depth: full ingredient list, guaranteed analysis, 9-image gallery with alt text, Add to Cart with curbside/delivery/Autoship (save up to 35%)",
+      "Localized store context in the header (Livonia address, phone, today's hours) with per-store landing pages",
+      "Learning Center article library plus FAQ topics, and a clear 30-day return policy"
+    ],
+    "fixes": [
+      "Rewrite the homepage <title> 'Home | Pet Supplies Plus' as brand + category + location, and add breadcrumbs (Dog > Food > Dry) to PDPs",
+      "Server-render price and stock on PDPs - they show '$List Price' and 'Availability: loader' until store-specific JS resolves",
+      "Make robots.txt and sitemap.xml return 200 to standard crawlers (both 403 to fetchers), add a shipping/delivery policy page, date Learning Center articles"
+    ],
+    "notes": "WAF returned 403 to WebFetch on every URL; rendered fetches succeeded intermittently, limiting sampling to one full PDP. HQ per Terms of Use.",
+    "status": "audited"
+  },
+  {
+    "company": "Plum Market",
+    "url": "https://www.plummarket.com",
+    "hq_city": "Farmington Hills, MI",
+    "segment": "Retail chain",
+    "sells": "specialty grocery; online wine shop with nationwide shipping",
+    "platform": "Magento",
+    "platform_evidence": "/store/ shows Magento markers ('The store will not work correctly when cookies are disabled', Compare, image-gallery skip links; robots disallows /store/catalogsearch/, product_list_order); marketing site is WordPress (wp-admin, wp-sitemap.xml)",
+    "audited_at": "2026-09-28",
+    "pages_checked": [
+      "https://www.plummarket.com/",
+      "https://www.plummarket.com/robots.txt",
+      "https://www.plummarket.com/wp-sitemap.xml",
+      "https://www.plummarket.com/store/sitemap.xml",
+      "https://www.plummarket.com/store/",
+      "https://www.plummarket.com/store/wine.html",
+      "https://www.plummarket.com/store/wine/gifts.html",
+      "https://www.plummarket.com/store/2022-frey-vineyards-cabernet-sauvignon-california.html",
+      "https://www.plummarket.com/store/moet-chandon-ice-imperial-rose-champagne.html",
+      "https://www.plummarket.com/store/wine-shipping.html",
+      "https://www.plummarket.com/store/shipping-returns",
+      "https://www.plummarket.com/select-your-store/",
+      "https://www.plummarket.com/locations/",
+      "https://www.plummarket.com/contact-us/"
+    ],
+    "sample_urls": {
+      "category": "https://www.plummarket.com/store/wine.html",
+      "product1": "https://www.plummarket.com/store/2022-frey-vineyards-cabernet-sauvignon-california.html",
+      "product2": "https://www.plummarket.com/store/moet-chandon-ice-imperial-rose-champagne.html"
+    },
+    "checks": {
+      "F1": {
+        "s": 2,
+        "e": "All pages https; robots.txt Sitemap line uses https"
+      },
+      "F2": {
+        "s": 2,
+        "e": "Sitemap: https://www.plummarket.com/wp-sitemap.xml; disallows /store/checkout/, /store/catalogsearch/, product_list_order params"
+      },
+      "F3": {
+        "s": "U",
+        "e": "wp-sitemap.xml served a 'Client Challenge' page; /store/sitemap.xml not found; no Magento sitemap listed in robots.txt"
+      },
+      "F4": {
+        "s": 1,
+        "e": "Home title 'Live Well, With Taste | Plum Market - Plum Market' (tagline, brand duplicated); PDP '2022 Frey Vineyards Cabernet Sauvignon...'"
+      },
+      "F5": {
+        "s": "U",
+        "e": "Meta descriptions not observable (raw HTML gated by bot challenge)"
+      },
+      "F6": {
+        "s": "U",
+        "e": "Canonical not observable"
+      },
+      "F7": {
+        "s": "U",
+        "e": "No structured-data evidence visible"
+      },
+      "F8": {
+        "s": 2,
+        "e": "/store/2022-frey-vineyards-cabernet-sauvignon-california.html and /store/wine/gifts.html - readable, hyphenated"
+      },
+      "C1": {
+        "s": 2,
+        "e": "'2022 Frey Vineyards Cabernet Sauvignon California', 'Moët & Chandon Ice Impérial Rosé Champagne' (vintage/producer/wine/region)"
+      },
+      "C2": {
+        "s": 1,
+        "e": "Winemaker Notes: Frey 47 words, Moët ~150 words"
+      },
+      "C3": {
+        "s": 1,
+        "e": "Single 'main product photo' per PDP (gallery controls present); alt text not verified"
+      },
+      "C4": {
+        "s": 2,
+        "e": "'Availability: In stock'; 'was $22.00 Special Price $17.99 Save $4.01 (18%)'; SKU 721512000745-1"
+      },
+      "C5": {
+        "s": 2,
+        "e": "'More Information' table: Country, Region, Vintage, Winery, Grape Varietals, Size, Natural Wine"
+      },
+      "C6": {
+        "s": 1,
+        "e": "Categories (Wine > Gifts, Natural/Minimal Intervention, Last Calls) but no breadcrumbs observed on PDP or category"
+      },
+      "C7": {
+        "s": 1,
+        "e": "Sort By position/Name/Price, 12-60 per page, 611 pages of 7,323 items; no layered filters (country/varietal/price)"
+      },
+      "C8": {
+        "s": 1,
+        "e": "Magento catalogsearch path present in robots.txt; search box not observed in rendered text"
+      },
+      "B1": {
+        "s": 2,
+        "e": "'Add to Cart' on PDPs and every category card; home 'Ship Wine To Me', 'Drive Up & Delivery'"
+      },
+      "B2": {
+        "s": "U",
+        "e": "/store/shipping-returns behind bot challenge; only saw $18.00 'Wine Shipment' product and 'Free Shipping Selection' category"
+      },
+      "B3": {
+        "s": "U",
+        "e": "Checkout not observed (robots blocks /store/checkout/); 'Sign In' link only"
+      },
+      "B4": {
+        "s": 2,
+        "e": "BOGOs & Sales Flyer, Featured Wines for Nationwide Shipping, 'Last Calls - Save up to 50% off', Madeline Triffon M.S. Selections"
+      },
+      "B5": {
+        "s": 1,
+        "e": "Card accolades ('#18 Wine Spectator Top 100 of 2025'); no product reviews/ratings or store guarantee seen"
+      },
+      "T1": {
+        "s": 1,
+        "e": "Select Your Store lists 6 addresses (375 North Maple Road, Ann Arbor MI 48103 ...); contact page gated, no phone seen"
+      },
+      "T2": {
+        "s": "U",
+        "e": "About/story page not reachable (bot challenge); homepage has service blurbs only"
+      },
+      "T3": {
+        "s": "U",
+        "e": "Privacy/terms links not observable; cookie-consent banner lists cookie categories only"
+      },
+      "T4": {
+        "s": 2,
+        "e": "Store footer links: Facebook, Twitter, Instagram, Pinterest"
+      },
+      "T5": {
+        "s": 1,
+        "e": "'Skip to Content' link on store pages; image alt not verified; no accessibility statement seen"
+      },
+      "N1": {
+        "s": "U",
+        "e": "Blog not observable (WP pages and sitemap gated)"
+      },
+      "N2": {
+        "s": "U",
+        "e": "FAQ/guides not observable"
+      },
+      "N3": {
+        "s": 1,
+        "e": "Select Your Store: bare list of 6 addresses (4 MI, 2 FL), no hours or phones; /locations/ gated"
+      }
+    },
+    "strengths": [
+      "Large wine catalog (7,000+ items) with was/special pricing, savings %, In-stock status, SKU and a structured spec table",
+      "Add to Cart directly from category cards and PDPs, 'You may also like' cross-sells, sort and per-page controls",
+      "Skip-to-content link and social profile links on every store page; robots.txt blocks sort/mode duplicates and checkout"
+    ],
+    "fixes": [
+      "Allowlist search crawlers past the 'Client Challenge' gate (blocks home, contact, locations, shipping and wp-sitemap.xml) and add a Magento product sitemap to robots.txt",
+      "Add layered filters (country, varietal, region, price) and breadcrumbs to /store/wine.html - 611 pages with sort only today",
+      "Fix data: Frey Cabernet lists 'Grape Varietals: Champagne Blend'; make the $18 'Wine Shipment' a checkout shipping method, not a product; dedupe the home title"
+    ],
+    "notes": "Alternate added because Belle Tire and Pet Supplies Plus were partially blocked. WordPress marketing site + Magento /store/ (wine, ships nationwide). HQ city per Dun & Bradstreet / Chamber listings (Plum Market Corporation, Farmington Hills); the site itself lists 4 MI + 2 FL stores only.",
+    "status": "audited"
+  },
+  {
+    "company": "Bordine's",
+    "url": "https://www.bordines.com",
+    "status": "skipped-no-online-shopping",
+    "notes": "WordPress brochure site (Rochester Hills, Clarkston, Grand Blanc, Brighton MI). No product catalog or cart; only gift cards via a Givex 'BUY NOW' link. sitemap_index.xml holds page + event sitemaps only."
+  },
+  {
+    "company": "Zerbo's Health Foods (Zerbo's Market)",
+    "url": "https://www.zerbos.com",
+    "status": "skipped-blocked",
+    "notes": "zerbos.com (Wix) 302-redirects to zerbosmarket.com (Livonia + Commerce Twp MI). Online store at shop.zerbos.com is a JS-only 'webcart-ui' SPA: no server-rendered products, empty meta description, so no catalog could be audited."
+  }
+]
