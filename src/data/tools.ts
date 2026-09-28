@@ -29,6 +29,26 @@ const M = 'https://mousabatarseh.com';
 
 export const toolPages: ToolDetail[] = [
   {
+    slug: 'rankreceipt',
+    name: 'RankReceipt',
+    promise: 'Every search result comes with its receipt.',
+    what: 'Load any list — products, help articles, parts — and see exactly why each search result ranks where it does, line by line.',
+    how: [
+      { title: 'Load', text: 'A CSV, TSV or JSON file, or pasted rows. Read in the browser, never uploaded.' },
+      { title: 'Map', text: 'Columns to rules: ID, title, brand, category, aliases, tags, other text. It guesses; you correct.' },
+      { title: 'Read the receipt', text: 'Each result lists the points it earned, rule by rule, and the total.' },
+      { title: 'Tune and test', text: 'Weights, synonyms, a pinned baseline, test searches with known right answers, and what-if edits on a sandbox copy.' },
+    ],
+    inside: ['Eleven named rules with adjustable weights, plus a floor', 'Typo tolerance and synonyms, each shown on the receipt', 'Two fictional samples: a hardware catalog and a help center'],
+    numbers: [{ v: '11', l: 'rules' }, { v: '2', l: 'samples' }, { v: '0', l: 'uploads' }],
+    role: 'Concept, scoring engine, design and build',
+    status: 'Live',
+    live: `${M}/rankreceipt/`,
+    media: 'rankreceipt',
+    shows: 'a result and its receipt',
+    family: [{ name: 'DiaMedical search lab', url: '#diamedical-lab', note: 'The explainable search this tool grew out of' }],
+  },
+  {
     slug: 'shelfmark',
     name: 'ShelfMark',
     promise: 'Twenty-nine checks. One score. Every store on the same rubric.',

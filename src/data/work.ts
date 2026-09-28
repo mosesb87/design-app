@@ -50,6 +50,7 @@ const M = 'https://mousabatarseh.com';
 
 export const entries: Entry[] = [
   // ── Systems
+  { slug: 'rankreceipt', title: 'RankReceipt', category: 'systems', what: 'Search ranking you can read: load any list and every result shows its receipt, rule by rule. Tune weights and synonyms, keep test searches with known answers, try what-if edits. Runs in the browser.', platform: 'Browser tool', url: `${M}/rankreceipt/`, status: 'live', media: 'rankreceipt', date: '2026-09-28' },
   { slug: 'shelfmark', title: 'ShelfMark', category: 'systems', what: 'Michigan Storefront Benchmark: 21 stores scored on 29 public-page checks, with report cards, evidence and a score-your-store calculator. Scoring model ships as a workbook.', platform: 'Web · workbook', url: `${M}/shelfmark/`, status: 'live', media: 'shelfmark', date: '2026-09-28' },
   { slug: 'asas-studio', title: 'ASAS Studio', category: 'systems', what: 'Elementor wireframe studio: real blocks, English and Arabic search, one color system, native JSON export.', platform: 'WordPress · Elementor', languages: ['EN', 'AR'], url: 'https://asas.build/', status: 'live', caseStudy: 'asas-studio', media: 'asas', date: '2026-09-23' },
   { slug: 'asas-studio-app', title: 'ASAS Studio app', category: 'systems', what: 'The studio itself: browse the ASAS Elementor block and wireframe library and build a page from it.', platform: 'Web app · Elementor', languages: ['EN', 'AR'], url: 'https://asas.build/studio/', status: 'live', family: 'asas-studio', media: 'asas-studio-app', date: '2026-09-13' },
@@ -119,7 +120,7 @@ export const countBy = (c: Category) => entries.filter((e) => e.category === c).
 // Upload times (UTC, from the hosting scan's Last-Modified) for the builds of the last week, to order same-day
 // builds; a group child uploaded in the same second as its parent is the same build and isn't counted twice.
 const uploadedAt: Record<string, string> = {
-  'review-reworked': '20:19:23', dealproof: '17:29:42', 'sapience-annotated-record': '10:08:02',
+  rankreceipt: '23:59:58', 'review-reworked': '20:19:23', dealproof: '17:29:42', 'sapience-annotated-record': '10:08:02',
   'proposal-gardner-white': '23:01:06', changeatlas: '23:00:56', 'changeatlas-demo': '23:00:56', 'proposal-rmc': '20:39:28',
   'proposal-bran': '18:36:25', 'review-bran': '17:53:50',
   // PetSafe is dated Sep 20 and went up at 03:56 on Sep 21, after everything else dated Sep 20.
