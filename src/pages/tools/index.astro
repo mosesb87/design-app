@@ -7,10 +7,11 @@ import PageHead from '../../components/play/PageHead.astro';
 import BrowserFrame from '../../components/BrowserFrame.astro';
 import VideoPlate from '../../components/VideoPlate.astro';
 import Picture from '../../components/Picture.astro';
-import { toolPages } from '../../data/tools';
+import { toolPages as allToolPages } from '../../data/tools';
 import { media } from '../../lib/media';
 import { SITE_URL } from '../../data/site';
 
+const toolPages = allToolPages.filter(t => t.slug !== 'ai-academy');
 const pad = (i: number) => String(i + 1).padStart(2, '0');
 const host = (u: string) => u.replace(/^https?:\/\//, '').replace(/\/$/, '');
 const dark = (i: number) => i % 3 === 2;
@@ -202,6 +203,9 @@ const jsonLd = [
   .tl__num :global(.odo__strip) { display: block; }
   .tl__num :global(.odo__strip > span) { display: block; height: 0.85em; line-height: 0.85; }
   .tl__num-l { font: 650 var(--t-small) / 1.25 var(--font-text); opacity: 0.85; }
+  #asas-studio .tl__nums li { background: var(--accent); }
+  #changeatlas .tl__note { background: var(--accent); color: #fff; }
+  #changeatlas .tl__status { background: var(--accent); color: #fff; }
   .tl__quote { font-family: var(--font-display); font-weight: 900; font-stretch: 78%; font-size: clamp(1.75rem, 3vw, 2.75rem); line-height: 0.95; text-transform: uppercase; text-wrap: balance; }
   .tl__note { padding: 12px 16px; border-radius: var(--r-m); background: var(--accent-tint); color: var(--accent-deep); font-weight: 600; font-size: var(--t-small); line-height: 1.45; }
   .tl--dark .tl__note { background: var(--accent); color: #fff; }
