@@ -1,4 +1,4 @@
-mousabatarseh-root.zip — built 2026-09-29T01:02:04.617Z
+mousabatarseh-root.zip — built 2026-09-29T01:07:54.242Z
 Unzip into the domain's document root (public_html). Top-level entries:
 
 404.html                    0.0 MB   new file; only used if you add the optional ErrorDocument line
@@ -8,15 +8,17 @@ apple-touch-icon.png        0.0 MB   new or replaces
 blog/                       0.6 MB   REPLACES /blog/index.html and adds /blog/<post>/ folders — download the whole existing blog folder first
 favicon.ico                 0.0 MB   replaces the existing favicon if there is one
 favicon.svg                 0.0 MB   new or replaces
-index/                      0.1 MB   new folder — the index of every build; /index/ returns 404 on the live domain today (checked 2026-09-27)
+index/                      0.2 MB   new folder — the index of every build; /index/ returns 404 on the live domain today (checked 2026-09-27)
 index.html                  0.1 MB   REPLACES the current home page — download the existing index.html first (step 2 of docs/deploy.md)
 llms.txt                    0.0 MB   new or replaces — check whether the root already has one
-media/                     79.2 MB   new folder — captures and recordings
-og/                         3.4 MB   new folder — social sharing images
+media/                     79.8 MB   new folder — captures and recordings
+method/                     0.0 MB   CHECK — not expected
+og/                         3.7 MB   new folder — social sharing images
 reviews/                    0.1 MB   REPLACES /reviews/index.html only (its cards open each review’s own website); the old /reviews/reviews/, /reviews/builds/, /reviews/method/, /reviews/img/ and /reviews/assets/ stay on the server — download the whole existing reviews folder first
+shelfmark/                  0.4 MB   CHECK — not expected
 sitemap-portfolio.xml       0.0 MB   new file; the existing sitemap.xml is untouched
 tools/                      0.1 MB   new folder — /tools/ returns 404 on the live domain today (checked 2026-09-27)
-work/                       0.6 MB   new folder — /work/ returns 404 on the live domain today (checked 2026-09-26)
+work/                       0.7 MB   new folder — /work/ returns 404 on the live domain today (checked 2026-09-26)
 
 Not included on purpose: .htaccess at the root, robots.txt, sitemap.xml.
 Redirects for the old post and review URLs: deploy/redirects.htaccess (add by hand — docs/deploy.md step 4).
