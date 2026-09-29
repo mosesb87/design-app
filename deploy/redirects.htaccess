@@ -1,5 +1,5 @@
 # mousabatarseh.com — redirects for the new portfolio. Paste right after "RewriteEngine On" in the ROOT .htaccess
-# (add "RewriteEngine On" first if the file doesn't have it). Generated 2026-09-28.
+# (add "RewriteEngine On" first if the file doesn't have it). Generated 2026-09-29.
 
 # Blog: each post that has a page here (old links opened the blog index).
 RewriteRule ^core-web-vitals-elementor-wordpress/?$ /blog/core-web-vitals-elementor-wordpress/ [R=301,L]

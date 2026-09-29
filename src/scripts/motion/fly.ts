@@ -21,14 +21,14 @@ export default function fly(heads: HTMLElement[], env: Env) {
       h.addEventListener('pointerenter', () => {
         if (busy) return;
         letters.forEach((l) => {
-          l.style.setProperty('--sx', `${rnd(-0.35, 0.35).toFixed(2)}em`);
-          l.style.setProperty('--sy', `${rnd(-0.3, 0.3).toFixed(2)}em`);
-          l.style.setProperty('--sr', `${rnd(-16, 16).toFixed(0)}deg`);
+          l.style.setProperty('--sx', `${rnd(-0.18, 0.18).toFixed(2)}em`);
+          l.style.setProperty('--sy', `${rnd(-0.15, 0.15).toFixed(2)}em`);
+          l.style.setProperty('--sr', `${rnd(-8, 8).toFixed(0)}deg`);
           l.classList.add('is-scat');
         });
         busy = window.setTimeout(() => { letters.forEach((l) => l.classList.remove('is-scat')); busy = 0; }, 260);
       });
     }
-    jostle(h, letters, { reach: Math.min(innerWidth * 0.14, 170), lift: -50, turn: 26, grow: 0.2 });
+    jostle(h, letters, { reach: Math.min(innerWidth * 0.08, 100), lift: -30, turn: 14, grow: 0.12 });
   });
 }

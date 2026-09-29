@@ -7,7 +7,7 @@ import type { StickerName } from '../../components/play/types';
 // The spec sheet: skills, then tools, each group a colored card with its own icon.
 const specLook: { tone: string; icon: StickerName }[] = [
   { tone: 'blue', icon: 'cell' }, { tone: 'white', icon: 'lens' }, { tone: 'night', icon: 'bag' }, { tone: 'red', icon: 'fx' }, { tone: 'sky', icon: 'check' },
-  { tone: 'night', icon: 'code' }, { tone: 'iris', icon: 'chart' }, { tone: 'white', icon: 'heart' }, { tone: 'blue', icon: 'blocks' }, { tone: 'red', icon: 'bolt' },
+  { tone: 'night', icon: 'code' }, { tone: 'blue-soft', icon: 'chart' }, { tone: 'white', icon: 'heart' }, { tone: 'blue', icon: 'blocks' }, { tone: 'red', icon: 'bolt' },
 ];
 const specGroups = [...skills.map((g) => ({ title: g.title, items: [...g.items] })), ...toolGroups.map((g) => ({ title: `Tools · ${g.title}`, items: [...g.items] }))]
   .map((g, i) => ({ ...g, ...specLook[i % specLook.length] }));
@@ -236,14 +236,14 @@ const accentFrom = 9; // "work better." — the last two of the eleven words
   .skills__group--night { background: var(--night); color: #fff; }
   .skills__group--leaf { background: var(--leaf-soft); }
   .skills__group--sky { background: var(--accent-tint-2); }
-  .skills__group--iris { background: var(--iris); }
+  .skills__group--blue-soft { background: var(--accent-soft); }
   .skills__group--red { background: var(--red-deep); color: #fff; }
   .about__skills .skills__group--blue .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--accent); }
   .about__skills .skills__group--white .skills__icon :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); }
   .about__skills .skills__group--night .skills__icon :global(.sticker) { --tile: var(--red); --stroke: #fff; --acc: var(--red-soft); }
   .about__skills .skills__group--leaf .skills__icon :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--leaf); }
-  .about__skills .skills__group--sky .skills__icon :global(.sticker) { --tile: var(--iris-deep); --stroke: #fff; --acc: var(--blue-pale); }
-  .about__skills .skills__group--iris .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--iris-deep); }
+  .about__skills .skills__group--sky .skills__icon :global(.sticker) { --tile: var(--accent-deep); --stroke: #fff; --acc: var(--blue-pale); }
+  .about__skills .skills__group--blue-soft .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--accent-deep); }
   .about__skills .skills__group--red .skills__icon :global(.sticker) { --tile: #fff; --stroke: var(--ink); --acc: var(--red); }
   .skills__title { font-family: var(--font-display); font-weight: 650; font-stretch: 80%; font-size: var(--t-h3); line-height: 1; text-transform: uppercase; margin-bottom: 14px; }
   .skills__group ul { display: flex; flex-wrap: wrap; gap: 6px; }

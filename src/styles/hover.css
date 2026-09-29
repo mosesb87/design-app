@@ -12,7 +12,7 @@
   :root { --sweep: var(--accent); }
   :is([data-ground='night'], .on-dark, .finale, .footer) { --sweep: var(--accent-soft); }
   :is(.check--blue, .check--red, .skills__group--red, .step--accent, .nums__tile--accent, .tool, .asas__nums li:nth-child(2)) { --sweep: #fff; }
-  :is(.check--sky, .check--leaf, .check--iris, .mq--light, .nums__tile--light) { --sweep: var(--accent-deep); }
+  :is(.check--sky, .check--leaf, .check--blue-soft, .mq--light, .nums__tile--light) { --sweep: var(--accent-deep); }
 
   /* Headings, card titles and intro lines: a band of light passes through the letters, left to right.
      The text stays real text; only its fill is painted from a moving gradient while hovered. */
@@ -154,8 +154,8 @@
 
 @media (hover: hover) and (pointer: fine) {
   /* "Every part in its place": each letter hops and takes the accent under the pointer. */
-  html .parts__l { transition: translate 0.3s var(--ease-pop), color 0.3s; }
-  html .parts__l:hover { translate: 0 -0.1em; color: var(--accent); }
+  html .parts__l { transition: translate 0.3s var(--ease-pop); }
+  html .parts__l:hover { translate: 0 -0.1em; }
 }
 
 /* Always-on life (motion allowed only; html.motion-ok is set in the head before first paint).

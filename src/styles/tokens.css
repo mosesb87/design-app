@@ -80,8 +80,8 @@
      and --iris; white on --iris-deep. --leaf is the green bar of his logo. */
   --leaf: #7de000;
   --leaf-soft: #cdf59a;
-  --iris: #a595ff;
-  --iris-deep: #5b3fd6;
+  --iris: var(--accent-soft);
+  --iris-deep: var(--accent-deep);
   /* A red for a few icon tiles only (Mousa, round 6: "a small number of the icons can be red") — the red bar of
      his logo, taken a touch deeper so it reads red, never orange. White strokes on it. */
   --red: #e8232e;
@@ -157,17 +157,17 @@
   --font-mono: 'Azeret', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
 
   /* Type scale (fluid). Display type is condensed (font-stretch 75%) and heavy. */
-  --t-mega: clamp(4.5rem, 19vw, 22rem);
-  --t-wordmark: clamp(3.3rem, 13.2vw, 13.5rem);
-  --t-h1: clamp(3.25rem, 9vw, 9.5rem);
-  --t-h2: clamp(2.5rem, 5vw, 5.25rem); /* every section heading (Mousa, round 4: one size) */
-  --t-h3: clamp(1.55rem, 2.3vw, 2.3rem); /* every card and paragraph heading */
-  --t-lead: clamp(1.125rem, 1.3vw, 1.4375rem);
-  --t-body: clamp(1rem, 0.3vw + 0.9rem, 1.0625rem);
-  --t-small: 0.9375rem;
-  --t-slug: 0.75rem;
-  --t-label: 0.8125rem;
-  --t-number: clamp(4rem, 11vw, 11rem);
+  --t-mega: clamp(4.375rem, 18.5vw, 21.875rem);
+  --t-wordmark: clamp(3.175rem, 12.8vw, 13.375rem);
+  --t-h1: clamp(3.125rem, 8.7vw, 9.375rem);
+  --t-h2: clamp(2.375rem, 4.8vw, 5.125rem); /* every section heading (Mousa, round 4: one size) */
+  --t-h3: clamp(1.425rem, 2.15vw, 2.175rem); /* every card and paragraph heading */
+  --t-lead: clamp(1.125rem, 1.4vw, 1.5rem);
+  --t-body: clamp(0.9375rem, 0.35vw + 0.825rem, 1.0625rem);
+  --t-small: 0.8125rem;
+  --t-slug: 0.625rem;
+  --t-label: 0.6875rem;
+  --t-number: clamp(3.875rem, 10.7vw, 10.875rem);
 
   /* Space (8-pt) */
   --s-1: 4px;
@@ -185,10 +185,10 @@
 
   /* Shape */
   /* Tighter corners throughout (Mousa, round 4). Circles (50%) stay circles. */
-  --r-s: 6px;
+  --r-s: 10px;
   --r-m: 10px;
-  --r-l: 14px;
-  --r-xl: clamp(14px, 1.4vw, 22px);
+  --r-l: 10px;
+  --r-xl: 10px;
   --r-pill: 10px;
   --shadow-1: 0 1px 2px rgb(14 17 22 / 0.05), 0 10px 28px -14px rgb(14 17 22 / 0.2);
   --shadow-2: 0 2px 4px rgb(14 17 22 / 0.05), 0 26px 48px -20px rgb(14 17 22 / 0.3);

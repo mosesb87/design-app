@@ -17,7 +17,7 @@ const more = related(post);
 const tone = toneOf(post.categories[0]);
 // Three colored icon tiles beside the title, a different trio on each post (Mousa, round 7: the blog's icons
 // get colors). Straight at rest, like every heading's tiles.
-const tileTones = ['blue', 'leaf', 'iris', 'night', 'sky', 'red'] as const;
+const tileTones = ['blue', 'leaf', 'blue-soft', 'night', 'sky', 'red'] as const;
 const tileNames = ['lens', 'cell', 'tag', 'check', 'blocks', 'percent'] as const;
 const trio = [0, 2, 4].map((k) => ({ name: tileNames[(i + k) % 6], tone: tileTones[(i + k) % 6] }));
 const jsonLd = [
@@ -112,7 +112,7 @@ const jsonLd = [
   .post__s :global(.sticker) { --size: 100%; width: 100%; }
   .post .post__s--blue :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); background: linear-gradient(150deg, #4d6bff, var(--accent) 45%, var(--accent-deep)); box-shadow: 0 22px 40px -22px rgb(28 51 168 / 0.75); }
   .post .post__s--leaf :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--leaf-soft), var(--leaf) 60%); box-shadow: 0 18px 32px -18px rgb(90 160 0 / 0.55); }
-  .post .post__s--iris :global(.sticker) { --tile: var(--iris); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, #c7bdff, var(--iris) 55%, #8a76f5); box-shadow: 0 20px 36px -20px rgb(91 63 214 / 0.6); }
+  .post .post__s--blue-soft :global(.sticker) { --tile: var(--accent-soft); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, #a8b7ff, var(--accent-soft) 55%, #4d6bff); box-shadow: 0 20px 36px -20px rgb(28 51 168 / 0.6); }
   .post .post__s--night :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); background: linear-gradient(150deg, var(--accent-deep), var(--night) 70%); box-shadow: 0 20px 36px -20px rgb(13 16 21 / 0.7); }
   .post .post__s--sky :global(.sticker) { --tile: var(--blue-soft); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--blue-pale), var(--blue-soft) 60%); box-shadow: 0 18px 32px -18px rgb(43 77 224 / 0.5); }
   .post .post__s--red :global(.sticker) { --tile: var(--red); --stroke: #fff; --acc: var(--red-soft); background: linear-gradient(150deg, #ff5a60, var(--red) 60%); box-shadow: 0 18px 32px -18px rgb(232 35 46 / 0.6); }

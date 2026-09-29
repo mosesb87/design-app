@@ -27,7 +27,7 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
   // Kept short (Mousa, round 5: the flight was too much): a little under a fifth of the screen at most, a light
   // turn, close to their own size.
   const rnd = gsap.utils.random;
-  const reach = Math.min(innerWidth * 0.16, 200);
+  const reach = Math.min(innerWidth * 0.1, 120);
   if (letters.length) {
     tl.from(letters, {
       x: () => rnd(-reach, reach), y: () => rnd(-110, 110), rotation: () => rnd(-28, 28), scale: () => rnd(0.75, 1.25), opacity: 0,
@@ -46,7 +46,7 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
   if (me) tl.from(me, { y: 40, duration: 1.1 * k }, 0.15 * k);
   if (photo) gsap.set(photo, { scale: 1.05, transformOrigin: '50% 100%' });
   // Once the letters have landed, scrolling jostles them (on x/y — the hop below uses yPercent).
-  if (letters.length) tl.eventCallback('onComplete', () => jostle(hero, letters, { reach: Math.min(innerWidth * 0.14, 170), lift: -50, turn: 22, grow: 0.15 }));
+  if (letters.length) tl.eventCallback('onComplete', () => jostle(hero, letters, { reach: Math.min(innerWidth * 0.08, 100), lift: -30, turn: 12, grow: 0.1 }));
 
   // Press a tile: a small, quick settle.
   holders.forEach((h) => {
@@ -58,9 +58,6 @@ export default function playHero([hero]: HTMLElement[], env: Env) {
     const hop = () => {
       if (gsap.isTweening(l)) return;
       gsap.fromTo(l, { yPercent: 0 }, { yPercent: -8, duration: 0.2, ease: 'power2.out', yoyo: true, repeat: 1 });
-      l.classList.add('is-hot');
-      l.style.color = 'var(--accent)';
-      setTimeout(() => { l.style.color = ''; l.classList.remove('is-hot'); }, 600);
     };
     l.addEventListener('pointerenter', hop);
     l.addEventListener('pointerdown', hop);
