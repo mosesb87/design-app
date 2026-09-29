@@ -12236,5 +12236,29 @@
     "color": "rgb(200 200 197)"
    }
   }
+ },
+ "partify-application": {
+  "title": null,
+  "url": null,
+  "capturedAt": null,
+  "views": {
+   "desktop-hero": {
+    "w": 900,
+    "h": 563,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/partify-application/desktop-hero-480.webp"
+     },
+     {
+      "w": 900,
+      "src": "/media/partify-application/desktop-hero-900.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQDLLCHw2uXa1phC+iogAP7t4bRhBFe7Up5GTvzvMX3Na7jO43tZ9tVrJ+v1Cg1wuj1AEBzrEIoR6ihlGrjnT9yASlT/HtNe0+yqfcr2B7cteDZoIAAA",
+    "color": "rgb(229 229 224)"
+   }
+  }
  }
 }
