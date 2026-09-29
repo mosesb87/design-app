@@ -4,19 +4,19 @@
 // scattered again (scripts/motion/checks.ts). Reduced motion or no script: they simply sit in order.
 import { allReviews } from '../data/reviews';
 const brand = (slug: string) => allReviews.find((r) => r.slug === slug)?.brand ?? slug;
-const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'sky' | 'night' | 'leaf' | 'blue-soft' | 'red' }[] = [
+const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'sky' | 'night' | 'leaf' | 'blue-soft' | 'red' | 'grey' }[] = [
   { title: 'Prices & promotions', from: ['highprofile', 'jars', 'lume', 'hayhouse'], tone: 'blue' },
   { title: 'Structured data', from: ['petsafe', 'salt', 'bran', 'reworked'], tone: 'red' },
-  { title: 'Sitemaps, robots & llms.txt', from: ['petsafe', 'salt'], tone: 'white' },
+  { title: 'Sitemaps, robots & llms.txt', from: ['petsafe', 'salt'], tone: 'grey' },
   { title: 'Stock & availability', from: ['reworked', 'dehanche', 'jbtools'], tone: 'night' },
   { title: 'Product names & spellings', from: ['dutchie', 'icr', 'jbtools'], tone: 'blue' },
-  { title: 'Filters & facets', from: ['carhartt', 'oakwood', 'diamedical'], tone: 'white' },
+  { title: 'Filters & facets', from: ['carhartt', 'oakwood', 'diamedical'], tone: 'grey' },
   { title: 'Titles & meta', from: ['bran', 'icr'], tone: 'night' },
   { title: 'Canonicals & indexing', from: ['behealth', 'moment'], tone: 'blue' },
   { title: 'Local store pages', from: ['dunhams', 'bestlife'], tone: 'red' },
   { title: 'Launch readiness', from: ['biotrust', 'aedit'], tone: 'night' },
-  { title: 'Reviews & claims', from: ['moment', 'behealth'], tone: 'blue-soft' },
-  { title: 'Help content for AI answers', from: ['dutchie'], tone: 'sky' },
+  { title: 'Reviews & claims', from: ['moment', 'behealth'], tone: 'blue' },
+  { title: 'Help content for AI answers', from: ['dutchie'], tone: 'red' },
 ];
 ---
 <div class="checks" data-checks>
@@ -67,6 +67,7 @@ const checks: { title: string; from: string[]; tone: 'white' | 'blue' | 'sky' | 
   .check--blue-soft { background: var(--accent-soft); }
   .check--blue-soft .check__n { color: var(--ink); }
   .check--blue-soft .check__f { color: var(--ink); }
+  .check--grey { background: var(--grey-2); }
   .check--night { background: var(--night); color: #fff; }
   .check--night .check__n { color: var(--accent-soft); }
   .check--night .check__f { color: var(--night-ink-2); }

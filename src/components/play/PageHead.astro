@@ -91,7 +91,7 @@ const tiles = [...own, ...extras];
   /* The icon tiles sit in organized rows at the top right (Mousa: scatter, then come back into rows): two across
      on phones and tablets, three across on desktop. The arrival scatter and the scroll jostle move them with
      transforms only, so these are the spots they always return to. */
-  .phd__stickers { position: absolute; z-index: 2; pointer-events: none; top: calc(var(--nav-h) + var(--s-8)); right: var(--margin); display: grid; grid-template-columns: repeat(2, var(--tile-w)); gap: clamp(10px, 1.2vw, 16px); --tile-w: clamp(56px, 8vw, 96px); }
+  .phd__stickers { position: absolute; z-index: 2; pointer-events: none; top: calc(var(--nav-h) + var(--s-8)); right: max(var(--margin), calc((100% - var(--max)) / 2 + var(--margin))); display: grid; grid-template-columns: repeat(2, var(--tile-w)); gap: clamp(10px, 1.2vw, 16px); --tile-w: clamp(56px, 8vw, 96px); }
   .phd__s { position: relative; display: block; width: var(--tile-w); aspect-ratio: 1; pointer-events: auto; cursor: grab; }
   .phd__s :global(.sticker) { --size: 100%; width: 100%; }
   @media (min-width: 1024px) { .phd__stickers { grid-template-columns: repeat(3, var(--tile-w)); --tile-w: clamp(72px, 6.2vw, 104px); } }

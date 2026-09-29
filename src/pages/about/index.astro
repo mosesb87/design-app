@@ -222,7 +222,8 @@ const accentFrom = 9; // "work better." — the last two of the eleven words
   .svc__d { max-width: 56ch; font-weight: 500; }
   .svc__tools { display: flex; flex-wrap: wrap; gap: 6px; }
   .svc__tools span { padding: 5px 10px; border-radius: var(--r-pill); background: rgb(255 255 255 / 0.7); font: 650 0.8125rem / 1.2 var(--font-text); }
-  .skills { display: grid; gap: 12px; align-items: start; }
+  .skills { display: grid; gap: 12px; align-items: stretch; }
+  .skills__group { align-content: start; }
   .skills__group { position: relative; display: grid; gap: 12px; padding: 20px 22px 22px; border-radius: var(--r-l); background: var(--cloud); color: var(--ink); overflow: hidden; transition: translate 0.5s var(--ease-register), box-shadow 0.4s; }
   .skills__group:hover { translate: 0 -5px; box-shadow: 0 26px 48px -24px rgb(14 17 22 / 0.45); }
   .skills__head { display: flex; align-items: flex-start; justify-content: space-between; }
