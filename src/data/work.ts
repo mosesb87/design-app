@@ -15,9 +15,10 @@ export const categories: { id: Category; label: string; blurb: string }[] = [
   { id: 'proposals', label: 'Proposals', blurb: 'Proposal sites built for specific job applications, each a working demo.' },
 ];
 
-export type Status = 'live' | 'demo' | 'login' | 'adaptation' | 'independent' | 'unverified' | 'private' | 'unchecked';
+export type Status = 'live' | 'preview' | 'demo' | 'login' | 'adaptation' | 'independent' | 'unverified' | 'private' | 'unchecked';
 export const statusLabel: Record<Status, string> = {
   live: 'Live',
+  preview: 'Preview — domain pending',
   demo: 'Demo — not a live business',
   login: 'Login required',
   adaptation: 'Fictional-company adaptation',
@@ -79,6 +80,7 @@ export const entries: Entry[] = [
   { slug: 'united-textile', title: 'United Textile', category: 'sites', what: 'Shopify B2B wholesale store: collections, case-pack pricing and buyer accounts.', platform: 'Shopify', languages: ['EN'], url: 'https://shopunitedtextile.com/', status: 'live', caseStudy: 'united-textile', media: 'united-textile', date: '2024-06-05' },
   { slug: 'universal-wholesale', title: 'Universal Wholesale', category: 'sites', what: 'A 14,000-item catalog prepared for migration: record cleanup, field mapping, import planning and validation.', platform: 'Wholesale e-commerce', languages: ['EN'], url: 'https://universalwholesaleonline.com/', status: 'live', caseStudy: 'universal-wholesale', media: 'universal-wholesale' },
   { slug: 'firefly-burgers', title: 'Firefly Burgers — Michigan', category: 'sites', what: 'Mobile-first WordPress restaurant site: menu, hours, location and branding.', platform: 'WordPress · Elementor', languages: ['EN'], url: 'https://fireflyburgersmi.com/ver2/', status: 'live', caseStudy: 'firefly-burgers', media: 'firefly-burgers' },
+  { slug: 'mikes-party-store', title: 'Mike’s Party Store', category: 'sites', what: 'Information-only WordPress site for a Dearborn Heights party store: six aisle pages and a Breeze flavor shelf, all in free Elementor.', platform: 'WordPress · Elementor', languages: ['EN'], url: `${M}/mikes-party-store/`, status: 'preview', media: 'mikes-party-store', date: '2026-09-29' },
   { slug: 'eat-with-samar', title: 'Eat With Samar', category: 'sites', what: 'Bilingual health and food website.', languages: ['EN', 'AR'], url: 'https://eatwithsamar.com/', status: 'live', caseStudy: 'eat-with-samar', media: 'eat-with-samar', date: '2026-09-09' },
   { slug: 'great-lakes-cigar-festival', title: 'Great Lakes Cigar Festival', category: 'sites', what: 'WordPress event and ticketing site: tickets, schedules, sponsors and vendors.', platform: 'WordPress · Elementor', languages: ['EN'], url: 'https://greatlakescigarfest.com/home/', status: 'live', caseStudy: 'great-lakes-cigar-festival', media: 'great-lakes-cigar-festival', date: '2025-07-21' },
   { slug: 'ptee', title: 'PTEE', category: 'sites', what: 'Bilingual education platform: a courses website and a separate admissions platform.', languages: ['AR', 'EN'], url: 'https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/', status: 'live', caseStudy: 'ptee', media: 'ptee-renewal' },
