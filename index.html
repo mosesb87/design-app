@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Deals OS — an independent concept for LIV Cannabis</title>
+<meta name="description" content="An independent proof-of-concept by Mousa Batarseh: a unified deals front door for LIV Cannabis, plus the operational layer that creates, validates, QAs, approves and publishes every deal. Not affiliated with LIV Cannabis." />
+<meta name="author" content="Mousa (Moses) Batarseh" />
+<meta property="og:title" content="Deals OS — an independent concept for LIV Cannabis" />
+<meta property="og:description" content="LIV built a great store and a working deals page almost no customer can reach. This is the gap — documented — and a build that closes it." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://liv-deals-os.vercel.app/" />
+<meta property="og:image" content="https://liv-deals-os.vercel.app/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Deals OS — an independent concept for LIV Cannabis by Mousa Batarseh" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://liv-deals-os.vercel.app/og.jpg" />
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://liv-deals-os.vercel.app/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B0B0B'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' fill='%23E96B3B' text-anchor='middle'%3E%C2%B7%3C/text%3E%3Ctext x='50' y='64' font-family='Georgia,serif' font-size='46' fill='%23ECECEA' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+<style>
+/* ============================================================
+   DEALS OS — independent concept for LIV Cannabis
+   Design system: editorial / monochrome + ember.
+   Type: Fraunces (display serif) · Hanken Grotesk (grotesk) · Space Mono
+   Palette derived from LIV's live platform tokens.
+   Border rule: full borders or none — never a decorative one-sided line.
+   ============================================================ */
+:root{
+  --ink:#0B0B0B;
+  --ink-2:#26251f;
+  --ink-soft:#55524a;
+  --slate:#505A62;
+  --paper:#ECEAE3;
+  --paper-2:#E3E0D6;
+  --paper-3:#D8D4C7;
+  --white:#ffffff;
+  --ember:#E96B3B;
+  --ember-deep:#A8441A;
+  --olive:#8E9233;      /* sativa (LIV) — darkened for text contrast */
+  --olive-badge:#A8AC3E;
+  --plum:#665468;       /* indica (LIV) */
+  --red:#CC323A;        /* alert (LIV) */
+  --line:rgba(11,11,11,.14);
+  --line-soft:rgba(11,11,11,.08);
+  --line-strong:rgba(11,11,11,.32);
+  --shadow:0 1px 2px rgba(11,11,11,.05), 0 18px 40px -24px rgba(11,11,11,.35);
+  --shadow-lift:0 2px 4px rgba(11,11,11,.06), 0 30px 60px -28px rgba(11,11,11,.5);
+
+  --sans:"Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --mono:"Space Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --maxw:1280px;
+  --gutter:clamp(20px, 5vw, 84px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+::selection{background:var(--ember);color:var(--white)}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px;border-radius:3px}
+.band-ink :focus-visible{outline-color:var(--ember)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.01em}
+p{margin:0}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter)}
+.section{padding-block:clamp(72px,11vw,148px);position:relative}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ember-deep);display:inline-flex;gap:.7em;align-items:center;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--ember)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin-bottom:clamp(40px,6vw,72px)}
+.sec-num{font-family:var(--mono);font-size:13px;letter-spacing:.2em;color:var(--slate)}
+.sec-title{font-family:var(--serif);font-optical-sizing:auto;font-weight:400;
+  font-size:clamp(2rem,5.2vw,3.9rem);line-height:1.02;letter-spacing:-.02em;max-width:16ch}
+.sec-title em{font-style:italic;color:var(--ember-deep)}
+.lede{font-size:clamp(1.05rem,2vw,1.32rem);line-height:1.5;color:var(--ink-2);max-width:56ch;font-weight:400}
+
+/* fluid display type */
+.display{font-family:var(--serif);font-optical-sizing:auto;font-weight:380;line-height:.98;letter-spacing:-.025em}
+
+/* ---------- nav ---------- */
+.topbar{position:fixed;inset:0 0 auto 0;z-index:80;transition:transform .5s var(--ease)}
+.topbar.hide{transform:translateY(-106%)}
+.nav{position:relative;transition:background .4s, border-color .4s;background:rgba(236,234,227,0);border-bottom:1px solid transparent}
+.nav.solid{background:rgba(236,234,227,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:14px var(--gutter);display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.02em}
+.brand .mk{position:relative;font-family:var(--serif);font-weight:500;font-size:21px;line-height:1;white-space:nowrap;
+  background:var(--ink);color:var(--paper);width:34px;height:34px;display:grid;place-items:center;border-radius:3px}
+.brand .mk::after{content:"";position:absolute;right:6px;bottom:8px;width:4px;height:4px;border-radius:50%;background:var(--ember)}
+.brand .bt{display:flex;flex-direction:column;line-height:1.05}
+.brand .bt small{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--slate);font-weight:400}
+.brand .bt span{font-size:15px}
+.nav-links{margin-left:auto;display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:13.5px;color:var(--ink-2);position:relative;padding:6px 0;transition:color .25s}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--ember);transition:right .3s var(--ease)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{right:0}
+.nav-tag{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);
+  border:1px solid var(--line-strong);border-radius:100px;padding:6px 12px;white-space:nowrap}
+.nav-cta{background:var(--ink);color:var(--paper);border:none;border-radius:100px;padding:10px 18px;font-size:13.5px;font-weight:600;
+  transition:background .25s, transform .25s var(--ease)}
+.nav-cta:hover{background:var(--ember-deep);transform:translateY(-1px)}
+.nav-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--line-strong);border-radius:8px;width:44px;height:40px}
+.nav-toggle span{display:block;width:18px;height:1.5px;background:var(--ink);margin:3.5px auto;transition:.3s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding-top:clamp(44px,7vw,78px);padding-bottom:clamp(60px,9vw,120px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:44px}
+.hero h1{font-family:var(--serif);font-optical-sizing:auto;font-weight:370;
+  font-size:clamp(2.7rem,8.2vw,6.6rem);line-height:.94;letter-spacing:-.03em;max-width:15ch}
+.hero h1 .l{display:block;overflow:hidden}
+.hero h1 .l>span{display:block;transform:translateY(102%);transition:transform .95s var(--ease-out)}
+.reveal-hero .hero h1 .l>span{transform:translateY(0)}
+.hero h1 em{font-style:italic;color:var(--ember-deep)}
+.hero-sub{max-width:52ch;font-size:clamp(1.08rem,2vw,1.4rem);line-height:1.5;color:var(--ink-2);
+  opacity:0;transform:translateY(16px);transition:opacity .9s .5s var(--ease), transform .9s .5s var(--ease)}
+.reveal-hero .hero-sub{opacity:1;transform:none}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;opacity:0;transform:translateY(16px);
+  transition:opacity .9s .68s var(--ease), transform .9s .68s var(--ease)}
+.reveal-hero .hero-actions{opacity:1;transform:none}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:100px;padding:14px 26px;font-weight:600;font-size:15px;
+  border:1px solid var(--ink);transition:transform .25s var(--ease), background .25s, color .25s}
+.btn .arw{transition:transform .3s var(--ease)}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{background:var(--ember-deep);border-color:var(--ember-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+.hero-meta{margin-top:8px;display:flex;flex-wrap:wrap;gap:26px 40px;padding-top:34px;border-top:1px solid var(--line);
+  opacity:0;transition:opacity 1s .9s var(--ease)}
+.reveal-hero .hero-meta{opacity:1}
+.hmeta{display:flex;flex-direction:column;gap:3px}
+.hmeta b{font-family:var(--serif);font-weight:500;font-size:1.7rem;letter-spacing:-.02em}
+.hmeta small{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
+.hero-disc{margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--slate);max-width:60ch;opacity:0;transition:opacity 1s 1.05s}
+.reveal-hero .hero-disc{opacity:.9}
+.hero-bg{position:absolute;right:-6vw;top:8%;width:min(46vw,560px);aspect-ratio:1;z-index:-1;
+  background:radial-gradient(circle at 50% 50%, rgba(233,107,59,.16), transparent 62%);filter:blur(10px);pointer-events:none}
+
+/* ---------- reveal utility ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease), transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal-stagger>*{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.reveal-stagger.in>*{opacity:1;transform:none}
+.reveal-stagger.in>*:nth-child(2){transition-delay:.08s}
+.reveal-stagger.in>*:nth-child(3){transition-delay:.16s}
+.reveal-stagger.in>*:nth-child(4){transition-delay:.24s}
+.reveal-stagger.in>*:nth-child(5){transition-delay:.32s}
+.reveal-stagger.in>*:nth-child(6){transition-delay:.4s}
+
+/* ---------- LIV context (sec 01) ---------- */
+.band-ink{background:var(--ink);color:var(--paper)}
+.band-ink .sec-num{color:#8f8b81}
+.band-ink .lede{color:#cdc9bf}
+.band-ink .eyebrow{color:var(--ember)}
+.band-ink .line,.band-ink .sec-title{color:var(--paper)}
+.ctx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:2px;margin-top:40px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:12px;overflow:hidden}
+.ctx-cell{background:var(--ink);padding:28px 26px;display:flex;flex-direction:column;gap:8px;min-height:150px}
+.ctx-cell b{font-family:var(--serif);font-weight:500;font-size:2.4rem;letter-spacing:-.02em;color:var(--paper)}
+.ctx-cell .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember)}
+.ctx-cell p{font-size:14px;color:#b8b4aa;line-height:1.45}
+
+/* ---------- observed (sec 02) ---------- */
+.claim{font-family:var(--serif);font-weight:380;font-size:clamp(1.7rem,4.2vw,3rem);line-height:1.08;letter-spacing:-.02em;max-width:22ch}
+.claim em{font-style:italic;color:var(--ember-deep)}
+.route-demo{margin-top:52px;display:grid;grid-template-columns:1fr;gap:18px}
+.route{border:1px solid var(--line);border-radius:14px;background:var(--white);padding:22px 24px;display:grid;
+  grid-template-columns:auto 1fr auto;align-items:center;gap:18px 22px}
+.route .click{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--slate);text-transform:uppercase}
+.route .flow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:14.5px}
+.route .node{border:1px solid var(--line);border-radius:100px;padding:7px 14px;background:var(--paper);font-weight:500;white-space:nowrap}
+.route .node.dead{border-color:var(--red);color:var(--red)}
+.route .node.good{border-color:var(--olive);color:var(--olive)}
+.route .to{font-family:var(--mono);color:var(--slate)}
+.route .verdict{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.route .verdict.bad{color:var(--red)}
+.route .verdict.ok{color:var(--olive)}
+
+/* ---------- evidence (sec 03) ---------- */
+.ev-list{display:grid;gap:16px}
+.ev{border:1px solid var(--line);border-radius:16px;background:var(--white);overflow:hidden;transition:box-shadow .35s var(--ease), transform .35s var(--ease)}
+.ev:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.ev-head{display:grid;grid-template-columns:auto 1fr auto;gap:16px 20px;align-items:center;padding:22px 24px;width:100%;text-align:left;background:none;border:none}
+.ev-id{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--white);background:var(--ink);border-radius:6px;padding:6px 9px}
+.ev.hyp .ev-id{background:var(--slate)}
+.ev-title{font-size:16.5px;font-weight:600;line-height:1.35;color:var(--ink)}
+.ev-tags{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:100px;border:1px solid var(--line)}
+.tag.fact{color:#2c6b3f;border-color:rgba(44,107,63,.4);background:rgba(44,107,63,.07)}
+.tag.hypothesis{color:var(--ember-deep);border-color:rgba(192,80,31,.35);background:rgba(233,107,59,.08)}
+.tag.conf{color:var(--slate)}
+.ev-chev{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .4s var(--ease), background .3s;flex-shrink:0}
+.ev[open] .ev-chev{transform:rotate(45deg);background:var(--ember);border-color:var(--ember);color:var(--white)}
+.ev-body{padding:0 24px;max-height:0;overflow:hidden;transition:max-height .5s var(--ease), padding .5s var(--ease)}
+.ev[open] .ev-body{max-height:1600px;padding:0 24px 26px}
+.ev-body .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;padding-top:6px}
+.ev-field{margin-bottom:16px}
+.ev-field .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:5px}
+.ev-field .v{font-size:15px;line-height:1.55;color:var(--ink-2)}
+.ev-field a.v{color:var(--ember-deep);text-decoration:underline;text-underline-offset:3px;word-break:break-word}
+.ev-why{background:var(--paper);border-radius:10px;padding:16px 18px;font-size:14.5px;line-height:1.5}
+.ev-why b{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember-deep);display:block;margin-bottom:6px;font-weight:700}
+figure{margin:0}
+.shot{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper-2);position:relative}
+.shot img{width:100%;height:auto}
+.shot figcaption{font-family:var(--mono);font-size:11px;color:var(--slate);padding:10px 12px;background:var(--white);border-top:1px solid var(--line);line-height:1.4}
+.callout{position:absolute;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--ember);color:var(--white);padding:5px 8px;border-radius:5px;box-shadow:0 6px 16px -6px rgba(233,107,59,.8)}
+.code-ex{font-family:var(--mono);font-size:12.5px;line-height:1.65;background:var(--ink);color:#d7d3c8;border-radius:10px;padding:18px 18px;overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+.code-ex .hl{color:var(--ember);font-weight:700}
+.code-ex .cm{color:#8f8b81}
+
+/* ---------- why it matters (sec 04) ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:8px}
+.why-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;gap:14px}
+.why-card .n{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ember-deep)}
+.why-card h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;line-height:1.1;letter-spacing:-.01em}
+.why-card p{font-size:15px;line-height:1.55;color:var(--ink-2)}
+.why-note{margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--slate);
+  background:var(--paper-2);border-radius:10px;padding:16px 20px;line-height:1.6}
+.why-note b{color:var(--ember-deep)}
+
+/* ---------- solution bridge (sec 05) ---------- */
+.bridge{display:grid;grid-template-columns:1fr auto 1fr;gap:26px;align-items:stretch;margin-top:48px}
+.bridge-side{border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;gap:14px;min-height:230px}
+.bridge-side.cust{background:var(--white);border:1px solid var(--line)}
+.bridge-side.ops{background:var(--ink);color:var(--paper)}
+.bridge-side .role{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ember-deep)}
+.bridge-side.ops .role{color:var(--ember)}
+.bridge-side h3{font-family:var(--serif);font-weight:500;font-size:1.7rem;line-height:1.05}
+.bridge-side p{font-size:15px;line-height:1.55;color:var(--ink-2)}
+.bridge-side.ops p{color:#c4c0b6}
+.bridge-link{position:relative;display:grid;place-items:center;width:70px}
+.bridge-link .dot{width:12px;height:12px;border-radius:50%;background:var(--ember)}
+.bridge-link .ln{position:absolute;top:50%;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--line),var(--ember),var(--line))}
+.bridge-link .updown{position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--slate);top:calc(50% + 16px);text-transform:uppercase}
+
+/* ---------- product: customer deals (sec 06) ---------- */
+.demoframe{border:1px solid var(--line-strong);border-radius:20px;overflow:hidden;background:var(--white);box-shadow:var(--shadow-lift);margin-top:44px}
+.demobar{display:flex;align-items:center;gap:10px;padding:12px 18px;background:var(--paper-2);border-bottom:1px solid var(--line)}
+.demobar .dots{display:flex;gap:6px}
+.demobar .dots i{width:11px;height:11px;border-radius:50%;background:var(--paper-3);display:block}
+.demobar .url{font-family:var(--mono);font-size:12px;color:var(--slate);background:var(--white);border-radius:100px;padding:6px 16px;flex:1;text-align:center;border:1px solid var(--line);max-width:520px;margin:0 auto}
+.demobar .tagm{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--ember);border-radius:100px;padding:5px 10px}
+.storefront{padding:0}
+.sf-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 26px;border-bottom:1px solid var(--line)}
+.sf-logo{font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:.06em}
+.sf-logo b{color:var(--ember)}
+.sf-loc{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sf-loc label{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.sel{font-family:var(--sans);font-size:14px;font-weight:600;border:1px solid var(--line-strong);background:var(--paper);
+  border-radius:100px;padding:9px 16px;color:var(--ink);appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230B0B0B' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 15px center;padding-right:38px}
+.sf-hero{padding:26px 26px 8px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.sf-hero h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.01em}
+.sf-hero h3 span{color:var(--ember-deep)}
+.sf-hero .count{font-family:var(--mono);font-size:12px;color:var(--slate)}
+.filters{display:flex;gap:9px;overflow-x:auto;padding:18px 26px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.chip{font-family:var(--sans);font-size:13px;font-weight:600;white-space:nowrap;border:1px solid var(--line-strong);
+  background:var(--white);color:var(--ink-2);border-radius:100px;padding:9px 16px;transition:all .2s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.deals-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;padding:8px 26px 30px}
+.deal{border:1px solid var(--line);border-radius:16px;background:var(--white);padding:20px 20px 18px;display:flex;flex-direction:column;gap:13px;
+  position:relative;transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;overflow:hidden}
+.deal:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--line-strong)}
+.deal.off{opacity:.52;filter:grayscale(.4)}
+.deal-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.deal-mech{font-family:var(--serif);font-weight:500;font-size:1.32rem;line-height:1.05;letter-spacing:-.01em}
+.deal-mech b{color:var(--ember-deep)}
+.badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:100px;font-weight:700;white-space:nowrap;color:var(--white)}
+.badge.sativa{background:var(--olive-badge);color:#2a2b0d}
+.badge.hybrid{background:var(--slate)}
+.badge.indica{background:var(--plum)}
+.badge.any{background:var(--ink)}
+.deal-name{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.3}
+.deal-brand{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--slate);text-transform:uppercase}
+.deal-meta{display:flex;flex-direction:column;gap:9px;margin-top:2px;padding-top:13px;border-top:1px solid var(--line-soft)}
+.dm{display:flex;gap:9px;align-items:flex-start;font-size:12.5px;line-height:1.4;color:var(--ink-2)}
+.dm svg{flex-shrink:0;margin-top:1px;color:var(--slate)}
+.dm .lbl{font-weight:600;color:var(--ink)}
+.auto{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:#2c6b3f;font-weight:700}
+.auto i{width:6px;height:6px;border-radius:50%;background:#2c6b3f;box-shadow:0 0 0 0 rgba(44,107,63,.5);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(44,107,63,.5)}70%{box-shadow:0 0 0 7px rgba(44,107,63,0)}100%{box-shadow:0 0 0 0 rgba(44,107,63,0)}}
+.deal-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:13px}
+.countdown{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink)}
+.countdown.soon{color:var(--red)}
+.deal-cta{font-size:13px;font-weight:600;color:var(--ink);display:inline-flex;align-items:center;gap:6px;transition:gap .2s,color .2s}
+.deal-cta:hover{color:var(--ember-deep);gap:10px}
+.deal .stores-note{font-size:11.5px;color:var(--slate);font-family:var(--sans)}
+.deal .unavail{position:absolute;inset:auto 0 0 0;background:var(--red);color:var(--white);font-family:var(--mono);font-size:10px;
+  letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:6px;font-weight:700}
+.empty{grid-column:1/-1;text-align:center;padding:50px 20px;color:var(--slate);font-family:var(--mono);font-size:13px}
+
+/* ---------- product: Deal OS (sec 07) — pinned left, scrolling right ---------- */
+.dealos{margin-top:44px;border:1px solid var(--line-strong);border-radius:20px;overflow:hidden;background:var(--ink);box-shadow:var(--shadow-lift)}
+.dealos-bar{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.12);color:var(--paper)}
+.dealos-bar .t{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember)}
+.dealos-bar .sub{font-size:12.5px;color:#a19d93;margin-left:auto}
+.dealos-body{display:grid;grid-template-columns:minmax(260px,340px) 1fr;min-height:520px}
+.dealos-list{border-right:1px solid rgba(255,255,255,.12);background:#111;position:sticky;top:0;align-self:start;max-height:640px;overflow-y:auto}
+.dealos-list-h{padding:16px 18px 10px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8f8b81;position:sticky;top:0;background:#111;z-index:2}
+.os-row{padding:15px 18px;border-top:1px solid rgba(255,255,255,.08);cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:background .2s;width:100%;text-align:left;background:none;border-left:none;border-right:none;color:var(--paper)}
+.os-row:hover{background:rgba(255,255,255,.05)}
+.os-row[aria-pressed="true"]{background:rgba(233,107,59,.14)}
+.os-row .rn{font-size:14px;font-weight:600;line-height:1.25;color:var(--paper)}
+.os-row .rmeta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.st{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:100px}
+.st.live{background:rgba(142,146,51,.2);color:#c6ca63}
+.st.scheduled{background:rgba(80,90,98,.35);color:#b9c2c9}
+.st.review{background:rgba(233,107,59,.18);color:var(--ember)}
+.st.draft{background:rgba(255,255,255,.1);color:#a19d93}
+.st.blocked{background:rgba(204,50,58,.22);color:#f0868c}
+.st.expired{background:rgba(255,255,255,.06);color:#77736a}
+.qa-mini{font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;display:inline-flex;align-items:center;gap:5px}
+.qa-mini.pass{color:#c6ca63}.qa-mini.fail{color:#f0868c}
+.dealos-detail{padding:26px 30px;color:var(--paper);background:var(--ink)}
+.detail-h{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.detail-h h3{font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.05;color:var(--paper);max-width:22ch}
+.detail-id{font-family:var(--mono);font-size:11px;color:#8f8b81;letter-spacing:.06em}
+.detail-mech{font-size:14.5px;color:#c4c0b6;margin:14px 0 22px;line-height:1.5}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:12px;overflow:hidden;margin-bottom:24px}
+.field{background:var(--ink);padding:15px 16px;display:flex;flex-direction:column;gap:6px;min-height:74px}
+.field .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#8f8b81}
+.field .v{font-size:13.5px;color:var(--paper);font-weight:500;line-height:1.35}
+.field .v.warn{color:#f0868c}
+.chips-mini{display:flex;flex-wrap:wrap;gap:5px}
+.chips-mini span{font-family:var(--mono);font-size:9.5px;padding:3px 7px;border-radius:100px;background:rgba(255,255,255,.1);color:#cdc9bf}
+.qa-block{margin-bottom:22px}
+.qa-block h4{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8f8b81;margin-bottom:12px}
+.qa-item{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-top:1px solid rgba(255,255,255,.08);font-size:13.5px;color:#c4c0b6;line-height:1.4}
+.qa-item .ic{flex-shrink:0;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700;margin-top:1px}
+.qa-item.pass .ic{background:rgba(142,146,51,.25);color:#c6ca63}
+.qa-item.fail .ic{background:rgba(204,50,58,.25);color:#f0868c}
+.qa-item.fail{color:#f0b0b4}
+.publish-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+.ptargets{display:flex;gap:7px}
+.ptarget{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:100px;border:1px solid rgba(255,255,255,.2);color:#a19d93}
+.ptarget.on{border-color:var(--ember);color:var(--ember)}
+.pub-btn{margin-left:auto;font-family:var(--sans);font-weight:600;font-size:13px;border-radius:100px;padding:11px 22px;border:none;transition:.2s}
+.pub-btn.ready{background:var(--ember);color:var(--white)}.pub-btn.ready:hover{background:#fff;color:var(--ink)}
+.pub-btn.blocked{background:rgba(204,50,58,.2);color:#f0868c;cursor:not-allowed}
+/* live workbook embed */
+.wb-embed{margin-top:38px}
+.wb-embed .pipe-out-h{margin-bottom:14px}
+.wb-frame{border:1px solid rgba(255,255,255,.18);border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow-lift)}
+.wb-bar{display:flex;align-items:center;gap:10px;padding:12px 18px;background:#111;border-bottom:1px solid rgba(255,255,255,.12)}
+.wb-bar .t{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember)}
+.wb-bar .lock{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#a19d93;display:flex;align-items:center;gap:7px}
+.wb-guard{user-select:none;-webkit-user-select:none}
+.wb-guard img{ -webkit-user-drag:none; user-select:none; pointer-events:none; display:block; width:100%; height:auto }
+.wb-iframe{width:100%;height:560px;border:0;display:block;background:#fff}
+.wb-tabs{display:flex;gap:6px;flex-wrap:wrap;padding:12px 18px;background:#f4f3ef;border-top:1px solid var(--line)}
+.wb-tab{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);border:1px solid var(--line);border-radius:100px;padding:7px 12px;min-height:32px;background:#fff;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.wb-tab:hover{border-color:var(--ink);color:var(--ink)}
+.wb-tab:focus-visible{outline:2px solid var(--ember);outline-offset:2px}
+.wb-tab.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.wb-note{font-family:var(--mono);font-size:11.5px;color:#a19d93;margin-top:14px;line-height:1.7;max-width:80ch}
+.wb-note b{color:var(--ember)}
+.wb-load{margin-top:16px;font-family:var(--sans);font-weight:600;font-size:13.5px;border:1px solid var(--ember);
+  background:transparent;color:var(--ember);border-radius:100px;padding:11px 22px;transition:.25s}
+.wb-load:hover{background:var(--ember);color:#fff}
+
+/* ---------- pipeline animation (sec 08) ---------- */
+.pipe-toggle{display:inline-flex;background:var(--white);border:1px solid var(--line-strong);border-radius:100px;padding:5px;gap:4px;margin-bottom:8px}
+.pipe-toggle button{border:none;background:none;font-family:var(--sans);font-weight:600;font-size:13.5px;padding:10px 20px;border-radius:100px;color:var(--ink-2);transition:.25s}
+.pipe-toggle button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.pipe-toggle button.bad[aria-pressed="true"]{background:var(--red)}
+.pipe-wrap{margin-top:34px;border:1px solid var(--line-strong);border-radius:20px;background:var(--white);padding:clamp(24px,4vw,44px);box-shadow:var(--shadow-lift);overflow:hidden}
+.pipe-track{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;position:relative;margin-bottom:36px}
+.pipe-stage{text-align:center;position:relative;z-index:2}
+.pipe-node{width:56px;height:56px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;background:var(--paper);border:1.5px solid var(--line-strong);
+  transition:all .5s var(--ease);color:var(--slate);position:relative}
+.pipe-node svg{width:24px;height:24px}
+.pipe-stage.active .pipe-node{background:var(--ink);border-color:var(--ink);color:var(--paper);transform:scale(1.08)}
+.pipe-stage.done .pipe-node{background:var(--olive);border-color:var(--olive);color:#fff}
+.pipe-stage.failed .pipe-node{background:var(--red);border-color:var(--red);color:#fff;animation:shake .5s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pipe-stage .pn{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink)}
+.pipe-stage .pd{font-size:12px;color:var(--slate);margin-top:3px;line-height:1.35;max-width:16ch;margin-inline:auto}
+.pipe-line{position:absolute;top:28px;left:10%;right:10%;height:2px;background:var(--line);z-index:1}
+.pipe-line-fill{position:absolute;top:28px;left:10%;height:2px;background:var(--ember);z-index:1;width:0;transition:width .6s var(--ease)}
+.pipe-packet{position:absolute;top:18px;width:22px;height:22px;border-radius:6px;background:var(--ember);z-index:3;left:10%;
+  display:grid;place-items:center;color:#fff;box-shadow:0 8px 20px -6px rgba(233,107,59,.9);transition:left .6s var(--ease), background .4s, opacity .4s}
+.pipe-packet.dead{background:var(--red);box-shadow:0 8px 20px -6px rgba(204,50,58,.9)}
+.pipe-stage-log{min-height:120px;background:var(--ink);border-radius:12px;padding:20px 22px;font-family:var(--mono);font-size:13px;line-height:1.7;color:#cdc9bf;margin-bottom:26px}
+.pipe-stage-log .ln{opacity:0;transform:translateY(6px);transition:.4s;display:flex;gap:10px;align-items:flex-start}
+.pipe-stage-log .ln.show{opacity:1;transform:none}
+.pipe-stage-log .ln .mk{color:var(--ember)}
+.pipe-stage-log .ln.ok .mk{color:#c6ca63}
+.pipe-stage-log .ln.bad .mk{color:#f0868c}
+.pipe-stage-log .ln.bad{color:#f0b0b4}
+.pipe-out{display:grid;grid-template-columns:1fr;gap:16px}
+.pipe-out-h{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);display:flex;align-items:center;gap:10px}
+.pipe-out-h .st{position:static}
+.pipe-out-slot{border:1.5px dashed var(--line-strong);border-radius:16px;min-height:150px;display:grid;place-items:center;padding:20px;transition:.4s;background:var(--paper)}
+.pipe-out-slot.filled{border-style:solid;border-color:var(--olive);background:var(--white)}
+.pipe-out-slot.filled-bad{border-style:solid;border-color:var(--red);background:rgba(204,50,58,.04)}
+.pipe-out-empty{font-family:var(--mono);font-size:12px;color:var(--slate);text-align:center;line-height:1.6}
+.pipe-controls{display:flex;gap:12px;align-items:center;margin-top:26px;flex-wrap:wrap}
+.pipe-replay{font-family:var(--sans);font-weight:600;font-size:13.5px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);border-radius:100px;padding:11px 22px;transition:.25s;display:inline-flex;gap:9px;align-items:center}
+.pipe-replay:hover{background:var(--ember-deep);border-color:var(--ember-deep)}
+.pipe-hint{font-family:var(--mono);font-size:11.5px;color:var(--slate)}
+
+/* ---------- about + footer (sec 10) ---------- */
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,64px);align-items:start}
+.about-lead{font-family:var(--serif);font-weight:380;font-size:clamp(1.5rem,3.3vw,2.4rem);line-height:1.15;letter-spacing:-.01em}
+.about-lead em{font-style:italic;color:var(--ember)}
+.about-body p{color:#c4c0b6;font-size:15.5px;line-height:1.65;margin-top:18px}
+.about-body p a{color:var(--ember);text-decoration:underline;text-underline-offset:3px}
+.cred{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.cred span{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:#cdc9bf;border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:7px 13px}
+.contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:30px 30px}
+.contact-card h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin-bottom:6px;color:var(--paper)}
+.contact-card p{color:#a19d93;font-size:14px;line-height:1.5;margin-bottom:22px}
+.contact-row{display:flex;flex-direction:column;gap:2px;padding:14px 0;border-top:1px solid rgba(255,255,255,.1)}
+.contact-row .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8f8b81}
+.contact-row a,.contact-row .v{font-size:15.5px;color:var(--paper);font-weight:500;transition:color .2s;word-break:break-word}
+.contact-row a:hover{color:var(--ember)}
+.foot{padding:40px var(--gutter);border-top:1px solid rgba(255,255,255,.12);color:#8f8b81;font-size:12.5px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);letter-spacing:.03em}
+.foot a{color:#a19d93;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- misc ---------- */
+.disclaimer-strip{background:var(--ember);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  text-align:center;padding:7px 16px;text-transform:uppercase;line-height:1.35}
+@media(max-width:640px){.disclaimer-strip{font-size:9px;letter-spacing:.04em;padding:6px 12px}}
+.jump{position:fixed;right:22px;bottom:22px;z-index:70;background:var(--ink);color:var(--paper);border:none;width:46px;height:46px;border-radius:50%;
+  display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .3s, transform .3s;box-shadow:var(--shadow)}
+.jump.show{opacity:1;pointer-events:auto}
+.jump:hover{background:var(--ember-deep);transform:translateY(-2px)}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .nav-toggle{display:block}
+  .nav-cta{display:none}
+  .nav.open .nav-links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);
+    padding:20px var(--gutter) 28px;gap:4px;border-bottom:1px solid var(--line)}
+  .nav.open .nav-links a{padding:12px 0;font-size:16px;border-top:1px solid var(--line-soft)}
+  .nav.open .nav-links a:first-child{border-top:none}
+  .nav.open .nav-tag{display:none}
+  .ev-body .grid{grid-template-columns:1fr}
+  .bridge{grid-template-columns:1fr;gap:14px}
+  .bridge-link{width:auto;height:52px;transform:rotate(90deg)}
+  .dealos-body{grid-template-columns:1fr}
+  .dealos-list{position:static;max-height:none;border-right:none;border-bottom:1px solid rgba(255,255,255,.12);
+    display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
+  .dealos-list-h{display:none}
+  .os-row{min-width:220px;scroll-snap-align:start;border-top:none;border-right:1px solid rgba(255,255,255,.08)}
+  .os-row[aria-pressed="true"]{border-bottom:2px solid var(--ember)}
+  .about-grid{grid-template-columns:1fr}
+  .pipe-stage .pd{display:none}
+  .pipe-stage .pn{font-size:9px}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  .route{grid-template-columns:1fr;gap:12px}
+  .pipe-track{gap:6px}
+  .pipe-node{width:44px;height:44px}
+  .pipe-node svg{width:18px;height:18px}
+  .hero-meta{gap:20px 30px}
+  .fields{grid-template-columns:1fr 1fr}
+  .demobar .url{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .reveal,.reveal-stagger>*,.hero h1 .l>span,.hero-sub,.hero-actions,.hero-meta,.hero-disc{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<!-- FIXED HEADER: disclaimer + nav -->
+<div class="topbar" id="topbar">
+<div class="disclaimer-strip">Independent concept · not affiliated with LIV Cannabis · built by Mousa Batarseh</div>
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#top" class="brand" aria-label="Deals OS home">
+      <span class="mk">D</span>
+      <span class="bt"><small>Independent concept</small><span>LIV · Deals OS</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#observed">The gap</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#experience">Customer</a>
+      <a href="#system">Deal OS</a>
+      <a href="#howitworks">How it works</a>
+      <a href="#about">About</a>
+    </nav>
+    <span class="nav-tag" aria-hidden="true">Concept</span>
+    <a href="#about" class="nav-cta">Get in touch</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero wrap" id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">Deals experience + operational layer</span>
+      <h1 style="margin-top:22px">
+        <span class="l"><span>LIV built</span></span>
+        <span class="l"><span>the store.</span></span>
+        <span class="l"><span>The <em>deals</em> never</span></span>
+        <span class="l"><span>reached the door.</span></span>
+      </h1>
+    </div>
+    <p class="hero-sub">LIV Cannabis runs a genuinely capable commerce platform across seven Michigan stores — and a working specials page that almost no customer can reach from the site. This is a study of that gap, documented with real evidence, and a build that closes it: one place to run every deal, and one front door that finally shows them.</p>
+    <div class="hero-actions">
+      <a href="#evidence" class="btn btn-primary">See the evidence <span class="arw">→</span></a>
+      <a href="#experience" class="btn btn-ghost">Skip to the concept <span class="arw">→</span></a>
+    </div>
+    <div class="hero-meta">
+      <div class="hmeta"><b>7</b><small>Michigan stores</small></div>
+      <div class="hmeta"><b>2</b><small>front-ends live at once</small></div>
+      <div class="hmeta"><b>0</b><small>deal links that reach deals</small></div>
+      <div class="hmeta"><b>1</b><small>working deals page — unlinked</small></div>
+    </div>
+    <p class="hero-disc">Findings verified 30 Sep 2026 against LIV's public site. Every figure above traces to a documented observation in the evidence section below. Sample deal data throughout is illustrative, not live LIV pricing.</p>
+  </div>
+</section>
+
+<!-- 01 — LIV CONTEXT -->
+<section class="section band-ink" id="liv">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">01 — The LIV experience</span>
+      <h2 class="sec-title">LIV isn't the problem. The <em>routing</em> is.</h2>
+      <p class="lede">Before criticising anything, it's worth saying plainly: LIV has built something good. The new platform is fast, has cash-back and curbside, native iOS and Android apps, and a clear voice — "Expect a higher standard." The raw material for a best-in-class deals experience already exists.</p>
+    </div>
+    <div class="ctx-grid reveal-stagger">
+      <div class="ctx-cell"><span class="lbl">Footprint</span><b>7</b><p>Detroit, Ferndale, Grand Rapids, Lake Orion, Lansing, Pontiac & Westland.</p></div>
+      <div class="ctx-cell"><span class="lbl">Platform</span><b>New</b><p>A modern headless commerce storefront with accounts, rewards and real-time menus.</p></div>
+      <div class="ctx-cell"><span class="lbl">Reach</span><b>Apps</b><p>Native iOS and Android apps ship alongside the web store.</p></div>
+      <div class="ctx-cell"><span class="lbl">Catalog</span><b>100+</b><p>Michigan brands — Common Citizen, Camino, Kiva, Jeeter, Wyld and more.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — OBSERVED -->
+<section class="section" id="observed">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">02 — What I observed</span>
+      <h2 class="sec-title">Click <em>“Deals”</em> anywhere on the site. You never arrive at a deal.</h2>
+    </div>
+    <p class="lede reveal" style="margin-bottom:8px">Every deals affordance on livcannabis.com routes somewhere that isn't deals — a locations list, or a store's generic home page. Meanwhile a real, working specials page sits on the new platform, unlinked from the site that's supposed to send people to it.</p>
+    <div class="route-demo reveal-stagger" id="routeDemo"></div>
+  </div>
+</section>
+
+<!-- 03 — EVIDENCE -->
+<section class="section band-ink" id="evidence">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">03 — Evidence</span>
+      <h2 class="sec-title">Every claim, traceable.</h2>
+      <p class="lede">Findings captured 30 Sep 2026 with headless Chromium at desktop and mobile widths, plus HTTP-status and page-source inspection. Each item is labelled <b style="color:#c6ca63">fact</b> or <b style="color:var(--ember)">hypothesis</b>, with a confidence level. Screenshots are unmodified originals; the callouts sit beside them, never on them. Open any finding.</p>
+    </div>
+    <div class="ev-list" id="evList"></div>
+  </div>
+</section>
+
+<!-- 04 — WHY IT MATTERS -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">04 — Why it matters</span>
+      <h2 class="sec-title">Deals are the most perishable content a dispensary has.</h2>
+      <p class="lede">A price, a window, an eligible brand, a participating store — all of it changes constantly, and all of it has to stay identical across the web store, the marketing site and two apps. Here's what the observed gap puts at risk.</p>
+    </div>
+    <div class="why-grid reveal-stagger">
+      <div class="why-card"><span class="n">01</span><h3>Deal-seekers hit a wall</h3><p>The most commercially-intent click on the site — “Deals” — leads to a locations page or a generic storefront. The one page built to convert them is the one they can't find.</p></div>
+      <div class="why-card"><span class="n">02</span><h3>Drift is the default</h3><p>With two front-ends and two apps and no single source of truth, a promotion is correct in one place and stale in another. The six-vs-seven store mismatch is that drift, already visible.</p></div>
+      <div class="why-card"><span class="n">03</span><h3>Trust leaks at the edges</h3><p>A 2022-era “we're transitioning to a new site” stub still greets shoppers at some locations in 2026. First impressions like that are hard to win back.</p></div>
+      <div class="why-card"><span class="n">04</span><h3>Every launch is manual risk</h3><p>Without validation and a publish step, catching an expired date, a missing exclusion or an empty store list depends on someone remembering to look.</p></div>
+    </div>
+    <p class="why-note reveal"><b>What I'm not claiming:</b> I have no access to LIV's analytics, so I make no claim about lost revenue, conversion rate or abandonment. Those require internal data. Everything above is a UX and operational consequence inferred from the observable experience — and clearly labelled as such.</p>
+  </div>
+</section>
+
+<!-- 05 — SOLUTION BRIDGE -->
+<section class="section band-ink" id="solution">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">05 — The solution</span>
+      <h2 class="sec-title">Two sides of <em>one</em> product.</h2>
+      <p class="lede">Not a portfolio site and an unrelated dashboard — a single system. What a customer sees, and how the organisation decides what they see. One is impossible to keep honest without the other.</p>
+    </div>
+    <div class="bridge reveal">
+      <div class="bridge-side cust">
+        <span class="role">Customer side</span>
+        <h3>A deals front door</h3>
+        <p>Location-aware deal cards with eligibility, exclusions, participating stores, live expiry and an honest “auto-applied at checkout” signal — then a clean handoff to the menu.</p>
+      </div>
+      <div class="bridge-link" aria-hidden="true"><span class="ln"></span><span class="dot"></span><span class="updown">one source</span></div>
+      <div class="bridge-side ops">
+        <span class="role">Operations side</span>
+        <h3>A Deal Operating System</h3>
+        <p>Create → validate → QA → approve → publish. Every deal is checked before it can go live, and it publishes to web and both apps from one record.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 — CUSTOMER EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">06 — Customer experience</span>
+      <h2 class="sec-title">The front door, rebuilt.</h2>
+      <p class="lede">Interactive. Switch stores and the deals update to what's actually running there; anything not valid at that location is shown honestly as unavailable, with the reason. Filter by category or deal type. This is the “after”.</p>
+    </div>
+    <div class="demoframe reveal" id="custDemo">
+      <div class="demobar">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="url">liv&#8203;cannabis.com/deals</span>
+        <span class="tagm">Concept</span>
+      </div>
+      <div class="storefront">
+        <div class="sf-top">
+          <span class="sf-logo">LI<b>V</b> · Deals</span>
+          <div class="sf-loc">
+            <label for="storeSel">Shopping at</label>
+            <select class="sel" id="storeSel" aria-label="Choose store"></select>
+          </div>
+        </div>
+        <div class="sf-hero">
+          <h3>Live deals at <span id="sfStore">LIV Ferndale</span></h3>
+          <span class="count" id="dealCount"></span>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filter deals"></div>
+        <div class="deals-grid" id="dealsGrid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 — DEAL OS -->
+<section class="section band-ink" id="system">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">07 — Behind the experience</span>
+      <h2 class="sec-title">The Deal Operating System.</h2>
+      <p class="lede">The same deals, from the operator's chair. Every promotion is one record with required fields, 14 validation checks and a publish target for each surface. Pick a deal on the left — it stays put while the detail scrolls. Below it, the real workbook that runs this: a live, view-only Google Sheet.</p>
+    </div>
+    <div class="dealos reveal" id="dealos">
+      <div class="dealos-bar">
+        <span class="t">Deal OS</span>
+        <span>Pipeline</span>
+        <span class="sub">Sample data · illustrative</span>
+      </div>
+      <div class="dealos-body">
+        <div class="dealos-list" id="osList" role="group" aria-label="Deals in pipeline">
+          <div class="dealos-list-h">Deal pipeline</div>
+        </div>
+        <div class="dealos-detail" id="osDetail"></div>
+      </div>
+    </div>
+
+    <div class="wb-embed reveal">
+      <div class="pipe-out-h">The live workbook <span class="st live" style="position:static">view-only</span></div>
+      <div class="wb-frame wb-guard" id="wbFrame" oncontextmenu="return false">
+        <div class="wb-bar">
+          <span class="t">LIV Deal OS · Google Sheets</span>
+          <span class="lock">🔒 no copy · no download · no print</span>
+        </div>
+        <div id="wbStage"><img id="wbShot" src="evidence/workbook-check-matrix.webp" alt="LIV Deal Operating System workbook, Check Matrix tab: fourteen automated checks per deal returning PASS, FAIL or FLAG, rolling up to a verdict of CLEAR, REVIEW or BLOCKED and a publish-ready gate. Four sample deals are BLOCKED for the correct reasons." /></div>
+        <div class="wb-tabs" role="group" aria-label="Jump to a workbook tab">
+          <button type="button" class="wb-tab" data-gid="0" aria-pressed="false">Start Here</button><button type="button" class="wb-tab" data-gid="101" aria-pressed="false">1 · Deal Desk</button><button type="button" class="wb-tab" data-gid="102" aria-pressed="false">2 · Offers</button><button type="button" class="wb-tab" data-gid="103" aria-pressed="false">2 · Deal Rules</button>
+          <button type="button" class="wb-tab on" data-gid="104" aria-pressed="true">3 · Check Matrix</button><button type="button" class="wb-tab" data-gid="105" aria-pressed="false">Checks Explained</button><button type="button" class="wb-tab" data-gid="106" aria-pressed="false">5 · Publish &amp; Marketing</button><button type="button" class="wb-tab" data-gid="107" aria-pressed="false">6 · Reconciliation</button>
+        </div>
+      </div>
+      <button class="wb-load" id="wbLoad" type="button">▸ Open the live workbook — starts on Deal Desk</button>
+      <p class="wb-note"><b>This is the actual operating tool</b> — the same fields and the same 14 checks the panel above runs, kept as a live Google Sheet and embedded view-only (no copy, download or print). It's streamlined end to end: Deal Desk → Offers &amp; Deal Rules → Check Matrix → Publish &amp; Marketing → Reconciliation. The live embed opens on Deal Desk, where a promotion begins; the tab row jumps straight to any stage. The still above is the Check Matrix, where the checks resolve. Illustrative sample data, not live LIV pricing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 — HOW IT WORKS (ANIMATION) -->
+<section class="section" id="howitworks">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">08 — How the system prevents the problem</span>
+      <h2 class="sec-title">A deal only reaches a customer if it <em>earns</em> it.</h2>
+      <p class="lede">Watch one deal move through the pipeline. A clean deal validates, passes QA, gets approved, and publishes into the customer front door. A broken one — the exact kind of gap I documented — is stopped at the gate and never reaches a customer.</p>
+    </div>
+    <div class="reveal">
+      <div class="pipe-toggle" role="group" aria-label="Choose scenario">
+        <button id="scGood" aria-pressed="true">Clean deal → publishes</button>
+        <button id="scBad" class="bad" aria-pressed="false">Broken deal → blocked</button>
+      </div>
+      <div class="pipe-wrap">
+        <div class="pipe-track" id="pipeTrack">
+          <div class="pipe-line"></div>
+          <div class="pipe-line-fill" id="pipeFill"></div>
+          <div class="pipe-packet" id="pipePacket" aria-hidden="true">◆</div>
+        </div>
+        <div class="pipe-stage-log" id="pipeLog" aria-live="polite"></div>
+        <div class="pipe-out">
+          <div class="pipe-out-h">Customer front door <span id="pipeOutStatus" class="st draft">idle</span></div>
+          <div class="pipe-out-slot" id="pipeOut">
+            <div class="pipe-out-empty">Nothing published yet.<br>Run the pipeline to see what a customer receives.</div>
+          </div>
+        </div>
+        <div class="pipe-controls">
+          <button class="pipe-replay" id="pipeReplay">▶ Run the pipeline</button>
+          <span class="pipe-hint" id="pipeHint">Clean-deal scenario loaded.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 — METHOD -->
+<section class="section" id="method">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">09 — Methodology & limitations</span>
+      <h2 class="sec-title">Made to be audited.</h2>
+    </div>
+    <div class="why-grid reveal-stagger">
+      <div class="why-card"><span class="n">How</span><h3>Captured, not asserted</h3><p>Headless Chromium (Playwright) at 1440px desktop and 390px mobile, HTTP-status checks and page-source review, on 30 Sep 2026. Screenshots are unmodified.</p></div>
+      <div class="why-card"><span class="n">Fact vs. guess</span><h3>Labelled throughout</h3><p>Observable, reproducible findings are facts. Anything about customer behaviour or business impact is a hypothesis, marked as one.</p></div>
+      <div class="why-card"><span class="n">Sample data</span><h3>Never passed off as real</h3><p>Deal cards use realistic formats based on brands seen on LIV's menu, but no figure here is live LIV pricing. It's illustrative.</p></div>
+      <div class="why-card"><span class="n">Limits</span><h3>What needs LIV's data</h3><p>Revenue, conversion and abandonment can't be quantified from outside. This concept shows the fix; measuring its impact would need internal analytics.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 — ABOUT -->
+<section class="section band-ink" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">10 — About the builder</span>
+    </div>
+    <div class="about-grid reveal">
+      <div>
+        <p class="about-lead">I didn't want to send LIV a list of recommendations. I wanted to <em>build the fix</em> and let it speak.</p>
+        <div class="about-body">
+          <p>I'm Mousa Batarseh — a webmaster and e-commerce specialist in the Detroit metro. I've run multi-location retail sites end to end: catalog and inventory data, platform migrations with proper redirects and URL structure, promotional calendars, and technical + on-page SEO measured in Google Search Console and GA4. Shopify and WordPress, roughly five years and three years respectively.</p>
+          <p>The through-line in my work is exactly this problem — keeping commerce data correct and consistent across surfaces, and building the small tools that make that automatic instead of manual. This concept is one of those tools, pointed at a company whose platform I genuinely admire.</p>
+          <p>It's an independent study — not commissioned by or affiliated with LIV. If any of it is useful, I'd love to build the real thing with your team. More of my work lives at <a href="https://work.mousabatarseh.com" target="_blank" rel="noopener">work.mousabatarseh.com</a>.</p>
+        </div>
+        <div class="cred">
+          <span>WordPress + Shopify</span><span>Platform migrations</span><span>Technical & on-page SEO</span>
+          <span>GA4 · Search Console</span><span>Catalog & promo ops</span><span>Deal validation tooling</span>
+        </div>
+      </div>
+      <aside class="contact-card">
+        <h3>Start a conversation</h3>
+        <p>The fastest way to see whether this fits LIV is a short call. Here's how to reach me.</p>
+        <div class="contact-row"><span class="k">Email</span><a href="mailto:hireme@mousabatarseh.com">hireme@mousabatarseh.com</a></div>
+        <div class="contact-row"><span class="k">Portfolio</span><a href="https://mousabatarseh.com" target="_blank" rel="noopener">mousabatarseh.com</a></div>
+        <div class="contact-row"><span class="k">LinkedIn</span><a href="https://linkedin.com/in/mousabatarseh" target="_blank" rel="noopener">linkedin.com/in/mousabatarseh</a></div>
+        <div class="contact-row"><span class="k">Based in</span><span class="v">Warren, MI · Detroit metro</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot band-ink">
+  <span>© 2026 Mousa Batarseh · All rights reserved</span>
+  <span>Independent concept · not affiliated with LIV Cannabis · verified 30 Sep 2026</span>
+</footer>
+
+<button class="jump" id="jumpTop" aria-label="Back to top">↑</button>
+
+<script src="app.js"></script>
+</body>
+</html>
