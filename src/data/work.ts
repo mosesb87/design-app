@@ -67,9 +67,6 @@ export const entries: Entry[] = [
 
   // ── Commerce lab (the Halden Medical lab and the pieces built around it)
   { slug: 'halden-lab', title: 'Halden Medical Commerce Intelligence Lab', category: 'case-studies', what: 'Independent e-commerce case study built from public information for a Marketing and eCommerce Coordinator role.', platform: 'Web · workbook', url: 'https://lab.mousabatarseh.com/halden-medical/', status: 'independent', caseStudy: 'halden-medical', media: 'halden-lab', date: '2026-09-15' },
-  { slug: 'halden-workbook', title: 'Halden Medical Workbook', category: 'case-studies', what: 'The 13-sheet analysis workbook as a read-only page.', url: 'https://lab.mousabatarseh.com/halden-medical/workbook-view/', status: 'independent', family: 'halden-lab', media: 'halden-workbook', date: '2026-09-15' },
-  { slug: 'halden-walkthrough', title: 'How I Thought It Through', category: 'case-studies', what: 'Seven-scene walkthrough of the reasoning, from the customer question to the measurement plan.', url: 'https://lab.mousabatarseh.com/halden-medical/walkthrough', status: 'independent', family: 'halden-lab', media: 'halden-walkthrough', date: '2026-09-15' },
-  { slug: 'halden-pathfinder', title: 'Halden Medical Product Pathfinder', category: 'case-studies', what: 'Discovery tool: turns a lab goal into a station map, then builds a product-discovery path from the answers.', url: 'https://lab.mousabatarseh.com/halden-medical/commerce-lab/pathfinder', status: 'independent', family: 'halden-lab', media: 'halden-pathfinder' },
 
   // ── Sites & stores
   { slug: 'united-textile', title: 'United Textile', category: 'sites', what: 'Shopify B2B wholesale store: collections, case-pack pricing and buyer accounts.', platform: 'Shopify', languages: ['EN'], url: 'https://shopunitedtextile.com/', status: 'live', caseStudy: 'united-textile', media: 'united-textile', date: '2024-06-05' },
