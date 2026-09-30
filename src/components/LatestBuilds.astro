@@ -1,8 +1,9 @@
 ---
-// "The index." on /work/: the sixteen most recent builds (all kinds, newest first) as small cards that start scattered all over the
-// screen and come together into a neat grid as the section arrives. On desktop the section holds still (a
-// sticky stage whose extra scroll is reserved in CSS) while they gather. Then a button opens /index/, where
-// every build is listed by category. (Motion: scripts/motion/gather.ts; the list: latestBuilds in data/work.ts.)
+// "The index." on /work/: the sixteen most recent builds (all kinds, newest first) as small cards. The title, note
+// and button sit on top, like every other section's head, with the cards in a full-width grid below. The cards
+// start thrown out of their places and come together into the grid as each row rises up the screen, always from
+// below, so they never cross the title. Then a button opens /index/, where every build is listed by category.
+// (Motion: scripts/motion/gather.ts; the list: latestBuilds in data/work.ts.)
 // Each card's second line: what kind of build it is and the date it shipped (see `date` in data/work.ts).
 import Picture from './Picture.astro';
 import { entries, latestBuilds, entryCount } from '../data/work';
@@ -34,7 +35,7 @@ const kind: Record<string, string> = { reviews: 'Review', proposals: 'Proposal',
             <li class="lb__card" style={`--tone:${tones[i % tones.length]}`} data-gather-card>
               <a class="lb__link" href={href} rel={external ? 'noopener' : undefined}>
                 <span class="lb__shot">
-                  {shot ? <Picture data={shot} alt="" sizes="(min-width: 1024px) 15vw, (min-width: 700px) 30vw, 45vw" />
+                  {shot ? <Picture data={shot} alt="" sizes="(min-width: 1440px) 320px, (min-width: 700px) 23vw, 45vw" />
                     : rshot ? <img src={rshot.small || rshot.src} width={rshot.sw || rshot.w} height={Math.round(rshot.h * ((rshot.sw || rshot.w) / rshot.w))} alt="" loading="lazy" decoding="async" />
                     : <span class="lb__blank">{e.title}</span>}
                 </span>
@@ -53,8 +54,8 @@ const kind: Record<string, string> = { reviews: 'Review', proposals: 'Proposal',
 <style>
   .lb-hold { position: relative; overflow-x: clip; }
   .lb { padding-block: var(--section) calc(var(--section) * 0.6); }
-  .lb__inner { display: grid; gap: var(--s-6); }
-  /* The title and button stay above the cards while they fly, so nothing ever lies over the button. */
+  .lb__inner { display: grid; gap: var(--s-7); }
+  /* The head sits on top, above the cards, at every width (like the other sections' heads). */
   .lb__head { position: relative; z-index: 2; display: grid; gap: var(--s-4); align-content: start; }
   .lb__note { max-width: 40ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.32; }
   .lb__all { justify-self: start; }
@@ -71,24 +72,4 @@ const kind: Record<string, string> = { reviews: 'Review', proposals: 'Proposal',
   .lb__name { font: 650 clamp(1rem, 1.25vw, 1.2rem) / 1 var(--font-display); font-stretch: 75%; text-transform: uppercase; overflow-wrap: anywhere; }
   .lb__meta { font: 600 0.75rem / 1.3 var(--font-text); color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   @media (min-width: 700px) { .lb__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-  /* Desktop: the title and button on the left, the grid on the right. On screens tall enough for all four rows,
-     the section holds still (sticky, its extra scroll reserved in CSS) and the grid is sized to fit the screen:
-     each card's screenshot takes whatever height is left after its name. */
-  @media (min-width: 1024px) {
-    .lb__inner { grid-template-columns: minmax(0, 1fr) min(62vw, 980px); column-gap: clamp(40px, 5vw, 96px); align-items: start; }
-    .lb__head { padding-top: 8px; }
-  }
-  @media (min-width: 1024px) and (min-height: 760px) {
-    .lb { padding-block: calc(var(--nav-h) + 20px) 24px; }
-    .lb__inner { grid-template-columns: minmax(0, 1fr) min(62vw, calc((100svh - var(--nav-h) - 64px) * 1.25)); }
-    .lb__grid { height: calc(100svh - var(--nav-h) - 64px); grid-template-rows: repeat(4, minmax(0, 1fr)); }
-    .lb__card, .lb__link { height: 100%; }
-    .lb__link { grid-template-rows: minmax(0, 1fr) auto auto; }
-    /* The screenshot fills what the row leaves after the name (stretched by the grid, not height: 100%, so its
-       bottom margin keeps the number and title clear of it instead of spilling onto them). */
-    .lb__shot { aspect-ratio: auto; height: auto; min-height: 0; align-self: stretch; }
-    .lb__name { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    :global(.motion-ok) .lb-hold::after { content: ''; display: block; height: 70vh; }
-    :global(.motion-ok) .lb-hold > .lb { position: sticky; top: 0; }
-  }
 </style>

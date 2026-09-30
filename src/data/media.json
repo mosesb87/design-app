@@ -12297,5 +12297,29 @@
     "color": "rgb(248 232 232)"
    }
   }
+ },
+ "puff-cannabis": {
+  "title": null,
+  "url": null,
+  "capturedAt": null,
+  "views": {
+   "desktop-hero": {
+    "w": 1280,
+    "h": 800,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/puff-cannabis/desktop-hero-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/puff-cannabis/desktop-hero-960.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZQC06CHPTfZ+aSvAAAD+sir/BwayT6yH32C869chTZdiBY5OPVqHI+7IIsJXNcRutxc3CkK/h+G/wKCx6tKscLrMlNQoI1i61e2RmWLfvjJAAAA=",
+    "color": "rgb(232 232 216)"
+   }
+  }
  }
 }

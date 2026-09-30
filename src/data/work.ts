@@ -115,6 +115,7 @@ export const entries: Entry[] = [
   { slug: 'proposal-bulletproof', title: 'Bulletproof.com Build & QA Review', category: 'proposals', what: 'Application project for a Shopify Ecommerce Specialist contract: all 127 products and 110 collections on bulletproof.com checked — ten findings, five working tools and a five-month plan.', platform: 'Shopify · review + tools', languages: ['EN'], url: `${M}/bulletproof-review/`, status: 'independent', media: 'bulletproof-review', date: '2026-09-28' },
   { slug: 'partify-application', title: 'Partify · Four repair orders', category: 'proposals', what: 'Application project for a Web Developer role: a live JSON-LD price bug with a Liquid fix, a 160-page offer audit in TypeScript, product-page weight measurements and a working fitment lab with 77 tests.', platform: 'Shopify · React · TypeScript', languages: ['EN'], url: `${M}/partify/`, status: 'independent', media: 'partify-application', date: '2026-09-29' },
   { slug: 'sapience-annotated-record', title: 'Sapience AI · The Annotated Record', category: 'proposals', what: 'Independent, motion-led design concept for a web-designer role: a nine-chapter annotated record with margin notes, a provenance view and a motion toggle. Not an official Sapience AI website.', platform: 'Design concept', languages: ['EN'], url: `${M}/sapienceai/`, status: 'independent', media: 'sapience-annotated-record', date: '2026-09-25' },
+  { slug: 'proposal-puff-cannabis', title: 'Puff Cannabis · Deal Integrity Case Study', category: 'proposals', what: 'Independent case study: a customer reads "2/$25 disposables" and cannot tell which products, which store, or what they will pay. Follows that question to a deal checker, a reconciliation workspace, tickets and measurement. 28 real, cited offers; product sample modelled and labelled. Not commissioned or endorsed by Puff Cannabis.', platform: 'Case study · workbook', languages: ['EN'], url: `${M}/puff-cannabis/`, status: 'independent', media: 'puff-cannabis', date: '2026-09-29' },
 ];
 
 export const entryCount = entries.length;
@@ -123,7 +124,7 @@ export const countBy = (c: Category) => entries.filter((e) => e.category === c).
 // Upload times (UTC, from the hosting scan's Last-Modified) for the builds of the last week, to order same-day
 // builds; a group child uploaded in the same second as its parent is the same build and isn't counted twice.
 const uploadedAt: Record<string, string> = {
-  rankreceipt: '23:59:58', 'review-reworked': '20:19:23', dealproof: '17:29:42', 'sapience-annotated-record': '10:08:02',
+  'proposal-puff-cannabis': '23:49:56', rankreceipt: '23:59:58','review-reworked': '20:19:23', dealproof: '17:29:42', 'sapience-annotated-record': '10:08:02',
   'proposal-gardner-white': '23:01:06', changeatlas: '23:00:56', 'changeatlas-demo': '23:00:56', 'proposal-rmc': '20:39:28',
   'proposal-bran': '18:36:25', 'review-bran': '17:53:50',
   // PetSafe is dated Sep 20 and went up at 03:56 on Sep 21, after everything else dated Sep 20.
