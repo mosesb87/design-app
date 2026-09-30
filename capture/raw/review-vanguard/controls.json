@@ -1,0 +1,154 @@
+{
+  "url": "https://mousabatarseh.com/vanguard-review/",
+  "height": 1788,
+  "heads": [
+    {
+      "tag": "h1",
+      "text": "FIX ONE TEMPLATE. FIX 443 PRODUCTS.",
+      "y": 102,
+      "sel": "div.pad:nth-of-type(2) > div.titleblock:nth-of-type(1) > div.t:nth-of-type(1) > h1"
+    },
+    {
+      "tag": "h2",
+      "text": "WHAT'S ON THE OTHER SHEETS",
+      "y": 892,
+      "sel": "main > div.pad:nth-of-type(2) > div.sec:nth-of-type(3) > h2"
+    },
+    {
+      "tag": "h3",
+      "text": "THE TEMPLATE, BEFORE & AFTER",
+      "y": 986,
+      "sel": "div.sec:nth-of-type(3) > div.detail:nth-of-type(2) > div.dt:nth-of-type(1) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "WHAT THE SITE HIDES",
+      "y": 986,
+      "sel": "div.sec:nth-of-type(3) > div.detail:nth-of-type(2) > div.dt:nth-of-type(2) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "FIRST 30 DAYS",
+      "y": 1133,
+      "sel": "div.sec:nth-of-type(3) > div.detail:nth-of-type(2) > div.dt:nth-of-type(3) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "WHAT I'D BE LEARNING",
+      "y": 1133,
+      "sel": "div.sec:nth-of-type(3) > div.detail:nth-of-type(2) > div.dt:nth-of-type(4) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "MOUSA BATARSEH",
+      "y": 1393,
+      "sel": "div.pad:nth-of-type(2) > footer > div:nth-of-type(1) > h3"
+    }
+  ],
+  "items": [
+    {
+      "tag": "a",
+      "text": "01/04 OVERVIEW",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "index.html",
+      "sel": "div.shell > aside.side > nav.sheets > a:nth-of-type(1)",
+      "x": 18,
+      "y": 141,
+      "w": 214,
+      "h": 44
+    },
+    {
+      "tag": "a",
+      "text": "02/04 THE TEMPLATE",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "template.html",
+      "sel": "div.shell > aside.side > nav.sheets > a:nth-of-type(2)",
+      "x": 18,
+      "y": 194,
+      "w": 214,
+      "h": 44
+    },
+    {
+      "tag": "a",
+      "text": "03/04 CHANNELS",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "channels.html",
+      "sel": "div.shell > aside.side > nav.sheets > a:nth-of-type(3)",
+      "x": 18,
+      "y": 246,
+      "w": 214,
+      "h": 44
+    },
+    {
+      "tag": "a",
+      "text": "04/04 PLAN",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "plan.html",
+      "sel": "div.shell > aside.side > nav.sheets > a:nth-of-type(4)",
+      "x": 18,
+      "y": 298,
+      "w": 214,
+      "h": 44
+    },
+    {
+      "tag": "a",
+      "text": "SHEET 02 — THE TEMPLATE →",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "template.html",
+      "sel": "main > div.pad:nth-of-type(2) > div.next:nth-of-type(4) > a",
+      "x": 1002,
+      "y": 1266,
+      "w": 268,
+      "h": 54
+    },
+    {
+      "tag": "a",
+      "text": "mousabatarseh.com",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "https://mousabatarseh.com",
+      "sel": "div.pad:nth-of-type(2) > footer > div.ln:nth-of-type(2) > a:nth-of-type(1)",
+      "x": 849,
+      "y": 1393,
+      "w": 397,
+      "h": 43
+    },
+    {
+      "tag": "a",
+      "text": "linkedin.com/in/mousabatarseh",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "https://www.linkedin.com/in/mousabatarseh",
+      "sel": "div.pad:nth-of-type(2) > footer > div.ln:nth-of-type(2) > a:nth-of-type(2)",
+      "x": 849,
+      "y": 1444,
+      "w": 397,
+      "h": 43
+    },
+    {
+      "tag": "a",
+      "text": "hireme@mousabatarseh.com",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "mailto:hireme@mousabatarseh.com",
+      "sel": "div.pad:nth-of-type(2) > footer > div.ln:nth-of-type(2) > a:nth-of-type(3)",
+      "x": 849,
+      "y": 1495,
+      "w": 397,
+      "h": 43
+    }
+  ]
+}

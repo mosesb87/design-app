@@ -1,0 +1,87 @@
+
+  <div class="wrap">
+    <p class="crumb">Sec. 01 — Overview · for the DTC Ecommerce Ops &amp; Insights Specialist role</p>
+    <span class="label-tag evidence-tag">Evidence page · sampled 2026-09-20</span>
+    <h1>The stack is right. The <em>signals</em> aren't.</h1>
+    <p class="lede">
+      PetSafe already runs the toolchain the job description asks about — <b>Gatsby on Netlify, headless Shopify, Sanity, Klaviyo, Algolia, Triple Whale, GTM, Bazaarvoice</b> — I can see every one of them loading on <code>petsafe.com</code>. What's missing is the plumbing that turns that stack into trustworthy data and repeatable launches: <b>zero structured data on the homepage, a sitemap URL that serves HTML instead of XML, no <code>llms.txt</code>, and every product page shipping the same 15-word templated meta description</b>. Every figure below is dated and reproducible.
+    </p>
+
+    <div class="stats">
+      <div class="stat in">
+        <div class="n orange">0</div>
+        <div class="l"><code>application/ld+json</code> blocks on the <code>petsafe.com</code> homepage</div>
+        <span class="evidence">2026-09-20 23:20 UTC · <code>curl petsafe.com/ | grep -c 'application/ld+json'</code> → <code>0</code> in 428,751 bytes · <b>[E1]</b></span>
+      </div>
+      <div class="stat in">
+        <div class="n">HTML</div>
+        <div class="l"><code>/sitemap.xml</code> returns the Gatsby homepage HTML, not an XML sitemap</div>
+        <span class="evidence">2026-09-20 23:20 UTC · <code>curl petsafe.com/sitemap.xml</code> → 360,985 bytes, first 500 chars begin <code>&lt;!DOCTYPE html&gt;</code> · <b>[E2]</b></span>
+      </div>
+      <div class="stat in">
+        <div class="n muted">404</div>
+        <div class="l"><code>/llms.txt</code> — missing AI-ingestion signal</div>
+        <span class="evidence">2026-09-20 23:20 UTC · <code>curl -I petsafe.com/llms.txt</code> → <code>HTTP/2 404</code> · <b>[E3]</b></span>
+      </div>
+      <div class="stat in">
+        <div class="n teal">15</div>
+        <div class="l">Words in the meta description on every product page — the same template, verbatim</div>
+        <span class="evidence">2026-09-20 23:20 UTC · 5 product pages sampled; each returns <code>"Buy the [name] in the official PetSafe® store for your pet."</code> · <b>[E4]</b></span>
+      </div>
+    </div>
+
+    <div class="cards reveal-stagger in">
+      <div class="card" style="--i: 0;">
+        <span class="kicker a">Signals</span>
+        <h3>Structured data is silent on the front door</h3>
+        <p>Homepage carries no JSON-LD; interior product pages carry <code>ProductGroup</code>, <code>BreadcrumbList</code> and hand-curated <code>FAQPage</code>. The gap is only at the top of the funnel.</p>
+        <span class="evidence">2026-09-20 · homepage grep returned 0; product page <code>/p/extreme-weather-aluminum-pet-door/ZPA19-16853/</code> returned 2 JSON-LD blocks (Product+Breadcrumb, FAQPage) · <b>[E5]</b></span>
+      </div>
+      <div class="card" style="--i: 1;">
+        <span class="kicker b">Operations</span>
+        <h3>Sitemap and <code>llms.txt</code> need owners</h3>
+        <p><code>curl https://www.petsafe.com/sitemap.xml</code> returns 200 with <code>Content-Type: text/html</code>. A specialist who owns URL taxonomy owns this — the fix is one build-time step.</p>
+        <span class="evidence">2026-09-20 · see [E2] and [E3]</span>
+      </div>
+      <div class="card" style="--i: 2;">
+        <span class="kicker c">Insights</span>
+        <h3>The stack for Tableau is already emitting events</h3>
+        <p>GTM is live, Klaviyo is firing, Shopify is behind the cart, Triple Whale is watching spend, Bazaarvoice is collecting reviews. Tableau dashboards described in the JD can be built <b>on top of what's already flowing</b>, not from scratch.</p>
+        <span class="evidence">2026-09-20 · HTML-source grep on the homepage — see stack node counts on the next page and <b>[E6]</b></span>
+      </div>
+    </div>
+
+    <h2 class="reveal in">What I looked at</h2>
+    <p>About 90 minutes with public artifacts only — the pages, HTTP headers, robots.txt, sitemap and llms.txt endpoints, the JSON-LD on 5 real product pages across doors, GPS, and microchip categories, and the raw HTML of <code>petsafe.com/</code>. No login, no confidential data. Every claim on this site names a reproducible source; the Evidence Log at the bottom of this page shows the exact commands.</p>
+
+    <div class="callout reveal in">
+      <p class="who">Role fit</p>
+      <p>The JD splits the role into four buckets: <b>project management, data &amp; Tableau, Shopify ops, and measurement</b>. This review walks through one artifact — the DTC storefront — in those four voices, plus a fifth section (<a href="https://mousabatarseh.com/petsafe-review/fix.html">The 1,000-Page Fix</a>) with a live interactive tool that repairs a specific problem I found on every product page. I've been the "keep it moving" person for a 14,000-SKU Shopify migration at Universal Wholesale and I run this same pattern across storefronts today.</p>
+    </div>
+
+    <div class="meta reveal in">
+      <span><b>Scope</b> petsafe.com · homepage + 5 product pages</span>
+      <span><b>Method</b> curl, page source, robots, sitemap, llms.txt, JSON-LD parse</span>
+      <span><b>Stack seen</b> Gatsby 5.16.1 / Netlify / Shopify / Sanity / Klaviyo / Algolia / Triple Whale / Bazaarvoice / GTM</span>
+      <span><b>Independent — not affiliated with PetSafe Brands</b></span>
+    </div>
+
+    <section class="evidence-log frame in">
+      <h3>Evidence log</h3>
+      <p class="sub">Every claim on this page, with its date, source, and a command you can rerun.</p>
+      <ol>
+        <li><b>[E1]</b> Homepage carries zero JSON-LD blocks. <code>curl -sSL https://www.petsafe.com/ -o home.html &amp;&amp; grep -c 'application/ld+json' home.html</code> → <code>0</code>. Sampled 2026-09-20 23:20 UTC. Home HTML: 428,751 bytes.</li>
+        <li><b>[E2]</b> <code>/sitemap.xml</code> returns HTML, not XML. <code>curl -sSL https://www.petsafe.com/sitemap.xml | head -c 500</code> → begins <code>&lt;!DOCTYPE html&gt;&lt;html lang="en-us"&gt;&lt;head&gt;&lt;meta charSet="utf-8"/&gt;…</code>. Total body 360,985 bytes. Sampled 2026-09-20 23:20 UTC.</li>
+        <li><b>[E3]</b> <code>/llms.txt</code> returns 404. <code>curl -sSLI https://www.petsafe.com/llms.txt</code> → <code>HTTP/2 404</code>. Sampled 2026-09-20 23:20 UTC.</li>
+        <li><b>[E4]</b> Every sampled product page ships the same 15-word templated meta description. 5 URLs checked on 2026-09-20 23:22 UTC: <code>/p/extreme-weather-aluminum-pet-door/ZPA19-16853/</code>, <code>/p/wall-entry-pet-door/ZPA00-16201/</code>, <code>/p/extreme-weather-sliding-glass-pet-door/ZPA17-17176/</code>, <code>/p/gps-dog-tracker-bundle/PTK00-18293/</code>, <code>/p/microchip-cat-door/PPA19-16145/</code>. All return <code>&lt;meta name="description" content="Buy the [product name] in the official PetSafe® store for your pet."&gt;</code>. See <a href="https://mousabatarseh.com/petsafe-review/fix.html">Sec. 05 — The 1,000-Page Fix</a>.</li>
+        <li><b>[E5]</b> Product pages carry meaningful JSON-LD. Same 5 URLs on 2026-09-20 23:22 UTC each returned 2 JSON-LD blocks: block 0 is a <code>@graph</code> containing a <code>ProductGroup</code> with variants; block 1 is a <code>@graph</code> containing a <code>BreadcrumbList</code> and a hand-curated <code>FAQPage</code>. The <code>ProductGroup.description</code> field is 1,914–3,626 characters on the products I sampled.</li>
+        <li><b>[E6]</b> Stack fingerprints in <code>petsafe.com/</code> HTML source, sampled 2026-09-20 23:20 UTC. Case-insensitive grep counts: <code>cdn.shopify.com</code> = 12; <code>sanity</code> = 149; <code>klaviyo</code> = 4; <code>algolia</code> = 3; <code>triplewhale</code> = 5; <code>bazaarvoice</code> = 5; <code>gtm.js</code> = 2. <code>generator</code> meta tag reads <code>Gatsby 5.16.1</code>; response headers include <code>server: Netlify</code>.</li>
+        <li><b>[E7]</b> robots.txt (sampled 2026-09-20 23:20 UTC, 1,569 bytes) correctly disallows <code>?sort=</code>, <code>?page=</code>, <code>?limit=</code>, <code>?bvstate=</code>, <code>/cart</code>, <code>/cart.json</code>, <code>/search</code>, <code>/account/</code>, <code>/klaviyo-form/</code>, <code>/preview/</code>. Blocks <code>AmazonProductDiscoverybot</code> outright. This is the one thing on the front door that's already clean.</li>
+      </ol>
+    </section>
+
+    <div class="pagenav reveal in">
+      <span></span>
+      <a class="next" href="https://mousabatarseh.com/petsafe-review/stack.html">Next: Stack &amp; Data Loop →</a>
+    </div>
+  </div>

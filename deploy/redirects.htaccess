@@ -1,0 +1,22 @@
+# mousabatarseh.com — redirects for the new portfolio. Paste right after "RewriteEngine On" in the ROOT .htaccess
+# (add "RewriteEngine On" first if the file doesn't have it). Generated 2026-09-29.
+
+# Blog: each post that has a page here (old links opened the blog index).
+RewriteRule ^core-web-vitals-elementor-wordpress/?$ /blog/core-web-vitals-elementor-wordpress/ [R=301,L]
+RewriteRule ^writing-product-descriptions-at-scale/?$ /blog/writing-product-descriptions-at-scale/ [R=301,L]
+RewriteRule ^ga4-small-store-measurement/?$ /blog/ga4-small-store-measurement/ [R=301,L]
+RewriteRule ^inventory-price-sync-drift/?$ /blog/inventory-price-sync-drift/ [R=301,L]
+RewriteRule ^product-images-at-catalog-scale/?$ /blog/product-images-at-catalog-scale/ [R=301,L]
+RewriteRule ^product-filters-attributes-ecommerce/?$ /blog/product-filters-attributes-ecommerce/ [R=301,L]
+RewriteRule ^category-structure-large-catalog/?$ /blog/category-structure-large-catalog/ [R=301,L]
+RewriteRule ^shopify-or-woocommerce-decision/?$ /blog/shopify-or-woocommerce-decision/ [R=301,L]
+RewriteRule ^redirect-mapping-ecommerce-migration/?$ /blog/redirect-mapping-ecommerce-migration/ [R=301,L]
+RewriteRule ^sku-structure-product-catalog/?$ /blog/sku-structure-product-catalog/ [R=301,L]
+RewriteRule ^web-project-workflow-failure-points/?$ /blog/web-project-workflow-failure-points/ [R=301,L]
+RewriteRule ^on-page-seo-large-product-catalog/?$ /blog/on-page-seo-large-product-catalog/ [R=301,L]
+RewriteRule ^elementor-client-handoff/?$ /blog/elementor-client-handoff/ [R=301,L]
+RewriteRule ^client-editable-restaurant-menu-wordpress/?$ /blog/client-editable-restaurant-menu-wordpress/ [R=301,L]
+RewriteRule ^cleaning-product-data-csv/?$ /blog/cleaning-product-data-csv/ [R=301,L]
+RewriteRule ^product-catalog-migration-field-mapping/?$ /blog/product-catalog-migration-field-mapping/ [R=301,L]
+
+# Reviews: no rules. Each review is its own independent website and keeps its own address.

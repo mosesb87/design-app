@@ -1,0 +1,144 @@
+{
+  "url": "https://mousabatarseh.com/dunhams-review/",
+  "title": "Dunham's — SEO Review",
+  "description": "Independent SEO review of dunhamssports.com by Mousa Batarseh — 275 stores with no indexable pages, category slug collisions and no structured data, with a store-page generator prototype. Built for the SEO & SEM Specialist role.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "p",
+      "text": "SEC. 01 — OVERVIEW · FOR THE SEO & SEM SPECIALIST ROLE"
+    },
+    {
+      "t": "h1",
+      "text": "275 STORES. ZERO INDEXABLE STORE PAGES."
+    },
+    {
+      "t": "p",
+      "text": "The posting asks for SEO on Dunham's local store pages. There aren't any. The store locator is a 274-option dropdown of hashed IDs, /stores/ returns raw JSON, no store has a URL in any sitemap, and /stores/troy-mi is a 404. Meanwhile the Shopware migration left category duplicates — /apparel-1/ and /apparel-2/ both live and indexed while /apparel/ 404s — and no page on the site carries structured data. This is the store-page system I'd build."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "268"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "active stores in the JSON the site already serves — none with a page"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "41"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "category URLs with a “-1/-2” collision suffix"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "/20"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "sampled categories with an empty meta description"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "pages with JSON-LD structured data, sitewide"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker b",
+      "text": "THE ASK"
+    },
+    {
+      "t": "h3",
+      "text": "SEO on local store pages"
+    },
+    {
+      "t": "p",
+      "text": "“Identify and make recommendations to further optimize key pages, including homepage, category pages, product pages, vendor pages, content pages, local store pages.” Those pages don't exist yet — building them is the single biggest organic opportunity for a 275-store chain."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker a",
+      "text": "THE DATA'S READY"
+    },
+    {
+      "t": "h3",
+      "text": "You already serve it"
+    },
+    {
+      "t": "p",
+      "text": "/stores/ returns 268 active stores with address, city, state, zip and phone. A template turns each into an indexable page with hours, departments, a map and LocalBusiness schema — capturing “Dunham's + city” and “near me”."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker c",
+      "text": "THE CLEANUP"
+    },
+    {
+      "t": "h3",
+      "text": "Consolidate the catalog"
+    },
+    {
+      "t": "p",
+      "text": "301 the 41 “-1/-2” duplicates to clean slugs, generate unique metadata for 1,764 categories, add Product schema, and give the sitemap real lastmod values instead of one bulk-stamped date."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Scope"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Method"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Platform"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Independent — not affiliated with Dunham's"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "next",
+      "text": "NEXT: THE FINDINGS →"
+    }
+  ],
+  "links": [
+    {
+      "text": "NEXT: THE FINDINGS →",
+      "href": "https://mousabatarseh.com/dunhams-review/findings.html"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

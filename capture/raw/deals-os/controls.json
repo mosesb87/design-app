@@ -1,0 +1,393 @@
+{
+  "url": "https://mousabatarseh.com/deals-os/",
+  "height": 5011,
+  "heads": [
+    {
+      "tag": "h1",
+      "text": "The Deals Operating System",
+      "y": 126,
+      "sel": "div.wrap > div.hero:nth-of-type(1) > div:nth-of-type(1) > h1"
+    },
+    {
+      "tag": "h2",
+      "text": "One intake row. Sixteen checks. One verdict.",
+      "y": 1483,
+      "sel": "#how > div.grid2:nth-of-type(1) > div:nth-of-type(1) > h2"
+    },
+    {
+      "tag": "h3",
+      "text": "Written from the same rows",
+      "y": 1483,
+      "sel": "#how > div.grid2:nth-of-type(1) > div:nth-of-type(2) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "C1–C3",
+      "y": 1972,
+      "sel": "#how > div.groups:nth-of-type(2) > div:nth-of-type(1) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "C4–C5",
+      "y": 1972,
+      "sel": "#how > div.groups:nth-of-type(2) > div:nth-of-type(2) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "C6–C9",
+      "y": 1972,
+      "sel": "#how > div.groups:nth-of-type(2) > div:nth-of-type(3) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "C10–C12",
+      "y": 1972,
+      "sel": "#how > div.groups:nth-of-type(2) > div:nth-of-type(4) > h3"
+    },
+    {
+      "tag": "h3",
+      "text": "C13–C16",
+      "y": 1972,
+      "sel": "#how > div.groups:nth-of-type(2) > div:nth-of-type(5) > h3"
+    },
+    {
+      "tag": "h2",
+      "text": "D-1009, the blocked one. Fix it yourself.",
+      "y": 2250,
+      "sel": "#try > h2"
+    },
+    {
+      "tag": "h2",
+      "text": "Everything behind the film",
+      "y": 4401,
+      "sel": "#more > h2"
+    }
+  ],
+  "items": [
+    {
+      "tag": "a",
+      "text": "THE SYSTEM",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "index.html",
+      "sel": "div.wrap > header.top > nav.pages > a:nth-of-type(1)",
+      "x": 1002,
+      "y": 18,
+      "w": 103,
+      "h": 35
+    },
+    {
+      "tag": "a",
+      "text": "FULL WALKTHROUGH",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "walkthrough.html",
+      "sel": "div.wrap > header.top > nav.pages > a:nth-of-type(2)",
+      "x": 1111,
+      "y": 18,
+      "w": 149,
+      "h": 35
+    },
+    {
+      "tag": "a",
+      "text": "WATCH IN 1080P ↗",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "media/hd/deals-operating-system.mp4",
+      "sel": "#film > div.film:nth-of-type(1) > div.filmbar > a",
+      "x": 1121,
+      "y": 1266,
+      "w": 123,
+      "h": 18
+    },
+    {
+      "tag": "button",
+      "text": "0:00The wrong price",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#film > div.chap:nth-of-type(2) > button:nth-of-type(1)",
+      "x": 180,
+      "y": 1313,
+      "w": 172,
+      "h": 31
+    },
+    {
+      "tag": "button",
+      "text": "0:17What it is",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#film > div.chap:nth-of-type(2) > button:nth-of-type(2)",
+      "x": 358,
+      "y": 1313,
+      "w": 134,
+      "h": 31
+    },
+    {
+      "tag": "button",
+      "text": "0:37One intake row",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#film > div.chap:nth-of-type(2) > button:nth-of-type(3)",
+      "x": 498,
+      "y": 1313,
+      "w": 164,
+      "h": 31
+    },
+    {
+      "tag": "button",
+      "text": "1:0316 checks, 5 groups",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#film > div.chap:nth-of-type(2) > button:nth-of-type(4)",
+      "x": 669,
+      "y": 1313,
+      "w": 202,
+      "h": 31
+    },
+    {
+      "tag": "button",
+      "text": "1:51Pass · warn · fail",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#film > div.chap:nth-of-type(2) > button:nth-of-type(5)",
+      "x": 876,
+      "y": 1313,
+      "w": 194,
+      "h": 31
+    },
+    {
+      "tag": "button",
+      "text": "2:13A blocked deal",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#film > div.chap:nth-of-type(2) > button:nth-of-type(6)",
+      "x": 1076,
+      "y": 1313,
+      "w": 164,
+      "h": 31
+    },
+    {
+      "tag": "button",
+      "text": "2:40Fixing it",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#film > div.chap:nth-of-type(2) > button:nth-of-type(7)",
+      "x": 180,
+      "y": 1350,
+      "w": 127,
+      "h": 31
+    },
+    {
+      "tag": "button",
+      "text": "3:00An approved deal",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#film > div.chap:nth-of-type(2) > button:nth-of-type(8)",
+      "x": 313,
+      "y": 1350,
+      "w": 179,
+      "h": 31
+    },
+    {
+      "tag": "button",
+      "text": "3:16Friday's report",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#film > div.chap:nth-of-type(2) > button:nth-of-type(9)",
+      "x": 498,
+      "y": 1350,
+      "w": 172,
+      "h": 31
+    },
+    {
+      "tag": "button",
+      "text": "3:31Close",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#film > div.chap:nth-of-type(2) > button:nth-of-type(10)",
+      "x": 676,
+      "y": 1350,
+      "w": 97,
+      "h": 31
+    },
+    {
+      "tag": "input",
+      "text": "39.99",
+      "aria": null,
+      "role": null,
+      "type": "number",
+      "href": null,
+      "sel": "#reg",
+      "x": 196,
+      "y": 2526,
+      "w": 240,
+      "h": 40
+    },
+    {
+      "tag": "input",
+      "text": "35",
+      "aria": null,
+      "role": null,
+      "type": "number",
+      "href": null,
+      "sel": "#disc",
+      "x": 465,
+      "y": 2526,
+      "w": 240,
+      "h": 40
+    },
+    {
+      "tag": "input",
+      "text": "25.99",
+      "aria": null,
+      "role": null,
+      "type": "number",
+      "href": null,
+      "sel": "#promo",
+      "x": 735,
+      "y": 2526,
+      "w": 240,
+      "h": 40
+    },
+    {
+      "tag": "button",
+      "text": "CORRECT BOTH PRICES",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#b-fix",
+      "x": 197,
+      "y": 2817,
+      "w": 181,
+      "h": 35
+    },
+    {
+      "tag": "button",
+      "text": "BACK TO THE SUBMISSION",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#b-orig",
+      "x": 386,
+      "y": 2817,
+      "w": 204,
+      "h": 35
+    },
+    {
+      "tag": "button",
+      "text": "LOAD D-1001 (THE CLEAN ONE)",
+      "aria": null,
+      "role": null,
+      "type": "button",
+      "href": null,
+      "sel": "#b-1001",
+      "x": 598,
+      "y": 2817,
+      "w": 244,
+      "h": 35
+    },
+    {
+      "tag": "a",
+      "text": "Full walkthrough · 5:50 Every check, C1 to C16, on the real workbook, ",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "walkthrough.html",
+      "sel": "#more > div.links:nth-of-type(1) > a:nth-of-type(1)",
+      "x": 180,
+      "y": 4455,
+      "w": 352,
+      "h": 140
+    },
+    {
+      "tag": "a",
+      "text": "How I review a site The evidence-first method on a live retail site, w",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "https://mousabatarseh.com/carhartt-review/",
+      "sel": "#more > div.links:nth-of-type(1) > a:nth-of-type(2)",
+      "x": 544,
+      "y": 4455,
+      "w": 352,
+      "h": 140
+    },
+    {
+      "tag": "a",
+      "text": "Résumé & portfolio Six years of retail catalogs, promotions and platfo",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "https://mousabatarseh.com/",
+      "sel": "#more > div.links:nth-of-type(1) > a:nth-of-type(3)",
+      "x": 908,
+      "y": 4455,
+      "w": 352,
+      "h": 140
+    },
+    {
+      "tag": "a",
+      "text": "mousabatarseh.com",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "https://mousabatarseh.com/",
+      "sel": "div.wrap > footer > p:nth-of-type(2) > a:nth-of-type(1)",
+      "x": 180,
+      "y": 4873,
+      "w": 128,
+      "h": 19
+    },
+    {
+      "tag": "a",
+      "text": "LinkedIn",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "https://www.linkedin.com/in/mousabatarseh",
+      "sel": "div.wrap > footer > p:nth-of-type(2) > a:nth-of-type(2)",
+      "x": 319,
+      "y": 4873,
+      "w": 56,
+      "h": 19
+    },
+    {
+      "tag": "a",
+      "text": "hireme@mousabatarseh.com",
+      "aria": null,
+      "role": null,
+      "type": null,
+      "href": "mailto:hireme@mousabatarseh.com",
+      "sel": "div.wrap > footer > p:nth-of-type(2) > a:nth-of-type(3)",
+      "x": 386,
+      "y": 4873,
+      "w": 185,
+      "h": 19
+    }
+  ]
+}

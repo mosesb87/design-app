@@ -1,0 +1,297 @@
+{
+  "url": "https://mousabatarseh.com/dutchie-review/",
+  "title": "Dutchie — Launch readiness review",
+  "description": "An outside read of Dutchie's launch surfaces: a shipped feature still 'Coming soon' in the help center, Consumer AI with no help articles 97 days in, and a Plus end-of-support date that lives only in a blog post.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "badge",
+      "text": "Launch readiness · an outside read"
+    },
+    {
+      "t": "h1",
+      "text": "Shipping is done. Ready is the other half."
+    },
+    {
+      "t": "p",
+      "text": "A launch isn't finished when it ships; it's finished when every team is ready and every customer-facing surface says the same thing. So I read Dutchie's launches from the outside — release notes, monthly updates, help center, status page — and checked whether every surface told the same story on the same day."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Public release surfaces compared"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Help articles for Consumer AI, 97 days in"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Features shipped but still “Coming soon”"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Headline typos in two weeks"
+    },
+    {
+      "t": "h2",
+      "text": "Six launch-board items"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "L-01"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag fail",
+      "text": "No-go"
+    },
+    {
+      "t": "h3",
+      "text": "One feature, three states on three official surfaces"
+    },
+    {
+      "t": "p",
+      "text": "The Aug 27 release note says chain admins “now have a single Mobile App area”; the September monthly update leads with it as shipped. The help article both link to is still titled “Coming soon: Configure and customize the Mobile App tab in Chain Admin” — and was edited on Sep 11, two weeks after GA, without the title changing."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "updates.dutchie.com (Aug 27) · dutchie.com/business/dutchie-monthly-product-updates/september-2026-monthly-product-update · support.dutchie.com/hc/en-us/articles/54796916995219 · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Coming-soon flip"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Docs match"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "L-02"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag fail",
+      "text": "No-go"
+    },
+    {
+      "t": "h3",
+      "text": "Consumer AI: 97 days after launch, no help articles"
+    },
+    {
+      "t": "p",
+      "text": "Press release and blog, June 15: Voice AI, Agentic Commerce, Register Co-Pilot and Consumer Pulse. Help-center search on Sep 20 returns zero articles for each name. The nav still badges it “🚀 new”. By contrast, Dutchie MCP — an early-access feature — has a help article updated July 29."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "PR Newswire, June 15, 2026 · support.dutchie.com help-center search API · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Support readiness"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Pre-GA gate"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "L-03"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag warn",
+      "text": "At risk"
+    },
+    {
+      "t": "h3",
+      "text": "Plus end-of-support lives only in a blog post"
+    },
+    {
+      "t": "p",
+      "text": "Aug 2025, CTO: supporting legacy Plus customers “through the end of 2026.” On Sep 10, 2026, a release note ships new Plus API support with no sunset reminder; the status page lists Plus as a live component; no public deprecation page was found. Third-party agencies now publish the “Dutchie Plus sunset” guides."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "dutchie.com/business/post/e-commerce-evolution-a-personal-note-pro-plus · updates.dutchie.com (Sep 10) · status.dutchie.com · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Customer change mgmt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Comms"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "L-04"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag warn",
+      "text": "At risk"
+    },
+    {
+      "t": "h3",
+      "text": "A “Coming Soon” article, 72 days on"
+    },
+    {
+      "t": "p",
+      "text": "“Coming Soon: Configure and use Scan to Redeem” was created July 10. It isn't in any Aug–Sep release note I checked. Either it slipped or it shipped without an announcement; the public record can't say which — which is the problem a launch board exists to prevent."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "support.dutchie.com Product Announcements category (6 articles) · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Status truth"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Owner"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "L-05"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag warn",
+      "text": "At risk"
+    },
+    {
+      "t": "h3",
+      "text": "Release-note headlines skip a spell check"
+    },
+    {
+      "t": "p",
+      "text": "Sep 10: “Total terpenese support” — baked into the URL slug. Sep 17: “Block checkout for unfilfilled pre-orders.” Sep 3 titles use “Dutchie POS Release Notes: …” while every other week uses “Dutchie POS: …”. Monthly-update slugs use four patterns."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "updates.dutchie.com · dutchie.com/business/dutchie-monthly-product-updates · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Headline lint"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Template"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "L-06"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag warn",
+      "text": "At risk"
+    },
+    {
+      "t": "h3",
+      "text": "One product, five spellings"
+    },
+    {
+      "t": "p",
+      "text": "Marketing site: “E-Commerce”. Status page: “Dutchie Ecommerce”. Help center: “Dutchie E-Commerce”. Footer: “E-commerce”. Status incident: “Ecomm”, “E-Comm”. A product-name dictionary is the cheapest check in the gate."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ev",
+      "text": "dutchie.com/business · status.dutchie.com · support.dutchie.com · observed Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "Name dictionary"
+    },
+    {
+      "t": "h2",
+      "text": "What's working"
+    },
+    {
+      "t": "p",
+      "text": "Release notes ship every Thursday, one POS and one E-Commerce entry, without fail — that's a real operating rhythm. Monthly updates have run every month of 2026. All 58 business-site nav links return 200. And the early-access pattern for Dutchie MCP — a help article live before GA — is exactly the pattern the other launches are missing. The gap isn't process; it's that no single check confirms every surface flipped together."
+    },
+    {
+      "t": "h3",
+      "text": "Method & scope"
+    },
+    {
+      "t": "p",
+      "text": "Public sources only, Sep 20, 2026: updates.dutchie.com (page 1, Aug 13–Sep 17), the monthly-update index, the help center's public search API and Product Announcements category, status.dutchie.com (incident titles from the page's embedded data) and the Aug 2025 Plus post. developers.dutchie.com didn't resolve for me, so absence of a Plus deprecation page is “not found publicly”, not proven absent. I didn't check social channels."
+    },
+    {
+      "t": "p",
+      "text": "What I bring, plainly. Six years of running retail platform launches and migrations end to end — two storefronts in parallel, 14,000-SKU moves with redirect maps, seasonal launches across teams. I haven't held a SaaS program-manager title; I built the gate on the next page because that's how I already work, and I'd rather you judge the gate than the title."
+    }
+  ],
+  "links": [],
+  "images": [],
+  "status": 200
+}

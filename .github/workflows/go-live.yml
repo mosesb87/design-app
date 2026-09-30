@@ -1,0 +1,91 @@
+name: Go live on mousabatarseh.com
+
+# Uploads the new portfolio to the live domain — only when Mousa has approved it and a push changes
+# deploy/go-live.txt. It uses FTP credentials Mousa adds himself as repository secrets (never in code or chat):
+#   FTP_HOST, FTP_USER, FTP_PASSWORD   and, optionally, FTP_DIR (the site's folder; default public_html)
+#   and FTP_TLS_VERIFY=no if the host's FTP certificate doesn't match its name.
+# Steps: build the same package as `npm run package:root` (checked: indexable, canonical on mousabatarseh.com);
+# back up every file it will replace (the home page, icons, llms.txt, root .htaccess, robots.txt, and the whole
+# blog/ and reviews/ folders) as a download on the run; upload without deleting anything; then check the new
+# pages and the existing folders (/v2/, the tools, a full review) on the live site. docs/deploy.md has the
+# rollback, which the backup makes possible.
+on:
+  push:
+    branches: ['claude/determined-lamport-4blt8a']
+    paths: ['deploy/go-live.txt']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: go-live
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      FTP_HOST: ${{ secrets.FTP_HOST }}
+      FTP_USER: ${{ secrets.FTP_USER }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      FTP_DIR: ${{ secrets.FTP_DIR || 'public_html' }}
+      FTP_TLS_VERIFY: ${{ secrets.FTP_TLS_VERIFY || 'yes' }}
+    steps:
+      - name: Credentials present
+        run: |
+          if [ -z "$FTP_HOST" ] || [ -z "$FTP_USER" ] || [ -z "$FTP_PASSWORD" ]; then
+            echo "::error::Add FTP_HOST, FTP_USER and FTP_PASSWORD as repository secrets (Settings → Secrets and variables → Actions), then run this again."
+            exit 1
+          fi
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Build the package (production, checked)
+        run: npm run package:root
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+      - name: Back up what the upload replaces
+        run: |
+          mkdir -p backup
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" -e "
+            set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate $FTP_TLS_VERIFY; set net:max-retries 3;
+            cd $FTP_DIR;
+            lcd backup;
+            get -e index.html; get -e index.php; get -e .htaccess; get -e robots.txt; get -e llms.txt;
+            get -e favicon.ico; get -e favicon.svg; get -e apple-touch-icon.png; get -e 404.html;
+            mirror --parallel=4 blog blog; mirror --parallel=4 reviews reviews;
+            cls -1 > ../remote-root-listing.txt;
+            bye" || true
+          ls -la backup | head -40
+          test -s remote-root-listing.txt || { echo "::error::Could not connect or list $FTP_DIR — check the FTP secrets (and FTP_DIR)."; exit 1; }
+          cat remote-root-listing.txt
+          # Stop if a folder the package adds already exists with something else in it.
+          for d in work about tools index _assets media og; do
+            if grep -qx "$d/" remote-root-listing.txt || grep -qx "$d" remote-root-listing.txt; then
+              echo "::warning::$d already exists on the server — it will be updated in place (nothing is deleted)."
+            fi
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-backup-before-${{ github.sha }}
+          retention-days: 90
+          path: |
+            backup
+            remote-root-listing.txt
+      - name: Upload the new site (no deletions)
+        run: |
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" -e "
+            set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate $FTP_TLS_VERIFY; set net:max-retries 3;
+            mirror --reverse --no-perms --parallel=6 --verbose=1 deploy/build/ $FTP_DIR/;
+            bye"
+      - name: Check the live site
+        run: |
+          fail=0
+          check() { code=$(curl -s -o /dev/null -w '%{http_code}' -L "https://mousabatarseh.com$1?v=${GITHUB_SHA::7}"); echo "$code  $1"; [ "$code" = "200" ] || fail=1; }
+          for p in / /work/ /index/ /about/ /tools/ /blog/ /reviews/ /reviews/reworked/ /work/asas-studio/ /v2/ /changeatlas/ /dealproof/ /reworked-review/ /sapienceai/; do check "$p"; done
+          curl -s "https://mousabatarseh.com/?v=${GITHUB_SHA::7}" | grep -q 'data-play-hero' && echo "New home page is live." || { echo "::warning::The home page doesn't show the new site yet (a cache may still hold the old one)."; }
+          exit $fail

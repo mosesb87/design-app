@@ -1,0 +1,278 @@
+{
+  "slug": "mousa-v1",
+  "url": "https://mousabatarseh.com/",
+  "probedAt": "2026-09-26T16:49:14.512Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://mousabatarseh.com/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "#pagefluid."
+      ]
+    },
+    "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist",
+    "description": "Mousa Batarseh is a Warren, Michigan webmaster who builds and runs WordPress, Elementor and Divi websites, WooCommerce and Shopify stores, with SEO built in.",
+    "headings": [
+      "H1: Webmaster · WordPress & E-commerce · SEO",
+      "H2: About",
+      "H2: I make websites that work",
+      "H2: What I do",
+      "H2: Structure first.Style without limits.",
+      "H2: Toolkit",
+      "H2: Lab",
+      "H2: Certifications"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": true,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 2,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 29,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 2,
+      "links": 87,
+      "images": 27
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "Manrope"
+    ],
+    "type": {
+      "body": "Manrope, Aeonik, system-ui, sans-serif",
+      "h1Family": "Manrope, Aeonik, system-ui, sans-serif",
+      "h1Size": "26.64px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(240, 241, 250)",
+      "text": "rgb(0, 0, 0)"
+    },
+    "scroll": {
+      "height": 12888,
+      "viewports": 14.3
+    },
+    "perf": {
+      "fcpMs": 424,
+      "domContentLoadedMs": 4357,
+      "requests": 10,
+      "transferKB": 790
+    },
+    "animationsNow": 21,
+    "motion": {
+      "scrollDrivenElements": 154,
+      "samples": [
+        "span.about-w",
+        "span.about-w",
+        "span.about-w",
+        "span.about-w",
+        "span.about-w",
+        "span.about-w",
+        "span.about-w",
+        "span.about-w",
+        "span.about-w",
+        "span.about-w",
+        "span.about-w",
+        "span.about-w"
+      ],
+      "pinnedCandidates": [
+        "nav.menu-links"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://mousabatarseh.com/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "#pagefluid."
+      ]
+    },
+    "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist",
+    "description": "Mousa Batarseh is a Warren, Michigan webmaster who builds and runs WordPress, Elementor and Divi websites, WooCommerce and Shopify stores, with SEO built in.",
+    "headings": [
+      "H1: Webmaster · WordPress & E-commerce · SEO",
+      "H2: About",
+      "H2: I make websites that work",
+      "H2: What I do",
+      "H2: Structure first.Style without limits.",
+      "H2: Toolkit",
+      "H2: Lab",
+      "H2: Certifications"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": true,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 2,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 29,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 2,
+      "links": 87,
+      "images": 27
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "Manrope"
+    ],
+    "type": {
+      "body": "Manrope, Aeonik, system-ui, sans-serif",
+      "h1Family": "Manrope, Aeonik, system-ui, sans-serif",
+      "h1Size": "26.64px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(240, 241, 250)",
+      "text": "rgb(0, 0, 0)"
+    },
+    "scroll": {
+      "height": 12888,
+      "viewports": 14.3
+    },
+    "perf": {
+      "fcpMs": 332,
+      "domContentLoadedMs": 623,
+      "requests": 10,
+      "transferKB": 790
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 5,
+      "samples": [
+        "div.cert-popover",
+        "div.cert-popover",
+        "div.cert-popover",
+        "div.cert-popover",
+        "div.cert-popover"
+      ],
+      "pinnedCandidates": [
+        "nav.menu-links"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://mousabatarseh.com/",
+    "gates": {
+      "actions": [],
+      "blocking": []
+    },
+    "title": "Mousa Batarseh — Webmaster, WordPress & E-commerce Specialist",
+    "description": "Mousa Batarseh is a Warren, Michigan webmaster who builds and runs WordPress, Elementor and Divi websites, WooCommerce and Shopify stores, with SEO built in.",
+    "headings": [
+      "H1: Webmaster · WordPress & E-commerce · SEO",
+      "H2: About",
+      "H2: I make websites that work",
+      "H2: What I do",
+      "H2: Structure first.Style without limits.",
+      "H2: Toolkit",
+      "H2: Lab",
+      "H2: Certifications"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": true,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": false,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 2,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 29,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 2,
+      "links": 87,
+      "images": 27
+    },
+    "cursorHidden": false,
+    "viewTransitions": false,
+    "fonts": [
+      "Manrope"
+    ],
+    "type": {
+      "body": "Manrope, Aeonik, system-ui, sans-serif",
+      "h1Family": "Manrope, Aeonik, system-ui, sans-serif",
+      "h1Size": "21px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(240, 241, 250)",
+      "text": "rgb(0, 0, 0)"
+    },
+    "scroll": {
+      "height": 16957,
+      "viewports": 20.1
+    },
+    "perf": {
+      "fcpMs": 6992,
+      "domContentLoadedMs": 7169,
+      "requests": 7,
+      "transferKB": 586
+    },
+    "animationsNow": 21,
+    "motion": null,
+    "mobileNav": {
+      "label": "Menu",
+      "hasAriaExpanded": true,
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}

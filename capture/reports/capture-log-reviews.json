@@ -1,0 +1,382 @@
+{
+  "review-carhartt-reworked": {
+    "slug": "review-carhartt-reworked",
+    "project": "reviews",
+    "url": "https://mousabatarseh.com/reworked-review/",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/reworked-review/",
+        "title": "Carhartt Reworked · Recommerce Merchandising Review · Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 173406
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/reworked-review/",
+        "title": "Carhartt Reworked · Recommerce Merchandising Review · Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 9000,
+        "bytes": 534968
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/reworked-review/",
+        "title": "Carhartt Reworked · Recommerce Merchandising Review · Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 140368
+      }
+    },
+    "notes": [],
+    "title": "Carhartt Reworked · Recommerce Merchandising Review · Mousa Batarseh",
+    "recording": {
+      "ok": true,
+      "frames": 456,
+      "seconds": 8.79,
+      "bytes": 797070
+    },
+    "interaction": {
+      "ok": true,
+      "frames": 529,
+      "seconds": 14.31,
+      "bytes": 2028021
+    }
+  },
+  "review-oakwood": {
+    "slug": "review-oakwood",
+    "project": "reviews",
+    "url": "https://mousabatarseh.com/oakwood-review/",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/oakwood-review/",
+        "title": "Oakwood Veneer — Species Sample Book",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 187360
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/oakwood-review/",
+        "title": "Oakwood Veneer — Species Sample Book",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 1779,
+        "bytes": 146680
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/oakwood-review/",
+        "title": "Oakwood Veneer — Species Sample Book",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 161278
+      }
+    },
+    "notes": [],
+    "title": "Oakwood Veneer — Species Sample Book",
+    "recording": {
+      "ok": true,
+      "frames": 290,
+      "seconds": 7.57,
+      "bytes": 859673
+    }
+  },
+  "review-vanguard": {
+    "slug": "review-vanguard",
+    "project": "reviews",
+    "url": "https://mousabatarseh.com/vanguard-review/",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/vanguard-review/",
+        "title": "Vanguard — Field Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 197476
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/vanguard-review/",
+        "title": "Vanguard — Field Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 1788,
+        "bytes": 157552
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/vanguard-review/",
+        "title": "Vanguard — Field Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 123032
+      }
+    },
+    "notes": [],
+    "title": "Vanguard — Field Review",
+    "recording": {
+      "ok": true,
+      "frames": 325,
+      "seconds": 7.65,
+      "bytes": 961022
+    }
+  },
+  "review-jbtools": {
+    "slug": "review-jbtools",
+    "project": "reviews",
+    "url": "https://mousabatarseh.com/jbtools-review/",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/jbtools-review/",
+        "title": "JB Tools — Product-Data Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 257196
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/jbtools-review/",
+        "title": "JB Tools — Product-Data Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 1752,
+        "bytes": 174498
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/jbtools-review/",
+        "title": "JB Tools — Product-Data Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 158458
+      }
+    },
+    "notes": [],
+    "title": "JB Tools — Product-Data Review",
+    "recording": {
+      "ok": true,
+      "frames": 321,
+      "seconds": 7.62,
+      "bytes": 1140832
+    }
+  },
+  "review-hayhouse": {
+    "slug": "review-hayhouse",
+    "project": "reviews",
+    "url": "https://mousabatarseh.com/hayhouse-review/",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/hayhouse-review/",
+        "title": "Hay House Storefront Report — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 238020
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/hayhouse-review/",
+        "title": "Hay House Storefront Report — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 9000,
+        "bytes": 963388
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/hayhouse-review/",
+        "title": "Hay House Storefront Report — Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 161426
+      }
+    },
+    "notes": [],
+    "title": "Hay House Storefront Report — Mousa Batarseh",
+    "recording": {
+      "ok": true,
+      "frames": 386,
+      "seconds": 8.34,
+      "bytes": 1648123
+    }
+  },
+  "review-biotrust": {
+    "slug": "review-biotrust",
+    "project": "reviews",
+    "url": "https://mousabatarseh.com/biotrust-review/",
+    "capturedAt": "2026-09-26T15:00:36.222Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/biotrust-review/",
+        "title": "BioTRUST — Relaunch Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 246938
+      },
+      "desktop-full": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/biotrust-review/",
+        "title": "BioTRUST — Relaunch Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1440,
+        "h": 1518,
+        "bytes": 148868
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/biotrust-review/",
+        "title": "BioTRUST — Relaunch Review",
+        "gates": {
+          "actions": [],
+          "blocking": []
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 190612
+      }
+    },
+    "notes": [],
+    "title": "BioTRUST — Relaunch Review",
+    "recording": {
+      "ok": true,
+      "frames": 291,
+      "seconds": 7.54,
+      "bytes": 962541
+    }
+  },
+  "reviews-index": {
+    "slug": "reviews-index",
+    "project": "reviews",
+    "url": "https://mousabatarseh.com/reviews/",
+    "capturedAt": "2026-09-26T14:14:21.459Z",
+    "views": {
+      "desktop-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/reviews/",
+        "title": "Website Reviews · Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.aurora",
+            "div.curtain",
+            "div.mnav"
+          ]
+        },
+        "w": 2880,
+        "h": 1800,
+        "bytes": 144816
+      },
+      "mobile-hero": {
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://mousabatarseh.com/reviews/",
+        "title": "Website Reviews · Mousa Batarseh",
+        "gates": {
+          "actions": [],
+          "blocking": [
+            "div.aurora",
+            "div.curtain",
+            "div.mnav"
+          ]
+        },
+        "w": 1170,
+        "h": 2532,
+        "bytes": 142640
+      }
+    },
+    "notes": [],
+    "title": "Website Reviews · Mousa Batarseh"
+  }
+}

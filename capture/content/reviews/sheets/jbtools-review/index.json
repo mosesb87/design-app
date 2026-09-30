@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/jbtools-review/",
+    "status": 200,
+    "title": "JB Tools — Product-Data Review",
+    "h1": "A 104,000-product catalog is only as good as its worst record.",
+    "description": "Independent product-data review of jbtools.com by Mousa Batarseh — encoding, schema and out-of-stock defects found in the live catalog, with a supplier-price SOP. Built for the eCommerce Database Manager role.",
+    "height": 1752
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/jbtools-review/findings.html",
+    "status": 200,
+    "title": "JB Tools — Findings",
+    "h1": "",
+    "description": "The defect census — five product-data defect classes found in the live jbtools.com catalog, each with evidence.",
+    "height": 2259
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/jbtools-review/triage.html",
+    "status": 200,
+    "title": "JB Tools — Triage Board",
+    "h1": "",
+    "description": "The Catalog Triage Board — a working prototype of the product-data fix workflow for jbtools.com.",
+    "height": 1318
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/jbtools-review/plan.html",
+    "status": 200,
+    "title": "JB Tools — Plan & Method",
+    "h1": "",
+    "description": "Sold-out handling, the supplier price-change SOP, a 90-day plan and method for the jbtools.com product-data review.",
+    "height": 2272
+  }
+]

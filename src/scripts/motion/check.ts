@@ -1,0 +1,81 @@
+// "A request is trusted by default": the three cards are dealt, their rows fly in from scattered spots, the scan
+// line reads across them, the stale price is struck, check 04 fails, the shelf card flips to "blocked" and the
+// verdict lands.
+// Desktop: scrubbed while the section is pinned (CSS sticky). Smaller screens: plays once when in view.
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import type { Env } from './runtime';
+
+export default function check([section]: HTMLElement[], env: Env) {
+  if (env.reduced) return;
+  const q = <T extends Element = HTMLElement>(s: string) => [...section.querySelectorAll<T>(s)] as unknown as T[];
+  const cards = q<HTMLElement>('[data-card]');
+  const lens = section.querySelector<HTMLElement>('[data-lens]');
+  const head = section.querySelector<HTMLElement>('[data-scan-head]');
+  const fail = section.querySelector<HTMLElement>('[data-fail]');
+  const stale = section.querySelector<HTMLElement>('[data-stale]');
+  const flip = section.querySelector<HTMLElement>('[data-flip]');
+  const faces = q<HTMLElement>('.chk__face');
+  // The rows on the sheet and the register (and the sheet's note) arrive scattered, each from its own direction.
+  const bits = q<HTMLElement>('.chk__card--sheet .chk__rows > div, .chk__card--sheet .chk__note, .chk__card--register .chk__rows > div');
+  const rnd = gsap.utils.random;
+  const scattered = bits.map((_, i) => { const a = i * 2.39996; return { x: Math.cos(a) * rnd(120, 220), y: Math.sin(a) * rnd(90, 170), rotation: rnd(-24, 24), scale: rnd(0.8, 0.92) }; });
+  const verdict = section.querySelector<HTMLElement>('[data-verdict]');
+  const track = section.querySelector<HTMLElement>('[data-check-track]');
+  const stage = section.querySelector<HTMLElement>('[data-check-stage]');
+  if (!cards.length || !flip || !stage || !track) return;
+
+  const dealFrom = { y: 120, opacity: 0, rotation: (i: number) => [-4, 3, -2][i] ?? 0, scale: 0.94 };
+  const dealTo = { y: 0, opacity: 1, rotation: 0, scale: 1, ease: 'expo.out' };
+  const deal = () => {
+    gsap.set(cards, dealFrom);
+    return ScrollTrigger.create({ trigger: track, start: 'top 80%', once: true, onEnter: () => gsap.to(cards, { ...dealTo, duration: 0.9, stagger: 0.1 }) });
+  };
+
+  const build = (scrubbed: boolean) => {
+    const tl = gsap.timeline({ paused: true, defaults: { ease: scrubbed ? 'none' : 'expo.out' } });
+    const D = scrubbed ? 1 : 1; // same shape; the scrubbed version is mapped onto scroll
+    // Scrubbed (desktop), the cards are dealt as the section arrives — see deal() — so the stage is never empty
+    // while it scrolls into view; the scrub then drives the check itself.
+    if (!scrubbed) tl.fromTo(cards, dealFrom, { ...dealTo, duration: 0.22 * D, stagger: 0.05 }, 0);
+    // Rows fly into place before the scan starts.
+    bits.forEach((el, i) => tl.fromTo(el, scattered[i], { x: 0, y: 0, rotation: 0, scale: 1, duration: 0.16, ease: 'power3.out' }, (scrubbed ? 0.02 : 0.12) + i * 0.012));
+    // The scan line reads across the cards: over the sheet, onto the register (where the stale price shows),
+    // then the shelf, and fades once the verdict lands.
+    if (lens && scrubbed) {
+      tl.fromTo(lens, { x: 0, opacity: 0 }, { x: () => stage.offsetWidth * 0.18, opacity: 1, duration: 0.1, ease: 'power2.out' }, 0.26)
+        .to(lens, { x: () => stage.offsetWidth * 0.5, duration: 0.18, ease: 'power1.inOut' }, 0.36);
+    }
+    // The strike and the scan chip's failed state follow the playhead in both directions (a callback would
+    // only fire one way reliably).
+    tl.eventCallback('onUpdate', () => {
+      const t = tl.time();
+      stale?.classList.toggle('is-struck', t >= 0.5);
+      head?.classList.toggle('is-fail', t >= 0.52 && t < 0.74);
+    });
+    tl.fromTo(fail, { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.07, ease: 'power3.out' }, 0.52)
+      .fromTo(cards[1], { x: 0 }, { keyframes: { x: [-10, 10, -6, 6, 0] }, duration: 0.06, ease: 'none' }, 0.52)
+      .to(flip, { rotationY: 180, duration: 0.14, ease: scrubbed ? 'power2.inOut' : 'power3.out' }, 0.6)
+      .fromTo(verdict, { scale: 0.7, opacity: 0, y: 12 }, { scale: 1, opacity: 1, y: 0, duration: 0.08, ease: 'power3.out' }, 0.8);
+    if (lens && scrubbed) tl.to(lens, { x: () => stage.offsetWidth * 0.86, duration: 0.14, ease: 'power1.inOut' }, 0.6).to(lens, { x: () => stage.offsetWidth, opacity: 0, duration: 0.06 }, 0.78);
+    tl.to({}, { duration: 0.1 }, 0.9);
+    // The flip needs the faces to stack in 3D.
+    gsap.set(flip, { transformStyle: 'preserve-3d' });
+    return tl;
+  };
+
+  const mm = gsap.matchMedia();
+  mm.add('(min-width: 1024px)', () => {
+    const dealt = deal();
+    const tl = build(true);
+    const st = ScrollTrigger.create({ trigger: track, start: 'top top', end: 'bottom bottom', scrub: 0.6, animation: tl, invalidateOnRefresh: true });
+    return () => { dealt.kill(); st.kill(); tl.kill(); head?.classList.remove('is-fail'); gsap.set([...cards, ...bits, fail, verdict, flip, lens].filter(Boolean), { clearProps: 'all' }); };
+  });
+  mm.add('(max-width: 1023px)', () => {
+    const tl = build(false);
+    tl.timeScale(0.28); // ~3.5 s in real time
+    const st = ScrollTrigger.create({ trigger: stage, start: 'top 72%', once: true, onEnter: () => tl.play() });
+    return () => { st.kill(); tl.kill(); gsap.set([...cards, ...bits, fail, verdict, flip].filter(Boolean), { clearProps: 'all' }); };
+  });
+  void faces;
+}

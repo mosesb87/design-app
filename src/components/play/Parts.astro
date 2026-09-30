@@ -1,0 +1,125 @@
+---
+// "Every part in its place." — the about, beside a board of labelled slots. Scrolling down, the scattered
+// colored parts fly into their slots and the board is stamped; scrolling on, they fly back out; scrolling up
+// replays it in reverse. Reduced motion: already in place.
+import Sticker from './Sticker.astro';
+import type { StickerName } from './types';
+import { person } from '../../data/site';
+// Each piece is a colored tile — cobalt, sky, night, deep cobalt, the logo's green, violet — spread so no two
+// neighbours match.
+const parts: { name: StickerName; label: string; tile: 'blue' | 'sky' | 'night' | 'deep' | 'leaf' | 'red' }[] = [
+  { name: 'blocks', label: 'Pages', tile: 'blue' },
+  { name: 'cell', label: 'Catalog', tile: 'leaf' },
+  { name: 'tag', label: 'Prices', tile: 'night' },
+  { name: 'barcode', label: 'SKUs', tile: 'red' },
+  { name: 'percent', label: 'Promotions', tile: 'sky' },
+  { name: 'lens', label: 'SEO', tile: 'blue' },
+  { name: 'cursor', label: 'UX', tile: 'leaf' },
+  { name: 'chart', label: 'Analytics', tile: 'deep' },
+  { name: 'check', label: 'QA', tile: 'red' },
+];
+// The title, split into letters for the scatter (the full sentence stays readable as one string).
+const title = [['Every', 'part'], ['in', 'its', 'place.']];
+import Ghost from '../Ghost.astro';
+---
+<section class="parts section has-ghost" id="about" aria-labelledby="parts-title" data-parts>
+  <Ghost text="About" align="right" top="6%" />
+  <div class="wrap parts__grid">
+    <header class="parts__head">
+      <p class="kicker">About</p>
+      <h2 class="h2 parts__title" id="parts-title" data-parts-title>
+        <span class="visually-hidden">Every part in its place.</span>
+        {title.map((line) => (
+          <span class="parts__line" aria-hidden="true">
+            {line.map((word) => <span class="parts__word">{[...word].map((ch) => <span class="parts__l" data-pl>{ch}</span>)}</span>)}
+          </span>
+        ))}
+      </h2>
+    </header>
+    <div class="parts__text">
+      <p class="lead parts__lead">I’m Mousa — the person you call when the website looks fine but nothing quite works.</p>
+      <p class="parts__body">Seven years building and running sites on WordPress, Elementor and Divi. I turn “someone does this by hand every Friday” into systems that run themselves — and I’m happiest when a site simply works, every day, without anyone having to rescue it.</p>
+      <p class="parts__more"><a class="btn btn--line" href="/about/">More about me <span class="arrow" aria-hidden="true">→</span></a></p>
+    </div>
+    <div class="parts__board" data-parts-board>
+      <ul class="parts__slots" role="list" aria-label="What a working site needs">
+        {parts.map((p, i) => (
+          <li class="parts__slot">
+            <span class:list={['parts__piece', `parts__piece--${p.tile}`]} data-piece data-i={i}><Sticker name={p.name} /></span>
+            <span class="parts__label">{p.label}</span>
+          </li>
+        ))}
+      </ul>
+      <span class="parts__stamp" data-parts-stamp aria-hidden="true"><i>✓</i> All in place</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .parts__grid { display: grid; gap: var(--s-8); align-items: center; }
+  .parts__text { display: grid; gap: var(--s-5); }
+  /* The one heading on the site set far larger than the rest (Mousa, round 6: "make it bigger"): full width,
+     above the text and the board, its letters still assembling with the parts. */
+  .parts__head { display: grid; gap: var(--s-4); }
+  .parts__title { font-size: clamp(2.8rem, 11.5vw, 13rem); line-height: 0.82; letter-spacing: -0.01em; }
+  .parts__line { display: block; white-space: nowrap; }
+  .parts__word { display: inline-block; }
+  .parts__word + .parts__word { margin-left: 0.2em; }
+  .parts__l { display: inline-block; will-change: transform; }
+  .parts__lead { max-width: 26ch; font-weight: 550; }
+  .parts__body { color: var(--fg-2); max-width: 46ch; }
+  .parts__board {
+    position: relative;
+    padding: clamp(14px, 2vw, 28px);
+    border-radius: var(--r-xl);
+    background: var(--cloud);
+  }
+  .parts__slots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1.4vw, 20px); }
+  .parts__slot {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: var(--r-l);
+    background: #fff;
+    display: grid;
+    place-items: center;
+  }
+  .parts__piece { width: 64%; display: block; position: relative; z-index: 2; will-change: transform; }
+  .parts__piece :global(.sticker) { --size: 100%; width: 100%; }
+  .parts .parts__piece--blue :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); box-shadow: 0 18px 30px -18px rgb(28 51 168 / 0.7); }
+  .parts .parts__piece--sky :global(.sticker) { --tile: var(--blue-soft); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: 0 18px 30px -18px rgb(43 77 224 / 0.5); }
+  .parts .parts__piece--night :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); }
+  .parts .parts__piece--deep :global(.sticker) { --tile: var(--accent-deep); --stroke: #fff; --acc: var(--blue-soft); box-shadow: 0 18px 30px -18px rgb(28 51 168 / 0.75); }
+  .parts .parts__piece--leaf :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: 0 18px 30px -18px rgb(90 160 0 / 0.6); }
+  .parts .parts__piece--red :global(.sticker) { --tile: var(--red); --stroke: #fff; --acc: var(--red-soft); background: linear-gradient(150deg, #ff5a60, var(--red) 55%); box-shadow: 0 18px 30px -18px rgb(232 35 46 / 0.6); }
+  .parts__label {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+    font: 700 clamp(0.6875rem, 0.9vw, 0.8125rem) / 1 var(--font-text);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .parts__stamp {
+    position: absolute;
+    right: -10px;
+    top: -18px;
+    z-index: 3;
+    padding: 12px 18px;
+    border-radius: var(--r-pill);
+    background: var(--ink);
+    color: #fff;
+    font: 700 0.9375rem/1 var(--font-text);
+    box-shadow: var(--shadow-2);
+  }
+  .parts__stamp i { font-style: normal; color: var(--accent-soft); margin-right: 4px; }
+  @media (min-width: 1024px) {
+    .parts__grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+    .parts__head { grid-column: 1 / -1; }
+    .parts__text { grid-column: 1 / span 6; }
+    .parts__board { grid-column: 7 / span 6; }
+  }
+  :global(.motion-ok) .parts__stamp { opacity: 0; }
+</style>

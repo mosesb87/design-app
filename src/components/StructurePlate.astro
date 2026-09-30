@@ -1,0 +1,43 @@
+---
+// The Structure plate: the live page's first viewport, traced by script (capture/raw/<slug>/outline-desktop.json)
+// and redrawn as grey blocks — structure judged before style.
+import { media } from '../lib/media';
+interface Props { slug: string; label?: string }
+const { slug, label = 'Layout traced from the live page' } = Astro.props;
+const o = media(slug)?.outline;
+const W = 1440, H = 900;
+const items = (o?.items || [])
+  .filter((i) => i.w * W >= 14 && i.h * H >= 6)
+  .sort((a, b) => b.w * b.h - a.w * a.h)
+  .slice(0, 120);
+const r = (n: number, m: number) => Math.round(n * m * 10) / 10;
+---
+<svg class="structure" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={label} preserveAspectRatio="xMidYMin slice">
+  <rect width={W} height={H} fill="var(--paper)" />
+  <g stroke="var(--rule)" stroke-width="1">
+    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((c) => <line x1={(W / 12) * c} x2={(W / 12) * c} y1="0" y2={H} stroke-dasharray="2 6" />)}
+  </g>
+  {items.map((i) => {
+    const x = r(i.x, W), y = r(i.y, H), w = r(i.w, W), h = r(i.h, H);
+    if (i.k === 'image') return (
+      <g>
+        <rect x={x} y={y} width={w} height={h} fill="var(--paper-3)" stroke="var(--ink-3)" stroke-width="1.2" />
+        <path d={`M${x} ${y} L${x + w} ${y + h} M${x + w} ${y} L${x} ${y + h}`} stroke="var(--ink-3)" stroke-width="1" opacity="0.6" />
+      </g>
+    );
+    if (i.k === 'heading') return <rect x={x} y={y + h * 0.18} width={w} height={Math.max(8, h * 0.64)} fill="var(--ink)" opacity="0.85" />;
+    if (i.k === 'subheading') return <rect x={x} y={y + h * 0.25} width={w} height={Math.max(6, h * 0.5)} fill="var(--ink-2)" opacity="0.75" />;
+    if (i.k === 'text') {
+      const lines = Math.max(1, Math.min(8, Math.round(h / 22)));
+      return <g>{Array.from({ length: lines }, (_, n) => <rect x={x} y={y + (h / lines) * n + (h / lines) * 0.3} width={n === lines - 1 && lines > 1 ? w * 0.62 : w} height={Math.max(3, (h / lines) * 0.34)} fill="var(--ink-3)" opacity="0.55" />)}</g>;
+    }
+    if (i.k === 'button') return <rect x={x} y={y} width={w} height={h} fill="none" stroke="var(--register)" stroke-width="2" />;
+    if (i.k === 'input') return <rect x={x} y={y} width={w} height={h} fill="#fff" stroke="var(--ink-3)" stroke-width="1.2" />;
+    if (i.k === 'nav') return <rect x={x} y={y} width={w} height={Math.min(h, 4)} fill="var(--sheet)" />;
+    return null;
+  })}
+</svg>
+
+<style>
+  .structure { display: block; width: 100%; height: 100%; }
+</style>

@@ -1,0 +1,645 @@
+{
+  "url": "https://mousabatarseh.com/reviews/reviews/petsafe/index.html",
+  "title": "PetSafe DTC ops & insights review · Mousa Batarseh",
+  "description": "PetSafe (petsafe.com): The stack is right, the signals aren’t: /sitemap.xml returns homepage HTML, llms.txt is missing, and every product page ships the same 15-word meta description.",
+  "ogImage": "https://mousabatarseh.com/reviews/og.jpg",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "pill",
+      "text": "SEO & AI search"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Observed Sep 20, 2026"
+    },
+    {
+      "t": "p",
+      "text": "PETSAFE · DTC OPS & INSIGHTS REVIEW"
+    },
+    {
+      "t": "h1",
+      "text": "The stack is right. The signals aren't."
+    },
+    {
+      "t": "p",
+      "text": "JSON-LD blocks on the homepage"
+    },
+    {
+      "t": "p",
+      "text": "The stack is right, the signals aren’t: /sitemap.xml returns homepage HTML, llms.txt is missing, and every product page ships the same 15-word meta description."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn light",
+      "text": "All reviews"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "SITE"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "mono",
+      "text": "petsafe.com"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "OBSERVED"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "Sep 20, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "SOURCES"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "Public pages only"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "mousabatarseh.com/petsafe-review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/hero/petsafe-700.webp",
+      "alt": "PetSafe review, full first screen",
+      "w": 662,
+      "h": 1035,
+      "file": "04d45e26aa65b0e8.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Findings"
+    },
+    {
+      "t": "h2",
+      "text": "Three things\nthe review found"
+    },
+    {
+      "t": "p",
+      "text": "Quoted from the full review. Each one carries its date, source and a fix inside."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "01"
+    },
+    {
+      "t": "h3",
+      "text": "Structured data is silent on the front door"
+    },
+    {
+      "t": "p",
+      "text": "Homepage carries no JSON-LD; interior product pages carry ProductGroup, BreadcrumbList and hand-curated FAQPage. The gap is only at the top of the funnel."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "02"
+    },
+    {
+      "t": "h3",
+      "text": "Sitemap and llms.txt need owners"
+    },
+    {
+      "t": "p",
+      "text": "curl https://www.petsafe.com/sitemap.xml returns 200 with Content-Type: text/html. A specialist who owns URL taxonomy owns this — the fix is one build-time step."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "03"
+    },
+    {
+      "t": "h3",
+      "text": "The stack for Tableau is already emitting events"
+    },
+    {
+      "t": "p",
+      "text": "GTM is live, Klaviyo is firing, Shopify is behind the cart, Triple Whale is watching spend, Bazaarvoice is collecting reviews. Tableau dashboards described in the JD can be built on top of what's already flowing, not from scratch."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Inside the review"
+    },
+    {
+      "t": "h2",
+      "text": "What’s in\nthe full review"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "01"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "02"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "03"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "04"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "05"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Related"
+    },
+    {
+      "t": "h2",
+      "text": "More in\nE-commerce & DTC"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/salt-400.webp",
+      "alt": "Salt Security review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "9af0839a9777f62f.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "salt.security"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "SEO & AI search"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "57"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "/60"
+    },
+    {
+      "t": "p",
+      "text": "pages without any JSON-LD"
+    },
+    {
+      "t": "h3",
+      "text": "Salt Security · AEO & structured-data review"
+    },
+    {
+      "t": "p",
+      "text": "No FAQPage markup, llms.txt returns 404, and 720 disallowed sitemap URLs, with the markup to fix it."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "salt.security"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard-400.webp",
+      "alt": "Vanguard review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "8aa6f4e2a2d5e204.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "vanguardworld.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "440"
+    },
+    {
+      "t": "p",
+      "text": "products carrying one template’s three defects"
+    },
+    {
+      "t": "h3",
+      "text": "Vanguard · Product-template review"
+    },
+    {
+      "t": "p",
+      "text": "Fix one template, fix 443 products. There are also no links to the marketplace listings."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "vanguardworld.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/oakwood-400.webp",
+      "alt": "Oakwood Veneer review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "0b7a4c947a98e008.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "oakwoodveneer.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "6.6"
+    },
+    {
+      "t": "p",
+      "text": "mobile LCP on a 300+ species catalog"
+    },
+    {
+      "t": "h3",
+      "text": "Oakwood Veneer · Catalog & UX review"
+    },
+    {
+      "t": "p",
+      "text": "Three hundred species behind two filters, with a working species-faceted browser built as the fix."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "oakwoodveneer.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/moment-400.webp",
+      "alt": "Moment review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "7125590019aa29f6.webp"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "drinkmoment.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "E-commerce & DTC"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Sep 19, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "43"
+    },
+    {
+      "t": "p",
+      "text": "sold-out products still published"
+    },
+    {
+      "t": "h3",
+      "text": "Moment · PDP & offer review"
+    },
+    {
+      "t": "p",
+      "text": "A 20% promise priced at 13.6%, and review counts that disagree across the same product."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "drinkmoment.com"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "DiaMedical USA"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Website experience review"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "High Profile"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Promo readiness review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "t": "h2",
+      "text": "Want one for\nyour site?"
+    },
+    {
+      "t": "p",
+      "text": "Send a URL. You’ll get the first findings back, dated and sourced."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn ghost",
+      "text": "hireme@mousabatarseh.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "t": "text",
+      "tag": "label",
+      "cls": "qsl1",
+      "text": "Start with your website"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Dated, sourced findings",
+        "One working fix, built for your site",
+        "Public pages only, no logins"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "https://mousabatarseh.com/reviews/index.html"
+    },
+    {
+      "text": "Reviews",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html"
+    },
+    {
+      "text": "E-commerce & DTC",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html?f=ecom"
+    },
+    {
+      "text": "SEO & AI search",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html?f=seo"
+    },
+    {
+      "text": "Open the full review",
+      "href": "https://mousabatarseh.com/petsafe-review/"
+    },
+    {
+      "text": "All reviews",
+      "href": "https://mousabatarseh.com/reviews/reviews/index.html"
+    },
+    {
+      "text": "Read it on mousabatarseh.com",
+      "href": "https://mousabatarseh.com/petsafe-review/"
+    },
+    {
+      "text": "salt.security\nSEO & AI search\nSep 19, 2026\n57\n/60\n\npages without any JSON-LD\n\nSalt Security · AEO & structured-data review\n\nNo FAQPage marku",
+      "href": "https://mousabatarseh.com/reviews/reviews/salt/index.html"
+    },
+    {
+      "text": "vanguardworld.com\nE-commerce & DTC\nSep 19, 2026\n440\n\nproducts carrying one template’s three defects\n\nVanguard · Product-template review\n\nFix",
+      "href": "https://mousabatarseh.com/reviews/reviews/vanguard/index.html"
+    },
+    {
+      "text": "oakwoodveneer.com\nE-commerce & DTC\nSep 19, 2026\n6.6\ns\n\nmobile LCP on a 300+ species catalog\n\nOakwood Veneer · Catalog & UX review\n\nThree hun",
+      "href": "https://mousabatarseh.com/reviews/reviews/oakwood/index.html"
+    },
+    {
+      "text": "drinkmoment.com\nE-commerce & DTC\nSep 19, 2026\n43\n\nsold-out products still published\n\nMoment · PDP & offer review\n\nA 20% promise priced at 13",
+      "href": "https://mousabatarseh.com/reviews/reviews/moment/index.html"
+    },
+    {
+      "text": "Previous\nDiaMedical USA\nWebsite experience review",
+      "href": "https://mousabatarseh.com/reviews/reviews/diamedical/index.html"
+    },
+    {
+      "text": "Next\nHigh Profile\nPromo readiness review",
+      "href": "https://mousabatarseh.com/reviews/reviews/highprofile/index.html"
+    },
+    {
+      "text": "Request a review",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Review%20my%20site"
+    },
+    {
+      "text": "hireme@mousabatarseh.com",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Review%20my%20site"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/hero/petsafe-700.webp",
+      "alt": "PetSafe review, full first screen",
+      "w": 662,
+      "h": 1035,
+      "file": "04d45e26aa65b0e8.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/salt-400.webp",
+      "alt": "Salt Security review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "9af0839a9777f62f.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard-400.webp",
+      "alt": "Vanguard review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "8aa6f4e2a2d5e204.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/oakwood-400.webp",
+      "alt": "Oakwood Veneer review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "0b7a4c947a98e008.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/moment-400.webp",
+      "alt": "Moment review, first screen",
+      "w": 345,
+      "h": 540,
+      "file": "7125590019aa29f6.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    }
+  ],
+  "status": 200
+}

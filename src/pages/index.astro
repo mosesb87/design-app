@@ -1,0 +1,34 @@
+---
+// Home — the /v2 story, bright and playful: hero · every part in its place · counted, not claimed ·
+// built to fix something real · a request is trusted by default · then I make them work better ·
+// reviews · how I work · the blog · put yours in place.
+import Base from '../layouts/Base.astro';
+import PlayHero from '../components/play/PlayHero.astro';
+import Marquee from '../components/play/Marquee.astro';
+import Parts from '../components/play/Parts.astro';
+import Numbers from '../components/play/Numbers.astro';
+import Check from '../components/play/Check.astro';
+import Tools from '../components/play/Tools.astro';
+import Sites from '../components/play/Sites.astro';
+import ReviewsPlay from '../components/play/ReviewsPlay.astro';
+import Method from '../components/play/Method.astro';
+import NotesPlay from '../components/play/NotesPlay.astro';
+import { person } from '../data/site';
+
+const title = `${person.name} — Webmaster & E-commerce Specialist · Warren, MI`;
+const description = 'Mousa Batarseh finds what’s costing an online store sales and ships the fix, with the check that keeps it fixed: catalogs, promotions, product data and SEO on Shopify, WooCommerce and WordPress. Seven years, English and Arabic, Warren, Michigan.';
+const band = ['WordPress', 'WooCommerce', 'Shopify', 'Elementor', 'Divi', 'Product data', 'Catalog migrations', 'Promotions QA', 'SEO', 'GA4', 'English + Arabic'];
+---
+<Base title={title} description={description} path="/" og="home">
+  <PlayHero />
+  <Marquee items={band} />
+  <Parts />
+  <Numbers />
+  <Tools />
+  <Check />
+  <Sites />
+  <Marquee items={['Counted, not claimed', 'Every finding dated', 'Public pages only', 'A working fix, every time']} reverse label="How the reviews work" />
+  <ReviewsPlay />
+  <Method />
+  <NotesPlay />
+</Base>

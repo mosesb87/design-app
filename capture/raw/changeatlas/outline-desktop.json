@@ -1,0 +1,68 @@
+{
+  "viewport": {
+    "w": 1440,
+    "h": 900
+  },
+  "background": "rgb(250, 250, 248)",
+  "text": "rgb(18, 19, 22)",
+  "fonts": {
+    "body": "GeistSans, \"GeistSans Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "h1": "GeistSans, \"GeistSans Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+  },
+  "loadedFonts": [
+    "GeistSans",
+    "GeistMono",
+    "Newsreader Variable"
+  ],
+  "items": [
+    {
+      "k": "nav",
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 0.0833
+    },
+    {
+      "k": "image",
+      "x": 0.1139,
+      "y": 0.0222,
+      "w": 0.0236,
+      "h": 0.0378
+    },
+    {
+      "k": "button",
+      "x": 0.77,
+      "y": 0.0148,
+      "w": 0.1161,
+      "h": 0.0526
+    },
+    {
+      "k": "heading",
+      "x": 0.1139,
+      "y": 0.1701,
+      "w": 0.3982,
+      "h": 0.3727
+    },
+    {
+      "k": "text",
+      "x": 0.1139,
+      "y": 0.5695,
+      "w": 0.3982,
+      "h": 0.1031
+    },
+    {
+      "k": "button",
+      "x": 0.1139,
+      "y": 0.7125,
+      "w": 0.1269,
+      "h": 0.0526
+    },
+    {
+      "k": "image",
+      "x": 0.5399,
+      "y": 0.137,
+      "w": 0.3462,
+      "h": 0.6222
+    }
+  ]
+}

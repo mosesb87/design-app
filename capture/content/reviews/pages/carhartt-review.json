@@ -1,0 +1,2130 @@
+{
+  "url": "https://mousabatarseh.com/carhartt-review/",
+  "title": "Carhartt.com Digital Shelf Review",
+  "description": "Independent digital shelf review of carhartt.com by Mousa Batarseh — 13 findings with captured evidence, working prototypes, and a 90-day plan.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Independent digital shelf review · not affiliated with Carhartt, Inc."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "CARHARTT.COM · DIGITAL SHELF REVIEW · SEPTEMBER 2026"
+    },
+    {
+      "t": "h1",
+      "text": "THE SHELF IS STRONG. THE DATA UNDERNEATH IT ISN'T KEEPING UP."
+    },
+    {
+      "t": "p",
+      "text": "Carhartt's storefront has one of the best product-discovery systems in workwear — warmth ratings, deep fit and weight taxonomy, industry shops. The gaps are almost all product-data and merchandising-hygiene problems: empty categories in the New tree during Fall Layering, duplicate facet values, attributes leaking into product names, and a badge slot that hides the one thing a fall shopper needs. All of it is fixable by a site merchandiser in a quarter."
+    },
+    {
+      "t": "p",
+      "text": "Prepared by Mousa Batarseh as an unsolicited work sample for the Digital Site Merchandiser role. Based only on the public site as it rendered on Sept 15, 2026. No internal data, no Carhartt assets or logos used."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Reviewed"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Sept 15, 2026"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Surfaces"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "Home · nav tree (392 category links) · 12 PLPs · PDP · site search · sitemap · robots"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Stack seen"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "SAP Commerce Cloud (Spartacus) · Algolia search · Adobe Dynamic Media · True Fit"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Season live"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "“Stock up on layers” · Fall Sale 25% · Force Cold"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Author"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Mousa Batarseh"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "big num",
+      "text": "13"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lbl",
+      "text": "findings, each with a captured example, the customer impact, and a fix"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lbl",
+      "text": "categories in the New nav tree showing “0 items” mid-September, including Women's New Outerwear"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "big num",
+      "text": "10 / 24"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lbl",
+      "text": "Men's Jackets tiles that show no warmth rating because another badge takes the slot"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "big num",
+      "text": "2×"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lbl",
+      "text": "Rugged Flex® and Rain Defender® each listed twice in the Technology facet — one delimiter apart"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "lbl",
+      "text": "quick wins that need no dev work — content, PIM, and merchandising rules only"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "eyebrow",
+      "text": "PERFORMS WELL"
+    },
+    {
+      "t": "h2",
+      "text": "KEEP DOING THIS"
+    },
+    {
+      "t": "p",
+      "text": "Before the fixes: the parts of the digital shelf that are ahead of most apparel sites. These are the systems the findings below should be built on, not replaced."
+    },
+    {
+      "t": "ul",
+      "items": [
+        "WARMTH RATING IS A REAL MERCHANDISING SYSTEM\n\nChips at the top of jacket PLPs (Warm → Extreme Warmth), “Rated Warm/Warmest” tile badges, a Warmth Rating facet, and “Warmth Rating Earned: Level 1” at the top of every PDP description. One attribute, four surfaces, consistent language. This is the spine of fall merchandising.",
+        "TAXONOMY SHOPS THE WAY TRADESPEOPLE THINK\n\nFit (Relaxed / Loose / Slim), weight (Lightweight / Midweight / Heavyweight), Big & Tall, Plus, Shop by Industry (Construction, Farm & Ranch, Mechanic, Electrician, Medical), Shop by Warmth Rating. Facet-as-category done right, and it earns long-tail search traffic.",
+        "STORYTELLING INSIDE THE GRID\n\n“Aisle invader” content tiles sit in the product grid (“Outwork the rain — Shop rainwear”), so seasonal stories run where people are already shopping instead of only in a hero.",
+        "SALE PRESENTATION IS HONEST AND SCANNABLE\n\nOriginal vs. Now ranges on tiles, color-count “+ N” cues, and a 24-up grid with “See 14 more” instead of infinite scroll. Nothing hides the price story.",
+        "PDP FUNDAMENTALS ARE IN PLACE\n\nDetroit Jacket: 4.2★ from 1,322 reviews, 223 Q&A, Regular/Tall size architecture, True Fit sizing, five product images, a “Built to Last” guarantee block. The trust content exists — it just isn't surfaced upstream yet (see F-08).",
+        "LEGACY SEASONAL URLS ARE CANONICALIZED\n\n/c/women-new-spring-jackets and /c/women-new-rain-gear both resolve to the current Women's New Outerwear node. The redirect discipline is there — the destination is the problem (see F-01)."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "eyebrow",
+      "text": "OPPORTUNITIES"
+    },
+    {
+      "t": "h2",
+      "text": "13 FINDINGS, IN PRIORITY ORDER"
+    },
+    {
+      "t": "p",
+      "text": "Ordered by revenue impact against effort. Each one shows exactly what was captured on the live site, why a customer or the business feels it, and the fix I'd ship. Severity: FIX THIS WEEK THIS QUARTER POLISH"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-01"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev crit",
+      "text": "FIX THIS WEEK"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Empty categories · Sitemap · Seasonal"
+    },
+    {
+      "t": "h3",
+      "text": "WOMEN'S NEW OUTERWEAR SHOWS 0 ITEMS IN THE NEW NAV — DURING FALL LAYERING"
+    },
+    {
+      "t": "p",
+      "text": "The “New” menu has a Women's branch. Its outerwear node renders an empty grid, with two legacy URLs redirecting into it. A second empty category (men-insulated-bibs-coveralls) is still in the XML sitemap while the live equivalent lives at a different slug with 8 products. Both pages show search-error copy on a category page."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · /c/women-new-outerwear · breadcrumb: Home › New Clothing & Accessories › New Women's Clothes & Gear"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "0 items"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · /c/men-insulated-bibs-coveralls (in Category.xml) vs /c/men-insulated-bib-and-coveralls (in nav)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "0 items"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "8 items"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "IMPACT"
+    },
+    {
+      "t": "p",
+      "text": "Women's is a stated growth segment and this is the newness door for it. Google also has an indexable “0 items” page in the sitemap."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Assign the current women's outerwear launches to the node today. Then: a weekly “zero-product category” report from the catalog, an empty-state that falls back to the parent category (prototype P-3), 301 the dead slug to the live one, and drop it from Category.xml."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "EFFORT"
+    },
+    {
+      "t": "p",
+      "text": "Hours for the assignment; one sprint for the report and empty-state template."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-02"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev crit",
+      "text": "FIX THIS WEEK"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Facets · PIM · Search"
+    },
+    {
+      "t": "h3",
+      "text": "FACET VALUES ARE SPLIT BY PUNCTUATION AND SPELLING"
+    },
+    {
+      "t": "p",
+      "text": "On Men's Jackets & Coats the Technology facet lists the same technology twice with a different delimiter. Lining has four names for one taffeta quilt. Fabric has “Polyester” and “100% Polyester.” New & Featured has a typo and carries fabric values that belong in Fabric. Every duplicate halves the count a shopper sees and doubles the clicks to filter."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · Technology facet · /c/men-coats-jackets"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Rugged Flex- Range of Motion"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Rugged Flex: Range of Motion"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Rain Defender- Water Repellent"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Rain Defender: Water Repellent"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · Lining · Fabric · New & Featured"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Best Seller's"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "IMPACT"
+    },
+    {
+      "t": "p",
+      "text": "Filter abandonment and under-counted technologies on the page where Rugged Flex® and Rain Defender® are the reasons to buy."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "A controlled vocabulary per facet in the PIM (one value, one spelling, “Name: Benefit” format), a bulk normalization pass on the affected attributes, and a monthly facet-value diff so new launches can't reintroduce variants. Prototype P-2 shows the before/after."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "EFFORT"
+    },
+    {
+      "t": "p",
+      "text": "Merchandising + PIM only. No storefront code."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-03"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev crit",
+      "text": "FIX THIS WEEK"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Badges · PLP · Seasonal"
+    },
+    {
+      "t": "h3",
+      "text": "ONE BADGE SLOT PER TILE — “NEW” HIDES THE WARMTH RATING ON THE NEWEST FALL JACKETS"
+    },
+    {
+      "t": "p",
+      "text": "Tiles show exactly one badge. When a jacket is New, Exclusive, Sale, or Steady Rain, its warmth rating disappears from the shelf. On the 24 tiles captured from Men's Jackets & Coats, 10 show no warmth signal — including this season's Montana Ranch Coat, Elkhart, and Fairbanks launches, the products the Fall campaign is pushing."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · tile badge images · /c/men-coats-jackets"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "ProductBadge_New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "ProductBadge_New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "ProductBadge_New"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "IMPACT"
+    },
+    {
+      "t": "p",
+      "text": "Warmth is the primary decision attribute in Q4; the shelf goes quiet on it for the products with the most marketing behind them."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Two badge slots: status (New / Exclusive / Sale) top-left, warmth top-right, with a priority rule so nothing stacks past two. Prototype P-1 shows the tile."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "EFFORT"
+    },
+    {
+      "t": "p",
+      "text": "One tile-template change + a badge priority rule."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-04"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev warn",
+      "text": "THIS QUARTER"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Product data · Naming · URLs"
+    },
+    {
+      "t": "h3",
+      "text": "ATTRIBUTES ARE LEAKING INTO PRODUCT NAMES AND URLS"
+    },
+    {
+      "t": "p",
+      "text": "A warmth rating that belongs in an attribute is appended to some product names, so it reaches the URL slug, the tile, the title tag, and the feed. Trademark symbols alternate between ® and ™ on the same technology. Women's names carry a “WOMEN'S” prefix inside the women's category; men's don't. The Detroit Jacket has three different names depending on where you meet it."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · names and slugs"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "- 1 WARM RATING"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "---1-warm-rating"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "- 4 EXTREME WARMTH RATING"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · one product, three names"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "| Carhartt"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "IMPACT"
+    },
+    {
+      "t": "p",
+      "text": "Ugly slugs and titles in search results and shopping feeds; inconsistent brand marks; harder product matching for reviews, feeds, and analytics."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "A one-page naming convention (Series · Technology · Fabric · Silhouette; no attributes; ® on the first mention only), a PIM validation that blocks “rating” strings in names, and a cleanup of the affected styles with 301s."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "EFFORT"
+    },
+    {
+      "t": "p",
+      "text": "A day of data work, a template fix for the H1 suffix."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-05"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev warn",
+      "text": "THIS QUARTER"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "PDP · Cross-sell · Seasonal"
+    },
+    {
+      "t": "h3",
+      "text": "THE DETROIT JACKET PDP RECOMMENDS “WARM WEATHER ESSENTIALS”"
+    },
+    {
+      "t": "p",
+      "text": "While the homepage says “Stock up on layers that have no off-season,” the flagship fall jacket's second recommendation rail is Force tees, a Sun Defender™ polo, and a short-sleeve logo tee. The first rail (“You May Also Like”) is fine and even cross-sells into bibs. The second one is a seasonal rule that wasn't retired."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · /product/103828/iconic-j01-duck-detroit-jacket"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "WARM WEATHER ESSENTIALS"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "IMPACT"
+    },
+    {
+      "t": "p",
+      "text": "Lost attach rate on the one PDP with the most traffic in the season."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Retire the rail; replace with a “Complete the layer” rail keyed to warmth rating (base layer → hoodie → this jacket → insulated bib). Put a seasonal expiry date on every manual rec rule. Prototype P-4."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "EFFORT"
+    },
+    {
+      "t": "p",
+      "text": "Merchandising rule change; no code."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-06"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev warn",
+      "text": "THIS QUARTER"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Facets · Taxonomy"
+    },
+    {
+      "t": "h3",
+      "text": "“PRODUCT TYPE” MIXES FOUR DIMENSIONS THAT ALREADY HAVE THEIR OWN FACETS"
+    },
+    {
+      "t": "p",
+      "text": "On jackets, Product Type offers Duck and Denim (fabric), Fleece and Sherpa (lining), Rain Jackets (protection), Insulated / Lined (lining again), Lightweight (weight), plus the actual silhouettes — Active Jacs, Coats, Softshell. Fabric, Lining, Rain Protection, and Warmth Rating each exist as separate facets, so shoppers see the same choice twice under different names and results don't add up."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · Product Type · /c/men-coats-jackets"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Duck"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Denim Jackets"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Fleece"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Sherpa"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Product Type = silhouette only (Active Jac, Chore Coat, Ranch Coat, Shirt Jac, Vest, Parka, Softshell, Pullover). Fabric, Lining, Rain Protection, and Warmth carry the rest. Re-map values in the PIM; the facet order becomes Warmth → Product Type → Size → Fabric → Technology."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "EFFORT"
+    },
+    {
+      "t": "p",
+      "text": "Attribute mapping; a few days with the data team."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-07"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev warn",
+      "text": "THIS QUARTER"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "PLP · Social proof"
+    },
+    {
+      "t": "h3",
+      "text": "RATINGS LIVE ON THE PDP BUT NEVER REACH THE SHELF"
+    },
+    {
+      "t": "p",
+      "text": "The Detroit Jacket carries 4.2★ from 1,322 reviews. The PLP tile shows none of it, even though a “Top Rated” sort exists. Shoppers comparing 38 jackets get price, colors, and one badge — not the signal that decides most apparel purchases."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · PDP vs PLP tile"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "no rating"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Stars + count on tiles (hide under 5 reviews). Prototype P-1."
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "EFFORT"
+    },
+    {
+      "t": "p",
+      "text": "Tile template; review data is already indexed for the sort."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-08"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev warn",
+      "text": "THIS QUARTER"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Assortment · Tagging · Women's"
+    },
+    {
+      "t": "h3",
+      "text": "FALL CATEGORIES LOOK THIN IN WAYS THAT SMELL LIKE TAGGING, NOT ASSORTMENT"
+    },
+    {
+      "t": "p",
+      "text": "Men's Lined Sweatshirts & Hoodies holds 3 items during a layering campaign. Women's Jackets & Coats holds 19 vs. 38 for men, and its first two tiles are shirt jacs — which have their own category. Men's Insulated Overalls includes an insulated pant. Either the products are missing, or the attributes that route them into these nodes are."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · category counts, Sept 15"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "3 items"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Firm Duck Insulated Pant"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "An attribute-coverage audit for the fall nodes: every SKU in the season's buy checked against lining, warmth, silhouette, and gender-category assignment. Fill gaps before Black Friday."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-09"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev warn",
+      "text": "THIS QUARTER"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Content · Quick filters · QA"
+    },
+    {
+      "t": "h3",
+      "text": "QUICK-FILTER CHIP GROUPS ARE MISLABELED ON SOME CATEGORIES"
+    },
+    {
+      "t": "p",
+      "text": "The chip bar on Men's Rain Jackets is titled “Warmth” but contains Cold, Rainy, Cotton Duck, and Lightweight. The same template on Jackets is labeled correctly. It reads like a content block copied between categories without a QA pass."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · /c/new-men-rain-jackets"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "WARMTH"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "A launch checklist item per category: chip label matches chip set. A content QA pass over the ~40 categories using this component."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-10"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev warn",
+      "text": "THIS QUARTER"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Category naming · SEO"
+    },
+    {
+      "t": "h3",
+      "text": "URL, TITLE TAG, AND H1 DISAGREE ON WHAT A CATEGORY IS"
+    },
+    {
+      "t": "p",
+      "text": "/c/winter-sale returns a page titled “Limited Time Deals” with an H1 of “Pants & Accessories Sale” (466 items). The insulated-bibs node is “Insulated” in the nav, “Men's Insulated Overalls” as the H1, and “Insulated Bibs & Coveralls - Mens Insulated Bibs & Lined Coveralls for Men” as the title. Shoppers arriving from search see one name, then another."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "winter-sale"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "One name per node, propagated to slug, H1, title, and breadcrumb from the PIM; stop reusing evergreen slugs for rotating promos — give promos their own /c/promo-… nodes with an end date."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-11"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev warn",
+      "text": "THIS QUARTER"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Search · Merch rules"
+    },
+    {
+      "t": "h3",
+      "text": "TOP SEASONAL QUERIES LAND ON A RESULTS GRID, NOT THE CATEGORY"
+    },
+    {
+      "t": "p",
+      "text": "Searching “insulated bibs” returns correct products with Men / Women / Kids chips — good — but no route to the curated Insulated Overalls node, its warmth chips, or its facets. The “Products you may be interested in” block below the results is a fixed set of four styles that doesn't reflect the query."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · /search/insulated%20bibs"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "MEN · WOMEN · KIDS · results grid · PRODUCTS YOU MAY BE INTERESTED IN: Iconic J01 Duck Detroit Jacket · Iconic J140 Firm Duck Active Jac · Paxton Sweatshirt · Iconic R01 Duck Bib Overall"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Search-to-category redirects (or a “Shop the category” banner) for the top 50 category-intent queries, refreshed each season from Algolia analytics; a recommendation block that reflects the query."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-12"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev good",
+      "text": "POLISH"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Sort · Newness"
+    },
+    {
+      "t": "h3",
+      "text": "NO “NEWEST” SORT ON A SITE THAT MERCHANDISES NEWNESS EVERYWHERE"
+    },
+    {
+      "t": "p",
+      "text": "Sort offers Relevance, Top Rated, Price ↑↓, Name ↑↓. New is a facet checkbox instead. The New menu, New Colors, Just Added, and “New for …” nodes all exist; the grid can't be ordered by them."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured · sort options"
+    },
+    {
+      "t": "text",
+      "tag": "q",
+      "cls": "",
+      "text": "Relevance · Top Rated · Price Low to High · Price High to Low · Name Ascending · Name Descending"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Add “Newest” (launch date desc). Name sorts are rarely used on apparel and could go."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "fid",
+      "text": "F-13"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev good",
+      "text": "POLISH"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "tags",
+      "text": "Templates · Structured data · Accessibility"
+    },
+    {
+      "t": "h3",
+      "text": "TEMPLATE DETAILS THAT COST TRUST WITH GOOGLE AND SCREEN READERS"
+    },
+    {
+      "t": "p",
+      "text": "Badge images use their file names as alt text — a screen reader hears “Warmth underscore Rating underscore 1” and “ProductBadge underscore New” instead of “Rated Warm.” The PDP H1 includes the “| Carhartt” title suffix. The Product JSON-LD description contains a literal “Description” label and “&nbsp;” entities. The category meta description spells the brand's own technology “water-repellant.”"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "captured"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "Warmth_Rating_1"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "ProductBadge_New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "ProductBadge_SteadyRain"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "&nbsp;"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "bad",
+      "text": "water-repellant"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Human-readable alt on badge images (“Rated Warm, level 1”); strip the title suffix from H1; clean the description field before it's serialized; copy fix on the meta."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "eyebrow",
+      "text": "PROTOTYPES"
+    },
+    {
+      "t": "h2",
+      "text": "WHAT THE FIXES LOOK LIKE"
+    },
+    {
+      "t": "p",
+      "text": "Built from the 24 products captured on Men's Jackets & Coats on Sept 15, 2026 — names, price ranges, and badges exactly as displayed. Product photography is deliberately omitted (no Carhartt assets are used here); the placeholder is where the image goes."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "P-1 · FIXES F-03, F-07"
+    },
+    {
+      "t": "h4",
+      "text": "THE TILE, WITH TWO BADGE SLOTS AND A RATING"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "photo omitted"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "badge",
+      "text": "NEW"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "name",
+      "text": "MONTANA RUGGED FLEX® DUCK RANCH COAT"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "price num",
+      "text": "$169.99 — $189.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "photo omitted"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "badge",
+      "text": "NEW"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "name",
+      "text": "ELKHART JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "price num",
+      "text": "$89.99 — $109.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "photo omitted"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "badge",
+      "text": "EXCLUSIVE"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "name",
+      "text": "CRAFTED SERIES DUCK SHERPA LINED CHORE JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "price num",
+      "text": "$189.99 — $209.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "photo omitted"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "badge warm",
+      "text": "RATED WARM 1"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "name",
+      "text": "ICONIC J01 DUCK DETROIT JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "price num",
+      "text": "$129.99 — $139.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "photo omitted"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "badge ghost",
+      "text": "NO BADGE"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "name",
+      "text": "GILLIAM JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "price num",
+      "text": "$54.99 — $119.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "photo omitted"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "badge",
+      "text": "STEADY RAIN"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "name",
+      "text": "MONTEREY JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "price num",
+      "text": "$99.99 — $119.99"
+    },
+    {
+      "t": "p",
+      "text": "As captured: New, Exclusive, Sale, and Steady Rain each take the only badge slot, so the warmth rating disappears on 10 of 24 tiles. Switch to “Proposed.”"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "P-2 · FIXES F-02, F-06"
+    },
+    {
+      "t": "h4",
+      "text": "FACETS THAT COUNT CORRECTLY"
+    },
+    {
+      "t": "h4",
+      "text": "TECHNOLOGY FACET, AS CAPTURED"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Rugged Flex- Range of Motion",
+        "Rugged Flex: Range of Motion",
+        "Rain Defender- Water Repellent",
+        "Rain Defender: Water Repellent",
+        "Full Swing- Range of Motion",
+        "Force: Sweat-Wicking",
+        "Storm Defender- Waterproof Breathable",
+        "Super Dux- Water Repellent & Wind Resistant",
+        "Yukon Extremes- Extreme Warmth"
+      ]
+    },
+    {
+      "t": "h4",
+      "text": "NORMALIZED (ONE VALUE, ONE FORMAT)"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Rugged Flex®: Range of Motion",
+        "Rain Defender®: Water Repellent",
+        "Full Swing®: Range of Motion",
+        "Force®: Sweat-Wicking",
+        "Storm Defender®: Waterproof Breathable",
+        "Super Dux™: Water Repellent & Wind Resistant",
+        "Yukon Extremes®: Extreme Warmth"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "legend",
+      "cls": "",
+      "text": "WARMTH RATING (AS BADGED)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(4)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(4)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(5)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(1)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(10)"
+    },
+    {
+      "t": "text",
+      "tag": "legend",
+      "cls": "",
+      "text": "STATUS"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(4)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(4)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(15)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(1)"
+    },
+    {
+      "t": "text",
+      "tag": "legend",
+      "cls": "",
+      "text": "FABRIC NAMED IN TITLE"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(12)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(3)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(1)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(8)"
+    },
+    {
+      "t": "text",
+      "tag": "legend",
+      "cls": "",
+      "text": "PRICE"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(5)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(12)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(7)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "c",
+      "text": "(0)"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "count",
+      "text": "24 OF 24 ITEMS"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "ICONIC J01 DUCK DETROIT JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warm 1"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$129.99 — $139.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "MONTANA RUGGED FLEX® DUCK RANCH COAT"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w none",
+      "text": "warmth not on tile"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$169.99 — $189.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "ICONIC J140 FIRM DUCK ACTIVE JAC"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warmest 3"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$129.99 — $139.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "RUGGED FLEX® DUCK LOOSE FIT CHORE COAT - 1 WARM RATING"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warm 1"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$109.99 — $119.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "WASHED DUCK ACTIVE JAC"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warmest 3"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$129.99 — $139.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "RUGGED FLEX® DUCK BERWICK JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warm 1"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$109.99 — $119.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "WASHED DUCK BARTLETT JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warmer 2"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$149.99 — $164.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "GILLIAM JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w none",
+      "text": "warmth not on tile"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$54.99 — $119.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "MONTANA RUGGED FLEX™ DUCK JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warmer 2"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$139.99 — $154.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "CRAFTED SERIES DUCK SHERPA LINED CHORE JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w none",
+      "text": "warmth not on tile"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$189.99 — $209.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "DENIM BERWICK JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warmer 2"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$129.99 — $139.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "FORCE WINNIPEG JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warmest 3"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$159.99 — $174.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "ELKHART JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w none",
+      "text": "warmth not on tile"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$89.99 — $109.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "WASHED DUCK SIERRA JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warmest 3"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$139.99 — $154.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "RUGGED FLEX™ DUCK CAMO ACTIVE JAC"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warmer 2"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$159.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "WASHED DUCK BARTLETT ACTIVE JAC"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warmest 3"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$159.99 — $174.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "FAIRBANKS ACTIVE JAC"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w none",
+      "text": "warmth not on tile"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$129.99 — $144.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "MONTEREY JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w none",
+      "text": "warmth not on tile"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$99.99 — $119.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "CRAFTED SERIES DENIM SHERPA LINED CHORE JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w none",
+      "text": "warmth not on tile"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$189.99 — $209.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "CRAFTED SERIES DENIM CHORE COAT"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w none",
+      "text": "warmth not on tile"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$149.99 — $164.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "ELKHART PULLOVER"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w none",
+      "text": "warmth not on tile"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$84.99 — $104.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "YUKON EXTREMES® ACTIVE JAC"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Extreme Warmth 4"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$189.99 — $209.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "CRAFTED SERIES DRILL PAINTER CHORE COAT"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w none",
+      "text": "warmth not on tile"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$149.99 — $164.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-name",
+      "text": "EDMONTON JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-w",
+      "text": "Rated Warm 1"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "r-p num",
+      "text": "$94.99 — $104.99"
+    },
+    {
+      "t": "p",
+      "text": "Tick “Not shown on tile” under Warmth: those are the 10 products a fall shopper can't compare on warmth from the grid. Counts next to each value are what a shopper should see — live, and always adding up."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "P-3 · FIXES F-01"
+    },
+    {
+      "t": "h4",
+      "text": "AN EMPTY CATEGORY THAT STILL SELLS"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "crumb",
+      "text": "Home › New › Women's › Outerwear"
+    },
+    {
+      "t": "h4",
+      "text": "WOMEN'S NEW OUTERWEAR"
+    },
+    {
+      "t": "p",
+      "text": "New women's outerwear is landing through October. Until then, here's what's new for women right now — or jump straight to jackets."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip",
+      "text": "NEW FOR WOMEN (224)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip alt",
+      "text": "WOMEN'S JACKETS & COATS (19)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip alt",
+      "text": "WOMEN'S INSULATED & LINED"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "chip alt",
+      "text": "NOTIFY ME WHEN IT LANDS"
+    },
+    {
+      "t": "p",
+      "text": "Template rule: when a category returns 0 products, render the parent's grid under a short message and never show search-error copy. The page stays indexable and the shopper stays in the funnel."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "P-4 · FIXES F-05"
+    },
+    {
+      "t": "h4",
+      "text": "“COMPLETE THE LAYER” — A RAIL KEYED TO WARMTH RATING"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "k",
+      "text": "BASE"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "TOP-SELLING FORCE® THERMAL CREW"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d",
+      "text": "Sweat-wicking, under everything"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "k",
+      "text": "MID"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "TOP-SELLING HEAVYWEIGHT HOODIE"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d",
+      "text": "The layer under the duck (e.g. Paxton)"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "k",
+      "text": "SHELL · YOU'RE HERE"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "ICONIC J01 DUCK DETROIT JACKET"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d",
+      "text": "Warmth rating 1 · blanket lined"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "k",
+      "text": "BELOW"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "WASHED DUCK INSULATED BIB OVERALL"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d",
+      "text": "Warmth rating 3 · already in “You may also like”"
+    },
+    {
+      "t": "p",
+      "text": "Rule, not a hand-pick: for any outerwear PDP in Sept–Feb, show base → mid → this item → bottoms, choosing the top seller in each slot at the same fit and a warmth rating ≤ the jacket's. Manual rails get an expiry date so “Warm Weather Essentials” can't survive into September again."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "eyebrow",
+      "text": "IF HIRED"
+    },
+    {
+      "t": "h2",
+      "text": "FIRST 90 DAYS ON THIS SHELF"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "WINDOW",
+          "SHIP",
+          "MEASURE"
+        ],
+        [
+          "DAYS 1–30",
+          "Zero-product category report; assign women's outerwear launches; empty-state fallback; Technology / Lining / Fabric facet normalization; retire seasonal rec rails; badge priority rule spec; naming convention doc.",
+          "0 empty categories in nav or sitemap · facet value count on jackets down by ≥ 6 · attach rate on outerwear PDPs."
+        ],
+        [
+          "DAYS 31–60",
+          "Two-slot badge + tile rating (with UX/Product); Product Type re-map to silhouette; attribute-coverage audit on the fall buy; search-to-category redirects for top 50 queries; “Newest” sort.",
+          "PLP → PDP click-through on jackets · filter usage and refinement depth · search exit rate on category-intent queries."
+        ],
+        [
+          "DAYS 61–90",
+          "“Complete the layer” rail as a rule; category naming propagation from PIM; launch checklist (chips, alt text, H1, JSON-LD) in the go-live gate; monthly digital-shelf scorecard for Merchandising, Marketing, and Data.",
+          "Conversion and sell-through on fall nodes vs. LY · Black Friday readiness: 100% of buy attributed and assigned."
+        ]
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "eyebrow",
+      "text": "METHOD"
+    },
+    {
+      "t": "h2",
+      "text": "HOW THIS WAS CAPTURED"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I LOOKED AT"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Homepage, the full navigation tree (392 unique /c/ links), and Category.xml from the sitemap index.",
+        "12 category pages including Men's Jackets & Coats (facets, sort, 24 tiles, badges), Women's Jackets & Coats, Men's Rain, Lined Hoodies, Insulated Overalls, Force, New Women's, Low Stock, Winter Sale.",
+        "One PDP end to end (Iconic J01 Duck Detroit Jacket): H1, JSON-LD, images, size architecture, recommendation rails.",
+        "Site search for a top seasonal query (“insulated bibs”).",
+        "robots.txt (Algolia crawler allowed, search and query parameters disallowed)."
+      ]
+    },
+    {
+      "t": "h4",
+      "text": "LIMITS"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Public site only, one day, one region (US), desktop and narrow viewports. No analytics, no inventory, no launch calendar — so counts like “3 items” are observations, not verdicts.",
+        "“Not shown on tile” means the badge slot was taken; the product almost certainly has a warmth rating in the data.",
+        "Every quote in the findings is verbatim text or attribute values as rendered. Nothing was fetched from Carhartt's CDN and no brand assets are reproduced."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "eyebrow",
+      "text": "ABOUT THE AUTHOR"
+    },
+    {
+      "t": "h2",
+      "text": "MOUSA BATARSEH"
+    },
+    {
+      "t": "p",
+      "text": "Seven years running the digital shelf for multi-brand retail and wholesale ecommerce in Metro Detroit — Shopify and WordPress/WooCommerce storefronts, catalog launches and migrations of 14,000+ SKUs, navigation, collections, product data, imagery, pricing, and SEO. Apparel and textile background. GA4, Search Console, and PageSpeed are how I keep score."
+    },
+    {
+      "t": "p",
+      "text": "I made this the way I'd work in the role: capture what the customer actually sees, trace it back to the data, fix the rule instead of the symptom."
+    },
+    {
+      "t": "h4",
+      "text": "TALK ABOUT THIS SHELF"
+    },
+    {
+      "t": "p",
+      "text": "hireme@mousabatarseh.com · (248) 810-1816 · Warren, MI — 25 minutes from Dearborn"
+    },
+    {
+      "t": "p",
+      "text": "Previous review, same approach: diamedicalusa.com digital shelf & UX review"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "cta",
+      "text": "EMAIL MOUSA"
+    }
+  ],
+  "links": [
+    {
+      "text": "MOUSA BATARSEH\nIndependent digital shelf review · not affiliated with Carhartt, Inc.",
+      "href": "https://mousabatarseh.com/carhartt-review/#top"
+    },
+    {
+      "text": "WHAT WORKS",
+      "href": "https://mousabatarseh.com/carhartt-review/#works"
+    },
+    {
+      "text": "FINDINGS",
+      "href": "https://mousabatarseh.com/carhartt-review/#findings"
+    },
+    {
+      "text": "PROTOTYPES",
+      "href": "https://mousabatarseh.com/carhartt-review/#prototypes"
+    },
+    {
+      "text": "90-DAY PLAN",
+      "href": "https://mousabatarseh.com/carhartt-review/#plan"
+    },
+    {
+      "text": "METHOD",
+      "href": "https://mousabatarseh.com/carhartt-review/#method"
+    },
+    {
+      "text": "diamedicalusa.com digital shelf & UX review",
+      "href": "https://mousabatarseh.com/diamedical-review"
+    },
+    {
+      "text": "EMAIL MOUSA",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Carhartt.com%20digital%20shelf%20review"
+    },
+    {
+      "text": "mousabatarseh.com",
+      "href": "https://mousabatarseh.com/"
+    },
+    {
+      "text": "linkedin.com/in/mousabatarseh",
+      "href": "https://www.linkedin.com/in/mousabatarseh"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

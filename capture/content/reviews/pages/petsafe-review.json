@@ -1,0 +1,284 @@
+{
+  "url": "https://mousabatarseh.com/petsafe-review/",
+  "title": "PetSafe DTC — Ops & Insights Review · Mousa Batarseh",
+  "description": "Independent DTC ecommerce operations & insights review of petsafe.com by Mousa Batarseh, for the PetSafe Brands DTC Ecommerce Ops & Insights Specialist role. Every claim dated and cited: 0 JSON-LD blocks on the homepage, sitemap.xml returning HTML, llms.txt 404, and the meta description on every product page is templated. Sampled 2026-09-20.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "p",
+      "text": "SEC. 01 — OVERVIEW · FOR THE DTC ECOMMERCE OPS & INSIGHTS SPECIALIST ROLE"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "label-tag evidence-tag",
+      "text": "EVIDENCE PAGE · SAMPLED 2026-09-20"
+    },
+    {
+      "t": "h1",
+      "text": "The stack is right. The signals aren't."
+    },
+    {
+      "t": "p",
+      "text": "PetSafe already runs the toolchain the job description asks about — Gatsby on Netlify, headless Shopify, Sanity, Klaviyo, Algolia, Triple Whale, GTM, Bazaarvoice — I can see every one of them loading on petsafe.com. What's missing is the plumbing that turns that stack into trustworthy data and repeatable launches: zero structured data on the homepage, a sitemap URL that serves HTML instead of XML, no llms.txt, and every product page shipping the same 15-word templated meta description. Every figure below is dated and reproducible."
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "application/ld+json"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "petsafe.com"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "curl petsafe.com/ | grep -c 'application/ld+json'"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "[E1]"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "HTML"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "/sitemap.xml"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "curl petsafe.com/sitemap.xml"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "<!DOCTYPE html>"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "[E2]"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n muted",
+      "text": "404"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "/llms.txt"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "curl -I petsafe.com/llms.txt"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "HTTP/2 404"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "[E3]"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n teal",
+      "text": "15"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "Words in the meta description on every product page — the same template, verbatim"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "\"Buy the [name] in the official PetSafe® store for your pet.\""
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "[E4]"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker a",
+      "text": "SIGNALS"
+    },
+    {
+      "t": "h3",
+      "text": "Structured data is silent on the front door"
+    },
+    {
+      "t": "p",
+      "text": "Homepage carries no JSON-LD; interior product pages carry ProductGroup, BreadcrumbList and hand-curated FAQPage. The gap is only at the top of the funnel."
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "/p/extreme-weather-aluminum-pet-door/ZPA19-16853/"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "[E5]"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker b",
+      "text": "OPERATIONS"
+    },
+    {
+      "t": "h3",
+      "text": "Sitemap and llms.txt need owners"
+    },
+    {
+      "t": "p",
+      "text": "curl https://www.petsafe.com/sitemap.xml returns 200 with Content-Type: text/html. A specialist who owns URL taxonomy owns this — the fix is one build-time step."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "evidence",
+      "text": "2026-09-20 · see [E2] and [E3]"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker c",
+      "text": "INSIGHTS"
+    },
+    {
+      "t": "h3",
+      "text": "The stack for Tableau is already emitting events"
+    },
+    {
+      "t": "p",
+      "text": "GTM is live, Klaviyo is firing, Shopify is behind the cart, Triple Whale is watching spend, Bazaarvoice is collecting reviews. Tableau dashboards described in the JD can be built on top of what's already flowing, not from scratch."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "[E6]"
+    },
+    {
+      "t": "h2",
+      "text": "What I looked at"
+    },
+    {
+      "t": "p",
+      "text": "About 90 minutes with public artifacts only — the pages, HTTP headers, robots.txt, sitemap and llms.txt endpoints, the JSON-LD on 5 real product pages across doors, GPS, and microchip categories, and the raw HTML of petsafe.com/. No login, no confidential data. Every claim on this site names a reproducible source; the Evidence Log at the bottom of this page shows the exact commands."
+    },
+    {
+      "t": "p",
+      "text": "ROLE FIT"
+    },
+    {
+      "t": "p",
+      "text": "The JD splits the role into four buckets: project management, data & Tableau, Shopify ops, and measurement. This review walks through one artifact — the DTC storefront — in those four voices, plus a fifth section (The 1,000-Page Fix) with a live interactive tool that repairs a specific problem I found on every product page. I've been the \"keep it moving\" person for a 14,000-SKU Shopify migration at Universal Wholesale and I run this same pattern across storefronts today."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "SCOPE"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "METHOD"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "STACK SEEN"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "INDEPENDENT — NOT AFFILIATED WITH PETSAFE BRANDS"
+    },
+    {
+      "t": "h3",
+      "text": "Evidence log"
+    },
+    {
+      "t": "p",
+      "text": "EVERY CLAIM ON THIS PAGE, WITH ITS DATE, SOURCE, AND A COMMAND YOU CAN RERUN."
+    },
+    {
+      "t": "ol",
+      "items": [
+        "[E1] Homepage carries zero JSON-LD blocks. curl -sSL https://www.petsafe.com/ -o home.html && grep -c 'application/ld+json' home.html → 0. Sampled 2026-09-20 23:20 UTC. Home HTML: 428,751 bytes.",
+        "[E2] /sitemap.xml returns HTML, not XML. curl -sSL https://www.petsafe.com/sitemap.xml | head -c 500 → begins <!DOCTYPE html><html lang=\"en-us\"><head><meta charSet=\"utf-8\"/>…. Total body 360,985 bytes. Sampled 2026-09-20 23:20 UTC.",
+        "[E3] /llms.txt returns 404. curl -sSLI https://www.petsafe.com/llms.txt → HTTP/2 404. Sampled 2026-09-20 23:20 UTC.",
+        "[E4] Every sampled product page ships the same 15-word templated meta description. 5 URLs checked on 2026-09-20 23:22 UTC: /p/extreme-weather-aluminum-pet-door/ZPA19-16853/, /p/wall-entry-pet-door/ZPA00-16201/, /p/extreme-weather-sliding-glass-pet-door/ZPA17-17176/, /p/gps-dog-tracker-bundle/PTK00-18293/, /p/microchip-cat-door/PPA19-16145/. All return <meta name=\"description\" content=\"Buy the [product name] in the official PetSafe® store for your pet.\">. See Sec. 05 — The 1,000-Page Fix.",
+        "[E5] Product pages carry meaningful JSON-LD. Same 5 URLs on 2026-09-20 23:22 UTC each returned 2 JSON-LD blocks: block 0 is a @graph containing a ProductGroup with variants; block 1 is a @graph containing a BreadcrumbList and a hand-curated FAQPage. The ProductGroup.description field is 1,914–3,626 characters on the products I sampled.",
+        "[E6] Stack fingerprints in petsafe.com/ HTML source, sampled 2026-09-20 23:20 UTC. Case-insensitive grep counts: cdn.shopify.com = 12; sanity = 149; klaviyo = 4; algolia = 3; triplewhale = 5; bazaarvoice = 5; gtm.js = 2. generator meta tag reads Gatsby 5.16.1; response headers include server: Netlify.",
+        "[E7] robots.txt (sampled 2026-09-20 23:20 UTC, 1,569 bytes) correctly disallows ?sort=, ?page=, ?limit=, ?bvstate=, /cart, /cart.json, /search, /account/, /klaviyo-form/, /preview/. Blocks AmazonProductDiscoverybot outright. This is the one thing on the front door that's already clean."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "next",
+      "text": "Next: Stack & Data Loop →"
+    }
+  ],
+  "links": [
+    {
+      "text": "The 1,000-Page Fix",
+      "href": "https://mousabatarseh.com/petsafe-review/fix.html"
+    },
+    {
+      "text": "Sec. 05 — The 1,000-Page Fix",
+      "href": "https://mousabatarseh.com/petsafe-review/fix.html"
+    },
+    {
+      "text": "Next: Stack & Data Loop →",
+      "href": "https://mousabatarseh.com/petsafe-review/stack.html"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

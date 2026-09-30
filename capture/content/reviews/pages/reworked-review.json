@@ -1,0 +1,4354 @@
+{
+  "url": "https://mousabatarseh.com/reworked-review/",
+  "title": "Carhartt Reworked · Recommerce Merchandising Review · Mousa Batarseh",
+  "description": "An independent review of reworked.carhartt.com for the D2C Recommerce & Site Merchandiser role: 3,545 listings read on September 25, 2026, ten findings, and four working fixes.",
+  "ogImage": "https://mousabatarseh.com/reworked-review/assets/og.jpg",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "h1",
+      "text": "GOOD GEAR,\nLOST IN\nTHE TAGS."
+    },
+    {
+      "t": "p",
+      "text": "An independent review of Carhartt Reworked for the D2C Recommerce & Site Merchandiser contract. I read all 3,545 published listings and 124 collections and found where one-of-a-kind inventory slips past the shopper: empty gift collections going into Q4, a fall season spelled two ways, the biggest sizes hidden behind “See More,” and schema that calls used gear new. Ten findings, four working fixes."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn dark",
+      "text": "Read the findings →"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn",
+      "text": "Try the fixes"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "public storefront + Shopify's public product feed"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "23 product pages"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "none"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "FIXED"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Size"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "swap flip",
+      "text": "TALL L"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Tag"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "swap flip",
+      "text": "SM: fall-layers"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Schema"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "swap flip",
+      "text": "UsedCondition"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Price"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "swap flip",
+      "text": "≤ new, by grade"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "10"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count",
+      "text": "3,545"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "published listings read, plus 124 collections"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "count",
+      "text": "40.8"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "of them have nothing left to buy"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "products in six live gift collections, nine weeks before Black Friday"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "spellings of the fall-layers tag: 1,260 + 1,040, no overlap"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "count",
+      "text": "23"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "product pages sampled that tell Google used gear is new"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: Fall-layers · 1,260"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "sm: fall-layers · 1,040"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: CyberMonday2025 · 947"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: CyberMonday-2025 · 583"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM:CyberMonday · 268"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: sale-june-2026 · 1,013"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: Last Chance · 16"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: last-chance · 2,672"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM:last-chance · 4"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: Warmth-rated-gear · 108"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: warmth-rated-gear · 306"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "and Hoodies · 131"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: BLACK FRIDAY · 2"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "sm:blackfriday · 1"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: Fall-layers · 1,260"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "sm: fall-layers · 1,040"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: CyberMonday2025 · 947"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: CyberMonday-2025 · 583"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM:CyberMonday · 268"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: sale-june-2026 · 1,013"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: Last Chance · 16"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: last-chance · 2,672"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM:last-chance · 4"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: Warmth-rated-gear · 108"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: warmth-rated-gear · 306"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "and Hoodies · 131"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "SM: BLACK FRIDAY · 2"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "sm:blackfriday · 1"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker",
+      "text": "WHY THIS STORE"
+    },
+    {
+      "t": "h2",
+      "text": "WHY\nCARHARTT REWORKED"
+    },
+    {
+      "t": "p",
+      "text": "The posting doesn't name the client. Here's how I read it, and why I did this review before applying."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "THE POSTING SAYS"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "WHAT MATCHES"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Dearborn, MI"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Carhartt's headquarters is in Dearborn."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "D2C Recommerce"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Carhartt Reworked is Carhartt's own resale store: used and repaired Carhartt gear, sold direct at reworked.carhartt.com."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Apparel, retail or consumer products"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Workwear and apparel."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Shopify Plus"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "carhartt-trove.myshopify.com"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Seasonal merchandising · search & filters · product setup & QA"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "The same jobs the ten findings below are sorted into."
+    },
+    {
+      "t": "p",
+      "text": "Put together, the clues point to one store, so I did the job on it first. It's my read of a public posting, not inside information. If the client turns out to be another brand, the method carries over to any Shopify resale store: the same public feed, the same checks, the same tools."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tno",
+      "text": "TWO REVIEWS, ONE BRAND"
+    },
+    {
+      "t": "p",
+      "text": "In September I applied to Carhartt's Digital Site Merchandiser role and reviewed carhartt.com for it: 13 findings with working prototypes. This review covers Reworked. Together they cover Carhartt's main store and its resale store."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn dark sm",
+      "text": "carhartt.com review ↗"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn sm",
+      "text": "Reworked findings ↓"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker",
+      "text": "FINDINGS · 10 WORK ORDERS"
+    },
+    {
+      "t": "h2",
+      "text": "WHERE THE GEAR\nGOES MISSING"
+    },
+    {
+      "t": "p",
+      "text": "Grouped by the four jobs in the posting. Each one has what I saw on September 25, why it costs sales, and what I'd ship first. Counts come from the store's own public product feed; screenshots are the storefront as a shopper sees it."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "01"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "SEASONAL MERCHANDISING"
+    },
+    {
+      "t": "h3",
+      "text": "SIX GIFT COLLECTIONS ARE LIVE — AND EMPTY"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I SAW"
+    },
+    {
+      "t": "p",
+      "text": "Gifts for Him, Gifts for Her, Gifts Under $50 / $75 / $100 and Gifts for All are published with 0 products (last updated Jul 8, 2026). Meanwhile 429 in-stock listings still carry SM: Gifts — 297 men's, 172 women's."
+    },
+    {
+      "t": "h4",
+      "text": "WHY IT COSTS"
+    },
+    {
+      "t": "p",
+      "text": "Q4 is the biggest gifting window of the year, and gift pages are what email, paid social and the nav link to. An empty page there is a dead end at the worst possible time."
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I'D SHIP"
+    },
+    {
+      "t": "p",
+      "text": "Re-point the six rules to the gift tags with two guards: in stock only, and price within the band — 66 options tagged Gifts-50 are priced over $50. The builder below fills all six from today's catalog."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "02"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "SEASONAL MERCHANDISING"
+    },
+    {
+      "t": "h3",
+      "text": "ST. PATRICK'S DAY IS STILL ON THE SHELF — AND SO IS A TEST"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I SAW"
+    },
+    {
+      "t": "p",
+      "text": "“St. Patricks Day” (276 items) and “Shirt Jacs Test” (2,089 items) both render to shoppers and are listed in sitemap_collections_1.xml. A collection named test is published too."
+    },
+    {
+      "t": "h4",
+      "text": "WHY IT COSTS"
+    },
+    {
+      "t": "p",
+      "text": "Search engines and shoppers land on off-season and internal pages with the Carhartt name at the top, and they compete with the Fall Layers push for the same gear."
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I'D SHIP"
+    },
+    {
+      "t": "p",
+      "text": "301 St. Patrick's Day to Layers and the test copy to Shirt Jacs & Work Shirts, unpublish test, and add “retire last season” as a step in the pre-season checklist."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reworked-review/assets/ev-st-patricks.webp",
+      "alt": "/collections/st-patricks-day on September 25 — 276 items, live.",
+      "w": 773,
+      "h": 462,
+      "caption": "/collections/st-patricks-day on September 25 — 276 items, live.",
+      "file": "127e87dfc7d7333e.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reworked-review/assets/ev-shirt-jacs-test.webp",
+      "alt": "/collections/reworked-shirt-jacs-work-shirts-sweatshirts-copy renders as “Shirt Jacs Test,” 2,089 items.",
+      "w": 773,
+      "h": 462,
+      "caption": "/collections/reworked-shirt-jacs-work-shirts-sweatshirts-copy renders as “Shirt Jacs Test,” 2,089 items.",
+      "file": "8fa4900a9f31f368.webp"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "03"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "SEASONAL MERCHANDISING"
+    },
+    {
+      "t": "h3",
+      "text": "LAST SEASON'S CAMPAIGN TAGS NEVER CAME OFF"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I SAW"
+    },
+    {
+      "t": "p",
+      "text": "1,013 listings are still tagged SM: sale-june-2026 (825 in stock). Cyber Monday 2025 exists in three spellings — SM: CyberMonday2025 947 · SM: CyberMonday-2025 583 · SM:CyberMonday 268 — beside SM: BFCM-2025 366 and SM: dec-26-2025-sale 927. 65 distinct SM: tags in all."
+    },
+    {
+      "t": "h4",
+      "text": "WHY IT COSTS"
+    },
+    {
+      "t": "p",
+      "text": "Every tag-driven collection, promo or report has to guess which spelling and which year it means. When Q4 2026 rules go live, last year's tags are still sitting on the same gear."
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I'D SHIP"
+    },
+    {
+      "t": "p",
+      "text": "One dated convention (SM: {event}-{yyyy}), a retire step on the campaign calendar, and a one-time cleanup map — the scanner below builds it from the live tags."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "04"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "DISCOVERABILITY"
+    },
+    {
+      "t": "h3",
+      "text": "FALL LAYERS, SPELLED TWO WAYS"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I SAW"
+    },
+    {
+      "t": "p",
+      "text": "The homepage leads with “Fall Layers With A Lot Of Life Left.” 2,300 listings carry a fall-layers tag: 1,260 as SM: Fall-layers and 1,040 as sm: fall-layers. Not one listing carries both."
+    },
+    {
+      "t": "h4",
+      "text": "WHY IT COSTS"
+    },
+    {
+      "t": "p",
+      "text": "Shopify's collection rules forgive case; exports, search-index boosts, feeds and BI filters often don't. Anything keyed to one spelling sees under 55% of the season's lead story."
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I'D SHIP"
+    },
+    {
+      "t": "p",
+      "text": "Pick one canonical tag and bulk-rewrite the other 1,040 in a single CSV pass, then lock the vocabulary so intake can't create a third."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "05"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "DISCOVERABILITY"
+    },
+    {
+      "t": "h3",
+      "text": "THE SIZE FILTER HIDES THE BIGGEST SIZES"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I SAW"
+    },
+    {
+      "t": "p",
+      "text": "On Hoodies & Sweatshirts (734 items) the Size facet sorts alphabetically — 1X, 2X, 2XL, 2XL (TALL), 3X … 4XL (TALL), L — then stops at “See More.” M, S and XL, three of the four largest in-stock sizes (910 · 902 · 833 options), sit below the fold."
+    },
+    {
+      "t": "h4",
+      "text": "WHY IT COSTS"
+    },
+    {
+      "t": "p",
+      "text": "With one-of-a-kind stock, size is the first click. Every shopper in the most common sizes pays an extra click before the grid is useful."
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I'D SHIP"
+    },
+    {
+      "t": "p",
+      "text": "Sort sizes in size order (XS → 5XL, then Tall, then waist × inseam), open the facet by default on collection pages, and keep the ten most-stocked sizes above “See More.”"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reworked-review/assets/ev-size-facet.webp",
+      "alt": "Hoodies & Sweatshirts, Size facet expanded: alphabetical order, M/S/XL behind “See More.”",
+      "w": 936,
+      "h": 829,
+      "caption": "Hoodies & Sweatshirts, Size facet expanded: alphabetical order, M/S/XL behind “See More.”",
+      "file": "d1aa67a04382233c.webp"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "06"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "DISCOVERABILITY"
+    },
+    {
+      "t": "h3",
+      "text": "TLL, XXL AND 2XL — ONE SIZE, THREE LABELS"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I SAW"
+    },
+    {
+      "t": "p",
+      "text": "148 in-stock options say TLL instead of TALL (TLL L 71 · TLL 2XL 51 · TLL M 17). Women's 2XL appears as both XXL (108 in-stock options) and 2XL (58). Women's plus 1X/2X/3X sit beside men's 2XL/3XL with only “(REG)” to tell them apart. 281 distinct size labels are in stock."
+    },
+    {
+      "t": "h4",
+      "text": "WHY IT COSTS"
+    },
+    {
+      "t": "p",
+      "text": "A shopper who ticks “L (TALL)” never sees 71 tall larges. Split labels scatter the same size across checkboxes, and plus sizes read like typos."
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I'D SHIP"
+    },
+    {
+      "t": "p",
+      "text": "A size normalization map at intake, before listings reach Shopify (TLL → TALL, XXL → 2XL), and label women's plus as “2X (Women's Plus).” The facet fixer below shows before and after."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "07"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "PRODUCT SETUP & QA"
+    },
+    {
+      "t": "h3",
+      "text": "A USED SHORT PRICED ABOVE NEW"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I SAW"
+    },
+    {
+      "t": "p",
+      "text": "Relaxed 7″ Force Phoenix Pull On Short (style 106843): resale $35.00 – $59.00, and the same page shows New $44. The Slightly Worn L at $59 is in stock. Across the catalog, 7 size/condition options are priced above their own new price."
+    },
+    {
+      "t": "h4",
+      "text": "WHY IT COSTS"
+    },
+    {
+      "t": "p",
+      "text": "Resale sells on value. One visible price above new makes a shopper doubt every other price on the page."
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I'D SHIP"
+    },
+    {
+      "t": "p",
+      "text": "A price guard at listing — resale ≤ new × the grade's ceiling — plus a daily exception report of anything priced at or above new."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reworked-review/assets/ev-short-above-new.webp",
+      "alt": "PDP, September 25: “Carhartt-Resale $35.00 – $59.00 · New $44.”",
+      "w": 1097,
+      "h": 445,
+      "caption": "PDP, September 25: “Carhartt-Resale $35.00 – $59.00 · New $44.”",
+      "file": "c1bc8fedfb3abbb7.webp"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "08"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "PRODUCT SETUP & QA"
+    },
+    {
+      "t": "h3",
+      "text": "THREE IN FOUR LISTINGS SHOW ONE STOCK PHOTO"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I SAW"
+    },
+    {
+      "t": "p",
+      "text": "2,611 of 3,545 listings (73.7%) have exactly one image, and 42 have none. All 20 in-stock PDPs I sampled caption it “Original product image; not actual item. Refer to the item's condition notes.” The median description is 53 characters; 391 are empty."
+    },
+    {
+      "t": "h4",
+      "text": "WHY IT COSTS"
+    },
+    {
+      "t": "p",
+      "text": "For used gear the photo and the condition note are the product. Someone buying “Slightly Worn” wants to see the wear before they commit."
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I'D SHIP"
+    },
+    {
+      "t": "p",
+      "text": "A condition-note template per grade and category, shown beside the price, and real-item photos first where the money is — outerwear, bibs and coveralls."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "09"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "PRODUCT SETUP & QA"
+    },
+    {
+      "t": "h3",
+      "text": "FOUR IN TEN PUBLISHED LISTINGS HAVE NOTHING TO BUY"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I SAW"
+    },
+    {
+      "t": "p",
+      "text": "1,447 of 3,545 published listings (40.8%) are sold out in every size and condition. That includes 542 legacy listings with no Size or Condition option at all — none in stock. All 3,545 sit in the product sitemaps."
+    },
+    {
+      "t": "h4",
+      "text": "WHY IT COSTS"
+    },
+    {
+      "t": "p",
+      "text": "Sold-out one-of-a-kind pages soak up crawl budget, land search visitors on dead ends and pad internal search results."
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I'D SHIP"
+    },
+    {
+      "t": "p",
+      "text": "A sold-out policy: after N days with nothing to buy, unpublish or noindex and drop from the sitemap, with a 301 to the style's live listing or its collection."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "10"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "SEARCH & FEEDS"
+    },
+    {
+      "t": "h3",
+      "text": "EVERY PRODUCT PAGE TELLS GOOGLE THE GEAR IS NEW"
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I SAW"
+    },
+    {
+      "t": "p",
+      "text": "Product JSON-LD on 23 of 23 product pages sampled declares \"itemCondition\": \"https://schema.org/NewCondition\" — on listings sold as Like New, Slightly Worn and Broken In."
+    },
+    {
+      "t": "h4",
+      "text": "WHY IT COSTS"
+    },
+    {
+      "t": "p",
+      "text": "Google's merchant listing guidance expects UsedCondition for used goods. The mismatch risks Shopping disapprovals and tells every answer engine the wrong thing."
+    },
+    {
+      "t": "h4",
+      "text": "WHAT I'D SHIP"
+    },
+    {
+      "t": "p",
+      "text": "Map the Condition option to UsedCondition with a short condition description in the theme's JSON-LD — about ten lines of Liquid, patch below."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker",
+      "text": "FIXES · 4 WORKING PROTOTYPES"
+    },
+    {
+      "t": "h2",
+      "text": "BUILT ON\nTODAY'S CATALOG"
+    },
+    {
+      "t": "p",
+      "text": "Each tool runs on a snapshot of the store's public product feed from September 25 — 3,545 listings, 66 tags, 281 in-stock size labels. Nothing here touches the live store. It shows what the fix looks like before anyone changes a rule."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tno",
+      "text": "FIX 01 · FOR WO-01"
+    },
+    {
+      "t": "h3",
+      "text": "Q4 GIFT PAGE BUILDER"
+    },
+    {
+      "t": "p",
+      "text": "Pick a gift page. See what it shows shoppers today, what the tags already on the catalog could put there, and what the price guard keeps off an “Under $50” page."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "products on the live page today"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "259"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "listings with the guard on"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "2,078"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "in-stock size / condition options behind them"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "options over $50 leading the page"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Rule · all conditions"
+    },
+    {
+      "t": "text",
+      "tag": "i",
+      "cls": "",
+      "text": "AND"
+    },
+    {
+      "t": "text",
+      "tag": "i",
+      "cls": "",
+      "text": "AND"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rugged Flex™ Jean"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Superior"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "45 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic K288 Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Black"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "33 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rugged Flex™ Jean"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Houghton"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "33 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Loose Straight Washed Duck Lined Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Black"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "32 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic K288 Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Malt"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "31 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Force Lightweight Legging"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Black"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $29.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "31 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rigby Lined Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Gravel"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "31 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic K288 Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Port"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "30 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rigby Pant"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Gravel"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "30 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic K288 Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "New Navy"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "28 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rugged Flex™ Jean"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Coldwater"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "27 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rigby Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Peat"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $49.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "27 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rigby Lined Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Beige Khaki"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "26 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rigby Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Gravel"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $49.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "26 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rigby Pant"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Beige Khaki"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "25 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Force Midweight Legging"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Black"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $35.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "25 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic K288 Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Heather Gray/Black"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "24 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic K288 Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Carhartt Brown"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "24 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rugged Flex™ Duck Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Tarmac"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "23 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Slim Tapered Rigby Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Shadow"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $49.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "23 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic K288 Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Carbon Heather"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "22 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Loose Straight Washed Duck Lined Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Carhartt Brown"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "22 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic Clarksburg Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Asphalt Heather Nep"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $59.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "22 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rigby Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Black"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $49.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "21 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rugged Flex™ Duck Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Gravel"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "21 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rugged Flex™ Duck Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Carhartt Brown"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "20 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Slim Tapered Rigby Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Beige Khaki"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $49.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "20 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Paxton Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "New Navy"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $69.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "18 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "flag ok",
+      "text": "Options up to $52 — the nav link carries a ≤ $50 price filter"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rigby Lined Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Peat"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "18 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rugged Flex™ Jean"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Dusty Black"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "18 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rigby Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Beige Khaki"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $49.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "18 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Women's Carhartt Force® Heavyweight Pocket Legging"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Oyster Gray"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $29.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "17 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Relaxed Straight Rugged Flex™ Duck Dungaree"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Black"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "17 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic Clarksburg Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Black"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $59.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "17 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic K288 Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Jade Heather"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $64.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "16 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "t",
+      "text": "Iconic Clarksburg Logo Sweatshirt"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "col",
+      "text": "Blackberry Heather"
+    },
+    {
+      "t": "text",
+      "tag": "s",
+      "cls": "",
+      "text": "new $59.99"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Broken In"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Like New"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Slightly Worn"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "ln",
+      "text": "16 in stock"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "vl",
+      "text": "View listing ↗"
+    },
+    {
+      "t": "p",
+      "text": "Showing the 36 most-stocked of 270 in-stock listings tagged SM: Gifts-50. The live page at /collections/gifts-under-50 shows 0."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tno",
+      "text": "FIX 02 · FOR WO-03 & WO-04"
+    },
+    {
+      "t": "h3",
+      "text": "TAG CLEANUP MAP"
+    },
+    {
+      "t": "p",
+      "text": "Every SM: tag on the catalog, checked against one convention — SM: {name}, lowercase, hyphens, and a year on anything seasonal. Filter it, then download the from → to map as a CSV for a bulk edit."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "66"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "SM:"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "tag families spelled two or more ways (13 tags)"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "16"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "past or undated campaign tags"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "6,532"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "tag assignments in the “fix first” pass"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "TAG AS FOUND",
+          "LISTINGS",
+          "IN STOCK",
+          "PROBLEM",
+          "MAPS TO"
+        ],
+        [
+          "SM: Exc",
+          "1,836",
+          "1,067",
+          "confirm Two exclusion tags? Confirm which rules read which",
+          "confirm"
+        ],
+        [
+          "SM: Exc2026",
+          "1,591",
+          "1,001",
+          "confirm Two exclusion tags? Confirm which rules read which",
+          "confirm"
+        ],
+        [
+          "SM: Fall-layers",
+          "1,260",
+          "942",
+          "split 2 spellings of one tag",
+          "SM: fall-layers"
+        ],
+        [
+          "sm: fall-layers",
+          "1,040",
+          "719",
+          "split 2 spellings of one tag",
+          "SM: fall-layers"
+        ],
+        [
+          "SM: sale-june-2026",
+          "1,013",
+          "825",
+          "retire June 2026 sale — ended",
+          "— retire"
+        ],
+        [
+          "SM: CyberMonday2025",
+          "947",
+          "633",
+          "retire Cyber Monday 2025 — last year · also spelled another way",
+          "— retire"
+        ],
+        [
+          "SM: dec-26-2025-sale",
+          "927",
+          "711",
+          "retire Dec 26, 2025 sale — last year",
+          "— retire"
+        ],
+        [
+          "SM: CyberMonday-2025",
+          "583",
+          "330",
+          "retire Cyber Monday 2025 — last year · also spelled another way",
+          "— retire"
+        ],
+        [
+          "sm:decemberdeals",
+          "430",
+          "305",
+          "retire December deals with no year",
+          "confirm year"
+        ],
+        [
+          "SM: BFCM-2025",
+          "366",
+          "301",
+          "retire BFCM 2025 — last year",
+          "— retire"
+        ],
+        [
+          "SM:SUMMER SALE",
+          "337",
+          "257",
+          "retire Summer sale with no year",
+          "confirm year"
+        ],
+        [
+          "SM:CyberMonday",
+          "268",
+          "220",
+          "retire Cyber Monday with no year",
+          "confirm year"
+        ],
+        [
+          "SM:BlackFridayFinal",
+          "250",
+          "210",
+          "retire Black Friday with no year",
+          "confirm year"
+        ],
+        [
+          "SM: SEPT 25 SALE",
+          "229",
+          "170",
+          "retire Dated sale with no year",
+          "confirm year"
+        ],
+        [
+          "SM:OFF SALE",
+          "225",
+          "163",
+          "confirm Name doesn't say what it does",
+          "confirm"
+        ],
+        [
+          "sm:wintersale",
+          "211",
+          "166",
+          "retire Winter sale with no year",
+          "confirm year"
+        ],
+        [
+          "SM: Nick",
+          "209",
+          "157",
+          "confirm Name doesn't say what it does",
+          "confirm"
+        ],
+        [
+          "sm:decemberdeal",
+          "158",
+          "124",
+          "retire December deals with no year (and a missing “s”)",
+          "confirm year"
+        ],
+        [
+          "and Hoodies",
+          "131",
+          "0",
+          "delete Fragment: “Sweaters, Sweatshirts and Hoodies” split at the commas — 0 in stock",
+          "— delete"
+        ],
+        [
+          "SM: Warmth-rated-gear",
+          "108",
+          "79",
+          "split 2 spellings of one tag",
+          "SM: warmth-rated-gear"
+        ],
+        [
+          "SM:b/c",
+          "106",
+          "74",
+          "split 2 spellings of one tag",
+          "SM: b-c"
+        ],
+        [
+          "SM: dec-16-2025",
+          "30",
+          "28",
+          "retire Dec 16, 2025 — last year",
+          "— retire"
+        ],
+        [
+          "SM: Last Chance",
+          "16",
+          "5",
+          "split 3 spellings of one tag",
+          "SM: last-chance"
+        ],
+        [
+          "SM:last-chance",
+          "4",
+          "2",
+          "split 3 spellings of one tag",
+          "SM: last-chance"
+        ],
+        [
+          "SM: BFCM",
+          "2",
+          "2",
+          "retire BFCM with no year",
+          "confirm year"
+        ],
+        [
+          "SM: BLACK FRIDAY",
+          "2",
+          "2",
+          "retire Black Friday with no year · also spelled another way",
+          "confirm year"
+        ],
+        [
+          "SM: B/C",
+          "1",
+          "1",
+          "split 2 spellings of one tag",
+          "SM: b-c"
+        ],
+        [
+          "sm:blackfriday",
+          "1",
+          "1",
+          "retire Black Friday with no year · also spelled another way",
+          "confirm year"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "text": "“Listings” counts every published listing carrying the tag; a listing with several tags counts once per tag. Year and meaning of undated tags need a merchandiser's confirmation before the bulk edit runs."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tno",
+      "text": "FIX 03 · FOR WO-05 & WO-06"
+    },
+    {
+      "t": "h3",
+      "text": "SIZE FACET FIXER"
+    },
+    {
+      "t": "p",
+      "text": "The same in-stock letter sizes across all of Reworked, as the facet sorts them today and after a normalization map at intake. Tick a size on either side to see how many options a shopper actually gets."
+    },
+    {
+      "t": "h4",
+      "text": "TODAY"
+    },
+    {
+      "t": "p",
+      "text": "Alphabetical · ten rows, then “See More” · raw labels"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "1X"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "1X (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "81"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "1X (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "2X"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "2X (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "178"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "2X (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "2XL"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "2XL (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "542"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "2XL (SHORT)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "13"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "2XL (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "239"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "cut",
+      "text": "— “See More” · 37 labels hidden, incl. M (REG) 910 · S (REG) 902 · XL (REG) 833"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "2XL (TLL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "51"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3X (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "102"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3X (SHORT)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3X (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3XL"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3XL (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "318"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3XL (SHORT)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "10"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3XL (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "177"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "4XL (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "161"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "4XL (SHORT)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "4XL (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "32"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "5XL (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "31"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "L (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "792"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "L (SHORT)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "18"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "L (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "215"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "L (TLL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "71"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "M (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "910"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "M (SHORT)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "22"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "M (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "28"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "M (TLL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "17"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "S (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "902"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "S (SHORT)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "S (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "11"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XL"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XL (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "833"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XL (SHORT)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "18"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XL (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "306"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XS"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XS (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "346"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XS (SHORT)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XS (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "14"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XXL (REG)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "105"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XXL (TALL)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XXL (TLL)"
+    },
+    {
+      "t": "p",
+      "text": "Tick a size."
+    },
+    {
+      "t": "h4",
+      "text": "AFTER THE MAP"
+    },
+    {
+      "t": "p",
+      "text": "Size order · grouped by fit · TLL → TALL, XXL → 2XL · women's plus labeled"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "4,970"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+1 label merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "348"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+1 label merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "909"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+1 label merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "913"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+1 label merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "800"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+1 label merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "839"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+2 labels merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "650"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+1 label merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "319"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "4XL"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "161"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "5XL"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "31"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "366"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+1 label merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "83"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+1 label merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "181"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3X (Women's Plus)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "102"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "1,167"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XS (Tall)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "14"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "S (Tall)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "11"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+1 label merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "45"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+1 label merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "286"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XL (Tall)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "306"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "+3 labels merged"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "296"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3XL (Tall)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "177"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "4XL (Tall)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "32"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "1X (Women's Plus Tall)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "2X (Women's Plus Tall)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3X (Women's Plus Tall)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "98"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XS (Short)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "S (Short)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "M (Short)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "22"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "L (Short)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "18"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "XL (Short)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "18"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "2XL (Short)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "13"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3XL (Short)"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "10"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "4XL (Short)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "3X (Women's Plus Short)"
+    },
+    {
+      "t": "p",
+      "text": "Tick a size."
+    },
+    {
+      "t": "text",
+      "tag": "summary",
+      "cls": "",
+      "text": "The normalization map (6 rules)"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tno",
+      "text": "FIX 04 · FOR WO-10"
+    },
+    {
+      "t": "h3",
+      "text": "USEDCONDITION SCHEMA PATCH"
+    },
+    {
+      "t": "p",
+      "text": "About ten lines of Liquid for the theme's Product JSON-LD. Every Reworked item is pre-owned, so each offer says so, and the grade rides along in the offer description."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{%- comment -%}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{%- endcomment -%}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{%- assign cond_opt = product.options_by_name['Condition'] -%}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{%- for variant in product.variants -%}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{%- liquid\n      assign grade = 'Pre-owned'\n      if cond_opt\n        assign i = cond_opt.position | minus: 1\n        assign grade = variant.options[i]\n      endif\n    -%}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{{ variant.sku | json }}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{{ variant.price | divided_by: 100.0 | json }}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{{ cart.currency.iso_code | json }}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{% if variant.available %}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{% else %}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{% endif %}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "s",
+      "text": "\"https://schema.org/UsedCondition\""
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{{ 'Pre-owned · ' | append: grade | json }}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{{ request.origin | append: variant.url | json }}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{% unless forloop.last %}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{% endunless %}"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "k",
+      "text": "{%- endfor -%}"
+    },
+    {
+      "t": "p",
+      "text": "Drop-in for the offers array. Uses the Condition option by name, so it survives option reordering, and falls back to “Pre-owned” on the 542 legacy listings that have no Condition option."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker",
+      "text": "THE FIRST 90 DAYS"
+    },
+    {
+      "t": "h2",
+      "text": "Q4 FIRST,\nTHEN THE SYSTEM"
+    },
+    {
+      "t": "p",
+      "text": "Ordered by the calendar: fix what shoppers hit during gifting season, then the intake and tagging habits that make every season easier, then the reporting that proves it worked."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "when",
+      "text": "DAYS 1 – 30"
+    },
+    {
+      "t": "h3",
+      "text": "BEFORE THE GIFTING RUSH"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Fill the six gift pages from the tags already on the catalog, with the in-stock and price guards. QA every nav, email and paid link that points at them.",
+        "301 St. Patrick's Day and Shirt Jacs Test, unpublish test, and add “retire last season” to the pre-season checklist.",
+        "One fall-layers tag: rewrite the 1,040 lowercase listings in a single CSV pass.",
+        "Ship the UsedCondition patch through theme QA and watch Merchant Center diagnostics."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "when",
+      "text": "DAYS 31 – 60"
+    },
+    {
+      "t": "h3",
+      "text": "MAKE ONE-OF-A-KIND FINDABLE"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Size normalization map at intake with the operations partner: TLL → TALL, XXL → 2XL, women's plus labeled.",
+        "Size facet in size order, open by default on collection pages, most-stocked sizes above “See More.”",
+        "Build BFCM and Cyber Monday 2026 on dated tags from the campaign calendar, with last year's scheduled to come off.",
+        "Daily exception report: anything priced at or above new, no photo, or an empty condition note."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "when",
+      "text": "DAYS 61 – 90"
+    },
+    {
+      "t": "h3",
+      "text": "MEASURE AND HAND OVER"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Sold-out policy live: after N days with nothing to buy, noindex or unpublish and 301 to the style's live listing.",
+        "Weekly view of sell-through by grade and size, gift and seasonal collection conversion, and facet use.",
+        "Real-item photo pilot on outerwear, bibs and coveralls, measured against stock-photo listings.",
+        "A written playbook — tag vocabulary, pre- and post-season checklists, intake QA — so the fixes stay fixed."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker",
+      "text": "ABOUT"
+    },
+    {
+      "t": "h2",
+      "text": "WHO'S\nDOING THE WORK"
+    },
+    {
+      "t": "p",
+      "text": "I'm Mousa Batarseh, a web and e-commerce specialist in Warren, Michigan — about 25 minutes from Dearborn. For seven years I've run storefronts end to end for retail and wholesale brands: Shopify and WordPress stores for two textile and apparel brands run in parallel, catalog migrations of 14,000+ SKUs with redirects intact, and seasonal and promotional campaign pages for a multi-location Michigan retailer, built with its marketing and merchandising teams."
+    },
+    {
+      "t": "p",
+      "text": "This review is the job as I read it: keep one-of-a-kind inventory findable, keep the seasonal story current, and keep product data clean enough that search, feeds and reporting can trust it. In September I also reviewed carhartt.com's main digital shelf — 13 findings with working prototypes."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn dark",
+      "text": "Résumé (PDF)"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn",
+      "text": "Cover letter (PDF)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "THE POSTING ASKS FOR"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "WHAT I BRING"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "4+ years in merchandising or retail"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Seven years merchandising retail and wholesale storefronts — collections, navigation, campaign pages, product data (2019 – present)."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "1+ year of e-commerce"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Seven years across Shopify, WooCommerce and WordPress."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Apparel, retail or consumer products"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Two textile and apparel storefronts at Universal Wholesale & United Textile, and a multi-location Michigan retailer."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Shopify Plus and merchandising platforms"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Three years on Shopify: Liquid, smart collections, bulk CSV edits, theme work. Plus-only tools like Flow and Launchpad I'd learn on your store."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Adobe Analytics, Looker or similar"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "GA4, Search Console and Tag Manager, plus Excel and Sheets for exports. Adobe Analytics and Looker would be new tools; the retail metrics behind them aren't."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Resale experience a plus"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Not yet in a resale role. This review is my homework on how graded, one-of-a-kind stock behaves on a storefront."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Dearborn, MI or remote"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Warren, MI. On-site days are easy; remote works too."
+    }
+  ],
+  "links": [
+    {
+      "text": "Read the findings →",
+      "href": "https://mousabatarseh.com/reworked-review/#findings"
+    },
+    {
+      "text": "Try the fixes",
+      "href": "https://mousabatarseh.com/reworked-review/#fixes"
+    },
+    {
+      "text": "carhartt.com review ↗",
+      "href": "https://mousabatarseh.com/carhartt-review/"
+    },
+    {
+      "text": "Reworked findings ↓",
+      "href": "https://mousabatarseh.com/reworked-review/#findings"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rugged-flex-jean_102804_498"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-k288-logo-sweatshirt_k288_blk"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rugged-flex-jean_102804_h39"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/loose-straight-washed-duck-lined-dungaree_b111_blk"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-k288-logo-sweatshirt_k288_w03"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/force-lightweight-legging_103609_001"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rigby-lined-dungaree_103342_039"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-k288-logo-sweatshirt_k288_prt"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rigby-pant_102517_039"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-k288-logo-sweatshirt_k288_472"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rugged-flex-jean_102804_964"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rigby-dungaree_102291_306"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rigby-lined-dungaree_103342_253"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rigby-dungaree_102291_039"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rigby-pant_102517_918"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/force-midweight-legging_102482_n04"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-k288-logo-sweatshirt_k288_e20"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-k288-logo-sweatshirt_k288_brn"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rugged-flex-duck-dungaree_103279_217"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/slim-tapered-rigby-dungaree_102821_029"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-k288-logo-sweatshirt_k288_026"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/loose-straight-washed-duck-lined-dungaree_b111_brn"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-clarksburg-logo-sweatshirt_102791_e07"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rigby-dungaree_102291_001"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rugged-flex-duck-dungaree_103279_gvl"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rugged-flex-duck-dungaree_103279_211"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/slim-tapered-rigby-dungaree_102821_253"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/paxton-sweatshirt_100615_472"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rigby-lined-dungaree_103342_306"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rugged-flex-jean_102804_n00"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rigby-dungaree_102291_253"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/womens-carhartt-force-heavyweight-pocket-legging_105020_e57"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/relaxed-straight-rugged-flex-duck-dungaree_103279_blk"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-clarksburg-logo-sweatshirt_102791_001"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-k288-logo-sweatshirt_k288_ga0"
+    },
+    {
+      "text": "View listing ↗",
+      "href": "https://reworked.carhartt.com/products/iconic-clarksburg-logo-sweatshirt_102791_v27"
+    },
+    {
+      "text": "13 findings with working prototypes",
+      "href": "https://mousabatarseh.com/carhartt-review/"
+    },
+    {
+      "text": "Résumé (PDF)",
+      "href": "https://mousabatarseh.com/reworked-review/files/Mousa-Batarseh-Resume-Carhartt-Reworked.pdf"
+    },
+    {
+      "text": "Cover letter (PDF)",
+      "href": "https://mousabatarseh.com/reworked-review/files/Mousa-Batarseh-Cover-Letter-Carhartt-Reworked.pdf"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://mousabatarseh.com/reworked-review/assets/ev-st-patricks.webp",
+      "alt": "/collections/st-patricks-day on September 25 — 276 items, live.",
+      "w": 773,
+      "h": 462,
+      "file": "127e87dfc7d7333e.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reworked-review/assets/ev-shirt-jacs-test.webp",
+      "alt": "/collections/reworked-shirt-jacs-work-shirts-sweatshirts-copy renders as “Shirt Jacs Test,” 2,089 items.",
+      "w": 773,
+      "h": 462,
+      "file": "8fa4900a9f31f368.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reworked-review/assets/ev-size-facet.webp",
+      "alt": "Hoodies & Sweatshirts, Size facet expanded: alphabetical order, M/S/XL behind “See More.”",
+      "w": 936,
+      "h": 829,
+      "file": "d1aa67a04382233c.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reworked-review/assets/ev-short-above-new.webp",
+      "alt": "PDP, September 25: “Carhartt-Resale $35.00 – $59.00 · New $44.”",
+      "w": 1097,
+      "h": 445,
+      "file": "c1bc8fedfb3abbb7.webp"
+    }
+  ],
+  "status": 200
+}

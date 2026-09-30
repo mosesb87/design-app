@@ -1,0 +1,148 @@
+{
+  "url": "https://mousabatarseh.com/jbtools-review/",
+  "title": "JB Tools — Product-Data Review",
+  "description": "Independent product-data review of jbtools.com by Mousa Batarseh — encoding, schema and out-of-stock defects found in the live catalog, with a supplier-price SOP. Built for the eCommerce Database Manager role.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "p",
+      "text": "SEC. 01 — OVERVIEW · FOR THE ECOMMERCE DATABASE MANAGER ROLE"
+    },
+    {
+      "t": "h1",
+      "text": "A 104,000-product catalog is only as good as its worst record."
+    },
+    {
+      "t": "p",
+      "text": "I sampled JB Tools' live search feed and product pages. In a 799-item slice I found double-encoded characters in product names that carry through to titles and JSON-LD, UPCs printed on the page but missing from the schema, percent-encoded schema descriptions, inconsistent attribute casing, and a torque-wrench category that is a third out of stock while sold-out items still rank in search. This is a four-page walkthrough of the defects, a working triage board, and the supplier-price SOP I'd run as your Database Manager."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "104,348"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "products in the live Searchspring index (the About page still says “beyond 60,000”)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "/799"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "and"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "/358"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "torque wrenches out of stock (34%); a sold-out item ranks #3 in search"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "gtin in Product schema, though UPCs are shown on the page"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker data",
+      "text": "THE JOB"
+    },
+    {
+      "t": "h3",
+      "text": "What this role owns"
+    },
+    {
+      "t": "p",
+      "text": "“Manage and maintain our catalog of tens of thousands of products across hundreds of suppliers… pricing, UPCs, SKUs, weights, dimensions, descriptions, images, specifications… supplier spreadsheets and large datasets… Excel/Google Sheets and AI tools.”"
+    },
+    {
+      "t": "p",
+      "text": "That is the job I've done: 14,000+ SKUs migrated and maintained by CSV, attribute mapping and QA."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker schema",
+      "text": "WHY IT MATTERS"
+    },
+    {
+      "t": "h3",
+      "text": "Defects reach the shopper & the feed"
+    },
+    {
+      "t": "p",
+      "text": "Encoding artifacts show up in SERP titles. A missing gtin blocks clean Google Merchant Center matching. A sold-out item at #3 in search is a dead end at the top of results — the kind of thing behind the BBB complaint mix (Product 15 of 50)."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kicker stock",
+      "text": "THE APPROACH"
+    },
+    {
+      "t": "h3",
+      "text": "Census → fix → prevent"
+    },
+    {
+      "t": "p",
+      "text": "A full-catalog defect census, a fix-priority board weighted by price and stock, a schema patch that reaches every product at once, a sold-out policy, and a supplier price-change intake so a price file becomes a validated import — not a manual afternoon."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Scope"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Method"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Platform"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Independent — not affiliated with JB Tools"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "next",
+      "text": "NEXT: THE DEFECT CENSUS →"
+    }
+  ],
+  "links": [
+    {
+      "text": "NEXT: THE DEFECT CENSUS →",
+      "href": "https://mousabatarseh.com/jbtools-review/findings.html"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

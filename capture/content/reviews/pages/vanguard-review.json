@@ -1,0 +1,193 @@
+{
+  "url": "https://mousabatarseh.com/vanguard-review/",
+  "title": "Vanguard — Field Review",
+  "description": "Independent product-template and channel review of vanguardworld.com by Mousa Batarseh — one template carrying three defects across 443 products, and no links to the marketplaces the role grows.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "kick",
+      "text": "SHEET 01 · OVERVIEW"
+    },
+    {
+      "t": "h1",
+      "text": "FIX ONE TEMPLATE.\nFIX 443 PRODUCTS."
+    },
+    {
+      "t": "p",
+      "text": "On vanguardworld.com the Alta Pro 2+ 263CT's title tag ends mid-parenthesis, its Product schema names the brand “Alta Pro 2 Plus” instead of Vanguard, and all 39 gallery images share one alt. Because it's the template, every one of the 443 products carries the same defects."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "SCOPE"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "METHOD"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "PLATFORM"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "SAMPLED"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "PRODUCTS ON THE DEFECTIVE TEMPLATE",
+          "443",
+          "Every product URL in the product sitemap inherits the same three defects."
+        ],
+        [
+          "ALT TEXTS PER 39-IMAGE GALLERY",
+          "1",
+          "One alt shared across every gallery image on the PDP."
+        ],
+        [
+          "HOMEPAGE CLS (GOOD < 0.1)",
+          "0.365",
+          "Fails Core Web Vitals on layout shift; 0 of 81 images lazy-load."
+        ],
+        [
+          "LINKS TO EBAY / TIKTOK / AMAZON",
+          "0",
+          "The channels this role grows aren't linked from the brand site."
+        ]
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag",
+      "text": "NOTE"
+    },
+    {
+      "t": "p",
+      "text": "The live theme is still named “Plug Staging.” None of this needs a redesign — it's three template fields, one hub page and a redirect map."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "kick",
+      "text": "CONTENTS"
+    },
+    {
+      "t": "h2",
+      "text": "WHAT'S ON THE OTHER SHEETS"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "id",
+      "text": "02"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "cat",
+      "text": "PROTOTYPE"
+    },
+    {
+      "t": "h3",
+      "text": "THE TEMPLATE, BEFORE & AFTER"
+    },
+    {
+      "t": "p",
+      "text": "Toggle the fix and watch it land on all 443 products at once."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "id",
+      "text": "03"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "cat",
+      "text": "CHANNELS + HYGIENE"
+    },
+    {
+      "t": "h3",
+      "text": "WHAT THE SITE HIDES"
+    },
+    {
+      "t": "p",
+      "text": "No marketplace links, empty sameAs, a misspelled blog slug, CLS 0.365."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "id",
+      "text": "04"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "cat",
+      "text": "PLAN"
+    },
+    {
+      "t": "h3",
+      "text": "FIRST 30 DAYS"
+    },
+    {
+      "t": "p",
+      "text": "Template week one, channels weeks two–three, speed and content week four."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "cat",
+      "text": "SAID PLAINLY"
+    },
+    {
+      "t": "h3",
+      "text": "WHAT I'D BE LEARNING"
+    },
+    {
+      "t": "p",
+      "text": "Outdoor/hunting optics and trade shows. The Shopify, listing and SEO work I've done for six years."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "",
+      "text": "SHEET 02 — THE TEMPLATE →"
+    }
+  ],
+  "links": [
+    {
+      "text": "SHEET 02 — THE TEMPLATE →",
+      "href": "https://mousabatarseh.com/vanguard-review/template.html"
+    },
+    {
+      "text": "mousabatarseh.com",
+      "href": "https://mousabatarseh.com/"
+    },
+    {
+      "text": "linkedin.com/in/mousabatarseh",
+      "href": "https://www.linkedin.com/in/mousabatarseh"
+    },
+    {
+      "text": "hireme@mousabatarseh.com",
+      "href": "mailto:hireme@mousabatarseh.com"
+    }
+  ],
+  "images": [],
+  "status": 200
+}

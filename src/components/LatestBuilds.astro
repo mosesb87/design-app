@@ -1,0 +1,75 @@
+---
+// "The index." on /work/: the sixteen most recent builds (all kinds, newest first) as small cards. The title, note
+// and button sit on top, like every other section's head, with the cards in a full-width grid below. The cards
+// start thrown out of their places and come together into the grid as each row rises up the screen, always from
+// below, so they never cross the title. Then a button opens /index/, where every build is listed by category.
+// (Motion: scripts/motion/gather.ts; the list: latestBuilds in data/work.ts.)
+// Each card's second line: what kind of build it is and the date it shipped (see `date` in data/work.ts).
+import Picture from './Picture.astro';
+import { entries, latestBuilds, entryCount } from '../data/work';
+import { view } from '../lib/media';
+import { reviewShot } from '../lib/shots';
+import { formatDate } from '../data/site';
+
+const items = latestBuilds.map((slug) => entries.find((e) => e.slug === slug)).filter((e) => !!e);
+const tones = ['var(--lilac)', 'var(--sky)', 'var(--mint)', 'var(--lemon)', 'var(--blush)', 'var(--grey-1)'];
+const kind: Record<string, string> = { reviews: 'Review', proposals: 'Proposal', systems: 'Tool', 'case-studies': 'Commerce lab', sites: 'Site' };
+---
+<div class="lb-hold" data-gather-hold>
+  <section class="lb" aria-labelledby="latest-title" data-gather>
+    <div class="wrap lb__inner">
+      <header class="lb__head">
+        <p class="kicker">Newest first</p>
+        <h2 class="h2" id="latest-title">The index.</h2>
+        <p class="lb__note">My most recent builds of every kind — reviews, proposals, tools and sites — by the date each shipped. The index has all {entryCount}, by category.</p>
+        <a class="btn lb__all" href="/index/">Open the index <span class="arrow" aria-hidden="true">→</span></a>
+      </header>
+      <ol class="lb__grid" role="list">
+        {items.map((e, i) => {
+          const shot = view(e.media, 'desktop-hero');
+          const rshot = shot ? null : reviewShot(e);
+          // Each build opens its own website; builds without one open their case study.
+          const href = e.url ?? `/work/${e.caseStudy}/`;
+          const external = !!e.url && /^https?:/.test(e.url);
+          return (
+            <li class="lb__card" style={`--tone:${tones[i % tones.length]}`} data-gather-card>
+              <a class="lb__link" href={href} rel={external ? 'noopener' : undefined}>
+                <span class="lb__shot">
+                  {shot ? <Picture data={shot} alt="" sizes="(min-width: 1440px) 320px, (min-width: 700px) 23vw, 45vw" />
+                    : rshot ? <img src={rshot.small || rshot.src} width={rshot.sw || rshot.w} height={Math.round(rshot.h * ((rshot.sw || rshot.w) / rshot.w))} alt="" loading="lazy" decoding="async" />
+                    : <span class="lb__blank">{e.title}</span>}
+                </span>
+                <span class="lb__n num">{String(i + 1).padStart(2, '0')}</span>
+                <span class="lb__name">{e.title}</span>
+                <span class="lb__meta">{e.category === 'proposals' && e.platform ? e.platform : kind[e.category]} · <time datetime={e.date}>{formatDate(e.date!)}</time></span>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  </section>
+</div>
+
+<style>
+  .lb-hold { position: relative; overflow-x: clip; }
+  .lb { padding-block: var(--section) calc(var(--section) * 0.6); }
+  .lb__inner { display: grid; gap: var(--s-7); }
+  /* The head sits on top, above the cards, at every width (like the other sections' heads). */
+  .lb__head { position: relative; z-index: 2; display: grid; gap: var(--s-4); align-content: start; }
+  .lb__note { max-width: 40ch; color: var(--fg-2); font-size: var(--t-lead); line-height: 1.32; }
+  .lb__all { justify-self: start; }
+  .lb__grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(10px, 1.1vw, 16px); }
+  .lb__card { position: relative; border-radius: var(--r-l); background: var(--tone); color: var(--ink); transition: box-shadow var(--d-small), translate 0.5s var(--ease-register); }
+  .lb__card:hover { box-shadow: var(--shadow-2); translate: 0 -4px; }
+  .lb__link { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 8px; row-gap: 2px; padding: 8px 8px 12px; text-decoration: none; color: inherit; border-radius: inherit; }
+  .lb__link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .lb__shot { grid-column: 1 / -1; display: block; aspect-ratio: 16 / 9; margin-bottom: 16px; border-radius: 8px; overflow: hidden; background: var(--night); box-shadow: 0 10px 22px -14px rgb(14 17 22 / 0.5); }
+  .lb__shot :global(picture), .lb__shot :global(img) { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: scale 0.9s var(--ease-register); }
+  .lb__card:hover .lb__shot :global(img) { scale: 1.05; }
+  .lb__blank { display: grid; place-items: center; height: 100%; padding: 8px; color: #fff; text-align: center; font: 900 clamp(0.95rem, 1.2vw, 1.2rem) / 0.95 var(--font-display); font-stretch: 75%; text-transform: uppercase; }
+  .lb__n { grid-row: 2 / span 2; align-self: start; padding: 3px 6px; border-radius: var(--r-s); background: var(--ink); color: #fff; font: 750 0.6875rem / 1.2 var(--font-text); }
+  .lb__name { font: 650 clamp(1rem, 1.25vw, 1.2rem) / 1 var(--font-display); font-stretch: 75%; text-transform: uppercase; overflow-wrap: anywhere; }
+  .lb__meta { font: 600 0.75rem / 1.3 var(--font-text); color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  @media (min-width: 700px) { .lb__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+</style>

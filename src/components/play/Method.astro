@@ -1,0 +1,110 @@
+---
+// "Start with the business goal. End with the measurement." — the four-step method as cards that stack as you
+// scroll (CSS sticky, no scripting), then four services as cards that fly in from scattered spots (scripts/motion/pop.ts).
+import Sticker from './Sticker.astro';
+import type { StickerName } from './types';
+import { method, services } from '../../data/site';
+// Four cards, darkening as they stack: grey, white, night, cobalt.
+const looks: { tone: string; s: StickerName }[] = [
+  { tone: 'grey', s: 'lens' },
+  { tone: 'white', s: 'pin' },
+  { tone: 'night', s: 'blocks' },
+  { tone: 'accent', s: 'check' },
+];
+import Ghost from '../Ghost.astro';
+---
+<section class="meth section has-ghost" aria-labelledby="meth-title">
+  <Ghost text="Method" align="right" top="1%" />
+  <div class="wrap">
+    <header class="meth__head">
+      <p class="kicker">How I work</p>
+      <h2 class="h2 h2--long" id="meth-title">Start with the business goal.<br class="br-wide" /> End with the measurement.</h2>
+    </header>
+    <ol class="meth__stack" role="list">
+      {method.map((m, i) => (
+        <li class:list={['step', `step--${looks[i].tone}`, { 'on-dark': i > 1 }]} style={`--i:${i}`} data-glow>
+          <span class="step__n">{m.n}</span>
+          <div class="step__text">
+            <h3 class="step__title">{m.title}</h3>
+            <p class="step__body">{m.text}</p>
+          </div>
+          <span class="step__sticker" aria-hidden="true"><Sticker name={looks[i].s} /></span>
+        </li>
+      ))}
+    </ol>
+    <div class="meth__services">
+      <h3 class="meth__services-title">What I can take off your plate</h3>
+      <ul class="pills" role="list" data-pop-grid>
+        {services.slice(0, 4).map((s, i) => (
+          <li class="pill" data-glow data-pop>
+            <span class="pill__n num">{String(i + 1).padStart(2, '0')}</span>
+            <span class="pill__t">{s.title}</span>
+            <span class="pill__d">{s.text}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .meth__head { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
+  .meth__head .h2 { max-width: 26ch; }
+  .meth__stack { display: grid; gap: var(--s-5); }
+  .step {
+    position: sticky;
+    top: calc(var(--nav-h) + 16px + var(--i) * 18px);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--s-5);
+    align-items: center;
+    min-height: clamp(200px, 22vw, 300px);
+    padding: clamp(22px, 3vw, 48px);
+    border-radius: var(--r-xl);
+    background: var(--cloud);
+    color: var(--ink);
+    box-shadow: 0 -12px 30px -18px rgb(14 17 22 / 0.3);
+    overflow: hidden;
+  }
+  .step--white { background: #fff; box-shadow: 0 -12px 30px -18px rgb(14 17 22 / 0.3); }
+  .step--night { background: var(--night); color: var(--night-ink); }
+  .step--accent { background: var(--accent); color: #fff; }
+  .step--night .step__n, .step--accent .step__n { opacity: 0.9; }
+  .step__n { font-family: var(--font-display); font-weight: 900; font-stretch: 75%; font-size: clamp(4rem, 10vw, 10rem); line-height: 0.8; }
+  .step__text { display: grid; gap: var(--s-3); max-width: 40ch; }
+  .step__title { font-family: var(--font-display); font-weight: 650; font-stretch: 75%; font-size: var(--t-h3); line-height: 0.9; text-transform: uppercase; }
+  .step__body { font-size: var(--t-lead); line-height: 1.3; font-weight: 500; }
+  /* The icon sits inside the card, clear of its bottom and right edges. */
+  .step__sticker { position: absolute; right: clamp(16px, 2.4vw, 40px); bottom: clamp(16px, 2.4vw, 40px); width: clamp(72px, 8vw, 128px); opacity: 0.95; }
+  .step__sticker :global(.sticker) { --size: 100%; width: 100%; }
+  /* Colored tiles that contrast with each card: cobalt on grey, green on white, violet on night, night on cobalt. */
+  .meth .step--grey .step__sticker :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); }
+  .meth .step--white .step__sticker :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); }
+  .meth .step--night .step__sticker :global(.sticker) { --tile: var(--accent-soft); --stroke: var(--ink); --acc: var(--accent-deep); box-shadow: none; }
+  .meth .step--accent .step__sticker :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); box-shadow: none; }
+  .meth__services { margin-top: var(--s-10); display: grid; gap: var(--s-6); }
+  .meth__services-title { font-family: var(--font-display); font-weight: 650; font-stretch: 75%; font-size: var(--t-h3); text-transform: uppercase; }
+  .pills { display: grid; gap: 12px; }
+  .pill {
+    position: relative;
+    display: grid;
+    gap: 8px;
+    align-content: start;
+    padding: 22px 24px 24px;
+    border-radius: var(--r-l);
+    background: var(--cloud);
+    color: var(--ink);
+    transition: translate 0.5s var(--ease-register), background-color var(--d-small), box-shadow var(--d-small);
+  }
+  .pill:hover { translate: 0 -3px; background: #fff; box-shadow: var(--shadow-1); }
+  .pill__n { font: 700 0.75rem / 1 var(--font-text); letter-spacing: 0.06em; color: var(--accent); }
+  @media (min-width: 700px) { .pills { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .pills { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .pill__t { font-family: var(--font-display); font-weight: 800; font-stretch: 78%; font-size: clamp(1.5rem, 2vw, 2rem); line-height: 1; text-transform: uppercase; }
+  .pill__d { font-size: var(--t-small); font-weight: 500; line-height: 1.45; color: var(--ink-2); }
+  @media (max-width: 699px) {
+    .step { grid-template-columns: 1fr; align-items: start; top: calc(var(--nav-h) + 8px + var(--i) * 12px); }
+    .step__sticker { width: 56px; top: 16px; right: 16px; bottom: auto; }
+  }
+  :global(.motion-reduced) .step { position: relative; top: auto; }
+</style>

@@ -1,0 +1,421 @@
+
+
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="https://mousabatarseh.com/carhartt-review/#top">Mousa Batarseh <small>Independent digital shelf review · not affiliated with Carhartt, Inc.</small></a>
+  <nav class="topnav" aria-label="Sections">
+    <a href="https://mousabatarseh.com/carhartt-review/#works">What works</a><a href="https://mousabatarseh.com/carhartt-review/#findings">Findings</a><a href="https://mousabatarseh.com/carhartt-review/#prototypes">Prototypes</a><a href="https://mousabatarseh.com/carhartt-review/#plan">90-day plan</a><a href="https://mousabatarseh.com/carhartt-review/#method">Method</a>
+  </nav>
+</div></div>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <div class="eyebrow">carhartt.com · Digital shelf review · September 2026</div>
+    <h1>The shelf is strong. The data underneath it isn't keeping up.</h1>
+    <p class="lede">Carhartt's storefront has one of the best product-discovery systems in workwear — warmth ratings, deep fit and weight taxonomy, industry shops. The gaps are almost all product-data and merchandising-hygiene problems: empty categories in the New tree during Fall Layering, duplicate facet values, attributes leaking into product names, and a badge slot that hides the one thing a fall shopper needs. All of it is fixable by a site merchandiser in a quarter.</p>
+    <p class="notice">Prepared by Mousa Batarseh as an unsolicited work sample for the Digital Site Merchandiser role. Based only on the public site as it rendered on Sept 15, 2026. No internal data, no Carhartt assets or logos used.</p>
+  </div>
+  <aside class="stamp" aria-label="Review scope">
+    <dl>
+      <dt>Reviewed</dt><dd><b>Sept 15, 2026</b></dd>
+      <dt>Surfaces</dt><dd>Home · nav tree (392 category links) · 12 PLPs · PDP · site search · sitemap · robots</dd>
+      <dt>Stack seen</dt><dd>SAP Commerce Cloud (Spartacus) · Algolia search · Adobe Dynamic Media · True Fit</dd>
+      <dt>Season live</dt><dd>“Stock up on layers” · Fall Sale 25% · Force Cold</dd>
+      <dt>Author</dt><dd><b>Mousa Batarseh</b>, Warren MI</dd>
+    </dl>
+  </aside>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div class="cell"><div class="big num">13</div><div class="lbl">findings, each with a captured example, the customer impact, and a fix</div></div>
+  <div class="cell"><div class="big num">2</div><div class="lbl">categories in the New nav tree showing “0 items” mid-September, including Women's New Outerwear</div></div>
+  <div class="cell"><div class="big num">10 / 24</div><div class="lbl">Men's Jackets tiles that show no warmth rating because another badge takes the slot</div></div>
+  <div class="cell"><div class="big num">2×</div><div class="lbl">Rugged Flex® and Rain Defender® each listed twice in the Technology facet — one delimiter apart</div></div>
+  <div class="cell"><div class="big num">6</div><div class="lbl">quick wins that need no dev work — content, PIM, and merchandising rules only</div></div>
+</div></div>
+
+<section class="block" id="works"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Performs well</span><h2>Keep doing this</h2></div>
+  <p class="intro">Before the fixes: the parts of the digital shelf that are ahead of most apparel sites. These are the systems the findings below should be built on, not replaced.</p>
+  <div class="well"><ul>
+    <li><h4>Warmth rating is a real merchandising system</h4><p>Chips at the top of jacket PLPs (Warm → Extreme Warmth), “Rated Warm/Warmest” tile badges, a Warmth Rating facet, and “Warmth Rating Earned: Level 1” at the top of every PDP description. One attribute, four surfaces, consistent language. This is the spine of fall merchandising.</p></li>
+    <li><h4>Taxonomy shops the way tradespeople think</h4><p>Fit (Relaxed / Loose / Slim), weight (Lightweight / Midweight / Heavyweight), Big &amp; Tall, Plus, Shop by Industry (Construction, Farm &amp; Ranch, Mechanic, Electrician, Medical), Shop by Warmth Rating. Facet-as-category done right, and it earns long-tail search traffic.</p></li>
+    <li><h4>Storytelling inside the grid</h4><p>“Aisle invader” content tiles sit in the product grid (“Outwork the rain — Shop rainwear”), so seasonal stories run where people are already shopping instead of only in a hero.</p></li>
+    <li><h4>Sale presentation is honest and scannable</h4><p>Original vs. Now ranges on tiles, color-count “+ N” cues, and a 24-up grid with “See 14 more” instead of infinite scroll. Nothing hides the price story.</p></li>
+    <li><h4>PDP fundamentals are in place</h4><p>Detroit Jacket: 4.2★ from 1,322 reviews, 223 Q&amp;A, Regular/Tall size architecture, True Fit sizing, five product images, a “Built to Last” guarantee block. The trust content exists — it just isn't surfaced upstream yet (see F-08).</p></li>
+    <li><h4>Legacy seasonal URLs are canonicalized</h4><p>/c/women-new-spring-jackets and /c/women-new-rain-gear both resolve to the current Women's New Outerwear node. The redirect discipline is there — the destination is the problem (see F-01).</p></li>
+  </ul></div>
+</div></section>
+
+<section class="block" id="findings"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Opportunities</span><h2>13 findings, in priority order</h2></div>
+  <p class="intro">Ordered by revenue impact against effort. Each one shows exactly what was captured on the live site, why a customer or the business feels it, and the fix I'd ship. Severity: <span class="sev crit">Fix this week</span> <span class="sev warn">This quarter</span> <span class="sev good">Polish</span></p>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-01</div><span class="sev crit">Fix this week</span><div class="tags">Empty categories · Sitemap · Seasonal</div></div>
+    <div>
+      <h3>Women's New Outerwear shows 0 items in the New nav — during Fall Layering</h3>
+      <p class="why">The “New” menu has a Women's branch. Its outerwear node renders an empty grid, with two legacy URLs redirecting into it. A second empty category (men-insulated-bibs-coveralls) is still in the XML sitemap while the live equivalent lives at a different slug with 8 products. Both pages show search-error copy on a category page.</p>
+      <div class="ev"><span class="src">captured · /c/women-new-outerwear · breadcrumb: Home › New Clothing &amp; Accessories › New Women's Clothes &amp; Gear</span><q>WOMEN'S NEW OUTERWEAR — <span class="bad">0 items</span> — No matches found for: "women-new-outerwear" — Check the spelling of the search term you entered.</q></div>
+      <div class="ev"><span class="src">captured · /c/men-insulated-bibs-coveralls (in Category.xml) vs /c/men-insulated-bib-and-coveralls (in nav)</span><q><span class="bad">0 items</span> vs <b>8 items</b> — same intent, two slugs, one dead.</q></div>
+      <dl class="fix">
+        <dt>Impact</dt><dd><p>Women's is a stated growth segment and this is the newness door for it. Google also has an indexable “0 items” page in the sitemap.</p></dd>
+        <dt>Fix</dt><dd><p>Assign the current women's outerwear launches to the node today. Then: a weekly “zero-product category” report from the catalog, an empty-state that falls back to the parent category (prototype P-3), 301 the dead slug to the live one, and drop it from Category.xml.</p></dd>
+        <dt>Effort</dt><dd><p>Hours for the assignment; one sprint for the report and empty-state template.</p></dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-02</div><span class="sev crit">Fix this week</span><div class="tags">Facets · PIM · Search</div></div>
+    <div>
+      <h3>Facet values are split by punctuation and spelling</h3>
+      <p class="why">On Men's Jackets &amp; Coats the Technology facet lists the same technology twice with a different delimiter. Lining has four names for one taffeta quilt. Fabric has “Polyester” and “100% Polyester.” New &amp; Featured has a typo and carries fabric values that belong in Fabric. Every duplicate halves the count a shopper sees and doubles the clicks to filter.</p>
+      <div class="ev"><span class="src">captured · Technology facet · /c/men-coats-jackets</span><q><span class="bad">Rugged Flex- Range of Motion</span> · <span class="bad">Rugged Flex: Range of Motion</span> · <span class="bad">Rain Defender- Water Repellent</span> · <span class="bad">Rain Defender: Water Repellent</span> · Full Swing- Range of Motion · Force: Sweat-Wicking · Storm Defender- Waterproof Breathable · Super Dux- Water Repellent &amp; Wind Resistant · Yukon Extremes- Extreme Warmth</q></div>
+      <div class="ev"><span class="src">captured · Lining · Fabric · New &amp; Featured</span><q>Lining: Taffeta · Quilted Taffeta · Polyester Quilted Taffeta · Quilt · Quilted Flannel &nbsp;|&nbsp; Fabric: Polyester · 100% Polyester &nbsp;|&nbsp; New &amp; Featured: New · New Colors · <span class="bad">Best Seller's</span> · Fall Layering · Lightweight · Duck · Camo · Montana</q></div>
+      <dl class="fix">
+        <dt>Impact</dt><dd><p>Filter abandonment and under-counted technologies on the page where Rugged Flex® and Rain Defender® are the reasons to buy.</p></dd>
+        <dt>Fix</dt><dd><p>A controlled vocabulary per facet in the PIM (one value, one spelling, “Name: Benefit” format), a bulk normalization pass on the affected attributes, and a monthly facet-value diff so new launches can't reintroduce variants. Prototype P-2 shows the before/after.</p></dd>
+        <dt>Effort</dt><dd><p>Merchandising + PIM only. No storefront code.</p></dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-03</div><span class="sev crit">Fix this week</span><div class="tags">Badges · PLP · Seasonal</div></div>
+    <div>
+      <h3>One badge slot per tile — “New” hides the warmth rating on the newest fall jackets</h3>
+      <p class="why">Tiles show exactly one badge. When a jacket is New, Exclusive, Sale, or Steady Rain, its warmth rating disappears from the shelf. On the 24 tiles captured from Men's Jackets &amp; Coats, 10 show no warmth signal — including this season's Montana Ranch Coat, Elkhart, and Fairbanks launches, the products the Fall campaign is pushing.</p>
+      <div class="ev"><span class="src">captured · tile badge images · /c/men-coats-jackets</span><q>Montana Rugged Flex® Duck Ranch Coat → <span class="bad">ProductBadge_New</span> (no Warmth_Rating) · Elkhart Jacket → <span class="bad">ProductBadge_New</span> · Fairbanks Active Jac → <span class="bad">ProductBadge_New</span> · Crafted Series ×4 → Exclusive · Gilliam Jacket → none · Monterey → ProductBadge_SteadyRain</q></div>
+      <dl class="fix">
+        <dt>Impact</dt><dd><p>Warmth is the primary decision attribute in Q4; the shelf goes quiet on it for the products with the most marketing behind them.</p></dd>
+        <dt>Fix</dt><dd><p>Two badge slots: status (New / Exclusive / Sale) top-left, warmth top-right, with a priority rule so nothing stacks past two. Prototype P-1 shows the tile.</p></dd>
+        <dt>Effort</dt><dd><p>One tile-template change + a badge priority rule.</p></dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-04</div><span class="sev warn">This quarter</span><div class="tags">Product data · Naming · URLs</div></div>
+    <div>
+      <h3>Attributes are leaking into product names and URLs</h3>
+      <p class="why">A warmth rating that belongs in an attribute is appended to some product names, so it reaches the URL slug, the tile, the title tag, and the feed. Trademark symbols alternate between ® and ™ on the same technology. Women's names carry a “WOMEN'S” prefix inside the women's category; men's don't. The Detroit Jacket has three different names depending on where you meet it.</p>
+      <div class="ev"><span class="src">captured · names and slugs</span><q>RUGGED FLEX® DUCK LOOSE FIT CHORE COAT <span class="bad">- 1 WARM RATING</span> → /product/106675/rugged-flex-duck-loose-fit-chore-coat<span class="bad">---1-warm-rating</span> · YUKON EXTREMES™ INSULATED COVERALL <span class="bad">- 4 EXTREME WARMTH RATING</span> · MONTANA RUGGED FLEX<span class="bad">®</span> DUCK RANCH COAT vs MONTANA RUGGED FLEX<span class="bad">™</span> DUCK JACKET · YUKON EXTREMES<span class="bad">®</span> vs YUKON EXTREMES<span class="bad">™</span></q></div>
+      <div class="ev"><span class="src">captured · one product, three names</span><q>PLP: “Iconic J01 Duck Detroit Jacket” · PDP H1: “Carhartt J01 Men's Iconic Duck Blanket Lined Detroit Jacket <span class="bad">| Carhartt</span>” · image alt: “Carhartt Iconic J01 Duck Detroit Jacket”</q></div>
+      <dl class="fix">
+        <dt>Impact</dt><dd><p>Ugly slugs and titles in search results and shopping feeds; inconsistent brand marks; harder product matching for reviews, feeds, and analytics.</p></dd>
+        <dt>Fix</dt><dd><p>A one-page naming convention (Series · Technology · Fabric · Silhouette; no attributes; ® on the first mention only), a PIM validation that blocks “rating” strings in names, and a cleanup of the affected styles with 301s.</p></dd>
+        <dt>Effort</dt><dd><p>A day of data work, a template fix for the H1 suffix.</p></dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-05</div><span class="sev warn">This quarter</span><div class="tags">PDP · Cross-sell · Seasonal</div></div>
+    <div>
+      <h3>The Detroit Jacket PDP recommends “Warm Weather Essentials”</h3>
+      <p class="why">While the homepage says “Stock up on layers that have no off-season,” the flagship fall jacket's second recommendation rail is Force tees, a Sun Defender™ polo, and a short-sleeve logo tee. The first rail (“You May Also Like”) is fine and even cross-sells into bibs. The second one is a seasonal rule that wasn't retired.</p>
+      <div class="ev"><span class="src">captured · /product/103828/iconic-j01-duck-detroit-jacket</span><q>YOU MAY ALSO LIKE: Force Phoenix Jacket · Rugged Flex® Duck Berwick Jacket · Washed Duck Active Jac · Washed Duck Insulated Bib Overall &nbsp;|&nbsp; <span class="bad">WARM WEATHER ESSENTIALS</span>: Force Relaxed T-Shirt · Force Relaxed LS T-Shirt · Force Sun Defender™ Relaxed Logo Polo · Force Sun Defender™ Relaxed LS Logo T-Shirt</q></div>
+      <dl class="fix">
+        <dt>Impact</dt><dd><p>Lost attach rate on the one PDP with the most traffic in the season.</p></dd>
+        <dt>Fix</dt><dd><p>Retire the rail; replace with a “Complete the layer” rail keyed to warmth rating (base layer → hoodie → this jacket → insulated bib). Put a seasonal expiry date on every manual rec rule. Prototype P-4.</p></dd>
+        <dt>Effort</dt><dd><p>Merchandising rule change; no code.</p></dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-06</div><span class="sev warn">This quarter</span><div class="tags">Facets · Taxonomy</div></div>
+    <div>
+      <h3>“Product Type” mixes four dimensions that already have their own facets</h3>
+      <p class="why">On jackets, Product Type offers Duck and Denim (fabric), Fleece and Sherpa (lining), Rain Jackets (protection), Insulated / Lined (lining again), Lightweight (weight), plus the actual silhouettes — Active Jacs, Coats, Softshell. Fabric, Lining, Rain Protection, and Warmth Rating each exist as separate facets, so shoppers see the same choice twice under different names and results don't add up.</p>
+      <div class="ev"><span class="src">captured · Product Type · /c/men-coats-jackets</span><q>Insulated / Lined · Rain Jackets · Winter Jackets · Lightweight · Active Jacs · <span class="bad">Duck</span> · <span class="bad">Denim Jackets</span> · <span class="bad">Fleece</span> · <span class="bad">Sherpa</span> · Coats · Softshell · Flame-Resistant</q></div>
+      <dl class="fix">
+        <dt>Fix</dt><dd><p>Product Type = silhouette only (Active Jac, Chore Coat, Ranch Coat, Shirt Jac, Vest, Parka, Softshell, Pullover). Fabric, Lining, Rain Protection, and Warmth carry the rest. Re-map values in the PIM; the facet order becomes Warmth → Product Type → Size → Fabric → Technology.</p></dd>
+        <dt>Effort</dt><dd><p>Attribute mapping; a few days with the data team.</p></dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-07</div><span class="sev warn">This quarter</span><div class="tags">PLP · Social proof</div></div>
+    <div>
+      <h3>Ratings live on the PDP but never reach the shelf</h3>
+      <p class="why">The Detroit Jacket carries 4.2★ from 1,322 reviews. The PLP tile shows none of it, even though a “Top Rated” sort exists. Shoppers comparing 38 jackets get price, colors, and one badge — not the signal that decides most apparel purchases.</p>
+      <div class="ev"><span class="src">captured · PDP vs PLP tile</span><q>PDP: 4.2 out of 5 · 1322 Reviews · 223 Questions &nbsp;|&nbsp; PLP tile: name · price range · swatches · one badge · <span class="bad">no rating</span></q></div>
+      <dl class="fix">
+        <dt>Fix</dt><dd><p>Stars + count on tiles (hide under 5 reviews). Prototype P-1.</p></dd>
+        <dt>Effort</dt><dd><p>Tile template; review data is already indexed for the sort.</p></dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-08</div><span class="sev warn">This quarter</span><div class="tags">Assortment · Tagging · Women's</div></div>
+    <div>
+      <h3>Fall categories look thin in ways that smell like tagging, not assortment</h3>
+      <p class="why">Men's Lined Sweatshirts &amp; Hoodies holds 3 items during a layering campaign. Women's Jackets &amp; Coats holds 19 vs. 38 for men, and its first two tiles are shirt jacs — which have their own category. Men's Insulated Overalls includes an insulated pant. Either the products are missing, or the attributes that route them into these nodes are.</p>
+      <div class="ev"><span class="src">captured · category counts, Sept 15</span><q>/c/men-lined-hoodies → <span class="bad">3 items</span> · /c/women-coats-jackets → 19 items (first tiles: Women's Paxton Quilted Shirt Jac, Women's Highland Shirt Jac) · /c/men-insulated-bib-and-coveralls → 8 items incl. <span class="bad">Firm Duck Insulated Pant</span></q></div>
+      <dl class="fix">
+        <dt>Fix</dt><dd><p>An attribute-coverage audit for the fall nodes: every SKU in the season's buy checked against lining, warmth, silhouette, and gender-category assignment. Fill gaps before Black Friday.</p></dd>
+      </dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-09</div><span class="sev warn">This quarter</span><div class="tags">Content · Quick filters · QA</div></div>
+    <div>
+      <h3>Quick-filter chip groups are mislabeled on some categories</h3>
+      <p class="why">The chip bar on Men's Rain Jackets is titled “Warmth” but contains Cold, Rainy, Cotton Duck, and Lightweight. The same template on Jackets is labeled correctly. It reads like a content block copied between categories without a QA pass.</p>
+      <div class="ev"><span class="src">captured · /c/new-men-rain-jackets</span><q><span class="bad">WARMTH</span> — Most Popular · Cold · Rainy · Cotton Duck · Lightweight</q></div>
+      <dl class="fix"><dt>Fix</dt><dd><p>A launch checklist item per category: chip label matches chip set. A content QA pass over the ~40 categories using this component.</p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-10</div><span class="sev warn">This quarter</span><div class="tags">Category naming · SEO</div></div>
+    <div>
+      <h3>URL, title tag, and H1 disagree on what a category is</h3>
+      <p class="why">/c/winter-sale returns a page titled “Limited Time Deals” with an H1 of “Pants &amp; Accessories Sale” (466 items). The insulated-bibs node is “Insulated” in the nav, “Men's Insulated Overalls” as the H1, and “Insulated Bibs &amp; Coveralls - Mens Insulated Bibs &amp; Lined Coveralls for Men” as the title. Shoppers arriving from search see one name, then another.</p>
+      <div class="ev"><span class="src">captured</span><q>/c/<span class="bad">winter-sale</span> → title “Limited Time Deals” → H1 “PANTS &amp; ACCESSORIES SALE” · /c/men-insulated-bib-and-coveralls → nav “Insulated” → H1 “MEN'S INSULATED OVERALLS” → title “Insulated Bibs &amp; Coveralls - Mens …”</q></div>
+      <dl class="fix"><dt>Fix</dt><dd><p>One name per node, propagated to slug, H1, title, and breadcrumb from the PIM; stop reusing evergreen slugs for rotating promos — give promos their own /c/promo-… nodes with an end date.</p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-11</div><span class="sev warn">This quarter</span><div class="tags">Search · Merch rules</div></div>
+    <div>
+      <h3>Top seasonal queries land on a results grid, not the category</h3>
+      <p class="why">Searching “insulated bibs” returns correct products with Men / Women / Kids chips — good — but no route to the curated Insulated Overalls node, its warmth chips, or its facets. The “Products you may be interested in” block below the results is a fixed set of four styles that doesn't reflect the query.</p>
+      <div class="ev"><span class="src">captured · /search/insulated%20bibs</span><q>MEN · WOMEN · KIDS · results grid · PRODUCTS YOU MAY BE INTERESTED IN: Iconic J01 Duck Detroit Jacket · Iconic J140 Firm Duck Active Jac · Paxton Sweatshirt · Iconic R01 Duck Bib Overall</q></div>
+      <dl class="fix"><dt>Fix</dt><dd><p>Search-to-category redirects (or a “Shop the category” banner) for the top 50 category-intent queries, refreshed each season from Algolia analytics; a recommendation block that reflects the query.</p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-12</div><span class="sev good">Polish</span><div class="tags">Sort · Newness</div></div>
+    <div>
+      <h3>No “Newest” sort on a site that merchandises newness everywhere</h3>
+      <p class="why">Sort offers Relevance, Top Rated, Price ↑↓, Name ↑↓. New is a facet checkbox instead. The New menu, New Colors, Just Added, and “New for …” nodes all exist; the grid can't be ordered by them.</p>
+      <div class="ev"><span class="src">captured · sort options</span><q>Relevance · Top Rated · Price Low to High · Price High to Low · Name Ascending · Name Descending</q></div>
+      <dl class="fix"><dt>Fix</dt><dd><p>Add “Newest” (launch date desc). Name sorts are rarely used on apparel and could go.</p></dd></dl>
+    </div>
+  </article>
+
+  <article class="finding">
+    <div class="fid-wrap"><div class="fid">F-13</div><span class="sev good">Polish</span><div class="tags">Templates · Structured data · Accessibility</div></div>
+    <div>
+      <h3>Template details that cost trust with Google and screen readers</h3>
+      <p class="why">Badge images use their file names as alt text — a screen reader hears “Warmth underscore Rating underscore 1” and “ProductBadge underscore New” instead of “Rated Warm.” The PDP H1 includes the “| Carhartt” title suffix. The Product JSON-LD description contains a literal “Description” label and “&amp;nbsp;” entities. The category meta description spells the brand's own technology “water-repellant.”</p>
+      <div class="ev"><span class="src">captured</span><q>badge alt="<span class="bad">Warmth_Rating_1</span>" · alt="<span class="bad">ProductBadge_New</span>" · alt="<span class="bad">ProductBadge_SteadyRain</span>" · JSON-LD description: "\n\n\nDescription\nWarmth Rating Earned: Level 1 - Warm\n<span class="bad">&amp;nbsp;</span>…" · meta: "…insulated, <span class="bad">water-repellant</span> jackets…"</q></div>
+      <dl class="fix"><dt>Fix</dt><dd><p>Human-readable alt on badge images (“Rated Warm, level 1”); strip the title suffix from H1; clean the description field before it's serialized; copy fix on the meta.</p></dd></dl>
+    </div>
+  </article>
+</div></section>
+
+<section class="block" id="prototypes"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Prototypes</span><h2>What the fixes look like</h2></div>
+  <p class="intro">Built from the 24 products captured on Men's Jackets &amp; Coats on Sept 15, 2026 — names, price ranges, and badges exactly as displayed. Product photography is deliberately omitted (no Carhartt assets are used here); the placeholder is where the image goes.</p>
+
+  <div class="proto" id="p1">
+    <div class="proto-head"><div><div class="eyebrow">P-1 · fixes F-03, F-07</div><h4>The tile, with two badge slots and a rating</h4></div>
+      <div class="seg" role="group" aria-label="Before or after"><button id="p1-before" aria-pressed="true" onclick="p1('before')">As captured</button><button id="p1-after" aria-pressed="false" onclick="p1('after')">Proposed</button></div></div>
+    <div class="tiles" id="p1-tiles"><div class="tile"><div class="ph"><span>photo omitted</span><div class="badges"><span class="badge">New</span></div></div><div class="body"><div class="name">Montana Rugged Flex® Duck Ranch Coat</div><div class="price num">$169.99 — $189.99</div><div class="sw"><span style="background:#1c1a17"></span><span style="background:#8b5a2b"></span><span style="background:#5a5a52"></span></div></div></div><div class="tile"><div class="ph"><span>photo omitted</span><div class="badges"><span class="badge">New</span></div></div><div class="body"><div class="name">Elkhart Jacket</div><div class="price num">$89.99 — $109.99</div><div class="sw"><span style="background:#1c1a17"></span><span style="background:#8b5a2b"></span><span style="background:#5a5a52"></span></div></div></div><div class="tile"><div class="ph"><span>photo omitted</span><div class="badges"><span class="badge">Exclusive</span></div></div><div class="body"><div class="name">Crafted Series Duck Sherpa Lined Chore Jacket</div><div class="price num">$189.99 — $209.99</div><div class="sw"><span style="background:#1c1a17"></span><span style="background:#8b5a2b"></span><span style="background:#5a5a52"></span></div></div></div><div class="tile"><div class="ph"><span>photo omitted</span><div class="badges"><span class="badge warm">Rated Warm 1</span></div></div><div class="body"><div class="name">Iconic J01 Duck Detroit Jacket</div><div class="price num">$129.99 — $139.99</div><div class="sw"><span style="background:#1c1a17"></span><span style="background:#8b5a2b"></span><span style="background:#5a5a52"></span></div></div></div><div class="tile"><div class="ph"><span>photo omitted</span><div class="badges"><span class="badge ghost">no badge</span></div></div><div class="body"><div class="name">Gilliam Jacket</div><div class="price num">$54.99 — $119.99</div><div class="sw"><span style="background:#1c1a17"></span><span style="background:#8b5a2b"></span><span style="background:#5a5a52"></span></div></div></div><div class="tile"><div class="ph"><span>photo omitted</span><div class="badges"><span class="badge">Steady Rain</span></div></div><div class="body"><div class="name">Monterey Jacket</div><div class="price num">$99.99 — $119.99</div><div class="sw"><span style="background:#1c1a17"></span><span style="background:#8b5a2b"></span><span style="background:#5a5a52"></span></div></div></div></div>
+    <p class="callout" id="p1-note">As captured: New, Exclusive, Sale, and Steady Rain each take the only badge slot, so the warmth rating disappears on 10 of 24 tiles. Switch to “Proposed.”</p>
+  </div>
+
+  <div class="proto" id="p2">
+    <div class="proto-head"><div><div class="eyebrow">P-2 · fixes F-02, F-06</div><h4>Facets that count correctly</h4></div></div>
+    <div class="ba">
+      <div class="col"><h4>Technology facet, as captured</h4><ul>
+        <li class="dup">Rugged Flex- Range of Motion</li><li class="dup">Rugged Flex: Range of Motion</li><li class="dup">Rain Defender- Water Repellent</li><li class="dup">Rain Defender: Water Repellent</li><li>Full Swing- Range of Motion</li><li>Force: Sweat-Wicking</li><li>Storm Defender- Waterproof Breathable</li><li>Super Dux- Water Repellent &amp; Wind Resistant</li><li>Yukon Extremes- Extreme Warmth</li></ul></div>
+      <div class="col"><h4>Normalized (one value, one format)</h4><ul>
+        <li class="new">Rugged Flex®: Range of Motion</li><li class="new">Rain Defender®: Water Repellent</li><li>Full Swing®: Range of Motion</li><li>Force®: Sweat-Wicking</li><li>Storm Defender®: Waterproof Breathable</li><li>Super Dux™: Water Repellent &amp; Wind Resistant</li><li>Yukon Extremes®: Extreme Warmth</li></ul></div>
+    </div>
+    <div class="facetdemo" style="margin-top:22px">
+      <div class="facets" id="p2-facets">
+        <fieldset><legend>Warmth rating (as badged)</legend>
+          <label><span><input type="checkbox" id="f-w1" data-k="w" value="1">1 – Warm</span><span class="c" data-c="w1">(4)</span></label>
+          <label><span><input type="checkbox" id="f-w2" data-k="w" value="2">2 – Warmer</span><span class="c" data-c="w2">(4)</span></label>
+          <label><span><input type="checkbox" id="f-w3" data-k="w" value="3">3 – Warmest</span><span class="c" data-c="w3">(5)</span></label>
+          <label><span><input type="checkbox" id="f-w4" data-k="w" value="4">4 – Extreme Warmth</span><span class="c" data-c="w4">(1)</span></label>
+          <label><span><input type="checkbox" id="f-w0" data-k="w" value="0">Not shown on tile</span><span class="c" data-c="w0">(10)</span></label>
+        </fieldset>
+        <fieldset><legend>Status</legend>
+          <label><span><input type="checkbox" id="f-sNew" data-k="s" value="New">New</span><span class="c" data-c="sNew">(4)</span></label>
+          <label><span><input type="checkbox" id="f-sExclusive" data-k="s" value="Exclusive">Exclusive</span><span class="c" data-c="sExclusive">(4)</span></label>
+          <label><span><input type="checkbox" id="f-sNone" data-k="s" value="">No status badge</span><span class="c" data-c="sNone">(15)</span></label>
+          <label><span><input type="checkbox" id="f-sRain" data-k="s" value="Steady Rain">Steady Rain</span><span class="c" data-c="sRain">(1)</span></label>
+        </fieldset>
+        <fieldset><legend>Fabric named in title</legend>
+          <label><span><input type="checkbox" id="f-fDuck" data-k="f" value="Duck">Duck</span><span class="c" data-c="fDuck">(12)</span></label>
+          <label><span><input type="checkbox" id="f-fDenim" data-k="f" value="Denim">Denim</span><span class="c" data-c="fDenim">(3)</span></label>
+          <label><span><input type="checkbox" id="f-fDrill" data-k="f" value="Drill">Drill</span><span class="c" data-c="fDrill">(1)</span></label>
+          <label><span><input type="checkbox" id="f-fNone" data-k="f" value="—">Not in name</span><span class="c" data-c="fNone">(8)</span></label>
+        </fieldset>
+        <fieldset><legend>Price</legend>
+          <label><span><input type="checkbox" id="f-p1" data-k="p" value="1">Under $100</span><span class="c" data-c="p1">(5)</span></label>
+          <label><span><input type="checkbox" id="f-p2" data-k="p" value="2">$100 – $150</span><span class="c" data-c="p2">(12)</span></label>
+          <label><span><input type="checkbox" id="f-p3" data-k="p" value="3">$150 – $200</span><span class="c" data-c="p3">(7)</span></label>
+          <label><span><input type="checkbox" id="f-p4" data-k="p" value="4">Over $200</span><span class="c" data-c="p4">(0)</span></label>
+        </fieldset>
+      </div>
+      <div class="results"><div class="count" id="p2-count">24 of 24 items</div><div class="rows" id="p2-rows"><div class="r-name">Iconic J01 Duck Detroit Jacket</div><div class="r-w">Rated Warm 1</div><div class="r-p num">$129.99 — $139.99</div><div class="r-name">Montana Rugged Flex® Duck Ranch Coat</div><div class="r-w none">warmth not on tile</div><div class="r-p num">$169.99 — $189.99</div><div class="r-name">Iconic J140 Firm Duck Active Jac</div><div class="r-w">Rated Warmest 3</div><div class="r-p num">$129.99 — $139.99</div><div class="r-name">Rugged Flex® Duck Loose Fit Chore Coat - 1 Warm Rating</div><div class="r-w">Rated Warm 1</div><div class="r-p num">$109.99 — $119.99</div><div class="r-name">Washed Duck Active Jac</div><div class="r-w">Rated Warmest 3</div><div class="r-p num">$129.99 — $139.99</div><div class="r-name">Rugged Flex® Duck Berwick Jacket</div><div class="r-w">Rated Warm 1</div><div class="r-p num">$109.99 — $119.99</div><div class="r-name">Washed Duck Bartlett Jacket</div><div class="r-w">Rated Warmer 2</div><div class="r-p num">$149.99 — $164.99</div><div class="r-name">Gilliam Jacket</div><div class="r-w none">warmth not on tile</div><div class="r-p num">$54.99 — $119.99</div><div class="r-name">Montana Rugged Flex™ Duck Jacket</div><div class="r-w">Rated Warmer 2</div><div class="r-p num">$139.99 — $154.99</div><div class="r-name">Crafted Series Duck Sherpa Lined Chore Jacket</div><div class="r-w none">warmth not on tile</div><div class="r-p num">$189.99 — $209.99</div><div class="r-name">Denim Berwick Jacket</div><div class="r-w">Rated Warmer 2</div><div class="r-p num">$129.99 — $139.99</div><div class="r-name">Force Winnipeg Jacket</div><div class="r-w">Rated Warmest 3</div><div class="r-p num">$159.99 — $174.99</div><div class="r-name">Elkhart Jacket</div><div class="r-w none">warmth not on tile</div><div class="r-p num">$89.99 — $109.99</div><div class="r-name">Washed Duck Sierra Jacket</div><div class="r-w">Rated Warmest 3</div><div class="r-p num">$139.99 — $154.99</div><div class="r-name">Rugged Flex™ Duck Camo Active Jac</div><div class="r-w">Rated Warmer 2</div><div class="r-p num">$159.99</div><div class="r-name">Washed Duck Bartlett Active Jac</div><div class="r-w">Rated Warmest 3</div><div class="r-p num">$159.99 — $174.99</div><div class="r-name">Fairbanks Active Jac</div><div class="r-w none">warmth not on tile</div><div class="r-p num">$129.99 — $144.99</div><div class="r-name">Monterey Jacket</div><div class="r-w none">warmth not on tile</div><div class="r-p num">$99.99 — $119.99</div><div class="r-name">Crafted Series Denim Sherpa Lined Chore Jacket</div><div class="r-w none">warmth not on tile</div><div class="r-p num">$189.99 — $209.99</div><div class="r-name">Crafted Series Denim Chore Coat</div><div class="r-w none">warmth not on tile</div><div class="r-p num">$149.99 — $164.99</div><div class="r-name">Elkhart Pullover</div><div class="r-w none">warmth not on tile</div><div class="r-p num">$84.99 — $104.99</div><div class="r-name">Yukon Extremes® Active Jac</div><div class="r-w">Rated Extreme Warmth 4</div><div class="r-p num">$189.99 — $209.99</div><div class="r-name">Crafted Series Drill Painter Chore Coat</div><div class="r-w none">warmth not on tile</div><div class="r-p num">$149.99 — $164.99</div><div class="r-name">Edmonton Jacket</div><div class="r-w">Rated Warm 1</div><div class="r-p num">$94.99 — $104.99</div></div></div>
+    </div>
+    <p class="callout">Tick “Not shown on tile” under Warmth: those are the 10 products a fall shopper can't compare on warmth from the grid. Counts next to each value are what a shopper should see — live, and always adding up.</p>
+  </div>
+
+  <div class="proto" id="p3">
+    <div class="proto-head"><div><div class="eyebrow">P-3 · fixes F-01</div><h4>An empty category that still sells</h4></div></div>
+    <div class="empty">
+      <div class="crumb">Home › New › Women's › Outerwear</div>
+      <h4>Women's New Outerwear</h4>
+      <p class="msg">New women's outerwear is landing through October. Until then, here's what's new for women right now — or jump straight to jackets.</p>
+      <div class="chips"><span class="chip">New for Women (224)</span><span class="chip alt">Women's Jackets &amp; Coats (19)</span><span class="chip alt">Women's Insulated &amp; Lined</span><span class="chip alt">Notify me when it lands</span></div>
+    </div>
+    <p class="callout" style="margin-top:14px">Template rule: when a category returns 0 products, render the parent's grid under a short message and never show search-error copy. The page stays indexable and the shopper stays in the funnel.</p>
+  </div>
+
+  <div class="proto" id="p4">
+    <div class="proto-head"><div><div class="eyebrow">P-4 · fixes F-05</div><h4>“Complete the layer” — a rail keyed to warmth rating</h4></div></div>
+    <div class="rail">
+      <div class="step"><div class="k">Base</div><div class="n">Top-selling Force® thermal crew</div><div class="d">Sweat-wicking, under everything</div></div>
+      <div class="step"><div class="k">Mid</div><div class="n">Top-selling heavyweight hoodie</div><div class="d">The layer under the duck (e.g. Paxton)</div></div>
+      <div class="step cur"><div class="k">Shell · you're here</div><div class="n">Iconic J01 Duck Detroit Jacket</div><div class="d">Warmth rating 1 · blanket lined</div></div>
+      <div class="step"><div class="k">Below</div><div class="n">Washed Duck Insulated Bib Overall</div><div class="d">Warmth rating 3 · already in “You may also like”</div></div>
+    </div>
+    <p class="callout" style="margin-top:14px">Rule, not a hand-pick: for any outerwear PDP in Sept–Feb, show base → mid → this item → bottoms, choosing the top seller in each slot at the same fit and a warmth rating ≤ the jacket's. Manual rails get an expiry date so “Warm Weather Essentials” can't survive into September again.</p>
+  </div>
+</div></section>
+
+<section class="block" id="plan"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">If hired</span><h2>First 90 days on this shelf</h2></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Window</th><th>Ship</th><th>Measure</th></tr></thead>
+    <tbody>
+      <tr><td>Days 1–30</td><td>Zero-product category report; assign women's outerwear launches; empty-state fallback; Technology / Lining / Fabric facet normalization; retire seasonal rec rails; badge priority rule spec; naming convention doc.</td><td>0 empty categories in nav or sitemap · facet value count on jackets down by ≥ 6 · attach rate on outerwear PDPs.</td></tr>
+      <tr><td>Days 31–60</td><td>Two-slot badge + tile rating (with UX/Product); Product Type re-map to silhouette; attribute-coverage audit on the fall buy; search-to-category redirects for top 50 queries; “Newest” sort.</td><td>PLP → PDP click-through on jackets · filter usage and refinement depth · search exit rate on category-intent queries.</td></tr>
+      <tr><td>Days 61–90</td><td>“Complete the layer” rail as a rule; category naming propagation from PIM; launch checklist (chips, alt text, H1, JSON-LD) in the go-live gate; monthly digital-shelf scorecard for Merchandising, Marketing, and Data.</td><td>Conversion and sell-through on fall nodes vs. LY · Black Friday readiness: 100% of buy attributed and assigned.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="block" id="method"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Method</span><h2>How this was captured</h2></div>
+  <div class="method">
+    <div><h4 style="margin-bottom:8px">What I looked at</h4><ul>
+      <li>Homepage, the full navigation tree (392 unique /c/ links), and Category.xml from the sitemap index.</li>
+      <li>12 category pages including Men's Jackets &amp; Coats (facets, sort, 24 tiles, badges), Women's Jackets &amp; Coats, Men's Rain, Lined Hoodies, Insulated Overalls, Force, New Women's, Low Stock, Winter Sale.</li>
+      <li>One PDP end to end (Iconic J01 Duck Detroit Jacket): H1, JSON-LD, images, size architecture, recommendation rails.</li>
+      <li>Site search for a top seasonal query (“insulated bibs”).</li>
+      <li>robots.txt (Algolia crawler allowed, search and query parameters disallowed).</li>
+    </ul></div>
+    <div><h4 style="margin-bottom:8px">Limits</h4><ul>
+      <li>Public site only, one day, one region (US), desktop and narrow viewports. No analytics, no inventory, no launch calendar — so counts like “3 items” are observations, not verdicts.</li>
+      <li>“Not shown on tile” means the badge slot was taken; the product almost certainly has a warmth rating in the data.</li>
+      <li>Every quote in the findings is verbatim text or attribute values as rendered. Nothing was fetched from Carhartt's CDN and no brand assets are reproduced.</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section class="block" id="about"><div class="wrap">
+  <div class="about">
+    <div>
+      <div class="eyebrow">About the author</div>
+      <h2 style="margin:10px 0 14px">Mousa Batarseh</h2>
+      <p>Seven years running the digital shelf for multi-brand retail and wholesale ecommerce in Metro Detroit — Shopify and WordPress/WooCommerce storefronts, catalog launches and migrations of 14,000+ SKUs, navigation, collections, product data, imagery, pricing, and SEO. Apparel and textile background. GA4, Search Console, and PageSpeed are how I keep score.</p>
+      <p>I made this the way I'd work in the role: capture what the customer actually sees, trace it back to the data, fix the rule instead of the symptom.</p>
+    </div>
+    <div class="card">
+      <h4>Talk about this shelf</h4>
+      <p>hireme@mousabatarseh.com · (248) 810-1816 · Warren, MI — 25 minutes from Dearborn</p>
+      <p>Previous review, same approach: <a href="https://mousabatarseh.com/diamedical-review">diamedicalusa.com digital shelf &amp; UX review</a></p>
+      <a class="cta" href="mailto:hireme@mousabatarseh.com?subject=Carhartt.com%20digital%20shelf%20review">Email Mousa</a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><a href="https://mousabatarseh.com/">mousabatarseh.com</a> · <a href="https://www.linkedin.com/in/mousabatarseh">linkedin.com/in/mousabatarseh</a><br><br>Independent review by Mousa Batarseh, September 2026. Carhartt® and the product, technology, and series names quoted are trademarks of Carhartt, Inc., used here only to identify what was observed on carhartt.com. Not affiliated with or endorsed by Carhartt, Inc.</div></footer>
+
+<script data-hidden="">
+(function(){
+  // 24 tiles as captured on /c/men-coats-jackets, Sept 15 2026. w = warmth badge shown (0 = none), s = status badge, f = fabric named in title.
+  var P=[
+    ["Iconic J01 Duck Detroit Jacket",129.99,139.99,1,"","Duck",4.2,1322],
+    ["Montana Rugged Flex® Duck Ranch Coat",169.99,189.99,0,"New","Duck",0,0],
+    ["Iconic J140 Firm Duck Active Jac",129.99,139.99,3,"","Duck",0,0],
+    ["Rugged Flex® Duck Loose Fit Chore Coat - 1 Warm Rating",109.99,119.99,1,"","Duck",0,0],
+    ["Washed Duck Active Jac",129.99,139.99,3,"","Duck",0,0],
+    ["Rugged Flex® Duck Berwick Jacket",109.99,119.99,1,"","Duck",0,0],
+    ["Washed Duck Bartlett Jacket",149.99,164.99,2,"","Duck",0,0],
+    ["Gilliam Jacket",54.99,119.99,0,"","—",0,0],
+    ["Montana Rugged Flex™ Duck Jacket",139.99,154.99,2,"","Duck",0,0],
+    ["Crafted Series Duck Sherpa Lined Chore Jacket",189.99,209.99,0,"Exclusive","Duck",0,0],
+    ["Denim Berwick Jacket",129.99,139.99,2,"","Denim",0,0],
+    ["Force Winnipeg Jacket",159.99,174.99,3,"","—",0,0],
+    ["Elkhart Jacket",89.99,109.99,0,"New","—",0,0],
+    ["Washed Duck Sierra Jacket",139.99,154.99,3,"","Duck",0,0],
+    ["Rugged Flex™ Duck Camo Active Jac",159.99,159.99,2,"","Duck",0,0],
+    ["Washed Duck Bartlett Active Jac",159.99,174.99,3,"","Duck",0,0],
+    ["Fairbanks Active Jac",129.99,144.99,0,"New","—",0,0],
+    ["Monterey Jacket",99.99,119.99,0,"Steady Rain","—",0,0],
+    ["Crafted Series Denim Sherpa Lined Chore Jacket",189.99,209.99,0,"Exclusive","Denim",0,0],
+    ["Crafted Series Denim Chore Coat",149.99,164.99,0,"Exclusive","Denim",0,0],
+    ["Elkhart Pullover",84.99,104.99,0,"New","—",0,0],
+    ["Yukon Extremes® Active Jac",189.99,209.99,4,"","—",0,0],
+    ["Crafted Series Drill Painter Chore Coat",149.99,164.99,0,"Exclusive","Drill",0,0],
+    ["Edmonton Jacket",94.99,104.99,1,"","—",0,0]
+  ];
+  var WN={1:"Warm",2:"Warmer",3:"Warmest",4:"Extreme Warmth"};
+  function money(a,b){return a===b?"$"+a.toFixed(2):"$"+a.toFixed(2)+" — $"+b.toFixed(2);}
+  function band(p){return p<100?1:p<150?2:p<200?3:4;}
+
+  // P-1 tiles: three examples where the slot collides, plus the Detroit Jacket for the rating.
+  var picks=[1,12,9,0,7,17];
+  var proposedWarm={1:2,12:1,9:3,0:1,7:1,17:1}; // illustrative — the rating a merchandiser would surface once the slot exists
+  function p1(mode){
+    var el=document.getElementById("p1-tiles");el.innerHTML="";
+    picks.forEach(function(i){
+      var p=P[i],status=p[4],w=p[3];
+      var badges="";
+      if(mode==="before"){ badges = status?'<span class="badge">'+status+'</span>':(w?'<span class="badge warm">Rated '+WN[w]+' '+w+'</span>':'<span class="badge ghost">no badge</span>'); }
+      else { var st=status||(i===7?"Sale":""); badges=(st?'<span class="badge">'+st+'</span>':'')+'<span class="badge warm">Rated '+WN[w||proposedWarm[i]]+' '+(w||proposedWarm[i])+(w?'':'*')+'</span>'; }
+      var stars=(mode==="after")?'<div class="stars"><i>★★★★☆</i><span>'+(p[6]||4.4).toFixed(1)+' · '+(p[7]||(180+i*37))+' reviews</span></div>':'';
+      el.insertAdjacentHTML("beforeend",'<div class="tile"><div class="ph"><span>photo omitted</span><div class="badges">'+badges+'</div></div><div class="body"><div class="name">'+p[0]+'</div><div class="price num">'+money(p[1],p[2])+'</div>'+stars+'<div class="sw"><span style="background:#1c1a17"></span><span style="background:#8b5a2b"></span><span style="background:#5a5a52"></span></div></div></div>');
+    });
+    document.getElementById("p1-before").setAttribute("aria-pressed",mode==="before");
+    document.getElementById("p1-after").setAttribute("aria-pressed",mode==="after");
+    document.getElementById("p1-note").textContent = mode==="before"
+      ? "As captured: New, Exclusive, Sale, and Steady Rain each take the only badge slot, so the warmth rating disappears on 10 of 24 tiles. Switch to “Proposed.”"
+      : "Proposed: status keeps its slot, warmth gets its own, and the rating that already exists on the PDP shows on the tile. Values marked * and the review counts on non-Detroit items are illustrative — the data exists in the PIM and reviews platform; only the slot is missing.";
+  }
+  window.p1=p1; p1("before");
+
+  // P-2 facet demo
+  var boxes=[].slice.call(document.querySelectorAll('#p2-facets input'));
+  function sel(k){return boxes.filter(function(b){return b.checked&&b.dataset.k===k}).map(function(b){return b.value});}
+  function match(p,ex){
+    var w=sel("w"),s=sel("s"),f=sel("f"),pr=sel("p");
+    return (ex==="w"||!w.length||w.indexOf(String(p[3]))>-1)
+      && (ex==="s"||!s.length||s.indexOf(p[4])>-1)
+      && (ex==="f"||!f.length||f.indexOf(p[5])>-1)
+      && (ex==="p"||!pr.length||pr.indexOf(String(band(p[1])))>-1);
+  }
+  function key(k,v){ if(k==="w")return "w"+v; if(k==="s")return "s"+(v==="Steady Rain"?"Rain":(v===""?"None":v)); if(k==="f")return "f"+(v==="—"?"None":v); return "p"+v; }
+  function render(){
+    var rows=P.filter(function(p){return match(p)});
+    document.getElementById("p2-count").textContent=rows.length+" of 24 items";
+    document.getElementById("p2-rows").innerHTML=rows.map(function(p){
+      return '<div class="r-name">'+p[0]+'</div><div class="r-w'+(p[3]?'':' none')+'">'+(p[3]?'Rated '+WN[p[3]]+' '+p[3]:'warmth not on tile')+'</div><div class="r-p num">'+money(p[1],p[2])+'</div>';
+    }).join("");
+    boxes.forEach(function(b){
+      var k=b.dataset.k,v=b.value;
+      var n=P.filter(function(p){ if(!match(p,k))return false; if(k==="w")return String(p[3])===v; if(k==="s")return p[4]===v; if(k==="f")return p[5]===v; return String(band(p[1]))===v; }).length;
+      var c=document.querySelector('[data-c="'+key(k,v)+'"]'); if(c)c.textContent="("+n+")";
+    });
+  }
+  boxes.forEach(function(b){b.addEventListener("change",render)}); render();
+})();
+</script>
+
+
+

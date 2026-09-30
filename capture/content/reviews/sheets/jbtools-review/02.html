@@ -1,0 +1,48 @@
+<div class="wrap">
+  <p class="crumb">Sec. 02 — The defect census</p>
+  <div class="sec-h"><span class="tag">FIVE CLASSES</span><h2>What the catalog is telling Google</h2></div>
+  <p class="sec-sub">Five defect classes, each found in the live data, each a line item in the Database Manager job description. Counts are from a 799-product sample of the public Searchspring feed unless noted; percentages describe the sample, not the full 104,348-product catalog — the full run is deliverable #1.</p>
+
+  <div class="cards">
+    <div class="card"><span class="kicker data">Encoding</span><h3>Mojibake in names</h3><p>“Nano Flex Ratcheting Attachment Set 14â€“19mm (NORA150XL)” — a double-encoded en-dash, live in the H1 and the JSON-LD <span class="mono">name</span>. 8 of 799 sampled names carry artifacts (<span class="mono">1/4\x94</span>, <span class="mono">Airlift\x99</span>).</p><span class="ev">Evidence: /vim-tools-nano-flex-ratcheting-attachment-set-14-19mm-nora150xl/ ; Searchspring search.json</span></div>
+    <div class="card"><span class="kicker schema">Schema</span><h3>UPC shown, no gtin</h3><p>The OTC 7378 page displays “UPC: 731413001376” but the Product JSON-LD has no <span class="mono">gtin</span>; its <span class="mono">description</span> is percent-encoded and <span class="mono">priceValidUntil</span> is hard-coded.</p><span class="ev">Evidence: /otc-7378-torque-wrench-50-250/ source</span></div>
+    <div class="card"><span class="kicker data">Consistency</span><h3>Attribute casing</h3><p>The custom availability attribute is cased three ways in the sample — “US” 247, “us” 103, blank 449 — so any rule that keys on it silently misses a third of rows.</p><span class="ev">Evidence: Searchspring sample of 799 items</span></div>
+    <div class="card"><span class="kicker data">Naming</span><h3>Part-number convention</h3><p>133 of 799 names omit the “(part #)” convention the rest of the catalog follows, which weakens exact-match search and Merchant Center matching.</p><span class="ev">Evidence: Searchspring sample</span></div>
+    <div class="card"><span class="kicker stock">Taxonomy</span><h3>Miscategorized items</h3><p>A “Wiha 14-Piece SoftFinish Screwdriver Set” sits under Hand Tools › Wrenches › Torque Wrenches › Torque Wrench Accessories. Facets are only In Stock / Brand / Price — no drive size, torque range or type.</p><span class="ev">Evidence: /wiha-14-piece-softfinish-screwdriver-set-30284/ ; /torque-wrenches/ facets</span></div>
+    <div class="card"><span class="kicker stock">Availability</span><h3>Sold-out still ranking</h3><p>Torque Wrenches: 358 items, 122 “Out of Stock” (34%). The sold-out OTC 7378 ranks #3 in native search for “torque wrench” — a dead end at the top of results.</p><span class="ev">Evidence: /torque-wrenches/ facet counts ; native search</span></div>
+  </div>
+
+  <h2 style="margin:40px 0 6px">The schema patch</h2>
+  <p class="sec-sub">One template change fixes every product that has this defect — and it's the change that decides whether 104k listings match cleanly in Google Merchant Center. Google requires <span class="mono">gtin</span> for products that have one; you already display the UPC.</p>
+  <div class="code2">
+    <pre class="was"><span class="cap">Now — /otc-7378-torque-wrench-50-250/</span>{
+  "@type": "Product",
+  "name": "OTC 7378 Torque Wrench 50-250",
+  <b class="del">"description": "The%20OTC%20Accutorq…",</b>
+  "sku": "OTC7378",
+  <b class="del">/* no gtin — UPC 731413001376 in page text only */</b>
+  "offers": {
+    <b class="del">"priceValidUntil": "2027-09-19",</b>
+    "availability": "…OutOfStock"
+  }
+}</pre>
+    <pre class="now"><span class="cap">Patched template</span>{
+  "@type": "Product",
+  "name": "OTC 7378 Torque Wrench 50-250",
+  <b class="add">"description": "The OTC Accutorq…",</b>
+  "sku": "OTC7378",
+  <b class="add">"gtin12": "731413001376",</b>
+  <b class="add">"mpn": "7378",</b>
+  "offers": {
+    <b class="add">"priceValidUntil": "{{dynamic +1yr}}",</b>
+    "availability": "…OutOfStock"
+  }
+}</pre>
+  </div>
+  <p style="margin-top:14px"><span class="ev">Evidence: OTC 7378 PDP source; Google Merchant Center product-data spec (gtin required where it exists).</span></p>
+
+  <div class="pagenav">
+    <a href="https://mousabatarseh.com/jbtools-review/index.html">← Overview</a>
+    <a class="next" href="https://mousabatarseh.com/jbtools-review/triage.html">Next: The triage board →</a>
+  </div>
+</div>

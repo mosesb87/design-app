@@ -1,0 +1,73 @@
+{
+  "viewport": {
+    "w": 1440,
+    "h": 900
+  },
+  "background": "rgb(255, 255, 255)",
+  "text": "rgb(15, 21, 28)",
+  "fonts": {
+    "body": "Montserrat, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Arial, sans-serif",
+    "h1": "Montserrat, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Arial, sans-serif"
+  },
+  "loadedFonts": [
+    "Montserrat"
+  ],
+  "items": [
+    {
+      "k": "nav",
+      "x": 0,
+      "y": 0.1222,
+      "w": 0.1944,
+      "h": 1
+    },
+    {
+      "k": "button",
+      "x": 0.0153,
+      "y": 0.8046,
+      "w": 0.1639,
+      "h": 0.0489
+    },
+    {
+      "k": "button",
+      "x": 0.0153,
+      "y": 0.8646,
+      "w": 0.1639,
+      "h": 0.0511
+    },
+    {
+      "k": "heading",
+      "x": 0.2278,
+      "y": 0.2618,
+      "w": 0.6806,
+      "h": 0.2127
+    },
+    {
+      "k": "text",
+      "x": 0.2278,
+      "y": 0.4944,
+      "w": 0.5958,
+      "h": 0.0711
+    },
+    {
+      "k": "text",
+      "x": 0.2278,
+      "y": 0.5766,
+      "w": 0.5958,
+      "h": 0.1067
+    },
+    {
+      "k": "button",
+      "x": 0.2278,
+      "y": 0.7144,
+      "w": 0.1701,
+      "h": 0.0613
+    },
+    {
+      "k": "button",
+      "x": 0.4056,
+      "y": 0.7144,
+      "w": 0.0861,
+      "h": 0.0613
+    }
+  ]
+}

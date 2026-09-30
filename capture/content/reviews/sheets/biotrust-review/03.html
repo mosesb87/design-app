@@ -1,0 +1,26 @@
+<div class="wrap">
+
+  <p class="crumb">Sec. 03 — The prototype</p>
+  <div class="sec-h"><span class="tag">INTERACTIVE</span><h2>The relaunch pre-flight</h2></div>
+  <p class="sec-sub">A relaunch that carries these defects forward multiplies them. Tick an item to clear it. Readiness only turns to GO once every blocker is cleared — blockers can't be waived.</p>
+  <div class="board">
+    <div class="board-top">
+      <span class="title">Relaunch readiness</span>
+      <div class="gauge"><span class="big" id="pct">0%</span><span class="go" id="go">NO-GO · 2 blockers</span></div>
+      <div class="progline"><div class="progbar"><i id="bar" style="width: 0%;"></i></div></div>
+    </div>
+    <div class="checks">
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-sev="block"><span class="box">✓</span><div><h3>Lock down staging</h3><p>staging.biotrust.com is live, set to <span class="mono">index, follow</span>, canonical to itself, 117 products in /products.json. Password + noindex + canonical to production.</p><span class="ev">Evidence: staging.biotrust.com, /products.json</span></div><span class="sev block">Blocker</span></div>
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-sev="block"><span class="box">✓</span><div><h3>Reconcile card vs PDP price</h3><p>Homepage card shows $36.00 for variant 39263364251744; products.json and the PDP one-time price are $49.00.</p><span class="ev">Evidence: homepage HTML; products.json</span></div><span class="sev block">Blocker</span></div>
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-sev="high"><span class="box">✓</span><div><h3>Rewrite robots.txt</h3><p>Directives run together on single lines, a relative <span class="mono">Sitemap:</span>, an empty <span class="mono">Host:</span> — Lighthouse's robots-txt audit fails.</p><span class="ev">Evidence: biotrust.com/robots.txt</span></div><span class="sev high">High</span></div>
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-sev="high"><span class="box">✓</span><div><h3>One title, one canonical per page</h3><p>Every page checked ships two &lt;title&gt; and two canonical tags — an indexing coin-flip.</p><span class="ev">Evidence: homepage, /collections/featured-offers, PDP</span></div><span class="sev high">High</span></div>
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-sev="high"><span class="box">✓</span><div><h3>Valid Product schema</h3><p>The PDP JSON-LD with aggregateRating 4.8 / 3,869 fails strict parsing — no review rich result.</p><span class="ev">Evidence: PDP source</span></div><span class="sev high">High</span></div>
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-sev="med"><span class="box">✓</span><div><h3>Clear catalog debris</h3><p>42 $0.00 products (38 ebooks), five copy-of handles, 507/507 images without alt.</p><span class="ev">Evidence: products.json?limit=250</span></div><span class="sev med">Medium</span></div>
+<div class="item" role="checkbox" tabindex="0" aria-checked="false" data-sev="med"><span class="box">✓</span><div><h3>Trim the app stack</h3><p>77 scripts / 13 hosts; consolidate the two review apps and the two attribution tools.</p><span class="ev">Evidence: PDP source + Lighthouse</span></div><span class="sev med">Medium</span></div>
+    </div>
+  </div>
+  <p class="hint">Prototype — seven of the ~40 items I'd carry into the real checklist, each with today's evidence attached.</p>
+
+
+<div class="pagenav"><a href="https://mousabatarseh.com/biotrust-review/findings.html">← Findings</a><a class="next" href="https://mousabatarseh.com/biotrust-review/plan.html">Next: Plan →</a></div>
+</div>

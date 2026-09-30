@@ -1,0 +1,945 @@
+{
+  "url": "https://mousabatarseh.com/reviews/method/index.html",
+  "title": "How I review · Mousa Batarseh",
+  "description": "How every review is made: crawl, evidence, prototype and plan, with the full playbook of checks.",
+  "ogImage": "https://mousabatarseh.com/reviews/og.jpg",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "How I review"
+    },
+    {
+      "t": "h1",
+      "text": "Four steps,\nthe same way every time"
+    },
+    {
+      "t": "p",
+      "text": "Every review on this site was made this way: public pages only, every claim dated, and a working fix at the end. Here’s the whole process."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kl",
+      "text": "The toolkit"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "curl"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "Playwright"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "Chrome DevTools"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "Search Console"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "GA4"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "Lighthouse"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "Schema validator"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "Rich Results Test"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "Google Sheets"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "JSON-LD"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "Sitemap parser"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kchip",
+      "text": "Python"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "20"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "reviews made this way"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "36"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "checks in the playbook"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "2,339"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "products checked by script"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "days, start to finish"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "01"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Crawl"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "curl -s site.com/sitemap.xml"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "grep -c 'application/ld+json'"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "189 URLs · 44 redirects"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "02"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Evidence"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "observed 2026-09-20 23:20 UTC"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "curl -I /llms.txt → 404"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "[E3] 15-word template"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "03"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Prototype"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "title-linter.js · 59 listings"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "store-page generator"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "species atlas · 300+ species"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "04"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Plan"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "week 1 · template"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "weeks 2–3 · channels"
+    },
+    {
+      "t": "text",
+      "tag": "code",
+      "cls": "",
+      "text": "week 4 · speed & content"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "01 · Crawl"
+    },
+    {
+      "t": "h3",
+      "text": "Read it like a machine"
+    },
+    {
+      "t": "p",
+      "text": "Sitemap, robots, canonicals, titles, schema and prices, pulled from the public HTML the way a crawler or an answer engine sees it. Nothing behind a login."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "02 · Evidence"
+    },
+    {
+      "t": "h3",
+      "text": "Date every claim"
+    },
+    {
+      "t": "p",
+      "text": "Every finding carries the date, the URL and the check behind it, so anyone can re-run it and see if it’s been fixed. Opinions don’t go in; observations do."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "03 · Prototype"
+    },
+    {
+      "t": "h3",
+      "text": "Build the fix"
+    },
+    {
+      "t": "p",
+      "text": "A scanner, a template, a rewritten page or a working browser. Something a team can use on Monday, not a list of recommendations."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "04 · Plan"
+    },
+    {
+      "t": "h3",
+      "text": "Sequence the work"
+    },
+    {
+      "t": "p",
+      "text": "A 30/60/90 plan that puts template fixes first, because one template change usually fixes hundreds of pages at once."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Crawl"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Evidence"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Prototype"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Plan"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Repeat"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Crawl"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Evidence"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Prototype"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Plan"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Repeat"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Crawl"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Evidence"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Prototype"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Plan"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Repeat"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "The playbook"
+    },
+    {
+      "t": "h2",
+      "text": "36 checks,\nsix families"
+    },
+    {
+      "t": "p",
+      "text": "Not every check runs on every site. These are the ones that found the problems in the reviews on this site."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Pricing & promos"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Price on page vs cart",
+        "Bundle rules that conflict",
+        "Deal % named vs configured",
+        "Expired promos still live",
+        "Contest dates and rules",
+        "Volume ladders"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Structured data"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "JSON-LD on key templates",
+        "Product, FAQPage, Organization",
+        "LocalBusiness and store schema",
+        "GTIN and MPN in Product",
+        "Review counts that agree",
+        "llms.txt and AI signals"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Indexing & crawl"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Canonicals to the right host",
+        "Sitemap returns XML",
+        "Staging or test pages indexed",
+        "Redirects left in sitemaps",
+        "Duplicate titles and descriptions",
+        "Confirmation pages indexable"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Catalog data"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Encoding artifacts in names",
+        "Facet values split by spelling",
+        "Sold-out products still published",
+        "Duplicate listings and handles",
+        "Attributes leaking into titles",
+        "Identifiers and SKUs"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Local & store data"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Name, address, phone agree",
+        "Hours across three sources",
+        "tel: links that work",
+        "Placeholder numbers indexed",
+        "Store pages that exist",
+        "Status: open vs coming soon"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Launch & speed"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Domains connected",
+        "Password or parked pages",
+        "Analytics tags present",
+        "Mobile LCP and CLS",
+        "Help-center coverage",
+        "Go-live gate you can click"
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Anatomy"
+    },
+    {
+      "t": "h2",
+      "text": "Five parts of\nevery finding"
+    },
+    {
+      "t": "ol",
+      "items": [
+        "1\nTitle\n\nA plain sentence that names the defect, not the category.",
+        "2\nEvidence\n\nWhere it was seen and the exact values, copied from the page or schema.",
+        "3\nDate\n\nWhen it was observed, so it can be re-checked later.",
+        "4\nImpact\n\nWhy a shopper, a crawler or the revenue team would care.",
+        "5\nFix\n\nThe smallest change that closes it, usually at the template."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tag b",
+      "text": "Pricing"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "mono",
+      "text": "jarscannabis.com · Lansing"
+    },
+    {
+      "t": "h3",
+      "text": "Two prices for the same seven-cart bundle"
+    },
+    {
+      "t": "p",
+      "text": "At Lansing, 14 products carry both 7/$80 Cartridges 2g and 7/$90 Cartridges 2g at once; at Ann Arbor, 11 (Mitten Extracts “Super Nurdz”, “Rainbow Sherbert”, “Blueberry Pie” cartridges among them). Same quantity, two totals, one product."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "OBSERVED"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "IMPACT"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "FIX"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Timeline"
+    },
+    {
+      "t": "h2",
+      "text": "Two days,\nstart to finish"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "when",
+      "text": "Day 1 · morning"
+    },
+    {
+      "t": "h3",
+      "text": "Crawl"
+    },
+    {
+      "t": "p",
+      "text": "Sitemap, robots, templates, schema and prices pulled and counted."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "when",
+      "text": "Day 1 · afternoon"
+    },
+    {
+      "t": "h3",
+      "text": "Evidence"
+    },
+    {
+      "t": "p",
+      "text": "Findings written, dated and sourced. Anything unproven is cut."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "when",
+      "text": "Day 2 · morning"
+    },
+    {
+      "t": "h3",
+      "text": "Prototype"
+    },
+    {
+      "t": "p",
+      "text": "The scanner, template or working browser that proves the fix."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "when",
+      "text": "Day 2 · afternoon"
+    },
+    {
+      "t": "h3",
+      "text": "Plan & publish"
+    },
+    {
+      "t": "p",
+      "text": "A 30/60/90 plan, then the review goes live as its own site."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Deliverables"
+    },
+    {
+      "t": "h2",
+      "text": "What every review\nhands over"
+    },
+    {
+      "t": "p",
+      "text": "Five things, every time. The tool is the part most reviews skip."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "01"
+    },
+    {
+      "t": "h3",
+      "text": "Findings site"
+    },
+    {
+      "t": "p",
+      "text": "A standalone review site with every finding, dated."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "02"
+    },
+    {
+      "t": "h3",
+      "text": "A working tool"
+    },
+    {
+      "t": "p",
+      "text": "Scanner, linter, generator or browser built for that site."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "03"
+    },
+    {
+      "t": "h3",
+      "text": "Rewrites"
+    },
+    {
+      "t": "p",
+      "text": "Titles, descriptions, schema or copy, ready to paste."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "04"
+    },
+    {
+      "t": "h3",
+      "text": "30/60/90 plan"
+    },
+    {
+      "t": "p",
+      "text": "What to fix first, second and third."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "05"
+    },
+    {
+      "t": "h3",
+      "text": "Evidence log"
+    },
+    {
+      "t": "p",
+      "text": "Every claim with its date, source and re-run command."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "Rules"
+    },
+    {
+      "t": "h2",
+      "text": "Four rules\nevery review follows"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "01"
+    },
+    {
+      "t": "h3",
+      "text": "Public pages only"
+    },
+    {
+      "t": "p",
+      "text": "No logins, no scraping behind walls, no private data. If a shopper or a crawler can’t see it, it isn’t in the review."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "02"
+    },
+    {
+      "t": "h3",
+      "text": "Template before page"
+    },
+    {
+      "t": "p",
+      "text": "One template fix usually beats a hundred page fixes. Findings are grouped by the template that causes them."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "03"
+    },
+    {
+      "t": "h3",
+      "text": "Numbers over adjectives"
+    },
+    {
+      "t": "p",
+      "text": "“43 sold-out products still published” instead of “inventory issues”. Every figure is counted, not estimated."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "04"
+    },
+    {
+      "t": "h3",
+      "text": "Dated and re-runnable"
+    },
+    {
+      "t": "p",
+      "text": "Each claim ships with the date and the check behind it, so it can be verified or closed later."
+    },
+    {
+      "t": "h2",
+      "text": "FAQs"
+    },
+    {
+      "t": "p",
+      "text": "About the reviews and how they’re made."
+    },
+    {
+      "t": "text",
+      "tag": "summary",
+      "cls": "",
+      "text": "What is a review here?"
+    },
+    {
+      "t": "text",
+      "tag": "summary",
+      "cls": "",
+      "text": "Did these companies hire you?"
+    },
+    {
+      "t": "text",
+      "tag": "summary",
+      "cls": "",
+      "text": "How long does one take?"
+    },
+    {
+      "t": "text",
+      "tag": "summary",
+      "cls": "",
+      "text": "Why is every figure dated?"
+    },
+    {
+      "t": "text",
+      "tag": "summary",
+      "cls": "",
+      "text": "Can you review my site?"
+    },
+    {
+      "t": "h2",
+      "text": "Want one for\nyour site?"
+    },
+    {
+      "t": "p",
+      "text": "Send a URL. You’ll get the first findings back, dated and sourced."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn ghost",
+      "text": "hireme@mousabatarseh.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "t": "text",
+      "tag": "label",
+      "cls": "qsl1",
+      "text": "Start with your website"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Dated, sourced findings",
+        "One working fix, built for your site",
+        "Public pages only, no logins"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Request a review",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Review%20my%20site"
+    },
+    {
+      "text": "hireme@mousabatarseh.com",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Review%20my%20site"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    }
+  ],
+  "status": 200
+}

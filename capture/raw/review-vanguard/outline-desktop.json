@@ -1,0 +1,54 @@
+{
+  "viewport": {
+    "w": 1440,
+    "h": 900
+  },
+  "background": "rgb(27, 28, 29)",
+  "text": "rgb(237, 235, 230)",
+  "fonts": {
+    "body": "\"Open Sans\", system-ui, sans-serif",
+    "h1": "Oswald, \"Arial Narrow\", sans-serif"
+  },
+  "loadedFonts": [
+    "IBM Plex Mono",
+    "Open Sans",
+    "Oswald"
+  ],
+  "items": [
+    {
+      "k": "nav",
+      "x": 0.0125,
+      "y": 0.1569,
+      "w": 0.1486,
+      "h": 0.2236
+    },
+    {
+      "k": "heading",
+      "x": 0.2194,
+      "y": 0.1138,
+      "w": 0.4118,
+      "h": 0.1568
+    },
+    {
+      "k": "text",
+      "x": 0.2194,
+      "y": 0.2862,
+      "w": 0.4118,
+      "h": 0.1228
+    },
+    {
+      "k": "text",
+      "x": 0.2601,
+      "y": 0.8429,
+      "w": 0.425,
+      "h": 0.0569
+    },
+    {
+      "k": "heading",
+      "x": 0.2014,
+      "y": 0.9913,
+      "w": 0.6806,
+      "h": 0.0411
+    }
+  ]
+}

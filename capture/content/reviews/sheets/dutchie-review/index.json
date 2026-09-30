@@ -1,0 +1,38 @@
+[
+  {
+    "n": "01",
+    "url": "https://mousabatarseh.com/dutchie-review/",
+    "status": 200,
+    "title": "Dutchie — Launch readiness review",
+    "h1": "Shipping is done. Ready is the other half.",
+    "description": "An outside read of Dutchie's launch surfaces: a shipped feature still 'Coming soon' in the help center, Consumer AI with no help articles 97 days in, and a Plus end-of-support date that lives only in a blog post.",
+    "height": 2590
+  },
+  {
+    "n": "02",
+    "url": "https://mousabatarseh.com/dutchie-review/gate.html",
+    "status": 200,
+    "title": "Dutchie — Launch gate",
+    "h1": "One launch, every surface, one verdict.",
+    "description": "A go / at-risk / no-go gate across every public surface of a Dutchie launch, built on the public record.",
+    "height": 1515
+  },
+  {
+    "n": "03",
+    "url": "https://mousabatarseh.com/dutchie-review/lint.html",
+    "status": 200,
+    "title": "Dutchie — Release-note check",
+    "h1": "Catch terpenese before it's a URL.",
+    "description": "A pre-publish headline check for Dutchie release notes: spelling, product-name dictionary and title template.",
+    "height": 1229
+  },
+  {
+    "n": "04",
+    "url": "https://mousabatarseh.com/dutchie-review/plan.html",
+    "status": 200,
+    "title": "Dutchie — 30-day plan",
+    "h1": "Make “ready” checkable.",
+    "description": "A 30-day plan to make Dutchie launch readiness checkable: truth, the gate, signal.",
+    "height": 1236
+  }
+]

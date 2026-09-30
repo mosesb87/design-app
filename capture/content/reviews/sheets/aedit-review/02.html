@@ -1,0 +1,38 @@
+<div class="wrap">
+
+  <p class="crumb">Sec. 02 — Blockers &amp; the cutover</p>
+  <div class="sec-h"><span class="tag">THE UNBLOCK</span><h2>The domain cutover</h2></div>
+  <p class="sec-sub">The single change that makes a public launch possible: a connected custom domain with SSL, and every “coming soon” link on aedit.com repointed to it.</p>
+  <div class="flow">
+    <div class="node now"><div class="k">Today</div><div class="v">GoDaddy park</div><p>Parking lander since Feb 2025</p></div>
+    <div class="node"><div class="k">Step 1</div><div class="v">A + CNAME</div><p>Point apex and www at Shopify</p></div>
+    <div class="node"><div class="k">Step 2</div><div class="v">SSL issued</div><p>Shopify provisions the certificate; set as primary</p></div>
+    <div class="node live"><div class="k">Live</div><div class="v">aeditmedshop.com</div><p>Password off, store open</p></div>
+  </div>
+  <p style="margin-top:14px"><span class="ev">Evidence: aedit.com header/footer; Shopify third-party-domain docs</span></p>
+
+  <div class="sec-h" style="margin-top:48px"><span class="tag">LINKS</span><h2>What gets repointed</h2></div>
+  <div class="code2" style="margin-top:16px">
+<pre class="was"><span class="cap">aedit.com header — now</span>&lt;a href="https://<b class="del">aeditmedshop.myshopify.com</b>"
+   class="<b class="del">pointer-events-none</b>"
+   title="<b class="del">Coming soon</b>"&gt;Medshop&lt;/a&gt;</pre>
+<pre class="now"><span class="cap">After cutover</span>&lt;a href="https://<b class="add">aeditmedshop.com</b>"&gt;Medshop&lt;/a&gt;
+<b class="add">/* + footer, /aedit-medspa “Shop” block,
+   and a redirect map so nothing 404s */</b></pre>
+  </div>
+
+  <div class="sec-h" style="margin-top:48px"><span class="tag">ADJACENT</span><h2>Data quality this role also touches</h2></div>
+  <div class="tbl" style="margin-top:16px"><table>
+    <thead><tr><th>Finding</th><th>Where</th><th>Scale</th></tr></thead>
+    <tbody>
+      <tr><td>Provider pages have no H1</td><td class="num">/provider/…</td><td>24 of 24 sampled</td></tr>
+      <tr><td>Titles read “Provider in undefined, undefined | AEDIT”</td><td class="num">/provider/donald-roman-12691</td><td>sampled pages</td></tr>
+      <tr><td>Provider/practice URLs with no lastmod</td><td class="num">sitemaps</td><td>~63k URLs</td></tr>
+      <tr><td>Malformed URL in sitemap index</td><td class="num">aedit.com//sitemaps/…</td><td>index-level</td></tr>
+    </tbody>
+  </table></div>
+  <p style="margin-top:14px"><span class="ev">Evidence: aedit.com/sitemap.xml; sampled provider pages, Sep 19, 2026</span></p>
+
+
+<div class="pagenav"><a href="https://mousabatarseh.com/aedit-review/index.html">← Overview</a><a class="next" href="https://mousabatarseh.com/aedit-review/countdown.html">Next: Countdown →</a></div>
+</div>

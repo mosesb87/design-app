@@ -1,0 +1,312 @@
+{
+  "slug": "trionn",
+  "url": "https://trionn.com/",
+  "probedAt": "2026-09-26T16:46:56.893Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://trionn.com/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "#trionn-symbol-canvas-wrap.absolute.inset-0"
+      ]
+    },
+    "title": "TRIONN | AI-Powered Creative Design & Development Studio in India",
+    "description": "TRIONN is an independent AI-powered digital studio crafting meaningful brand experiences through strategy, design, and technology. Based in Rajkot, Gujarat, India, we create premium websites, immersive digital products, and interactive experiences for ambitious brands worldwide.",
+    "headings": [
+      "H1: Designed to",
+      "H1: mean depth.",
+      "H2: Trionn is an independent digital studio crafting meaningful brand experiences through stra",
+      "H2: Key facts",
+      "H2: Selected work & explorations",
+      "H2: Client stories",
+      "H2: Design in",
+      "H2: motion",
+      "H2: Ready to build something bold?",
+      "H2: Let's build something great."
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": true,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": true,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 3,
+      "video": 6,
+      "autoplayVideo": 2,
+      "iframes": 2,
+      "svg": 95,
+      "pinSpacers": 4,
+      "sticky": 0,
+      "fixed": 21,
+      "links": 40,
+      "images": 31
+    },
+    "cursorHidden": true,
+    "viewTransitions": false,
+    "fonts": [
+      "neueHaas",
+      "martianMono",
+      "familjen"
+    ],
+    "type": {
+      "body": "neueHaas, \"neueHaas Fallback\", sans-serif",
+      "h1Family": "familjen, \"familjen Fallback\", sans-serif",
+      "h1Size": "90px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(4, 5, 8)",
+      "text": "rgb(216, 216, 216)"
+    },
+    "scroll": {
+      "height": 25497,
+      "viewports": 28.3
+    },
+    "perf": {
+      "fcpMs": 1640,
+      "domContentLoadedMs": 1628,
+      "requests": 139,
+      "transferKB": 2735
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 227,
+      "samples": [
+        "div.chars",
+        "div.chars",
+        "div.chars",
+        "div.chars",
+        "div.chars",
+        "div.chars",
+        "path",
+        "span.title.mt-4",
+        "div.words",
+        "span.title.block",
+        "div.words",
+        "div.words"
+      ],
+      "pinnedCandidates": [
+        "svg",
+        "g",
+        "svg",
+        "g",
+        "div#desktopMenuRef.menu-block.relative",
+        "div.desktop-menu-inner.flex",
+        "canvas",
+        "div#s3-text.relative.z-20"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://trionn.com/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "#trionn-symbol-canvas-wrap.absolute.inset-0"
+      ]
+    },
+    "title": "TRIONN | AI-Powered Creative Design & Development Studio in India",
+    "description": "TRIONN is an independent AI-powered digital studio crafting meaningful brand experiences through strategy, design, and technology. Based in Rajkot, Gujarat, India, we create premium websites, immersive digital products, and interactive experiences for ambitious brands worldwide.",
+    "headings": [
+      "H1: Designed to",
+      "H1: mean depth.",
+      "H2: Trionn is an independent digital studio crafting meaningful brand experiences through stra",
+      "H2: Key facts",
+      "H2: Selected work & explorations",
+      "H2: Client stories",
+      "H2: Design in",
+      "H2: motion",
+      "H2: Ready to build something bold?",
+      "H2: Let's build something great."
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": true,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": true,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 3,
+      "video": 6,
+      "autoplayVideo": 2,
+      "iframes": 2,
+      "svg": 95,
+      "pinSpacers": 4,
+      "sticky": 0,
+      "fixed": 21,
+      "links": 40,
+      "images": 31
+    },
+    "cursorHidden": true,
+    "viewTransitions": false,
+    "fonts": [
+      "neueHaas",
+      "martianMono",
+      "familjen"
+    ],
+    "type": {
+      "body": "neueHaas, \"neueHaas Fallback\", sans-serif",
+      "h1Family": "familjen, \"familjen Fallback\", sans-serif",
+      "h1Size": "90px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(4, 5, 8)",
+      "text": "rgb(216, 216, 216)"
+    },
+    "scroll": {
+      "height": 25497,
+      "viewports": 28.3
+    },
+    "perf": {
+      "fcpMs": 1764,
+      "domContentLoadedMs": 1775,
+      "requests": 148,
+      "transferKB": 2817
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 230,
+      "samples": [
+        "div.lines",
+        "div.words",
+        "div.chars",
+        "div.chars",
+        "div.chars",
+        "div.chars",
+        "div.chars",
+        "div.chars",
+        "path",
+        "span.title.mt-4",
+        "div.words",
+        "span.title.block"
+      ],
+      "pinnedCandidates": [
+        "svg",
+        "g",
+        "svg",
+        "g",
+        "div#desktopMenuRef.menu-block.relative",
+        "div.desktop-menu-inner.flex",
+        "canvas",
+        "div#s3-text.relative.z-20"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": []
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://trionn.com/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.fixed.top-0",
+        "#trionn-symbol-canvas-wrap.absolute.inset-0"
+      ]
+    },
+    "title": "TRIONN | AI-Powered Creative Design & Development Studio in India",
+    "description": "TRIONN is an independent AI-powered digital studio crafting meaningful brand experiences through strategy, design, and technology. Based in Rajkot, Gujarat, India, we create premium websites, immersive digital products, and interactive experiences for ambitious brands worldwide.",
+    "headings": [
+      "H1: Designed to",
+      "H1: mean depth.",
+      "H2: Trionn is an independent digital studio crafting meaningful brand experiences through stra",
+      "H2: Key facts",
+      "H2: Selected work & explorations",
+      "H2: Client stories",
+      "H2: Design in",
+      "H2: motion",
+      "H2: Ready to build something bold?",
+      "H2: Let's build something great."
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": true,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": true,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 3,
+      "video": 6,
+      "autoplayVideo": 2,
+      "iframes": 2,
+      "svg": 95,
+      "pinSpacers": 5,
+      "sticky": 0,
+      "fixed": 21,
+      "links": 40,
+      "images": 46
+    },
+    "cursorHidden": true,
+    "viewTransitions": false,
+    "fonts": [
+      "neueHaas",
+      "martianMono",
+      "familjen"
+    ],
+    "type": {
+      "body": "neueHaas, \"neueHaas Fallback\", sans-serif",
+      "h1Family": "familjen, \"familjen Fallback\", sans-serif",
+      "h1Size": "45.7031px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgb(4, 5, 8)",
+      "text": "rgb(216, 216, 216)"
+    },
+    "scroll": {
+      "height": 19079,
+      "viewports": 22.6
+    },
+    "perf": {
+      "fcpMs": 1532,
+      "domContentLoadedMs": 1473,
+      "requests": 213,
+      "transferKB": 3350
+    },
+    "animationsNow": 0,
+    "motion": null,
+    "mobileNav": {
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": []
+  }
+}

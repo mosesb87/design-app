@@ -1,0 +1,57 @@
+---
+// A band of what Mousa works with, running across the page. The list is read once by screen readers.
+interface Props { items: string[]; tone?: 'ink' | 'light' | 'accent'; tilt?: number; reverse?: boolean; label?: string }
+const { items, tone = 'ink', tilt = 0, reverse = false, label = 'What I work with' } = Astro.props;
+const run = [...items, ...items];
+---
+<div class:list={['mq', `mq--${tone}`, { 'mq--rev': reverse }]} style={`--tilt:${tilt}deg`} data-marquee>
+  <p class="visually-hidden">{label}: {items.join(', ')}.</p>
+  <div class="mq__track" aria-hidden="true">
+    {[0, 1].map(() => (
+      <div class="mq__run">
+        {run.map((t) => (<span class="mq__item">{t}<i class="mq__star"></i></span>))}
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .mq {
+    position: relative;
+    z-index: 4;
+    margin-inline: 0;
+    padding-block: clamp(14px, 1.6vw, 22px);
+    transform: rotate(var(--tilt));
+    overflow: hidden;
+    box-shadow: var(--shadow-1);
+  }
+  .mq--ink { background: #000; color: #fff; }
+  .mq--ink .mq__star { background: #fff; }
+  .mq--light { background: var(--blue-soft); color: var(--ink); box-shadow: none; }
+  .mq--light .mq__star { background: var(--ink) !important; }
+  .mq--accent { background: var(--accent); color: #fff; }
+  .mq__track { display: flex; width: max-content; animation: mq 38s linear infinite; }
+  .mq--rev .mq__track { animation-direction: reverse; }
+  .mq__run { display: flex; flex: none; }
+  .mq__item {
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(16px, 2vw, 32px);
+    padding-right: clamp(16px, 2vw, 32px);
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-stretch: 75%;
+    font-size: clamp(1.75rem, 3.6vw, 3.25rem);
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .mq__star { display: inline-block; width: 0.22em; height: 0.22em; border-radius: 50%; background: var(--accent-soft); }
+  .mq--light .mq__star { background: var(--accent); }
+  .mq--accent .mq__star { background: #fff; }
+  @keyframes mq { to { transform: translateX(-50%); } }
+  .mq:hover .mq__track { animation-play-state: paused; }
+  @media (prefers-reduced-motion: reduce) {
+    .mq__track { animation: none; }
+  }
+</style>

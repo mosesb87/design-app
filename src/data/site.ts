@@ -1,0 +1,239 @@
+// Identity, method, services and supporting content.
+// Every line here is taken from Mousa's published pages (sources noted) or was confirmed by him.
+
+export const SITE_URL = 'https://mousabatarseh.com';
+export const CHECKED = '2026-09-26'; // date the content audit verified these facts
+
+export const person = {
+  name: 'Mousa Batarseh',
+  first: 'Mousa',
+  last: 'Batarseh',
+  title: 'Webmaster & e-commerce specialist',
+  roles: ['Webmaster', 'WordPress & e-commerce', 'Product data', 'SEO'],
+  location: 'Warren, Michigan',
+  region: 'Metro Detroit',
+  email: 'hireme@mousabatarseh.com',
+  phoneDisplay: '(248) 810-1816',
+  phoneHref: 'tel:+12488101816',
+  linkedin: 'https://www.linkedin.com/in/mousabatarseh',
+  linkedinLabel: 'linkedin.com/in/mousabatarseh',
+  languages: ['English', 'Arabic'],
+  platforms: ['WordPress', 'WooCommerce', 'Shopify'],
+  builders: ['Elementor', 'Divi'],
+  years: 7, // confirmed by Mousa, 2026-09-26
+  wordpressSince: 2019, // confirmed by Mousa, 2026-09-26
+  // /v2 hero
+  intro:
+    'I build and run WordPress websites and e-commerce stores — and the checks that keep them honest. Catalogs, promotions, SEO, and the Friday jobs nobody should do by hand.',
+  availability: 'Available now',
+  // /v2 about (years updated to seven, confirmed)
+  about: [
+    'I’m Mousa — the person you call when the website looks fine but nothing quite works. Seven years building and running sites on WordPress, Elementor and Divi have taught me that a good website is equal parts design, data and discipline: pages that load fast and read well, catalogs that stay clean whether they live in WooCommerce or Shopify, and SEO that’s built into the structure rather than bolted on afterwards.',
+    'I turn “someone does this by hand every Friday” into systems that run themselves, and I’m happiest when a site simply works, every day, without anyone having to rescue it.',
+  ],
+  // /v2 thesis
+  thesis: {
+    lead: 'A request is trusted by default. Almost every error begins there.',
+    body: 'A supplier’s export says one thing and the store’s import expects another. A deal sheet names one price and the register charges a second. The storefront a customer browses is a mirror of the register — and mirrors drift.',
+    close:
+      'Every build I make starts at that seam and does the same first thing: it reduces the request to something that can be checked, so one set of rules can judge it before a customer ever sees it.',
+  },
+  contactLine: 'Send the site, the store or the spreadsheet that isn’t behaving.',
+  contactSub: 'I’ll tell you what I see, with dates.',
+} as const;
+
+// Where he has worked — as on his résumé and LinkedIn (confirmed by Mousa).
+export const employers = [
+  { name: 'Wild Bill’s Tobacco', role: 'Webmaster', years: '2024–2025', note: 'Multi-location retailer, Michigan · corporate sites, the wholesale B2B store, seasonal campaign pages' },
+  { name: 'Universal Wholesale', role: 'Webmaster / E-Commerce Specialist', years: '2019–2024', note: 'Southfield, MI · the Universal Wholesale and United Textile stores, a 14,000-item catalog' },
+  { name: 'Freelance', role: 'Web developer', years: '2024–present', note: 'K-WAV (now Total LED), PTEE, Eat With Samar and other WordPress, Wix and Shopify builds' },
+] as const;
+
+// The three layers, with Mousa's own worked example (/v2).
+export const layers = [
+  {
+    n: '01',
+    name: 'The sheet',
+    title: 'What was asked',
+    text: 'The supplier export, the deal sheet, the brief. Written by a person, in a hurry, from memory.',
+    example: 'Promo price $19.20 · reg price $24.00 · “20% off” → 20% of $24.00 is $19.20. Matches.',
+  },
+  {
+    n: '02',
+    name: 'The register',
+    title: 'What the system holds',
+    text: 'The catalog, the live price, the inventory, the signed vendor terms, the margin floor.',
+    example: 'System reg price $25.60 · vendor cap 20% · margin floor 32% → sheet price is stale. Check 04 fails.',
+  },
+  {
+    n: '03',
+    name: 'The shelf',
+    title: 'What the customer sees',
+    text: 'The menu, the product page, the search result, the answer an AI engine quotes back.',
+    example: 'Verdict: blocked before a menu · owner: pricing team · reason written in plain words → nothing wrong ever reached the shelf.',
+  },
+] as const;
+
+// Four-step method (/reviews)
+export const method = [
+  { n: '01', title: 'Read it like a machine', text: 'Sitemap, robots, canonicals, schema and prices, straight from the public HTML.' },
+  { n: '02', title: 'Date every claim', text: 'Every finding carries its date, URL and the check behind it.' },
+  { n: '03', title: 'Build the fix', text: 'A scanner, a template or a working browser a team can use on Monday.' },
+  { n: '04', title: 'Sequence the work', text: 'Template fixes first, because one change fixes hundreds of pages.' },
+] as const;
+
+// Eleven-step workflow (v1 with its descriptions)
+export const workflow = [
+  ['Business goal', 'Define the business need, audience, scope, and success criteria.'],
+  ['Research', 'Review available data, competitors, users, and technical constraints.'],
+  ['Planning', 'Map the site structure, content, tasks, owners, and timeline.'],
+  ['Content', 'Write or refine clear, useful, search-aware website copy.'],
+  ['Design', 'Create responsive layouts and visuals aligned with the brand.'],
+  ['Development', 'Build or update pages, forms, stores, and site features.'],
+  ['Testing', 'Verify content, links, forms, responsiveness, and core functionality.'],
+  ['SEO', 'Optimize titles, metadata, headings, links, images, and crawl paths.'],
+  ['Launch', 'Publish approved work and complete final production checks.'],
+  ['Measure', 'Review analytics, search data, and key user actions.'],
+  ['Improve', 'Use verified findings to prioritize the next site improvements.'],
+] as const;
+
+// Six services with the tools named on /v2
+export const services = [
+  {
+    n: '01',
+    title: 'E-commerce operations',
+    text: 'Manage the details that keep Shopify and WooCommerce stores accurate: products, pricing, inventory, variants, images and promotions.',
+    tools: ['Shopify', 'WooCommerce', 'Catalog management', 'B2B workflows', 'Promotions'],
+  },
+  {
+    n: '02',
+    title: 'Product data & catalogs',
+    text: 'Clean, map, validate and migrate large catalogs with practical spreadsheets and import-ready CSV workflows.',
+    tools: ['CSV imports', 'Attribute mapping', 'Variants & SKUs', 'Inventory & pricing', 'Catalog QA', 'XLOOKUP', 'INDEX/MATCH', 'Pivot tables'],
+  },
+  {
+    n: '03',
+    title: 'WordPress & Elementor builds',
+    text: 'Build and maintain responsive pages that are consistent, easy to update and ready for real customers.',
+    tools: ['WordPress', 'Elementor', 'Divi', 'HTML', 'CSS', 'JavaScript', 'PHP'],
+  },
+  {
+    n: '04',
+    title: 'SEO & analytics',
+    text: 'Improve on-page structure and track performance with GA4, Search Console and reporting teams can act on.',
+    tools: ['Google Analytics 4', 'Search Console', 'On-page SEO', 'Google Business Profile', 'Semrush', 'Yoast SEO'],
+  },
+  {
+    n: '05',
+    title: 'Design & marketing assets',
+    text: 'Create product graphics, campaign pages and email assets that support launches and seasonal promotions.',
+    tools: ['Photoshop', 'Mailchimp', 'Constant Contact', 'Jotform', 'Content QA'],
+  },
+  {
+    n: '06',
+    title: 'Workflow & documentation',
+    text: 'Turn repeatable work into documented processes, QA checklists and tools that reduce errors and improve handoffs.',
+    tools: ['SOPs', 'QA checklists', 'Change logs', 'Browser tools'],
+  },
+] as const;
+
+// Skill groups (v1), condensed for the about page spec sheet
+export const skills = [
+  {
+    title: 'Product data management',
+    items: ['Catalog imports, exports and CSV preparation', 'Attribute mapping and variant structure', 'Categories, collections and product organization', 'SKU management and image-URL mapping', 'Inventory, pricing and product-data maintenance', 'Customer groups, wholesale and volume pricing', 'Catalog validation and quality assurance'],
+  },
+  {
+    title: 'SEO',
+    items: ['Keyword research and page-topic targeting', 'Technical and on-page SEO', 'Titles, metadata, headings and content structure', 'Internal linking and image optimization', 'Alt text, schema, sitemaps and crawl checks', 'Google Search Console and Google Analytics 4', 'SEO audits and documented updates'],
+  },
+  {
+    title: 'E-commerce management',
+    items: ['Shopify, WooCommerce and WordPress administration', 'Coupons, promotions and sale rules', 'Shipping settings and customer accounts', 'B2B registration and wholesale workflows', 'Responsive QA, bug tracking and issue resolution'],
+  },
+  {
+    title: 'Excel',
+    items: ['CSV import templates and product-data mapping', 'VLOOKUP, XLOOKUP, INDEX and MATCH', 'Pivot tables, charts and operational reports', 'Duplicate checks and exception review', 'Catalog and inventory reconciliation', 'Price sheets and volume-pricing models'],
+  },
+  {
+    title: 'Business operations',
+    items: ['Workflow planning, process improvement and SOPs', 'Scope tracking and project coordination', 'Cross-functional communication and handoffs', 'Issue tracking, change logs and organized files', 'Quality assurance and detail-oriented closeout'],
+  },
+] as const;
+
+export const toolGroups = [
+  { title: 'Development & website', items: ['WordPress', 'Elementor', 'Divi', 'WooCommerce', 'Shopify', 'HTML', 'CSS', 'Photoshop'] },
+  { title: 'Analytics & SEO', items: ['Google Analytics 4', 'Google Search Console', 'Google Business Profile', 'Moz', 'Semrush', 'Yoast SEO'] },
+  { title: 'Email marketing', items: ['Mailchimp', 'Constant Contact'] },
+  { title: 'Productivity', items: ['Microsoft Word, Excel, PowerPoint', 'Google Workspace', 'Jotform'] },
+  { title: 'Writing & AI', items: ['Grammarly', 'ChatGPT', 'Copilot', 'Gemini', 'Claude', 'Human review before anything is published'] },
+] as const;
+
+// Courses & certifications: all eleven certificates Mousa's site publishes (portfolio-home/img/, fetched
+// 2026-09-27 into capture/certs/). Titles, issuers and dates as printed on each certificate; newest first.
+export const courses: { title: string; issuer: string; text: string; cert?: { img: string; date: string; w: number; h: number } }[] = [
+  { title: 'From Likes to Leads: Interact with Customers Online', issuer: 'Google, via Coursera', text: 'Social media and online channels for engaging customers.', cert: { img: 'from-likes-to-leads', date: '2024-07-18', w: 1649, h: 1275 } },
+  { title: 'Think Outside the Inbox: Email Marketing', issuer: 'Google, via Coursera', text: 'Email strategy, campaign planning and audience engagement.', cert: { img: 'think-outside-inbox', date: '2024-07-16', w: 1536, h: 1024 } },
+  { title: 'Foundations of Digital Marketing and E-commerce', issuer: 'Google, via Coursera', text: 'Digital marketing fundamentals and online customer engagement.', cert: { img: 'foundations-digital-marketing', date: '2024-05-21', w: 2112, h: 1638 } },
+  { title: 'Attract and Engage Customers with Digital Marketing', issuer: 'Google, via Coursera', text: 'Search, digital campaigns and customer engagement.', cert: { img: 'attract-engage-customers', date: '2024-01-06', w: 1535, h: 1024 } },
+  { title: 'Wharton Advanced Digital Marketing and Growth Strategies', issuer: 'The Wharton School · Aresty Institute of Executive Education', text: 'Digital strategy, customer acquisition and growth frameworks.', cert: { img: 'wharton-advanced-marketing', date: '2023-11-22', w: 1402, h: 1122 } },
+  { title: 'Prompt Engineering: How to Talk to the AIs', issuer: 'LinkedIn Learning', text: 'Writing prompts for large language models and generative AI.', cert: { img: 'linkedin-prompt-engineering', date: '2023-05-20', w: 1650, h: 1275 } },
+  { title: 'Generative AI for Business Leaders', issuer: 'LinkedIn Learning', text: 'AI for business, and generative AI for management.', cert: { img: 'linkedin-generative-ai-business-leaders', date: '2023-05-08', w: 1650, h: 1275 } },
+  { title: 'How To Become A Shopify Expert (From Zero To Hero!)', issuer: 'Udemy', text: 'Shopify setup, catalog management, pricing, inventory and store operations.', cert: { img: 'shopify-zero-hero', date: '2023-05-05', w: 1494, h: 1122 } },
+  { title: 'Learn Elementor – WordPress Front-End Development Course', issuer: 'Udemy', text: 'Front-end WordPress development with the Elementor page builder.', cert: { img: 'learn-elementor', date: '2022-01-18', w: 1502, h: 1120 } },
+  { title: 'NLP – Neuro Linguistic Programming – The Complete NLP Course', issuer: 'Udemy', text: 'Communication and rapport techniques.', cert: { img: 'neuro-linguistic-programming', date: '2022-01-18', w: 1600, h: 1190 } },
+  { title: 'Web Development Fundamentals Bootcamp', issuer: 'Nucamp', text: 'HTML, CSS, responsive layouts and front-end fundamentals.', cert: { img: 'nucamp-web-development', date: '2021-11-07', w: 1122, h: 1402 } },
+];
+
+// The degree, as Mousa's home page states it (place from his résumé page).
+export const degree = { title: 'Bachelor of Science (B.S.)', field: 'Accounting Information Systems', school: 'Al-Balqa Applied University', place: 'Amman, Jordan', years: '2016' };
+
+// Six curated reviews (the full set of 22 stays on the live /reviews/ index)
+export type Review = {
+  slug: string;
+  title: string;
+  site: string;
+  focus: string;
+  date: string; // ISO
+  number: string;
+  numberLabel: string;
+  fix: string;
+  url: string;
+  media: string; // capture slug
+};
+export const reviews: Review[] = [
+  { slug: 'reworked', title: 'Carhartt Reworked', site: 'reworked.carhartt.com', focus: 'E-commerce & DTC', date: '2026-09-25', number: '3,545', numberLabel: 'listings read, with four working fixes built on the day’s catalog', fix: 'Ten work orders and four working fixes, including a gift-collection builder.', url: 'https://mousabatarseh.com/reworked-review/', media: 'review-carhartt-reworked' },
+  { slug: 'oakwood', title: 'Oakwood Veneer', site: 'oakwoodveneer.com', focus: 'Catalog & UX', date: '2026-09-19', number: '300+', numberLabel: 'species, with a working species-faceted browser built as the fix', fix: 'Species Atlas — a working, species-faceted browser built as the fix.', url: 'https://mousabatarseh.com/oakwood-review/', media: 'review-oakwood' },
+  { slug: 'vanguard', title: 'Vanguard', site: 'vanguardworld.com', focus: 'Product templates', date: '2026-09-19', number: '443', numberLabel: 'products covered by one template fix', fix: 'A before/after toggle that applies the template fix to all 443 products.', url: 'https://mousabatarseh.com/vanguard-review/', media: 'review-vanguard' },
+  { slug: 'jbtools', title: 'JB Tools', site: 'jbtools.com', focus: 'Catalog & listings', date: '2026-09-19', number: '104,348', numberLabel: 'products in the index, with a supplier-price SOP', fix: 'A triage board and a supplier-price SOP.', url: 'https://mousabatarseh.com/jbtools-review/', media: 'review-jbtools' },
+  { slug: 'hayhouse', title: 'Hay House', site: 'shop.hayhouse.com', focus: 'Pricing & catalog', date: '2026-09-16', number: '874', numberLabel: 'products checked, with worked examples for reporting and SOPs', fix: 'A catalog card with worked examples.', url: 'https://mousabatarseh.com/hayhouse-review/', media: 'review-hayhouse' },
+  { slug: 'biotrust', title: 'BioTRUST', site: 'biotrust.com', focus: 'Launch readiness', date: '2026-09-19', number: '1', numberLabel: 'clickable go-live gate, built for the relaunch', fix: 'A clickable go-live gate that only reads GO when the blockers are cleared.', url: 'https://mousabatarseh.com/biotrust-review/', media: 'review-biotrust' },
+];
+export const reviewsIndexUrl = 'https://mousabatarseh.com/reviews/';
+
+// Six notes from the blog (WordPress)
+export const posts = [
+  { title: 'Core Web Vitals on a Page-Builder Site', date: '2026-08-12', topic: 'WordPress & web', url: 'https://work.mousabatarseh.com/core-web-vitals-elementor-wordpress/' },
+  { title: 'Filters Are the Real Search', date: '2026-05-14', topic: 'E-commerce operations', url: 'https://work.mousabatarseh.com/product-filters-attributes-ecommerce/' },
+  { title: 'Redirects Are the Migration', date: '2026-03-19', topic: 'SEO', url: 'https://work.mousabatarseh.com/redirect-mapping-ecommerce-migration/' },
+  { title: 'The SKU Is a Decision, Not a Label', date: '2026-03-03', topic: 'Product data', url: 'https://work.mousabatarseh.com/sku-structure-product-catalog/' },
+  { title: 'On-Page SEO When You Have Thousands of Product Pages', date: '2026-01-27', topic: 'SEO', url: 'https://work.mousabatarseh.com/on-page-seo-large-product-catalog/' },
+  { title: 'Field Mapping Is the Whole Migration', date: '2025-11-06', topic: 'E-commerce operations', url: 'https://work.mousabatarseh.com/product-catalog-migration-field-mapping/' },
+] as const;
+export const blogUrl = 'https://mousabatarseh.com/blog';
+
+// Everything lives on this site: the blog and the reviews are sections of it, not links to other sites.
+export const nav = [
+  { label: 'Home', href: '/' },
+  { label: 'Work', href: '/work/' },
+  { label: 'Tools', href: '/tools/' },
+  { label: 'Reviews', href: '/reviews/' },
+  { label: 'Method', href: '/method/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'About', href: '/about/' },
+] as const;
+
+export function formatDate(iso: string, style: 'short' | 'long' = 'short') {
+  const d = new Date(iso + 'T12:00:00Z');
+  return d.toLocaleDateString('en-US', style === 'short' ? { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' } : { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+}

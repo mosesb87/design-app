@@ -1,0 +1,419 @@
+# Case-study facts: Mousa Batarseh portfolio (checked Sep 26, 2026)
+
+**Method.** Every page below was fetched as text through Exa. The container can't reach these sites directly, and I saw no page rendered. Quotes are verbatim from the fetched text. Where a heading ran into the next line in the extraction, I restored the space and said so. Animated counters that render as "0" in text are marked as such.
+
+**How to read this.**
+- **Role** means Mousa's own published statement of what he did. Nothing is inferred.
+- **Numbers** carry their source, and a date where one is given.
+- **Pull-quotes** are short and verbatim, with their URL.
+
+## Ground rules confirmed by Mousa (treat as fact)
+- **Seven years' experience** (WordPress since 2019). His pages disagree:
+  - "5+ years" on [v1 home](https://mousabatarseh.com/), [work home](https://work.mousabatarseh.com/), [resume](https://work.mousabatarseh.com/resume/) and [Northgate](https://lab.mousabatarseh.com/northgate-group/).
+  - "Six years" on the [v2 home](https://mousabatarseh.com/v2/) and [Deals OS](https://mousabatarseh.com/deals-os/).
+  - Use seven everywhere.
+- **Great Lakes Cigar Festival GA4:** 287 users and 1,954 events, **July 4–31, 2025**. Every page of his says 2026, which is wrong.
+- **Universal Wholesale** is described platform-neutrally. His case study, the v1/v2 homes and the field-mapping post name WooCommerce; his resume and LinkedIn name RepZio/Repzio. Neither name is used below, and platform names are cut from the quotes with "…".
+
+## Conflicts to resolve before copy is written
+1. **Employment timeline.**
+   - The [resume](https://work.mousabatarseh.com/resume/) and [LinkedIn](https://www.linkedin.com/in/mousabatarseh) say United Textile Wholesale from "December 2023 – Present" and Universal Wholesale from "June 2019 – April 2023".
+   - The [DiaMedical page](https://mousabatarseh.com/diamedical/) instead says "December 2023 – present · Webmaster · Wild Bill’s Tobacco". For June 2019 – April 2023 at Universal Wholesale it says: "Built and operated the Shopify and WordPress e-commerce sites for two brands, Universal Wholesale and United Textile, in parallel."
+   - **The copy must not state dates for United Textile until Mousa confirms which is right.**
+2. **ASAS counts.**
+   - The live site says 3,881 blocks, 143 pages, 29 categories and 12 kits.
+   - [v1 home](https://mousabatarseh.com/), [work home](https://work.mousabatarseh.com/), [work portfolio](https://work.mousabatarseh.com/portfolio/), the [work ASAS case study](https://work.mousabatarseh.com/asas-elementor-wireframe-studio-case-study/) and a [LinkedIn post of 2026-08-29](https://www.linkedin.com/posts/mousabatarseh_elementor-wordpress-designsystems-activity-7499446631365357568-hcc8) all say "4,038" templates in "32 families".
+   - A [LinkedIn post of 2026-09-13](https://www.linkedin.com/posts/mousabatarseh_design-asas-elementor-activity-7504950969936457728-dJDm) says "ASAS Studio now includes 8 curated templates", which doesn't match 143 pages.
+3. **United Textile hidden pricing.** The resume, LinkedIn and the Dec 9, 2025 blog blurb all claim hidden prices for guests. The live homepage fetched as a guest shows "$72.00 USD · Unit Price: $6.00" ([shopunitedtextile.com](https://shopunitedtextile.com/)). **Describe hidden pricing as something he built, not as current live behaviour.**
+4. **"Exposure prevented."** Northgate shows "$6,479 Exposure prevented in one week". Deals OS states: "Exposure figures in the report are modeled examples, not money anyone banked." The figure must be labelled modelled.
+
+---
+
+## 1. ASAS Studio
+- **What it is:** a free library of real Elementor blocks, drawn in grey, that you stack into a page, colour with a kit and export as native Elementor JSON. "ASAS is a library of real Elementor blocks drawn in grey, so the first thing you judge is the structure." ([live](https://asas.mousabatarseh.com/))
+- **Problem (as stated):** "A styled template makes you judge the colour. A grey one makes you judge the page: does the hierarchy hold, does the proof sit next to the claim, does the call to action arrive when the reader is ready?" ([live](https://asas.mousabatarseh.com/))
+- **Role:**
+  - "My role · Product, library, studio and bilingual site" ([v2 case](https://mousabatarseh.com/v2/work/asas-studio/))
+  - "I designed and built ASAS to turn thousands of reusable Elementor blocks into complete, editable pages." ([v1 home](https://mousabatarseh.com/))
+  - "I built ASAS because I kept starting client pages by deleting somebody else's colours." ([live](https://asas.mousabatarseh.com/))
+- **Key features** ([live](https://asas.mousabatarseh.com/)):
+  - Four moves: Browse, Stack, Colour, Export.
+  - Filter "by room (hero, pricing, FAQ), by behaviour (static, carousel, accordion, tabs, split) or by its ASAS name".
+  - "Twelve kits set ink, paper, lines and accent across every block at once". The site itself repaints live.
+  - Each block has an Arabic name with English beside it (e.g. "مشرّط Musharrat Scored").
+  - Export is "The same JSON format Elementor uses for its own library".
+  - "The Studio names any block that needs Elementor Pro before you download".
+  - Placeholder images are copied into the media library on import.
+- **Stack:** "Elementor core widgets only"; "37 Elementor widget types, with no third-party add-on required". The v1 label is "WordPress + Elementor" ([live](https://asas.mousabatarseh.com/), [v1](https://mousabatarseh.com/)).
+- **Languages:** "English & Arabic, RTL-native"; "Arabic pages export right-to-left" ([live](https://asas.mousabatarseh.com/)).
+- **Numbers (live site, confirmed Sep 26, 2026)** ([live](https://asas.mousabatarseh.com/), [v2 case](https://mousabatarseh.com/v2/work/asas-studio/)):
+  - 3,881 blocks: "each a real capture of a rendered Elementor template"
+  - 143 ready-made pages
+  - 29 categories: "named by what they do on a page, in English and Arabic"
+  - 12 kits ("Twelve kits")
+  - 1 native Elementor JSON file
+  - 37 widget types
+  - 24 blocks per file
+  - 1,290-pixel card screenshots
+  - "Start with 187 hero sections"
+  - Outdated alternatives: 4,038 / 32 families (see Conflicts).
+- **Pull-quotes:**
+  - "Build the page before you style it." ([live](https://asas.mousabatarseh.com/))
+  - "Grey is a decision, not a placeholder." ([live](https://asas.mousabatarseh.com/))
+  - "Four moves. One page." ([live](https://asas.mousabatarseh.com/))
+  - "What you see is what imports." ([live](https://asas.mousabatarseh.com/))
+  - "For me, ASAS is less of a wireframe library and more of a visual composition engine for Elementor." ([LinkedIn, 2026-08-29](https://www.linkedin.com/posts/mousabatarseh_elementor-wordpress-designsystems-activity-7499446631365357568-hcc8))
+- **Dates:** no launch date is stated. The LinkedIn announcement post is dated 2026-08-29, and the v2 recording is labelled "Captured Sep 2026".
+- **Disclaimers:**
+  - "Independent Made by one builder, not a marketplace. Elementor Ltd. is not involved"
+  - "Nothing is published for you, and the Studio never asks for access to your WordPress site."
+  - "just don't resell the library" ([live](https://asas.mousabatarseh.com/))
+- **Live URLs:** https://asas.mousabatarseh.com/ · the Studio at asas.mousabatarseh.com/studio (per [v2 case](https://mousabatarseh.com/v2/work/asas-studio/))
+- **Related:** [work case study page](https://work.mousabatarseh.com/asas-elementor-wireframe-studio-case-study/) (uses the old counts)
+
+## 2. ChangeAtlas Commerce
+- **What it is:** a browser-only checker that compares a Matrixify or WooCommerce catalog export with a baseline. It returns a decision (BLOCK / REVIEW / READY / UNKNOWN) with row-level evidence. ([v2 case](https://mousabatarseh.com/v2/work/changeatlas/), [app](https://mousabatarseh.com/changeatlas/app/))
+- **Problem:** "A catalog import is the most dangerous routine job in a store. One column in the wrong place and a thousand variants lose their barcodes, or a “blank” cell quietly clears an image alt text on every product." ([v2 case](https://mousabatarseh.com/v2/work/changeatlas/))
+- **Role:** "My role · Concept, rules, design and build" ([v2 case](https://mousabatarseh.com/v2/work/changeatlas/))
+- **Key features** ([product page](https://mousabatarseh.com/changeatlas/)):
+  - Every change is classed as created, changed, cleared, omitted, rekeyed, removed or unknown, and cited by sheet, row and column.
+  - Six evidence classes: "Source stated … Calculated … Inferred … Observed … User asserted … Unknown".
+  - A ProofGraph that is "Bounded traversal: depth 3, cap 80 nodes".
+  - "Absence is not emptiness": a missing sheet stays UNKNOWN until the user declares it empty.
+  - A batch plan that keeps groups intact.
+  - A review package with digests and the rule-set version, plus a print view.
+  - A walkthrough: "Four minutes, one blank cell" (row 412, rule REF-004).
+- **Stack (as stated):**
+  - Runs in the browser: "Upload-first and browser-local. No credentials, no store writes".
+  - Rule set "changeatlas-core@1.0.0".
+  - Source profiles "Matrixify XLSX · WooCommerce CSV".
+- **Languages:** English.
+- **Numbers:**
+  - Store writes 0; files uploaded 0 ([v2 case](https://mousabatarseh.com/v2/work/changeatlas/)).
+  - The product page's counter tiles render as "0" in text, so they are animated and not readable ([page](https://mousabatarseh.com/changeatlas/)).
+  - "1,349 deltas in this sample" ([page](https://mousabatarseh.com/changeatlas/)).
+  - ProofGraph sample: "42 affected, 1 unresolved" ([page](https://mousabatarseh.com/changeatlas/)).
+  - Four demo analyses of about 1,000, about 300 and about 10,000 rows ([app](https://mousabatarseh.com/changeatlas/app/)).
+  - All data is fictional: "Everything runs in this browser against a fictional store" ([app](https://mousabatarseh.com/changeatlas/app/)).
+- **Pull-quotes** ([page](https://mousabatarseh.com/changeatlas/) unless noted):
+  - "Know what an import will change before it runs."
+  - "Evidence before confidence."
+  - "Difference is not execution."
+  - "Unknown stays unknown."
+  - "Every number has a row."
+  - "Same file, same rules, same bytes."
+  - "ChangeAtlas is as much about what it will not claim as what it finds."
+  - "Absence is treated as a fact of its own." ([v2 case](https://mousabatarseh.com/v2/work/changeatlas/))
+- **Dates:** none stated. The recording is "Captured Sep 2026".
+- **Live URLs:** https://mousabatarseh.com/changeatlas/ · https://mousabatarseh.com/changeatlas/app/
+
+## 3. Deals Operating System (with DealProof, Northgate and House of Dank)
+- **What it is:** a working promotion-QA prototype. One intake row per deal runs through 16 checks and gets one verdict. It exists as a spreadsheet and a JavaScript engine, and comes with a narrated film. ([v2 case](https://mousabatarseh.com/v2/work/deals-os/), [page](https://mousabatarseh.com/deals-os/))
+- **Problem:** "A promotion can look right and still start from the wrong price." ([page](https://mousabatarseh.com/deals-os/))
+- **Role:** "My role · Workbook, rule engine, walkthrough and films" ([v2 case](https://mousabatarseh.com/v2/work/deals-os/))
+- **Key features** ([page](https://mousabatarseh.com/deals-os/)):
+  - "Eleven fields are mandatory, including the SKU, both prices and the limit per customer".
+  - QA writes the verdict into the last two columns.
+  - Four answers: pass, warn, fail, n/a. "One failure blocks the deal."
+  - Five groups: identity (C1–C3), price (C4–C5), policy (C6–C9), timing (C10–C12), readiness (C13–C16).
+  - A Friday report written from the same rows.
+  - A live copy of the engine, using deal D-1009.
+- **Stack:** "A spreadsheet version and a JavaScript version return the same verdicts to the dollar" ([v2 case](https://mousabatarseh.com/v2/work/deals-os/)).
+- **Numbers:**
+  - 16 automated checks, 5 groups, 4 answers ([page](https://mousabatarseh.com/deals-os/)).
+  - Film "3:46 · narrated", then "a six-minute walkthrough" ([page](https://mousabatarseh.com/deals-os/)).
+  - Modelled week: "20 submitted, 7 cleared first pass (35%), 11 blocked before a menu, 2 held for a decision" ([page](https://mousabatarseh.com/deals-os/)).
+  - D-1009: "the regular price is $39.99; the SKU master says $34.99"; expected promo $22.74 at 35% off ([page](https://mousabatarseh.com/deals-os/)).
+- **Pull-quotes:**
+  - "One intake row. Sixteen checks. One verdict." ([page](https://mousabatarseh.com/deals-os/))
+  - "a check that did not run is not a check that agreed." ([page](https://mousabatarseh.com/deals-os/))
+  - "Correct arithmetic does not remove the decision; it moves it to the right desk." ([page](https://mousabatarseh.com/deals-os/))
+  - "The check runs before the promotion does." ([Northgate](https://lab.mousabatarseh.com/northgate-group/))
+  - "Almost all of it reduces to one job — making sure what a customer sees is what the register charges." ([Northgate](https://lab.mousabatarseh.com/northgate-group/))
+  - "Dutchie is the system of record — what the register actually rings. Weedmaps and Leafly are mirrors of it, and mirrors drift." ([Northgate](https://lab.mousabatarseh.com/northgate-group/))
+- **Disclaimer:** "Exposure figures in the report are modeled examples, not money anyone banked." ([v2 case](https://mousabatarseh.com/v2/work/deals-os/))
+- **Family members:**
+  - **DealProof** ([v2 case](https://mousabatarseh.com/v2/work/dealproof/), [live](https://mousabatarseh.com/dealproof/index.html); the bare `/dealproof/` URL returned no text).
+    - Role: "Concept, checks, design and build".
+    - "One wrong price can undo a great promotion."
+    - Path: Capture → Check → Resolve → Review, with "Keep the decision human."
+    - Four industry workspaces: Grocery, Fashion retail, Restaurants, Cannabis retail.
+    - Google Sheets workbook: "52 fictional examples · 08 worksheets · 04 industries" (the extraction ran these together).
+    - Demo offer: "$24 × (1 − 20%) $19.20" against an offer price of $18.00, marked "FICTIONAL OFFER · SEP 23, 2026".
+    - "TRY IT. NOTHING PUBLISHES."
+    - "Fictional records. Example systems, no live connection."
+  - **Northgate Retail Group adaptation** ([page](https://lab.mousabatarseh.com/northgate-group/)).
+    - Built for a "Marketing Operations / E-Commerce Coordinator" application.
+    - Three tools: Menu & Promotion Manager, the QA Workbook ("The 16 Rules Test") and a Discount Calculator.
+    - "Both implementations were run against the same twenty promotions and produce identical results down to the dollar".
+    - Shows "$6,479 Exposure prevented in one week", which is **modelled** (see Conflicts).
+    - The [v2 home](https://mousabatarseh.com/v2/) says Northgate is a fictional name: "Adapted versions of two of these systems run under fictional company names — Northgate Retail Group and Halden Medical — so the method can be shown without the client’s data."
+  - **House of Dank demo** ([live](https://hod-demo.mousabatarseh.com/)).
+    - Banner: "INTERVIEW DEMO — Built by Mousa Batarseh to demonstrate Marketing Operations capabilities for House of Dank. All products, brands, vendors, prices and inventory shown are fictional. This is not a House of Dank system."
+    - No other text was extractable (the app is rendered by JavaScript).
+- **Live URLs:** https://mousabatarseh.com/deals-os/ · https://mousabatarseh.com/dealproof/ · https://lab.mousabatarseh.com/northgate-group/ · https://hod-demo.mousabatarseh.com/
+
+## 4. CSV Mapper (Commerce Studio is the same app)
+- **What it is:** a browser-only workspace. It maps a supplier CSV or XLSX to Shopify or WooCommerce import templates, runs four layers of checks, and exports the file. ([v2 case](https://mousabatarseh.com/v2/work/csv-mapper/), [live](https://mousabatarseh.com/csv-mapper/))
+- **Problem:** "the slow part of a catalog migration is lining up someone else’s columns against the template" ([v2 case](https://mousabatarseh.com/v2/work/csv-mapper/)). He also wrote: "Every catalog owner has lost an afternoon to an upload that failed at row 4,000 — or worse, one that succeeded and put the wrong prices live." ([LinkedIn, 2026-09-03](https://www.linkedin.com/posts/mousabatarseh_ecommerce-woocommerce-shopify-activity-7501366190955753472-O-jG))
+- **Role:**
+  - "My role · Concept, mapping rules, design and build" ([v2 case](https://mousabatarseh.com/v2/work/csv-mapper/))
+  - "So I built the checkpoint that runs before the upload: CSV Mapper." ([LinkedIn](https://www.linkedin.com/posts/mousabatarseh_ecommerce-woocommerce-shopify-activity-7501366190955753472-O-jG))
+- **Key features** ([live](https://mousabatarseh.com/csv-mapper/)):
+  - Four sheet types: Products, Categories, Customers, Deals.
+  - Four check layers: File & mapping, Values & logic, Relationships, Destination & evidence.
+  - Blockers can't be overridden. Warnings need a written reason of at least 12 characters.
+  - An optional trusted reference sheet, with "Fill verified blanks".
+  - Unusual-sibling-price detection.
+  - GTIN check digits.
+  - Deal maths: percent off, BOGO, buy-X-get-Y.
+  - Twelve product destinations: six Shopify, including Matrixify, and six WooCommerce, including WP All Import.
+  - A user manual and fictional sample sheets.
+  - The manual notes: "The House of Dank control families have been adapted without carrying over fictional business thresholds", which links it to case 3.
+- **Stack:** runs in the browser. "Your file stays in this browser. No spreadsheet uploads to a server." "No store writes." ([live](https://mousabatarseh.com/csv-mapper/))
+- **Languages:** English UI ("English · CSV & Excel · No store writes").
+- **Numbers:**
+  - Accounts needed 0; files uploaded 0 ([v2 case](https://mousabatarseh.com/v2/work/csv-mapper/)).
+  - Limits: "10 MB per file, 5,000 nonempty data rows, 200 columns, and 30 workbook sheets" ([live](https://mousabatarseh.com/csv-mapper/)).
+  - "There are twelve product choices" ([live](https://mousabatarseh.com/csv-mapper/)).
+  - Default sensitivity is 50%, with a 5-unit minimum difference ([live](https://mousabatarseh.com/csv-mapper/)).
+- **Pull-quotes:**
+  - "A supplier’s spreadsheet arrives messy. It leaves as a store import." ([v2 case](https://mousabatarseh.com/v2/work/csv-mapper/))
+  - "Blank means unknown, not zero or false." ([live](https://mousabatarseh.com/csv-mapper/))
+  - "An unusual price can be a valid number and still be a mistake." ([live](https://mousabatarseh.com/csv-mapper/))
+  - "The product import is where a store breaks quietly." ([LinkedIn](https://www.linkedin.com/posts/mousabatarseh_ecommerce-woocommerce-shopify-activity-7501366190955753472-O-jG))
+  - "It never fixes your data for you." ([LinkedIn](https://www.linkedin.com/posts/mousabatarseh_ecommerce-woocommerce-shopify-activity-7501366190955753472-O-jG))
+- **Commerce Studio:** the [v2 work index](https://mousabatarseh.com/v2/work/) lists "Commerce Studio · Published Sites edition · commerce spreadsheet mapping" as an external link. Its URL was not captured.
+- **Live URL:** https://mousabatarseh.com/csv-mapper/
+- **Related post:** [Cleaning Product Data Before It Reaches the Store](https://work.mousabatarseh.com/cleaning-product-data-csv/) (Nov 24, 2025). I didn't open it.
+
+## 5. SEO Tools (short)
+- **What it is:** "Nine browser tools for the checks a webmaster actually runs" ([v2 case](https://mousabatarseh.com/v2/work/seo-tools/)).
+- **The nine tools:** meta tags with a SERP preview; Open Graph and Twitter cards; schema JSON-LD; keyword density with Arabic stop-words; robots.txt, which "can block AI crawlers"; UTM builder; slug generator; hreflang; word counter.
+- **Role:** "My role · Design and build, single-file HTML + JS" ([v2 case](https://mousabatarseh.com/v2/work/seo-tools/))
+- **Numbers:**
+  - 9 tools; 0 accounts; 0 sent to a server ([v2 case](https://mousabatarseh.com/v2/work/seo-tools/)).
+  - SERP demo: "71 characters as written, 11 clipped, then 58 of 60 with the keyword first" ([v2 case](https://mousabatarseh.com/v2/work/seo-tools/)).
+- **Languages:** "English · Arabic stop-words"; hreflang is "English + Arabic ready" ([live](https://mousabatarseh.com/SEO-Tools/)).
+- **Pull-quotes:**
+  - "Sixty characters. Spend them on what people search for." ([v2 case](https://mousabatarseh.com/v2/work/seo-tools/))
+  - "Nothing is uploaded, tracked or stored." ([live](https://mousabatarseh.com/SEO-Tools/))
+- **Live URL:** https://mousabatarseh.com/SEO-Tools/
+
+## 6. DiaMedical Commerce Intelligence Lab
+- **What it is:** an independent interview case study. It follows one buyer question through product discovery, catalog quality, website QA, developer handoff and measurement, backed by a 13-sheet Excel workbook. ([v2 case](https://mousabatarseh.com/v2/work/diamedical-lab/), [lab](https://mousabatarseh.com/diamedical/))
+- **Problem:** "“We need a four-station Med‑Surg lab for 24 nursing students. Where do we start?”" and "A program director thinks in learners, skills, room and budget; a catalog is organized by category, brand, attribute and SKU." ([v2 case](https://mousabatarseh.com/v2/work/diamedical-lab/))
+- **Role:**
+  - "My role · Research, workbook, QA, walkthrough — independent, not commissioned" ([v2 case](https://mousabatarseh.com/v2/work/diamedical-lab/))
+  - "Prepared by Mousa Batarseh … for DiaMedical USA’s Marketing and eCommerce Coordinator interview." ([lab](https://mousabatarseh.com/diamedical/))
+- **Key features** ([lab](https://mousabatarseh.com/diamedical/), [intro](https://mousabatarseh.com/diamedical-intro/)):
+  - Product discovery with explained ranking, synonyms and typo tolerance.
+  - Catalog quality score out of 100 with visible weights: identity 25%, category and attributes 25%, content 20%, SEO 15%, merchandising 10%, freshness 5%.
+  - An ERP-style import demo.
+  - A website QA register that keeps observation apart from interpretation.
+  - Developer ticket T-003 "and eight others".
+  - A modelled reporting workspace.
+  - Pathfinder and a Sim Lab planner.
+  - SEO and paid-search planning; a trade-show plan.
+  - A 30/60/90-day plan.
+  - Every claim is labelled public, bounded, modeled or hypothesis.
+- **Stack:** case-study site plus an Excel workbook ("XLOOKUP needs Excel 2021+", "native PivotTable") ([intro](https://mousabatarseh.com/diamedical-intro/)).
+- **Languages:** English.
+- **Numbers:**
+  - 65 product records (public sample); 16 audited URLs ([lab](https://mousabatarseh.com/diamedical/)).
+  - 13-sheet workbook ([lab](https://mousabatarseh.com/diamedical/)).
+  - "eight hundred sixty-five formula cells" ([intro](https://mousabatarseh.com/diamedical-intro/)); the v2 case says "hundreds of formula cells".
+  - Walkthrough "7 scenes, about 6 minutes" ([lab](https://mousabatarseh.com/diamedical/)).
+  - Pages read "Between 2026-08-27 and 2026-08-31" ([lab](https://mousabatarseh.com/diamedical/)); the intro says "read 2026-08-27 → 29".
+  - Manual check on 2026-08-28: two misspelled queries returned no typeahead result.
+  - "more than 1,500 manufacturers" is DiaMedical's own public claim, not his.
+- **Pull-quotes:**
+  - "One question, followed all the way to the measurement." ([v2 case](https://mousabatarseh.com/v2/work/diamedical-lab/))
+  - "Nobody starts with a SKU." ([intro](https://mousabatarseh.com/diamedical-intro/))
+  - "Two checks is a hypothesis, not a finding" ([intro](https://mousabatarseh.com/diamedical-intro/))
+  - "A rule you can see is a rule you can tune safely — a black box gives you neither." ([intro](https://mousabatarseh.com/diamedical-intro/))
+  - "Without counting, “I think it helped” is just an opinion. With counting, you know." ([intro](https://mousabatarseh.com/diamedical-intro/))
+  - "look first, write it down, label the guesses, make it checkable." ([intro](https://mousabatarseh.com/diamedical-intro/))
+- **Disclaimers:**
+  - "Not commissioned, approved, or endorsed by DiaMedical USA. Not a redesign of the store. Not a claim of measured business results." ([lab](https://mousabatarseh.com/diamedical/))
+  - "Product relationships are planning prompts for specialist review, not clinical recommendations." ([lab](https://mousabatarseh.com/diamedical/))
+  - A Halden Medical adaptation (a fictional name) is linked from the [v2 case](https://mousabatarseh.com/v2/work/diamedical-lab/).
+- **Live URLs:** https://mousabatarseh.com/diamedical/ · https://mousabatarseh.com/diamedical-intro/
+
+## 7. United Textile
+- **What it is:** a Shopify B2B wholesale storefront for a Detroit-area apparel wholesaler ([case study](https://work.mousabatarseh.com/united-textile-wholesale/), [live](https://shopunitedtextile.com/)).
+- **Problem:** "A default retail-style storefront could not fully explain wholesale case quantities, unit pricing, delivery conditions, and the depth of a multi-category catalog." ([case study](https://work.mousabatarseh.com/united-textile-wholesale/))
+- **Role:**
+  - "ROLE · UX, catalog, merchandising & SEO" ([case study](https://work.mousabatarseh.com/united-textile-wholesale/))
+  - "Spearheaded the development of United Textile Wholesale’s new Shopify-based eCommerce platform." ([resume](https://work.mousabatarseh.com/resume/))
+  - "When I joined the company, we had no website, no Google Business profile, and no online presence at all." ([LinkedIn article, 2024-06-05](https://www.linkedin.com/posts/mousabatarseh_transforming-united-textile-wholesale-a-activity-7203967276444712960-0XSy))
+  - "I built United Textile as a B2B storefront — hidden prices, registration, collections, and product content written for buyers who reorder, not browse for fun." ([blog index](https://mousabatarseh.com/blog/))
+- **Key features:**
+  - Six feature areas ([case study](https://work.mousabatarseh.com/united-textile-wholesale/)):
+    - Wholesale-first navigation
+    - Case-pack & unit pricing clarity
+    - Buyer-focused collections
+    - Delivery & payment messaging
+    - Search-focused product content
+    - Merchandising & operations enablement
+  - A custom unit-price field "calculated by dividing the normal price by the case pack size", plus hidden prices for logged-out users and custom registration forms ([LinkedIn article](https://www.linkedin.com/posts/mousabatarseh_transforming-united-textile-wholesale-a-activity-7203967276444712960-0XSy)).
+- **Stack:** Shopify.
+- **Languages:** English.
+- **Numbers:**
+  - "$1K · free local-shipping threshold presented" ([case study](https://work.mousabatarseh.com/united-textile-wholesale/)). The live site reads "FREE NEXT DAY SHIPPING To local stores for orders over $1000 / Payments will be collected offline on order delivery!" ([live](https://shopunitedtextile.com/)).
+  - "Migrated around one thousand products from an offline inventory management system" ([resume](https://work.mousabatarseh.com/resume/)).
+  - "Achieved first-page rankings for targeted keywords within the first six months." ([resume](https://work.mousabatarseh.com/resume/))
+  - Live example: "$72.00 USD · Unit Price: $6.00" ([live](https://shopunitedtextile.com/)).
+- **Pull-quotes:**
+  - "A Shopify storefront built around how wholesale buyers actually shop." ([case study](https://work.mousabatarseh.com/united-textile-wholesale/))
+  - "Retailers do not browse a wholesale site the way consumers browse a gift shop." ([blog index](https://mousabatarseh.com/blog/))
+  - "I built a wholesale storefront on Shopify and it works well — but the pricing logic was the part that needed the most deliberate design, not the catalogue." ([post](https://work.mousabatarseh.com/shopify-or-woocommerce-decision/)). The post matches a WordPress search for "Textile", so the link probably points to United Textile; the link target wasn't captured.
+- **Dates:** see Conflicts #1. The LinkedIn article is dated 2024-06-05.
+- **Unverified:** whether prices are currently hidden from guests (see Conflicts #3).
+- **Live URL:** https://shopunitedtextile.com/
+- **Related posts (both on the [blog index](https://mousabatarseh.com/blog/); individual URLs not found):**
+  - "Shopify Wholesale Store Setup: Case Packs, Hidden Pricing, and Buyer Accounts" (Dec 9, 2025)
+  - "B2B Collections That Match How Retailers Actually Shop" (Feb 24, 2026)
+  - Also: [Shopify or WooCommerce: The Questions That Actually Decide It](https://work.mousabatarseh.com/shopify-or-woocommerce-decision/) (Apr 7, 2026)
+
+## 8. Universal Wholesale (describe platform-neutrally)
+- **What it is:** a catalog migration and ongoing e-commerce operation for a large Michigan wholesale distributor ([case study](https://work.mousabatarseh.com/universal-wholesale/)).
+- **Problem:** "Product records arrived with inconsistent naming, category assignments, packaging details, pricing fields, and image coverage. At this scale, even small inconsistencies could multiply across thousands of products" ([case study](https://work.mousabatarseh.com/universal-wholesale/)).
+- **Role:**
+  - "ROLE · Catalog migration, QA & operations" ([case study](https://work.mousabatarseh.com/universal-wholesale/))
+  - "migrating Universal Wholesale’s legacy catalog to a B2B ordering platform" ([resume](https://work.mousabatarseh.com/resume/))
+  - "Prepared and validated more than 14,000 product records for Universal Wholesale’s platform migration." ([resume](https://work.mousabatarseh.com/resume/))
+  - "Established repeatable catalog cleanup, import, exception-tracking, and quality-assurance processes for high-volume updates." ([resume](https://work.mousabatarseh.com/resume/))
+  - "I moved a 14,000-SKU catalog into … for Universal Wholesale. The technical import was a handful of runs. The work was everything in front of it" ([post](https://work.mousabatarseh.com/product-catalog-migration-field-mapping/); platform name cut)
+- **v1 blurb (neutral, usable):** "A 14,000-item e-commerce catalog was prepared for migration through detailed record cleanup, field mapping, import planning, quality checks, and data validation." The label above this blurb on the page names a platform; don't reuse it ([v1](https://mousabatarseh.com/)).
+- **Key features** ([case study](https://work.mousabatarseh.com/universal-wholesale/)):
+  - SKU data architecture
+  - Catalog cleanup & normalization
+  - Controlled migration workflow in "reviewable batches"
+  - Wholesale ordering context
+  - QA & exception management: "missing images, duplicates, pricing anomalies, and mapping issues"
+  - Ongoing merchandising operations
+- **Numbers:**
+  - 14K SKU records prepared and migrated; 11K+ active items ([case study](https://work.mousabatarseh.com/universal-wholesale/)).
+  - 170,000 sq ft distribution operation and 10,000 sq ft showroom ([case study](https://work.mousabatarseh.com/universal-wholesale/)). These describe the company, not his outcome.
+  - "95%+ published ship-rate operation represented" ([case study](https://work.mousabatarseh.com/universal-wholesale/)). This is the company's published figure, not his outcome.
+  - "Improved organic Google rankings to the first and second results pages within the first year" ([DiaMedical page](https://mousabatarseh.com/diamedical/); LinkedIn says the same).
+  - Dates: June 2019 – April 2023 ([resume](https://work.mousabatarseh.com/resume/)).
+- **Pull-quotes:**
+  - "The import button is the least interesting part of a catalog migration." ([post](https://work.mousabatarseh.com/product-catalog-migration-field-mapping/))
+  - "Four answers per field, on a catalog with forty fields, is 160 decisions." ([post](https://work.mousabatarseh.com/product-catalog-migration-field-mapping/))
+  - "That turns “should we keep this?” from 14,000 questions into one policy decision plus a short review." ([post](https://work.mousabatarseh.com/product-catalog-migration-field-mapping/))
+  - "A real wholesale operation, translated into a workable digital system." ([case study](https://work.mousabatarseh.com/universal-wholesale/))
+  - "I've built that for a 14,000-item catalog — it's the difference between a store and a spreadsheet with pictures." ([LinkedIn, 2026-09-03](https://www.linkedin.com/posts/mousabatarseh_ai-built-the-site-that-was-the-easy-part-activity-7501121636184510464-1Ys2))
+- **Live URL:** https://universalwholesaleonline.com/. Earlier audit: the homepage is mostly policy text, so use the case study instead of screenshots.
+- **Related posts:**
+  - [Field Mapping Is the Whole Migration](https://work.mousabatarseh.com/product-catalog-migration-field-mapping/) (Nov 6, 2025)
+  - [The SKU Is a Decision, Not a Label](https://work.mousabatarseh.com/sku-structure-product-catalog/) (Mar 3, 2026). It links the "Universal Wholesale project, where the scheme had to hold across fourteen thousand items."
+
+## 9. Firefly Burgers (Michigan)
+- **What it is:** a mobile-first WordPress site for the Sterling Heights location of Firefly Burgers ([ver2](https://fireflyburgersmi.com/ver2/), [portfolio](https://work.mousabatarseh.com/portfolio/)).
+- **Problem:** "Nobody sits at a desktop to find a burger special." ([blog index](https://mousabatarseh.com/blog/)). Also: "A menu page is not a design problem, it is a maintenance problem." ([post](https://work.mousabatarseh.com/client-editable-restaurant-menu-wordpress/))
+- **Role:**
+  - "I built Firefly Burgers MI as a mobile-first WordPress site: menu, hours, location, and branding that still holds up when someone is already in the parking lot." ([blog index](https://mousabatarseh.com/blog/))
+  - "I have built menu-driven pages for Firefly Burgers" ([post](https://work.mousabatarseh.com/client-editable-restaurant-menu-wordpress/))
+- **Stack:** WordPress (per [v1](https://mousabatarseh.com/)); "WordPress + Elementor" (per [portfolio](https://work.mousabatarseh.com/portfolio/)).
+- **Key features / site content** ([ver2](https://fireflyburgersmi.com/ver2/)):
+  - Hero "ABOVE ALL BURGERS"
+  - Signature burgers
+  - The "Cheese it up" injection section and "Turn up the heat"
+  - Sides and shareables
+  - Origin story "From Rainbow Street in Amman to Sterling Heights"
+  - Address "40840 Van Dyke Ave", "11 AM – 11 PM", phone
+- **Languages:** English.
+- **Numbers:** none published.
+- **Pull-quotes:**
+  - "For a menu, mobile is not a breakpoint, it is the primary use case — someone standing outside deciding whether to come in." ([post](https://work.mousabatarseh.com/client-editable-restaurant-menu-wordpress/))
+  - "Make price a text field, not a number." ([post](https://work.mousabatarseh.com/client-editable-restaurant-menu-wordpress/))
+  - "An elegant editing experience nobody opens is wasted budget." ([post](https://work.mousabatarseh.com/client-editable-restaurant-menu-wordpress/))
+- **Live URLs:** https://fireflyburgersmi.com/ver2/. The root https://fireflyburgersmi.com/ is a different version.
+- **Related posts:**
+  - [Building a Menu Page the Client Can Actually Update](https://work.mousabatarseh.com/client-editable-restaurant-menu-wordpress/) (Dec 11, 2025)
+  - "Restaurant Websites That Work on a Phone: Firefly Burgers" (Jun 12, 2026, [blog index](https://mousabatarseh.com/blog/)); individual URL not found.
+
+## 10. Eat With Samar
+- **What the site presents** ([EN](https://eatwithsamar.com/), [AR](https://eatwithsamar.com/ar/)):
+  - A bilingual registered dietitian in Metro Detroit, Samar Chahayed (سمر شحيّد).
+  - "Nutrition that still tastes like home." (Arabic: "تغذية بطعم البيت.")
+  - Locations: "Fraser · Clinton Township · Madison Heights".
+  - Credentials: "M.S. · RD / RDN · DTR"; M.S. Human Nutrition from Eastern Michigan University; dietetic internship at Detroit Medical Center.
+  - The "Sufra" three moves.
+  - "Four ways families work with Samar": one to one, the whole household, blood sugar & labs, kitchen notes.
+  - "A Damascene table, a Michigan clinic."
+- **Role:** the only statement found is general. The [v2 home](https://mousabatarseh.com/v2/) lists Eat With Samar under "Storefronts and sites I built or ran — WooCommerce, Shopify and WordPress, in English and Arabic", labelled "Bilingual health and food website". **No project-specific role statement, platform or date was found.** There is no v2 case page (`/v2/work/eat-with-samar/` returns 404).
+- **Languages:** English and Arabic (full `/ar/` version).
+- **Candidate quotes are site copy with unknown author; confirm before crediting to Mousa:**
+  - "Metro Detroit has one of the largest Arab communities in the country. The nutrition advice reaching it usually isn’t written for it. That gap is the work." ([EN](https://eatwithsamar.com/))
+- **Disclaimer on the site:** "Not a meal plan. Not medical advice." ([EN](https://eatwithsamar.com/))
+- **Live URL:** https://eatwithsamar.com/
+
+## 11. Great Lakes Cigar Festival
+- **What it is:** a WordPress + Elementor event site for the July 26, 2025 festival in Pontiac, MI ([case study](https://work.mousabatarseh.com/great-lakes-cigar-festival/), [event page](https://greatlakescigarfest.com/home/)).
+- **Problem:** "Different audiences arrive with different priorities: attendees compare ticket tiers, vendors and sponsors evaluate participation, and first-time visitors need confidence in the venue, schedule, and overall experience." ([case study](https://work.mousabatarseh.com/great-lakes-cigar-festival/))
+- **Role:**
+  - "ROLE · Strategy, UX, build, content & analytics" ([case study](https://work.mousabatarseh.com/great-lakes-cigar-festival/))
+  - "I built and ran the site for The Great Lakes Cigar Festival" ([post](https://work.mousabatarseh.com/web-project-workflow-failure-points/))
+  - "From design and content to functionality and launch, it took real teamwork to bring this together." ([LinkedIn launch post, 2025-06-11](https://www.linkedin.com/posts/mousabatarseh_greatlakescigarfest-teamwork-cigarindustry-activity-7338586728649191426-69Bd)). Note the team framing.
+- **Key features** ([case study](https://work.mousabatarseh.com/great-lakes-cigar-festival/)):
+  - Ticket-tier clarity
+  - Event storytelling
+  - Sponsor & vendor ecosystem
+  - Attendee essentials
+  - Responsive performance
+  - Analytics & lead capture
+  - The live page says "Tickets are available on Eventbrite.com" and the top tier is "$ 279" ([event page](https://greatlakescigarfest.com/home/)).
+- **Numbers:**
+  - **287 users and 1,954 events, July 4–31, 2025.** Source pages wrongly print 2026: [case study](https://work.mousabatarseh.com/great-lakes-cigar-festival/), [v1](https://mousabatarseh.com/), [post](https://work.mousabatarseh.com/web-project-workflow-failure-points/), [blog index](https://mousabatarseh.com/blog/).
+  - "50+ vendors promoted"; "4 ticket experiences presented" ([case study](https://work.mousabatarseh.com/great-lakes-cigar-festival/)).
+- **Dates:**
+  - Site launch announced 2025-06-11 ([LinkedIn](https://www.linkedin.com/posts/mousabatarseh_greatlakescigarfest-teamwork-cigarindustry-activity-7338586728649191426-69Bd)).
+  - Event "26 JULY, 2025" ([event page](https://greatlakescigarfest.com/home/)).
+- **Pull-quotes:**
+  - "An event platform built to turn attention into attendance." ([case study](https://work.mousabatarseh.com/great-lakes-cigar-festival/))
+  - "The purpose of measuring a site that will not be improved is to improve the next one." ([post](https://work.mousabatarseh.com/web-project-workflow-failure-points/))
+  - "had to hold tickets, vendors, schedules, and sponsors without turning into a PDF." ([blog index](https://mousabatarseh.com/blog/))
+- **Disclaimers:** the event page says "21+". The case study says "Event details may evolve between festival editions."
+- **Live URL:** https://greatlakescigarfest.com/home/. The root is a post-event page, per the earlier audit.
+- **Related posts:**
+  - "Building a WordPress Event Website People Actually Use" (Aug 12, 2026, [blog index](https://mousabatarseh.com/blog/)); individual URL not found.
+  - [Eleven Steps, and the Three Where Projects Actually Fail](https://work.mousabatarseh.com/web-project-workflow-failure-points/) (Feb 13, 2026)
+
+## 12. PTEE family
+- **What it is:** a bilingual (Arabic/English) web presence for the Program for Theological Education by Extension. "A Program for Theological Education by Extension (PTEE), creating a modern and professional bilingual experience in Arabic and English. The project combines a dedicated academic courses website with a separate admissions platform." ([work home](https://work.mousabatarseh.com/))
+- **Role:** only that blurb, labelled "Wordpress" ([work home](https://work.mousabatarseh.com/)). The [v2 work index](https://mousabatarseh.com/v2/work/) labels:
+  - "PTEE · Bilingual education platform"
+  - "BTEE Bilingual Build · Hosting migration build"
+  - "PTEE Admissions Portal · Bilingual admissions portal"
+  - "PTEE Courses & Admissions Renewal · Published renewal build"
+  - "PTEE Courses & Programs · Bilingual course catalog"
+- **BTEE Arabic build** ([btee /ar/](https://btee.moseswebworks.com/ar/); page metadata date 2026-08-26):
+  - Hero: "ادرس اللاهوت حيث أنت، واخدم كنيستك بثقة." ("Study theology where you are, and serve your church with confidence"; my translation.)
+  - Stats "١٩٨١", "+٥٬٠٠٠", "+١٬٤٠٦". Their labels didn't come through in the extraction.
+  - Six principles; three tiers (certificate, diploma, bachelor's); a four-step path.
+  - ATA and MENATE are named.
+- **Admissions portal** ([admissions/en](https://ptee.moseswebworks.com/admissions/en)):
+  - "Admissions and Online Services Portal", "PTEE 5.2.0".
+  - Seven services, including saving an application "within 30 days" and verifying an official document.
+  - "Secure applicant access without requiring a Moodle account in advance."
+  - The footer phones are placeholders: "+12 345 67 89".
+- **Renewal build:** https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/ returned a crawler error three times and is **unverified in this pass**. The earlier audit noted credit hours 40/80/120, "28 countries" and ICETE; that isn't re-confirmed. For reference, the legacy [ptee.org](https://ptee.org/index.php/en/academic-program) lists Certificate at a minimum of 40 credits, Diploma at 80 and Bachelor at 120.
+- **Numbers:** none of Mousa's own.
+- **Dates:** none stated, apart from the metadata date above.
+
+---
+
+## Blog posts found (exact URLs)
+- https://work.mousabatarseh.com/product-catalog-migration-field-mapping/ (Nov 6, 2025): Universal Wholesale
+- https://work.mousabatarseh.com/client-editable-restaurant-menu-wordpress/ (Dec 11, 2025): Firefly
+- https://work.mousabatarseh.com/web-project-workflow-failure-points/ (Feb 13, 2026): Great Lakes Cigar Festival
+- https://work.mousabatarseh.com/sku-structure-product-catalog/ (Mar 3, 2026): Universal Wholesale
+- https://work.mousabatarseh.com/shopify-or-woocommerce-decision/ (Apr 7, 2026): probably United Textile
+- The following are **listed on https://mousabatarseh.com/blog/ but no individual URL was found** (they aren't in the work.mousabatarseh.com WordPress API or Exa's index):
+  - "Shopify Wholesale Store Setup: Case Packs, Hidden Pricing, and Buyer Accounts" (Dec 9, 2025)
+  - "B2B Collections That Match How Retailers Actually Shop" (Feb 24, 2026)
+  - "Restaurant Websites That Work on a Phone: Firefly Burgers" (Jun 12, 2026)
+  - "Building a WordPress Event Website People Actually Use" (Aug 12, 2026)

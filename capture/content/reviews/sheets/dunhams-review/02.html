@@ -1,0 +1,24 @@
+<div class="wrap">
+  <p class="crumb">Sec. 02 — Findings</p>
+  <div class="sec-h"><span class="tag">STORE PAGES</span><h2>The pages that don't exist</h2></div>
+  <p class="sec-sub">A 275-store retailer's biggest local-SEO asset is a page per store. Today there is none — and the locator hides the data from crawlers entirely.</p>
+  <div class="cards">
+    <div class="card"><span class="kicker b">Locator</span><h3 class="plain">A dropdown, not links</h3><p>/store-locator has no H1, no LocalBusiness markup; stores are a 274-option <span class="mono">&lt;select&gt;</span> of hashed IDs with zero crawlable links.</p><span class="ev">Evidence: /store-locator source</span></div>
+    <div class="card"><span class="kicker b">Data</span><h3 class="plain">JSON, not pages</h3><p><span class="mono">/stores/</span> returns raw JSON — 275 stores, 268 active — with id/address/city/state/zip/phone but no hours or lat-lng. No store URLs in any sitemap; <span class="mono">/stores/troy-mi</span> → 404.</p><span class="ev">Evidence: /stores/ ; sitemap.xml</span></div>
+    <div class="card"><span class="kicker c">Signals</span><h3 class="plain">Fake freshness</h3><p>39,819 product URLs all stamped lastmod <span class="mono">2026-08-27</span>; robots.txt still carries Demandware rules from the pre-Shopware platform.</p><span class="ev">Evidence: sitemap_product.xml.gz ; robots.txt</span></div>
+  </div>
+
+  <div class="sec-h" style="margin-top:44px"><span class="tag">CATEGORIES</span><h2>Slug collisions</h2></div>
+  <p class="sec-sub">The migration left duplicate category URLs — both self-canonical, both in the sitemap, both indexed by Google — while the clean slug 404s. Ranking signals split across two URLs instead of consolidating on one.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Clean slug</th><th>Live duplicates</th><th>Google indexes</th><th>Fix</th></tr></thead>
+    <tbody>
+      <tr><td class="num">/apparel/ <span class="badge b">404</span></td><td class="num">/apparel-1/ · /apparel-2/ <span class="badge a">both 200</span></td><td>both, different titles</td><td class="num">301 → /apparel/</td></tr>
+      <tr><td class="num">/footwear/ <span class="badge b">404</span></td><td class="num">/footwear-1/ · /footwear-2/ <span class="badge a">both 200</span></td><td>yes</td><td class="num">301 → /footwear/</td></tr>
+      <tr><td class="num">/accessories/ <span class="badge b">404</span></td><td class="num">/accessories-1/ · /accessories-2/ <span class="badge a">both 200</span></td><td>yes</td><td class="num">301 → /accessories/</td></tr>
+    </tbody>
+  </table></div>
+  <p style="margin-top:16px"><span class="ev">Evidence: fetched each URL, Sep 19, 2026; sitemap_category.xml.gz (41 “-1” URLs); Google SERP shows both apparel URLs with different titles. Also: 13/20 sampled categories have empty meta descriptions; /under-armour/ua-men/shorts/ and /champion/men/shorts/ share the title “Shorts | Dunham's Sports”; no application/ld+json on any page.</span></p>
+
+  <div class="pagenav"><a href="https://mousabatarseh.com/dunhams-review/index.html">← Overview</a><a class="next" href="https://mousabatarseh.com/dunhams-review/generator.html">Next: The store-page generator →</a></div>
+</div>

@@ -1,0 +1,669 @@
+{
+  "fetched": "2026-09-27T12:34:10.876Z",
+  "note": "Portfolio capture for mousabatarseh.com (owner-run)",
+  "pages": [
+    {
+      "url": "https://mousabatarseh.com/",
+      "status": 200,
+      "found": {
+        "icons": [
+          {
+            "rel": "og:image",
+            "href": "https://mousabatarseh.com/portfolio-home/social-preview-4c7b5bd03003.jpg",
+            "sizes": null
+          },
+          {
+            "rel": "icon",
+            "href": "https://mousabatarseh.com/portfolio-home/favicon.svg",
+            "sizes": null
+          }
+        ],
+        "imgs": [
+          {
+            "src": "https://mousabatarseh.com/portfolio-home/img/capture_asas_home_previous-asas-home-user-web.webp",
+            "alt": "ASAS Homepage website",
+            "cls": "project-item-image can-scroll",
+            "w": 740,
+            "h": 1224
+          },
+          {
+            "src": "https://mousabatarseh.com/portfolio-home/img/capture_american_hot_wheel-american-hot-wheel-web.webp",
+            "alt": "American Hot Wheel website",
+            "cls": "project-item-image can-scroll",
+            "w": 720,
+            "h": 2165
+          },
+          {
+            "src": "https://mousabatarseh.com/portfolio-home/img/wharton-advanced-marketing.png",
+            "alt": "Wharton Advanced Digital Marketing and Growth Strategies certificate for Mousa Batarseh",
+            "cls": "",
+            "w": 0,
+            "h": 0
+          },
+          {
+            "src": "https://mousabatarseh.com/portfolio-home/img/foundations-digital-marketing.png",
+            "alt": "Foundations of Digital Marketing and E-commerce certificate for Mousa Batarseh",
+            "cls": "",
+            "w": 0,
+            "h": 0
+          },
+          {
+            "src": "https://mousabatarseh.com/portfolio-home/img/attract-engage-customers.png",
+            "alt": "Attract and Engage Customers with Digital Marketing certificate for Mousa Batarseh",
+            "cls": "",
+            "w": 0,
+            "h": 0
+          }
+        ],
+        "svgs": [
+          {
+            "html": "<svg class=\"logo-mark\" viewBox=\"0 0 32 32\" width=\"88\" height=\"88\" aria-hidden=\"true\">\n      <rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect>\n      <rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect>\n      <rect x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\" transform=\"rotate(45 16 16)\"></rect>\n    </svg>",
+            "box": [
+              72,
+              60,
+              72,
+              72
+            ]
+          },
+          {
+            "html": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"><path d=\"M7 1v12M2 8l5 5 5-5\"></path></svg>",
+            "box": [
+              1218,
+              65,
+              14,
+              14
+            ]
+          },
+          {
+            "html": "<svg width=\"14\" height=\"6\" viewBox=\"0 0 14 6\" fill=\"currentColor\"><circle cx=\"3\" cy=\"3\" r=\"2.5\"></circle><circle cx=\"11\" cy=\"3\" r=\"2.5\"></circle></svg>",
+            "box": [
+              1338,
+              69,
+              14,
+              6
+            ]
+          },
+          {
+            "html": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 12h16M13 5l7 7-7 7\"></path></svg>",
+            "box": [
+              26,
+              2692,
+              35,
+              35
+            ]
+          },
+          {
+            "html": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 12h16M13 5l7 7-7 7\"></path></svg>",
+            "box": [
+              26,
+              3290,
+              35,
+              35
+            ]
+          }
+        ],
+        "bgs": [],
+        "brand": [
+          {
+            "text": "",
+            "html": "\n    <svg class=\"logo-mark\" viewBox=\"0 0 32 32\" width=\"88\" height=\"88\" aria-hidden=\"true\">\n      <rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect>\n      <rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect>\n      <rect x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\" transform=\"rotate(45 16 16)\"></rect>\n    </svg>\n    \n  "
+          },
+          {
+            "text": "asas.mousabatarseh.combrand site • design system • 4,038 blocksASAS Homepage",
+            "html": "<div class=\"project-item-main\"><div class=\"bm\"><div class=\"bm-bar\" aria-hidden=\"true\"><i></i><i></i><i></i><span class=\"bm-url\">asas.mousabatarseh.com</span></div><img class=\"project-item-image can-scroll\" src=\"/portfolio-home/img/capture_asas_home_previous-asas-home-user-web.webp\" srcset=\"/portfolio-home/img/capture_asas_home_previous-asas-home-user-mobile.webp 800w, /portfolio-home/img/capture_asas_home_previous-asas-home-user-web.webp 1400w\" sizes=\"(max-width: 700px) 100vw, 50vw\" alt=\"ASAS Homepage website\" loading=\"lazy\" decoding=\"async\" style=\"--project-scroll-y: -673px; --project-scroll-duration: 5.608333333333333s;\"></div></div><div class=\"project-item-footer\"><div class=\"project-item-line-1\">brand site • design system • 4,038 blocks</div><div class=\"project-item-line-2\"><span class=\"project-item-line-2-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 12h16M13 5l7 7-7 7\"></path></svg></span><h3 class=\"project-item-line-2-inner\"><span>ASAS Homepage</span><span aria-hidden=\"true\" data-text=\"ASAS Homepage\"></span></h3></div></div>"
+          },
+          {
+            "text": "interviewdemo.mousabatarseh.comwoocommerce • vehicle fitment • brandingAmerican ",
+            "html": "<div class=\"project-item-main\"><div class=\"bm\"><div class=\"bm-bar\" aria-hidden=\"true\"><i></i><i></i><i></i><span class=\"bm-url\">interviewdemo.mousabatarseh.com</span></div><img class=\"project-item-image can-scroll\" src=\"/portfolio-home/img/capture_american_hot_wheel-american-hot-wheel-web.webp\" srcset=\"/portfolio-home/img/capture_american_hot_wheel-american-hot-wheel-mobile.webp 800w, /portfolio-home/img/capture_american_hot_wheel-american-hot-wheel-web.webp 1400w\" sizes=\"(max-width: 700px) 100vw, 50vw\" alt=\"American Hot Wheel website\" loading=\"lazy\" decoding=\"async\" style=\"--project-scroll-y: -1535px; --project-scroll-duration: 12s;\"></div></div><div class=\"project-item-footer\"><div class=\"project-item-line-1\">woocommerce • vehicle fitment • branding</div><div class=\"project-item-line-2\"><span class=\"project-item-line-2-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 12h16M13 5l7 7-7 7\"></path></svg></span><h3 class=\"project-item-line-2-inner\"><span>American Hot Wheel</span><span aria-hidden=\"true\" data-text=\"American Hot Wheel\"></span></h3></div></div>"
+          },
+          {
+            "text": "ASAS Studioasas.mousabatarseh.com",
+            "html": "<span>ASAS Studio</span><small>asas.mousabatarseh.com</small>"
+          },
+          {
+            "text": "American Hot Wheelinterviewdemo.mousabatarseh.com",
+            "html": "<span>American Hot Wheel</span><small>interviewdemo.mousabatarseh.com</small>"
+          },
+          {
+            "text": "Home",
+            "html": "Home"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://mousabatarseh.com/v2/",
+      "status": 200,
+      "found": {
+        "icons": [
+          {
+            "rel": "og:image",
+            "href": "https://mousabatarseh.com/v2/img/social-preview.jpg",
+            "sizes": null
+          },
+          {
+            "rel": "icon",
+            "href": "https://mousabatarseh.com/v2/favicon.svg",
+            "sizes": null
+          }
+        ],
+        "imgs": [],
+        "svgs": [
+          {
+            "html": "<svg class=\"mark\" viewBox=\"0 0 32 32\" aria-hidden=\"true\"><rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect><rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect><rect x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\" transform=\"rotate(45 16 16)\"></rect></svg>",
+            "box": [
+              72,
+              24,
+              28,
+              28
+            ]
+          },
+          {
+            "html": "<svg class=\"hero-mark mark-anim in\" viewBox=\"0 0 32 32\" aria-hidden=\"true\"><rect class=\"m1\" x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect><rect class=\"m2\" x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect><rect class=\"m3\" x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\"></rect></svg>",
+            "box": [
+              882,
+              373,
+              144,
+              144
+            ]
+          },
+          {
+            "html": "<svg class=\"mark\" viewBox=\"0 0 32 32\" aria-hidden=\"true\" style=\"display:inline-block;vertical-align:middle;margin-right:8px\"><rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect><rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect><rect x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\" transform=\"rotate(45 16 16)\"></rect></svg>",
+            "box": [
+              72,
+              15671,
+              20,
+              20
+            ]
+          }
+        ],
+        "bgs": [],
+        "brand": [
+          {
+            "text": "Mousa Batarseh",
+            "html": "<svg class=\"mark\" viewBox=\"0 0 32 32\" aria-hidden=\"true\"><rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect><rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect><rect x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\" transform=\"rotate(45 16 16)\"></rect></svg><span>Mousa Batarseh</span>"
+          },
+          {
+            "text": "The Lab",
+            "html": "The Lab"
+          },
+          {
+            "text": "The Lab",
+            "html": "The Lab"
+          },
+          {
+            "text": "08ASASElementor block and wireframe studio",
+            "html": "<span class=\"n\">08</span><h3>ASAS</h3><span class=\"t\">Elementor block and wireframe studio</span>"
+          },
+          {
+            "text": "The Lab ↗",
+            "html": "The Lab <span>↗</span>"
+          },
+          {
+            "text": "ASAS ↗",
+            "html": "ASAS <span>↗</span>"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://mousabatarseh.com/v2/work/",
+      "status": 200,
+      "found": {
+        "icons": [
+          {
+            "rel": "og:image",
+            "href": "https://mousabatarseh.com/v2/img/social-preview.jpg",
+            "sizes": null
+          },
+          {
+            "rel": "icon",
+            "href": "https://mousabatarseh.com/v2/favicon.svg",
+            "sizes": null
+          }
+        ],
+        "imgs": [],
+        "svgs": [
+          {
+            "html": "<svg class=\"mark\" viewBox=\"0 0 32 32\" aria-hidden=\"true\"><rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect><rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect><rect x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\" transform=\"rotate(45 16 16)\"></rect></svg>",
+            "box": [
+              72,
+              24,
+              28,
+              28
+            ]
+          },
+          {
+            "html": "<svg class=\"mark\" viewBox=\"0 0 32 32\" aria-hidden=\"true\" style=\"display:inline-block;vertical-align:middle;margin-right:8px\"><rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect><rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect><rect x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\" transform=\"rotate(45 16 16)\"></rect></svg>",
+            "box": [
+              72,
+              5797,
+              20,
+              20
+            ]
+          }
+        ],
+        "bgs": [],
+        "brand": [
+          {
+            "text": "Mousa Batarseh",
+            "html": "<svg class=\"mark\" viewBox=\"0 0 32 32\" aria-hidden=\"true\"><rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect><rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect><rect x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\" transform=\"rotate(45 16 16)\"></rect></svg><span>Mousa Batarseh</span>"
+          },
+          {
+            "text": "The Lab",
+            "html": "The Lab"
+          },
+          {
+            "text": "The Lab",
+            "html": "The Lab"
+          },
+          {
+            "text": "09House of Dank Marketing Operations OSPromotion accuracy operating systemHouse ",
+            "html": "<span class=\"n\">09</span><h3>House of Dank Marketing Operations OS</h3><span class=\"type\">Promotion accuracy operating system</span><span class=\"tags\"><span class=\"tag\">House of Dank</span><span class=\"tag\">promotions</span><span class=\"tag\">menu</span></span><span class=\"arr\" aria-hidden=\"true\">↗</span>"
+          },
+          {
+            "text": "14The LabWorking demos hublabdemosexperiments↗",
+            "html": "<span class=\"n\">14</span><h3>The Lab</h3><span class=\"type\">Working demos hub</span><span class=\"tags\"><span class=\"tag\">lab</span><span class=\"tag\">demos</span><span class=\"tag\">experiments</span></span><span class=\"arr\" aria-hidden=\"true\">↗</span>"
+          },
+          {
+            "text": "21ASASElementor block and wireframe studioASASElementorWordPress↗",
+            "html": "<span class=\"n\">21</span><h3>ASAS</h3><span class=\"type\">Elementor block and wireframe studio</span><span class=\"tags\"><span class=\"tag\">ASAS</span><span class=\"tag\">Elementor</span><span class=\"tag\">WordPress</span></span><span class=\"arr\" aria-hidden=\"true\">↗</span>"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://mousabatarseh.com/reviews/",
+      "status": 200,
+      "found": {
+        "icons": [
+          {
+            "rel": "og:image",
+            "href": "https://mousabatarseh.com/reviews/og.jpg",
+            "sizes": null
+          },
+          {
+            "rel": "icon",
+            "href": "https://mousabatarseh.com/reviews/assets/logo.svg",
+            "sizes": null
+          }
+        ],
+        "imgs": [
+          {
+            "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+            "alt": "",
+            "cls": "logo",
+            "w": 150,
+            "h": 150
+          },
+          {
+            "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+            "alt": "",
+            "cls": "logo",
+            "w": 150,
+            "h": 150
+          },
+          {
+            "src": "https://mousabatarseh.com/reviews/img/thumbs/bran.webp",
+            "alt": "Bran Marketing review, first screen",
+            "cls": "",
+            "w": 0,
+            "h": 0
+          },
+          {
+            "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+            "alt": "",
+            "cls": "logo",
+            "w": 150,
+            "h": 150
+          }
+        ],
+        "svgs": [],
+        "bgs": [],
+        "brand": [
+          {
+            "text": "Mousa BatarsehReviews",
+            "html": "<img class=\"logo\" src=\"assets/logo.svg\" alt=\"\" width=\"22\" height=\"22\">Mousa Batarseh<small>Reviews</small>"
+          },
+          {
+            "text": "Mousa Batarseh",
+            "html": "<img class=\"logo\" src=\"assets/logo.svg\" alt=\"\" width=\"22\" height=\"22\">Mousa Batarseh"
+          },
+          {
+            "text": "Portfolio",
+            "html": "Portfolio"
+          },
+          {
+            "text": "The Lab",
+            "html": "The Lab"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://mousabatarseh.com/reworked-review/",
+      "status": 200,
+      "found": {
+        "icons": [
+          {
+            "rel": "og:image",
+            "href": "https://mousabatarseh.com/reworked-review/assets/og.jpg",
+            "sizes": null
+          },
+          {
+            "rel": "icon",
+            "href": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='13' y='2' width='6' height='28' rx='2' fill='%23F2B705'/%3E%3Crect x='2' y='13' width='28' height='6' rx='2' fill='%236B4423'/%3E%3C/svg%3E",
+            "sizes": null
+          }
+        ],
+        "imgs": [],
+        "svgs": [
+          {
+            "html": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 32 32\" aria-hidden=\"true\"><rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"2\" fill=\"#F2B705\"></rect><rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"2\" fill=\"#6B4423\"></rect></svg>",
+            "box": [
+              154,
+              20,
+              26,
+              26
+            ]
+          }
+        ],
+        "bgs": [],
+        "brand": [
+          {
+            "text": "Mousa BatarsehReworked review",
+            "html": "\n      <svg width=\"26\" height=\"26\" viewBox=\"0 0 32 32\" aria-hidden=\"true\"><rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"2\" fill=\"#F2B705\"></rect><rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"2\" fill=\"#6B4423\"></rect></svg>\n      <span>Mousa Batarseh<small>Reworked review</small></span>\n    "
+          },
+          {
+            "text": "mousabatarseh.com",
+            "html": "mousabatarseh.com"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://work.mousabatarseh.com/",
+      "status": 200,
+      "found": {
+        "icons": [
+          {
+            "rel": "og:image",
+            "href": "https://mousabatarseh.com/portfolio-home/social-preview-4c7b5bd03003.jpg",
+            "sizes": null
+          },
+          {
+            "rel": "icon",
+            "href": "https://mousabatarseh.com/portfolio-home/favicon.svg",
+            "sizes": null
+          }
+        ],
+        "imgs": [
+          {
+            "src": "https://mousabatarseh.com/portfolio-home/img/capture_asas_home_previous-asas-home-user-web.webp",
+            "alt": "ASAS Homepage website",
+            "cls": "project-item-image can-scroll",
+            "w": 740,
+            "h": 1224
+          },
+          {
+            "src": "https://mousabatarseh.com/portfolio-home/img/capture_american_hot_wheel-american-hot-wheel-web.webp",
+            "alt": "American Hot Wheel website",
+            "cls": "project-item-image can-scroll",
+            "w": 720,
+            "h": 2165
+          },
+          {
+            "src": "https://mousabatarseh.com/portfolio-home/img/wharton-advanced-marketing.png",
+            "alt": "Wharton Advanced Digital Marketing and Growth Strategies certificate for Mousa Batarseh",
+            "cls": "",
+            "w": 0,
+            "h": 0
+          },
+          {
+            "src": "https://mousabatarseh.com/portfolio-home/img/foundations-digital-marketing.png",
+            "alt": "Foundations of Digital Marketing and E-commerce certificate for Mousa Batarseh",
+            "cls": "",
+            "w": 0,
+            "h": 0
+          },
+          {
+            "src": "https://mousabatarseh.com/portfolio-home/img/attract-engage-customers.png",
+            "alt": "Attract and Engage Customers with Digital Marketing certificate for Mousa Batarseh",
+            "cls": "",
+            "w": 0,
+            "h": 0
+          }
+        ],
+        "svgs": [
+          {
+            "html": "<svg class=\"logo-mark\" viewBox=\"0 0 32 32\" width=\"88\" height=\"88\" aria-hidden=\"true\">\n      <rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect>\n      <rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect>\n      <rect x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\" transform=\"rotate(45 16 16)\"></rect>\n    </svg>",
+            "box": [
+              72,
+              60,
+              72,
+              72
+            ]
+          },
+          {
+            "html": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"><path d=\"M7 1v12M2 8l5 5 5-5\"></path></svg>",
+            "box": [
+              1218,
+              65,
+              14,
+              14
+            ]
+          },
+          {
+            "html": "<svg width=\"14\" height=\"6\" viewBox=\"0 0 14 6\" fill=\"currentColor\"><circle cx=\"3\" cy=\"3\" r=\"2.5\"></circle><circle cx=\"11\" cy=\"3\" r=\"2.5\"></circle></svg>",
+            "box": [
+              1338,
+              69,
+              14,
+              6
+            ]
+          },
+          {
+            "html": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 12h16M13 5l7 7-7 7\"></path></svg>",
+            "box": [
+              26,
+              2692,
+              35,
+              35
+            ]
+          },
+          {
+            "html": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 12h16M13 5l7 7-7 7\"></path></svg>",
+            "box": [
+              26,
+              3290,
+              35,
+              35
+            ]
+          }
+        ],
+        "bgs": [],
+        "brand": [
+          {
+            "text": "",
+            "html": "\n    <svg class=\"logo-mark\" viewBox=\"0 0 32 32\" width=\"88\" height=\"88\" aria-hidden=\"true\">\n      <rect x=\"13\" y=\"2\" width=\"6\" height=\"28\" rx=\"3\" fill=\"#244BFF\"></rect>\n      <rect x=\"2\" y=\"13\" width=\"28\" height=\"6\" rx=\"3\" fill=\"#F12B18\"></rect>\n      <rect x=\"13\" y=\"6\" width=\"6\" height=\"20\" rx=\"3\" fill=\"#7DE000\" transform=\"rotate(45 16 16)\"></rect>\n    </svg>\n    \n  "
+          },
+          {
+            "text": "asas.mousabatarseh.combrand site • design system • 4,038 blocksASAS Homepage",
+            "html": "<div class=\"project-item-main\"><div class=\"bm\"><div class=\"bm-bar\" aria-hidden=\"true\"><i></i><i></i><i></i><span class=\"bm-url\">asas.mousabatarseh.com</span></div><img class=\"project-item-image can-scroll\" src=\"/portfolio-home/img/capture_asas_home_previous-asas-home-user-web.webp\" srcset=\"/portfolio-home/img/capture_asas_home_previous-asas-home-user-mobile.webp 800w, /portfolio-home/img/capture_asas_home_previous-asas-home-user-web.webp 1400w\" sizes=\"(max-width: 700px) 100vw, 50vw\" alt=\"ASAS Homepage website\" loading=\"lazy\" decoding=\"async\" style=\"--project-scroll-y: -673px; --project-scroll-duration: 5.608333333333333s;\"></div></div><div class=\"project-item-footer\"><div class=\"project-item-line-1\">brand site • design system • 4,038 blocks</div><div class=\"project-item-line-2\"><span class=\"project-item-line-2-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 12h16M13 5l7 7-7 7\"></path></svg></span><h3 class=\"project-item-line-2-inner\"><span>ASAS Homepage</span><span aria-hidden=\"true\" data-text=\"ASAS Homepage\"></span></h3></div></div>"
+          },
+          {
+            "text": "interviewdemo.mousabatarseh.comwoocommerce • vehicle fitment • brandingAmerican ",
+            "html": "<div class=\"project-item-main\"><div class=\"bm\"><div class=\"bm-bar\" aria-hidden=\"true\"><i></i><i></i><i></i><span class=\"bm-url\">interviewdemo.mousabatarseh.com</span></div><img class=\"project-item-image can-scroll\" src=\"/portfolio-home/img/capture_american_hot_wheel-american-hot-wheel-web.webp\" srcset=\"/portfolio-home/img/capture_american_hot_wheel-american-hot-wheel-mobile.webp 800w, /portfolio-home/img/capture_american_hot_wheel-american-hot-wheel-web.webp 1400w\" sizes=\"(max-width: 700px) 100vw, 50vw\" alt=\"American Hot Wheel website\" loading=\"lazy\" decoding=\"async\" style=\"--project-scroll-y: -1535px; --project-scroll-duration: 12s;\"></div></div><div class=\"project-item-footer\"><div class=\"project-item-line-1\">woocommerce • vehicle fitment • branding</div><div class=\"project-item-line-2\"><span class=\"project-item-line-2-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 12h16M13 5l7 7-7 7\"></path></svg></span><h3 class=\"project-item-line-2-inner\"><span>American Hot Wheel</span><span aria-hidden=\"true\" data-text=\"American Hot Wheel\"></span></h3></div></div>"
+          },
+          {
+            "text": "ASAS Studioasas.mousabatarseh.com",
+            "html": "<span>ASAS Studio</span><small>asas.mousabatarseh.com</small>"
+          },
+          {
+            "text": "American Hot Wheelinterviewdemo.mousabatarseh.com",
+            "html": "<span>American Hot Wheel</span><small>interviewdemo.mousabatarseh.com</small>"
+          },
+          {
+            "text": "Home",
+            "html": "Home"
+          }
+        ]
+      }
+    }
+  ],
+  "files": [
+    {
+      "url": "https://mousabatarseh.com/portfolio-home/social-preview-4c7b5bd03003.jpg",
+      "from": "https://mousabatarseh.com/",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 168102,
+      "file": "files/e1fc5ecb8e.jpg"
+    },
+    {
+      "url": "https://mousabatarseh.com/portfolio-home/favicon.svg",
+      "from": "https://mousabatarseh.com/",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 287,
+      "file": "files/57119264fa.svg"
+    },
+    {
+      "url": "https://mousabatarseh.com/portfolio-home/img/capture_asas_home_previous-asas-home-user-web.webp",
+      "from": "https://mousabatarseh.com/",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 86268,
+      "file": "files/f29495112d.webp"
+    },
+    {
+      "url": "https://mousabatarseh.com/portfolio-home/img/capture_american_hot_wheel-american-hot-wheel-web.webp",
+      "from": "https://mousabatarseh.com/",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 226756,
+      "file": "files/2ae081028d.webp"
+    },
+    {
+      "url": "https://mousabatarseh.com/portfolio-home/img/wharton-advanced-marketing.png",
+      "from": "https://mousabatarseh.com/",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 1653941,
+      "file": "files/555073f459.png"
+    },
+    {
+      "url": "https://mousabatarseh.com/portfolio-home/img/foundations-digital-marketing.png",
+      "from": "https://mousabatarseh.com/",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 1047680,
+      "file": "files/a68d5e4e21.png"
+    },
+    {
+      "url": "https://mousabatarseh.com/portfolio-home/img/attract-engage-customers.png",
+      "from": "https://mousabatarseh.com/",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 1384240,
+      "file": "files/b022399eea.png"
+    },
+    {
+      "url": "https://mousabatarseh.com/v2/img/social-preview.jpg",
+      "from": "https://mousabatarseh.com/v2/",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 58058,
+      "file": "files/1cd8700a87.jpg"
+    },
+    {
+      "url": "https://mousabatarseh.com/v2/favicon.svg",
+      "from": "https://mousabatarseh.com/v2/",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 287,
+      "file": "files/f62dc9b7ea.svg"
+    },
+    {
+      "url": "https://mousabatarseh.com/reviews/og.jpg",
+      "from": "https://mousabatarseh.com/reviews/",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 85256,
+      "file": "files/a7289fb00b.jpg"
+    },
+    {
+      "url": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "from": "https://mousabatarseh.com/reviews/",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 8061,
+      "file": "files/de25f41a35.svg"
+    },
+    {
+      "url": "https://mousabatarseh.com/reviews/img/thumbs/bran.webp",
+      "from": "https://mousabatarseh.com/reviews/",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 56144,
+      "file": "files/43c7f4fe48.webp"
+    },
+    {
+      "url": "https://mousabatarseh.com/reworked-review/assets/og.jpg",
+      "from": "https://mousabatarseh.com/reworked-review/",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 86748,
+      "file": "files/7dec1477d6.jpg"
+    },
+    {
+      "url": "https://mousabatarseh.com/favicon.ico",
+      "from": "direct",
+      "status": 404
+    }
+  ],
+  "paths": [
+    {
+      "path": "/tools/",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/tools",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/Tools/",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/work/",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/about/",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/index/",
+      "status": 404,
+      "location": null,
+      "title": null
+    },
+    {
+      "path": "/index",
+      "status": 404,
+      "location": null,
+      "title": null
+    }
+  ]
+}

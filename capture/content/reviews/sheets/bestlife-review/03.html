@@ -1,0 +1,26 @@
+<div class="wrap">
+
+  <p class="crumb">Sec. 03 — Findings</p>
+  <div class="sec-h"><span class="tag">DEFECTS</span><h2>What the scanner found</h2></div>
+  <p class="sec-sub">Four defect types, each with the URL and the line of source it came from.</p>
+  <div class="cards">
+    <div class="card"><span class="kicker b">Indexed placeholder</span><h3>The template is live</h3><p>comforcare.com/microsite-template/ returns 200 with <span class="mono">index, follow</span>, title “Elderly In-Home Care CITY, PR”, phone 1-555-555-5555 — and robots.txt lists it as a sitemap. Google returns it.</p></div>
+    <div class="card"><span class="kicker b">NAP conflict</span><h3>Two addresses</h3><p>comforcare.com/birmingham/ — schema says 3940 Montclair Rd; the footer says 2000 Southbridge Pkwy. Three pages share one H1; schema logo/image URLs 404 and @id is empty.</p></div>
+    <div class="card"><span class="kicker a">Dead sitemap</span><h3>Robots → 404</h3><p>nextdayaccess.com/robots.txt points <span class="mono">Sitemap:</span> to fsmarketing8.wpengine.com — “Site is not available.” Location pages have no LocalBusiness schema.</p></div>
+    <div class="card"><span class="kicker a">Broken CTA</span><h3>Unrendered shortcode</h3><p>nextdayaccess.com/pittsburgh-pa/ has <span class="mono">href="tel:[acf_field…]"</span> — the phone link never rendered. A dead call-to-action on a lead page.</p></div>
+  </div>
+  <div class="sec-h" style="margin-top:48px"><span class="tag">THE FIX</span><h2>One template, corrected once</h2></div>
+  <div class="code2" style="margin-top:16px">
+<pre class="was"><span class="cap">Pittsburgh CTA — now</span>&lt;a href="tel:<b class="del">[acf_field field="phone"]</b>"&gt;
+  Call Us
+&lt;/a&gt;</pre>
+<pre class="now"><span class="cap">Template — rendered</span>&lt;a href="tel:<b class="add">&lt;?php echo esc_attr(
+  get_field('phone') ); ?&gt;</b>"&gt;
+  Call <b class="add">&lt;?php the_field('phone_display'); ?&gt;</b>
+&lt;/a&gt;</pre>
+  </div>
+  <p style="margin-top:14px"><span class="ev">Evidence: comforcare.com/microsite-template/, /birmingham/; nextdayaccess.com/robots.txt, /pittsburgh-pa/; bluemoonestatesales.com/page-sitemap.xml; corporate Lighthouse: LCP 12.7 s, CLS 0.152, 34/36 images no alt, /careers/ 404 — Sep 19, 2026</span></p>
+
+
+<div class="pagenav"><a href="https://mousabatarseh.com/bestlife-review/scanner.html">← Scanner</a><a class="next" href="https://mousabatarseh.com/bestlife-review/plan.html">Next: Plan →</a></div>
+</div>

@@ -1,0 +1,3545 @@
+{
+  "url": "https://mousabatarseh.com/reviews/builds/index.html",
+  "title": "Builds · Mousa Batarseh",
+  "description": "58 builds by Mousa Batarseh: tools, labs, storefronts and client sites, checked against the live hosting account.",
+  "ogImage": "https://mousabatarseh.com/reviews/og.jpg",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "h1",
+      "text": "Every build,\none living index"
+    },
+    {
+      "t": "p",
+      "text": "Working tools, labs, storefronts and client sites, checked against the live hosting account and shown without guesswork."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "58"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "builds in the index"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "52"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "live and reachable"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "15"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "featured builds"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "count in",
+      "text": "29"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "websites & storefronts"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "groups"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "The mix"
+    },
+    {
+      "t": "h2",
+      "text": "What’s\nin the index"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "10"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "29"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "10"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Application proposals"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "29"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "DiaMedical suite"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Retail & promo systems"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Adapted systems"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Tools"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Labs"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Storefronts"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Systems"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Client sites"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Checked live"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Tools"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Labs"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Storefronts"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Systems"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Client sites"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Checked live"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Tools"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Labs"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Storefronts"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Systems"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Client sites"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Checked live"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Featured"
+    },
+    {
+      "t": "h2",
+      "text": "15 featured builds,\nscroll through them"
+    },
+    {
+      "t": "p",
+      "text": "Flagship tools, adapted systems and the sites they run on."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/changeatlas-500.webp",
+      "alt": "ChangeAtlas Commerce",
+      "w": 500,
+      "h": 312,
+      "file": "ef6e09677532931b.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "01 / 15 · Flagship tools"
+    },
+    {
+      "t": "h3",
+      "text": "ChangeAtlas Commerce"
+    },
+    {
+      "t": "p",
+      "text": "Reads Matrixify or WooCommerce exports in the browser and shows what a catalog import will change before it runs."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/changeatlas-demo-500.webp",
+      "alt": "ChangeAtlas Review Demo",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "02 / 15 · Flagship tools"
+    },
+    {
+      "t": "h3",
+      "text": "ChangeAtlas Review Demo"
+    },
+    {
+      "t": "p",
+      "text": "Synthetic-store review workflow with upload, intent, coverage, findings, graph, batching, changes, and export views."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/csv-mapper-500.webp",
+      "alt": "CSV Mapper",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "03 / 15 · Flagship tools"
+    },
+    {
+      "t": "h3",
+      "text": "CSV Mapper"
+    },
+    {
+      "t": "p",
+      "text": "Maps and checks product, category, customer, and deal spreadsheets for Shopify and WooCommerce, entirely in the browser."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/dealproof-500.webp",
+      "alt": "DealProof",
+      "w": 500,
+      "h": 312,
+      "file": "9effe483fb0446cc.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "04 / 15 · Flagship tools"
+    },
+    {
+      "t": "h3",
+      "text": "DealProof"
+    },
+    {
+      "t": "p",
+      "text": "Checks promotion inputs and decision rules before launch so pricing, dates, eligibility, and channel conflicts are visible early."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/seo-tools-500.webp",
+      "alt": "SEO Tools",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "05 / 15 · Flagship tools"
+    },
+    {
+      "t": "h3",
+      "text": "SEO Tools"
+    },
+    {
+      "t": "p",
+      "text": "Nine browser tools for meta tags, SERP previews, social cards, schema, keyword density, robots.txt, UTM links, slugs, hreflang, and word counts."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/jobs-500.webp",
+      "alt": "Job Search Log",
+      "w": 500,
+      "h": 312,
+      "file": "1c28779ff8b0a98c.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "06 / 15 · Flagship tools"
+    },
+    {
+      "t": "h3",
+      "text": "Job Search Log"
+    },
+    {
+      "t": "p",
+      "text": "A visual record of applications, interview work, company research, and the tailored review sites created for specific opportunities."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-lab-500.webp",
+      "alt": "DiaMedical Commerce Intelligence Lab",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "07 / 15 · DiaMedical suite"
+    },
+    {
+      "t": "h3",
+      "text": "DiaMedical Commerce Intelligence Lab"
+    },
+    {
+      "t": "p",
+      "text": "Follows one customer question through product discovery, catalog quality, search, SEO, QA, developer handoff, reporting, and measurement."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/halden-medical-500.webp",
+      "alt": "Halden Medical",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "08 / 15 · Adapted systems"
+    },
+    {
+      "t": "h3",
+      "text": "Halden Medical"
+    },
+    {
+      "t": "p",
+      "text": "A distinct medical-supply adaptation of the DiaMedical case-study system, with its own public case study and workbook."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/northgate-group-500.webp",
+      "alt": "Northgate Retail Group",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "09 / 15 · Adapted systems"
+    },
+    {
+      "t": "h3",
+      "text": "Northgate Retail Group"
+    },
+    {
+      "t": "p",
+      "text": "A distinct company adaptation of the promotion-accuracy system with a walkthrough, working operations app, and calculator."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/hod-os-500.webp",
+      "alt": "House of Dank Marketing Operations OS",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "10 / 15 · Retail & promo systems"
+    },
+    {
+      "t": "h3",
+      "text": "House of Dank Marketing Operations OS"
+    },
+    {
+      "t": "p",
+      "text": "Multi-location menu and promotion workflow with catalog review, builder, menu sync, QA, campaign, and launch-control views using fictional data."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/mousa-portfolio-500.webp",
+      "alt": "Mousa Batarseh Portfolio",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "11 / 15 · Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Mousa Batarseh Portfolio"
+    },
+    {
+      "t": "p",
+      "text": "Main portfolio for webmaster, WordPress, e-commerce, product-data, and SEO work."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/asas-500.webp",
+      "alt": "ASAS",
+      "w": 500,
+      "h": 312,
+      "file": "17745e3cb21b3a2d.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "12 / 15 · Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "ASAS"
+    },
+    {
+      "t": "p",
+      "text": "WordPress and commerce design system with 4,038 Elementor blocks and an interactive studio."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/ptee-500.webp",
+      "alt": "PTEE",
+      "w": 500,
+      "h": 312,
+      "file": "159a447930473719.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "13 / 15 · Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "PTEE"
+    },
+    {
+      "t": "p",
+      "text": "Arabic and English theological education website with courses, admissions, news, resources, and student access."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/deals-os-500.webp",
+      "alt": "The Deals Operating System",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "14 / 15 · Retail & promo systems"
+    },
+    {
+      "t": "h3",
+      "text": "The Deals Operating System"
+    },
+    {
+      "t": "p",
+      "text": "A promotion QA workbook that runs 16 checks on every deal before it reaches a menu — price math, discount caps, dates, overlapping offers, store codes and readiness — with a live copy of the engine on the page and three narrated films."
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/gardner-white-proposal-500.webp",
+      "alt": "Same-Day Answers · Gardner-White Web-Orders Desk",
+      "w": 500,
+      "h": 312,
+      "file": "eb88f54c2939ebb4.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "15 / 15 · Application proposals"
+    },
+    {
+      "t": "h3",
+      "text": "Same-Day Answers · Gardner-White Web-Orders Desk"
+    },
+    {
+      "t": "p",
+      "text": "A one-screen web-orders desk built for Gardner-White's ECommerce Coordinator seat: nine chat, phone and email inquiries matched to orders, timed against the published return, damage and delivery rules, screened for fraud and answered, with the end-of-day report."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill rv in",
+      "text": "All builds"
+    },
+    {
+      "t": "h2",
+      "text": "Filter the\nwhole index"
+    },
+    {
+      "t": "p",
+      "text": "Every record links to the live build. Private and protected builds need access and are marked."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "found",
+      "text": "58 builds"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/changeatlas-500.webp",
+      "alt": "ChangeAtlas Commerce preview",
+      "w": 345,
+      "h": 215,
+      "file": "ef6e09677532931b.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "ChangeAtlas Commerce"
+    },
+    {
+      "t": "p",
+      "text": "Catalog import proof system"
+    },
+    {
+      "t": "p",
+      "text": "Reads Matrixify or WooCommerce exports in the browser and shows what a catalog import will change before it runs."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Product"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open demo"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Walkthrough"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/changeatlas-demo-500.webp",
+      "alt": "ChangeAtlas Review Demo preview",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "ChangeAtlas Review Demo"
+    },
+    {
+      "t": "p",
+      "text": "Interactive browser demo"
+    },
+    {
+      "t": "p",
+      "text": "Synthetic-store review workflow with upload, intent, coverage, findings, graph, batching, changes, and export views."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open demo"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "First 15 minutes"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/csv-mapper-500.webp",
+      "alt": "CSV Mapper preview",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "CSV Mapper"
+    },
+    {
+      "t": "p",
+      "text": "Spreadsheet mapping workspace"
+    },
+    {
+      "t": "p",
+      "text": "Maps and checks product, category, customer, and deal spreadsheets for Shopify and WooCommerce, entirely in the browser."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open tool"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Sites edition"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/dealproof-500.webp",
+      "alt": "DealProof preview",
+      "w": 345,
+      "h": 215,
+      "file": "9effe483fb0446cc.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "DealProof"
+    },
+    {
+      "t": "p",
+      "text": "Promotion launch checker"
+    },
+    {
+      "t": "p",
+      "text": "Checks promotion inputs and decision rules before launch so pricing, dates, eligibility, and channel conflicts are visible early."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open DealProof"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/seo-tools-500.webp",
+      "alt": "SEO Tools preview",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "SEO Tools"
+    },
+    {
+      "t": "p",
+      "text": "Privacy-first browser toolkit"
+    },
+    {
+      "t": "p",
+      "text": "Nine browser tools for meta tags, SERP previews, social cards, schema, keyword density, robots.txt, UTM links, slugs, hreflang, and word counts."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open toolkit"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/jobs-500.webp",
+      "alt": "Job Search Log preview",
+      "w": 345,
+      "h": 215,
+      "file": "1c28779ff8b0a98c.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "Job Search Log"
+    },
+    {
+      "t": "p",
+      "text": "Application tracking site"
+    },
+    {
+      "t": "p",
+      "text": "A visual record of applications, interview work, company research, and the tailored review sites created for specific opportunities."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open job log"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-lab-500.webp",
+      "alt": "DiaMedical Commerce Intelligence Lab preview",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "DiaMedical suite"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "DiaMedical Commerce Intelligence Lab"
+    },
+    {
+      "t": "p",
+      "text": "Independent e-commerce case study"
+    },
+    {
+      "t": "p",
+      "text": "Follows one customer question through product discovery, catalog quality, search, SEO, QA, developer handoff, reporting, and measurement."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open lab"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Read-only workbook"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/halden-medical-500.webp",
+      "alt": "Halden Medical preview",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Adapted systems"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "Halden Medical"
+    },
+    {
+      "t": "p",
+      "text": "Medical-commerce adaptation"
+    },
+    {
+      "t": "p",
+      "text": "A distinct medical-supply adaptation of the DiaMedical case-study system, with its own public case study and workbook."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open case study"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open workbook"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/northgate-group-500.webp",
+      "alt": "Northgate Retail Group preview",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Adapted systems"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "Northgate Retail Group"
+    },
+    {
+      "t": "p",
+      "text": "Retail-operations adaptation"
+    },
+    {
+      "t": "p",
+      "text": "A distinct company adaptation of the promotion-accuracy system with a walkthrough, working operations app, and calculator."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open walkthrough"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open operations app"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open calculator"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/hod-os-500.webp",
+      "alt": "House of Dank Marketing Operations OS preview",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Retail & promo systems"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "House of Dank Marketing Operations OS"
+    },
+    {
+      "t": "p",
+      "text": "Promotion accuracy operating system"
+    },
+    {
+      "t": "p",
+      "text": "Multi-location menu and promotion workflow with catalog review, builder, menu sync, QA, campaign, and launch-control views using fictional data."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open operating system"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open calculator"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open walkthrough"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/mousa-portfolio-500.webp",
+      "alt": "Mousa Batarseh Portfolio preview",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "Mousa Batarseh Portfolio"
+    },
+    {
+      "t": "p",
+      "text": "Primary portfolio"
+    },
+    {
+      "t": "p",
+      "text": "Main portfolio for webmaster, WordPress, e-commerce, product-data, and SEO work."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open portfolio"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/asas-500.webp",
+      "alt": "ASAS preview",
+      "w": 345,
+      "h": 215,
+      "file": "17745e3cb21b3a2d.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "ASAS"
+    },
+    {
+      "t": "p",
+      "text": "Elementor block and wireframe studio"
+    },
+    {
+      "t": "p",
+      "text": "WordPress and commerce design system with 4,038 Elementor blocks and an interactive studio."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open ASAS"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/ptee-500.webp",
+      "alt": "PTEE preview",
+      "w": 345,
+      "h": 215,
+      "file": "159a447930473719.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "PTEE"
+    },
+    {
+      "t": "p",
+      "text": "Bilingual education platform"
+    },
+    {
+      "t": "p",
+      "text": "Arabic and English theological education website with courses, admissions, news, resources, and student access."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open PTEE"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Courses"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/deals-os-500.webp",
+      "alt": "The Deals Operating System preview",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Retail & promo systems"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "The Deals Operating System"
+    },
+    {
+      "t": "p",
+      "text": "Promotion QA system + film series"
+    },
+    {
+      "t": "p",
+      "text": "A promotion QA workbook that runs 16 checks on every deal before it reaches a menu — price math, discount caps, dates, overlapping offers, store codes and readiness — with a live copy of the engine on the page and three narrated films."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "The system"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Film (3:46)"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Walkthrough (5:50)"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/gardner-white-proposal-500.webp",
+      "alt": "Same-Day Answers · Gardner-White Web-Orders Desk preview",
+      "w": 345,
+      "h": 215,
+      "file": "eb88f54c2939ebb4.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Application proposals"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "Featured"
+    },
+    {
+      "t": "h3",
+      "text": "Same-Day Answers · Gardner-White Web-Orders Desk"
+    },
+    {
+      "t": "p",
+      "text": "Working demo and proposal"
+    },
+    {
+      "t": "p",
+      "text": "A one-screen web-orders desk built for Gardner-White's ECommerce Coordinator seat: nine chat, phone and email inquiries matched to orders, timed against the published return, damage and delivery rules, screened for fraud and answered, with the end-of-day report."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open the desk"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Jump to the demo"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/reworked-review-500.webp",
+      "alt": "Carhartt Reworked Recommerce Merchandising Review preview",
+      "w": 345,
+      "h": 216,
+      "file": "053899ac164fbc5d.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Application proposals"
+    },
+    {
+      "t": "h3",
+      "text": "Carhartt Reworked Recommerce Merchandising Review"
+    },
+    {
+      "t": "p",
+      "text": "Independent review site"
+    },
+    {
+      "t": "p",
+      "text": "An independent review of reworked.carhartt.com from all 3,545 published listings: empty gift collections, split campaign tags, an alphabetical size filter and NewCondition schema, with four working fixes and a 90-day plan."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open the review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/bran-review-500.webp",
+      "alt": "Bran Marketing Web & SEO Department Review preview",
+      "w": 345,
+      "h": 216,
+      "file": "c367293f82d91fa8.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Application proposals"
+    },
+    {
+      "t": "h3",
+      "text": "Bran Marketing Web & SEO Department Review"
+    },
+    {
+      "t": "p",
+      "text": "Independent review site"
+    },
+    {
+      "t": "p",
+      "text": "An independent review of getbran.com and three client sites: schema coverage, Wix template leftovers, a case-study build with no meta layer, plus a filterable line-card prototype and a 90-day build standard."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open the review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/bran-proposal-500.webp",
+      "alt": "Bran Marketing Web Department Proposal preview",
+      "w": 345,
+      "h": 215,
+      "file": "5d430b6049c4be43.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Application proposals"
+    },
+    {
+      "t": "h3",
+      "text": "Bran Marketing Web Department Proposal"
+    },
+    {
+      "t": "p",
+      "text": "Proposal site"
+    },
+    {
+      "t": "p",
+      "text": "A light, WCAG-AA proposal for Bran Marketing's Web Development & Technical SEO Lead seat: a week-one storyboard, WordPress build and migration-QA snippets, and nine proof cards from live work."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open proposal"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/sapienceai-500.webp",
+      "alt": "Sapience AI · The Annotated Record preview",
+      "w": 345,
+      "h": 216,
+      "file": "131f8a651b9415fe.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Application proposals"
+    },
+    {
+      "t": "h3",
+      "text": "Sapience AI · The Annotated Record"
+    },
+    {
+      "t": "p",
+      "text": "Independent design concept"
+    },
+    {
+      "t": "p",
+      "text": "An independent, motion-led concept for Sapience AI's collective-intelligence story: a nine-chapter annotated record with margin notes, a provenance view that labels every passage, and a motion toggle that hands the reading back to the visitor."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open the concept"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/commerce-studio-500.webp",
+      "alt": "Commerce Studio preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "h3",
+      "text": "Commerce Studio"
+    },
+    {
+      "t": "p",
+      "text": "Published Sites edition"
+    },
+    {
+      "t": "p",
+      "text": "Hosted spreadsheet workspace for evidence-aware field mapping, validation, deal safeguards, and local export."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open site"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Portfolio copy"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/the-lab-500.webp",
+      "alt": "The Lab preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "h3",
+      "text": "The Lab"
+    },
+    {
+      "t": "p",
+      "text": "Working demos hub"
+    },
+    {
+      "t": "p",
+      "text": "A live home for working tools, experiments, adaptation projects, and portfolio systems."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open Lab"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open bench"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/ai-academy-500.webp",
+      "alt": "AI Academy preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "h3",
+      "text": "AI Academy"
+    },
+    {
+      "t": "p",
+      "text": "Bilingual learning map"
+    },
+    {
+      "t": "p",
+      "text": "Arabic and English learning experience that maps agents from chat interfaces to a local development environment."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open HTTP site"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/asas-studio-500.webp",
+      "alt": "ASAS Studio preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Flagship tools"
+    },
+    {
+      "t": "h3",
+      "text": "ASAS Studio"
+    },
+    {
+      "t": "p",
+      "text": "Elementor template library and page builder"
+    },
+    {
+      "t": "p",
+      "text": "Interactive studio for browsing and working with the ASAS Elementor block and wireframe library."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open studio"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-academy-500.webp",
+      "alt": "DiaMedical Academy preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "DiaMedical suite"
+    },
+    {
+      "t": "h3",
+      "text": "DiaMedical Academy"
+    },
+    {
+      "t": "p",
+      "text": "Guided learning experience"
+    },
+    {
+      "t": "p",
+      "text": "A structured academy that turns the DiaMedical case study into a guided learning path."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open Academy"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-review-500.webp",
+      "alt": "DiaMedical Experience Review preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "DiaMedical suite"
+    },
+    {
+      "t": "h3",
+      "text": "DiaMedical Experience Review"
+    },
+    {
+      "t": "p",
+      "text": "Evidence-backed website review"
+    },
+    {
+      "t": "p",
+      "text": "Independent evaluation of the public DiaMedical experience, Hospital Beds & Stretchers journey, and working improvement concepts."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-training-500.webp",
+      "alt": "DiaMedical Interview Trainer preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "DiaMedical suite"
+    },
+    {
+      "t": "h3",
+      "text": "DiaMedical Interview Trainer"
+    },
+    {
+      "t": "p",
+      "text": "Training course"
+    },
+    {
+      "t": "p",
+      "text": "Interactive preparation and training experience created around the DiaMedical case-study material."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open trainer"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-intro-500.webp",
+      "alt": "How I Thought It Through preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "DiaMedical suite"
+    },
+    {
+      "t": "h3",
+      "text": "How I Thought It Through"
+    },
+    {
+      "t": "p",
+      "text": "Reasoning walkthrough"
+    },
+    {
+      "t": "p",
+      "text": "Explains the path from a buyer question to a working catalog, search, QA, handoff, and measurement system."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open walkthrough"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-workbook-500.webp",
+      "alt": "DiaMedical Workbook Explorer preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "DiaMedical suite"
+    },
+    {
+      "t": "h3",
+      "text": "DiaMedical Workbook Explorer"
+    },
+    {
+      "t": "p",
+      "text": "Interactive workbook experience"
+    },
+    {
+      "t": "p",
+      "text": "Interactive and animated views of the workbook behind the case study, including a read-only analysis surface."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open explorer"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Read-only workbook"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Animated workbook"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-pathfinder-500.webp",
+      "alt": "DiaMedical Product Pathfinder preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "DiaMedical suite"
+    },
+    {
+      "t": "h3",
+      "text": "DiaMedical Product Pathfinder"
+    },
+    {
+      "t": "p",
+      "text": "Private discovery concept"
+    },
+    {
+      "t": "p",
+      "text": "Asks program, teaching goal, and priority, then builds a product-discovery path from those answers."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open private site"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-decision-brief-500.webp",
+      "alt": "DiaMedical Decision Brief preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "DiaMedical suite"
+    },
+    {
+      "t": "h3",
+      "text": "DiaMedical Decision Brief"
+    },
+    {
+      "t": "p",
+      "text": "Private research brief"
+    },
+    {
+      "t": "p",
+      "text": "A content-preserving decision brief that organizes buyer setting, requirements, evidence, lifecycle services, and purchase routes."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open private brief"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/hod-training-pack-500.webp",
+      "alt": "House of Dank Training Pack preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Retail & promo systems"
+    },
+    {
+      "t": "h3",
+      "text": "House of Dank Training Pack"
+    },
+    {
+      "t": "p",
+      "text": "Private-link course and guide"
+    },
+    {
+      "t": "p",
+      "text": "Interview study course and system guide explaining the promotion-accuracy workflow and how to present it."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Access on request"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/projects-archive-500.webp",
+      "alt": "Projects Archive preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Projects Archive"
+    },
+    {
+      "t": "p",
+      "text": "Public project index"
+    },
+    {
+      "t": "p",
+      "text": "Motion-led archive of web, e-commerce, landing-page, SEO, and product-data work."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open projects"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/work-portfolio-500.webp",
+      "alt": "Work Portfolio preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Work Portfolio"
+    },
+    {
+      "t": "p",
+      "text": "Professional portfolio property"
+    },
+    {
+      "t": "p",
+      "text": "Work-focused portfolio property for case studies and professional project presentation."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open work portfolio"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/eat-with-samar-500.webp",
+      "alt": "Eat With Samar preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Eat With Samar"
+    },
+    {
+      "t": "p",
+      "text": "Bilingual health and food website"
+    },
+    {
+      "t": "p",
+      "text": "Arabic and English nutrition, services, care topics, kitchen stories, and contact experience for a Metro Detroit dietitian."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open website"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/firefly-500.webp",
+      "alt": "Firefly Burgers — Michigan preview",
+      "w": 345,
+      "h": 215,
+      "file": "fb39cf233141bd5c.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Firefly Burgers — Michigan"
+    },
+    {
+      "t": "p",
+      "text": "Restaurant website"
+    },
+    {
+      "t": "p",
+      "text": "Michigan restaurant website environment for Firefly Burgers."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open website"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Bluehost mirror"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/universal-wholesale-500.webp",
+      "alt": "Universal Wholesale preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Universal Wholesale"
+    },
+    {
+      "t": "p",
+      "text": "WooCommerce wholesale store"
+    },
+    {
+      "t": "p",
+      "text": "Wholesale WooCommerce storefront supporting a 14,000-SKU catalog and migration."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open website"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/united-textile-500.webp",
+      "alt": "United Textile preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "United Textile"
+    },
+    {
+      "t": "p",
+      "text": "Shopify B2B wholesale store"
+    },
+    {
+      "t": "p",
+      "text": "Shopify storefront for B2B ordering and wholesale pricing."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open website"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/full-house-wholesale-500.webp",
+      "alt": "Full House Wholesale preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Full House Wholesale"
+    },
+    {
+      "t": "p",
+      "text": "B2B wholesale product catalog"
+    },
+    {
+      "t": "p",
+      "text": "B2B wholesale product catalog and e-commerce storefront."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open website"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/great-lakes-cigar-festival-500.webp",
+      "alt": "Great Lakes Cigar Festival preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Great Lakes Cigar Festival"
+    },
+    {
+      "t": "p",
+      "text": "WordPress event and ticketing site"
+    },
+    {
+      "t": "p",
+      "text": "WordPress event website for Great Lakes Cigar Festival with ticketing."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open website"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/wildbills-drive-menu-500.webp",
+      "alt": "Wild Bill's Drive-thru Menu preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Wild Bill's Drive-thru Menu"
+    },
+    {
+      "t": "p",
+      "text": "WordPress digital catalog and menu"
+    },
+    {
+      "t": "p",
+      "text": "WordPress digital catalog and drive-thru menu for Wild Bill's Tobacco."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open menu"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/wildbills-st-patrick-500.webp",
+      "alt": "Wild Bill's St. Patrick Sales Form preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Wild Bill's St. Patrick Sales Form"
+    },
+    {
+      "t": "p",
+      "text": "WordPress campaign and sales form"
+    },
+    {
+      "t": "p",
+      "text": "WordPress St. Patrick campaign and sales form for Wild Bill's Tobacco."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open sales form"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/mr-vapor-disposable-menu-500.webp",
+      "alt": "Mr. Vapor Disposable Menu preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Mr. Vapor Disposable Menu"
+    },
+    {
+      "t": "p",
+      "text": "WordPress product catalog and interactive menu"
+    },
+    {
+      "t": "p",
+      "text": "WordPress disposable-product catalog and interactive menu for Mr. Vapor."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open menu"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/wild-wednesdays-500.webp",
+      "alt": "Wild Wednesdays Landing Page preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Wild Wednesdays Landing Page"
+    },
+    {
+      "t": "p",
+      "text": "WordPress campaign landing page"
+    },
+    {
+      "t": "p",
+      "text": "WordPress promotional landing page for the Wild Wednesdays campaign."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open landing page"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/jabal-amman-publishers-500.webp",
+      "alt": "Jabal Amman Publishers preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Jabal Amman Publishers"
+    },
+    {
+      "t": "p",
+      "text": "WooCommerce publishing and bookstore"
+    },
+    {
+      "t": "p",
+      "text": "WooCommerce publishing and bookstore catalog for Jabal Amman Publishers."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open bookstore"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/wildbills-fathers-day-500.webp",
+      "alt": "Father's Day Sales Landing preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Father's Day Sales Landing"
+    },
+    {
+      "t": "p",
+      "text": "WordPress campaign landing page"
+    },
+    {
+      "t": "p",
+      "text": "WordPress Father's Day promotional landing page for Wild Bill's Tobacco."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open landing page"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/ophir-publishers-jordan-500.webp",
+      "alt": "Ophir Publishers – Jordan preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Ophir Publishers – Jordan"
+    },
+    {
+      "t": "p",
+      "text": "WooCommerce publishing catalog"
+    },
+    {
+      "t": "p",
+      "text": "WooCommerce publishing and book catalog for Ophir Publishers in Jordan."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open catalog"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/samona-hospitality-group-500.webp",
+      "alt": "Samona Hospitality Group preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Samona Hospitality Group"
+    },
+    {
+      "t": "p",
+      "text": "WordPress hospitality website"
+    },
+    {
+      "t": "p",
+      "text": "Responsive WordPress website for Samona Hospitality Group."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open website"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/wildbills-christmas-sale-500.webp",
+      "alt": "Wild Bill's Christmas Sale Landing preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Wild Bill's Christmas Sale Landing"
+    },
+    {
+      "t": "p",
+      "text": "WordPress holiday campaign landing page"
+    },
+    {
+      "t": "p",
+      "text": "WordPress holiday-sale landing page for Wild Bill's Tobacco."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open landing page"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/ptee-admissions-portal-500.webp",
+      "alt": "PTEE Admissions Portal preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "PTEE Admissions Portal"
+    },
+    {
+      "t": "p",
+      "text": "Bilingual admissions portal"
+    },
+    {
+      "t": "p",
+      "text": "Separate Arabic and English admissions workflow and application portal."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Admissions English"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Admissions Arabic"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/ptee-courses-programs-500.webp",
+      "alt": "PTEE Courses & Programs preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "PTEE Courses & Programs"
+    },
+    {
+      "t": "p",
+      "text": "Bilingual course catalog"
+    },
+    {
+      "t": "p",
+      "text": "Arabic and English course and program catalog for theological education."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Courses Arabic"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Courses English"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/american-hot-wheel-500.webp",
+      "alt": "American Hot Wheel preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "American Hot Wheel"
+    },
+    {
+      "t": "p",
+      "text": "WooCommerce storefront"
+    },
+    {
+      "t": "p",
+      "text": "Wheel, tire, and fitment storefront built as an interview demonstration and commerce environment."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open protected site"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/mawtini-500.webp",
+      "alt": "Mawtini Dabke Troupe preview",
+      "w": 345,
+      "h": 215,
+      "file": "1147304bd5806d9e.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Mawtini Dabke Troupe"
+    },
+    {
+      "t": "p",
+      "text": "Community organization website"
+    },
+    {
+      "t": "p",
+      "text": "Public website for the Mawtini Dabke Troupe."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open website"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/st-mary-500.webp",
+      "alt": "St. Mary Church Berkley preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "St. Mary Church Berkley"
+    },
+    {
+      "t": "p",
+      "text": "Church website"
+    },
+    {
+      "t": "p",
+      "text": "Church website currently protected behind Cloudflare."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open protected site"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/larkspur-500.webp",
+      "alt": "Larkspur Mobility preview",
+      "w": 345,
+      "h": 215,
+      "file": "6251b7c7a620a4d6.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "Larkspur Mobility"
+    },
+    {
+      "t": "p",
+      "text": "WordPress website"
+    },
+    {
+      "t": "p",
+      "text": "Mobility-focused WordPress website hosted inside the main portfolio account."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open website"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/btee-500.webp",
+      "alt": "BTEE Bilingual Build preview",
+      "w": 345,
+      "h": 215,
+      "file": "67544c44ecfa4182.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "BTEE Bilingual Build"
+    },
+    {
+      "t": "p",
+      "text": "Hosting migration build"
+    },
+    {
+      "t": "p",
+      "text": "Arabic and English WordPress build on the Bluehost account, with separate /ar/ and /en/ sites."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open Arabic site"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open English site"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/ptee-renewal-500.webp",
+      "alt": "PTEE Courses & Admissions Renewal preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "PTEE Courses & Admissions Renewal"
+    },
+    {
+      "t": "p",
+      "text": "Published renewal build"
+    },
+    {
+      "t": "p",
+      "text": "Bilingual course and admissions renewal build with a tested route and form manifest."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open renewal site"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/ptee-online-500.webp",
+      "alt": "PTEE Company Platform preview",
+      "w": 0,
+      "h": 0,
+      "file": null
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Websites & portfolios"
+    },
+    {
+      "t": "h3",
+      "text": "PTEE Company Platform"
+    },
+    {
+      "t": "p",
+      "text": "Education platform"
+    },
+    {
+      "t": "p",
+      "text": "Main PTEE platform for company information, courses, admissions, and student access."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open platform"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/rmc-proposal-500.webp",
+      "alt": "Recovery Movement Consulting Proposal preview",
+      "w": 345,
+      "h": 215,
+      "file": "a8aaf2b8773b87ed.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Application proposals"
+    },
+    {
+      "t": "h3",
+      "text": "Recovery Movement Consulting Proposal"
+    },
+    {
+      "t": "p",
+      "text": "Audit and proposal site"
+    },
+    {
+      "t": "p",
+      "text": "A review of recoverymovementconsult.com and three client sites (68 pages), then a build standard for Wix, Squarespace, WordPress and GoDaddy, a monthly domain watchtower and a request desk."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "lk",
+      "text": "Open proposal"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Suite"
+    },
+    {
+      "t": "h2",
+      "text": "The DiaMedical suite,\neight builds deep"
+    },
+    {
+      "t": "p",
+      "text": "One case study that became a lab, an academy, a trainer and a workbook. Hover a row."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "01"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "DiaMedical Commerce Intelligence Lab"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Independent e-commerce case study"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-lab.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "4a6d3fa8ac8255f0.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "02"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "DiaMedical Academy"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Guided learning experience"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-academy.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "889af860fe252bda.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "03"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "DiaMedical Experience Review"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Evidence-backed website review"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-review.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "fa368d68020b7b9a.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "04"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "DiaMedical Interview Trainer"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Training course"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-training.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "c670f66b269a38e8.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "05"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "How I Thought It Through"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Reasoning walkthrough"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-intro.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "03e78fbcdd6455dc.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "06"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "DiaMedical Workbook Explorer"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Interactive workbook experience"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-workbook.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "110f92162d9ea762.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "07"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "DiaMedical Product Pathfinder"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Private discovery concept"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-pathfinder.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "b0eb87da1b65fd61.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "n",
+      "text": "08"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "DiaMedical Decision Brief"
+    },
+    {
+      "t": "text",
+      "tag": "em",
+      "cls": "",
+      "text": "Private research brief"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-decision-brief.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "c67c5a79e5389671.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "pill",
+      "text": "Provenance"
+    },
+    {
+      "t": "p",
+      "text": "This index comes from the hosting domain map, live hosting directories, rendered page checks and known private deployments, scanned Sep 22, 2026. Live is reachable, Private needs intended access, Protected is host-gated and Legacy is kept as history."
+    },
+    {
+      "t": "h2",
+      "text": "Want a build\nlike these?"
+    },
+    {
+      "t": "p",
+      "text": "Send a URL. You’ll get the first findings back, dated and sourced."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn ghost",
+      "text": "hireme@mousabatarseh.com"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "t": "text",
+      "tag": "label",
+      "cls": "qsl1",
+      "text": "Start with your website"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Dated, sourced findings",
+        "One working fix, built for your site",
+        "Public pages only, no logins"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "01 / 15 · Flagship tools\nChangeAtlas Commerce\n\nReads Matrixify or WooCommerce exports in the browser and shows what a catalog import will ch",
+      "href": "https://mousabatarseh.com/changeatlas/"
+    },
+    {
+      "text": "02 / 15 · Flagship tools\nChangeAtlas Review Demo\n\nSynthetic-store review workflow with upload, intent, coverage, findings, graph, batching, ",
+      "href": "https://mousabatarseh.com/changeatlas/app/"
+    },
+    {
+      "text": "03 / 15 · Flagship tools\nCSV Mapper\n\nMaps and checks product, category, customer, and deal spreadsheets for Shopify and WooCommerce, entirel",
+      "href": "https://mousabatarseh.com/csv-mapper/"
+    },
+    {
+      "text": "04 / 15 · Flagship tools\nDealProof\n\nChecks promotion inputs and decision rules before launch so pricing, dates, eligibility, and channel con",
+      "href": "https://mousabatarseh.com/dealproof/"
+    },
+    {
+      "text": "05 / 15 · Flagship tools\nSEO Tools\n\nNine browser tools for meta tags, SERP previews, social cards, schema, keyword density, robots.txt, UTM ",
+      "href": "https://mousabatarseh.com/SEO-Tools/"
+    },
+    {
+      "text": "06 / 15 · Flagship tools\nJob Search Log\n\nA visual record of applications, interview work, company research, and the tailored review sites cr",
+      "href": "https://mousabatarseh.com/jobs/"
+    },
+    {
+      "text": "07 / 15 · DiaMedical suite\nDiaMedical Commerce Intelligence Lab\n\nFollows one customer question through product discovery, catalog quality, s",
+      "href": "https://mousabatarseh.com/diamedical/"
+    },
+    {
+      "text": "08 / 15 · Adapted systems\nHalden Medical\n\nA distinct medical-supply adaptation of the DiaMedical case-study system, with its own public case",
+      "href": "https://lab.mousabatarseh.com/halden-medical/"
+    },
+    {
+      "text": "09 / 15 · Adapted systems\nNorthgate Retail Group\n\nA distinct company adaptation of the promotion-accuracy system with a walkthrough, working",
+      "href": "https://lab.mousabatarseh.com/northgate-group/"
+    },
+    {
+      "text": "10 / 15 · Retail & promo systems\nHouse of Dank Marketing Operations OS\n\nMulti-location menu and promotion workflow with catalog review, buil",
+      "href": "https://hod-demo.mousabatarseh.com/"
+    },
+    {
+      "text": "11 / 15 · Websites & portfolios\nMousa Batarseh Portfolio\n\nMain portfolio for webmaster, WordPress, e-commerce, product-data, and SEO work.",
+      "href": "https://mousabatarseh.com/"
+    },
+    {
+      "text": "12 / 15 · Websites & portfolios\nASAS\n\nWordPress and commerce design system with 4,038 Elementor blocks and an interactive studio.",
+      "href": "https://asas.mousabatarseh.com/"
+    },
+    {
+      "text": "13 / 15 · Websites & portfolios\nPTEE\n\nArabic and English theological education website with courses, admissions, news, resources, and studen",
+      "href": "https://ptee.org/"
+    },
+    {
+      "text": "14 / 15 · Retail & promo systems\nThe Deals Operating System\n\nA promotion QA workbook that runs 16 checks on every deal before it reaches a m",
+      "href": "https://mousabatarseh.com/deals-os/"
+    },
+    {
+      "text": "15 / 15 · Application proposals\nSame-Day Answers · Gardner-White Web-Orders Desk\n\nA one-screen web-orders desk built for Gardner-White's ECo",
+      "href": "https://mousabatarseh.com/gardner-white-proposal/"
+    },
+    {
+      "text": "Live\nFlagship tools\nFeatured\nChangeAtlas Commerce\n\nCatalog import proof system\n\nReads Matrixify or WooCommerce exports in the browser and sh",
+      "href": "https://mousabatarseh.com/changeatlas/"
+    },
+    {
+      "text": "Live\nFlagship tools\nFeatured\nChangeAtlas Review Demo\n\nInteractive browser demo\n\nSynthetic-store review workflow with upload, intent, coverag",
+      "href": "https://mousabatarseh.com/changeatlas/app/"
+    },
+    {
+      "text": "Live\nFlagship tools\nFeatured\nCSV Mapper\n\nSpreadsheet mapping workspace\n\nMaps and checks product, category, customer, and deal spreadsheets f",
+      "href": "https://mousabatarseh.com/csv-mapper/"
+    },
+    {
+      "text": "Live\nFlagship tools\nFeatured\nDealProof\n\nPromotion launch checker\n\nChecks promotion inputs and decision rules before launch so pricing, dates",
+      "href": "https://mousabatarseh.com/dealproof/"
+    },
+    {
+      "text": "Live\nFlagship tools\nFeatured\nSEO Tools\n\nPrivacy-first browser toolkit\n\nNine browser tools for meta tags, SERP previews, social cards, schema",
+      "href": "https://mousabatarseh.com/SEO-Tools/"
+    },
+    {
+      "text": "Live\nFlagship tools\nFeatured\nJob Search Log\n\nApplication tracking site\n\nA visual record of applications, interview work, company research, a",
+      "href": "https://mousabatarseh.com/jobs/"
+    },
+    {
+      "text": "Live\nDiaMedical suite\nFeatured\nDiaMedical Commerce Intelligence Lab\n\nIndependent e-commerce case study\n\nFollows one customer question throug",
+      "href": "https://mousabatarseh.com/diamedical/"
+    },
+    {
+      "text": "Live\nAdapted systems\nFeatured\nHalden Medical\n\nMedical-commerce adaptation\n\nA distinct medical-supply adaptation of the DiaMedical case-study",
+      "href": "https://lab.mousabatarseh.com/halden-medical/"
+    },
+    {
+      "text": "Live\nAdapted systems\nFeatured\nNorthgate Retail Group\n\nRetail-operations adaptation\n\nA distinct company adaptation of the promotion-accuracy ",
+      "href": "https://lab.mousabatarseh.com/northgate-group/"
+    },
+    {
+      "text": "Live\nRetail & promo systems\nFeatured\nHouse of Dank Marketing Operations OS\n\nPromotion accuracy operating system\n\nMulti-location menu and pro",
+      "href": "https://hod-demo.mousabatarseh.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nFeatured\nMousa Batarseh Portfolio\n\nPrimary portfolio\n\nMain portfolio for webmaster, WordPress, e-commerce, produc",
+      "href": "https://mousabatarseh.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nFeatured\nASAS\n\nElementor block and wireframe studio\n\nWordPress and commerce design system with 4,038 Elementor bl",
+      "href": "https://asas.mousabatarseh.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nFeatured\nPTEE\n\nBilingual education platform\n\nArabic and English theological education website with courses, admis",
+      "href": "https://ptee.org/"
+    },
+    {
+      "text": "Live\nRetail & promo systems\nFeatured\nThe Deals Operating System\n\nPromotion QA system + film series\n\nA promotion QA workbook that runs 16 che",
+      "href": "https://mousabatarseh.com/deals-os/"
+    },
+    {
+      "text": "Live\nApplication proposals\nFeatured\nSame-Day Answers · Gardner-White Web-Orders Desk\n\nWorking demo and proposal\n\nA one-screen web-orders des",
+      "href": "https://mousabatarseh.com/gardner-white-proposal/"
+    },
+    {
+      "text": "Live\nApplication proposals\nCarhartt Reworked Recommerce Merchandising Review\n\nIndependent review site\n\nAn independent review of reworked.car",
+      "href": "https://mousabatarseh.com/reworked-review/"
+    },
+    {
+      "text": "Live\nApplication proposals\nBran Marketing Web & SEO Department Review\n\nIndependent review site\n\nAn independent review of getbran.com and thr",
+      "href": "https://mousabatarseh.com/bran-review/"
+    },
+    {
+      "text": "Live\nApplication proposals\nBran Marketing Web Department Proposal\n\nProposal site\n\nA light, WCAG-AA proposal for Bran Marketing's Web Develop",
+      "href": "https://mousabatarseh.com/bran-proposal/"
+    },
+    {
+      "text": "Live\nApplication proposals\nSapience AI · The Annotated Record\n\nIndependent design concept\n\nAn independent, motion-led concept for Sapience A",
+      "href": "https://mousabatarseh.com/sapienceai/"
+    },
+    {
+      "text": "Live\nFlagship tools\nCommerce Studio\n\nPublished Sites edition\n\nHosted spreadsheet workspace for evidence-aware field mapping, validation, dea",
+      "href": "https://commerce-studio.mousabb2.chatgpt.site/"
+    },
+    {
+      "text": "Live\nFlagship tools\nThe Lab\n\nWorking demos hub\n\nA live home for working tools, experiments, adaptation projects, and portfolio systems.\n\nOpe",
+      "href": "https://lab.mousabatarseh.com/"
+    },
+    {
+      "text": "Legacy\nFlagship tools\nAI Academy\n\nBilingual learning map\n\nArabic and English learning experience that maps agents from chat interfaces to a ",
+      "href": "http://apps.moseswebworks.com/aiacademy/"
+    },
+    {
+      "text": "Live\nFlagship tools\nASAS Studio\n\nElementor template library and page builder\n\nInteractive studio for browsing and working with the ASAS Elem",
+      "href": "https://asas.mousabatarseh.com/studio/"
+    },
+    {
+      "text": "Live\nDiaMedical suite\nDiaMedical Academy\n\nGuided learning experience\n\nA structured academy that turns the DiaMedical case study into a guide",
+      "href": "https://mousabatarseh.com/diamedical/academy/"
+    },
+    {
+      "text": "Live\nDiaMedical suite\nDiaMedical Experience Review\n\nEvidence-backed website review\n\nIndependent evaluation of the public DiaMedical experien",
+      "href": "https://mousabatarseh.com/diamedical-review/"
+    },
+    {
+      "text": "Live\nDiaMedical suite\nDiaMedical Interview Trainer\n\nTraining course\n\nInteractive preparation and training experience created around the DiaM",
+      "href": "https://mousabatarseh.com/diamedical-training/"
+    },
+    {
+      "text": "Live\nDiaMedical suite\nHow I Thought It Through\n\nReasoning walkthrough\n\nExplains the path from a buyer question to a working catalog, search,",
+      "href": "https://mousabatarseh.com/diamedical-intro/"
+    },
+    {
+      "text": "Live\nDiaMedical suite\nDiaMedical Workbook Explorer\n\nInteractive workbook experience\n\nInteractive and animated views of the workbook behind t",
+      "href": "https://mousabatarseh.com/diamedical/v3/"
+    },
+    {
+      "text": "Private\nDiaMedical suite\nDiaMedical Product Pathfinder\n\nPrivate discovery concept\n\nAsks program, teaching goal, and priority, then builds a ",
+      "href": "https://diamedical-product-pathfinder.mousabb2.chatgpt.site/"
+    },
+    {
+      "text": "Private\nDiaMedical suite\nDiaMedical Decision Brief\n\nPrivate research brief\n\nA content-preserving decision brief that organizes buyer setting",
+      "href": "https://diamedical-decision-brief.mousabb2.chatgpt.site/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nProjects Archive\n\nPublic project index\n\nMotion-led archive of web, e-commerce, landing-page, SEO, and product-dat",
+      "href": "https://mousabatarseh.com/projects/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nWork Portfolio\n\nProfessional portfolio property\n\nWork-focused portfolio property for case studies and professiona",
+      "href": "https://work.mousabatarseh.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nEat With Samar\n\nBilingual health and food website\n\nArabic and English nutrition, services, care topics, kitchen s",
+      "href": "https://eatwithsamar.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nFirefly Burgers — Michigan\n\nRestaurant website\n\nMichigan restaurant website environment for Firefly Burgers.\n\nOpe",
+      "href": "https://fireflyburgersmi.com/ver2/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nUniversal Wholesale\n\nWooCommerce wholesale store\n\nWholesale WooCommerce storefront supporting a 14,000-SKU catalo",
+      "href": "https://universalwholesaleonline.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nUnited Textile\n\nShopify B2B wholesale store\n\nShopify storefront for B2B ordering and wholesale pricing.\n\nOpen web",
+      "href": "https://shopunitedtextile.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nFull House Wholesale\n\nB2B wholesale product catalog\n\nB2B wholesale product catalog and e-commerce storefront.\n\nOp",
+      "href": "https://www.fullhousewholesale.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nGreat Lakes Cigar Festival\n\nWordPress event and ticketing site\n\nWordPress event website for Great Lakes Cigar Fes",
+      "href": "https://greatlakescigarfest.com/home/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nWild Bill's Drive-thru Menu\n\nWordPress digital catalog and menu\n\nWordPress digital catalog and drive-thru menu fo",
+      "href": "https://wildbillstobacco.com/drivethru-menu/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nWild Bill's St. Patrick Sales Form\n\nWordPress campaign and sales form\n\nWordPress St. Patrick campaign and sales f",
+      "href": "https://wildbillstobacco.com/stpatrick-form/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nMr. Vapor Disposable Menu\n\nWordPress product catalog and interactive menu\n\nWordPress disposable-product catalog a",
+      "href": "https://wildbillstobacco.com/drivethru-menu/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nWild Wednesdays Landing Page\n\nWordPress campaign landing page\n\nWordPress promotional landing page for the Wild We",
+      "href": "https://wildbillstobacco.com/wild-wednesdays/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nJabal Amman Publishers\n\nWooCommerce publishing and bookstore\n\nWooCommerce publishing and bookstore catalog for Ja",
+      "href": "https://japublishers.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nFather's Day Sales Landing\n\nWordPress campaign landing page\n\nWordPress Father's Day promotional landing page for ",
+      "href": "https://wildbillstobacco.com/fathers-day-specials/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nOphir Publishers – Jordan\n\nWooCommerce publishing catalog\n\nWooCommerce publishing and book catalog for Ophir Publ",
+      "href": "https://ophir.com.jo/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nSamona Hospitality Group\n\nWordPress hospitality website\n\nResponsive WordPress website for Samona Hospitality Grou",
+      "href": "https://the-shg.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nWild Bill's Christmas Sale Landing\n\nWordPress holiday campaign landing page\n\nWordPress holiday-sale landing page ",
+      "href": "https://wildbillstobacco.com/christmas-sale-2024/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nPTEE Admissions Portal\n\nBilingual admissions portal\n\nSeparate Arabic and English admissions workflow and applicat",
+      "href": "https://ptee.moseswebworks.com/admissions/en"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nPTEE Courses & Programs\n\nBilingual course catalog\n\nArabic and English course and program catalog for theological ",
+      "href": "https://ptee.moseswebworks.com/courses/ar"
+    },
+    {
+      "text": "Protected\nWebsites & portfolios\nAmerican Hot Wheel\n\nWooCommerce storefront\n\nWheel, tire, and fitment storefront built as an interview demons",
+      "href": "https://interviewdemo.mousabatarseh.com/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nMawtini Dabke Troupe\n\nCommunity organization website\n\nPublic website for the Mawtini Dabke Troupe.\n\nOpen website\n",
+      "href": "https://mawtinidabke.com/"
+    },
+    {
+      "text": "Protected\nWebsites & portfolios\nSt. Mary Church Berkley\n\nChurch website\n\nChurch website currently protected behind Cloudflare.\n\nOpen protect",
+      "href": "https://stmaryberkley.org/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nLarkspur Mobility\n\nWordPress website\n\nMobility-focused WordPress website hosted inside the main portfolio account",
+      "href": "https://mousabatarseh.com/Larkspur/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nBTEE Bilingual Build\n\nHosting migration build\n\nArabic and English WordPress build on the Bluehost account, with s",
+      "href": "https://btee.moseswebworks.com/ar/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nPTEE Courses & Admissions Renewal\n\nPublished renewal build\n\nBilingual course and admissions renewal build with a ",
+      "href": "https://ptee-courses-admissions-renewal.mousabb2.chatgpt.site/"
+    },
+    {
+      "text": "Live\nWebsites & portfolios\nPTEE Company Platform\n\nEducation platform\n\nMain PTEE platform for company information, courses, admissions, and s",
+      "href": "https://ptee.online/"
+    },
+    {
+      "text": "Live\nApplication proposals\nRecovery Movement Consulting Proposal\n\nAudit and proposal site\n\nA review of recoverymovementconsult.com and three",
+      "href": "https://mousabatarseh.com/rmc-proposal/"
+    },
+    {
+      "text": "01\nDiaMedical Commerce Intelligence Lab\nIndependent e-commerce case study\nLive",
+      "href": "https://mousabatarseh.com/diamedical/"
+    },
+    {
+      "text": "02\nDiaMedical Academy\nGuided learning experience\nLive",
+      "href": "https://mousabatarseh.com/diamedical/academy/"
+    },
+    {
+      "text": "03\nDiaMedical Experience Review\nEvidence-backed website review\nLive",
+      "href": "https://mousabatarseh.com/diamedical-review/"
+    },
+    {
+      "text": "04\nDiaMedical Interview Trainer\nTraining course\nLive",
+      "href": "https://mousabatarseh.com/diamedical-training/"
+    },
+    {
+      "text": "05\nHow I Thought It Through\nReasoning walkthrough\nLive",
+      "href": "https://mousabatarseh.com/diamedical-intro/"
+    },
+    {
+      "text": "06\nDiaMedical Workbook Explorer\nInteractive workbook experience\nLive",
+      "href": "https://mousabatarseh.com/diamedical/v3/"
+    },
+    {
+      "text": "07\nDiaMedical Product Pathfinder\nPrivate discovery concept\nPrivate",
+      "href": "https://diamedical-product-pathfinder.mousabb2.chatgpt.site/"
+    },
+    {
+      "text": "08\nDiaMedical Decision Brief\nPrivate research brief\nPrivate",
+      "href": "https://diamedical-decision-brief.mousabb2.chatgpt.site/"
+    },
+    {
+      "text": "Request a review",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Review%20my%20site"
+    },
+    {
+      "text": "hireme@mousabatarseh.com",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Review%20my%20site"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/changeatlas-500.webp",
+      "alt": "ChangeAtlas Commerce",
+      "w": 500,
+      "h": 312,
+      "file": "ef6e09677532931b.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/dealproof-500.webp",
+      "alt": "DealProof",
+      "w": 500,
+      "h": 312,
+      "file": "9effe483fb0446cc.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/jobs-500.webp",
+      "alt": "Job Search Log",
+      "w": 500,
+      "h": 312,
+      "file": "1c28779ff8b0a98c.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/asas-500.webp",
+      "alt": "ASAS",
+      "w": 500,
+      "h": 312,
+      "file": "17745e3cb21b3a2d.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/ptee-500.webp",
+      "alt": "PTEE",
+      "w": 500,
+      "h": 312,
+      "file": "159a447930473719.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/gardner-white-proposal-500.webp",
+      "alt": "Same-Day Answers · Gardner-White Web-Orders Desk",
+      "w": 500,
+      "h": 312,
+      "file": "eb88f54c2939ebb4.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/changeatlas-500.webp",
+      "alt": "ChangeAtlas Commerce preview",
+      "w": 345,
+      "h": 215,
+      "file": "ef6e09677532931b.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/dealproof-500.webp",
+      "alt": "DealProof preview",
+      "w": 345,
+      "h": 215,
+      "file": "9effe483fb0446cc.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/jobs-500.webp",
+      "alt": "Job Search Log preview",
+      "w": 345,
+      "h": 215,
+      "file": "1c28779ff8b0a98c.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/asas-500.webp",
+      "alt": "ASAS preview",
+      "w": 345,
+      "h": 215,
+      "file": "17745e3cb21b3a2d.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/ptee-500.webp",
+      "alt": "PTEE preview",
+      "w": 345,
+      "h": 215,
+      "file": "159a447930473719.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/gardner-white-proposal-500.webp",
+      "alt": "Same-Day Answers · Gardner-White Web-Orders Desk preview",
+      "w": 345,
+      "h": 215,
+      "file": "eb88f54c2939ebb4.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/reworked-review-500.webp",
+      "alt": "Carhartt Reworked Recommerce Merchandising Review preview",
+      "w": 345,
+      "h": 216,
+      "file": "053899ac164fbc5d.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/bran-review-500.webp",
+      "alt": "Bran Marketing Web & SEO Department Review preview",
+      "w": 345,
+      "h": 216,
+      "file": "c367293f82d91fa8.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/bran-proposal-500.webp",
+      "alt": "Bran Marketing Web Department Proposal preview",
+      "w": 345,
+      "h": 215,
+      "file": "5d430b6049c4be43.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/sapienceai-500.webp",
+      "alt": "Sapience AI · The Annotated Record preview",
+      "w": 345,
+      "h": 216,
+      "file": "131f8a651b9415fe.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/firefly-500.webp",
+      "alt": "Firefly Burgers — Michigan preview",
+      "w": 345,
+      "h": 215,
+      "file": "fb39cf233141bd5c.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/mawtini-500.webp",
+      "alt": "Mawtini Dabke Troupe preview",
+      "w": 345,
+      "h": 215,
+      "file": "1147304bd5806d9e.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/larkspur-500.webp",
+      "alt": "Larkspur Mobility preview",
+      "w": 345,
+      "h": 215,
+      "file": "6251b7c7a620a4d6.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/btee-500.webp",
+      "alt": "BTEE Bilingual Build preview",
+      "w": 345,
+      "h": 215,
+      "file": "67544c44ecfa4182.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/rmc-proposal-500.webp",
+      "alt": "Recovery Movement Consulting Proposal preview",
+      "w": 345,
+      "h": 215,
+      "file": "a8aaf2b8773b87ed.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-lab.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "4a6d3fa8ac8255f0.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-academy.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "889af860fe252bda.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-review.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "fa368d68020b7b9a.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-training.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "c670f66b269a38e8.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-intro.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "03e78fbcdd6455dc.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-workbook.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "110f92162d9ea762.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-pathfinder.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "b0eb87da1b65fd61.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/builds/diamedical-decision-brief.webp",
+      "alt": "",
+      "w": 900,
+      "h": 563,
+      "file": "c67c5a79e5389671.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/highprofile.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "923d7eb45d6a5555.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/jars.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "34412ac47ea66afa.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/img/thumbs/vanguard.webp",
+      "alt": "",
+      "w": 720,
+      "h": 1125,
+      "file": "7ed8828138d03bcb.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/reviews/assets/logo.svg",
+      "alt": "",
+      "w": 150,
+      "h": 150,
+      "file": "de25f41a354470dc.svg"
+    }
+  ],
+  "status": 200
+}

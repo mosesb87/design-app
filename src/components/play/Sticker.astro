@@ -1,0 +1,169 @@
+---
+// Icon tiles: thin-line icons from Mousa's world (a price tag, a check, a cursor, a spreadsheet cell, a lens,
+// layout blocks, a barcode, a percent, a pin, a sparkline, a console, a heart, an analytics chart, a shopping
+// bag, a function, code), each on a tile with one accent
+// detail. The tile is white by default; sections color it through --tile, --stroke and --acc (cobalt, deep
+// cobalt, sky, night, grey). Decorative only — always aria-hidden. Size comes from CSS (width); tiles are square.
+// Strokes don't scale with the tile, so a 60px tile and a 220px tile share the same line weight.
+import type { StickerName } from './types';
+interface Props { name: StickerName; class?: string; style?: string; depth?: number; tilt?: number; label?: string }
+const { name, class: cls = '', style = '', depth = 0.4, tilt = 0, label } = Astro.props;
+const bars = [0, 6, 9, 15, 18, 24, 30, 33, 39, 42, 48, 54, 57, 63, 66, 72, 78];
+---
+<span class:list={['sticker', `sticker--${name}`, cls]} style={`--depth:${depth};--tilt:${tilt * 0.35}deg;${style}`} data-sticker aria-hidden="true" title={label}>
+  <svg viewBox="0 0 200 200" focusable="false">
+    <g class="ic" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      {name === 'tag' && (
+        <g transform="rotate(-10 100 100)">
+          <path d="M50 68 H124 L154 100 L124 132 H50 Q42 132 42 124 V76 Q42 68 50 68 Z" />
+          <circle class="ic__a ic__fill" cx="134" cy="100" r="5.5" />
+          <text class="ic__t" x="86" y="106" text-anchor="middle">$19.20</text>
+        </g>
+      )}
+      {name === 'check' && (
+        <g>
+          <circle cx="100" cy="100" r="54" />
+          <circle cx="100" cy="100" r="42" class="ic__faint" />
+          <path class="ic__a ic__bold" d="M78 101 L94 117 L124 85" />
+        </g>
+      )}
+      {name === 'cursor' && (
+        <g>
+          <path class="ic__solid" d="M76 50 L76 144 L98 124 L113 156 L128 149 L113 118 L142 116 Z" />
+          <path class="ic__a" d="M62 44 L52 34 M60 58 L46 58 M76 36 L76 22" />
+        </g>
+      )}
+      {name === 'cell' && (
+        <g>
+          <rect x="36" y="52" width="128" height="96" rx="10" />
+          <path d="M36 76 H164 M36 100 H164 M36 124 H164 M78 76 V148 M122 76 V148" class="ic__faint" />
+          <rect class="ic__a ic__tint" x="78" y="100" width="44" height="24" />
+          <circle cx="50" cy="64" r="2.6" class="ic__dot" /><circle cx="60" cy="64" r="2.6" class="ic__dot" /><circle cx="70" cy="64" r="2.6" class="ic__dot" />
+        </g>
+      )}
+      {name === 'lens' && (
+        <g>
+          <circle cx="90" cy="88" r="38" />
+          <path class="ic__bold" d="M118 116 L150 148" />
+          <path class="ic__a" d="M70 78 Q74 64 88 60" />
+        </g>
+      )}
+      {name === 'blocks' && (
+        <g>
+          <rect x="44" y="44" width="50" height="50" rx="9" />
+          <rect class="ic__a ic__tint" x="106" y="44" width="50" height="50" rx="9" />
+          <rect x="44" y="106" width="50" height="50" rx="9" />
+          <rect x="106" y="106" width="50" height="50" rx="9" />
+        </g>
+      )}
+      {name === 'barcode' && (
+        <g>
+          <rect x="40" y="58" width="120" height="84" rx="10" />
+          {bars.map((x, i) => <path d={`M${60 + x} 74 V${i % 4 === 0 ? 124 : 118}`} class={i % 3 === 0 ? 'ic__bold' : ''} />)}
+          <path class="ic__a" d="M48 100 H152" />
+        </g>
+      )}
+      {name === 'percent' && (
+        <g>
+          <circle cx="100" cy="100" r="56" />
+          <circle cx="80" cy="80" r="11" />
+          <circle cx="120" cy="120" r="11" />
+          <path class="ic__a ic__bold" d="M126 74 L74 126" />
+        </g>
+      )}
+      {name === 'pin' && (
+        <g>
+          <path d="M100 162 C84 136 56 116 56 86 A44 44 0 0 1 144 86 C144 116 116 136 100 162 Z" />
+          <circle class="ic__a" cx="100" cy="86" r="15" />
+        </g>
+      )}
+      {name === 'spark' && (
+        <g>
+          <path d="M44 150 H156 M44 150 V50" class="ic__faint" />
+          <path class="ic__a ic__bold" d="M52 132 L80 108 L102 118 L128 82 L150 64" />
+          <circle class="ic__a ic__fill" cx="150" cy="64" r="5" />
+        </g>
+      )}
+      {name === 'bolt' && (
+        <g>
+          <rect x="34" y="50" width="132" height="100" rx="12" />
+          <path d="M34 74 H166" class="ic__faint" />
+          <path class="ic__a ic__bold ic__nudge" d="M60 98 L78 112 L60 126" />
+          <path class="ic__blink" d="M88 128 H116" />
+        </g>
+      )}
+      {name === 'heart' && (
+        <g>
+          <path d="M100 150 C60 122 44 102 44 80 A26 26 0 0 1 100 70 A26 26 0 0 1 156 80 C156 102 140 122 100 150 Z" />
+          <path class="ic__a" d="M66 84 Q68 70 82 68" />
+        </g>
+      )}
+      {name === 'chart' && (
+        <g>
+          <path d="M44 152 H158" class="ic__faint" />
+          <rect x="54" y="108" width="20" height="40" rx="4" />
+          <rect x="88" y="84" width="20" height="64" rx="4" />
+          <rect class="ic__a ic__tint" x="122" y="56" width="20" height="92" rx="4" />
+          <path class="ic__a" d="M52 92 L96 64 L132 40" />
+          <circle class="ic__a ic__fill" cx="132" cy="40" r="5" />
+        </g>
+      )}
+      {name === 'bag' && (
+        <g>
+          <path d="M52 76 H148 L140 156 H60 Z" />
+          <path d="M78 76 V66 A22 22 0 0 1 122 66 V76" />
+          <path class="ic__a ic__bold" d="M82 112 L96 126 L120 100" />
+        </g>
+      )}
+      {name === 'fx' && (
+        <g>
+          <rect x="36" y="48" width="128" height="104" rx="14" />
+          <path class="ic__a ic__bold" d="M92 78 Q80 76 78 90 L70 128 Q68 140 56 138 M62 102 H90" />
+          <path d="M106 100 L136 132 M136 100 L106 132" />
+        </g>
+      )}
+      {name === 'code' && (
+        <g>
+          <path class="ic__a ic__bold" d="M78 72 L46 100 L78 128 M122 72 L154 100 L122 128" />
+          <path d="M110 58 L90 142" />
+        </g>
+      )}
+    </g>
+  </svg>
+</span>
+
+<style>
+  .sticker {
+    --size: 120px;
+    --sw: 2.2px;
+    --tile: #fff;
+    --stroke: var(--ink);
+    --acc: var(--accent);
+    display: inline-block;
+    width: var(--size);
+    aspect-ratio: 1;
+    pointer-events: none;
+    transform: rotate(var(--tilt));
+    border-radius: 16%;
+    background: var(--tile);
+    box-shadow: 0 1px 2px rgb(14 17 22 / 0.05), 0 16px 32px -18px rgb(14 17 22 / 0.35);
+    will-change: transform;
+  }
+  .sticker svg { width: 100%; height: 100%; overflow: visible; }
+  .ic, .ic :global(*) { vector-effect: non-scaling-stroke; }
+  .ic { stroke: var(--stroke); stroke-width: var(--sw); }
+  .ic__bold { stroke-width: calc(var(--sw) * 1.6); }
+  .ic__faint { stroke-opacity: 0.35; }
+  .ic__a { stroke: var(--acc); }
+  .ic__fill { fill: var(--acc); stroke: none; }
+  .ic__tint { fill: color-mix(in srgb, var(--acc) 14%, transparent); }
+  .ic__solid { fill: var(--tile); }
+  .ic__dot { fill: var(--stroke); stroke: none; opacity: 0.35; }
+  /* The console icon types: the prompt nudges, the cursor blinks. */
+  .ic__nudge { transform-box: fill-box; animation: ic-nudge 2.4s var(--ease-drift) infinite; }
+  .ic__blink { animation: ic-blink 1.1s steps(1) infinite; }
+  @keyframes ic-nudge { 50% { transform: translateX(5px); } }
+  @keyframes ic-blink { 50% { opacity: 0; } }
+  .ic__t { fill: var(--stroke); stroke: none; font: 500 20px var(--font-mono); letter-spacing: -0.02em; }
+  :global([data-ground='night']) .sticker, :global(.on-dark) .sticker { --tile: var(--night-2); --stroke: var(--night-ink); --acc: var(--accent-soft); box-shadow: 0 18px 36px -18px rgb(0 0 0 / 0.7); }
+</style>

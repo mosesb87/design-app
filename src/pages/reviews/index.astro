@@ -1,0 +1,70 @@
+---
+// The reviews, on this site: every review leads with its number, filterable by focus.
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/play/PageHead.astro';
+import ReviewCard from '../../components/ReviewCard.astro';
+import ReviewChecks from '../../components/ReviewChecks.astro';
+import { allReviews, focusAreas, focusKey } from '../../data/reviews';
+import { SITE_URL } from '../../data/site';
+
+const countIn = (f: string) => allReviews.filter((r) => r.focus.includes(f)).length;
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/reviews/#page`,
+    name: 'Reviews — Mousa Batarseh',
+    url: `${SITE_URL}/reviews/`,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: allReviews.length,
+      itemListElement: allReviews.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: r.title, url: r.source })),
+    },
+  },
+];
+---
+<Base title="Reviews" description={`${allReviews.length} independent reviews of live stores and websites by Mousa Batarseh — public pages only, every finding dated, each one leading with the number that explains the rest.`} path="/reviews/" og="reviews" jsonLd={jsonLd}>
+  <div class="rl-hold" data-checks-hold>
+  <PageHead title="Reviews, counted." size="l" kicker={`Reviews · ${allReviews.length} independent reviews`} lead="I read a company’s website the way a shopper, a crawler and an AI answer engine do — public pages only, every finding dated — and build a working fix alongside." id="reviews-title">
+    <ReviewChecks slot="aside" />
+  </PageHead>
+  </div>
+
+  <section class="wrap rl" aria-labelledby="rl-title">
+    <h2 class="visually-hidden" id="rl-title">All reviews</h2>
+    <div class="chips" role="group" aria-label="Filter reviews by focus" data-filter data-noun="review,reviews">
+      <button type="button" class="chip" aria-pressed="true" data-filter-value="all">All <span>{allReviews.length}</span></button>
+      {focusAreas.map((f) => (
+        <button type="button" class="chip" aria-pressed="false" data-filter-value={focusKey(f)}>{f} <span>{countIn(f)}</span></button>
+      ))}
+      <p class="visually-hidden" role="status" aria-live="polite" data-filter-status></p>
+    </div>
+    <ul class="rl__grid" role="list" data-pop-grid>
+      {allReviews.map((r, i) => (
+        <li class="rl__item" data-row data-cat={r.focus.map(focusKey).join(' ')} data-pop><ReviewCard slug={r.slug} showBlurb showFocus eager={i < 3} /></li>
+      ))}
+    </ul>
+  </section>
+</Base>
+
+<style>
+  /* Desktop with motion: the header holds (sticky) for 85% of a screen while the checks sort themselves. The
+     space is reserved in CSS from the first paint, so nothing below it shifts when the scripts start. */
+  @media (min-width: 1024px) {
+    /* A spacer, not padding: a sticky element can travel only inside its parent's content box. */
+    :global(.motion-ok) .rl-hold::after { content: ''; display: block; height: 85vh; }
+    :global(.motion-ok) .rl-hold > :global(.phd) { position: sticky; top: 0; }
+  }
+  .rl { padding-block: var(--s-7) var(--s-9); display: grid; gap: var(--s-6); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: var(--r-pill); background: var(--cloud); font-weight: 650; font-size: 0.9375rem; transition: background-color var(--d-small), transform 0.4s var(--ease-pop); }
+  .chip::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .chip span { font-size: 0.75rem; font-weight: 750; padding: 2px 7px; border-radius: var(--r-pill); background: rgb(14 17 22 / 0.08); }
+  .chip:hover { transform: translateY(-2px); }
+  .chip[aria-pressed='true'] { background: var(--ink); color: #fff; }
+  .chip[aria-pressed='true'] span { background: rgb(255 255 255 / 0.18); }
+  .chip[aria-pressed='true']::before { background: var(--accent-soft); }
+  .rl__grid { display: grid; gap: clamp(80px, 7vw, 112px) clamp(16px, 1.8vw, 28px); }
+  .rl__item[hidden] { display: none; }
+  @media (min-width: 700px) { .rl__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .rl__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+</style>

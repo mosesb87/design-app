@@ -1,0 +1,340 @@
+[
+ {
+  "slug": "wordpress-event-website-tickets-vendors-analytics",
+  "title": "Building a WordPress Event Website People Actually Use",
+  "date": "2026-08-12",
+  "categories": [
+   "SEO",
+   "Web Operations"
+  ],
+  "excerpt": "The Great Lakes Cigar Festival site had to hold tickets, vendors, schedules, and sponsors without turning into a PDF. I built it in WordPress, then watched GA4 through July 2026 to see whether people actually used it.",
+  "image": {
+   "src": "/media/blog/5da07f391eef802f-1600.webp",
+   "small": "/media/blog/5da07f391eef802f-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "what-managing-metro-detroit-small-business-sites-taught-me",
+  "title": "What Managing Metro Detroit Small Business Sites Taught Me",
+  "date": "2026-07-22",
+  "categories": [
+   "Process & Operations",
+   "Web Operations"
+  ],
+  "excerpt": "Restaurants, wholesalers, retail shops — a few years of managing sites for local businesses around Metro Detroit taught me things no tutorial covers.",
+  "image": {
+   "src": "/media/blog/ec8c68d2dfc9eeb7-1600.webp",
+   "small": "/media/blog/ec8c68d2dfc9eeb7-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "the-backup-habit-that-saved-a-clients-store",
+  "title": "The Backup Habit That Saved a Client’s Store",
+  "date": "2026-07-11",
+  "categories": [
+   "Process & Operations",
+   "WordPress"
+  ],
+  "excerpt": "A plugin update took a store down on a Friday afternoon. Twenty minutes later it was back, because of a habit that costs almost nothing.",
+  "image": {
+   "src": "/media/blog/f049a80710f4f4fa-1600.webp",
+   "small": "/media/blog/f049a80710f4f4fa-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "restaurant-websites-that-work-on-a-phone",
+  "title": "Restaurant Websites That Work on a Phone: Firefly Burgers",
+  "date": "2026-06-12",
+  "categories": [
+   "Web Operations",
+   "WordPress"
+  ],
+  "excerpt": "Nobody sits at a desktop to find a burger special. I built Firefly Burgers MI as a mobile-first WordPress site: menu, hours, location, and branding that still holds up when someone is already in the parking lot.",
+  "image": {
+   "src": "/media/blog/e0c2eca75af4133f-1600.webp",
+   "small": "/media/blog/e0c2eca75af4133f-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "product-photos-without-a-studio",
+  "title": "Product Photos Without a Studio: What Actually Works",
+  "date": "2026-05-23",
+  "categories": [
+   "E-commerce Operations",
+   "Photoshop"
+  ],
+  "excerpt": "No lightbox, no photographer, no budget. Most of the product photos I’ve published started as phone pictures. Here’s the process that makes them usable.",
+  "image": {
+   "src": "/media/blog/579a14e65e1e4220-1600.webp",
+   "small": "/media/blog/579a14e65e1e4220-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "contact-forms-that-actually-reach-the-inbox",
+  "title": "Contact Forms That Actually Reach the Inbox",
+  "date": "2026-04-25",
+  "categories": [
+   "Web Operations",
+   "WordPress"
+  ],
+  "excerpt": "The quietest way a website fails: the form works, the visitor hits send, and the message never arrives. Here’s how I make form email reliable.",
+  "image": {
+   "src": "/media/blog/e97accfef9541d30-1600.webp",
+   "small": "/media/blog/e97accfef9541d30-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "making-a-slow-wordpress-site-faster-without-a-rebuild",
+  "title": "Making a Slow WordPress Site Faster Without a Rebuild",
+  "date": "2026-04-13",
+  "categories": [
+   "Web Operations",
+   "WordPress"
+  ],
+  "excerpt": "You don’t need a new site. Most slow WordPress sites have the same four or five problems, and none of them require starting over.",
+  "image": {
+   "src": "/media/blog/7ea85d4f43552483-1600.webp",
+   "small": "/media/blog/7ea85d4f43552483-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "keeping-store-inventory-in-sync-with-the-warehouse",
+  "title": "Keeping Store Inventory in Sync With the Warehouse",
+  "date": "2026-03-04",
+  "categories": [
+   "E-commerce Operations",
+   "Product Data"
+  ],
+  "excerpt": "The website says in stock, the shelf says otherwise. Inventory sync is a boring problem that ruins customer trust fast. Here’s how I handle it.",
+  "image": {
+   "src": "/media/blog/8329bf48f6b5d95a-1600.webp",
+   "small": "/media/blog/8329bf48f6b5d95a-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "b2b-collections-that-match-how-retailers-shop",
+  "title": "B2B Collections That Match How Retailers Actually Shop",
+  "date": "2026-02-24",
+  "categories": [
+   "Catalog Data",
+   "Shopify"
+  ],
+  "excerpt": "Retailers do not browse a wholesale site the way consumers browse a gift shop. I build Shopify and WooCommerce collections around restocking: season, use, pack, and the aisle in their own store — not around pretty campaign names.",
+  "image": {
+   "src": "/media/blog/c35a30dcdbd7d8ae-1600.webp",
+   "small": "/media/blog/c35a30dcdbd7d8ae-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "my-rules-before-installing-any-wordpress-plugin",
+  "title": "My Rules Before I Install Any WordPress Plugin",
+  "date": "2026-02-07",
+  "categories": [
+   "WordPress"
+  ],
+  "excerpt": "Every broken site I’ve rescued had the same thing in common: too many plugins, installed too casually. These are the rules I follow now.",
+  "image": {
+   "src": "/media/blog/396eb40630736f7a-1600.webp",
+   "small": "/media/blog/396eb40630736f7a-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "cleaning-up-404s-and-redirects-after-a-site-migration",
+  "title": "Cleaning Up 404s and Redirects After a Site Migration",
+  "date": "2026-01-05",
+  "categories": [
+   "SEO",
+   "Web Operations"
+  ],
+  "excerpt": "The migration is done, the new site is live, and traffic drops anyway. Nine times out of ten, the old URLs are hitting a wall. Here’s the cleanup.",
+  "image": {
+   "src": "/media/blog/f3bb9241e5bb4a40-1600.webp",
+   "small": "/media/blog/f3bb9241e5bb4a40-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "shopify-wholesale-store-case-packs-and-buyer-accounts",
+  "title": "Shopify Wholesale Store Setup: Case Packs, Hidden Pricing, and Buyer Accounts",
+  "date": "2025-12-09",
+  "categories": [
+   "Catalog Data",
+   "Shopify"
+  ],
+  "excerpt": "A retail Shopify theme will not explain case packs or wholesale pricing. I built United Textile as a B2B storefront — hidden prices, registration, collections, and product content written for buyers who reorder, not browse for fun.",
+  "image": {
+   "src": "/media/blog/a8c45ff67507ed67-1600.webp",
+   "small": "/media/blog/a8c45ff67507ed67-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "writing-product-descriptions-when-the-supplier-gives-you-nothing",
+  "title": "Writing Product Descriptions When the Supplier Gives You Nothing",
+  "date": "2025-11-25",
+  "categories": [
+   "Content Writing",
+   "Product Data"
+  ],
+  "excerpt": "A part number, a size, and maybe a blurry photo. That’s what you get. Here’s how I turn that into product pages that actually read like something.",
+  "image": {
+   "src": "/media/blog/d6f58d0a03f43504-1600.webp",
+   "small": "/media/blog/d6f58d0a03f43504-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "three-search-console-reports-i-actually-open",
+  "title": "The Three Search Console Reports I Actually Open",
+  "date": "2025-11-05",
+  "categories": [
+   "SEO"
+  ],
+  "excerpt": "Search Console has a dozen screens, and most people open none of them. These are the three I check on real client sites, and what I do with each.",
+  "image": {
+   "src": "/media/blog/ebe3048d8bc72b33-1600.webp",
+   "small": "/media/blog/ebe3048d8bc72b33-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "what-a-webmaster-actually-does-all-week",
+  "title": "What a Webmaster Actually Does All Week",
+  "date": "2025-10-13",
+  "categories": [
+   "Process & Operations",
+   "Web Operations"
+  ],
+  "excerpt": "People hear ‘webmaster’ and picture someone building websites all day. Most of the real work is smaller, quieter, and honestly more important.",
+  "image": {
+   "src": "/media/blog/3f233954cb62f2b0-1600.webp",
+   "small": "/media/blog/3f233954cb62f2b0-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "updating-hundreds-of-prices-without-breaking-the-store",
+  "title": "Updating Hundreds of Prices Without Breaking the Store",
+  "date": "2025-09-16",
+  "categories": [
+   "E-commerce Operations",
+   "Product Data"
+  ],
+  "excerpt": "Price updates sound simple until you’re doing four hundred of them at once. This is the process I use so nothing goes live wrong.",
+  "image": {
+   "src": "/media/blog/5a0b0c719f282711-1600.webp",
+   "small": "/media/blog/5a0b0c719f282711-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "woocommerce-csv-import-checklist-before-it-goes-live",
+  "title": "What I Check Before a WooCommerce CSV Import Goes Live",
+  "date": "2025-08-25",
+  "categories": [
+   "Catalog Data",
+   "WooCommerce"
+  ],
+  "excerpt": "A WooCommerce CSV import will publish whatever you give it, including the mistakes. This is the pre-import and post-import checklist I actually use on catalog migrations, from column mapping to duplicate SKUs and missing images.",
+  "image": {
+   "src": "/media/blog/bd9ba5a8d1adcab1-1600.webp",
+   "small": "/media/blog/bd9ba5a8d1adcab1-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "first-90-minutes-with-a-new-woocommerce-store",
+  "title": "The First 90 Minutes With a WooCommerce Store I’ve Never Seen",
+  "date": "2025-08-10",
+  "categories": [
+   "E-commerce Operations",
+   "WooCommerce"
+  ],
+  "excerpt": "When a store owner hands me the keys, I don’t start fixing anything. I spend the first hour and a half just looking. Here’s exactly what I check and why.",
+  "image": {
+   "src": "/media/blog/8d3bad50d5569955-1600.webp",
+   "small": "/media/blog/8d3bad50d5569955-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "skus-variants-and-attributes-messy-product-data",
+  "title": "SKUs, Variants, and Attributes: Why Messy Product Data Costs Sales",
+  "date": "2025-08-05",
+  "categories": [
+   "Catalog Data",
+   "Shopify"
+  ],
+  "excerpt": "If a buyer cannot tell which size, pack, or color they are ordering, they stop. I have watched that happen on wholesale catalogs more than once. Here is how I structure SKUs, variants, and attributes so the store matches how people actually buy.",
+  "image": {
+   "src": "/media/blog/965607fe22452eec-1600.webp",
+   "small": "/media/blog/965607fe22452eec-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ },
+ {
+  "slug": "why-i-still-do-the-spreadsheet-work-myself",
+  "title": "Why I Still Do the Spreadsheet Work Myself",
+  "date": "2025-07-25",
+  "categories": [
+   "Catalog Data",
+   "Web Operations"
+  ],
+  "excerpt": "Most catalog problems I get called about did not start in Shopify or WooCommerce. They started in a spreadsheet nobody wanted to sit with. Here is how I actually work through product data in Excel before anything hits a live store.",
+  "image": {
+   "src": "/media/blog/fb05c77119a26c8c-1600.webp",
+   "small": "/media/blog/fb05c77119a26c8c-800.webp",
+   "alt": "",
+   "w": 1024,
+   "h": 538
+  }
+ }
+]

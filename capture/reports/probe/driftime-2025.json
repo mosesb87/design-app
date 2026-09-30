@@ -1,0 +1,285 @@
+{
+  "slug": "driftime-2025",
+  "url": "https://2025.driftime.com/",
+  "probedAt": "2026-09-26T16:47:52.724Z",
+  "desktop": {
+    "status": 200,
+    "finalUrl": "https://2025.driftime.com/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.bg-mist.pointer-events-none",
+        "div.pointer-events-none.fixed",
+        "div.pointer-events-none.fixed"
+      ]
+    },
+    "title": "Introduction | Impact Report 2025 — Driftime®",
+    "description": "Driftime® are an impact-first strategic and creative partner with a policy-adjacent focus.",
+    "headings": [
+      "H1: ImpactReportImpactReport",
+      "H2: A QuickLook atOurYearAQuickLookAtOurYear",
+      "H2: The Landscape We Navigate",
+      "H2: The Moves We Make",
+      "H2: The Moment We Build",
+      "H2: The Horizon We Reach"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 2,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 15,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 4,
+      "links": 11,
+      "images": 5
+    },
+    "cursorHidden": true,
+    "viewTransitions": true,
+    "fonts": [
+      "Koulen",
+      "Instrument Serif"
+    ],
+    "type": {
+      "body": "\"Instrument Serif\", \"Instrument Serif Fallback\"",
+      "h1Family": "Koulen, \"Koulen Fallback\"",
+      "h1Size": "36px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "rgb(255, 255, 255)"
+    },
+    "scroll": {
+      "height": 6241,
+      "viewports": 6.9
+    },
+    "perf": {
+      "fcpMs": 284,
+      "domContentLoadedMs": 172,
+      "requests": 50,
+      "transferKB": 1467
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 2,
+      "samples": [
+        "div.will-change-transform",
+        "div.pointer-events-none.absolute"
+      ],
+      "pinnedCandidates": [
+        "div.pointer-events-none.absolute",
+        "div.size-full",
+        "div",
+        "div",
+        "canvas",
+        "div",
+        "div",
+        "canvas"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": [
+      "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors a"
+    ]
+  },
+  "desktop-reduced": {
+    "status": 200,
+    "finalUrl": "https://2025.driftime.com/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.bg-mist.pointer-events-none"
+      ]
+    },
+    "title": "Introduction | Impact Report 2025 — Driftime®",
+    "description": "Driftime® are an impact-first strategic and creative partner with a policy-adjacent focus.",
+    "headings": [
+      "H1: ImpactReportImpactReport",
+      "H2: A QuickLook atOurYearAQuickLookAtOurYear",
+      "H2: The Landscape We Navigate",
+      "H2: The Moves We Make",
+      "H2: The Moment We Build",
+      "H2: The Horizon We Reach"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": false,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 0,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 19,
+      "pinSpacers": 0,
+      "sticky": 1,
+      "fixed": 2,
+      "links": 11,
+      "images": 5
+    },
+    "cursorHidden": true,
+    "viewTransitions": true,
+    "fonts": [
+      "Koulen",
+      "Instrument Serif"
+    ],
+    "type": {
+      "body": "\"Instrument Serif\", \"Instrument Serif Fallback\"",
+      "h1Family": "Koulen, \"Koulen Fallback\"",
+      "h1Size": "36px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "rgb(255, 255, 255)"
+    },
+    "scroll": {
+      "height": 6058,
+      "viewports": 6.7
+    },
+    "perf": {
+      "fcpMs": 196,
+      "domContentLoadedMs": 88,
+      "requests": 41,
+      "transferKB": 1235
+    },
+    "animationsNow": 0,
+    "motion": {
+      "scrollDrivenElements": 0,
+      "samples": [],
+      "pinnedCandidates": [
+        "div.sticky.top-0",
+        "section.relative.overflow-hidden",
+        "div.mx-auto.flex",
+        "h2.font-display",
+        "span.block.whitespace-nowrap",
+        "span.block.whitespace-nowrap",
+        "svg",
+        "rect"
+      ]
+    },
+    "mobileNav": null,
+    "pageErrors": [
+      "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors a"
+    ]
+  },
+  "mobile": {
+    "status": 200,
+    "finalUrl": "https://2025.driftime.com/",
+    "gates": {
+      "actions": [],
+      "blocking": [
+        "div.bg-mist.pointer-events-none",
+        "div.pointer-events-none.fixed",
+        "div.pointer-events-none.fixed"
+      ]
+    },
+    "title": "Introduction | Impact Report 2025 — Driftime®",
+    "description": "Driftime® are an impact-first strategic and creative partner with a policy-adjacent focus.",
+    "headings": [
+      "H1: ImpactReportImpactReport",
+      "H2: A QuickLook atOurYearAQuickLookAtOurYear",
+      "H2: The Landscape We Navigate",
+      "H2: The Moves We Make",
+      "H2: The Moment We Build",
+      "H2: The Horizon We Reach"
+    ],
+    "libs": {
+      "gsap": false,
+      "scrollTrigger": false,
+      "lenis": true,
+      "locomotive": false,
+      "three": false,
+      "barba": false,
+      "swiper": false,
+      "webflow": false,
+      "framer": false,
+      "nextjs": true,
+      "nuxt": false,
+      "astro": false,
+      "wordpress": false,
+      "elementor": false,
+      "shopify": false
+    },
+    "counts": {
+      "canvas": 2,
+      "video": 0,
+      "autoplayVideo": 0,
+      "iframes": 0,
+      "svg": 15,
+      "pinSpacers": 0,
+      "sticky": 0,
+      "fixed": 4,
+      "links": 11,
+      "images": 5
+    },
+    "cursorHidden": true,
+    "viewTransitions": true,
+    "fonts": [
+      "Koulen",
+      "Instrument Serif"
+    ],
+    "type": {
+      "body": "\"Instrument Serif\", \"Instrument Serif Fallback\"",
+      "h1Family": "Koulen, \"Koulen Fallback\"",
+      "h1Size": "24px",
+      "h1Weight": "400"
+    },
+    "colors": {
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "rgb(255, 255, 255)"
+    },
+    "scroll": {
+      "height": 8457,
+      "viewports": 10
+    },
+    "perf": {
+      "fcpMs": 184,
+      "domContentLoadedMs": 108,
+      "requests": 49,
+      "transferKB": 1382
+    },
+    "animationsNow": 0,
+    "motion": null,
+    "mobileNav": {
+      "label": "Open menu",
+      "hasAriaExpanded": true,
+      "horizontalOverflowPx": 0
+    },
+    "pageErrors": [
+      "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors a"
+    ]
+  }
+}

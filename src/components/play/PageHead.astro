@@ -1,0 +1,118 @@
+---
+// Inner-page header in the home page's language: a condensed title, one size on every page, whose letters fly in
+// from scattered spots and settle (and hop when touched), and colorful icon tiles that float, sway, lean towards
+// the pointer and wiggle when touched — the page's own three, plus three more on desktop (unless an aside takes
+// the right side). The same motion module as the home hero (play-hero.ts). Optional tone turns the header into a
+// colored room.
+import Sticker from './Sticker.astro';
+import type { StickerName } from './types';
+interface Props {
+  title: string;
+  kicker?: string;
+  dot?: string;
+  lead?: string;
+  tone?: string; // a color token, e.g. 'var(--lilac)'
+  stickers?: StickerName[];
+  size?: 'xl' | 'l' | 'm' | 's';
+  id?: string;
+  breakAfter?: number; // set the title on two lines from tablet up: break after this many words
+}
+const { title, kicker, lead, tone, stickers = [], size = 'xl', id = 'page-title', breakAfter } = Astro.props;
+const words = title.toUpperCase().split(/\s+/);
+const hasAside = Astro.slots.has('aside');
+const depths = [0.9, 0.6, 1.2, 0.7, 1.1, 0.5];
+// Three more tiles for desktop, picked from a pool so a page never shows the same icon twice.
+const pool: StickerName[] = ['chart', 'bag', 'fx', 'code', 'cursor', 'spark', 'check', 'heart', 'tag', 'cell'];
+const own = stickers.slice(0, 3);
+const extras = own.length && !hasAside ? pool.filter((n) => !own.includes(n)).slice(0, 3) : [];
+const tiles = [...own, ...extras];
+---
+<header class:list={['phd', `phd--${size}`, { 'phd--room': !!tone, 'phd--aside': hasAside, 'phd--lines': !!breakAfter }]} style={tone ? `--bg:${tone}` : undefined} data-play-hero>
+  <div class="wrap phd__inner">
+    <slot name="top" />
+    {kicker && <p class="kicker phd__kicker" data-ph-fade>{kicker}</p>}
+    <h1 class="phd__title" id={id}>
+      <span class="visually-hidden">{title}</span>
+      <span aria-hidden="true">
+        {words.map((w, i) => (
+          <>
+            <span class="phd__w">{[...w].map((ch) => <span class="phd__l" data-l>{ch}</span>)}</span>{i < words.length - 1 && (breakAfter === i + 1 ? <><br class="phd__br" /> </> : ' ')}
+          </>
+        ))}
+      </span>
+    </h1>
+    {lead && <p class="phd__lead" data-ph-fade>{lead}</p>}
+    <slot />
+    {hasAside && <div class="phd__aside"><slot name="aside" /></div>}
+  </div>
+  {tiles.length > 0 && (
+    <div class="phd__stickers" aria-hidden="true">
+      {tiles.map((s, i) => (
+        <span class:list={['phd__s', `phd__s--${i + 1}`]} data-ph-sticker data-depth={depths[i]}>
+          <Sticker name={s} />
+        </span>
+      ))}
+    </div>
+  )}
+</header>
+
+<style>
+  .phd { position: relative; overflow: clip; padding-top: calc(var(--nav-h) + var(--s-8)); padding-bottom: var(--s-6); }
+  .phd--room {
+    background: var(--bg);
+    color: var(--ink);
+    margin-inline: clamp(8px, 1.4vw, 24px);
+    border-radius: 0 0 var(--r-xl) var(--r-xl);
+    --fg: var(--ink);
+    --fg-2: var(--ink-2);
+  }
+  .phd__inner { position: relative; z-index: 1; display: grid; gap: var(--s-5); }
+  .phd__kicker { justify-self: start; }
+  .phd--room .phd__kicker { background: rgb(255 255 255 / 0.72); }
+  .phd__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-stretch: 75%;
+    line-height: 0.84;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+    max-width: 11ch;
+    user-select: none;
+  }
+  /* One size for every page title (the same as a blog post's); long titles simply take more lines. */
+  .phd__title { font-size: clamp(3rem, 7.2vw, 7.5rem); max-width: 16ch; line-height: 0.88; }
+  .phd--s .phd__title { max-width: 20ch; }
+  .phd__w { display: inline-block; white-space: nowrap; }
+  .phd__br { display: none; }
+  @media (min-width: 700px) { .phd--lines .phd__title { max-width: none; } .phd__br { display: inline; } }
+  .phd__l { display: inline-block; transition: color 0.4s var(--ease-register); }
+  .phd__l.is-hot { transition-duration: 0.05s; }
+  .phd__lead { font-size: var(--t-lead); line-height: 1.32; max-width: 40ch; color: var(--fg-2); font-weight: 450; text-wrap: pretty; }
+  /* The icon tiles sit in organized rows at the top right (Mousa: scatter, then come back into rows): two across
+     on phones and tablets, three across on desktop. The arrival scatter and the scroll jostle move them with
+     transforms only, so these are the spots they always return to. */
+  .phd__stickers { position: absolute; z-index: 2; pointer-events: none; top: calc(var(--nav-h) + var(--s-8)); right: max(var(--margin), calc((100% - var(--max)) / 2 + var(--margin))); display: grid; grid-template-columns: repeat(2, var(--tile-w)); gap: clamp(10px, 1.2vw, 16px); --tile-w: clamp(56px, 8vw, 96px); }
+  .phd__s { position: relative; display: block; width: var(--tile-w); aspect-ratio: 1; pointer-events: auto; cursor: grab; }
+  .phd__s :global(.sticker) { --size: 100%; width: 100%; }
+  @media (min-width: 1024px) { .phd__stickers { grid-template-columns: repeat(3, var(--tile-w)); --tile-w: clamp(72px, 6.2vw, 104px); } }
+  /* Colored tiles with a light-to-deep gradient: cobalt, the logo's green, deep cobalt into night. */
+  .phd .phd__s--1 :global(.sticker) { --tile: var(--accent); --stroke: #fff; --acc: var(--blue-pale); background: linear-gradient(150deg, #4d6bff, var(--accent) 45%, var(--accent-deep)); box-shadow: 0 22px 40px -22px rgb(28 51 168 / 0.75); }
+  .phd .phd__s--2 :global(.sticker) { --tile: var(--leaf); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--leaf-soft), var(--leaf) 60%); box-shadow: 0 18px 32px -18px rgb(90 160 0 / 0.55); }
+  .phd .phd__s--3 :global(.sticker) { --tile: var(--night); --stroke: #fff; --acc: var(--accent-soft); background: linear-gradient(150deg, var(--accent-deep), var(--night) 70%); box-shadow: 0 20px 36px -20px rgb(13 16 21 / 0.7); }
+  /* The desktop extras: violet, pale sky and the one red tile (red is kept to a few icons site-wide). */
+  .phd .phd__s--4 :global(.sticker) { --tile: var(--accent-soft); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, #a8b7ff, var(--accent-soft) 55%, #4d6bff); box-shadow: 0 20px 36px -20px rgb(28 51 168 / 0.6); }
+  .phd .phd__s--5 :global(.sticker) { --tile: var(--blue-soft); --stroke: var(--ink); --acc: var(--accent-deep); background: linear-gradient(150deg, var(--blue-pale), var(--blue-soft) 60%); box-shadow: 0 18px 32px -18px rgb(43 77 224 / 0.5); }
+  .phd .phd__s--6 :global(.sticker) { --tile: var(--red); --stroke: #fff; --acc: var(--red-soft); background: linear-gradient(150deg, #ff5a60, var(--red) 60%); box-shadow: 0 18px 32px -18px rgb(232 35 46 / 0.6); }
+  .phd__s--3, .phd__s--4, .phd__s--5, .phd__s--6 { display: none; }
+  @media (min-width: 1024px) { .phd__s--3, .phd__s--4, .phd__s--5, .phd__s--6 { display: block; } }
+  /* With an aside (e.g. the review checks): title and lead on the left, the aside on the right from desktop up. */
+  .phd__aside { position: relative; z-index: 0; margin-top: var(--s-5); }
+  /* The aside's cards scatter past the header's lower edge: clip only the sides. */
+  .phd--aside { overflow: visible; overflow-x: clip; }
+  .phd--aside .phd__title, .phd--aside .phd__lead, .phd--aside .phd__kicker { position: relative; z-index: 2; }
+  @media (min-width: 1024px) {
+    .phd--aside .phd__inner { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); column-gap: clamp(32px, 4vw, 72px); align-items: center; }
+    .phd--aside .phd__inner > :not(.phd__aside) { grid-column: 1; }
+    .phd--aside .phd__aside { grid-column: 2; grid-row: 1 / span 6; margin-top: 0; }
+  }
+</style>

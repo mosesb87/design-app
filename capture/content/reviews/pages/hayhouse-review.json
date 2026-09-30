@@ -1,0 +1,5130 @@
+{
+  "url": "https://mousabatarseh.com/hayhouse-review/",
+  "title": "Hay House Storefront Report — Mousa Batarseh",
+  "description": "An independent Week 0 report on shop.hayhouse.com by Mousa Batarseh: twelve evidence-backed findings, a catalog check of all 874 products, a price check against hayhouse.com, and worked examples for reporting, agentic commerce, SOPs, developer requirements, migration and AI workflows.",
+  "ogImage": "",
+  "published": "",
+  "lang": "en",
+  "blocks": [
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "FILED BEFORE DAY ONE"
+    },
+    {
+      "t": "h1",
+      "text": "Your Shopify storefront, read cover to cover."
+    },
+    {
+      "t": "p",
+      "text": "The Senior E-Commerce Specialist keeps Hay House's Shopify storefronts accurate, fast and easy to shop. Before applying, I read shop.hayhouse.com the way I would in my first week: all 874 products, the filters, the pages, the structured data, the speed, and how it lines up with hayhouse.com. Everything here comes from public pages on September 16, 2026."
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn dark",
+      "text": "READ THE TWELVE FINDINGS"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn",
+      "text": "RUN THE CATALOG CHECK"
+    },
+    {
+      "t": "text",
+      "tag": "a",
+      "cls": "btn",
+      "text": "SEE THE WORKED EXAMPLES"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Catalog card"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "stamp",
+      "text": "16 SEP 2026"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Products checked"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "",
+      "text": "874"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "ISBN listed on two products"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Titles listed twice"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Shippable variants with a weight"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "bad",
+      "text": "0 / 878"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Compare-at price equal to price"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "bad",
+      "text": "861 / 878"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Distinct product tags"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "bad",
+      "text": "5,623"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Product pages with an H1"
+    },
+    {
+      "t": "text",
+      "tag": "dt",
+      "cls": "",
+      "text": "Descriptive alt text (220-image sample)"
+    },
+    {
+      "t": "text",
+      "tag": "i",
+      "cls": "",
+      "text": "Worthy"
+    },
+    {
+      "t": "text",
+      "tag": "dd",
+      "cls": "bad",
+      "text": "$9.50 / $18.99"
+    },
+    {
+      "t": "p",
+      "text": "Public sources only: products.json, product .js, rendered pages, sitemaps, robots.txt and /.well-known/ucp. No logins, no internal data."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kick",
+      "text": "THE REPORT · FOUR PARTS"
+    },
+    {
+      "t": "h2",
+      "text": "The storefront, in brief."
+    },
+    {
+      "t": "p",
+      "text": "The same shape I'd use for a weekly note to the Director of E-Commerce: what's working, what needs attention, why it matters, and what I'd do first."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "i."
+    },
+    {
+      "t": "h3",
+      "text": "WHAT'S WORKING"
+    },
+    {
+      "t": "p",
+      "text": "The migration landed: 816 titles were created in April and new releases have been added every month since, with ISBN SKUs, book-detail metafields, an Authors filter and Shop Pay Installments. Shopify's agent endpoints are already on."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "ii."
+    },
+    {
+      "t": "h3",
+      "text": "WHAT NEEDS ATTENTION"
+    },
+    {
+      "t": "p",
+      "text": "Some data came over from Magento with gaps: two prices for the same book across Hay House sites, duplicate listings, filters that split formats and authors, zero weights, templated alt text and 5,623 tags."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "iii."
+    },
+    {
+      "t": "h3",
+      "text": "WHY IT MATTERS"
+    },
+    {
+      "t": "p",
+      "text": "Filters, Google Shopping, social catalogs, shipping rates and AI shopping agents all read the same product data. Clean it once and every channel improves at the same time."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "n",
+      "text": "iv."
+    },
+    {
+      "t": "h3",
+      "text": "WHAT I'D DO FIRST"
+    },
+    {
+      "t": "p",
+      "text": "Week one: agree the price of record, merge duplicates, fix the Format and Authors filters, add weights. Then H1s and book structured data with the developers, tags into metafields, and alt text in batches."
+    },
+    {
+      "t": "h3",
+      "text": "ISBNS AS SKUS"
+    },
+    {
+      "t": "p",
+      "text": "All 878 variants use an ISBN-13 as the SKU, and every one passes the check-digit test. That makes matching, feeds and redirects much easier."
+    },
+    {
+      "t": "h3",
+      "text": "BOOK DETAILS"
+    },
+    {
+      "t": "p",
+      "text": "Product pages already show pages, language, publication date, ISBN and publisher from metafields, and the Authors filter is live."
+    },
+    {
+      "t": "h3",
+      "text": "AGENT-READY PLUMBING"
+    },
+    {
+      "t": "p",
+      "text": "Shopify publishes /agents.md, an agentic discovery sitemap and a UCP profile (2026-08-25) for the store, so AI shopping agents can search the catalog and start checkouts that the buyer approves."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kick",
+      "text": "WHAT I FOUND · TWELVE FINDINGS"
+    },
+    {
+      "t": "h2",
+      "text": "Found before anyone had to ask."
+    },
+    {
+      "t": "p",
+      "text": "Each finding shows what I saw, why it costs sales or trust, and the fix. The evidence comes from the public storefront on September 16, 2026. The screenshots are cropped, not edited."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "01"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev high",
+      "text": "HIGH"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "PRICING · TWO STOREFRONTS"
+    },
+    {
+      "t": "h3",
+      "text": "The same book has two prices on two Hay House sites."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "hayhouse.com (Magento) vs shop.hayhouse.com (Shopify) · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Worthy"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "$9.50"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Divine Masters, Ancient Wisdom"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "$9.50"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "F**K It Therapy"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "$8.00"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "You Can Heal Your Life"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "$14.39"
+    },
+    {
+      "t": "p",
+      "text": "A reader who arrives on the Shopify page from Google, Instagram or an AI assistant can pay nearly twice what hayhouse.com charges for the same ISBN. Shoppers and price-comparing agents will find both pages."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Agree which storefront is the price of record and sync the other from it, through a scheduled price sync or one product feed. If the gap is deliberate (a web-only discount, for example), show it the same way on both sites. Until then, give the pair one canonical URL so they stop competing in search."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Director of E-Commerce + eComm"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "a decision, then 1 day"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "price mismatches in the weekly check (target 0)"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-price-hh.webp",
+      "alt": "hayhouse.com product page for Worthy: list price $18.99, HayHouse.com price $9.50, save 50%",
+      "w": 900,
+      "h": 615,
+      "caption": "hayhouse.com, Sept 16: Worthy at $9.50 (list $18.99).",
+      "file": "047239669f110aa4.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-price-shop.webp",
+      "alt": "shop.hayhouse.com product page for Worthy at $18.99 with ISBN 978-1-4019-5015-6 in Book Details",
+      "w": 900,
+      "h": 625,
+      "caption": "shop.hayhouse.com, same day: the same ISBN at $18.99.",
+      "file": "55c9d887ec8390de.webp"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "02"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev high",
+      "text": "HIGH"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "CATALOG DATA · DUPLICATES"
+    },
+    {
+      "t": "h3",
+      "text": "Duplicate listings split sales, reviews and rankings."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "products.json · 874 products · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "embrace-your-power"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "embrace-your-power-1"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "9781401955892"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "you-can-heal-your-life"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "you-can-heal-your-life-1"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "\"You Can Heal Your Life\""
+    },
+    {
+      "t": "p",
+      "text": "Two identical titles look like a mistake in collections, search, Google and agent answers. Inventory and reviews split across the pair, and the \"-1\" handles give away the import."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Merge the two Embrace Your Power listings and 301 the spare handle. Rename the anniversary edition (\"You Can Heal Your Life: 40th Anniversary Edition\") and link editions with an \"Also available\" block. Pick one rule for formats: one product per ISBN, with editions linked through a metafield, and never a card deck as a variant of a book."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "eComm"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "half a day"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "duplicate ISBNs and titles (target 0)"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-ychyl-a.webp",
+      "alt": "Product page title: You Can Heal Your Life, by Louise Hay, $17.99",
+      "w": 700,
+      "h": 280,
+      "caption": "/products/you-can-heal-your-life",
+      "file": "ce1843fe48b5424a.webp"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-ychyl-b.webp",
+      "alt": "Product page title: You Can Heal Your Life, subtitle 40th Anniversary Edition, $19.99",
+      "w": 700,
+      "h": 280,
+      "caption": "/products/you-can-heal-your-life-1: the edition only shows as a subtitle.",
+      "file": "aee5b1bac7813947.webp"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "03"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev high",
+      "text": "HIGH"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "FILTERS · FORMAT"
+    },
+    {
+      "t": "h3",
+      "text": "The Format filter lists ISBNs as formats."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "/collections/mind-body-spirit · Format filter · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "Card Deck (9781401918668)"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "Card Deck (9781401969035)"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "Card Deck (9781401978242)"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "Card Deck (9781401993863)"
+    },
+    {
+      "t": "p",
+      "text": "A reader who filters for card decks misses those four. Paperbacks sit under two labels that mean the same thing to a customer; \"Trade Paperback Original\" is a publishing term."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Rename the four option values to \"Card Deck\" and keep the ISBN in the SKU. Show one customer-facing \"Paperback\" value, and keep the publishing detail in a format metafield for reports and feeds."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "eComm"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "1 hour"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "filter values per format (target 1)"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-filter-format.webp",
+      "alt": "Format filter showing Card Deck with four ISBN-suffixed values, Trade Paperback and Trade Paperback Original",
+      "w": 300,
+      "h": 480,
+      "caption": "Format filter, desktop.",
+      "file": "0807af2812249475.webp"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "04"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev high",
+      "text": "HIGH"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "FILTERS · AUTHORS"
+    },
+    {
+      "t": "h3",
+      "text": "Authors appear under several names."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "/collections/mind-body-spirit · Authors filter · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "David R. Hawkins, M.D. Ph.D."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "David R. Hawkins, M.D., Ph.D."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Alberto Villoldo"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Alberto Villoldo, Ph.D."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Steven D. Farmer"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Steven D. Farmer, Ph.D."
+    },
+    {
+      "t": "p",
+      "text": "A Hawkins reader who ticks one spelling sees 5 or 15 books, not 20. Co-authors inside one text value never match their own name, so a Colette Baron-Reid filter misses decks she co-created."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Make authors an Author metaobject (name, credentials, bio, photo) referenced as a list on each product. That gives one filter value per person, author pages at no extra cost, and credentials kept out of the name. The developer ticket is in the worked examples (HH-201)."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "eComm + Developer"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "2–3 days"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "filter values per author (target 1)"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-filter-authors.webp",
+      "alt": "Authors filter listing Alberto Villoldo under five separate values",
+      "w": 300,
+      "h": 300,
+      "caption": "Authors filter: one author, five values.",
+      "file": "66f3575a3bd482f4.webp"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "05"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev high",
+      "text": "HIGH"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "CATALOG DATA · SHIPPING"
+    },
+    {
+      "t": "h3",
+      "text": "Every shippable variant weighs 0 g."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "products.json + /products/{handle}.js · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "878 of 878"
+    },
+    {
+      "t": "p",
+      "text": "Weight-based and carrier-calculated rates, shipping labels and customs forms all need a weight. With every product at 0 g, the store can only charge flat or price-based rates, at home and abroad."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Bulk-fill weights by format from the publisher's product data (trim size and page count give a close estimate), check a sample against the warehouse, and make weight a required field in the new-title SOP."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "eComm + Ops"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "1 day"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "variants with weight (target 100%)"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "06"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "CATALOG DATA · PRICING"
+    },
+    {
+      "t": "h3",
+      "text": "Compare-at price equals the price on 861 of 878 variants."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "products.json · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "861"
+    },
+    {
+      "t": "p",
+      "text": "It isn't a discount today, but it's a trap: lower any of these prices and the product shows as on sale everywhere, without anyone deciding to run a sale. It also hides the 17 real markdowns in reports."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Clear compare-at wherever it equals the price in one bulk edit, and set it only for real promotions through the promotion SOP (SOP-03)."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "eComm"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "1 hour"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "compare-at = price (target 0)"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "07"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "CATALOG DATA · IMPORT LEFTOVERS"
+    },
+    {
+      "t": "h3",
+      "text": "Migration leftovers are live on the storefront."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "products.json + product pages · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "SPANISH-YOU CAN HEAL YOUR LIFE/TRD"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "English"
+    },
+    {
+      "t": "p",
+      "text": "Legacy catalog codes in titles and wrong language values show up in Google, in feeds and in agent answers. Small covers look blurry on phones and in Google Shopping."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Rename to the published title (\"Usted Puede Sanar Su Vida\"), set Spanish on the Spanish list, replace covers under 800 px from the cover archive, and add the missing image and description. Run the catalog check after every import."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "eComm"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "1–2 days"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "catalog check issues (trend to 0)"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-spanish.webp",
+      "alt": "Product page titled SPANISH-YOU CAN HEAL YOUR LIFE/TRD with a blurry cover and Language: English",
+      "w": 900,
+      "h": 562,
+      "caption": "The Spanish edition: legacy title, upscaled cover, language set to English.",
+      "file": "aa6e230e94739bde.webp"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "08"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "CATALOG DATA · TAGS"
+    },
+    {
+      "t": "h3",
+      "text": "5,623 tags, and customers can see them."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "products.json · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "5,623"
+    },
+    {
+      "t": "p",
+      "text": "Tags don't help a page rank, but they clutter the product page, slow down admin work and make automated collections unpredictable."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Move BISAC codes and subjects into metafields, keep a short, controlled list of merchandising tags with an owner, and hide tags from Book Details. Keyword research belongs in titles, descriptions and collection copy."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "eComm"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "3–4 days, in batches"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "tags per product (target under 15)"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "09"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "SEO · PAGE BASICS"
+    },
+    {
+      "t": "h3",
+      "text": "Product and collection pages have no H1."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "rendered pages, desktop and mobile · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "empty"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "no meta description"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "0 H1"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "0 H1"
+    },
+    {
+      "t": "p",
+      "text": "The H1 tells search engines and screen readers what a page is about. Empty collections and missing descriptions leave the category pages that should rank for \"tarot decks\" or \"self-help books\" thin."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "A theme change: product and collection titles become H1s, and the homepage gets a real one. Write the homepage and collection meta descriptions, add 50–100 word intros to the top collections, and unpublish Featured Products."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "eComm + Developer"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "1 day"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "pages with one H1 (target 100%)"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "10"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "STRUCTURED DATA · FEEDS · AGENTS"
+    },
+    {
+      "t": "h3",
+      "text": "Book pages don't tell Google or agents they're books."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "JSON-LD on /products/you-can-heal-your-life · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "no gtin13 / isbn"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "no author"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "0 describe the image"
+    },
+    {
+      "t": "p",
+      "text": "Google Shopping, rich results and AI assistants match books by ISBN and author. The data already exists in the metafields; it just isn't in the markup. Alt text that says \"image 7\" gives screen readers and image search nothing to work with."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Output gtin13 and author on Product, or a Book + Offer graph with isbn, author, bookFormat, numberOfPages and datePublished, all from existing metafields, and settle whether the brand should read \"Hay House\". Write alt text in batches with the reviewed AI workflow in the worked examples."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Developer + eComm"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "1–2 days"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Rich Results test pass, Merchant Center item issues"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "11"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev med",
+      "text": "MEDIUM"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "PERFORMANCE · THIRD PARTIES"
+    },
+    {
+      "t": "h3",
+      "text": "Mobile pages are slow, mostly because of third-party scripts."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "Lighthouse 12 · mobile · lab run from a cloud server (directional) · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "36"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "36"
+    },
+    {
+      "t": "p",
+      "text": "Most book discovery happens on phones, from social and email. Seconds of blocking time delay the first tap on Add to Cart."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Load pixels through Shopify's customer events, trim Google Tag Manager tags, drop jQuery where the theme no longer needs it, and review whether the overlay is still needed once the theme's own accessibility fixes (H1s, alt text) are in. Set a performance budget in the launch checklist and confirm the gains with field data (CrUX) before and after."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Developer + Marketing"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "1 week"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "mobile LCP, INP, conversion rate"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "id",
+      "text": "12"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sev low",
+      "text": "LOW"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "area",
+      "text": "NAVIGATION · CRAWLING"
+    },
+    {
+      "t": "h3",
+      "text": "The store has three menu items."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "src",
+      "text": "header, breadcrumbs, robots.txt · Sept 16"
+    },
+    {
+      "t": "text",
+      "tag": "mark",
+      "cls": "",
+      "text": "Home · Catalog · Contact"
+    },
+    {
+      "t": "p",
+      "text": "Readers browse by topic and author. Without a topic menu, the collections are only reachable from homepage blocks, and crawlers can spend their time on search and sorted URLs instead."
+    },
+    {
+      "t": "h4",
+      "text": "FIX"
+    },
+    {
+      "t": "p",
+      "text": "Add a Shop by Topic menu (Mind, Body, Spirit · Self-Help · Health & Fitness · Card Decks · New Releases) and an Authors link. Restore Shopify's default robots rules for /search and filtered URLs."
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "eComm"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "half a day"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "collection sessions, crawl stats"
+    },
+    {
+      "t": "img",
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-nav.webp",
+      "alt": "Store header with only Home, Catalog and Contact in the menu",
+      "w": 900,
+      "h": 75,
+      "caption": "The full main menu.",
+      "file": "5c3ac7b90e202447.webp"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kick",
+      "text": "TOOL · CATALOG CHECK"
+    },
+    {
+      "t": "h2",
+      "text": "Every product, checked every Monday."
+    },
+    {
+      "t": "p",
+      "text": "This runs in your browser on a copy of all 874 live products taken September 16. To check today's catalog, save shop.hayhouse.com/products.json?limit=250 (and &page=2, 3, 4), then drop the files below. As a scheduled job, it would post the list before the weekly meeting."
+    },
+    {
+      "t": "h3",
+      "text": "SNAPSHOT · SEPT 16, 2026 · 874 PRODUCTS"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "muted",
+      "text": "Showing the top 250 of 874 · the CSV has them all"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "PRODUCT",
+          "FORMAT · ISBN",
+          "PRICE",
+          "PRIORITY",
+          "ISSUES"
+        ],
+        [
+          "Embrace Your Power\nembrace-your-power-1 · added 2026-08-04",
+          "Paperback original\n9781401955892",
+          "$14.99",
+          "21",
+          "ISBN also on another productSame title as another productZero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 15Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Embrace Your Power\nembrace-your-power · added 2026-04-30",
+          "Paperback original\n9781401955892",
+          "$14.99",
+          "21",
+          "ISBN also on another productSame title as another productZero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 10Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "SPANISH-YOU CAN HEAL YOUR LIFE/TRD\nspanish-you-can-heal-your-life-trd · added 2026-04-30",
+          "Paperback\n9788486344658",
+          "$17.99",
+          "18",
+          "Legacy code in the titleZero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 7Tags in two capitalizations · 14BISAC codes as tags · 1"
+        ],
+        [
+          "El Poder Esta Dentro De Ti\nel-poder-esta-dentro-de-ti · added 2026-04-30",
+          "Paperback\n9781561701315",
+          "$17.95",
+          "17",
+          "No descriptionZero shipping weightCover under 500 px wide · 259 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 4BISAC codes as tags · 1"
+        ],
+        [
+          "The Herbal Astrology Pocket Oracle\nthe-herbal-astrology-oracle · added 2026-04-30",
+          "Card Deck (9781401978242) / Card Deck (9781401969035)\n9781401978242 / 9781401969035",
+          "$17.99",
+          "17",
+          "ISBN inside the Format valueZero shipping weight · 2/2Cover under 500 px wide · 385 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 5 of 16Search-phrase tags · 4Tags in two capitalizations · 6BISAC codes as tags · 3"
+        ],
+        [
+          "Make Money Easy\nmake-money-easy · added 2026-04-30",
+          "Paperback\n9781401998509",
+          "$19.99",
+          "15",
+          "Zero shipping weightCover under 500 px wide · 311 pxMarketplace image fileCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 5Tags in two capitalizations · 13BISAC codes as tags · 3"
+        ],
+        [
+          "The Universe Has Your Back\nthe-universe-has-your-back · added 2026-04-30",
+          "Paperback\n9781401995980",
+          "$17.99",
+          "15",
+          "Same title as another productZero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 10Tags in two capitalizations · 8BISAC codes as tags · 3"
+        ],
+        [
+          "What Do You Need?\nwhat-do-you-need · added 2026-04-30",
+          "Hardcover\n9781401974893",
+          "$25.99",
+          "15",
+          "Same title as another productZero shipping weightCover under 500 px wide · 335 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 11Tags in two capitalizations · 8BISAC codes as tags · 3"
+        ],
+        [
+          "Worthy\nworthy · added 2026-04-30",
+          "Paperback\n9781401950156",
+          "$18.99",
+          "15",
+          "Same title as another productZero shipping weightCover under 500 px wide · 326 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 7Tags in two capitalizations · 7BISAC codes as tags · 2"
+        ],
+        [
+          "You Can Heal Your Life\nyou-can-heal-your-life · added 2026-04-30",
+          "Paperback\n9780937611012",
+          "$17.99",
+          "15",
+          "Same title as another productZero shipping weightCover under 500 px wide · 321 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 8Tags in two capitalizations · 11BISAC codes as tags · 3"
+        ],
+        [
+          "Animal Spirit Guides\nanimal-spirit-guides · added 2026-04-30",
+          "Paperback\n9781401907334",
+          "$26.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 160 or more tags · 60Search-phrase tags · 12Tags in two capitalizations · 12BISAC codes as tags · 3"
+        ],
+        [
+          "Discovery of the Presence of God\ndiscovery-of-the-presence-of-god · added 2026-04-30",
+          "Paperback original\n9781401944988",
+          "$24.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 321 pxCompare-at equals priceImages under 800 px · 1 of 160 or more tags · 67Search-phrase tags · 12Tags in two capitalizations · 15BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Earth Magic\nearth-magic · added 2026-04-30",
+          "Paperback\n9781401920050",
+          "$24.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 160 or more tags · 75Search-phrase tags · 11Tags in two capitalizations · 14BISAC codes as tags · 2"
+        ],
+        [
+          "Energy Rules\nenergy-rules · added 2026-04-30",
+          "Paperback original\n9781401973216",
+          "$18.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 8 of 860 or more tags · 62Search-phrase tags · 1Tags in two capitalizations · 11BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Fairy Whispering\nfairy-whispering · added 2026-04-30",
+          "Paperback original\n9781401980269",
+          "$14.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 392 pxCompare-at equals priceImages under 800 px · 1 of 960 or more tags · 66Search-phrase tags · 1Tags in two capitalizations · 27BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Know Justice Know Peace\nknow-justice-know-peace · added 2026-04-30",
+          "Paperback\n9781401974183",
+          "$18.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1160 or more tags · 66Search-phrase tags · 22Tags in two capitalizations · 9BISAC codes as tags · 3"
+        ],
+        [
+          "Radical Hope\nradical-hope · added 2026-04-30",
+          "Paperback original\n9781401965242",
+          "$18.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 14Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Runes Made Easy\nrunes-made-easy · added 2026-04-30",
+          "Paperback original\n9781401963637",
+          "$17.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 363 pxCompare-at equals priceImages under 800 px · 1 of 160 or more tags · 60Search-phrase tags · 3Tags in two capitalizations · 18BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Alkaline Reset Cleanse\nthe-alkaline-reset-cleanse · added 2026-04-30",
+          "Paperback\n9781401955502",
+          "$19.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 416 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 10 of 1060 or more tags · 63Search-phrase tags · 13Tags in two capitalizations · 8BISAC codes as tags · 3"
+        ],
+        [
+          "The Eye of the I\nthe-eye-of-the-i · added 2026-04-30",
+          "Paperback\n9781401945046",
+          "$24.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 160 or more tags · 65Search-phrase tags · 16Tags in two capitalizations · 16BISAC codes as tags · 3"
+        ],
+        [
+          "The Journey Home\nthe-journey-home · added 2026-04-30",
+          "Paperback original\n9781561705528",
+          "$19.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 163 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 8Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Moses Code\nthe-moses-code · added 2026-04-30",
+          "Paperback original\n9781401962746",
+          "$16.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 11Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Psychic Tarot Pocket Oracle Deck\nthe-psychic-tarot-oracle-deck · added 2026-04-30",
+          "Card Deck (9781401993863) / Card Deck (9781401918668)\n9781401993863 / 9781401918668",
+          "$17.99",
+          "14",
+          "ISBN inside the Format valueZero shipping weight · 2/2Compare-at equals priceCover file not named for the ISBNImages under 800 px · 7 of 16Search-phrase tags · 3Tags in two capitalizations · 7BISAC codes as tags · 3"
+        ],
+        [
+          "The Tapping Solution for Weight Loss & Body Confidence\nthe-tapping-solution-for-weight-loss-body-confidence · added 2026-04-30",
+          "Paperback original\n9781401945138",
+          "$19.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 391 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 7BISAC codes as tags · 1“Trade Paperback Original” label"
+        ],
+        [
+          "The Universe Has Your Back\nthe-universe-has-your-back-1 · added 2026-04-30",
+          "Card deck\n9781781809334",
+          "$22.99",
+          "14",
+          "Same title as another productZero shipping weightCover under 500 px wide · 450 pxCompare-at equals priceImages under 800 px · 11 of 11Tags in two capitalizations · 1BISAC codes as tags · 3"
+        ],
+        [
+          "The Wild Wool Shepherdess\nthe-wild-wool-shepherdess · added 2026-04-30",
+          "Paperback original\n9781401976408",
+          "$19.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 1 of 960 or more tags · 63Search-phrase tags · 2Tags in two capitalizations · 12BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "ThetaHealing®: You and the Creator\nthetahealing®-you-and-the-creator · added 2026-04-30",
+          "Paperback original\n9781401960667",
+          "$16.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 336 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 10Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Thriving Beyond Fifty (Expanded Edition)\nthriving-beyond-fifty-expanded-edition · added 2026-04-30",
+          "Paperback original\n9781401994181",
+          "$24.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 427 pxCompare-at equals priceImages under 800 px · 1 of 160 or more tags · 98Search-phrase tags · 8Tags in two capitalizations · 3BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Truth vs. Falsehood\ntruth-vs-falsehood · added 2026-04-30",
+          "Paperback original\n9781401945060",
+          "$24.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 165 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 15Tags in two capitalizations · 11BISAC codes as tags · 2“Trade Paperback Original” label"
+        ],
+        [
+          "What Happy Teachers Do\nwhat-happy-teachers-do · added 2026-04-30",
+          "Paperback original\n9781401978136",
+          "$17.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 314 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 9 of 9Search-phrase tags · 4Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Why Woo-Woo Works\nwhy-woo-woo-works · added 2026-04-30",
+          "Paperback original\n9781401961701",
+          "$16.99",
+          "14",
+          "Zero shipping weightCover under 500 px wide · 342 pxCompare-at equals priceImages under 800 px · 1 of 160 or more tags · 86Search-phrase tags · 11Tags in two capitalizations · 17BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "You Can Heal Your Life\nyou-can-heal-your-life-1 · added 2026-04-30",
+          "Paperback original\n9781401976910",
+          "$19.99",
+          "14",
+          "Same title as another productZero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 9 of 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "10 Secrets for Success and Inner Peace\n10-secrets-for-success-and-inner-peace · added 2026-04-30",
+          "Paperback original\n9781401965822",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 13Tags in two capitalizations · 14BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "21 Days to Awaken the Writer Within\n21-days-to-awaken-the-writer-within · added 2026-04-30",
+          "Paperback original\n9781401971816",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 363 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 10Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "21 Days to Decode Your Dreams\n21-days-to-decode-your-dreams · added 2026-04-30",
+          "Paperback original\n9781401971830",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 365 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 17Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "21 Days to Explore Your Past Lives\n21-days-to-explore-your-past-lives · added 2026-04-30",
+          "Paperback original\n9781401971823",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 363 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 13Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "21 Days to Find Success and Inner Peace\n21-days-to-find-success-and-inner-peace · added 2026-04-30",
+          "Paperback original\n9781401971205",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 365 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 8Tags in two capitalizations · 12BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "21 Days to Work with Crystals\n21-days-to-work-with-crystals · added 2026-04-30",
+          "Paperback original\n9781401971229",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 363 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 7Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "365 Days of Divine Feminine Wisdom\n365-days-of-divine-feminine-wisdom · added 2026-04-30",
+          "Paperback original\n9781401970031",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 10Search-phrase tags · 10Tags in two capitalizations · 12BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "7 Rules of Self-Reliance\n7-rules-of-self-reliance · added 2026-04-30",
+          "Paperback\n9781401996697",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 9Tags in two capitalizations · 9BISAC codes as tags · 3"
+        ],
+        [
+          "7-Figure Educator\n7-figure-educator · added 2026-06-24",
+          "Paperback original\n9798318601781",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 361 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 12Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "A Blessing in Disguise\na-blessing-in-disguise · added 2026-04-30",
+          "Paperback\n9781401974176",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 11Search-phrase tags · 5Tags in two capitalizations · 7BISAC codes as tags · 3"
+        ],
+        [
+          "A Deep Breath of Life\na-deep-breath-of-life · added 2026-04-30",
+          "Paperback\n9781561703371",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 8Tags in two capitalizations · 5BISAC codes as tags · 3"
+        ],
+        [
+          "A Little Peace of Mind\na-little-peace-of-mind · added 2026-04-30",
+          "Paperback original\n9781788173049",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 8Tags in two capitalizations · 6BISAC codes as tags · 2“Trade Paperback Original” label"
+        ],
+        [
+          "A Year of Mystical Thinking\na-year-of-mystical-thinking · added 2026-04-30",
+          "Paperback original\n9781401962883",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 342 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 12Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Age Like a Girl\nage-like-a-girl · added 2026-04-30",
+          "Hardcover\n9781401975562",
+          "$29.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 300 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 2 of 10Search-phrase tags · 4Tags in two capitalizations · 2BISAC codes as tags · 3"
+        ],
+        [
+          "Alchemy of Herbs\nalchemy-of-herbs · added 2026-04-30",
+          "Paperback\n9781401950064",
+          "$29.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 410 pxCompare-at equals priceImages under 800 px · 10 of 1060 or more tags · 62Search-phrase tags · 17Tags in two capitalizations · 4BISAC codes as tags · 3"
+        ],
+        [
+          "Ancestors Said\nancestors-said · added 2026-04-30",
+          "Paperback original\n9781401974756",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 8 of 8Search-phrase tags · 12Tags in two capitalizations · 3BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Ancestral Healing Made Easy\nancestral-healing-made-easy · added 2026-04-30",
+          "Paperback original\n9781401960674",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 363 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Angel Wisdom Tarot\nangel-wisdom-tarot · added 2026-04-30",
+          "Card deck\n9781401956707",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 385 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 5Tags in two capitalizations · 6BISAC codes as tags · 2"
+        ],
+        [
+          "Angels Are with You Now\nangels-are-with-you-now · added 2026-04-30",
+          "Paperback original\n9781401968571",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 412 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 4Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Animal Communication Made Easy\nanimal-communication-made-easy · added 2026-04-30",
+          "Paperback original\n9781788171199",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 297 pxCompare-at equals priceImages under 800 px · 3 of 3Search-phrase tags · 5Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Answers from the Ancestral Realms\nanswers-from-the-ancestral-realms · added 2026-04-30",
+          "Paperback original\n9781401964146",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 7Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Anxiety-Free with Food\nanxiety-free-with-food · added 2026-04-30",
+          "Paperback original\n9781401961763",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 14Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Aphrodisiac\naphrodisiac · added 2026-04-30",
+          "Paperback original\n9781401960926",
+          "$29.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 452 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 7Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Archetypes\narchetypes · added 2026-04-30",
+          "Paperback\n9781401941093",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 333 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 11Tags in two capitalizations · 9BISAC codes as tags · 3"
+        ],
+        [
+          "Astrology Made Easy\nastrology-made-easy · added 2026-04-30",
+          "Paperback original\n9781788172486",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 362 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 10Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Awakening Your Inner Shaman (Updated Edition)\nawakening-your-inner-shaman-updated-edition · added 2026-07-27",
+          "Paperback\n9798318603457",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 311 pxMarketplace image fileCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9BISAC codes as tags · 3"
+        ],
+        [
+          "Believe You're Made for More\nbelieve-youre-made-for-more · added 2026-04-30",
+          "Paperback original\n9781401995768",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 1Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Beyond Ayahuasca\nbeyond-ayahuasca · added 2026-04-30",
+          "Paperback original\n9781401979591",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 11Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Beyond Longevity\nbeyond-longevity · added 2026-04-30",
+          "Paperback\n9781401958411",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 364 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 11Search-phrase tags · 8Tags in two capitalizations · 8BISAC codes as tags · 3"
+        ],
+        [
+          "Black Moon Lilith Rising\nblack-moon-lilith-rising · added 2026-04-30",
+          "Paperback original\n9781401970666",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 10Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Breaking Bias\nbreaking-bias · added 2026-04-30",
+          "Paperback\n9781401996703",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 4Tags in two capitalizations · 11BISAC codes as tags · 3"
+        ],
+        [
+          "Charge and the Energy Body\ncharge-and-the-energy-body · added 2026-04-30",
+          "Paperback\n9781401954482",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 363 pxCompare-at equals priceImages under 800 px · 1 of 960 or more tags · 70Search-phrase tags · 16Tags in two capitalizations · 8BISAC codes as tags · 3"
+        ],
+        [
+          "Chica, Why Not?\nchica-why-not · added 2026-04-30",
+          "Paperback original\n9781401959739",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 7Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Chillpreneur\nchillpreneur · added 2026-04-30",
+          "Paperback\n9781401960629",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 346 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 9 of 9Search-phrase tags · 7Tags in two capitalizations · 6BISAC codes as tags · 3"
+        ],
+        [
+          "Claim Your Power\nclaim-your-power · added 2026-04-30",
+          "Paperback original\n9781401949563",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 11Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Co-creating at Its Best\nco-creating-at-its-best · added 2026-04-30",
+          "Paperback\n9781401951641",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 357 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 11BISAC codes as tags · 3"
+        ],
+        [
+          "Connecting with the Angels Made Easy\nconnecting-with-the-angels-made-easy · added 2026-04-30",
+          "Paperback original\n9781788172080",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 334 pxCompare-at equals priceImages under 800 px · 10 of 10Search-phrase tags · 9Tags in two capitalizations · 10BISAC codes as tags · 1“Trade Paperback Original” label"
+        ],
+        [
+          "Consciousness Rising\nconsciousness-rising · added 2026-04-30",
+          "Paperback original\n9781401961237",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 6Tags in two capitalizations · 14BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Contacting Your Spirit Guide\ncontacting-your-spirit-guide · added 2026-04-30",
+          "Paperback original\n9781401965839",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 5Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Cosmic Care\ncosmic-care · added 2026-04-30",
+          "Paperback original\n9781401974503",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 11Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Crystals for Energy Protection\ncrystals-for-energy-protection · added 2026-04-30",
+          "Paperback original\n9781788173599",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Crystals Made Easy\ncrystals-made-easy · added 2026-04-30",
+          "Paperback original\n9781788172608",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 361 pxCompare-at equals priceImages under 800 px · 2 of 2Search-phrase tags · 10Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Cycle Magic\ncycle-magic · added 2026-04-30",
+          "Paperback original\n9781401998240",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 362 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 5Tags in two capitalizations · 11BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Daily Reflections from Dr. David R. Hawkins\ndaily-reflections-from-dr-david-r-hawkins · added 2026-04-30",
+          "Paperback original\n9781401965099",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 13Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Deep Human Connection\ndeep-human-connection · added 2026-04-30",
+          "Paperback original\n9781401946531",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 300 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 7Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Discover Your Soul's Path Through the Akashic Records\ndiscover-your-souls-path-through-the-akashic-records · added 2026-04-30",
+          "Paperback original\n9781401946135",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 334 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 8Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Do Less\ndo-less · added 2026-04-30",
+          "Paperback\n9781401955014",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 355 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 8 of 8Search-phrase tags · 9Tags in two capitalizations · 7BISAC codes as tags · 3"
+        ],
+        [
+          "Dodging Energy Vampires\ndodging-energy-vampires · added 2026-04-30",
+          "Paperback\n9781401954796",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 324 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 9 of 9Search-phrase tags · 14Tags in two capitalizations · 5BISAC codes as tags · 3"
+        ],
+        [
+          "Dream Guidance\ndream-guidance · added 2026-04-30",
+          "Paperback original\n9781401968199",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 7Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Embrace Abundance\nembrace-abundance · added 2026-04-30",
+          "Paperback\n9781401965198",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 5Tags in two capitalizations · 14BISAC codes as tags · 3"
+        ],
+        [
+          "Enneagram Made Easy\nenneagram-made-easy · added 2026-04-30",
+          "Paperback original\n9781401975890",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 14Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Exhausted\nexhausted · added 2026-04-30",
+          "Paperback original\n9781401962265",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 366 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Exile & Ecstasy\nexile-ecstasy · added 2026-04-30",
+          "Paperback original\n9781401973537",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 12Search-phrase tags · 11Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "F the Shoulds. Do the Wants\nf-the-shoulds-do-the-wants · added 2026-04-30",
+          "Paperback original\n9781401964290",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 12 of 12Search-phrase tags · 9Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "F**k It (Revised and Updated Edition)\nf-k-it-revised-and-updated-edition · added 2026-04-30",
+          "Paperback original\n9781401966652",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 11Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Face Massage for Everyone\nface-massage-for-everyone · added 2026-04-30",
+          "Paperback original\n9781401980214",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 391 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 4Tags in two capitalizations · 11BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Feeding You Lies\nfeeding-you-lies · added 2026-04-30",
+          "Paperback\n9781401954567",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 331 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 9 of 9Search-phrase tags · 11Tags in two capitalizations · 5BISAC codes as tags · 3"
+        ],
+        [
+          "Focus\nfocus · added 2026-04-30",
+          "Paperback original\n9781401962227",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 13Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Food Babe Family\nfood-babe-family · added 2026-04-30",
+          "Paperback\n9781401976002",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 452 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 4Tags in two capitalizations · 5BISAC codes as tags · 3"
+        ],
+        [
+          "Forgive Everyone for Everything\nforgive-everyone-for-everything · added 2026-04-30",
+          "Paperback original\n9781401997502",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 7Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "From Clutter to Clarity\nfrom-clutter-to-clarity · added 2026-04-30",
+          "Paperback original\n9781401960148",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 10Tags in two capitalizations · 3BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Fuel Up\nfuel-up · added 2026-04-30",
+          "Paperback\n9781401996710",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 12Tags in two capitalizations · 10BISAC codes as tags · 3"
+        ],
+        [
+          "Get Signed\nget-signed · added 2026-04-30",
+          "Paperback original\n9781401975142",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 12 of 12Search-phrase tags · 6Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Getting in the Gap\ngetting-in-the-gap · added 2026-04-30",
+          "Paperback original\n9781401965594",
+          "$12.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 14Tags in two capitalizations · 9BISAC codes as tags · 2“Trade Paperback Original” label"
+        ],
+        [
+          "Goddesses Never Age\ngoddesses-never-age · added 2026-04-30",
+          "Paperback\n9781401945954",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 333 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 17Tags in two capitalizations · 6BISAC codes as tags · 3"
+        ],
+        [
+          "Gods in Shackles\ngods-in-shackles · added 2026-04-30",
+          "Paperback original\n9781401968847",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 14Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Good Stress\ngood-stress · added 2026-04-30",
+          "Paperback\n9781401998516",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 311 pxMarketplace image fileCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9BISAC codes as tags · 3"
+        ],
+        [
+          "Gravitas\ngravitas · added 2026-04-30",
+          "Paperback\n9781401978853",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 8Tags in two capitalizations · 7BISAC codes as tags · 3"
+        ],
+        [
+          "Grow a New Body\ngrow-a-new-body · added 2026-04-30",
+          "Paperback original\n9781401956561",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 333 pxCompare-at equals priceImages under 800 px · 7 of 7Search-phrase tags · 9Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Healing Adaptogens\nhealing-adaptogens · added 2026-04-30",
+          "Paperback\n9781401974244",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 10Search-phrase tags · 12Tags in two capitalizations · 8BISAC codes as tags · 3"
+        ],
+        [
+          "Healing and Recovery\nhealing-and-recovery · added 2026-04-30",
+          "Paperback\n9781401944995",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 383 pxCompare-at equals priceImages under 800 px · 1 of 160 or more tags · 68Search-phrase tags · 9Tags in two capitalizations · 16BISAC codes as tags · 1"
+        ],
+        [
+          "Healing Burnout with Astrology & Tarot\nhealing-burnout-with-astrology-tarot · added 2026-04-30",
+          "Paperback original\n9781401972738",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 7Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Healing Is the New High\nhealing-is-the-new-high · added 2026-04-30",
+          "Paperback original\n9781401961244",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 392 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 12Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Heart Thoughts\nheart-thoughts · added 2026-04-30",
+          "Paperback original\n9781401966546",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Higher Purpose\nhigher-purpose · added 2026-04-30",
+          "Paperback\n9781401974206",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 10Search-phrase tags · 10Tags in two capitalizations · 9BISAC codes as tags · 3"
+        ],
+        [
+          "Homeopathy at Home\nhomeopathy-at-home · added 2026-04-30",
+          "Paperback original\n9781401980245",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 2Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "How to Heal from Emotionally Immature Parents\nhow-to-heal-from-emotionally-immature-parents · added 2026-04-30",
+          "Paperback original\n9781401998578",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 6Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "How to Live a Good Life\nhow-to-live-a-good-life · added 2026-04-30",
+          "Paperback\n9781401946326",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 342 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 6BISAC codes as tags · 2"
+        ],
+        [
+          "How to Stop Breaking Your Own Heart\nhow-to-stop-breaking-your-own-heart · added 2026-04-30",
+          "Paperback original\n9781401975845",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 412 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 5Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "In the World, But Not of It\nin-the-world-but-not-of-it · added 2026-04-30",
+          "Paperback original\n9781401964986",
+          "$12.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 10Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Independence for Life\nindependence-for-life · added 2026-06-24",
+          "Paperback original\n9781401998547",
+          "$26.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 428 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 4Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Intentional Health\nintentional-health · added 2026-04-30",
+          "Paperback original\n9781401971533",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 364 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 6Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Intentionality\nintentionality · added 2026-04-30",
+          "Paperback\n9781401995720",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 8Tags in two capitalizations · 11BISAC codes as tags · 3"
+        ],
+        [
+          "Intuitive Animal Communication\nintuitive-animal-communication · added 2026-04-30",
+          "Paperback original\n9781401975296",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 3Search-phrase tags · 12Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Its Not Your Fault\nits-not-your-fault · added 2026-04-30",
+          "Paperback original\n9781401975159",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 11Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Karmic Astrology\nkarmic-astrology · added 2026-04-30",
+          "Paperback original\n9781401978495",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 11Tags in two capitalizations · 3BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Keep Looking Up\nkeep-looking-up · added 2026-04-30",
+          "Paperback original\n9781401963347",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 12 of 12Search-phrase tags · 16Tags in two capitalizations · 2BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "La Ley De Atracción\nla-ley-de-atraccion · added 2026-04-30",
+          "Paperback\n9781401917524",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 6Tags in two capitalizations · 8BISAC codes as tags · 3"
+        ],
+        [
+          "Leaves, Roots & Fruit\nleaves-roots-fruit · added 2026-04-30",
+          "Paperback\n9781401978754",
+          "$20.00",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 4Tags in two capitalizations · 2BISAC codes as tags · 3"
+        ],
+        [
+          "Led by Faith\nled-by-faith · added 2026-04-30",
+          "Paperback\n9781401918880",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 14Tags in two capitalizations · 4BISAC codes as tags · 1"
+        ],
+        [
+          "Let's Talk About Loneliness\nlets-talk-about-loneliness · added 2026-04-30",
+          "Paperback original\n9781401974886",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 405 pxCompare-at equals priceImages under 800 px · 12 of 12Search-phrase tags · 3Tags in two capitalizations · 3BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Letting Go\nletting-go · added 2026-04-30",
+          "Paperback\n9781401945015",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 322 pxCompare-at equals priceImages under 800 px · 1 of 160 or more tags · 61Search-phrase tags · 12Tags in two capitalizations · 13BISAC codes as tags · 3"
+        ],
+        [
+          "Life Loves You\nlife-loves-you · added 2026-04-30",
+          "Paperback\n9781401946166",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 5BISAC codes as tags · 3"
+        ],
+        [
+          "Locusta (The Poisoned Empire Duology, Book 1)\nlocusta-the-poisoned-empire-duology-book-1 · added 2026-09-14",
+          "Paperback original\n9798318604027",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 6Tags in two capitalizations · 1BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Longevity for Cats\nlongevity-for-cats · added 2026-04-30",
+          "Paperback original\n9781401972769",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 7Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Longevity for Dogs\nlongevity-for-dogs · added 2026-04-30",
+          "Paperback original\n9781401972790",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 10 of 10Search-phrase tags · 8Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Love Your Enemies\nlove-your-enemies · added 2026-04-30",
+          "Paperback original\n9781401975692",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 353 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 7Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Lucky Bitch\nlucky-bitch · added 2026-04-30",
+          "Paperback\n9781788171328",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 250 pxCompare-at equals priceImages under 800 px · 2 of 260 or more tags · 64Search-phrase tags · 14Tags in two capitalizations · 14BISAC codes as tags · 3"
+        ],
+        [
+          "Make Room for Healing\nmake-room-for-healing · added 2026-04-30",
+          "Paperback original\n9781401977412",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 11Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Manifest Your True Essence\nmanifest-your-true-essence · added 2026-04-30",
+          "Paperback original\n9781401975821",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 412 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 4Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Market Your Genius\nmarket-your-genius · added 2026-04-30",
+          "Paperback original\n9781401961558",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 355 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 2Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Medical Medium Thyroid Healing\nmedical-medium-thyroid-healing · added 2026-04-30",
+          "Paperback\n9781401948375",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 405 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 2 of 10Search-phrase tags · 7Tags in two capitalizations · 5BISAC codes as tags · 3"
+        ],
+        [
+          "Money Loves Me\nmoney-loves-me · added 2026-04-30",
+          "Paperback original\n9781401978921",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 11Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Money Unlocked\nmoney-unlocked · added 2026-06-24",
+          "Paperback original\n9798318604126",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 365 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 10Tags in two capitalizations · 2BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Moonology™ (Revised Edition)\nmoonology™-revised-edition · added 2026-04-30",
+          "Paperback original\n9798318604133",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 15Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "My Journey of Light With Dr. David R. Hawkins\nmy-journey-of-light-with-dr-david-r-hawkins · added 2026-06-24",
+          "Paperback original\n9798318601408",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 6Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Nine Days of Eternity\nnine-days-of-eternity · added 2026-04-30",
+          "Paperback original\n9781401973476",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 343 pxCompare-at equals priceImages under 800 px · 6 of 6Search-phrase tags · 3Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Numerology Made Easy\nnumerology-made-easy · added 2026-04-30",
+          "Paperback original\n9781788172585",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 369 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 6Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "One Mind\none-mind · added 2026-04-30",
+          "Paperback\n9781401943776",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 333 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 7Tags in two capitalizations · 7BISAC codes as tags · 1"
+        ],
+        [
+          "One More Day\none-more-day · added 2026-04-30",
+          "Paperback original\n9781401977474",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 6Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Our Lady of Kibeho\nour-lady-of-kibeho · added 2026-04-30",
+          "Paperback\n9781401927431",
+          "$22.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 11Tags in two capitalizations · 6BISAC codes as tags · 3"
+        ],
+        [
+          "Own Your Self\nown-your-self · added 2026-04-30",
+          "Paperback\n9781401956851",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 12Tags in two capitalizations · 7BISAC codes as tags · 3"
+        ],
+        [
+          "Postdiabetic\npostdiabetic · added 2026-04-30",
+          "Paperback\n9781401980306",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 9Tags in two capitalizations · 7BISAC codes as tags · 3"
+        ],
+        [
+          "Power of Awakening, The\npower-of-awakening-the · added 2026-04-30",
+          "Paperback original\n9781401958862",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 362 pxCompare-at equals priceImages under 800 px · 12 of 12Search-phrase tags · 10Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Power vs. Force\npower-vs-force · added 2026-04-30",
+          "Paperback\n9781401945077",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 315 pxCompare-at equals priceImages under 800 px · 1 of 160 or more tags · 66Search-phrase tags · 18Tags in two capitalizations · 8BISAC codes as tags · 3"
+        ],
+        [
+          "Queer Devotion\nqueer-devotion · added 2026-04-30",
+          "Paperback original\n9781401978525",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 11Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Radiant Wildheart\nradiant-wildheart · added 2026-04-30",
+          "Paperback original\n9781401963460",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 7Tags in two capitalizations · 12BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Radical Tarot\nradical-tarot · added 2026-04-30",
+          "Paperback original\n9781401971472",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 11Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Read Life Accurately\nread-life-accurately · added 2026-04-30",
+          "Paperback original\n9781401980566",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 12Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Reclaim Your Nervous System\nreclaim-your-nervous-system · added 2026-04-30",
+          "Paperback original\n9781401979157",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 8Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Reclaiming Your Inner Child\nreclaiming-your-inner-child · added 2026-04-30",
+          "Paperback original\n9781401976224",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 11Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Regenerate\nregenerate · added 2026-04-30",
+          "Paperback original\n9781401965266",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 372 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 11Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Remember Your Roots\nremember-your-roots · added 2026-04-30",
+          "Paperback original\n9781401976057",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 11Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Return to Source\nreturn-to-source · added 2026-04-30",
+          "Paperback original\n9781401968281",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 11Tags in two capitalizations · 3BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Rewilding Childhood\nrewilding-childhood · added 2026-04-30",
+          "Paperback original\n9781401966676",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 13 of 13Search-phrase tags · 11Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Sacred Vibrations\nsacred-vibrations · added 2026-04-30",
+          "Paperback original\n9781401972707",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 11Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Sara, Book 1\nsara-book-1 · added 2026-04-30",
+          "Paperback\n9781401911584",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 13Tags in two capitalizations · 5BISAC codes as tags · 3"
+        ],
+        [
+          "Sara, Book 2\nsara-book-2 · added 2026-08-23",
+          "Paperback\n9781401911591",
+          "$19.99",
+          "13",
+          "No product imageZero shipping weightCompare-at equals priceSearch-phrase tags · 13Tags in two capitalizations · 6BISAC codes as tags · 3"
+        ],
+        [
+          "Sara, Book 3\nsara-book-3 · added 2026-04-30",
+          "Paperback\n9781401911607",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 6BISAC codes as tags · 3"
+        ],
+        [
+          "Sedona, Psychic Energy Vortexes\nsedona-psychic-energy-vortexes · added 2026-04-30",
+          "Paperback original\n9781401966829",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 12 of 12Search-phrase tags · 7Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Self Help\nself-help · added 2026-09-14",
+          "Paperback\n9798318604010",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 12Tags in two capitalizations · 10BISAC codes as tags · 3"
+        ],
+        [
+          "Seven Planes of Existence\nseven-planes-of-existence · added 2026-04-30",
+          "Paperback original\n9781401948559",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 322 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 8Tags in two capitalizations · 8BISAC codes as tags · 1“Trade Paperback Original” label"
+        ],
+        [
+          "Silent Power\nsilent-power · added 2026-04-30",
+          "Paperback\n9781401968885",
+          "$11.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 11Tags in two capitalizations · 8BISAC codes as tags · 1"
+        ],
+        [
+          "Songs of My Grandmother\nsongs-of-my-grandmother · added 2026-04-30",
+          "Paperback original\n9781401980238",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 392 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 10Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Soul Mastery\nsoul-mastery · added 2026-04-30",
+          "Paperback original\n9781401977818",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 362 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 11Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Soul's Brain\nsouls-brain · added 2026-04-30",
+          "Paperback original\n9781401954673",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 8Tags in two capitalizations · 9BISAC codes as tags · 2“Trade Paperback Original” label"
+        ],
+        [
+          "Sovereign\nsovereign · added 2026-04-30",
+          "Paperback\n9781401979898",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 9Tags in two capitalizations · 12BISAC codes as tags · 3"
+        ],
+        [
+          "Spirit Means Business\nspirit-means-business · added 2026-04-30",
+          "Paperback original\n9781401953362",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 8Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Spiritual Fertility\nspiritual-fertility · added 2026-04-30",
+          "Paperback original\n9781401956233",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 324 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 7Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Spontaneous Creativity\nspontaneous-creativity · added 2026-04-30",
+          "Paperback\n9781401954505",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 324 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 9 of 9Search-phrase tags · 13Tags in two capitalizations · 6BISAC codes as tags · 3"
+        ],
+        [
+          "Spontaneous Evolution\nspontaneous-evolution · added 2026-04-30",
+          "Paperback\n9781401926311",
+          "$29.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 13Tags in two capitalizations · 6BISAC codes as tags · 1"
+        ],
+        [
+          "Starcodes\nstarcodes · added 2026-04-30",
+          "Paperback original\n9781401975487",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 13Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Stoic Empathy\nstoic-empathy · added 2026-04-30",
+          "Paperback\n9781401998530",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9Search-phrase tags · 9Tags in two capitalizations · 6BISAC codes as tags · 3"
+        ],
+        [
+          "Super Attractor\nsuper-attractor · added 2026-04-30",
+          "Paperback / Card deck\n9781401957193 / 9781401957827",
+          "$16.99",
+          "13",
+          "Zero shipping weight · 2/2Cover under 500 px wide · 356 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 3 of 9Search-phrase tags · 6Tags in two capitalizations · 8BISAC codes as tags · 3"
+        ],
+        [
+          "Supercoach\nsupercoach · added 2026-04-30",
+          "Paperback original\n9781788171625",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 281 pxCompare-at equals priceImages under 800 px · 2 of 2Search-phrase tags · 12Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Surrender\nsurrender · added 2026-04-30",
+          "Paperback original\n9781401959852",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 10Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Tapping Solution to Create Lasting Change\ntapping-solution-to-create-lasting-change · added 2026-04-30",
+          "Paperback\n9781401953706",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 416 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 10 of 10Search-phrase tags · 11Tags in two capitalizations · 5BISAC codes as tags · 3"
+        ],
+        [
+          "Tarot for Manifestation\ntarot-for-manifestation · added 2026-04-30",
+          "Paperback original\n9781401995546",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 11Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Tarot Made Easy\ntarot-made-easy · added 2026-04-30",
+          "Paperback original\n9781788172592",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 10 of 10Search-phrase tags · 9Tags in two capitalizations · 7BISAC codes as tags · 1“Trade Paperback Original” label"
+        ],
+        [
+          "The 9 Points of Potential\nthe-9-points-of-potential · added 2026-04-30",
+          "Paperback original\n9781401995409",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 6Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Akashic Records Made Easy\nthe-akashic-records-made-easy · added 2026-04-30",
+          "Paperback original\n9781788172103",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 335 pxCompare-at equals priceImages under 800 px · 10 of 10Search-phrase tags · 4Tags in two capitalizations · 11BISAC codes as tags · 1“Trade Paperback Original” label"
+        ],
+        [
+          "The Amazing Power of Deliberate Intent\nthe-amazing-power-of-deliberate-intent · added 2026-04-30",
+          "Paperback\n9781401906962",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 10Tags in two capitalizations · 7BISAC codes as tags · 3"
+        ],
+        [
+          "The Archangel Guide to Ascension\nthe-archangel-guide-to-ascension · added 2026-04-30",
+          "Paperback\n9781781804711",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 313 pxCompare-at equals priceImages under 800 px · 1 of 160 or more tags · 64Search-phrase tags · 20Tags in two capitalizations · 6BISAC codes as tags · 3"
+        ],
+        [
+          "The Art of Manifesting\nthe-art-of-manifesting · added 2026-04-30",
+          "Paperback original\n9781401997854",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 428 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 8Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Artist’s Side Hustle\nthe-artist-s-side-hustle · added 2026-04-30",
+          "Paperback original\n9781401997311",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 372 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 13Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Aura Color Wheel\nthe-aura-color-wheel · added 2026-04-30",
+          "Paperback original\n9781401995430",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 8Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Biology of Belief 10th Anniversary Edition\nthe-biology-of-belief-10th-anniversary-edition · added 2026-04-30",
+          "Paperback\n9781401952471",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 341 pxCompare-at equals priceImages under 800 px · 1 of 160 or more tags · 75Search-phrase tags · 10Tags in two capitalizations · 9BISAC codes as tags · 3"
+        ],
+        [
+          "The Book of Light\nthe-book-of-light · added 2026-04-30",
+          "Paperback original\n9781788173926",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 394 pxCompare-at equals priceImages under 800 px · 1 of 14Search-phrase tags · 8Tags in two capitalizations · 2BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Book of Runic Astrology\nthe-book-of-runic-astrology · added 2026-04-30",
+          "Paperback original\n9781401973049",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 361 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 7Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Boy Who Met Jesus\nthe-boy-who-met-jesus · added 2026-04-30",
+          "Paperback original\n9781401935825",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 322 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 13Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Brain Fog Fix\nthe-brain-fog-fix · added 2026-04-30",
+          "Paperback\n9781401946487",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 332 pxCompare-at equals priceImages under 800 px · 1 of 160 or more tags · 60Search-phrase tags · 16Tags in two capitalizations · 7BISAC codes as tags · 3"
+        ],
+        [
+          "The Breathable Body\nthe-breathable-body · added 2026-04-30",
+          "Paperback original\n9781401968915",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 8Tags in two capitalizations · 12BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Complete Book of Numerology\nthe-complete-book-of-numerology · added 2026-04-30",
+          "Paperback\n9781401907273",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 12BISAC codes as tags · 1"
+        ],
+        [
+          "The Connection Code\nthe-connection-code · added 2026-04-30",
+          "Paperback original\n9781401997908",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 8Tags in two capitalizations · 13BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Course in Miracles Experiment\nthe-course-in-miracles-experiment · added 2026-04-30",
+          "Paperback original\n9781401957506",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 8Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Disappearance of the Universe\nthe-disappearance-of-the-universe · added 2026-04-30",
+          "Paperback\n9781401905668",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 100 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 15Tags in two capitalizations · 6BISAC codes as tags · 3"
+        ],
+        [
+          "The DNA Way\nthe-dna-way · added 2026-04-30",
+          "Paperback original\n9781401971267",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 8Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Dream, the Journey, Eternity, and God\nthe-dream-the-journey-eternity-and-god · added 2026-04-30",
+          "Paperback original\n9781401975173",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 362 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 11Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Ego Is Not the Real You\nthe-ego-is-not-the-real-you · added 2026-04-30",
+          "Paperback original\n9781401964238",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Evolution of Consciousness\nthe-evolution-of-consciousness · added 2026-04-30",
+          "Paperback original\n9781401977085",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 10Search-phrase tags · 12Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Final Doorway to Enlightenment\nthe-final-doorway-to-enlightenment · added 2026-04-30",
+          "Paperback original\n9781401977160",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 10Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Flow Habit\nthe-flow-habit · added 2026-04-30",
+          "Paperback original\n9781401997359",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 316 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 8Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Food Matters Cookbook\nthe-food-matters-cookbook · added 2026-04-30",
+          "Paperback\n9781401974749",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 428 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 11Search-phrase tags · 5Tags in two capitalizations · 3BISAC codes as tags · 3"
+        ],
+        [
+          "The Future Ancestor\nthe-future-ancestor · added 2026-04-30",
+          "Paperback original\n9781401968274",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 1 of 8Search-phrase tags · 13Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Gift of Gratitude\nthe-gift-of-gratitude · added 2026-04-30",
+          "Journal\n9781401966874",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 13 of 13Search-phrase tags · 9Tags in two capitalizations · 4BISAC codes as tags · 3"
+        ],
+        [
+          "The Gift of Low Self-Esteem\nthe-gift-of-low-self-esteem · added 2026-04-30",
+          "Paperback original\n9781401977511",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 7Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Good Goodbye\nthe-good-goodbye · added 2026-04-30",
+          "Paperback original\n9781401980153",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 8Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Greatness Mindset\nthe-greatness-mindset · added 2026-04-30",
+          "Paperback\n9781401978556",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 11Search-phrase tags · 17Tags in two capitalizations · 3BISAC codes as tags · 3"
+        ],
+        [
+          "The Guardian Gateway\nthe-guardian-gateway · added 2026-04-30",
+          "Paperback original\n9781401961282",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 7Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Healing Wisdom of Dreams\nthe-healing-wisdom-of-dreams · added 2026-04-30",
+          "Paperback original\n9781401969134",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 8 of 8Search-phrase tags · 12Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Heart of the Shaman\nthe-heart-of-the-shaman · added 2026-04-30",
+          "Paperback\n9781401953003",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 324 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 10 of 10Search-phrase tags · 12Tags in two capitalizations · 9BISAC codes as tags · 1"
+        ],
+        [
+          "The Highest Level of Enlightenment\nthe-highest-level-of-enlightenment · added 2026-04-30",
+          "Paperback original\n9781401964993",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 300 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 12Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Honeymoon Effect\nthe-honeymoon-effect · added 2026-04-30",
+          "Paperback\n9781401923891",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 286 pxCompare-at equals priceImages under 800 px · 2 of 260 or more tags · 84Search-phrase tags · 13Tags in two capitalizations · 17BISAC codes as tags · 3"
+        ],
+        [
+          "The Hope Dealer\nthe-hope-dealer · added 2026-04-30",
+          "Paperback original\n9781401976538",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 366 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 9Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Illusion of Money\nthe-illusion-of-money · added 2026-04-30",
+          "Paperback\n9781401957469",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 11 of 11Search-phrase tags · 8Tags in two capitalizations · 7BISAC codes as tags · 3"
+        ],
+        [
+          "The Inflammation Code\nthe-inflammation-code · added 2026-04-30",
+          "Paperback original\n9781401996994",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 11Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Joy of Actually Giving a F*ck\nthe-joy-of-actually-giving-a-f-ck · added 2026-04-30",
+          "Paperback original\n9781401976682",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 346 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 12Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Key to Positivity\nthe-key-to-positivity · added 2026-04-30",
+          "Paperback original\n9781401975982",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 10Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Law of Positivism\nthe-law-of-positivism · added 2026-04-30",
+          "Paperback original\n9781401962777",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 392 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 8Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Love Thief\nthe-love-thief · added 2026-04-30",
+          "Paperback original\n9781401999063",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 7Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Man Who Mapped Consciousness\nthe-man-who-mapped-consciousness · added 2026-04-30",
+          "Paperback original\n9781401979577",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 6Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Mercury Retrograde Book\nthe-mercury-retrograde-book · added 2026-04-30",
+          "Paperback original\n9781401967741",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 402 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 12Tags in two capitalizations · 1BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Missing Piece\nthe-missing-piece · added 2026-04-30",
+          "Paperback original\n9781401993900",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 12Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Path to Spiritual Advancement\nthe-path-to-spiritual-advancement · added 2026-04-30",
+          "Paperback original\n9781401977061",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 10Search-phrase tags · 12Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Power of No\nthe-power-of-no · added 2026-04-30",
+          "Paperback\n9781401945879",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 322 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 13Tags in two capitalizations · 4BISAC codes as tags · 3"
+        ],
+        [
+          "The Power We Hold\nthe-power-we-hold · added 2026-04-30",
+          "Paperback original\n9781401997151",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 365 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 1Tags in two capitalizations · 12BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Prophetess\nthe-prophetess · added 2026-04-30",
+          "Paperback original\n9781401977566",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceImages under 800 px · 9 of 9Search-phrase tags · 13Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Psychic Psychologist\nthe-psychic-psychologist · added 2026-04-30",
+          "Paperback original\n9781401968311",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 370 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 4Tags in two capitalizations · 7BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Queen's Path\nthe-queens-path · added 2026-04-30",
+          "Paperback original\n9781401993528",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 12Tags in two capitalizations · 4BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Richest Kids In America\nthe-richest-kids-in-america · added 2026-07-30",
+          "Paperback\n9780981970905",
+          "$14.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 140 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 11Tags in two capitalizations · 3BISAC codes as tags · 1"
+        ],
+        [
+          "The Sacred Andean Codes\nthe-sacred-andean-codes · added 2026-04-30",
+          "Paperback original\n9781401972882",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 11Search-phrase tags · 11Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Sacred Forest Oracle\nthe-sacred-forest-oracle · added 2026-04-30",
+          "Card deck\n9781401960452",
+          "$22.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 385 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 11 of 11Search-phrase tags · 3Tags in two capitalizations · 11BISAC codes as tags · 3"
+        ],
+        [
+          "The Science Behind Tapping\nthe-science-behind-tapping · added 2026-04-30",
+          "Paperback\n9781401955748",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 13Tags in two capitalizations · 7BISAC codes as tags · 3"
+        ],
+        [
+          "The Soul Midwives' Handbook (Revised Edition)\nthe-soul-midwives-handbook-revised-edition · added 2026-04-30",
+          "Paperback original\n9781401997793",
+          "$24.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 365 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 10Tags in two capitalizations · 3BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Spirit Animal Oracle\nthe-spirit-animal-oracle · added 2026-04-30",
+          "Card deck\n9781401952792",
+          "$34.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 360 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 8 of 8Search-phrase tags · 1Tags in two capitalizations · 5BISAC codes as tags · 3"
+        ],
+        [
+          "The Sugar Brain Fix\nthe-sugar-brain-fix · added 2026-04-30",
+          "Paperback\n9781401956684",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 372 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 9 of 9Search-phrase tags · 17Tags in two capitalizations · 5BISAC codes as tags · 3"
+        ],
+        [
+          "The Violet Flame\nthe-violet-flame · added 2026-04-30",
+          "Paperback original\n9781401998554",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 3Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Wisdom Codes\nthe-wisdom-codes · added 2026-04-30",
+          "Paperback\n9781401965235",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 393 pxCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 1Search-phrase tags · 8Tags in two capitalizations · 10BISAC codes as tags · 3"
+        ],
+        [
+          "The Wisdom of Dr. David R. Hawkins\nthe-wisdom-of-dr-david-r-hawkins · added 2026-04-30",
+          "Paperback original\n9781401964979",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 12Tags in two capitalizations · 9BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "The Wisdom of Your Face\nthe-wisdom-of-your-face · added 2026-04-30",
+          "Paperback original\n9781401917555",
+          "$22.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 11Tags in two capitalizations · 5BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "ThetaHealing®\nthetahealing® · added 2026-04-30",
+          "Paperback original\n9781788173742",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 10Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "ThetaHealing®: Digging for Beliefs\nthetahealing®-digging-for-beliefs · added 2026-04-30",
+          "Paperback original\n9781788173469",
+          "$19.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 364 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 6Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Think Like a Boss\nthink-like-a-boss · added 2026-04-30",
+          "Paperback original\n9781401979478",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 344 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 5Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Thrive Solo\nthrive-solo · added 2026-04-30",
+          "Paperback original\n9781401999117",
+          "$17.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 356 pxCompare-at equals priceImages under 800 px · 1 of 9Search-phrase tags · 9Tags in two capitalizations · 6BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Transforming the Mother Wound\ntransforming-the-mother-wound · added 2026-04-30",
+          "Paperback original\n9781401976880",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 359 pxCompare-at equals priceImages under 800 px · 11 of 11Search-phrase tags · 12Tags in two capitalizations · 8BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Trauma\ntrauma · added 2026-04-30",
+          "Paperback original\n9781401965181",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 350 pxCompare-at equals priceImages under 800 px · 1 of 1Search-phrase tags · 9Tags in two capitalizations · 10BISAC codes as tags · 3“Trade Paperback Original” label"
+        ],
+        [
+          "Unanxious\nunanxious · added 2026-04-30",
+          "Paperback\n9781401998523",
+          "$18.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 319 pxMarketplace image fileCompare-at equals priceCover file not named for the ISBNImages under 800 px · 1 of 9BISAC codes as tags · 3"
+        ],
+        [
+          "Unblocked\nunblocked · added 2026-04-30",
+          "Paperback original\n9781401965457",
+          "$16.99",
+          "13",
+          "Zero shipping weightCover under 500 px wide · 367 pxCompare-at equals priceImages under 800 px · 10 of 10Search-phrase tags · 9Tags in two capitalizations · 11BISAC codes as tags · 3“Trade Paperback Original” label"
+        ]
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "label",
+      "cls": "small-btn",
+      "text": "CHECK YOUR OWN PRODUCTS.JSON"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Files stay in this browser; nothing is uploaded."
+    },
+    {
+      "t": "p",
+      "text": "Checks: duplicate ISBNs and titles, ISBNs inside option values, zero weights, compare-at equal to price, legacy titles, missing images or descriptions, small covers, marketplace image files, tag counts and case duplicates, BISAC codes as tags, and the \"Trade Paperback Original\" label. Alt text isn't in products.json, so the alt-text sample comes from product .js files instead."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kick",
+      "text": "TOOL · PRICE CHECK"
+    },
+    {
+      "t": "h2",
+      "text": "Two storefronts, one catalog."
+    },
+    {
+      "t": "p",
+      "text": "I searched hayhouse.com for 15 ISBNs from the Shopify store: a random sample plus a few bestsellers. 14 were found, and all 14 cost less on hayhouse.com. Each search returned exactly one matching title."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Title"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "$0"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "$10"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "$20"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "$30"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Gap"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "F**K It Therapy"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback · 9781401940799"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−60%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Divine Masters, Ancient Wisdom"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Hardcover · 9781788175159"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−50%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Worthy"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback · 9781401950156"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−50%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Heal Your Body"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback · 9780937611357"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Super Attractor"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback · 9781401957193"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "The Spirit of Harriet Tubman"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback · 9781401967482"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Secrets of Space Clearing"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback original · 9781401961534"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "The Universe Has Your Back"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback · 9781401995980"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "You Can Heal Your Life"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback · 9780937611012"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Pure Human"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback · 9781401949389"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "The Greatness Mindset"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback · 9781401978556"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Change Your Questions, Change Your Future"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Paperback · 9781401995744"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "The Mary Magdalene Oracle"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Card deck · 9781401963415"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "text",
+      "tag": "b",
+      "cls": "",
+      "text": "Have a Good Day on Purpose"
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "Card deck · 9781401998134"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "db-v",
+      "text": "−20%"
+    },
+    {
+      "t": "p",
+      "text": "Sorted by the size of the gap. Hover or focus a row for the numbers."
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "Cheaper on hayhouse.com"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "v",
+      "text": "14 of 14"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d",
+      "text": "ISBNs found on both sites"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "Typical gap"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "v",
+      "text": "20%"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d",
+      "text": "median of the 14"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "Biggest gap"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "v",
+      "text": "$11.99"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d",
+      "text": "F**K It Therapy, 60%"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "Average gap"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "v",
+      "text": "$5.13"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d",
+      "text": "per title"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "TITLE",
+          "SHOPIFY",
+          "HAYHOUSE.COM",
+          "GAP"
+        ],
+        [
+          "F**K It Therapy\nPaperback · 9781401940799",
+          "$19.99",
+          "$8.00\nout of stock",
+          "$11.99\n60% less"
+        ],
+        [
+          "Divine Masters, Ancient Wisdom\nHardcover · 9781788175159",
+          "$18.99",
+          "$9.50",
+          "$9.49\n50% less"
+        ],
+        [
+          "Worthy\nPaperback · 9781401950156",
+          "$18.99",
+          "$9.50",
+          "$9.49\n50% less"
+        ],
+        [
+          "Heal Your Body\nPaperback · 9780937611357",
+          "$14.99",
+          "$11.99",
+          "$3.00\n20% less"
+        ],
+        [
+          "Super Attractor\nPaperback · 9781401957193",
+          "$16.99",
+          "$13.59",
+          "$3.40\n20% less"
+        ],
+        [
+          "The Spirit of Harriet Tubman\nPaperback · 9781401967482",
+          "$16.99",
+          "$13.59",
+          "$3.40\n20% less"
+        ],
+        [
+          "Secrets of Space Clearing\nPaperback original · 9781401961534",
+          "$17.99",
+          "$14.39",
+          "$3.60\n20% less"
+        ],
+        [
+          "The Universe Has Your Back\nPaperback · 9781401995980",
+          "$17.99",
+          "$14.39",
+          "$3.60\n20% less"
+        ],
+        [
+          "You Can Heal Your Life\nPaperback · 9780937611012",
+          "$17.99",
+          "$14.39",
+          "$3.60\n20% less"
+        ],
+        [
+          "Pure Human\nPaperback · 9781401949389",
+          "$18.99",
+          "$15.19",
+          "$3.80\n20% less"
+        ],
+        [
+          "The Greatness Mindset\nPaperback · 9781401978556",
+          "$18.99",
+          "$15.19",
+          "$3.80\n20% less"
+        ],
+        [
+          "Change Your Questions, Change Your Future\nPaperback · 9781401995744",
+          "$19.99",
+          "$15.99",
+          "$4.00\n20% less"
+        ],
+        [
+          "The Mary Magdalene Oracle\nCard deck · 9781401963415",
+          "$19.99",
+          "$15.99",
+          "$4.00\n20% less"
+        ],
+        [
+          "Have a Good Day on Purpose\nCard deck · 9781401998134",
+          "$22.99",
+          "$18.39",
+          "$4.60\n20% less"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "text": "hayhouse.com shows a list price and a lower \"HayHouse.com\" price; the comparison uses the lower price. F**K It Therapy also has a different list price ($15.99 vs $19.99) and shows as out of stock on hayhouse.com. El Poder Esta Dentro De Ti wasn't found on hayhouse.com."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kick",
+      "text": "WORKED EXAMPLES · THE REST OF THE POSTING"
+    },
+    {
+      "t": "h2",
+      "text": "Seven lines from the job, worked through."
+    },
+    {
+      "t": "p",
+      "text": "Each tab takes one responsibility from the posting and shows how I'd handle it at Hay House. Store facts come from the public storefront on September 16. Traffic and sales figures are samples, and marked that way, until they come from Shopify and GA4."
+    },
+    {
+      "t": "p",
+      "text": "FROM THE POSTING\nOwn e-commerce reporting through Shopify, GA4, and related tools … Monitor emerging channels, including social commerce, AI-referred traffic, and agentic commerce."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "sample-tag",
+      "text": "SAMPLE NUMBERS · THE STRUCTURE IS WHAT I'D SEND"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "muted",
+      "text": "Week of Sept 7–13 vs the week before"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "Sessions"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "v",
+      "text": "41,380"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d up",
+      "text": "+2.9% vs last week"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "Conversion rate"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "v",
+      "text": "1.55%"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d down",
+      "text": "−0.06 pts"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "Orders"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "v",
+      "text": "640"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d down",
+      "text": "−1.2%"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "l",
+      "text": "Revenue"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "v",
+      "text": "$17,940"
+    },
+    {
+      "t": "text",
+      "tag": "div",
+      "cls": "d down",
+      "text": "−0.9% · AOV $28.03"
+    },
+    {
+      "t": "h3",
+      "text": "SESSIONS AND SALES BY SOURCE (GA4)"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "SOURCE",
+          "SESSIONS",
+          "CONV.",
+          "REVENUE",
+          "SESSIONS WOW"
+        ],
+        [
+          "Organic search",
+          "14,210",
+          "1.3%",
+          "$5,120",
+          "−6.0%"
+        ],
+        [
+          "Direct",
+          "8,940",
+          "1.9%",
+          "$4,760",
+          "+2.1%"
+        ],
+        [
+          "Email",
+          "5,120",
+          "3.1%",
+          "$4,410",
+          "+11.4%"
+        ],
+        [
+          "Paid social",
+          "6,870",
+          "0.7%",
+          "$1,380",
+          "+9.8%"
+        ],
+        [
+          "Organic social",
+          "3,160",
+          "0.6%",
+          "$520",
+          "+4.0%"
+        ],
+        [
+          "Referral",
+          "1,640",
+          "1.2%",
+          "$560",
+          "−3.5%"
+        ],
+        [
+          "AI assistants",
+          "480",
+          "2.3%",
+          "$310",
+          "+8.1%"
+        ],
+        [
+          "Paid search",
+          "960",
+          "2.9%",
+          "$880",
+          "+1.2%"
+        ],
+        [
+          "Total",
+          "41,380",
+          "1.55%",
+          "$17,940",
+          "+2.9%"
+        ]
+      ]
+    },
+    {
+      "t": "h3",
+      "text": "ORDERS BY SALES CHANNEL (SHOPIFY)"
+    },
+    {
+      "t": "table",
+      "rows": [
+        [
+          "SALES CHANNEL",
+          "ORDERS",
+          "REVENUE",
+          "ORDERS WOW"
+        ],
+        [
+          "Online Store",
+          "596",
+          "$16,690",
+          "−2.4%"
+        ],
+        [
+          "Shop app",
+          "31",
+          "$870",
+          "+10.7%"
+        ],
+        [
+          "Facebook & Instagram",
+          "9",
+          "$260",
+          "+12.5%"
+        ],
+        [
+          "Google & YouTube",
+          "4",
+          "$120",
+          "±0.0%"
+        ],
+        [
+          "AI agent checkouts (UCP)",
+          "0",
+          "$0",
+          "watching"
+        ],
+        [
+          "Total",
+          "640",
+          "$17,940",
+          "−1.2%"
+        ]
+      ]
+    },
+    {
+      "t": "h3",
+      "text": "AI-ASSISTANT SESSIONS, LAST 8 WEEKS"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tot",
+      "text": "294"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tot",
+      "text": "312"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tot",
+      "text": "334"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tot",
+      "text": "350"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tot",
+      "text": "374"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tot",
+      "text": "402"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tot",
+      "text": "444"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "tot",
+      "text": "480"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Jul 20"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Jul 27"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Aug 3"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Aug 10"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Aug 17"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Aug 24"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Aug 31"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "Sep 7"
+    },
+    {
+      "t": "h3",
+      "text": "GA4 SETUP FOR AI TRAFFIC (REAL)"
+    },
+    {
+      "t": "ol",
+      "items": [
+        "Admin → Data display → Channel groups → copy the default group.",
+        "Add a channel \"AI assistants\": Source matches regex (below).",
+        "Drag it above Referral, save, and use the new group in reports.",
+        "Add a second condition for AI sources with medium \"(not set)\", because some assistants pass utm_source without utm_medium."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "pre",
+      "cls": "codebox",
+      "text": "^(.*\\.)?(chatgpt\\.com|chat\\.openai\\.com|openai\\.com|perplexity\\.ai|copilot\\.microsoft\\.com|gemini\\.google\\.com|claude\\.ai|meta\\.ai|deepseek\\.com|you\\.com|poe\\.com|grok\\.com)$"
+    },
+    {
+      "t": "h3",
+      "text": "THE NOTE THAT GOES WITH IT"
+    },
+    {
+      "t": "ol",
+      "items": [
+        "i\nOrganic search sessions fell 6%, mostly on You Can Heal Your Life, where two listings compete for the same title. Name the editions and merge the duplicates (finding 02).\neComm · Tue",
+        "ii\nAI-assistant sessions rose 8%, the seventh weekly gain in a row, and convert at 2.3%. Ship HH-202 so assistants can read the ISBN and author on every page.\nDev · this sprint",
+        "iii\nEmail converts best, at 3.1%. Next send: the book-and-deck sets to Hicks and Louise Hay buyers (tab 07).\nMarketing · Thu",
+        "iv\nPaid social converts at 0.7% and lands on pages priced above hayhouse.com. Decide the price of record before the next campaign (finding 01).\nDirector · Fri"
+      ]
+    },
+    {
+      "t": "p",
+      "text": "Every line ends with an owner. Orders from AI agents through UCP would show up as their own sales channel in Shopify, which is why I'd track them apart from AI-referred web sessions."
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kick",
+      "text": "THE FIRST 90 DAYS"
+    },
+    {
+      "t": "h2",
+      "text": "What I'd do, in order."
+    },
+    {
+      "t": "p",
+      "text": "The findings set the order: first the data that every channel reads, then the fixes that need Development, then growth work that depends on both. Each month ends with a short readout to the Director of E-Commerce."
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "DAYS"
+    },
+    {
+      "t": "h3",
+      "text": "LEARN THE STORES, STOP THE LEAKS"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Get access, list every storefront, app, feed and integration, and who owns each one.",
+        "Agree the price of record with hayhouse.com, merge the duplicate listings, clean the Format filter and add weights.",
+        "Start the Monday health check, the weekly report and the AI-assistant channel in GA4.",
+        "Write the new-title and promotion SOPs with the people who'll use them."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "DAYS"
+    },
+    {
+      "t": "h3",
+      "text": "FIX THE DATA MODEL WITH DEVELOPMENT"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "HH-201 (Author entries and filter) and HH-202 (H1s and book structured data) through QA and launch.",
+        "BISAC codes and subjects into metafields, a controlled tag list, tags off the product page.",
+        "Alt text in ChatGPT Enterprise, starting with covers of the top 200 sellers.",
+        "Script and app review with Development and Marketing: the pop-up, tag manager and pixels behind a mobile Lighthouse score of 36."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "small",
+      "cls": "",
+      "text": "DAYS"
+    },
+    {
+      "t": "h3",
+      "text": "GROW WHAT'S WORKING"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Book-and-deck sets live and measured, then the first product page tests.",
+        "Navigation beyond three menu items, collection descriptions and search synonyms in Search & Discovery.",
+        "Monthly AI-agent check and the redirect map, ready for whatever comes next for hayhouse.com.",
+        "Quarter review: conversion, feed approvals, AI-referred sessions and catalog-check trend."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "kick",
+      "text": "WHO FILED THIS"
+    },
+    {
+      "t": "h2",
+      "text": "Mousa Batarseh."
+    },
+    {
+      "t": "p",
+      "text": "I've spent seven years running e-commerce storefronts end to end, including more than three years administering Shopify stores. I look for problems before anyone reports them, and I'd like to do that for Hay House."
+    },
+    {
+      "t": "ul",
+      "items": [
+        "SHOPIFY\nBuilt and ran the Universal Wholesale and United Textile stores side by side (2019–2023): catalogs of 14,000+ SKUs, collections, discounts, seasonal promotion calendars and product data.",
+        "MIGRATIONS\nMoved stores between platforms with the URL structure and redirects planned ahead.",
+        "NOW\nWebmaster at Wild Bill's Tobacco (2023–now): the wholesale B2B e-commerce site (catalog, inventory, pricing, descriptions, imagery) and a portfolio of retail sites, with campaign pages built alongside marketing.",
+        "REPORTING\nGA4, Search Console and PageSpeed data turned into weekly actions; A/B and conversion tests.",
+        "AI\nI work hands-on with ChatGPT and Claude for drafting, data checks and documentation, and I review everything before it ships.",
+        "BASICS\nB.S., Accounting Information Systems. Bilingual in English and Arabic. Based in Warren, Michigan."
+      ]
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PDF · 1 page"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "PDF · 1 page"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "hireme@mousabatarseh.com"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "(248) 810-1816"
+    },
+    {
+      "t": "text",
+      "tag": "span",
+      "cls": "",
+      "text": "/in/mousabatarseh"
+    }
+  ],
+  "links": [
+    {
+      "text": "READ THE TWELVE FINDINGS",
+      "href": "https://mousabatarseh.com/hayhouse-review/#findings"
+    },
+    {
+      "text": "RUN THE CATALOG CHECK",
+      "href": "https://mousabatarseh.com/hayhouse-review/#catalog"
+    },
+    {
+      "text": "SEE THE WORKED EXAMPLES",
+      "href": "https://mousabatarseh.com/hayhouse-review/#examples"
+    },
+    {
+      "text": "Embrace Your Power",
+      "href": "https://shop.hayhouse.com/products/embrace-your-power-1"
+    },
+    {
+      "text": "Embrace Your Power",
+      "href": "https://shop.hayhouse.com/products/embrace-your-power"
+    },
+    {
+      "text": "SPANISH-YOU CAN HEAL YOUR LIFE/TRD",
+      "href": "https://shop.hayhouse.com/products/spanish-you-can-heal-your-life-trd"
+    },
+    {
+      "text": "El Poder Esta Dentro De Ti",
+      "href": "https://shop.hayhouse.com/products/el-poder-esta-dentro-de-ti"
+    },
+    {
+      "text": "The Herbal Astrology Pocket Oracle",
+      "href": "https://shop.hayhouse.com/products/the-herbal-astrology-oracle"
+    },
+    {
+      "text": "Make Money Easy",
+      "href": "https://shop.hayhouse.com/products/make-money-easy"
+    },
+    {
+      "text": "The Universe Has Your Back",
+      "href": "https://shop.hayhouse.com/products/the-universe-has-your-back"
+    },
+    {
+      "text": "What Do You Need?",
+      "href": "https://shop.hayhouse.com/products/what-do-you-need"
+    },
+    {
+      "text": "Worthy",
+      "href": "https://shop.hayhouse.com/products/worthy"
+    },
+    {
+      "text": "You Can Heal Your Life",
+      "href": "https://shop.hayhouse.com/products/you-can-heal-your-life"
+    },
+    {
+      "text": "Animal Spirit Guides",
+      "href": "https://shop.hayhouse.com/products/animal-spirit-guides"
+    },
+    {
+      "text": "Discovery of the Presence of God",
+      "href": "https://shop.hayhouse.com/products/discovery-of-the-presence-of-god"
+    },
+    {
+      "text": "Earth Magic",
+      "href": "https://shop.hayhouse.com/products/earth-magic"
+    },
+    {
+      "text": "Energy Rules",
+      "href": "https://shop.hayhouse.com/products/energy-rules"
+    },
+    {
+      "text": "Fairy Whispering",
+      "href": "https://shop.hayhouse.com/products/fairy-whispering"
+    },
+    {
+      "text": "Know Justice Know Peace",
+      "href": "https://shop.hayhouse.com/products/know-justice-know-peace"
+    },
+    {
+      "text": "Radical Hope",
+      "href": "https://shop.hayhouse.com/products/radical-hope"
+    },
+    {
+      "text": "Runes Made Easy",
+      "href": "https://shop.hayhouse.com/products/runes-made-easy"
+    },
+    {
+      "text": "The Alkaline Reset Cleanse",
+      "href": "https://shop.hayhouse.com/products/the-alkaline-reset-cleanse"
+    },
+    {
+      "text": "The Eye of the I",
+      "href": "https://shop.hayhouse.com/products/the-eye-of-the-i"
+    },
+    {
+      "text": "The Journey Home",
+      "href": "https://shop.hayhouse.com/products/the-journey-home"
+    },
+    {
+      "text": "The Moses Code",
+      "href": "https://shop.hayhouse.com/products/the-moses-code"
+    },
+    {
+      "text": "The Psychic Tarot Pocket Oracle Deck",
+      "href": "https://shop.hayhouse.com/products/the-psychic-tarot-oracle-deck"
+    },
+    {
+      "text": "The Tapping Solution for Weight Loss & Body Confidence",
+      "href": "https://shop.hayhouse.com/products/the-tapping-solution-for-weight-loss-body-confidence"
+    },
+    {
+      "text": "The Universe Has Your Back",
+      "href": "https://shop.hayhouse.com/products/the-universe-has-your-back-1"
+    },
+    {
+      "text": "The Wild Wool Shepherdess",
+      "href": "https://shop.hayhouse.com/products/the-wild-wool-shepherdess"
+    },
+    {
+      "text": "ThetaHealing®: You and the Creator",
+      "href": "https://shop.hayhouse.com/products/thetahealing%C2%AE-you-and-the-creator"
+    },
+    {
+      "text": "Thriving Beyond Fifty (Expanded Edition)",
+      "href": "https://shop.hayhouse.com/products/thriving-beyond-fifty-expanded-edition"
+    },
+    {
+      "text": "Truth vs. Falsehood",
+      "href": "https://shop.hayhouse.com/products/truth-vs-falsehood"
+    },
+    {
+      "text": "What Happy Teachers Do",
+      "href": "https://shop.hayhouse.com/products/what-happy-teachers-do"
+    },
+    {
+      "text": "Why Woo-Woo Works",
+      "href": "https://shop.hayhouse.com/products/why-woo-woo-works"
+    },
+    {
+      "text": "You Can Heal Your Life",
+      "href": "https://shop.hayhouse.com/products/you-can-heal-your-life-1"
+    },
+    {
+      "text": "10 Secrets for Success and Inner Peace",
+      "href": "https://shop.hayhouse.com/products/10-secrets-for-success-and-inner-peace"
+    },
+    {
+      "text": "21 Days to Awaken the Writer Within",
+      "href": "https://shop.hayhouse.com/products/21-days-to-awaken-the-writer-within"
+    },
+    {
+      "text": "21 Days to Decode Your Dreams",
+      "href": "https://shop.hayhouse.com/products/21-days-to-decode-your-dreams"
+    },
+    {
+      "text": "21 Days to Explore Your Past Lives",
+      "href": "https://shop.hayhouse.com/products/21-days-to-explore-your-past-lives"
+    },
+    {
+      "text": "21 Days to Find Success and Inner Peace",
+      "href": "https://shop.hayhouse.com/products/21-days-to-find-success-and-inner-peace"
+    },
+    {
+      "text": "21 Days to Work with Crystals",
+      "href": "https://shop.hayhouse.com/products/21-days-to-work-with-crystals"
+    },
+    {
+      "text": "365 Days of Divine Feminine Wisdom",
+      "href": "https://shop.hayhouse.com/products/365-days-of-divine-feminine-wisdom"
+    },
+    {
+      "text": "7 Rules of Self-Reliance",
+      "href": "https://shop.hayhouse.com/products/7-rules-of-self-reliance"
+    },
+    {
+      "text": "7-Figure Educator",
+      "href": "https://shop.hayhouse.com/products/7-figure-educator"
+    },
+    {
+      "text": "A Blessing in Disguise",
+      "href": "https://shop.hayhouse.com/products/a-blessing-in-disguise"
+    },
+    {
+      "text": "A Deep Breath of Life",
+      "href": "https://shop.hayhouse.com/products/a-deep-breath-of-life"
+    },
+    {
+      "text": "A Little Peace of Mind",
+      "href": "https://shop.hayhouse.com/products/a-little-peace-of-mind"
+    },
+    {
+      "text": "A Year of Mystical Thinking",
+      "href": "https://shop.hayhouse.com/products/a-year-of-mystical-thinking"
+    },
+    {
+      "text": "Age Like a Girl",
+      "href": "https://shop.hayhouse.com/products/age-like-a-girl"
+    },
+    {
+      "text": "Alchemy of Herbs",
+      "href": "https://shop.hayhouse.com/products/alchemy-of-herbs"
+    },
+    {
+      "text": "Ancestors Said",
+      "href": "https://shop.hayhouse.com/products/ancestors-said"
+    },
+    {
+      "text": "Ancestral Healing Made Easy",
+      "href": "https://shop.hayhouse.com/products/ancestral-healing-made-easy"
+    },
+    {
+      "text": "Angel Wisdom Tarot",
+      "href": "https://shop.hayhouse.com/products/angel-wisdom-tarot"
+    },
+    {
+      "text": "Angels Are with You Now",
+      "href": "https://shop.hayhouse.com/products/angels-are-with-you-now"
+    },
+    {
+      "text": "Animal Communication Made Easy",
+      "href": "https://shop.hayhouse.com/products/animal-communication-made-easy"
+    },
+    {
+      "text": "Answers from the Ancestral Realms",
+      "href": "https://shop.hayhouse.com/products/answers-from-the-ancestral-realms"
+    },
+    {
+      "text": "Anxiety-Free with Food",
+      "href": "https://shop.hayhouse.com/products/anxiety-free-with-food"
+    },
+    {
+      "text": "Aphrodisiac",
+      "href": "https://shop.hayhouse.com/products/aphrodisiac"
+    },
+    {
+      "text": "Archetypes",
+      "href": "https://shop.hayhouse.com/products/archetypes"
+    },
+    {
+      "text": "Astrology Made Easy",
+      "href": "https://shop.hayhouse.com/products/astrology-made-easy"
+    },
+    {
+      "text": "Awakening Your Inner Shaman (Updated Edition)",
+      "href": "https://shop.hayhouse.com/products/awakening-your-inner-shaman-updated-edition"
+    },
+    {
+      "text": "Believe You're Made for More",
+      "href": "https://shop.hayhouse.com/products/believe-youre-made-for-more"
+    },
+    {
+      "text": "Beyond Ayahuasca",
+      "href": "https://shop.hayhouse.com/products/beyond-ayahuasca"
+    },
+    {
+      "text": "Beyond Longevity",
+      "href": "https://shop.hayhouse.com/products/beyond-longevity"
+    },
+    {
+      "text": "Black Moon Lilith Rising",
+      "href": "https://shop.hayhouse.com/products/black-moon-lilith-rising"
+    },
+    {
+      "text": "Breaking Bias",
+      "href": "https://shop.hayhouse.com/products/breaking-bias"
+    },
+    {
+      "text": "Charge and the Energy Body",
+      "href": "https://shop.hayhouse.com/products/charge-and-the-energy-body"
+    },
+    {
+      "text": "Chica, Why Not?",
+      "href": "https://shop.hayhouse.com/products/chica-why-not"
+    },
+    {
+      "text": "Chillpreneur",
+      "href": "https://shop.hayhouse.com/products/chillpreneur"
+    },
+    {
+      "text": "Claim Your Power",
+      "href": "https://shop.hayhouse.com/products/claim-your-power"
+    },
+    {
+      "text": "Co-creating at Its Best",
+      "href": "https://shop.hayhouse.com/products/co-creating-at-its-best"
+    },
+    {
+      "text": "Connecting with the Angels Made Easy",
+      "href": "https://shop.hayhouse.com/products/connecting-with-the-angels-made-easy"
+    },
+    {
+      "text": "Consciousness Rising",
+      "href": "https://shop.hayhouse.com/products/consciousness-rising"
+    },
+    {
+      "text": "Contacting Your Spirit Guide",
+      "href": "https://shop.hayhouse.com/products/contacting-your-spirit-guide"
+    },
+    {
+      "text": "Cosmic Care",
+      "href": "https://shop.hayhouse.com/products/cosmic-care"
+    },
+    {
+      "text": "Crystals for Energy Protection",
+      "href": "https://shop.hayhouse.com/products/crystals-for-energy-protection"
+    },
+    {
+      "text": "Crystals Made Easy",
+      "href": "https://shop.hayhouse.com/products/crystals-made-easy"
+    },
+    {
+      "text": "Cycle Magic",
+      "href": "https://shop.hayhouse.com/products/cycle-magic"
+    },
+    {
+      "text": "Daily Reflections from Dr. David R. Hawkins",
+      "href": "https://shop.hayhouse.com/products/daily-reflections-from-dr-david-r-hawkins"
+    },
+    {
+      "text": "Deep Human Connection",
+      "href": "https://shop.hayhouse.com/products/deep-human-connection"
+    },
+    {
+      "text": "Discover Your Soul's Path Through the Akashic Records",
+      "href": "https://shop.hayhouse.com/products/discover-your-souls-path-through-the-akashic-records"
+    },
+    {
+      "text": "Do Less",
+      "href": "https://shop.hayhouse.com/products/do-less"
+    },
+    {
+      "text": "Dodging Energy Vampires",
+      "href": "https://shop.hayhouse.com/products/dodging-energy-vampires"
+    },
+    {
+      "text": "Dream Guidance",
+      "href": "https://shop.hayhouse.com/products/dream-guidance"
+    },
+    {
+      "text": "Embrace Abundance",
+      "href": "https://shop.hayhouse.com/products/embrace-abundance"
+    },
+    {
+      "text": "Enneagram Made Easy",
+      "href": "https://shop.hayhouse.com/products/enneagram-made-easy"
+    },
+    {
+      "text": "Exhausted",
+      "href": "https://shop.hayhouse.com/products/exhausted"
+    },
+    {
+      "text": "Exile & Ecstasy",
+      "href": "https://shop.hayhouse.com/products/exile-ecstasy"
+    },
+    {
+      "text": "F the Shoulds. Do the Wants",
+      "href": "https://shop.hayhouse.com/products/f-the-shoulds-do-the-wants"
+    },
+    {
+      "text": "F**k It (Revised and Updated Edition)",
+      "href": "https://shop.hayhouse.com/products/f-k-it-revised-and-updated-edition"
+    },
+    {
+      "text": "Face Massage for Everyone",
+      "href": "https://shop.hayhouse.com/products/face-massage-for-everyone"
+    },
+    {
+      "text": "Feeding You Lies",
+      "href": "https://shop.hayhouse.com/products/feeding-you-lies"
+    },
+    {
+      "text": "Focus",
+      "href": "https://shop.hayhouse.com/products/focus"
+    },
+    {
+      "text": "Food Babe Family",
+      "href": "https://shop.hayhouse.com/products/food-babe-family"
+    },
+    {
+      "text": "Forgive Everyone for Everything",
+      "href": "https://shop.hayhouse.com/products/forgive-everyone-for-everything"
+    },
+    {
+      "text": "From Clutter to Clarity",
+      "href": "https://shop.hayhouse.com/products/from-clutter-to-clarity"
+    },
+    {
+      "text": "Fuel Up",
+      "href": "https://shop.hayhouse.com/products/fuel-up"
+    },
+    {
+      "text": "Get Signed",
+      "href": "https://shop.hayhouse.com/products/get-signed"
+    },
+    {
+      "text": "Getting in the Gap",
+      "href": "https://shop.hayhouse.com/products/getting-in-the-gap"
+    },
+    {
+      "text": "Goddesses Never Age",
+      "href": "https://shop.hayhouse.com/products/goddesses-never-age"
+    },
+    {
+      "text": "Gods in Shackles",
+      "href": "https://shop.hayhouse.com/products/gods-in-shackles"
+    },
+    {
+      "text": "Good Stress",
+      "href": "https://shop.hayhouse.com/products/good-stress"
+    },
+    {
+      "text": "Gravitas",
+      "href": "https://shop.hayhouse.com/products/gravitas"
+    },
+    {
+      "text": "Grow a New Body",
+      "href": "https://shop.hayhouse.com/products/grow-a-new-body"
+    },
+    {
+      "text": "Healing Adaptogens",
+      "href": "https://shop.hayhouse.com/products/healing-adaptogens"
+    },
+    {
+      "text": "Healing and Recovery",
+      "href": "https://shop.hayhouse.com/products/healing-and-recovery"
+    },
+    {
+      "text": "Healing Burnout with Astrology & Tarot",
+      "href": "https://shop.hayhouse.com/products/healing-burnout-with-astrology-tarot"
+    },
+    {
+      "text": "Healing Is the New High",
+      "href": "https://shop.hayhouse.com/products/healing-is-the-new-high"
+    },
+    {
+      "text": "Heart Thoughts",
+      "href": "https://shop.hayhouse.com/products/heart-thoughts"
+    },
+    {
+      "text": "Higher Purpose",
+      "href": "https://shop.hayhouse.com/products/higher-purpose"
+    },
+    {
+      "text": "Homeopathy at Home",
+      "href": "https://shop.hayhouse.com/products/homeopathy-at-home"
+    },
+    {
+      "text": "How to Heal from Emotionally Immature Parents",
+      "href": "https://shop.hayhouse.com/products/how-to-heal-from-emotionally-immature-parents"
+    },
+    {
+      "text": "How to Live a Good Life",
+      "href": "https://shop.hayhouse.com/products/how-to-live-a-good-life"
+    },
+    {
+      "text": "How to Stop Breaking Your Own Heart",
+      "href": "https://shop.hayhouse.com/products/how-to-stop-breaking-your-own-heart"
+    },
+    {
+      "text": "In the World, But Not of It",
+      "href": "https://shop.hayhouse.com/products/in-the-world-but-not-of-it"
+    },
+    {
+      "text": "Independence for Life",
+      "href": "https://shop.hayhouse.com/products/independence-for-life"
+    },
+    {
+      "text": "Intentional Health",
+      "href": "https://shop.hayhouse.com/products/intentional-health"
+    },
+    {
+      "text": "Intentionality",
+      "href": "https://shop.hayhouse.com/products/intentionality"
+    },
+    {
+      "text": "Intuitive Animal Communication",
+      "href": "https://shop.hayhouse.com/products/intuitive-animal-communication"
+    },
+    {
+      "text": "Its Not Your Fault",
+      "href": "https://shop.hayhouse.com/products/its-not-your-fault"
+    },
+    {
+      "text": "Karmic Astrology",
+      "href": "https://shop.hayhouse.com/products/karmic-astrology"
+    },
+    {
+      "text": "Keep Looking Up",
+      "href": "https://shop.hayhouse.com/products/keep-looking-up"
+    },
+    {
+      "text": "La Ley De Atracción",
+      "href": "https://shop.hayhouse.com/products/la-ley-de-atraccion"
+    },
+    {
+      "text": "Leaves, Roots & Fruit",
+      "href": "https://shop.hayhouse.com/products/leaves-roots-fruit"
+    },
+    {
+      "text": "Led by Faith",
+      "href": "https://shop.hayhouse.com/products/led-by-faith"
+    },
+    {
+      "text": "Let's Talk About Loneliness",
+      "href": "https://shop.hayhouse.com/products/lets-talk-about-loneliness"
+    },
+    {
+      "text": "Letting Go",
+      "href": "https://shop.hayhouse.com/products/letting-go"
+    },
+    {
+      "text": "Life Loves You",
+      "href": "https://shop.hayhouse.com/products/life-loves-you"
+    },
+    {
+      "text": "Locusta (The Poisoned Empire Duology, Book 1)",
+      "href": "https://shop.hayhouse.com/products/locusta-the-poisoned-empire-duology-book-1"
+    },
+    {
+      "text": "Longevity for Cats",
+      "href": "https://shop.hayhouse.com/products/longevity-for-cats"
+    },
+    {
+      "text": "Longevity for Dogs",
+      "href": "https://shop.hayhouse.com/products/longevity-for-dogs"
+    },
+    {
+      "text": "Love Your Enemies",
+      "href": "https://shop.hayhouse.com/products/love-your-enemies"
+    },
+    {
+      "text": "Lucky Bitch",
+      "href": "https://shop.hayhouse.com/products/lucky-bitch"
+    },
+    {
+      "text": "Make Room for Healing",
+      "href": "https://shop.hayhouse.com/products/make-room-for-healing"
+    },
+    {
+      "text": "Manifest Your True Essence",
+      "href": "https://shop.hayhouse.com/products/manifest-your-true-essence"
+    },
+    {
+      "text": "Market Your Genius",
+      "href": "https://shop.hayhouse.com/products/market-your-genius"
+    },
+    {
+      "text": "Medical Medium Thyroid Healing",
+      "href": "https://shop.hayhouse.com/products/medical-medium-thyroid-healing"
+    },
+    {
+      "text": "Money Loves Me",
+      "href": "https://shop.hayhouse.com/products/money-loves-me"
+    },
+    {
+      "text": "Money Unlocked",
+      "href": "https://shop.hayhouse.com/products/money-unlocked"
+    },
+    {
+      "text": "Moonology™ (Revised Edition)",
+      "href": "https://shop.hayhouse.com/products/moonology%E2%84%A2-revised-edition"
+    },
+    {
+      "text": "My Journey of Light With Dr. David R. Hawkins",
+      "href": "https://shop.hayhouse.com/products/my-journey-of-light-with-dr-david-r-hawkins"
+    },
+    {
+      "text": "Nine Days of Eternity",
+      "href": "https://shop.hayhouse.com/products/nine-days-of-eternity"
+    },
+    {
+      "text": "Numerology Made Easy",
+      "href": "https://shop.hayhouse.com/products/numerology-made-easy"
+    },
+    {
+      "text": "One Mind",
+      "href": "https://shop.hayhouse.com/products/one-mind"
+    },
+    {
+      "text": "One More Day",
+      "href": "https://shop.hayhouse.com/products/one-more-day"
+    },
+    {
+      "text": "Our Lady of Kibeho",
+      "href": "https://shop.hayhouse.com/products/our-lady-of-kibeho"
+    },
+    {
+      "text": "Own Your Self",
+      "href": "https://shop.hayhouse.com/products/own-your-self"
+    },
+    {
+      "text": "Postdiabetic",
+      "href": "https://shop.hayhouse.com/products/postdiabetic"
+    },
+    {
+      "text": "Power of Awakening, The",
+      "href": "https://shop.hayhouse.com/products/power-of-awakening-the"
+    },
+    {
+      "text": "Power vs. Force",
+      "href": "https://shop.hayhouse.com/products/power-vs-force"
+    },
+    {
+      "text": "Queer Devotion",
+      "href": "https://shop.hayhouse.com/products/queer-devotion"
+    },
+    {
+      "text": "Radiant Wildheart",
+      "href": "https://shop.hayhouse.com/products/radiant-wildheart"
+    },
+    {
+      "text": "Radical Tarot",
+      "href": "https://shop.hayhouse.com/products/radical-tarot"
+    },
+    {
+      "text": "Read Life Accurately",
+      "href": "https://shop.hayhouse.com/products/read-life-accurately"
+    },
+    {
+      "text": "Reclaim Your Nervous System",
+      "href": "https://shop.hayhouse.com/products/reclaim-your-nervous-system"
+    },
+    {
+      "text": "Reclaiming Your Inner Child",
+      "href": "https://shop.hayhouse.com/products/reclaiming-your-inner-child"
+    },
+    {
+      "text": "Regenerate",
+      "href": "https://shop.hayhouse.com/products/regenerate"
+    },
+    {
+      "text": "Remember Your Roots",
+      "href": "https://shop.hayhouse.com/products/remember-your-roots"
+    },
+    {
+      "text": "Return to Source",
+      "href": "https://shop.hayhouse.com/products/return-to-source"
+    },
+    {
+      "text": "Rewilding Childhood",
+      "href": "https://shop.hayhouse.com/products/rewilding-childhood"
+    },
+    {
+      "text": "Sacred Vibrations",
+      "href": "https://shop.hayhouse.com/products/sacred-vibrations"
+    },
+    {
+      "text": "Sara, Book 1",
+      "href": "https://shop.hayhouse.com/products/sara-book-1"
+    },
+    {
+      "text": "Sara, Book 2",
+      "href": "https://shop.hayhouse.com/products/sara-book-2"
+    },
+    {
+      "text": "Sara, Book 3",
+      "href": "https://shop.hayhouse.com/products/sara-book-3"
+    },
+    {
+      "text": "Sedona, Psychic Energy Vortexes",
+      "href": "https://shop.hayhouse.com/products/sedona-psychic-energy-vortexes"
+    },
+    {
+      "text": "Self Help",
+      "href": "https://shop.hayhouse.com/products/self-help"
+    },
+    {
+      "text": "Seven Planes of Existence",
+      "href": "https://shop.hayhouse.com/products/seven-planes-of-existence"
+    },
+    {
+      "text": "Silent Power",
+      "href": "https://shop.hayhouse.com/products/silent-power"
+    },
+    {
+      "text": "Songs of My Grandmother",
+      "href": "https://shop.hayhouse.com/products/songs-of-my-grandmother"
+    },
+    {
+      "text": "Soul Mastery",
+      "href": "https://shop.hayhouse.com/products/soul-mastery"
+    },
+    {
+      "text": "Soul's Brain",
+      "href": "https://shop.hayhouse.com/products/souls-brain"
+    },
+    {
+      "text": "Sovereign",
+      "href": "https://shop.hayhouse.com/products/sovereign"
+    },
+    {
+      "text": "Spirit Means Business",
+      "href": "https://shop.hayhouse.com/products/spirit-means-business"
+    },
+    {
+      "text": "Spiritual Fertility",
+      "href": "https://shop.hayhouse.com/products/spiritual-fertility"
+    },
+    {
+      "text": "Spontaneous Creativity",
+      "href": "https://shop.hayhouse.com/products/spontaneous-creativity"
+    },
+    {
+      "text": "Spontaneous Evolution",
+      "href": "https://shop.hayhouse.com/products/spontaneous-evolution"
+    },
+    {
+      "text": "Starcodes",
+      "href": "https://shop.hayhouse.com/products/starcodes"
+    },
+    {
+      "text": "Stoic Empathy",
+      "href": "https://shop.hayhouse.com/products/stoic-empathy"
+    },
+    {
+      "text": "Super Attractor",
+      "href": "https://shop.hayhouse.com/products/super-attractor"
+    },
+    {
+      "text": "Supercoach",
+      "href": "https://shop.hayhouse.com/products/supercoach"
+    },
+    {
+      "text": "Surrender",
+      "href": "https://shop.hayhouse.com/products/surrender"
+    },
+    {
+      "text": "Tapping Solution to Create Lasting Change",
+      "href": "https://shop.hayhouse.com/products/tapping-solution-to-create-lasting-change"
+    },
+    {
+      "text": "Tarot for Manifestation",
+      "href": "https://shop.hayhouse.com/products/tarot-for-manifestation"
+    },
+    {
+      "text": "Tarot Made Easy",
+      "href": "https://shop.hayhouse.com/products/tarot-made-easy"
+    },
+    {
+      "text": "The 9 Points of Potential",
+      "href": "https://shop.hayhouse.com/products/the-9-points-of-potential"
+    },
+    {
+      "text": "The Akashic Records Made Easy",
+      "href": "https://shop.hayhouse.com/products/the-akashic-records-made-easy"
+    },
+    {
+      "text": "The Amazing Power of Deliberate Intent",
+      "href": "https://shop.hayhouse.com/products/the-amazing-power-of-deliberate-intent"
+    },
+    {
+      "text": "The Archangel Guide to Ascension",
+      "href": "https://shop.hayhouse.com/products/the-archangel-guide-to-ascension"
+    },
+    {
+      "text": "The Art of Manifesting",
+      "href": "https://shop.hayhouse.com/products/the-art-of-manifesting"
+    },
+    {
+      "text": "The Artist’s Side Hustle",
+      "href": "https://shop.hayhouse.com/products/the-artist-s-side-hustle"
+    },
+    {
+      "text": "The Aura Color Wheel",
+      "href": "https://shop.hayhouse.com/products/the-aura-color-wheel"
+    },
+    {
+      "text": "The Biology of Belief 10th Anniversary Edition",
+      "href": "https://shop.hayhouse.com/products/the-biology-of-belief-10th-anniversary-edition"
+    },
+    {
+      "text": "The Book of Light",
+      "href": "https://shop.hayhouse.com/products/the-book-of-light"
+    },
+    {
+      "text": "The Book of Runic Astrology",
+      "href": "https://shop.hayhouse.com/products/the-book-of-runic-astrology"
+    },
+    {
+      "text": "The Boy Who Met Jesus",
+      "href": "https://shop.hayhouse.com/products/the-boy-who-met-jesus"
+    },
+    {
+      "text": "The Brain Fog Fix",
+      "href": "https://shop.hayhouse.com/products/the-brain-fog-fix"
+    },
+    {
+      "text": "The Breathable Body",
+      "href": "https://shop.hayhouse.com/products/the-breathable-body"
+    },
+    {
+      "text": "The Complete Book of Numerology",
+      "href": "https://shop.hayhouse.com/products/the-complete-book-of-numerology"
+    },
+    {
+      "text": "The Connection Code",
+      "href": "https://shop.hayhouse.com/products/the-connection-code"
+    },
+    {
+      "text": "The Course in Miracles Experiment",
+      "href": "https://shop.hayhouse.com/products/the-course-in-miracles-experiment"
+    },
+    {
+      "text": "The Disappearance of the Universe",
+      "href": "https://shop.hayhouse.com/products/the-disappearance-of-the-universe"
+    },
+    {
+      "text": "The DNA Way",
+      "href": "https://shop.hayhouse.com/products/the-dna-way"
+    },
+    {
+      "text": "The Dream, the Journey, Eternity, and God",
+      "href": "https://shop.hayhouse.com/products/the-dream-the-journey-eternity-and-god"
+    },
+    {
+      "text": "The Ego Is Not the Real You",
+      "href": "https://shop.hayhouse.com/products/the-ego-is-not-the-real-you"
+    },
+    {
+      "text": "The Evolution of Consciousness",
+      "href": "https://shop.hayhouse.com/products/the-evolution-of-consciousness"
+    },
+    {
+      "text": "The Final Doorway to Enlightenment",
+      "href": "https://shop.hayhouse.com/products/the-final-doorway-to-enlightenment"
+    },
+    {
+      "text": "The Flow Habit",
+      "href": "https://shop.hayhouse.com/products/the-flow-habit"
+    },
+    {
+      "text": "The Food Matters Cookbook",
+      "href": "https://shop.hayhouse.com/products/the-food-matters-cookbook"
+    },
+    {
+      "text": "The Future Ancestor",
+      "href": "https://shop.hayhouse.com/products/the-future-ancestor"
+    },
+    {
+      "text": "The Gift of Gratitude",
+      "href": "https://shop.hayhouse.com/products/the-gift-of-gratitude"
+    },
+    {
+      "text": "The Gift of Low Self-Esteem",
+      "href": "https://shop.hayhouse.com/products/the-gift-of-low-self-esteem"
+    },
+    {
+      "text": "The Good Goodbye",
+      "href": "https://shop.hayhouse.com/products/the-good-goodbye"
+    },
+    {
+      "text": "The Greatness Mindset",
+      "href": "https://shop.hayhouse.com/products/the-greatness-mindset"
+    },
+    {
+      "text": "The Guardian Gateway",
+      "href": "https://shop.hayhouse.com/products/the-guardian-gateway"
+    },
+    {
+      "text": "The Healing Wisdom of Dreams",
+      "href": "https://shop.hayhouse.com/products/the-healing-wisdom-of-dreams"
+    },
+    {
+      "text": "The Heart of the Shaman",
+      "href": "https://shop.hayhouse.com/products/the-heart-of-the-shaman"
+    },
+    {
+      "text": "The Highest Level of Enlightenment",
+      "href": "https://shop.hayhouse.com/products/the-highest-level-of-enlightenment"
+    },
+    {
+      "text": "The Honeymoon Effect",
+      "href": "https://shop.hayhouse.com/products/the-honeymoon-effect"
+    },
+    {
+      "text": "The Hope Dealer",
+      "href": "https://shop.hayhouse.com/products/the-hope-dealer"
+    },
+    {
+      "text": "The Illusion of Money",
+      "href": "https://shop.hayhouse.com/products/the-illusion-of-money"
+    },
+    {
+      "text": "The Inflammation Code",
+      "href": "https://shop.hayhouse.com/products/the-inflammation-code"
+    },
+    {
+      "text": "The Joy of Actually Giving a F*ck",
+      "href": "https://shop.hayhouse.com/products/the-joy-of-actually-giving-a-f-ck"
+    },
+    {
+      "text": "The Key to Positivity",
+      "href": "https://shop.hayhouse.com/products/the-key-to-positivity"
+    },
+    {
+      "text": "The Law of Positivism",
+      "href": "https://shop.hayhouse.com/products/the-law-of-positivism"
+    },
+    {
+      "text": "The Love Thief",
+      "href": "https://shop.hayhouse.com/products/the-love-thief"
+    },
+    {
+      "text": "The Man Who Mapped Consciousness",
+      "href": "https://shop.hayhouse.com/products/the-man-who-mapped-consciousness"
+    },
+    {
+      "text": "The Mercury Retrograde Book",
+      "href": "https://shop.hayhouse.com/products/the-mercury-retrograde-book"
+    },
+    {
+      "text": "The Missing Piece",
+      "href": "https://shop.hayhouse.com/products/the-missing-piece"
+    },
+    {
+      "text": "The Path to Spiritual Advancement",
+      "href": "https://shop.hayhouse.com/products/the-path-to-spiritual-advancement"
+    },
+    {
+      "text": "The Power of No",
+      "href": "https://shop.hayhouse.com/products/the-power-of-no"
+    },
+    {
+      "text": "The Power We Hold",
+      "href": "https://shop.hayhouse.com/products/the-power-we-hold"
+    },
+    {
+      "text": "The Prophetess",
+      "href": "https://shop.hayhouse.com/products/the-prophetess"
+    },
+    {
+      "text": "The Psychic Psychologist",
+      "href": "https://shop.hayhouse.com/products/the-psychic-psychologist"
+    },
+    {
+      "text": "The Queen's Path",
+      "href": "https://shop.hayhouse.com/products/the-queens-path"
+    },
+    {
+      "text": "The Richest Kids In America",
+      "href": "https://shop.hayhouse.com/products/the-richest-kids-in-america"
+    },
+    {
+      "text": "The Sacred Andean Codes",
+      "href": "https://shop.hayhouse.com/products/the-sacred-andean-codes"
+    },
+    {
+      "text": "The Sacred Forest Oracle",
+      "href": "https://shop.hayhouse.com/products/the-sacred-forest-oracle"
+    },
+    {
+      "text": "The Science Behind Tapping",
+      "href": "https://shop.hayhouse.com/products/the-science-behind-tapping"
+    },
+    {
+      "text": "The Soul Midwives' Handbook (Revised Edition)",
+      "href": "https://shop.hayhouse.com/products/the-soul-midwives-handbook-revised-edition"
+    },
+    {
+      "text": "The Spirit Animal Oracle",
+      "href": "https://shop.hayhouse.com/products/the-spirit-animal-oracle"
+    },
+    {
+      "text": "The Sugar Brain Fix",
+      "href": "https://shop.hayhouse.com/products/the-sugar-brain-fix"
+    },
+    {
+      "text": "The Violet Flame",
+      "href": "https://shop.hayhouse.com/products/the-violet-flame"
+    },
+    {
+      "text": "The Wisdom Codes",
+      "href": "https://shop.hayhouse.com/products/the-wisdom-codes"
+    },
+    {
+      "text": "The Wisdom of Dr. David R. Hawkins",
+      "href": "https://shop.hayhouse.com/products/the-wisdom-of-dr-david-r-hawkins"
+    },
+    {
+      "text": "The Wisdom of Your Face",
+      "href": "https://shop.hayhouse.com/products/the-wisdom-of-your-face"
+    },
+    {
+      "text": "ThetaHealing®",
+      "href": "https://shop.hayhouse.com/products/thetahealing%C2%AE"
+    },
+    {
+      "text": "ThetaHealing®: Digging for Beliefs",
+      "href": "https://shop.hayhouse.com/products/thetahealing%C2%AE-digging-for-beliefs"
+    },
+    {
+      "text": "Think Like a Boss",
+      "href": "https://shop.hayhouse.com/products/think-like-a-boss"
+    },
+    {
+      "text": "Thrive Solo",
+      "href": "https://shop.hayhouse.com/products/thrive-solo"
+    },
+    {
+      "text": "Transforming the Mother Wound",
+      "href": "https://shop.hayhouse.com/products/transforming-the-mother-wound"
+    },
+    {
+      "text": "Trauma",
+      "href": "https://shop.hayhouse.com/products/trauma"
+    },
+    {
+      "text": "Unanxious",
+      "href": "https://shop.hayhouse.com/products/unanxious"
+    },
+    {
+      "text": "Unblocked",
+      "href": "https://shop.hayhouse.com/products/unblocked"
+    },
+    {
+      "text": "Download the sample map (CSV)",
+      "href": "https://mousabatarseh.com/hayhouse-review/files/hayhouse-redirect-map-sample.csv"
+    },
+    {
+      "text": "View on shop.hayhouse.com ↗",
+      "href": "https://shop.hayhouse.com/products/ask-and-it-is-given"
+    },
+    {
+      "text": "View on shop.hayhouse.com ↗",
+      "href": "https://shop.hayhouse.com/products/ask-and-it-is-given-cards"
+    },
+    {
+      "text": "RÉSUMÉ\nPDF · 1 page",
+      "href": "https://mousabatarseh.com/hayhouse-review/files/Mousa-Batarseh-Resume-Hay-House-Sr-Ecommerce-Specialist.pdf"
+    },
+    {
+      "text": "COVER LETTER\nPDF · 1 page",
+      "href": "https://mousabatarseh.com/hayhouse-review/files/Mousa-Batarseh-Cover-Letter-Hay-House.pdf"
+    },
+    {
+      "text": "EMAIL\nhireme@mousabatarseh.com",
+      "href": "mailto:hireme@mousabatarseh.com?subject=Hay%20House%20Senior%20E-Commerce%20Specialist"
+    },
+    {
+      "text": "PHONE\n(248) 810-1816",
+      "href": "tel:+12488101816"
+    },
+    {
+      "text": "LINKEDIN\n/in/mousabatarseh",
+      "href": "https://www.linkedin.com/in/mousabatarseh"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-price-hh.webp",
+      "alt": "hayhouse.com product page for Worthy: list price $18.99, HayHouse.com price $9.50, save 50%",
+      "w": 900,
+      "h": 615,
+      "file": "047239669f110aa4.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-price-shop.webp",
+      "alt": "shop.hayhouse.com product page for Worthy at $18.99 with ISBN 978-1-4019-5015-6 in Book Details",
+      "w": 900,
+      "h": 625,
+      "file": "55c9d887ec8390de.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-ychyl-a.webp",
+      "alt": "Product page title: You Can Heal Your Life, by Louise Hay, $17.99",
+      "w": 700,
+      "h": 280,
+      "file": "ce1843fe48b5424a.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-ychyl-b.webp",
+      "alt": "Product page title: You Can Heal Your Life, subtitle 40th Anniversary Edition, $19.99",
+      "w": 700,
+      "h": 280,
+      "file": "aee5b1bac7813947.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-filter-format.webp",
+      "alt": "Format filter showing Card Deck with four ISBN-suffixed values, Trade Paperback and Trade Paperback Original",
+      "w": 300,
+      "h": 480,
+      "file": "0807af2812249475.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-filter-authors.webp",
+      "alt": "Authors filter listing Alberto Villoldo under five separate values",
+      "w": 300,
+      "h": 300,
+      "file": "66f3575a3bd482f4.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-spanish.webp",
+      "alt": "Product page titled SPANISH-YOU CAN HEAL YOUR LIFE/TRD with a blurry cover and Language: English",
+      "w": 900,
+      "h": 562,
+      "file": "aa6e230e94739bde.webp"
+    },
+    {
+      "src": "https://mousabatarseh.com/hayhouse-review/img/ev-nav.webp",
+      "alt": "Store header with only Home, Catalog and Contact in the menu",
+      "w": 900,
+      "h": 75,
+      "file": "5c3ac7b90e202447.webp"
+    }
+  ],
+  "status": 200
+}
