@@ -125,7 +125,7 @@ export const cases: CaseStudy[] = [
       more: [
         { slug: 'dealproof', label: 'DealProof — the launch checker' },
         { slug: 'northgate-retail', label: 'Northgate Retail Group — a fictional-company adaptation' },
-        { slug: 'house-of-dank-demo', label: 'An interview demo with fictional products' },
+        { slug: 'northgate-app', label: 'Northgate’s Menu & Promotion Manager — an interview demo with fictional products' },
       ],
     },
     intro: [
@@ -153,7 +153,7 @@ export const cases: CaseStudy[] = [
     family: [
       { title: 'DealProof', url: `${M}/dealproof/`, note: 'The promotion launch checker.' },
       { title: 'Northgate Retail Group', url: 'https://lab.mousabatarseh.com/northgate-group/', note: 'Fictional-company adaptation of the same rules.' },
-      { title: 'Marketing operations OS demo', url: 'https://hod-demo.mousabatarseh.com/', note: 'Interview demo; fictional products.' },
+      { title: 'Menu & Promotion Manager', url: 'https://lab.mousabatarseh.com/northgate-group/app/', note: 'Northgate interview demo; fictional products.' },
     ],
   },
   {
@@ -189,30 +189,30 @@ export const cases: CaseStudy[] = [
     family: [{ title: 'Commerce Studio', url: 'https://commerce-studio.mousabb2.chatgpt.site/', note: 'The published edition of the same workspace.' }],
   },
   {
-    slug: 'diamedical-lab',
+    slug: 'halden-medical',
     order: 5,
     group: 'systems',
-    title: 'DiaMedical Commerce Intelligence Lab',
+    title: 'Halden Medical Commerce Intelligence Lab',
     kicker: 'Independent e-commerce case study',
     promise: 'One question, followed all the way to the measurement.',
     summary: 'An independent case study built from public information: one buyer’s question traced through search, data, QA, a ticket and a measurement.',
-    url: `${M}/diamedical/`,
+    url: 'https://lab.mousabatarseh.com/halden-medical/',
     platform: ['Web', 'Workbook'],
     languages: ['English'],
     media: {
-      hero: 'diamedical-lab',
-      video: 'diamedical-lab',
+      hero: 'halden-lab',
+      video: 'halden-lab',
       more: [
-        { slug: 'diamedical-intro', label: 'How I Thought It Through — the narrated walkthrough' },
-        { slug: 'diamedical-review', label: 'The experience review' },
-        { slug: 'diamedical-workbook', label: 'The workbook explorer' },
+        { slug: 'halden-walkthrough', label: 'How I Thought It Through — the seven-scene walkthrough' },
+        { slug: 'halden-commerce-lab', label: 'Product discovery in the commerce lab' },
+        { slug: 'halden-workbook', label: 'The 13-sheet workbook, read-only' },
       ],
     },
     intro: [
       '“We need a four-station Med-Surg lab for 24 nursing students. Where do we start?” A buyer asks in their own words; a catalog answers in product language. The lab follows that one question through search, catalog data, QA, a developer ticket and the measurement that would prove the fix worked.',
       'It was built for a Marketing and eCommerce Coordinator application, from public pages only, and every number in it is labelled for what it is: public, bounded, modeled or a hypothesis.',
     ],
-    role: { text: 'Research, workbook, QA, walkthrough — independent, not commissioned', source: `${WORK}diamedical-lab/` },
+    role: { text: 'Research, workbook, QA, walkthrough — independent, not commissioned', source: `${WORK}halden-medical/` },
     features: [
       { title: 'Search', text: 'What the buyer typed, and what the catalog returned.' },
       { title: 'Data', text: 'The product records behind the answer, scored for completeness.' },
@@ -224,15 +224,14 @@ export const cases: CaseStudy[] = [
       { label: 'Evidence', value: 'Public · bounded · modeled · hypothesis' },
       { label: 'Workbook', value: '13 sheets' },
       { label: 'Sample', value: '65 public product records · 16 audited pages' },
-      { label: 'Suite', value: 'Lab · academy · review · workbook · walkthrough' },
+      { label: 'Suite', value: 'Lab · pathfinder · workbook · walkthrough' },
     ],
-    disclaimer: 'Not commissioned, approved or endorsed by DiaMedical USA. Not a redesign of the store. Not a claim of measured business results.',
+    disclaimer: 'Not commissioned, approved or endorsed by Halden Medical Supply. Not a redesign of the store. Not a claim of measured business results.',
     family: [
-      { title: 'DiaMedical Academy', url: `${M}/diamedical/academy/`, note: 'Guided learning experience.' },
-      { title: 'Experience review', url: 'https://mousabatarseh.com/diamedical-review/', note: 'Evidence-backed website review.' },
-      { title: 'Workbook explorer', url: `${M}/diamedical/v3/`, note: 'Interactive workbook.' },
-      { title: 'How I Thought It Through', url: `${M}/diamedical-intro/`, note: 'Narrated reasoning walkthrough.' },
-      { title: 'Halden Medical', url: 'https://lab.mousabatarseh.com/halden-medical/', note: 'Fictional-company adaptation.' },
+      { title: 'How I Thought It Through', url: 'https://lab.mousabatarseh.com/halden-medical/walkthrough', note: 'Seven scenes, about six minutes.' },
+      { title: 'Product Pathfinder', url: 'https://lab.mousabatarseh.com/halden-medical/commerce-lab/pathfinder', note: 'A lab goal turned into a station map.' },
+      { title: 'Workbook', url: 'https://lab.mousabatarseh.com/halden-medical/workbook-view/', note: 'The 13-sheet workbook, read-only.' },
+      { title: 'Methodology', url: 'https://lab.mousabatarseh.com/halden-medical/methodology', note: 'Every source, retrieval date and limit.' },
     ],
   },
 
@@ -395,7 +394,7 @@ export const cases: CaseStudy[] = [
       video: 'ptee-renewal',
       more: [
         { slug: 'ptee-admissions', label: 'The admissions and online-services portal' },
-        { slug: 'btee-build', label: 'The hosting-migration build' },
+        { slug: 'btee-en', label: 'The hosting-migration build — its English site' },
       ],
     },
     intro: [
@@ -408,7 +407,7 @@ export const cases: CaseStudy[] = [
     family: [
       { title: 'Admissions portal', url: 'https://ptee.moseswebworks.com/admissions/en', note: 'Apply, save, track and verify documents.' },
       { title: 'BTEE bilingual build', url: 'https://btee.moseswebworks.com/ar/', note: 'Hosting-migration build of the redesign.' },
-      { title: 'Courses & programs', url: 'https://ptee.moseswebworks.com/courses/ar', note: 'Bilingual course catalog.' },
+      { title: 'Courses & programs', url: 'https://ptee.moseswebworks.com/courses/ar/courses/catalog', note: 'Bilingual course catalog.' },
     ],
   },
 ];

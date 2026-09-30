@@ -46,7 +46,7 @@ export const toolPages: ToolDetail[] = [
     live: `${M}/rankreceipt/`,
     media: 'rankreceipt',
     shows: 'a result and its receipt',
-    family: [{ name: 'DiaMedical search lab', url: '#diamedical-lab', note: 'The explainable search this tool grew out of' }],
+    family: [{ name: 'Halden Medical search lab', url: '#halden-lab', note: 'The explainable search this tool grew out of' }],
   },
   {
     slug: 'shelfmark',
@@ -137,7 +137,6 @@ export const toolPages: ToolDetail[] = [
     family: [
       { name: 'DealProof', url: '#dealproof', note: 'The launch checker' },
       { name: 'Northgate Retail Group', url: 'https://lab.mousabatarseh.com/northgate-group/', note: 'A fictional-company adaptation: Menu & Promotion Manager, the QA workbook and a discount calculator' },
-      { name: 'House of Dank marketing operations OS', url: 'https://hod-demo.mousabatarseh.com/', note: 'An interview demo; all products, brands and prices are fictional. Not a House of Dank system.' },
     ],
   },
   {
@@ -208,8 +207,8 @@ export const toolPages: ToolDetail[] = [
     shows: 'Typing a title and URL — the search preview updates live',
   },
   {
-    slug: 'diamedical-lab',
-    name: 'DiaMedical Commerce Intelligence Lab',
+    slug: 'halden-lab',
+    name: 'Halden Medical Commerce Intelligence Lab',
     promise: 'One question, followed all the way to the measurement.',
     what: 'An independent e-commerce case study: one buyer’s question traced through product discovery, catalog quality, website QA, a developer handoff and a measurement, backed by a 13-sheet Excel workbook.',
     problem: 'A program director thinks in learners, skills, room and budget; a catalog is organized by category, brand, attribute and SKU.',
@@ -222,11 +221,11 @@ export const toolPages: ToolDetail[] = [
     numbers: [{ v: '65', l: 'product records' }, { v: '16', l: 'audited URLs' }, { v: '13', l: 'workbook sheets' }],
     role: 'Research, workbook, QA, walkthrough — independent, not commissioned',
     quote: 'Two checks is a hypothesis, not a finding.',
-    note: 'Not commissioned, approved, or endorsed by DiaMedical USA. Not a redesign of the store. Not a claim of measured business results.',
+    note: 'Not commissioned, approved, or endorsed by Halden Medical Supply. Not a redesign of the store. Not a claim of measured business results.',
     status: 'Independent study',
-    live: `${M}/diamedical/`,
-    caseStudy: 'diamedical-lab',
-    media: 'diamedical-lab',
+    live: 'https://lab.mousabatarseh.com/halden-medical/',
+    caseStudy: 'halden-medical',
+    media: 'halden-lab',
   },
   {
     slug: 'ai-academy',
@@ -243,7 +242,7 @@ export const toolPages: ToolDetail[] = [
 
 // The home rack: eight tools (ShelfMark first, added 2026-09-28), each linking to its section on /tools/.
 export type Tool = { n: string; name: string; promise: string; what: string; href: string; live: string; media: string; caseStudy?: boolean; shows?: string };
-const rackOrder = ['shelfmark', 'changeatlas', 'deals-os', 'csv-mapper', 'diamedical-lab', 'asas-studio', 'dealproof', 'seo-tools'];
+const rackOrder = ['shelfmark', 'changeatlas', 'deals-os', 'csv-mapper', 'halden-lab', 'asas-studio', 'dealproof', 'seo-tools'];
 export const tools: Tool[] = rackOrder.map((slug, i) => {
   const t = toolPages.find((x) => x.slug === slug)!;
   return { n: String(i + 1).padStart(2, '0'), name: t.name, promise: t.promise ?? t.what, what: t.what, href: `/tools/#${t.slug}`, live: t.live, media: t.media, caseStudy: !!t.caseStudy, shows: t.shows };

@@ -12321,5 +12321,1760 @@
     "color": "rgb(232 232 216)"
    }
   }
+ },
+ "btee-en": {
+  "title": "PTEE | Theological Education by Extension",
+  "url": "https://btee.moseswebworks.com/en/",
+  "capturedAt": "2026-09-30T03:17:36.181Z",
+  "views": {
+   "desktop-hero": {
+    "w": 2880,
+    "h": 1800,
+    "webp": [
+     {
+      "w": 640,
+      "src": "/media/btee-en/desktop-hero-640.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/btee-en/desktop-hero-960.webp"
+     },
+     {
+      "w": 1280,
+      "src": "/media/btee-en/desktop-hero-1280.webp"
+     },
+     {
+      "w": 1920,
+      "src": "/media/btee-en/desktop-hero-1920.webp"
+     },
+     {
+      "w": 2560,
+      "src": "/media/btee-en/desktop-hero-2560.webp"
+     }
+    ],
+    "avif": [
+     {
+      "w": 640,
+      "src": "/media/btee-en/desktop-hero-640.avif"
+     },
+     {
+      "w": 960,
+      "src": "/media/btee-en/desktop-hero-960.avif"
+     },
+     {
+      "w": 1280,
+      "src": "/media/btee-en/desktop-hero-1280.avif"
+     },
+     {
+      "w": 1920,
+      "src": "/media/btee-en/desktop-hero-1920.avif"
+     },
+     {
+      "w": 2560,
+      "src": "/media/btee-en/desktop-hero-2560.avif"
+     }
+    ],
+    "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JYwCdMoADTISkesjo5qqAAP4nsJa74D7S081FZF1+hxiMK3oryTxi3zM1nD5H9ovk6YAiZQY6l6gmuo4T8/nzubaIrjZWNHZNA7VpSuPEu7sv422zxTDO8RGN+KQBUEHlLX8VpxDbP5P3OSRzgAAA",
+    "color": "rgb(248 248 248)",
+    "ghostA": "/media/btee-en/desktop-hero-ghost-a.webp",
+    "ghostB": "/media/btee-en/desktop-hero-ghost-b.webp"
+   },
+   "mobile-hero": {
+    "w": 1170,
+    "h": 2532,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/btee-en/mobile-hero-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/btee-en/mobile-hero-780.webp"
+     },
+     {
+      "w": 1170,
+      "src": "/media/btee-en/mobile-hero-1170.webp"
+     }
+    ],
+    "avif": [
+     {
+      "w": 390,
+      "src": "/media/btee-en/mobile-hero-390.avif"
+     },
+     {
+      "w": 780,
+      "src": "/media/btee-en/mobile-hero-780.avif"
+     },
+     {
+      "w": 1170,
+      "src": "/media/btee-en/mobile-hero-1170.avif"
+     }
+    ],
+    "lqip": "data:image/webp;base64,UklGRhoBAABXRUJQVlA4IA4BAAAQBwCdASoYADQAPu1qq1AppaOiqAwBMB2JZQC/ARyAOEs5eDYhxkC3v4i+a49rZ0fu3pe3pWsROa8IEKQ+qoy5gAD+7/QQfnI/jnH//JsM42RWIP3B/avPV/ih2LPtuK9+1LH5H4tsOrCtyCHwlRUSgUNKtkRmpeWrYp1uJfKTRH3FgB5/IpBvkVw8qqy20nzhXnkcr54rg1HYgt9A8JI/aO9muK/RcX3BQTCLyrz72gNs18jABOASnmyQJzXXroJLEyzJ64KH/UKiL6F41y9qmOy8ROd7liozQSmBXvU/9/FMu88bmWYB49aRdyOUez19F7/vVOxJhbd1taLLIgpNGjvw1O31A38LqYAAAAA=",
+    "color": "rgb(248 248 248)"
+   },
+   "mobile-full": {
+    "w": 780,
+    "h": 16000,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/btee-en/mobile-full-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/btee-en/mobile-full-780.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,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",
+    "color": "rgb(248 248 248)"
+   }
+  },
+  "outline": {
+   "viewport": {
+    "w": 1440,
+    "h": 900
+   },
+   "background": "rgb(255, 255, 255)",
+   "text": "rgb(15, 34, 56)",
+   "fonts": {
+    "body": "\"IBM Plex Sans Arabic\", sans-serif",
+    "h1": "\"IBM Plex Sans Arabic\", sans-serif"
+   },
+   "loadedFonts": [
+    "IBM Plex Sans Arabic",
+    "Source Sans 3",
+    "Amiri"
+   ],
+   "items": [
+    {
+     "k": "button",
+     "x": 0.0833,
+     "y": 0.0115,
+     "w": 0.0546,
+     "h": 0.0247
+    },
+    {
+     "k": "button",
+     "x": 0.1533,
+     "y": 0.0115,
+     "w": 0.0689,
+     "h": 0.0247
+    },
+    {
+     "k": "button",
+     "x": 0.8225,
+     "y": 0.0104,
+     "w": 0.0561,
+     "h": 0.0247
+    },
+    {
+     "k": "button",
+     "x": 0.8939,
+     "y": 0.0115,
+     "w": 0.0228,
+     "h": 0.0247
+    },
+    {
+     "k": "image",
+     "x": 0.0833,
+     "y": 0.0483,
+     "w": 0.0431,
+     "h": 0.0689
+    },
+    {
+     "k": "heading",
+     "x": 0.1354,
+     "y": 0.0529,
+     "w": 0.1181,
+     "h": 0.02
+    },
+    {
+     "k": "subheading",
+     "x": 0.1354,
+     "y": 0.0784,
+     "w": 0.1181,
+     "h": 0.0342
+    },
+    {
+     "k": "nav",
+     "x": 0.3414,
+     "y": 0.0584,
+     "w": 0.4296,
+     "h": 0.0488
+    },
+    {
+     "k": "text",
+     "x": 0.3414,
+     "y": 0.0584,
+     "w": 0.0442,
+     "h": 0.0488
+    },
+    {
+     "k": "text",
+     "x": 0.3856,
+     "y": 0.0584,
+     "w": 0.0605,
+     "h": 0.0488
+    },
+    {
+     "k": "text",
+     "x": 0.4461,
+     "y": 0.0584,
+     "w": 0.0538,
+     "h": 0.0488
+    },
+    {
+     "k": "text",
+     "x": 0.4999,
+     "y": 0.0584,
+     "w": 0.0802,
+     "h": 0.0488
+    },
+    {
+     "k": "text",
+     "x": 0.5802,
+     "y": 0.0584,
+     "w": 0.0446,
+     "h": 0.0488
+    },
+    {
+     "k": "text",
+     "x": 0.6248,
+     "y": 0.0584,
+     "w": 0.0426,
+     "h": 0.0488
+    },
+    {
+     "k": "text",
+     "x": 0.6674,
+     "y": 0.0584,
+     "w": 0.0512,
+     "h": 0.0488
+    },
+    {
+     "k": "text",
+     "x": 0.7186,
+     "y": 0.0584,
+     "w": 0.0525,
+     "h": 0.0488
+    },
+    {
+     "k": "button",
+     "x": 0.859,
+     "y": 0.0562,
+     "w": 0.0854,
+     "h": 0.0532
+    },
+    {
+     "k": "image",
+     "x": 0,
+     "y": 0.1267,
+     "w": 1,
+     "h": 0.6232
+    },
+    {
+     "k": "subheading",
+     "x": 0.1264,
+     "y": 0.1867,
+     "w": 0.217,
+     "h": 0.0267
+    },
+    {
+     "k": "heading",
+     "x": 0.0833,
+     "y": 0.2356,
+     "w": 0.4722,
+     "h": 0.232
+    },
+    {
+     "k": "text",
+     "x": 0.0833,
+     "y": 0.4898,
+     "w": 0.5278,
+     "h": 0.0642
+    },
+    {
+     "k": "button",
+     "x": 0.0833,
+     "y": 0.5852,
+     "w": 0.1339,
+     "h": 0.0489
+    },
+    {
+     "k": "button",
+     "x": 0.2255,
+     "y": 0.5852,
+     "w": 0.1242,
+     "h": 0.0489
+    },
+    {
+     "k": "subheading",
+     "x": 0.1264,
+     "y": 0.6652,
+     "w": 0.2517,
+     "h": 0.0247
+    },
+    {
+     "k": "heading",
+     "x": 0.1667,
+     "y": 0.78,
+     "w": 0.0415,
+     "h": 0.0342
+    },
+    {
+     "k": "subheading",
+     "x": 0.1481,
+     "y": 0.8231,
+     "w": 0.0787,
+     "h": 0.0209
+    },
+    {
+     "k": "heading",
+     "x": 0.3672,
+     "y": 0.78,
+     "w": 0.058,
+     "h": 0.0342
+    },
+    {
+     "k": "subheading",
+     "x": 0.378,
+     "y": 0.8231,
+     "w": 0.0364,
+     "h": 0.0209
+    },
+    {
+     "k": "heading",
+     "x": 0.5755,
+     "y": 0.78,
+     "w": 0.058,
+     "h": 0.0342
+    },
+    {
+     "k": "subheading",
+     "x": 0.5691,
+     "y": 0.8231,
+     "w": 0.0708,
+     "h": 0.0209
+    },
+    {
+     "k": "heading",
+     "x": 0.8025,
+     "y": 0.78,
+     "w": 0.0208,
+     "h": 0.0342
+    },
+    {
+     "k": "subheading",
+     "x": 0.7711,
+     "y": 0.8231,
+     "w": 0.0835,
+     "h": 0.0209
+    },
+    {
+     "k": "image",
+     "x": 0.5903,
+     "y": 0.9643,
+     "w": 0.3264,
+     "h": 0.3917
+    },
+    {
+     "k": "subheading",
+     "x": 0.0833,
+     "y": 0.9974,
+     "w": 0.4569,
+     "h": 0.0308
+    }
+   ]
+  }
+ },
+ "halden-commerce-lab": {
+  "title": "Halden Medical eCommerce case study — Mousa Batarseh (independent)",
+  "url": "https://lab.mousabatarseh.com/halden-medical/commerce-lab",
+  "capturedAt": "2026-09-30T03:15:40.321Z",
+  "views": {
+   "desktop-hero": {
+    "w": 2880,
+    "h": 1800,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/halden-commerce-lab/desktop-hero-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/halden-commerce-lab/desktop-hero-960.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBACdASoYAA8APu1iqU2ppaOiMAgBMB2JZwDE2B6LYzF5E5/0u5OkuAAA/uW6IaV7qwAeYtxvz/jPciPcwrRj9TkRL3FLVYKZtJxw7alIMXSbu1PHHoWv3/w4erD+2DoAAA==",
+    "color": "rgb(248 248 248)"
+   },
+   "mobile-hero": {
+    "w": 1170,
+    "h": 2532,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/halden-commerce-lab/mobile-hero-390.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAADQBgCdASoYADQAPu1uqk8ppyOiLBqrMTAdiWkA0ugRD48tfBpfoHIIrZg2IA3aFtlQ6m6PXtLTBY0ftQBEmGAA/u4TL2FtL9f8PySJrQAuE9KcPDqq3uXRXcDp8BfhVpeTXWUxSZACyIYG1dHnSCHPvSRTnpZ+y7g2DqPRNpVETJ+h4Nq1YNv28TyUPyIcMSK1RsGf7YbfEnSpu6vrnPn5WI2FPsFLObEtOS3Ihbl2Q09UtTJnEKZhnaDEGnUsmEI3cz7JkXs5EEmRsR1xAJkpCSpjIHILmjnLuu3wAAA=",
+    "color": "rgb(248 248 248)"
+   }
+  },
+  "outline": {
+   "viewport": {
+    "w": 1440,
+    "h": 900
+   },
+   "background": "rgb(243, 238, 228)",
+   "text": "rgb(16, 32, 51)",
+   "fonts": {
+    "body": "\"IBM Plex Sans\", \"Segoe UI\", sans-serif",
+    "h1": "Fraunces, Georgia, serif"
+   },
+   "loadedFonts": [
+    "Fraunces",
+    "IBM Plex Mono",
+    "IBM Plex Sans"
+   ],
+   "items": [
+    {
+     "k": "nav",
+     "x": 0,
+     "y": 0.0867,
+     "w": 0.159,
+     "h": 0.7424
+    },
+    {
+     "k": "text",
+     "x": 0.0144,
+     "y": 0.1009,
+     "w": 0.1374,
+     "h": 0.0099
+    },
+    {
+     "k": "text",
+     "x": 0.0144,
+     "y": 0.2431,
+     "w": 0.1374,
+     "h": 0.0099
+    },
+    {
+     "k": "text",
+     "x": 0.0144,
+     "y": 0.4489,
+     "w": 0.1374,
+     "h": 0.0099
+    },
+    {
+     "k": "text",
+     "x": 0.0083,
+     "y": 0.855,
+     "w": 0.1424,
+     "h": 0.073
+    },
+    {
+     "k": "button",
+     "x": 0.4146,
+     "y": 0.0106,
+     "w": 0.4541,
+     "h": 0.0489
+    },
+    {
+     "k": "text",
+     "x": 0.1897,
+     "y": 0.1067,
+     "w": 0.5694,
+     "h": 0.0318
+    },
+    {
+     "k": "heading",
+     "x": 0.1897,
+     "y": 0.1509,
+     "w": 0.5694,
+     "h": 0.1216
+    },
+    {
+     "k": "text",
+     "x": 0.1897,
+     "y": 0.2858,
+     "w": 0.5278,
+     "h": 0.0544
+    },
+    {
+     "k": "text",
+     "x": 0.2026,
+     "y": 0.5379,
+     "w": 0.1692,
+     "h": 0.0956
+    },
+    {
+     "k": "heading",
+     "x": 0.397,
+     "y": 0.5046,
+     "w": 0.1699,
+     "h": 0.0235
+    },
+    {
+     "k": "text",
+     "x": 0.397,
+     "y": 0.5379,
+     "w": 0.1699,
+     "h": 0.0717
+    },
+    {
+     "k": "heading",
+     "x": 0.5921,
+     "y": 0.5057,
+     "w": 0.1699,
+     "h": 0.0235
+    },
+    {
+     "k": "text",
+     "x": 0.5921,
+     "y": 0.539,
+     "w": 0.1699,
+     "h": 0.0956
+    },
+    {
+     "k": "heading",
+     "x": 0.7872,
+     "y": 0.5057,
+     "w": 0.1699,
+     "h": 0.0235
+    },
+    {
+     "k": "text",
+     "x": 0.7872,
+     "y": 0.539,
+     "w": 0.1699,
+     "h": 0.0717
+    },
+    {
+     "k": "text",
+     "x": 0.229,
+     "y": 0.622,
+     "w": 0.481,
+     "h": 0.0536
+    },
+    {
+     "k": "text",
+     "x": 0.1897,
+     "y": 0.5885,
+     "w": 0.7803,
+     "h": 0.0267
+    },
+    {
+     "k": "heading",
+     "x": 0.1897,
+     "y": 0.6303,
+     "w": 0.7803,
+     "h": 0.0307
+    },
+    {
+     "k": "text",
+     "x": 0.1897,
+     "y": 0.6698,
+     "w": 0.7803,
+     "h": 0.0533
+    },
+    {
+     "k": "text",
+     "x": 0.2026,
+     "y": 0.7776,
+     "w": 0.3446,
+     "h": 0.0103
+    },
+    {
+     "k": "heading",
+     "x": 0.2026,
+     "y": 0.7941,
+     "w": 0.3446,
+     "h": 0.0337
+    },
+    {
+     "k": "input",
+     "x": 0.2276,
+     "y": 0.8667,
+     "w": 0.6339,
+     "h": 0.0556
+    },
+    {
+     "k": "button",
+     "x": 0.8696,
+     "y": 0.8645,
+     "w": 0.0875,
+     "h": 0.06
+    },
+    {
+     "k": "button",
+     "x": 0.244,
+     "y": 0.9378,
+     "w": 0.0579,
+     "h": 0.0489
+    },
+    {
+     "k": "button",
+     "x": 0.3063,
+     "y": 0.9378,
+     "w": 0.0479,
+     "h": 0.0489
+    },
+    {
+     "k": "button",
+     "x": 0.3586,
+     "y": 0.9378,
+     "w": 0.0611,
+     "h": 0.0489
+    },
+    {
+     "k": "button",
+     "x": 0.4241,
+     "y": 0.9378,
+     "w": 0.052,
+     "h": 0.0489
+    },
+    {
+     "k": "input",
+     "x": 0.8666,
+     "y": 0.9378,
+     "w": 0.0905,
+     "h": 0.0489
+    }
+   ]
+  }
+ },
+ "halden-lab": {
+  "title": null,
+  "url": "https://lab.mousabatarseh.com/halden-medical/",
+  "capturedAt": "2026-09-30T03:17:36.181Z",
+  "views": {
+   "desktop-hero": {
+    "w": 2880,
+    "h": 1800,
+    "webp": [
+     {
+      "w": 640,
+      "src": "/media/halden-lab/desktop-hero-640.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/halden-lab/desktop-hero-960.webp"
+     },
+     {
+      "w": 1280,
+      "src": "/media/halden-lab/desktop-hero-1280.webp"
+     },
+     {
+      "w": 1920,
+      "src": "/media/halden-lab/desktop-hero-1920.webp"
+     },
+     {
+      "w": 2560,
+      "src": "/media/halden-lab/desktop-hero-2560.webp"
+     }
+    ],
+    "avif": [
+     {
+      "w": 640,
+      "src": "/media/halden-lab/desktop-hero-640.avif"
+     },
+     {
+      "w": 960,
+      "src": "/media/halden-lab/desktop-hero-960.avif"
+     },
+     {
+      "w": 1280,
+      "src": "/media/halden-lab/desktop-hero-1280.avif"
+     },
+     {
+      "w": 1920,
+      "src": "/media/halden-lab/desktop-hero-1920.avif"
+     },
+     {
+      "w": 2560,
+      "src": "/media/halden-lab/desktop-hero-2560.avif"
+     }
+    ],
+    "lqip": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABQBACdASoYAA8APu1iqU2ppaOiMAgBMB2JYwCdMoADf2MLayOG157+h1mAAP7ja0CSGoupjCo2pwI7cLqf0SLep8Ica71A4bi5C/91bFcv6cItYS3+ykMTxKtrFgwgB6MUds8ruJgcwL+oHwjMLEan5LMUj7cQCfdgAA==",
+    "color": "rgb(248 248 248)",
+    "ghostA": "/media/halden-lab/desktop-hero-ghost-a.webp",
+    "ghostB": "/media/halden-lab/desktop-hero-ghost-b.webp"
+   },
+   "desktop-full": {
+    "w": 1440,
+    "h": 8004,
+    "webp": [
+     {
+      "w": 720,
+      "src": "/media/halden-lab/desktop-full-720.webp"
+     },
+     {
+      "w": 1440,
+      "src": "/media/halden-lab/desktop-full-1440.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRkABAABXRUJQVlA4IDQBAAAQCQCdASoYAIUAPu1uslQppaSkJXVZETAdiWlsIV4F7oG4ABmethfTtEaq5lroRiNpGf3Ujl8HznitW/nY2rA+UKd8ygGQAS7GgWrQC4wT4EAA/uOgz2ojKzKNDAFEMnhjvjJsfei4MfBTG3r5lk474A2K0lN/KpfgjXj8wmafN4jePrEUfgh8Us8MKv82xWqqh0oNVcaAMSCRyjt58ZmIfmPP86M11RykMfsBZXc5Znbrjt/noE1SVItKwFRwlISHPzgFFx1OWQi1geQENsHVERP8CotKec3WlNOgNmH4wMHwrDL9HyXaDw3gzsuWNMB+XWgpoXXURmmVqxQdT63ZOryIMXCTF1jB41ecgcgXgVoAb1bo/5BOuoFXvtuvOCvLqZo8oGlatCXz+3S1pHnIMAAAAA==",
+    "color": "rgb(248 248 248)"
+   },
+   "mobile-hero": {
+    "w": 1170,
+    "h": 2532,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/halden-lab/mobile-hero-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/halden-lab/mobile-hero-780.webp"
+     },
+     {
+      "w": 1170,
+      "src": "/media/halden-lab/mobile-hero-1170.webp"
+     }
+    ],
+    "avif": [
+     {
+      "w": 390,
+      "src": "/media/halden-lab/mobile-hero-390.avif"
+     },
+     {
+      "w": 780,
+      "src": "/media/halden-lab/mobile-hero-780.avif"
+     },
+     {
+      "w": 1170,
+      "src": "/media/halden-lab/mobile-hero-1170.avif"
+     }
+    ],
+    "lqip": "data:image/webp;base64,UklGRhwBAABXRUJQVlA4IBABAACQBgCdASoYADQAPu1qqVEppaOirBVbMTAdiWUAx26rEDZyTDTtmYYuE110QBRdJgeUooh3mLcB/vjm2glAAP7f9Z4gusn1fqlgnPNzfXm4FJDKtWcdOXpR0lCAJ44xgBkNxwsiDFBSJrODPK9QCiIDR+WzSgjn23iJAgXtXAyOuY0iPtc3cHiPNVhVQLZ/ypoKk+pD7RcLDVPErbWTCJyF10thGi/vA+ukCanqj/RNY3j7PMEe3GsuoNMvN/Lrx0Rud+TK8Y1VaSSIJQUOKEmWwz3r94Qm+KPPS7X065hM+HMAu1+OlHasZrbi45j0eT/x/T8ht53y5dSOPHzNPpGPlPl0PEmru5fSEkysEwgAAA==",
+    "color": "rgb(8 40 56)"
+   },
+   "mobile-full": {
+    "w": 780,
+    "h": 16000,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/halden-lab/mobile-full-390.webp"
+     },
+     {
+      "w": 780,
+      "src": "/media/halden-lab/mobile-full-780.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRv4EAABXRUJQVlA4IPIEAAAQIQCdASoYAOwBPu1ysFOppqQipDQK0TAdiWkzb1IATrjOb02Ow5wL/bd43uEdZ3hu4gnwaqt7Z0BkCDDorAdfPzreOWs4UW+7wOAEuMYEUvD4juG4QrbJwmYsXTEVFRNwJTD2Hvhgd+5IH4GHih4t8YvNhYNwo3ANmMuigQPXn1W+rAxJVM/E1S7guJ5sdMlhMnoey5pLMPYXLIcYaBOXbJ17RSRPTV3lMRJz4O1bvLWfqfJHdlQQziuk/sbb1XtsbqjSS8uhbp8LGR9ZhQdLKKurflzJ99EnNjdWG5jZcEHHbWCDiSedYgjXDpol+hNaawP6fqCZ2m3VlOYB+2yb5y4yQC58fmG4+ckcnCSYViAA/uDfiV6NIDwxcpPq8ot5t/aDAJLGBLmxBurU2JBPCuv01K55B3I8ec2cnCNH0rJf402iHTAFvxM/17yjyGOxtq2hSYLl+yl/TPCb2fCFbMEJ4ldEQ7NVTgMGuWnOwGDQ4pF0VZrnfXYm2EeSqeSt8g0yZSdhD9N+iEn4Foa6HIXUYLtTnM2U3jJXhs+lyT1Kq8S0zU2Dg8xJZc98k69NAT/a7dIYdvgj6NGI7LVNK64ybSiWvsn1YQCGvhUF5zWz++AwPc+iBaG2+puGQOsSkwmnNuspleXHZFQKTJuI7yCq2H/6VZuDP0woBI9zVl3UqF+ZEJlbQ6DVunBFj2HzFDfs9/g8UyKDFgiEbiHEwiLE1wzX+UGTP/7vBlXVHXMQSzNdt5Gjz1lxsu3cVZpB4PLetNmUrT4mbPRj5y4OgrtlQO3pw7fDfldlsiYR5OYM7BeNjOFD8jSUWchi694+1HEBQr74QdkEyGdFXhqcsYPTE2ESqjLZNS23OnneZVl+tQda35b9mOsmMGIW4OPjc004LxiLpdnPpIsYV/AusORiU1kK8xCmiF7nsN3SJ0L3KLDa3YfHZkhkYCnxqOkzQ1fKgmUwSr4OIpX/WBxT+17yjrAUIQJSP1an4qPD7aTChB5UVSX1ZgFEO1JvedoVqs0vyz751VOjBufmr+gGT9uh6tlPb4Sv++sRT0o3npdLHATCBaHdQsHGCQKF15E6SgM67hVjX9x1VbOYnSh+jDLmM2/rUAoxWNwEPIzsIgdLHnBrWdrpwa/2EyjzM3wU5+e3Gv/2Vv8MvGRQ8sgHqONEZJ/rvp6lTZS7jUdMWirlucEYH2xGjQIss3vOR8mPsJrVUgufZ74i80NgJQsKp4pXXIqcEymSyjoDF3O5v8OsaBzXGckLKcP/NcFZtzjJ26tULtKyRxG6oDMfi7k1qq1ClnXbBmre0F777v9wAEaKqGs8UTbTHBKE7EKuudOnLA+gNZCSDdyUvXjrwZleCuaBDgJIiGS2oGp1DLUUsupmqORe/m6+kKX0JOPtMuziRpjbACivD7LMl+zsti7hd2QpV5iIn2gaOHvOy27IunYNc5Wu88Iv/BaMc6lmh+8zNxwRmWJr15zAhGkxK8OzzyKy9YvDXbk21tFNj/yWSDzwVmM+jpuBCJqUeAH6XWGf5LA9r/6uIzUwHcdww7mrExSHPhEYgISyN7leHdBJZ+6b22bxp/XYKFVpSZuIrZ8bHD3f0nbqUePdjNmpwuLdgLtc594MNOQFoaT5LoIhVQ+LK6ceLKIYLkamUjJ4lkG9IrMwM105DP4HTKv8X0UIAAA=",
+    "color": "rgb(248 248 248)"
+   }
+  },
+  "video": {
+   "src": "/media/halden-lab/scroll.mp4",
+   "poster": "/media/halden-lab/scroll-poster.webp",
+   "w": 1280,
+   "h": 800,
+   "seconds": 7.66,
+   "bytes": 1051315
+  },
+  "outline": {
+   "viewport": {
+    "w": 1440,
+    "h": 900
+   },
+   "background": "rgb(243, 238, 228)",
+   "text": "rgb(16, 32, 51)",
+   "fonts": {
+    "body": "\"IBM Plex Sans\", \"Segoe UI\", sans-serif",
+    "h1": "Fraunces, serif"
+   },
+   "loadedFonts": [
+    "Fraunces",
+    "IBM Plex Mono",
+    "IBM Plex Sans"
+   ],
+   "items": [
+    {
+     "k": "nav",
+     "x": 0,
+     "y": 0.0867,
+     "w": 0.159,
+     "h": 0.7424
+    },
+    {
+     "k": "text",
+     "x": 0.0144,
+     "y": 0.1009,
+     "w": 0.1374,
+     "h": 0.0099
+    },
+    {
+     "k": "text",
+     "x": 0.0144,
+     "y": 0.2431,
+     "w": 0.1374,
+     "h": 0.0099
+    },
+    {
+     "k": "text",
+     "x": 0.0144,
+     "y": 0.4489,
+     "w": 0.1374,
+     "h": 0.0099
+    },
+    {
+     "k": "text",
+     "x": 0.0083,
+     "y": 0.855,
+     "w": 0.1424,
+     "h": 0.073
+    },
+    {
+     "k": "button",
+     "x": 0.4146,
+     "y": 0.0106,
+     "w": 0.4541,
+     "h": 0.0489
+    },
+    {
+     "k": "text",
+     "x": 0.2244,
+     "y": 0.1266,
+     "w": 0.4578,
+     "h": 0.0179
+    },
+    {
+     "k": "heading",
+     "x": 0.2244,
+     "y": 0.1623,
+     "w": 0.4578,
+     "h": 0.1577
+    },
+    {
+     "k": "text",
+     "x": 0.2244,
+     "y": 0.3378,
+     "w": 0.4578,
+     "h": 0.0626
+    },
+    {
+     "k": "text",
+     "x": 0.2244,
+     "y": 0.4164,
+     "w": 0.4133,
+     "h": 0.1173
+    },
+    {
+     "k": "button",
+     "x": 0.2244,
+     "y": 0.5585,
+     "w": 0.1593,
+     "h": 0.0573
+    },
+    {
+     "k": "button",
+     "x": 0.3904,
+     "y": 0.5585,
+     "w": 0.166,
+     "h": 0.0573
+    },
+    {
+     "k": "button",
+     "x": 0.2244,
+     "y": 0.6265,
+     "w": 0.1397,
+     "h": 0.0573
+    },
+    {
+     "k": "text",
+     "x": 0.2148,
+     "y": 0.7867,
+     "w": 0.73,
+     "h": 0.0166
+    },
+    {
+     "k": "heading",
+     "x": 0.2148,
+     "y": 0.814,
+     "w": 0.5269,
+     "h": 0.0824
+    },
+    {
+     "k": "text",
+     "x": 0.2148,
+     "y": 0.9115,
+     "w": 0.5689,
+     "h": 0.2051
+    }
+   ]
+  }
+ },
+ "halden-pathfinder": {
+  "title": "Halden Medical eCommerce case study — Mousa Batarseh (independent)",
+  "url": "https://lab.mousabatarseh.com/halden-medical/commerce-lab/pathfinder",
+  "capturedAt": "2026-09-30T03:15:40.321Z",
+  "views": {
+   "desktop-hero": {
+    "w": 2880,
+    "h": 1800,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/halden-pathfinder/desktop-hero-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/halden-pathfinder/desktop-hero-960.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQAwCdASoYAA8APu1kqU2ppaQiMAgBMB2JYwC06B6GL7wHhbWFnEAA/uW6IaV8R3TrC0FneCzhaKt81V/T6hwaU6bPRDB67ou79ySHlDlj13DrBUYKPbi7kB4htKAkO9SmAZhPGubxOtGoMBAucwfmZqghZ+Ank297q/8DUAA=",
+    "color": "rgb(8 24 40)"
+   },
+   "mobile-hero": {
+    "w": 1170,
+    "h": 2532,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/halden-pathfinder/mobile-hero-390.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRiIBAABXRUJQVlA4IBYBAAAQBwCdASoYADQAPu1yr1MppqQipApJMB2JZwDScquA4dAbviv7l/hWQA72FwOTdQWM9xRT3bwWR4MlLwqdJFlxoAD+8+SROuDtap3i21fbmZ9iZpCoxCeTw1BvH6wRwjVXjV93AOA9GnlGib6pHmDlCX/yueCQibrzTkL/3Z+Rpq/J+HZiVgz1v9lp8bXvDkpEDnl+0eN81+qkxYXL9nl+AwrZTm9k5fh1Zt/JKY7nGAH/Unan5iiKSKVzvP7zWmy6FYF7I+407ie4sOg9t5JMzX77l6KYqMDih7Gs6ExUap/U/1BwDWQCCNzSGc2cdOofq34/v/LPqcwH+rfkNSCZR0DuEUTLTLZKoc50wyY/TM+gEAAAAA==",
+    "color": "rgb(248 248 248)"
+   }
+  },
+  "outline": {
+   "viewport": {
+    "w": 1440,
+    "h": 900
+   },
+   "background": "rgb(243, 238, 228)",
+   "text": "rgb(16, 32, 51)",
+   "fonts": {
+    "body": "\"IBM Plex Sans\", \"Segoe UI\", sans-serif",
+    "h1": "Fraunces, Georgia, serif"
+   },
+   "loadedFonts": [
+    "Fraunces",
+    "IBM Plex Mono",
+    "IBM Plex Sans"
+   ],
+   "items": [
+    {
+     "k": "nav",
+     "x": 0,
+     "y": 0.0867,
+     "w": 0.159,
+     "h": 0.7424
+    },
+    {
+     "k": "text",
+     "x": 0.0144,
+     "y": 0.1009,
+     "w": 0.1374,
+     "h": 0.0099
+    },
+    {
+     "k": "text",
+     "x": 0.0144,
+     "y": 0.2431,
+     "w": 0.1374,
+     "h": 0.0099
+    },
+    {
+     "k": "text",
+     "x": 0.0144,
+     "y": 0.4489,
+     "w": 0.1374,
+     "h": 0.0099
+    },
+    {
+     "k": "text",
+     "x": 0.0083,
+     "y": 0.855,
+     "w": 0.1424,
+     "h": 0.073
+    },
+    {
+     "k": "button",
+     "x": 0.4146,
+     "y": 0.0106,
+     "w": 0.4541,
+     "h": 0.0489
+    },
+    {
+     "k": "text",
+     "x": 0.1897,
+     "y": 0.1067,
+     "w": 0.5664,
+     "h": 0.0318
+    },
+    {
+     "k": "heading",
+     "x": 0.1897,
+     "y": 0.1509,
+     "w": 0.5664,
+     "h": 0.0608
+    },
+    {
+     "k": "text",
+     "x": 0.1897,
+     "y": 0.225,
+     "w": 0.5278,
+     "h": 0.0272
+    },
+    {
+     "k": "text",
+     "x": 0.2026,
+     "y": 0.4499,
+     "w": 0.1692,
+     "h": 0.0717
+    },
+    {
+     "k": "heading",
+     "x": 0.397,
+     "y": 0.4166,
+     "w": 0.1699,
+     "h": 0.0235
+    },
+    {
+     "k": "text",
+     "x": 0.397,
+     "y": 0.4499,
+     "w": 0.1699,
+     "h": 0.0956
+    },
+    {
+     "k": "heading",
+     "x": 0.5921,
+     "y": 0.4178,
+     "w": 0.1699,
+     "h": 0.0235
+    },
+    {
+     "k": "text",
+     "x": 0.5921,
+     "y": 0.451,
+     "w": 0.1699,
+     "h": 0.0956
+    },
+    {
+     "k": "heading",
+     "x": 0.7872,
+     "y": 0.4178,
+     "w": 0.1699,
+     "h": 0.0235
+    },
+    {
+     "k": "text",
+     "x": 0.7872,
+     "y": 0.451,
+     "w": 0.1699,
+     "h": 0.0956
+    },
+    {
+     "k": "text",
+     "x": 0.229,
+     "y": 0.5056,
+     "w": 0.481,
+     "h": 0.0536
+    },
+    {
+     "k": "text",
+     "x": 0.2204,
+     "y": 0.5469,
+     "w": 0.2594,
+     "h": 0.0117
+    },
+    {
+     "k": "heading",
+     "x": 0.2204,
+     "y": 0.5711,
+     "w": 0.2594,
+     "h": 0.2634
+    },
+    {
+     "k": "text",
+     "x": 0.2204,
+     "y": 0.8549,
+     "w": 0.2594,
+     "h": 0.2139
+    },
+    {
+     "k": "text",
+     "x": 0.5104,
+     "y": 0.499,
+     "w": 0.2294,
+     "h": 0.3095
+    },
+    {
+     "k": "text",
+     "x": 0.7399,
+     "y": 0.499,
+     "w": 0.2294,
+     "h": 0.3095
+    },
+    {
+     "k": "text",
+     "x": 0.5104,
+     "y": 0.8084,
+     "w": 0.2294,
+     "h": 0.3084
+    },
+    {
+     "k": "text",
+     "x": 0.7399,
+     "y": 0.8084,
+     "w": 0.2294,
+     "h": 0.3084
+    }
+   ]
+  }
+ },
+ "halden-walkthrough": {
+  "title": "Who I am and why I made this · Walkthrough — Mousa Batarseh case study",
+  "url": "https://lab.mousabatarseh.com/halden-medical/walkthrough",
+  "capturedAt": "2026-09-30T03:15:40.321Z",
+  "views": {
+   "desktop-hero": {
+    "w": 2880,
+    "h": 1800,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/halden-walkthrough/desktop-hero-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/halden-walkthrough/desktop-hero-960.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBACdASoYAA8APu1Ct1apoqakGAEwHYliAJ0ygApVw78CPIV/yvfyAAD+9eGNwA/FdkdxBeT7h+0SQpIZPZx3e6nLwJALZ6P1yjJ4DZqWIzhvifjbuGsRYYPubwWdVdnkVPin6oumH1K4Ej8qm9jC4EF8j3e0fzsKOfJrTd1QtXIq8TJUn9JSe+Q1Z7F+dkQAAA==",
+    "color": "rgb(8 40 72)"
+   },
+   "mobile-hero": {
+    "w": 1170,
+    "h": 2532,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/halden-walkthrough/mobile-hero-390.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRvYAAABXRUJQVlA4IOoAAACQBgCdASoYADQAPu1ws1IppiSiqBgJWTAdiWUAz2as4DfOPRgbrhDygiA5bC6AAQWi9FKrCzWt+66L++SAAP7x0NcXv8kVUF1MucP9p9AQIZFmeqMoK//uWPz1c9wD/FlDqVCbqe/a8Nl1ttA35m49JLfamMwv34Rf3Ap/+tSN/Uov5WJOLIVMJgF+cNngmBRPRtfy7+dVLkumCxsvm51tUyh/nGqo7TfuPJYyBgebAudtYSoDk0FpQkr96cy2Zg2fVewDCFC1ByCBgIN4o+szm/6mHDKjf61Ze7aI7fIYomR74Gl03FnAAAA=",
+    "color": "rgb(8 40 72)"
+   }
+  },
+  "outline": {
+   "viewport": {
+    "w": 1440,
+    "h": 900
+   },
+   "background": "rgb(243, 238, 228)",
+   "text": "rgb(16, 32, 51)",
+   "fonts": {
+    "body": "\"IBM Plex Sans\", \"Segoe UI\", sans-serif",
+    "h1": "Fraunces, Georgia, serif"
+   },
+   "loadedFonts": [
+    "Fraunces",
+    "IBM Plex Mono",
+    "IBM Plex Sans"
+   ],
+   "items": [
+    {
+     "k": "image",
+     "x": 0.0111,
+     "y": 0.1117,
+     "w": 0.0403,
+     "h": 0.0644
+    },
+    {
+     "k": "nav",
+     "x": 0,
+     "y": 0.2022,
+     "w": 0.2118,
+     "h": 0.7166
+    },
+    {
+     "k": "text",
+     "x": 0.0072,
+     "y": 0.22,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "button",
+     "x": 0.0072,
+     "y": 0.22,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "text",
+     "x": 0.0072,
+     "y": 0.2791,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "button",
+     "x": 0.0072,
+     "y": 0.2791,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "text",
+     "x": 0.0072,
+     "y": 0.3382,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "button",
+     "x": 0.0072,
+     "y": 0.3382,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "text",
+     "x": 0.0072,
+     "y": 0.3973,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "button",
+     "x": 0.0072,
+     "y": 0.3973,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "text",
+     "x": 0.0072,
+     "y": 0.4564,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "button",
+     "x": 0.0072,
+     "y": 0.4564,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "text",
+     "x": 0.0072,
+     "y": 0.5155,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "button",
+     "x": 0.0072,
+     "y": 0.5155,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "text",
+     "x": 0.0072,
+     "y": 0.5746,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "button",
+     "x": 0.0072,
+     "y": 0.5746,
+     "w": 0.1974,
+     "h": 0.0556
+    },
+    {
+     "k": "text",
+     "x": 0.686,
+     "y": 0.143,
+     "w": 0.1691,
+     "h": 0.0099
+    },
+    {
+     "k": "text",
+     "x": 0.2792,
+     "y": 0.2511,
+     "w": 0.3758,
+     "h": 0.0175
+    },
+    {
+     "k": "heading",
+     "x": 0.2792,
+     "y": 0.2864,
+     "w": 0.3758,
+     "h": 0.1526
+    },
+    {
+     "k": "text",
+     "x": 0.2792,
+     "y": 0.4586,
+     "w": 0.3758,
+     "h": 0.3421
+    },
+    {
+     "k": "button",
+     "x": 0.2125,
+     "y": 0.91,
+     "w": 0.2763,
+     "h": 0.09
+    },
+    {
+     "k": "button",
+     "x": 0.7237,
+     "y": 0.91,
+     "w": 0.2763,
+     "h": 0.09
+    }
+   ]
+  }
+ },
+ "halden-workbook": {
+  "title": "Halden Medical Supply — E-commerce analysis workbook",
+  "url": "https://lab.mousabatarseh.com/halden-medical/workbook-view/",
+  "capturedAt": "2026-09-30T03:15:40.321Z",
+  "views": {
+   "desktop-hero": {
+    "w": 2880,
+    "h": 1800,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/halden-workbook/desktop-hero-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/halden-workbook/desktop-hero-960.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JQBOgBDrVliyh6rU5gAD+NFlNuB1AYJFpZtMk+UZVufFBS0AWEMRChIvzdKVRzDk+5eiY4F6M1NfmZVaelavwrC/+xNqT6jl9FscbACAIALAy5viQAA==",
+    "color": "rgb(248 248 248)"
+   },
+   "mobile-hero": {
+    "w": 1170,
+    "h": 2532,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/halden-workbook/mobile-hero-390.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAAAwBgCdASoYADQAPuVapk2pJSOiN/gIASAciUAYyj/8BbtFMrm2DI3jUp6f9+b6S8I+39BOdOlzXDgAAP7p96HBWjdiBqHJ+row2C0mdes3gKyPUC42BQmJrHp+E3Yd6D4uVGPOQSNosBoVW9bHONviPP+460RcSa9dgR8PfNIQyee/UCtYlvhEvASaqMdykgPGgWQoYCAbytdyc5VZcOmBabMfWC/LYKdGr4JRwmcJKSIUxdO2QaWiOEZyOXtf28I3pQ3GZkaBTuzwozxs+th3ybdmcJKoIM0yTl6YdYGT9NQP/kmD+Xu1fxIvoAAAAAA=",
+    "color": "rgb(248 248 248)"
+   }
+  },
+  "outline": {
+   "viewport": {
+    "w": 1440,
+    "h": 900
+   },
+   "background": "rgb(237, 241, 239)",
+   "text": "rgb(18, 38, 58)",
+   "fonts": {
+    "body": "\"IBM Plex Sans\", \"Segoe UI\", system-ui, sans-serif",
+    "h1": "\"IBM Plex Sans\", sans-serif"
+   },
+   "loadedFonts": [
+    "IBM Plex Mono",
+    "IBM Plex Sans"
+   ],
+   "items": [
+    {
+     "k": "text",
+     "x": 0.0222,
+     "y": 0.0195,
+     "w": 0.9556,
+     "h": 0.0169
+    },
+    {
+     "k": "heading",
+     "x": 0.0222,
+     "y": 0.0436,
+     "w": 0.4137,
+     "h": 0.0299
+    },
+    {
+     "k": "text",
+     "x": 0.0222,
+     "y": 0.0805,
+     "w": 0.9556,
+     "h": 0.0219
+    },
+    {
+     "k": "button",
+     "x": 0.0222,
+     "y": 0.1291,
+     "w": 0.0979,
+     "h": 0.0363
+    },
+    {
+     "k": "button",
+     "x": 0.1215,
+     "y": 0.1291,
+     "w": 0.1477,
+     "h": 0.0363
+    },
+    {
+     "k": "button",
+     "x": 0.2706,
+     "y": 0.1291,
+     "w": 0.0979,
+     "h": 0.0363
+    },
+    {
+     "k": "button",
+     "x": 0.3699,
+     "y": 0.1291,
+     "w": 0.0757,
+     "h": 0.0363
+    },
+    {
+     "k": "button",
+     "x": 0.4469,
+     "y": 0.1291,
+     "w": 0.0868,
+     "h": 0.0363
+    },
+    {
+     "k": "button",
+     "x": 0.5351,
+     "y": 0.1291,
+     "w": 0.0701,
+     "h": 0.0363
+    },
+    {
+     "k": "button",
+     "x": 0.6067,
+     "y": 0.1291,
+     "w": 0.0923,
+     "h": 0.0363
+    },
+    {
+     "k": "button",
+     "x": 0.7004,
+     "y": 0.1291,
+     "w": 0.1145,
+     "h": 0.0363
+    },
+    {
+     "k": "button",
+     "x": 0.8162,
+     "y": 0.1291,
+     "w": 0.0812,
+     "h": 0.0363
+    },
+    {
+     "k": "button",
+     "x": 0.8989,
+     "y": 0.1291,
+     "w": 0.0868,
+     "h": 0.0363
+    },
+    {
+     "k": "button",
+     "x": 0.987,
+     "y": 0.1291,
+     "w": 0.0923,
+     "h": 0.0363
+    }
+   ]
+  }
+ },
+ "northgate-app": {
+  "title": "Marketing Ops Demo — Menu & Promotion Manager | Mousa Batarseh",
+  "url": "https://lab.mousabatarseh.com/northgate-group/app/",
+  "capturedAt": "2026-09-30T03:15:40.321Z",
+  "views": {
+   "desktop-hero": {
+    "w": 2880,
+    "h": 1800,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/northgate-app/desktop-hero-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/northgate-app/desktop-hero-960.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYAA8APu1kqU4ppaOiMAgBMB2JYwCdH8ACtmcqAJ/I6UgMgAD+oyztFeg40BrE6btROGgADinvEFdYEBrTpScWu9jn0zC0GH9eSwNr+f/e4J0O5Medo6JLiAEugA5m+Y0AAA==",
+    "color": "rgb(248 248 248)"
+   },
+   "mobile-hero": {
+    "w": 1170,
+    "h": 2532,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/northgate-app/mobile-hero-390.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBQCdASoYADQAPu1orE8ppiQiLBqrMTAdiWNlSwASN3qFnLeh4CdR9RSdxjoTf3r2pNxL+oAA+As76UO5BJczIFMB3aCyU5/Gu8Dx//I97DNfAPxf4a2JdYsr24Q3SdAa7cffEAUBgBykcPGrZcBGBkbvgt8C8l+ohWMCySZDqUJ6ftssWD07jyQG08hkP6N8mCGmzMmVVj2O5MO5gOSYFjlN57eRNHyTx6NGnRbM9mEHlWkCIkiRJZUpnz7tg2QAAA==",
+    "color": "rgb(248 248 248)"
+   }
+  },
+  "outline": {
+   "viewport": {
+    "w": 1440,
+    "h": 900
+   },
+   "background": "rgb(244, 247, 245)",
+   "text": "rgb(22, 36, 30)",
+   "fonts": {
+    "body": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+    "h1": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif"
+   },
+   "loadedFonts": [],
+   "items": [
+    {
+     "k": "nav",
+     "x": 0,
+     "y": 0.1797,
+     "w": 0.1708,
+     "h": 0.7098
+    },
+    {
+     "k": "button",
+     "x": 0.0069,
+     "y": 0.193,
+     "w": 0.1569,
+     "h": 0.0489
+    },
+    {
+     "k": "button",
+     "x": 0.0069,
+     "y": 0.2441,
+     "w": 0.1569,
+     "h": 0.0489
+    },
+    {
+     "k": "button",
+     "x": 0.0069,
+     "y": 0.2952,
+     "w": 0.1569,
+     "h": 0.0489
+    },
+    {
+     "k": "button",
+     "x": 0.0069,
+     "y": 0.3463,
+     "w": 0.1569,
+     "h": 0.0489
+    },
+    {
+     "k": "button",
+     "x": 0.0069,
+     "y": 0.3974,
+     "w": 0.1569,
+     "h": 0.0489
+    },
+    {
+     "k": "button",
+     "x": 0.0069,
+     "y": 0.4485,
+     "w": 0.1569,
+     "h": 0.0489
+    },
+    {
+     "k": "button",
+     "x": 0.0069,
+     "y": 0.4997,
+     "w": 0.1569,
+     "h": 0.0489
+    },
+    {
+     "k": "heading",
+     "x": 0.1889,
+     "y": 0.0759,
+     "w": 0.1736,
+     "h": 0.0264
+    },
+    {
+     "k": "heading",
+     "x": 0.1896,
+     "y": 0.442,
+     "w": 0.7917,
+     "h": 0.0531
+    }
+   ]
+  }
+ },
+ "ptee-catalog": {
+  "title": "دليل المساقات | PTEE",
+  "url": "https://ptee.moseswebworks.com/courses/ar/courses/catalog",
+  "capturedAt": "2026-09-30T03:17:36.181Z",
+  "views": {
+   "desktop-hero": {
+    "w": 2880,
+    "h": 1800,
+    "webp": [
+     {
+      "w": 480,
+      "src": "/media/ptee-catalog/desktop-hero-480.webp"
+     },
+     {
+      "w": 960,
+      "src": "/media/ptee-catalog/desktop-hero-960.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACwBACdASoYAA8APu1iqU2ppaQiMAgBMB2JYgCsMoMjkn/AbRm5Q9wlla1tS1cAAP4nYCgT146Q/+5fz4ypXmMjVvfB3PFsyMbUuGdjXRzNj6FIvzl5+skhnci0f3UghOtcNc8nVVFVQKETAGWaMYU4hAXsCoVHEch8BMGyalsOurBHIq/xSQGeRB02qk3Gvtyf6D2aXAA=",
+    "color": "rgb(248 248 248)"
+   },
+   "mobile-hero": {
+    "w": 1170,
+    "h": 2532,
+    "webp": [
+     {
+      "w": 390,
+      "src": "/media/ptee-catalog/mobile-hero-390.webp"
+     }
+    ],
+    "avif": [],
+    "lqip": "data:image/webp;base64,UklGRk4BAABXRUJQVlA4IEIBAACQBwCdASoYADQAPu1or1GppaQiqBgKqTAdiWYAwqFNiYB4AyxQeJo1J9NvShRfM7fNhT4yjSfKTaS7Lb8EOmP6nYpmAAAA/voxUgOMH9aax+9usR1Xr0ykogfiE0fPUXXL432wFvK6z0tdg09b/LYxyPbfRx+oaaCWnrGwyOSoDwlwuAs+y2S41ZI6sFvCdKf/7lPOV/nq54pUJRfZUzwS146SrojTPA08OmSPRHmDp67h982UoqDlWiWyK4lyR7oKJAr12/DMAYaLVQkW/7fyFFFFHBfTXQ6WO5+o9f/kLI+3CORW2GG0JAjJ2a3CBtv7p73MWOBwpS4O38Dhekf0P86MqMN4DaQc9xtFbf9kq6m5mg2UXrOnd8ohoAJvCnPvzmYvI2XwwEcGUIBVtO0L42bnvIaz3rccyihnHkegeUAA",
+    "color": "rgb(8 40 88)"
+   }
+  },
+  "outline": {
+   "viewport": {
+    "w": 1440,
+    "h": 900
+   },
+   "background": "rgb(248, 246, 241)",
+   "text": "rgb(15, 34, 56)",
+   "fonts": {
+    "body": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+    "h1": "\"IBM Plex Sans Arabic\", \"Source Sans 3\", system-ui, sans-serif"
+   },
+   "loadedFonts": [
+    "Amiri",
+    "IBM Plex Sans Arabic",
+    "Source Sans 3"
+   ],
+   "items": [
+    {
+     "k": "image",
+     "x": 0.9014,
+     "y": 0.0483,
+     "w": 0.0431,
+     "h": 0.0689
+    },
+    {
+     "k": "nav",
+     "x": 0.1323,
+     "y": 0.0583,
+     "w": 0.6225,
+     "h": 0.0489
+    },
+    {
+     "k": "text",
+     "x": 0.4125,
+     "y": 0.3086,
+     "w": 0.5319,
+     "h": 0.0267
+    },
+    {
+     "k": "heading",
+     "x": 0.4125,
+     "y": 0.3509,
+     "w": 0.5319,
+     "h": 0.0653
+    },
+    {
+     "k": "text",
+     "x": 0.4167,
+     "y": 0.4362,
+     "w": 0.5278,
+     "h": 0.0331
+    },
+    {
+     "k": "image",
+     "x": 0.0556,
+     "y": 0.1889,
+     "w": 0.3125,
+     "h": 0.3444
+    },
+    {
+     "k": "heading",
+     "x": 0.3139,
+     "y": 0.7256,
+     "w": 0.5861,
+     "h": 0.0451
+    },
+    {
+     "k": "text",
+     "x": 0.3139,
+     "y": 0.7995,
+     "w": 0.5861,
+     "h": 0.032
+    },
+    {
+     "k": "text",
+     "x": 0.3139,
+     "y": 0.8415,
+     "w": 0.5861,
+     "h": 0.032
+    },
+    {
+     "k": "text",
+     "x": 0.3139,
+     "y": 0.8835,
+     "w": 0.5861,
+     "h": 0.032
+    },
+    {
+     "k": "text",
+     "x": 0.3139,
+     "y": 0.9255,
+     "w": 0.5861,
+     "h": 0.032
+    },
+    {
+     "k": "text",
+     "x": 0.3139,
+     "y": 0.9675,
+     "w": 0.5861,
+     "h": 0.032
+    },
+    {
+     "k": "heading",
+     "x": 0.075,
+     "y": 0.7551,
+     "w": 0.1833,
+     "h": 0.0792
+    },
+    {
+     "k": "button",
+     "x": 0.075,
+     "y": 0.8588,
+     "w": 0.1833,
+     "h": 0.0489
+    }
+   ]
+  }
  }
 }

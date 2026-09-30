@@ -34,7 +34,7 @@ const PLAN = {
 };
 
 // Featured work gets the full responsive set; archive rows only need loupe/thumbnail sizes.
-const FEATURED = new Set(['united-textile', 'universal-wholesale', 'firefly-burgers', 'eat-with-samar', 'great-lakes-cigar-festival', 'ptee-renewal', 'ptee-admissions', 'btee-build', 'asas', 'asas-studio-app', 'changeatlas', 'changeatlas-app', 'deals-os', 'csv-mapper', 'dealproof', 'seo-tools', 'diamedical-lab', 'diamedical-intro', 'review-carhartt-reworked', 'review-oakwood', 'review-vanguard', 'review-jbtools', 'review-hayhouse', 'review-biotrust']);
+const FEATURED = new Set(['united-textile', 'universal-wholesale', 'firefly-burgers', 'eat-with-samar', 'great-lakes-cigar-festival', 'ptee-renewal', 'ptee-admissions', 'btee-build', 'btee-en', 'asas', 'asas-studio-app', 'changeatlas', 'changeatlas-app', 'deals-os', 'csv-mapper', 'dealproof', 'seo-tools', 'diamedical-lab', 'diamedical-intro', 'halden-lab', 'review-carhartt-reworked', 'review-oakwood', 'review-vanguard', 'review-jbtools', 'review-hayhouse', 'review-biotrust']);
 const LEAN = {
   'desktop-hero': { widths: [480, 960], avif: false, ghosts: false },
   'mobile-hero': { widths: [390], avif: false, ghosts: false },
